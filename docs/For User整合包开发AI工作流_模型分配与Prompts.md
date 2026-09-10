@@ -110,11 +110,17 @@ aa 指数近期争议大、规则改过两轮，只当参考。用自己的数�
 - **glm5.3flash**：把实测记录整理成《战斗手感基准文档》，锁定 EF 20.14.x 版本号。
 - 验收：基准文档 + EF 版本锁定 commit。
 
+### 阶段②.5 开发环境补齐（2026-09-10 增设，已执行）
+
+- **已落地**：性能五件套（Embeddium/FerriteCore/ModernFix/spark/Chunky）+ QoL 四件（JEI/Jade/Controlling/AppleSkin）+ Default Options 全部经 packwiz 入包并 `tools/sync_mods.py` 同步实例；EF 六键默认表已写入 `config/defaultoptions/keybindings.txt`。
+- **待人工验收**：启动实例——无崩溃、Embeddium×EF 战斗动画渲染正常、Controlling 可见 EF 键位、JEI/Jade 生效。
+- 此后所有批次实测均在最终性能/监控环境中进行；实例同步一律走 `tools/sync_mods.py`（Java 下载受代理影响，packwiz-installer 降级为备选）。
+
 ### 阶段③ 次核心攻坚（9.14–9.20）
 
 三个次核心各占一批、单独验证（方案 4.2）：
 
-- **Symbiote × EF**：人工实测三项（键位/劫持/渲染）；**K3** 做异常日志归因（P2）；**glm5.3** 设计键位下发与劫持调频方案（S 级）；**glm5.3flash** 写 Default Options 文件。实测不过线 → 启动降级预案（P12）。
+- **Symbiote × EF**：人工实测三项（键位/劫持/渲染）；**K3** 做异常日志归因（P2）；**glm5.3** 设计键位下发与劫持调频方案（S 级）；EF 侧六键默认表已随阶段②.5 下发（`config/defaultoptions/keybindings.txt`），**glm5.3flash** 只需在 Symbiote 入包后把其改绑键位（拟 V/B）追加进该文件，键位 ID 用已入包的 Controlling 现场核实。实测不过线 → 启动降级预案（P12）。
 - **Spore**：**glm5.3** 出 sporeconfig 三档框架（红线，P8）；**glm5.3flash** 按框架填配置与 In Control! 规则初稿；**qwen3.8max**（闲时）复核（P11）。
 - **Sword Soaring / Nightfall**：数值对齐走 B 级批量（P5），闲时 qwen3.8flash 生成 + glm5.3flash 抽检。
 - 验收：次核心三连实测记录全部过线（或降级决策已执行）。
@@ -392,7 +398,7 @@ opt-out 状态 | 处理方式建议（索引引用 / 引导玩家手装 / 需书
 5. **世界生成定型前不动正式存档**：Terralith 及一切 worldgen 覆盖先入开发实例验证。
 6. **合规人工拍板**：许可证、RoadWeaver 版权争议、FTB 系分发限制——AI 只打草稿，最终结论必须人工到原始页面核实。
 7. **原版内容政策【待定】**：决策落地前，任何模型不得改动原版配方/数值/门控；AI 若主动提出原版修改建议，归入"阶段⑤平衡实测后决策"待办，不当场执行。
-8. **实例目录与仓库分离**：游戏实例一律放启动器版本隔离目录，仓库根只存源码与元数据；`launcher_profiles.json`、`logs/` 等运行时痕迹已入 .gitignore，发现混入立即清理。
+8. **实例目录与仓库分离**：游戏实例一律放启动器版本隔离目录，仓库根只存源码与元数据；`launcher_profiles.json`、`logs/` 等运行时痕迹已入 .gitignore，发现混入立即清理。仓库→实例的模组同步一律走 `python tools/sync_mods.py`（curl --http1.1 下载 + sha512 校验 + 野 jar 检测），禁止手工拖 jar 进实例。
 
 ## 6. 额度与预算监控
 
