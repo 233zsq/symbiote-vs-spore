@@ -33,3 +33,10 @@ Desktop.ini
 /PCL.ini
 /PCL/
 /.minecraft/
+# 游戏目录误指仓库根时会出现的目录（防御性排除）
+/assets/
+/versions/
+/libraries/
+/natives/
+/runtime/
+/screenshots/
