@@ -1,6 +1,8 @@
 # 交接文档 · Symbiote vs Spore
 
-> 最近更新：2026-09-10（阶段②.5 落地）。新会话/新模型接手时先读本文件，再读 `docs/` 下两份方案文档。
+> 最近更新：2026-09-10（阶段②.5 落地 + 协作拓扑变更）。新会话/新模型接手时先读本文件，再读 `docs/` 下两份方案文档。
+>
+> **协作拓扑（2026-09-10 起）**：**Kimi Code（K3）= 总设计师/调度者，可直接操控 Qoder 驱动其四个模型执行开发**（经 kimi-cu-win 等本机控制插件操作 Qoder 界面）。Kimi 负责：设计方案、拆解任务、按工作流文档路由模型、把 prompt 喂给 Qoder、审查产物、入库与 commit；Qoder 四模型按原路由表执行。工作流文档（`docs/For User整合包开发AI工作流_模型分配与Prompts.md`）的模型路由与 prompt 库继续有效，但"人工搬运 prompt"环节由 Kimi 代劳；该文档后续按此拓扑重写。
 
 ## 1. 仓库快照
 
@@ -19,7 +21,7 @@
 | 项 | 位置 / 值 |
 |---|---|
 | 开发仓库 | `D:\mcmp`（**纯源码，游戏文件永远不该出现**） |
-| PCL2 | `D:\mcmp_test\Plain Craft Launcher 2.exe`，游戏目录 = `D:\mcmp_test`，版本隔离已开 |
+| PCL2 | `D:\mcmp_test\Plain Craft Launcher 2.exe`，游戏目录 = `D:\mcmp_test`，版本隔离已开。**启动游戏 = 直接运行 PCL2 选 `1.20.1-Forge_47.4.23` 启动**；建议分配 6–8 GB 内存；禁用 PCL 的 Mod 管理界面增删模组；仓库有模组变动时先跑 `python tools/sync_mods.py` 再启动 |
 | 开发实例 | `D:\mcmp_test\versions\1.20.1-Forge_47.4.23\`（测试实例未建） |
 | packwiz | `C:\Users\zhens\bin\packwiz.exe`（nightly.link 的 Actions 构建；官方无 Releases） |
 | packwiz-installer | 实例目录内 `packwiz-installer.jar`；**必须经 bootstrap 启动**（直跑弹窗报错） |
@@ -61,6 +63,7 @@
 
 ## 6. AI 协作要点（新会话必读）
 
+- **拓扑**：Kimi Code 为设计师/调度者并直控 Qoder（见文件头协作拓扑块）；新会话开工顺序 = 读本文件 → 读工作流文档取 P0 上下文块与对应 P 任务 prompt → 由 Kimi 喂给 Qoder 对应模型并审查产物
 - 工作流与模型路由：`docs/For User整合包开发AI工作流_模型分配与Prompts.md`（P0 上下文块 + P1–P13 任务 prompts）；K3 窗口到 9.25，仓库级任务优先 K3
 - commit 规范：`type(scope): 描述 [模型批次]`；验收不过不 commit
 - 红线：EF 版本锁定 / 原版政策【待定】/ ID 与键名现场核实（`/kubejs hand`、options.txt 实读）/ 合规人工拍板 / 实测优先于推断
