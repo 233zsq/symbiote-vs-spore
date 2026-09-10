@@ -20,7 +20,7 @@
 | 加载器 | Forge 47.2.20+ |
 | Java | 17（统一发行版，推荐 Temurin 17） |
 | 内存 | 开发实例 6–8 GB；发布门槛：最低 4 GB / 推荐 6–8 GB |
-| 开发工具 | Prism Launcher（开发/测试双实例）、packwiz、Git、spark |
+| 开发工具 | PCL2（版本隔离双实例）、packwiz、Git、spark |
 
 ## 内容体系
 
@@ -38,8 +38,8 @@
 
 ## 快速开始（开发者）
 
-1. 前置：Prism Launcher、Java 17（Temurin）、[packwiz](https://packwiz.infra.link/)。
-2. 克隆仓库后，在 Prism 建立 1.20.1 + Forge 47.2.20+ 实例，经 packwiz-installer 按 `pack.toml` 拉取模组（或用 packwiz 命令行同步）。
+1. 前置：PCL2（Plain Craft Launcher，开启版本隔离）、Java 17（Temurin）、[packwiz](https://packwiz.infra.link/)。
+2. 克隆仓库后，在 PCL2 建立 1.20.1 + Forge 47.2.20 实例（模组增删只走 packwiz，勿用 PCL 的 Mod 管理界面直改），经 packwiz-installer 按 `pack.toml` 同步到版本隔离目录。
 3. 仓库骨架（pack.toml、.gitignore、目录、提交规范、JSON 校验脚本）由仓库脚手架初始化任务建立，纪律细节见 `CONTRIBUTING.md`。
 
 ## 文档导航

@@ -26,3 +26,10 @@ Desktop.ini
 # --- 编辑器目录 ---
 .vscode/
 .idea/
+
+# --- 启动器运行痕迹（游戏目录不得指向仓库根；发现混入即清理） ---
+/launcher_profiles.json
+/options.txt
+/PCL.ini
+/PCL/
+/.minecraft/

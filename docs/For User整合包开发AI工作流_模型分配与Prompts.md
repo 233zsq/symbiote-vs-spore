@@ -96,10 +96,12 @@ aa 指数近期争议大、规则改过两轮，只当参考。用自己的数�
 
 ### 阶段① 底座搭建（9.10–9.12）
 
-- **K3**（P1）：packwiz 仓库初始化、`pack.toml`、`.gitignore`（排除 `mods/*.jar`）、目录结构、提交规范、JSON 校验脚本。
+- **K3**（P1）：packwiz 仓库初始化、`pack.toml`、`.gitignore`（全局排除 `*.jar`）、目录结构、提交规范、JSON 校验脚本。
 - **glm5.3flash**：README、实例配置说明。
+- **启动器**：开发/测试实例采用 **PCL2**（Plain Craft Launcher，开启版本隔离建双实例），替代原方案的 Prism——模组增删与更新只走 packwiz，不使用 PCL 的 Mod 管理界面直改；实例游戏目录不得指向仓库根（决策记录见方案 1.4）。
 - 验收：空包稳定启动、`pack.toml` 入库、首次 commit 完成。
 - ⚠️ 世界生成（Terralith）决策在阶段④之前冻结，本阶段只在开发实例验证。
+- 📌 进度（2026-09-10）：仓库骨架与 README/实例配置说明已完成（commit `774b991`）；剩余验收项「空包稳定启动」由人工在 PCL2 建 1.20.1 + Forge 47.2.20 实例实测。
 
 ### 阶段② 核心战斗验证（9.12–9.14）
 
@@ -178,14 +180,20 @@ aa 指数近期争议大、规则改过两轮，只当参考。用自己的数�
 要求：
 1. 目录结构：pack.toml、mods/、config/、kubejs/{startup_scripts,server_scripts,client_scripts,data}/、
    scripts/（CraftTweaker）、config/openloader/{data,resources}/、config/defaultconfigs/、docs/；
-2. .gitignore 排除 mods/*.jar 与运行时产物，保留所有 TOML 元数据与 config 覆盖层；
+2. .gitignore 全局排除 *.jar 与运行时产物，保留所有 TOML 元数据与 config 覆盖层；
 3. pack.toml 预填 MC 1.20.1 + Forge 47.2.20；
 4. 写一份 CONTRIBUTING.md：分批添加纪律（每批一次 commit）、commit message 规范
    （type(scope): 描述 [模型批次]）、EF 版本锁定红线；
-5. 写一个 Python 校验脚本 scripts/check_json.py：递归校验 openloader 数据目录与 kubejs/data
-   下所有 JSON 语法，供 B 级批量产物入库前调用。
+5. 写一个 Python 校验脚本 tools/check_json.py：递归校验 config/openloader/data 与 kubejs/data
+   下所有 JSON 语法，供 B 级批量产物入库前调用。注意不得放进 scripts/——那是 CraftTweaker
+   游戏加载目录，会被打进发布包；仓库工具一律放 tools/；
+6. 写一份 .packwizignore：把 docs/、tools/、CONTRIBUTING.md 等开发专用文件排除出 packwiz
+   索引与导出，防止被打进发布 overrides。
 完成后给出目录树与逐文件说明。
 ```
+
+> ✅ 落地状态（2026-09-10，commit `774b991`）：已完成。与原始 P1 的三处偏差已并入上文：
+> 校验脚本落位 `tools/check_json.py`、补充 `.packwizignore` 要求、`.gitignore` 为全局 `*.jar` 拦截。
 
 ### P2 · 崩溃 / 日志归因（窗口内派 K3，窗口外派 glm5.3）
 
@@ -245,6 +253,8 @@ aa 指数近期争议大、规则改过两轮，只当参考。用自己的数�
   "attributes": { "armor_negation": <数>, "impact": <数>, "max_strikes": <整数> }
 }
 路径规则：kubejs/data/<物品所属modid>/capabilities/weapons/<物品注册名>.json
+通道纪律：EF capability JSON 统一走 kubejs/data/ 单一通道（tools/check_json.py 默认校验目录之一）；
+config/openloader/data/ 留给世界生成覆盖等其他数据包内容，同类数据不得双通道重复放置。
 数值表：【粘贴 3.3 各内容带/武器线的 armor_negation/impact/max_strikes 标准值】
 输入清单（ID 已人工核实，含所属武器线与流程节点列）：【粘贴 CSV】
 要求：一个物品一个文件一个代码块，标注完整路径；数值严格取自数值表、与所属武器线节点
@@ -382,6 +392,7 @@ opt-out 状态 | 处理方式建议（索引引用 / 引导玩家手装 / 需书
 5. **世界生成定型前不动正式存档**：Terralith 及一切 worldgen 覆盖先入开发实例验证。
 6. **合规人工拍板**：许可证、RoadWeaver 版权争议、FTB 系分发限制——AI 只打草稿，最终结论必须人工到原始页面核实。
 7. **原版内容政策【待定】**：决策落地前，任何模型不得改动原版配方/数值/门控；AI 若主动提出原版修改建议，归入"阶段⑤平衡实测后决策"待办，不当场执行。
+8. **实例目录与仓库分离**：游戏实例一律放启动器版本隔离目录，仓库根只存源码与元数据；`launcher_profiles.json`、`logs/` 等运行时痕迹已入 .gitignore，发现混入立即清理。
 
 ## 6. 额度与预算监控
 
