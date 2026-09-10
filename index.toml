@@ -5,6 +5,10 @@ file = "README.md"
 hash = "8e2c97fdca9727af6061ed61ceb0420c03882e88155112480413c0e21264779f"
 
 [[files]]
+file = "config/epicfight-client.toml"
+hash = "04179e7444dd784e26c1965152ff0faae785baaab8bed9f46a7a35af4344e124"
+
+[[files]]
 file = "mods/epic-fight.pw.toml"
 hash = "01ad46d3f76d8355935ccee7e9f364961b455e5d217692356d8f03e99b811f47"
 metafile = true
