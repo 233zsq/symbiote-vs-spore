@@ -39,7 +39,7 @@
 | 启动器 | PCL2（版本隔离双实例），模组增删只走 packwiz，禁用 PCL Mod 管理直改 | 方案 1.4 |
 | Forge | 47.4.23 冻结 | pack.toml |
 | EF 系列 | 锁定 20.14.x，当前 20.14.17 | commit `5d61e46` |
-| **键位/配置下发** | **定型：Default Options mod**（`config/defaultoptions/` 只对新安装生效，不覆盖玩家改键；不随包发根目录 options.txt——避免更新冲掉玩家设置）。EF 六键已入表：切战斗=mouse.5、武器固有技能=R、闪避=LAlt、格挡=右键、锁定=G、技能编辑器=K；Symbiote 键位（拟 V/B）待其入包后追加进同一文件 | 阶段②.5 |
+| **键位/配置下发** | **定型：Default Options mod**（`config/defaultoptions/` 只对新安装生效，不覆盖玩家改键；不随包发根目录 options.txt——避免更新冲掉玩家设置）。EF 六键已入表：切战斗=mouse.5、武器固有技能=R、闪避=LAlt、格挡=右键、锁定=G、技能编辑器=K；Symbiote 键位改绑方案见待办池#7（jar 侦察后修正：实际冲突为 R/G/K+T/L 五处，非原估的 V/B 两键） | 阶段②.5 |
 | **性能栈时点** | **提前至阶段②.5 入包**（原方案排第四批）：此后一切实测在最终性能/监控环境中进行，避免后期入包导致手感与兼容结论返工；spark 自此常驻支撑 Spore TPS 监控 | 阶段②.5 |
 | 原版干预政策 | 【待定】默认完全自由，决策前任何脚本不得碰原版；当前倾向 A（完全不动），阶段⑤实测数据有反例再翻案 | 方案 3.3 |
 
@@ -48,7 +48,7 @@
 - **阶段① 底座搭建 ✅**：空包启动、pack.toml 入库、首次 commit 全部验收
 - **阶段② 核心战斗验证 ▶ 收尾**：手感基准实测通过；已修=战斗相机、键位；处决/体力 jar 级查证 ✅ 完成并回填清单。剩余动作：斧 Guillotine / 匕首 Blade Rush 两项处决复测 → 交 glm5.3flash 整理《战斗手感基准文档》后关闭
 - **阶段②.5 开发环境补齐 ✅（2026-09-10 人工验收通过）**：性能五件套 + QoL 四件 + Default Options 入包并同步实例；实例实测：启动无崩溃、Embeddium×EF 战斗动画/渲染正常、Controlling 可见 EF 键位分类、JEI/Jade 生效。此后一切实测均在最终性能/监控环境进行
-- **阶段③ 次核心攻坚（下一步，开工点）**：Symbiote → Sword Soaring/Nightfall → Fungal Infection: Spore，**各占一批单独验证**；Symbiote 实测间隙可并行准备御剑/Nightfall 的入包手续（实测批次仍分开）；Spore 批次 spark 已就位。每批启动实测过线才 commit
+- **阶段③ 次核心攻坚 ▶ 批1 Symbiote 待实测**：Symbiote **1.1.3**（Modrinth，ARR）已 packwiz 入包 + sync 入实例（2026-09-10，未 commit，实测过线才提交）；jar 侦察已完成（见待办池#7）。实测顺序：Symbiote → Sword Soaring/Nightfall（各占一批单独验证）→ Fungal Infection: Spore；Symbiote 实测同场合并阶段②遗留的处决复测两项。Sword Soaring 在 Modrinth 有官方页（`epic-fight-sword-soaring`，前置 Invincible Lib 已在 Modrinth）；**Nightfall 仅 CurseForge**，入包链路待批2再解。Spore 批次 spark 已就位。每批启动实测过线才 commit
 
 ## 5. 待办池（按优先级）
 
@@ -58,7 +58,7 @@
 4. **处决设计缺口（设计决策待定）**：魂系玩家预期"打空韧性→处决"，EF 原生没有；候选：接受现状（以硬直/倒地呈现）/ 引入社区处决数据包或附属 / 阶段⑤用 KJS 自定义处决触发。建议阶段⑤平衡期与格挡手感（待办#6）一并评估
 5. **无敌帧难度分档**：用户希望按难度可调——阶段⑤平衡时评估（config 分档或任务奖励切换）
 6. **格挡手感**：用户感觉不如成熟整合包——Impactful 附属入包（阶段④）后再评
-7. **Symbiote 键位追加**：入包后把 V/B 改绑写进 `config/defaultoptions/keybindings.txt`（Controlling 现场核 ID）
+7. **Symbiote 键位追加**：jar 侦察（2026-09-10，K3，SymbioteKeybinds.class）——实际有 **16 个键位**（不止方案记载的 R/K 两个）：tendril_yank=R、wall_cling=C、living_armor_toggle=G、radial_menu=X、feed=B、tendril_lash=Z、carapace=H、frenzy=J、apex=K、consume=U、strain_power=T、arm_assign=O、arm_toggle=L、arm_wall=N、graft_ask=V（+1 未名）。**实际冲突 5 个**：R/G/K 撞 EF 六键表、T 撞原版聊天、L 撞原版进度；拟改绑 tendril_yank→Y、living_armor_toggle→I、apex→M、strain_power→;、arm_toggle→'（其余 11 键保持默认）。实测在 Controlling 核实 ID 与冲突后写入 `config/defaultoptions/keybindings.txt`。另：jar 内无 epicfight 字样引用（无硬编码耦合，好兆头）；config 字段已侦察（STRESS_*/DEFIANCE_*/OVERRIDE_*/LIVING_ARMOR_* 等齐全），劫持调频待实测拿到生成的 toml 后设计
 8. **packwiz-installer 同步链路**：Java 下载受代理影响，已被 `tools/sync_mods.py` 取代主链路；installer 修复降级为低优先级
 
 ## 6. AI 协作要点（新会话必读）
