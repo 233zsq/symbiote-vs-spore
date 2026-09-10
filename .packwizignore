@@ -1,0 +1,16 @@
+# packwiz 打包排除清单（gitignore 语法）
+# 作用：以下开发专用文件不进 index.toml，也不会被 curseforge/modrinth export 拷入 overrides。
+# 注意：README.md 作为包门面保留进包；其余开发文档一律不发给玩家。
+
+.git/
+.gitignore
+.gitattributes
+.packwizignore
+.gitkeep
+
+# 开发文档与设计资料（含 archive/ 历史方案）
+docs/
+CONTRIBUTING.md
+
+# 仓库工具（JSON 校验等，仅开发期使用）
+tools/

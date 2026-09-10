@@ -1,0 +1,618 @@
+# 《我的世界》Java 版整合包开发方案
+
+> 主题：战斗 & 冒险（以史诗战斗 Epic Fight 为战斗底座）  
+> 次核心：Symbiote 共生体 × Fungal Infection: Spore 真菌天灾 × 御剑修仙（Sword Soaring / EpicFight-Nightfall）——「以共生对寄生」  
+> 扩展层：EF 附属五件套、Saint's Dragons 圣龙传说、匠魂（工具向）、RoadWeaver 阡陌交通  
+> 版本基线：Minecraft 1.20.1 + Forge 47.2+  
+> 方案日期：2026-09-10（v3 扩展层版）
+
+---
+
+## 第1章 整合包定位与技术选型
+
+本章是整份开发方案的总纲：先明确整合包的定位与设计哲学，再据此锁定游戏版本与加载器，最后给出本地开发环境的基线配置。所有后续章节（模组清单、魔改方案、工程实践）都以本章结论为前提。
+
+### 1.1 整合包定位：以 Epic Fight 为战斗底座、「以共生对寄生」为主线的战斗 & 冒险包
+
+本整合包定位为**战斗 & 冒险主题包**，采用"1 个核心特色 mod + 数个大型内容 mod + 刚需辅助 mod"的结构。核心特色 mod 是 **Epic Fight（史诗战斗）**——它将 Minecraft 原版"点击即挥砍"的战斗彻底改造为动作游戏式的实时战斗：轻重攻击连段、翻滚闪避、格挡与处决、体力管理、锁定视角，并配套技能树与武器专精系统。在本包结构中，Epic Fight 是承托一切的**战斗底座**：无论玩家身处主世界地牢、暮色森林还是真菌天灾前线，战斗手感与成长路径都由它统一承载。
+
+在战斗底座之上，是已确定的**次核心层 A + B + D**，三个 mod 共同构成本包的题材钩子与叙事主线：
+
+- **A = Symbiote: A Bonding Experience（共生体养成）**：玩家体内寄宿一个有脾气的共生体——它会提要求、闹情绪，高压时甚至会劫持你的操作。互动性与话题性担当，是天然的直播/传播素材；
+- **B = Epic Fight - Sword Soaring（御剑修仙）+ EpicFight-Nightfall（原创动作武器包，含阎魔刀/村雨）**：Epic Fight 原生附属，为战斗提供内容纵深——御剑流与原创动作武器直接长在 EF 的动作与技能体系上，构筑深度与战斗底座无缝耦合；
+- **D = Fungal Infection: Spore（真菌感染天灾）**：体外的主线压力源——不断蔓延、不断进化的真菌感染，辅以 Organoid 级到 9 个 Calamity 级（Sieger、Leviathan、Hindenburg 等）的 Boss 梯队与战利品闭环（尸块/生物质→感染装备），构成贯穿全包的生存威胁与终局挑战。
+
+三者合流为一条叙事主线：**「以共生对寄生」**——体内养成一个会反抗你的共生体，体外对抗一场不断进化的真菌天灾。这一组合符合爆款整合包的共同规律：**3 秒可说的题材钩子**（"体内共生体 vs 体外真菌天灾"）、**与 EF 底座深度耦合**（B 为 EF 原生附属，D 的 Boss 战由 EF 动作体系承载）、**可重复的终局循环**（天灾反扑压制与共生体持续成长互为驱动）。
+
+在"战斗底座 + 次核心层"之下，其余内容层由数个**大型内容 mod** 填充，作为探索与成长的舞台，分为三类：
+
+- **Boss 类**：如 L_Ender's Cataclysm、Mowzie's Mobs、Aquamirae 等，与 Spore 的 Calamity 梯队共同构成 Boss 谱系（这些 Boss 的多段动作与 Epic Fight 的闪避/格挡体系高度契合）；
+- **结构类**：如 YUNG's 系列地牢重制、灾变系遗迹等，提供探索目标与战利品梯度；
+- **维度类**：如暮色森林等，提供阶段化的异界冒险舞台（其自带 Boss 进度链天然适合作为成长标尺）。
+
+设计哲学上强调**引导式冒险与阶段成长**：通过任务线把"下矿备装 → 攻略低阶地牢 → 缔结共生体 → 挑战首个 Boss → 解锁新维度 → 迎击 Calamity 级天灾"串联成清晰的成长阶梯，共生体养成线与真菌天灾进化线沿途交织推进；配合阶段门控防止数值碾压，让每一次胜利都来自操作与构筑而非装备溢出。
+
+同时，本包明确要解决冒险类整合包的一个普遍痛点：**玩家过度依赖小地图传送点与冒险家指南针（Explorer's Compass）直接定位结构，导致"传送跳脸打 Boss"**——探索过程被跳过、冒险感荡然无存、Boss 难度曲线形同虚设。本方案将通过专门的机制设计（限制传送锚点获取、将结构定位与任务进度/Boss 战利品绑定、提供"探索即奖励"的替代正反馈等）重建"旅程本身即是内容"的冒险体验，具体方案详见后续魔改章节。
+
+### 1.2 版本选择：1.20.1 对 1.21.1
+
+候选版本为 1.20.1 与 1.21.1，对比结论如下：
+
+- **1.20.1**：Epic Fight 生态最成熟的版本。Epic Fight 本体及其庞大的附属生态（武器扩展、与其他 Boss 模组的兼容补丁、战斗动画包）均以 1.20.1 为主力维护版本；次核心层亦在 1.20.1 齐备——Sword Soaring、EpicFight-Nightfall 为 EF 的 1.20.1 附属，Fungal Infection: Spore 长期维护 Forge 1.20.1 分支；同时 Cataclysm、暮色森林、YUNG's 系、Mowzie's Mobs 等大型内容模组在 1.20.1 均已稳定可用，配套的任务、阶段、脚本魔改工具链（KubeJS、FTB Quests、GameStages）也已完全适配。
+- **1.21.1**：原版机制更新（试炼密室等），但 Epic Fight 的 1.21 版本生态尚在追赶期，不少附属与兼容补丁尚未跟进，部分大型 Boss/结构模组也仍在移植，选 1.21.1 会显著缩小可选内容池。
+
+**结论：锁定 1.20.1。** 对本包而言，"战斗手感统一 + 内容生态完整"的优先级高于原版新特性。
+
+### 1.3 加载器选择：Forge 47.2+
+
+四大加载器对比：Fabric/Quilt 性能优化生态强，但 Epic Fight 本体是 **Forge 模组**（官方仅发布 Forge 版本），且 Cataclysm、暮色森林等目标内容模组同样以 Forge/NeoForge 为主阵营，Fabric 路线在本包场景下直接不成立。Forge 与 NeoForge 之间：1.20.1 是两者 API 基本同源的最后一代（NeoForge 在 1.20.1 期间仍兼容 Forge 模组），但 1.20.1 上绝大多数模组以 Forge 为目标开发与测试，兼容性与教程资源最充分。
+
+**结论：1.20.1 + Forge 47.2+。** 具体推荐 47.2.x 之后的稳定构建（修复了早期 47.x 的若干网络与事件总线问题）。1.21.1 + NeoForge 组合作为未来的远期升级路线保留观察，不在本期范围。
+
+### 1.4 开发环境基线
+
+- **启动器**：Prism Launcher，为开发与测试分别建立独立实例，模组与配置互不污染；实例导出便于在团队成员间同步环境。
+- **Java**：1.20.1 使用 Java 17（官方要求），开发期统一固定同一发行版（如 Temurin 17），避免不同 JDK 导致的诡异崩溃；Java 21 在 1.20.1 上属非官方支持，不作基线。
+- **内存规划**：本包预计模组规模较大（核心战斗 + 多个大型内容 mod + 辅助 mod），开发实例分配 6–8 GB 堆内存；客户端发布建议写明"最低 4 GB / 推荐 6–8 GB"，并配合性能优化模组（Embeddium、ModernFix 等，详见第 2 章）压低门槛。
+
+至此，技术栈定型为：**Minecraft 1.20.1 + Forge 47.2+ + Java 17**，主题为以 Epic Fight 为战斗底座、次核心层 A+B+D 支撑「以共生对寄生」主线的引导式战斗冒险包。下一章将按"核心战斗 → 大型内容 → 性能与辅助"的顺序给出完整模组清单。
+
+---
+
+## 第2章 模组清单
+
+本章按“**1 个核心特色 mod + EF 附属战斗扩展层 + 3 个次核心支柱 + 数个大型内容 mod + 刚需辅助 mod**”重新组织清单，目标版本固定为 **Minecraft 1.20.1 + Forge 47.2.20+**。全包的设计中心不是模组数量，而是围绕 Epic Fight 建立统一的动作战斗体验；EF 附属层以“附属五件套”（Impactful 打击感、Battle Arts 流派、Resurrection 武器、Indestructible 怪物强化、Epic Foes 竞技场 Boss）把战斗手感、敌人行为与 Boss 战全部拉到 EF 原生水准；次核心层以“以共生对寄生”为叙事主线——体内养成有脾气的共生体（Symbiote），体外对抗不断进化的真菌天灾（Fungal Infection: Spore），御剑修仙与 Nightfall 武器资产提供 EF 原生战斗纵深；再以 Boss、维度、地牢、法术、探索补给与任务门控构成完整冒险循环。
+
+“定位”列中，**核心**表示默认安装且支撑主线，**次核心**表示支撑叙事主线的第二梯队支柱，**刚需**表示大型包必需的辅助能力，**推荐**表示默认安装但可按性能或难度裁剪，**可选**表示不进入首个稳定版、待兼容性测试后再启用。下表共 **106 个唯一条目**（88 个功能模组/数据包与 18 个集中列出的前置库；Canary 在 2.2 与 2.8 交叉列出、只计一次），满足大型整合包的最低规模要求。
+
+### 2.1 核心特色模组：Epic Fight
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Epic Fight（史诗战斗） | 将原版战斗重构为动作化系统：战斗/建造双模式、闪避、格挡、体力、技能、武器动作与第三人称战斗动画；1.20.1 对应 20.x 系列（Forge），官方仅支持 Forge/NeoForge | 无硬前置；使用 Forge 1.20.1 | **核心特色** |
+
+Epic Fight 是本整合包唯一的战斗基石。所有伤害成长、装备强度、Boss 难度、任务奖励和探索节奏都应围绕它的体力管理、闪避窗口、格挡收益与武器动作来设计，而不是沿用原版“快速点击—堆护甲—站桩输出”的平衡模型。
+
+需要特别强调：**其他模组加入的武器、盔甲和特殊装备不会天然适配 Epic Fight 的动作系统**。默认清单中优先选择已有 Epic Fight 预设或官方附属的装备；其余物品必须在魔改阶段通过 Epic Fight 数据 JSON、KubeJS/数据包或自建兼容层补齐武器类型、攻击范围、动作组、特殊能力与属性，未适配的装备应禁用合成、降级为收藏品，或仅允许在建造模式使用。
+
+### 2.2 次核心层：共生养成 × 真菌天灾 × 御剑修仙
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Symbiote: A Bonding Experience | 共生体养成：Bond/Trust/Stress/Hunger/Mood 五维数值，共生体主动提要求、高压下劫持玩家操作，5 菌株战斗形态（Predator/Guardian/Shadow/Sculk/Royal） | 无前置（仅 1.20.1 Forge；闭源 ARR 但作者允许整合包使用） | **次核心** |
+| Fungal Infection: Spore | 真菌天灾主线：感染扩散、Proto Hivemind、9 个 Calamity 级 Boss、尸块/生物质→Living/Flesh 装备的感染战利品闭环 | 无前置；建议配 Spore Inquisition 数据包 | **次核心** |
+| Epic Fight - Sword Soaring | 御剑修仙战斗（御剑飞行/万剑诀），与 EF 技能树联动 | Epic Fight、Epic Fight - Invincible Lib | **次核心（战斗纵深）** |
+| EpicFight-Nightfall | EF 原创动作武器资产（阎魔刀、村雨等） | Epic Fight | **次核心（战斗纵深）** |
+| Spore Inquisition（数据包） | 把真菌感染改为定点 Mound 坠落制，使扩散有序可控 | Fungal Infection: Spore | 推荐 |
+| Canary | Lithium 的 Forge 移植，TPS 优化（Spore 感染场景必备；与 2.8 性能节的 Lithium 槽位为同一条目，不重复计数） | 无 | 刚需 |
+| In Control! | 按维度/条件控制刷怪，用于感染维度隔离与生成率门控 | 无 | 推荐 |
+
+次核心层的风险与对策：**Symbiote** 的 R/K 键与 EF 默认键位可能冲突、劫持机制可能打断 EF 战斗节奏，需实测并改键；**Spore** 的不可逆腐蚀需通过 sporeconfig 压低扩散、CDU 与定期备份控制，配合 Spore Inquisition 定点化与 In Control! 维度隔离；Spore 生物为标准 GeckoLib 实体，与 EF 无已知冲突但缺乏共存先例，必须实测 EF 动作对 Calamity 级巨型生物的命中判定与 Spore 武器的 EF 属性。性能上，Spore 场景必须启用 Canary 并以 Spark 持续监控 TPS。
+
+### 2.3 大型内容模组（战斗/冒险向）
+
+#### 2.3.1 Epic Fight 附属战斗扩展（附属五件套与可选增强）
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Epic Fight - Impactful | 打击感反馈：屏幕震动、卡肉（hitstop）、格挡震屏等，全部参数可配置（作者 namelesslk，CF 约 500-620 万下载） | Epic Fight | 推荐 |
+| Epic Fight - Battle Arts | 战斗流派/Combat Arts 体系与新武器类型（战轮、刺剑、长剑流派），扩展角色构筑空间（作者 Forixaim，EF 官方团队成员） | Epic Fight、Battle Arts-API | 推荐 |
+| EpicFight: Resurrection（重生） | 大量带独立招式的武器（阎魔刀等），丰富中后期武器流派；注意与 Nightfall 阎魔刀题材重叠，需确认与 EF 20.14 系列匹配 | Epic Fight | 推荐 |
+| Epic Fight - Indestructible | 用数据包为怪物赋予 EF 行为（招式、硬直、连击），把普通敌人拉到 EF 原生水准（作者 namelesslk，约 470 万下载） | Epic Fight | 推荐 |
+| Epic Foes | 10 个带专属竞技场的 EF 原生 Boss（1.50 版）；前置恰为 EF 20.14.10+ + Nightfall + Resurrection + WoM，与本包清单咬合；多人兼容性一般，需实测 | Epic Fight 20.14.10+、EpicFight-Nightfall、EpicFight: Resurrection、Weapons of Miracles | 推荐 |
+| EFN-Enhance | EpicFight-Nightfall 强化扩展（约 110 万下载） | Epic Fight、EpicFight-Nightfall | 可选 |
+| Epic Fight - The Mimic | 拟态者 Boss（约 150 万下载） | Epic Fight、Avalon | 可选 |
+| Epic Fight - Guandao Moveset | 青龙偃月刀动作组与方向派生技能（约 490 万下载） | Epic Fight | 可选 |
+| Valour Guard | 大剑定时招架机制（6.8 万下载，体量小、待观察） | Epic Fight | 可选 |
+| P1nero's Epic X Cataclysm | EF×Cataclysm 联动增强；本包已收录 Cataclysm，故列为可选补强 | Epic Fight、L_Ender's Cataclysm | 可选 |
+
+附属五件套的选材理由是“全链路 EF 原生化”：Impactful 补打击手感，Battle Arts 与 Resurrection 补玩家侧构筑与武器池，Indestructible 把普通怪物纳入 EF 行为体系，Epic Foes 的前置链（EF 20.14.10+ + Nightfall + Resurrection + WoM）恰好反过来锁定本包 EF 附属的版本基线。**不入列项**：Devil Mine Craft（与 Nightfall 阎魔刀题材重叠且依赖链过重）；Tijōn's Epic Arsenal（仅当引入 TaCZ 枪械线时才需要，本包无枪械线）。版本耦合警告：Epic Foes 明确要求 EF 20.14.10+，Resurrection 也需确认与 EF 20.14 系列匹配，故全包 EF 系列统一锁定 20.14.x，禁止单独升级任一附属。
+
+#### 2.3.2 其他大型内容模组
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Weapons of Miracles - Epic Fight | 已确认存在 1.20.1 Forge 版；为 Epic Fight 增加多把奇迹武器、专属动作、技能和特殊战斗机制 | Epic Fight | **核心内容** |
+| CompatLink | 无代码 Epic Fight 兼容层：config 中放 JSON 即可把任意模组武器映射到 EF/WoM 动作类型，支持通配符/拖尾/战斗属性，并可修复战斗模式下模组盔甲渲染损坏 | 需 Epic Fight | **核心（本包武器适配主力）** |
+| EFMCompat | 社区维护的 Epic Fight×30+ 模组武器兼容数据包补丁合集 | 需 Epic Fight | **核心** |
+| Saint's Dragons（圣龙传说） | 8 种可驯服骑乘伙伴龙（赶路/养成向）、龙匠锻炉与 NPC 商人；Alpha 阶段高频更新，需锁定版本并接受数据风险；与 Terralith 共存、生成走群系标签 | GeckoLib 4.8.1+、Mount Fix（修复 EF 骑乘本模组龙时的崩溃，必装） | 推荐 |
+| Tinkers' Construct（匠魂） | 冶炼炉与部件打造体系；**本包仅工具向开放**，武器高阶材料（玛玉灵等）走任务/阶段门控，避免与共生体、御剑线定位重叠；修饰符与 EF 命中判定的互通需实测 | Mantle、Epic Fight: Tinkers Integration（EF 适配，勿用纯数据包方案） | 推荐（工具向） |
+| Epic Knights: Shields, Armor and Weapons | 中世纪盔甲、盾牌和武器库；1.20.1 提供 Epic Fight 预设支持，可作为近战装备主干 | Architectury API、Cloth Config | **核心内容** |
+| L_Ender's Cataclysm（灾变） | 高难度地牢、精英怪、Boss 与强力战利品，是本包 Boss 战与终局挑战核心 | Lionfish API、Curios API | **核心内容** |
+| The Twilight Forest（暮色森林） | 完整维度冒险线，包含迷宫、地牢、区域进度和多位 Boss | 无硬前置 | **核心内容** |
+| Alex's Mobs | 增加大量野生动物、怪物和功能生物，强化生态系统与狩猎目标 | Citadel | 推荐 |
+| Alex's Caves | 增加多个稀有地下洞穴生态、洞穴探索线索、独特生物与战利品 | Citadel | **核心内容** |
+| Iron's Spells 'n Spellbooks | RPG 法术战斗体系，提供法术书、法术升级、施法装备和战斗流派 | Curios API、GeckoLib、playerAnimator、Iron's Lib | **核心内容** |
+| Ars Nouveau | 自定义符文法术、法术自动化与使魔体系；适合作为高自由度法术支线 | Curios API、Patchouli、GeckoLib | 可选 |
+
+版本耦合是 2.3 的最大风险：2.3.1 全部附属与 Weapons of Miracles、Guandao Moveset 等都直接读取 Epic Fight 的内部动作与技能系统，**必须锁定同一 Epic Fight 主版本系列（本包为 20.14.x），禁止单独升级某一个附属**。Epic Knights 虽有官方预设支持，仍应抽查每类武器的挥砍、格挡、范围和双手判定；Cataclysm 与暮色森林掉落的装备则统一进入魔改适配队列，实施时优先使用 CompatLink 编写本包专属映射，并以 EFMCompat 的 30+ 模组兼容数据作为参考基线。
+
+Iron's Spells 提供的是“法术战斗”，Ars Nouveau 提供的是“自由构装法术”，二者定位不同。首个稳定版建议默认启用 Iron's Spells，Ars Nouveau 作为可选支线；若二者同时启用，应通过任务阶段、法力资源与配方门控避免玩家过早获得绕过硬直、格挡和体力系统的高爆发手段。
+
+### 2.4 探索与世界生成
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Terralith | 大幅增加主世界地形和生物群系表现力，增强赶路、寻路与野外遭遇体验 | 模组形态混装生物群系时需 TerraBlender | **核心内容** |
+| TerraBlender | 协调 Terralith、Biomes O' Plenty 等世界生成模组的群系分布 | 无 | 刚需 |
+| YUNG's Better Dungeons | 重做地下城结构，提供中低风险战斗点和探索奖励 | YUNG's API | 推荐 |
+| YUNG's Better Mineshafts | 重做矿井结构，增强地下探索与遭遇战 | YUNG's API | 推荐 |
+| YUNG's Better Strongholds | 重做要塞，使主线通往末地的过程更符合冒险包节奏 | YUNG's API | 推荐 |
+| YUNG's Better Ocean Monuments | 重做海底神殿，补充水下战斗和探索内容 | YUNG's API | 可选 |
+| YUNG's Better Nether Fortresses | 重做完蛋堡，强化下界战斗与烈焰人刷怪区域的探索价值 | YUNG's API | 推荐 |
+| YUNG's Better End Island | 重做完地主岛，使末影龙战前后的空间更有层次 | YUNG's API | 可选 |
+| RoadWeaver（阡陌交通） | 在村庄与自定义结构间自动生成美观道路（含隧道、桥梁、路灯），路标提供距离与方向指引；是本包“用脚探索代替传送”设计的核心设施 | 无（注意与 Tectonic-V3、C2ME 旧版存在冲突，需更新到新版） | 推荐 |
+| Biomes O' Plenty | 增加大量主世界生物群系；与 Terralith 叠加可显著扩展地貌 | TerraBlender | 可选 |
+
+世界生成层只负责“值得去探索”，不负责直接给玩家坐标。结构密度应控制在“旅途中能意外发现，但不能三步一地牢”的水平；Terralith 与 Biomes O' Plenty 同时启用会提高世界生成和内存压力，首个稳定版可只保留 Terralith。所有世界生成模组必须在创建正式存档前确定，**不要在已有存档中途追加**。
+
+### 2.5 农业与食物（战斗口粮）
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Farmer's Delight（农夫乐事） | 耕作、烹饪、菜肴与便携食物体系，为长途探索提供补给目标 | 无 | **核心内容** |
+| Nether's Delight | 下界主题食材与料理，补充下界探索收益 | Farmer's Delight | 推荐 |
+| Ender's Delight | 末地主题食材与料理，服务后期探索 | Farmer's Delight | 可选 |
+| Ocean's Delight | 海洋食材与料理，配合海洋结构和洞穴探索 | Farmer's Delight | 可选 |
+| Brewin' and Chewin' | 酿造、发酵与饮品效果，可作为战斗前准备系统 | Farmer's Delight | 推荐 |
+| Farmer's Respite | 茶饮与简易补给，丰富前中期恢复选择 | Farmer's Delight | 可选 |
+
+食物模组不应只是收集数量，而要服务战斗循环：普通料理负责恢复饥饿，高级便当负责长时间探索，饮品和宴会料理提供短时增益。高等级食物的配方可与作物、Boss 掉落物或任务阶段绑定，避免玩家在游戏早期就获得无限、强力的常驻增益。
+
+### 2.6 QoL 与刚需辅助
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Just Enough Items（JEI） | 查询配方、用途和魔改后的物品来源 | 无 | 刚需 |
+| Jade | 显示方块、容器、实体和进度信息，降低界面学习成本 | 无 | 刚需 |
+| AppleSkin | 显示饥饿、饱和度与食物收益，便于规划战斗口粮 | 无 | 刚需 |
+| Sophisticated Backpacks | 高品质背包与升级模块，解决探索携带量问题 | Sophisticated Core | 刚需 |
+| Sophisticated Storage | 高品质桶、箱和储物升级，用于基地补给站 | Sophisticated Core | 推荐 |
+| Xaero's Minimap | 小地图、实体雷达与路径点显示；**保留，但传送功能将经配置关闭，见魔改章节** | 建议搭配 Xaero's World Map | 刚需 |
+| Xaero's World Map | 全屏地图、已探索区域与路径点管理；**保留，但传送功能将经配置关闭，见魔改章节** | 建议搭配 Xaero's Minimap | 刚需 |
+| Antique Atlas 4 | 手绘地图，结构亲自发现才标注、无传送，探索引导用 | 无 | 推荐 |
+| Lootr | 战利品箱按玩家独立结算，解决多人抢箱与重复搜刮问题 | 无 | 刚需 |
+| Waystones | 传送石与回归道具，用于已探索据点的有限回程 | Balm | 推荐 |
+| Fast Travel Waypoints | Xaero 世界图与 Waystones 联动，把右键瞬移限制为只能传送到已激活石碑 | Xaero's World Map、Waystones | 可选 |
+| Mouse Tweaks | 容器拖拽与批量整理操作优化 | 无 | 刚需 |
+| Controlling | 按键绑定搜索与冲突提示；Epic Fight 的附加按键较多，必须保留 | 无 | 刚需 |
+| Curios API | 饰品槽框架，为法术、饰品和装备扩展提供统一接口 | 无 | 刚需/前置 |
+| Explorer's Compass | 搜索结构并给出方向；**保留但将魔改平衡**，避免直接变成“结构传送器” | 无 | 推荐/需平衡 |
+| Polymorph | 解决多模组配方冲突，允许玩家选择实际输出 | 无 | 推荐 |
+
+地图模组保留“记录、标记、复盘”的价值，但关闭“随时传送到路径点”的价值；替代方案是 Antique Atlas 4 的亲自发现标注、任务引导、地图标记奖励、Fast Travel Waypoints 所限制的已激活石碑传送，以及高成本回程道具。Explorer's Compass 的配方应推迟到中期，并通过配置黑名单或脚本限制其搜索 Boss 竞技场、终局地牢等高价值结构；它只能缩短无效跑图，不能替代亲自探索。
+
+### 2.7 任务与魔改工具
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| FTB Quests | 任务章节、击杀/收集/探索目标、奖励和剧情引导 | FTB Library、FTB Teams | 刚需 |
+| FTB Library | FTB 系列基础库 | 无 | 刚需/前置 |
+| FTB Teams | 队伍进度共享与多人协作 | FTB Library | 刚需/前置 |
+| FTB XMod Compat | 增强 FTB Quests 与 KubeJS 等模组的联动 | FTB Quests、KubeJS | 推荐 |
+| KubeJS | 主魔改框架：配方、标签、战利品、事件、自定义物品、JEI 隐藏和任务联动 | Rhino、Architectury API | **核心工具** |
+| CraftTweaker | 辅助魔改框架，负责 KubeJS 覆盖不到的兼容实现与 GameStages 脚本 | 无 | 刚需 |
+| Open Loader | 全局加载数据包和资源包，用于 Epic Fight 武器数据、世界生成覆盖与材质修正 | 无 | 刚需 |
+| GameStages | 玩家阶段框架，为任务奖励、配方、物品和维度门控提供状态 | Bookshelf | **核心工具** |
+| Recipe Stages | 将配方锁定到指定阶段，防止跨进度制作 | GameStages、CraftTweaker | 推荐 |
+| Item Stages | 将物品使用、持有或显示锁定到指定阶段 | GameStages、Bookshelf | 可选 |
+| Re-Dimension Stages | 1.20.1 可用的维度门控实现，用于锁定暮色森林等维度 | GameStages、CraftTweaker | 推荐 |
+| Custom Machinery | 以 JSON 定义自定义机器、仪式台或多步骤战斗装备加工台 | 无硬前置；建议配合 KubeJS/CraftTweaker | 可选 |
+
+魔改优先级建议为：**CompatLink 主写 EF/WoM 武器动作映射，KubeJS 主写配方、战利品与事件；Open Loader 分发 EFMCompat 与本包自研的 Epic Fight 兼容数据；CraftTweaker 兜底阶段类联动；GameStages 只存阶段状态，不直接承载复杂逻辑**。首个稳定版先做“主线任务 + 武器适配 + 地图传送关闭 + 指南针平衡”，Custom Machinery 留到需要专属锻造台、附魔仪式或终局合成时再启用。
+
+### 2.8 性能优化
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Embeddium | Forge 端渲染优化，提升区块渲染和复杂实体场景帧率 | 无 | 刚需 |
+| Lithium/Canary 槽位 | 游戏逻辑、实体 AI、区块刻等 TPS 优化；Forge 端由 **2.2 所列 Canary** 承接该角色（Spore 感染场景必备），同一条目此处不重复计数 | 以所选 Forge 构建为准 | 刚需 |
+| FerriteCore | 降低方块状态与模型内存占用 | 无 | 刚需 |
+| ModernFix | 启动加速、内存优化与大量兼容性修复 | 无 | 刚需 |
+| Entity Culling | 剔除不可见实体渲染，降低地牢和村庄战斗的客户端压力 | 无 | 刚需 |
+| ImmediatelyFast | 优化即时模式渲染和 GUI/文本绘制 | 无 | 推荐 |
+| Dynamic FPS | 游戏窗口失焦时降低渲染负载 | 无 | 推荐 |
+| Spark | 服务端与客户端性能剖析、TPS、火焰图和卡顿定位 | 无 | 刚需（开发期） |
+| Chunky | 区块预生成，降低探索高峰期服务端生成压力 | 无 | 刚需（服务端） |
+| Distant Horizons | 超远视距 LOD 渲染，用于**替代 Voxy**：Voxy 官方无 1.20.1 Forge 版且禁止非官方移植再分发；Distant Horizons 官方支持 1.20.1 Forge（CF 3370 万+下载），与 Embeddium + Oculus 为标准搭配 | 建议搭配 Embeddium、Oculus | 可选 |
+
+超远视距方面，**Voxy 不入列**：其官方无 1.20.1 Forge 版且许可禁止非官方移植再分发，统一以 Distant Horizons（可选）替代。性能层的目标是保证 Boss 技能、粒子、实体群和大规模结构探索同时发生时仍可游玩。开发期应固定安装 Spark 和 Chunky；发布单人包时可保留 Spark 供玩家排查问题。所有优化模组每次升级后都要进行一次“暮色森林 Boss + Cataclysm Boss + 多人战利品箱”的压力测试，尤其注意实体渲染剔除与 Epic Fight 动画之间的兼容。
+
+### 2.9 装饰（可选）
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Supplementaries | 原版风格功能装饰、绳索、旗帜、器皿和小型交互方块 | Moonlight Lib | 可选 |
+| Macaw's Doors | 更多门和双开门样式，用于营地、城镇和副本外观 | 无 | 可选 |
+| Macaw's Windows | 更多窗户样式 | 无 | 可选 |
+| Macaw's Bridges | 桥梁与栈道，适合营地和山地路径 | 无 | 可选 |
+| Macaw's Furniture | 基础家具，用于据点建设 | 无 | 可选 |
+
+装饰内容只用于据点氛围，不参与数值成长；若内存或帧率不足，装饰层应最先被裁剪。科技模组取舍：Mekanism、Applied Energistics 2、Thermal 系列不进入默认清单，它们与战斗冒险主线无关，仅可作为服主自行承担兼容与平衡成本的可选外挂分支，不推荐普通玩家安装。
+
+### 2.10 前置库汇总
+
+| 模组名 | 作用 | 前置/依赖 | 定位 |
+|---|---|---|---|
+| Architectury API | 跨平台 API；KubeJS、Epic Knights 等使用 | 无 | 刚需/前置 |
+| Cloth Config API | 配置界面与配置数据结构；Epic Knights 等使用 | 无 | 刚需/前置 |
+| Rhino | KubeJS 的 JavaScript 引擎 | 无 | 刚需/前置 |
+| Balm | Waystones 等模组的跨端基础库 | 无 | 刚需/前置 |
+| Patchouli | 游戏内指南书框架，供 Ars Nouveau 等使用 | 无 | 推荐/前置 |
+| GeckoLib | 动画与模型库，供 Iron's Spells、Ars Nouveau 等使用 | 无 | 刚需/前置 |
+| playerAnimator | 玩家模型动画库；Iron's Spells 必需 | 无 | 刚需/前置 |
+| Iron's Lib | Iron's Spells 的核心库 | 无 | 刚需/前置 |
+| Citadel | Alex's Mobs 与 Alex's Caves 的实体/动画基础库 | 无 | 刚需/前置 |
+| Lionfish API | L_Ender's Cataclysm 的动画与实体基础库 | 无 | 刚需/前置 |
+| YUNG's API | YUNG's Better 系列统一前置 | 无 | 刚需/前置 |
+| Moonlight Lib | Supplementaries 的前置库 | 无 | 可选/前置 |
+| Sophisticated Core | Sophisticated Backpacks/Storage 的核心库 | 无 | 刚需/前置 |
+| Bookshelf | GameStages 与部分阶段附属的基础库 | 无 | 刚需/前置 |
+| Battle Arts-API | Epic Fight - Battle Arts 的前置 API | 无 | 推荐/前置 |
+| Avalon | Epic Fight - The Mimic 的前置库（如收录 The Mimic） | 无 | 可选/前置 |
+| Mantle | Tinkers' Construct 的核心库 | 无 | 刚需/前置 |
+| Epic Fight - Invincible Lib | Epic Fight - Sword Soaring 的前置库 | 无 | 刚需/前置 |
+
+最终安装时，功能模组和前置库必须按同一 Minecraft 版本、同一 Forge 构建与同一 Epic Fight 系列锁定；packwiz 清单中应记录每个模组的精确文件版本，而不是只写“最新版”。Epic Fight 附属先行冻结，内容模组随后冻结，性能模组最后冻结；任何一次 Epic Fight 升级都必须触发全量武器动作回归测试。
+
+---
+
+## 第3章 魔改方案（战斗 & 冒险主题）
+
+魔改是本整合包区别于"模组堆砌"的核心。本包以「战斗 & 冒险」为主题、以史诗战斗（Epic Fight）为基础框架，魔改工作围绕一个总目标展开：让包内数十个模组的武器、装备、敌人与探索内容，在 Epic Fight 的战斗体验和"有引导的冒险旅程"这两条轨道上协调运转。本章按总体架构、技术栈、平衡线、自定义内容、阶段门控、任务线、探索痛点改造、Epic Fight 适配、次核心与扩展层耦合九个小节展开。
+
+### 3.1 魔改总体架构：三层模型与两大主线
+
+沿用成熟的魔改三层模型，每一层对应一类技术手段：
+
+- **config 层（数值手感层）**：各模组 `config/` 与 `defaultconfigs/` 中的数值与开关，决定战斗难度、装备属性、地图行为等基础手感；
+- **数据/脚本层（内容层）**：KubeJS 脚本、CraftTweaker 脚本与数据包 JSON，负责配方增删改、自定义物品注册、战利品与世界生成覆盖、Epic Fight 武器数据下发；
+- **进度层（体验层）**：FTB Quests 任务线 + GameStages 阶段门控，把内容层的内容按冒险进度组织成有引导、有终局的流程。
+
+在此架构之上，本包魔改聚焦两条主线：
+
+1. **Epic Fight 适配线**：让包内各模组的武器、装备与敌人适配 Epic Fight 的战斗系统——武器要映射到 EF 的武器类型并获得正确的动作集与判定（攻击范围、碰撞体、耐力消耗），装备数值要在 EF 的闪避/格挡/硬直框架下重新平衡，避免"原版模式一套数值、EF 模式一套体验"的割裂（详见 3.3、3.8）；
+2. **探索引导线**：解决冒险包的典型痛点——玩家过度依赖小地图传送与冒险家指南针（Explorer's Compass）直达结构，使"冒险"退化为"读点传送"。小地图作为刚需模组不可移除，因此改造思路不是删模组，而是通过配置下发、配方魔改与任务引导，把"传送"改造成"旅程"（详见 3.7）。
+
+两条主线之外，本包次核心模组（Symbiote 共生体、Fungal Infection: Spore、Sword Soaring/Nightfall）与扩展层模组（Saint's Dragons 圣龙传说、匠魂 Tinkers' Construct）同 EF 底座及"以共生对寄生"主线叙事的耦合魔改单独成章（详见 3.9）。
+
+### 3.2 技术栈选择：KubeJS 为主、CraftTweaker 为辅、数据包兜底
+
+在 1.20.1（Forge/NeoForge）环境下，魔改技术栈沿用社区主流组合，理由如下：
+
+- **KubeJS 为主**（1.20.1 对应 2001.6.x 系列）：基于 Rhino 引擎将 JS 编译为 Java 类，使用通用 JavaScript 语法；`server_scripts/` 支持 `/reload` 热重载，迭代配方与事件逻辑极快；可直接在 `startup_scripts/` 注册本包独占物品/方块/流体（该角色在 1.20.1 已完全取代停更的 ContentTweaker）；自带实体/物品/世界生成事件系统，并与 FTB Quests 深度联动（经 FTB XMod Compat，任务可触发 KJS 事件）。1.18.2 以来已是专家包与魔改包的主流选择。
+- **CraftTweaker 为辅**（1.20.1 对应 14.0.x 系列）：ZenScript 生态附属最多，GameStages 系（RecipeStages/ItemStages/DimensionStages 等）的锁定 API 走 CrT 最成熟，`/ct hand`、`/ct dump` 等辅助命令便于现场取物。用于阶段锁定、个别附属模组的机器配方。
+- **数据包 + Open Loader 兜底**：凡走数据包 JSON 的模组内容（配方、战利品表、进度、标签、世界生成，以及 Epic Fight 的武器能力数据，见 3.8）都可按同路径覆盖或新增；通过 Open Loader（`config/openloader/data`）全局自动加载，无需随存档分发。注意 1.20.1 数据包目录为复数形式（`recipes/`、`loot_tables/`），物品数据仍用 NBT（1.20.5+ 才改组件）。
+
+三者分工可记为一句话：**能改配置不碰脚本，能用脚本不改 jar，能用 JSON 不写代码**；仅当数据驱动完全无法满足时，才考虑以 Epic Fight API 自建小型附属模组（见 3.8）。
+
+### 3.3 战斗装备平衡线：原版基线、模组装备与终局锻造三条内容带
+
+多模组并存时最常见的问题是同级武器数值参差、材料成本混乱（A 模组的铁级武器完爆 B 模组，或某把武器材料廉价却强度超标）。借鉴 Enigmatica 2 Expert"统一机壳串联科技模组"的思路，本包将其改造为**战斗装备平衡线**：先定义一套贯穿全包的武器等级阶梯，阶梯只划分三个**内容带**，原版装备不单独成档——
+
+- **原版基线带**：木/石 → 铁 → 钻石 → 下界合金按原版流程自然推进，全程开放、不锁配方、不改数值。它不是本包的"成长内容"，而是所有玩家共有的肌肉记忆与装备底线，同时充当各模组装备线的数值参照锚点；
+- **模组装备带**：暮色森林（铁木/骑士金属/炽焰）、Epic Knights、御剑系等模组装备，按其登场的冒险阶段与原版对应档位装备（钻石/下界合金）对齐数值，不越过基线太多；
+- **终局带**：Cataclysm/Calamity 等 Boss 材料锻造的终局装备（abyss_ingot 锻造线），Nightfall 武器与 TiC 玛玉灵武器为其候选平替。
+
+平衡工作只聚焦后两条带：让模组同级武器**数值对齐**，差异化保留在攻击动作与特性上；确因材料成本混乱导致强度/成本倒挂的模组武器，才逐模组收束其核心部件材料，**原版配方一律不改写**。玩家的整体装备流程预期为：开局按原版节奏做出石/铁/钻石装备、熟悉 Epic Fight 战斗 → 冒险途中自然获取各模组装备 → 阶段推进解锁暮色/匠魂等模组装备线 → 终局以 Boss 材料锻造收束。
+
+数值对齐用 KJS 的 `ItemEvents.modification` 批量微调**模组武器**在原版模式下的基础攻击属性（作为 EF 模式的兜底，EF 模式的判定数值见 3.8）；材料收束用 `replaceInput` 按模组批量改写（仅限模组武器配方，原版配方保持原样）：
+
+```javascript
+// server_scripts/weapon_balance.js：战斗装备平衡线（/reload 热重载）
+// 原则：原版装备流程（木/石→铁→钻石→下界合金）保持原样——不删配方、不锁阶段、不改数值；
+//       平衡与材料收束只针对模组武器（模组 ID 与物品 ID 以 /kubejs hand 实测为准）
+ServerEvents.recipes(event => {
+  // 1) 数值倒挂的模组武器：移除其廉价超标配方，改由任务/战利品按阶段投放
+  event.remove({ output: 'somemod:overpowered_blade' })
+
+  // 2) 材料收束仅作用于该模组的武器配方：核心部件统一换成本包"精制铁锭"
+  //    （kubejs:refined_iron_ingot 见 3.4；按 mod 过滤逐模组处理，不触碰原版配方）
+  event.replaceInput({ mod: 'somemod', type: 'crafting_shaped' },
+    '#forge:ingots/iron', 'kubejs:refined_iron_ingot')
+})
+
+// 模组武器的原版模式兜底数值对齐（EF 模式判定数值见 3.8）
+ItemEvents.modification(event => {
+  event.modify('somemod:overpowered_blade', item => { item.attackDamage = 6 })
+})
+```
+
+落地时用 `/ct hand`、F3+H 或 `/kubejs hand` 现场确认各模组武器的实际物品 ID 与配方 ID，再按内容带逐批归档处理。
+
+### 3.4 自定义内容注册：战斗向独占物品
+
+本包需要一批独占物品来支撑战斗成长线，典型场景是**Boss 掉落材料 → 中间产物 → 终局武器材料**：Cataclysm、暮色森林等 Boss 掉落的素材先合成为中间产物（如"淬魔钢坯"），最终合成终局武器材料（如"深渊合金锭"）。这类内容用 KubeJS 在 `startup_scripts/` 注册（需重启生效）：
+
+```javascript
+// startup_scripts/items.js：注册本包独占的战斗向物品（需重启生效）
+StartupEvents.registry('item', event => {
+  // 终局武器材料：由 Cataclysm 等 Boss 掉落物合成的顶级锻造材料
+  event.create('abyss_ingot').maxStackSize(16).glow(true).rarity('epic')
+  // 中间产物：下界/暮色 Boss 素材的初步锻造件
+  event.create('tempered_steel_billet').maxStackSize(32).rarity('uncommon')
+  // 任务/纪念向物品：终局武器的"破损前身"，用于任务线叙事
+  event.create('broken_hero_blade').maxStackSize(1).rarity('rare')
+})
+```
+
+配套地，在 `server_scripts/` 中用 `event.shaped` / `event.shapeless` 把 Boss 掉落物（经战利品表确认掉落来源后）与中间产物串联成锻造配方，并用 JEI 隐藏功能（`client_scripts/`）屏蔽不希望玩家过早看到的终局配方，与 3.5 的阶段门控配合。
+
+### 3.5 阶段化门控：按冒险进度（维度/Boss）锁模组装备与区域
+
+门控框架采用 GameStages 体系：GameStages 以按玩家存储的布尔标志记录阶段（`/gamestage add @p <阶段名>` 授予，可由任务奖励、进度或命令触发），实际锁定由附属提供——RecipeStages 锁配方、ItemStages 锁物品使用、DimensionStages 锁维度。本包按**新主线「以共生对寄生」的冒险进度（维度/Boss/天灾烈度）**划分五个阶段：
+
+| 阶段 | 解锁条件（里程碑） | 门控内容示例 |
+| --- | --- | --- |
+| Ⅰ 启程 | 进入世界（默认） | 序章任务发放起始武器并教学 Epic Fight 操作（仅作加成，原版合成流程不锁）；共生体坠星事件开放，进入 Attached 养成期。**原版装备线（木/石→铁→钻石→下界合金）全程不设门控** |
+| Ⅱ 深入下界 | 首次进入下界 | **圣龙传说驯龙系统解锁**（阶段Ⅱ 后开放打晕驯服与骑乘，作为赶路能力解锁，属性已对齐该阶段威胁曲线）；下界向模组装备线开放（下界主题武器等）；真菌感染维持低调生成率（压制状态） |
+| Ⅲ 暮色森林 | 击败凋灵 | DimensionStages 开放暮色森林维度，暮色武器线（铁木/骑士金属/炽焰装备）开放；**TiC 高阶武器材料解锁**（建议本阶段后开放玛玉灵等高阶匠魂材料，冶炼炉/部件打造此前全开放、仅武器线门控） |
+| Ⅳ 真菌天灾升级 | 击败暮色主线 Boss | **Mound 活跃化**（放开 Mound 坠落/生成事件频率）、**Calamity 级 Boss 解锁**（Sieger/Howitzer 等巨型体生成放开），CDU 与防线装备配方解锁 |
+| Ⅴ 终局 | 共生体达成 **Dominant 阶段** 且完成首个 Calamity 讨伐 | 解锁 abyss_ingot 终局锻造、共生体终局战斗能力与灾变 Boss 讨伐最终挑战 |
+
+阶段门控遵循一条铁律：**只门控模组内容，原版内容不单独成档**。石/铁/钻石/下界合金装备的合成与获取全程保持原版节奏——不锁配方、不进阶段表、不改数值；它们既是所有玩家共有的肌肉记忆，也是各模组装备线的公共参照基线，同时保证新玩家零摩擦上手。整合包的差异化成长全部由模组内容承载（维度、驯龙、天灾、模组装备线与终局锻造），这也显著收窄阶段脚本与配方锁定的覆盖面，降低维护成本。
+
+共生体养成线单独挂钩：Symbiote 的阶段成长（**Attached → Integrated → Cooperative → Dominant**）由其自身的 Bond/Trust 养成驱动，但通过任务奖励与门控设计引导玩家按包内节奏推进——例如阶段任务奖励投放「共生体互动指引」（满足它的要求、喂食、控制 Stress 压力）与养成材料，把 Integrated/Cooperative 的达成时点大致对齐阶段Ⅱ/Ⅲ，Dominant 则作为进入终局的硬条件之一，使"体内养成"与"体外冒险"两条进度曲线互相咬合（次核心机制本身的魔改见 3.9）。
+
+RecipeStages 的锁定在 CrT 侧书写，例如：
+
+```zenscript
+// scripts/stages.zs：把终局锻造材料锁进"终局"阶段（原版配方一律不进门控）
+mods.recipestages.Recipes.addRecipeStage("endgame", <item:kubejs:abyss_ingot>);
+```
+
+阶段授予挂在 FTB Quests 的里程碑任务奖励上（命令奖励执行 `gamestage add`），实现"击败 Boss / 天灾事件升级 → 完成任务 → 解锁下一阶段装备与区域"的闭环；暮色森林等维度在阶段授予前由 DimensionStages 拦截进入；Mound 事件与 Calamity 生成则用 3.9 所述的 sporeconfig 数值/In Control! 规则按阶段切换（阶段授予任务同时执行配置文件热替换脚本或触发预设难度档）。设计参考 SevTech Ages"按进度动态隐藏/解锁"与 GTNH"材料门控"的思路，但门控轴心从科技等级换成了冒险进度；同为 Epic Fight 核心包的 **DawnCraft - Echoes of Legends**（1.18.2 Forge，约 270 模组的魂系 ARPG）提供了更贴近本包的参照——其翻滚等基础机动能力随主线进度逐步解锁，Boss 拥有专属动作与场地，证明"战斗能力本身也可作为门控对象"是可行的，本包的 EF 技能书发放节奏可借鉴这一做法。
+
+### 3.6 任务线设计：战斗成长与探索里程碑
+
+FTB Quests（1.20.1 为 2001.x，依赖 FTB Library + FTB Teams）承担全包引导。章节结构围绕四条轴展开：
+
+- **战斗成长章**：序章「觉醒」教 Epic Fight 基础操作（翻滚、格挡、战技）并发放起始武器（作为加成，不替代原版合成）；其后按 3.5 的五个阶段各设一章，每章以该阶段 Boss 为主线、以该阶段开放的模组装备线锻造为支线（原版装备流程不设任务门控），任务类型混合击杀、提交物品、完成进度、到达位置等；
+- **共生体养成章（羁绊线）**：配合 Symbiote 的养成机制设置——序章从坠星事件与建立羁绊开始；其后按 Attached→Integrated→Cooperative→Dominant 分段设置羁绊任务：满足共生体的主动要求、喂食与 Hunger 管理、控制 Stress 压力（教学高压劫持的风险与规避）、解锁触须猛拉/攀爬/掠食者形态等能力的里程碑任务。该章与 3.5 的阶段授予挂钩，Dominant 达成任务是开启终局章的前置；
+- **天灾防线章**：阶段Ⅳ开启的反真菌战线——Mound 清剿（定位并摧毁活跃 Mound）、CDU 部署教学（防线规划、驱散装置铺设保护基地）、按聊天事件提示（Endure/Prepare/Incoming）设置的迎击任务，以及各 Calamity 级 Boss 的讨伐任务线，终局以灾变 Boss 讨伐与共生体联动处决收尾；
+- **探索里程碑章**：与 3.7 的替代引导联动，每章设置若干"勘察任务"——给出目标结构的大致方位描述与前置准备清单，完成后奖励 Waystones 传送石/传送卷轴、村民制图师地图线索与阶段专属装备材料，用奖励把"跑图"变成正反馈而非负担。
+
+奖励设计遵循"材料 > 成品"原则：少发成品武器，多发 3.4 注册的中间产物与终局材料，把成就感留在锻造环节。任务依赖线构成 DAG，关键节点触发 KJS 事件与 gamestage 授予；多人环境下用 FTB Teams 共享队伍进度。任务数据以 SNBT 存于 `config/ftbquests/` 随包分发。
+
+### 3.7 探索痛点改造：从"传送直达"到"引导式冒险"（重点）
+
+**痛点**：Xaero's 小地图/世界地图自带传送与实体雷达，Explorer's Compass 可直接定位任意结构坐标——两者叠加后，"冒险"退化为"开地图点传送"。但小地图是玩家刚需、不可移除，故采用"限制捷径 + 提供替代引导"的组合拳。
+
+**① Xaero's 地图：关闭传送与实体雷达**。先明确机制：Xaero's 的传送本质是代发 `/tp` 聊天命令——服务器不向玩家开放 tp 权限，传送自然失效；单人存档则需在路径点菜单按世界关闭传送。配置下发走 Forge 的 `defaultconfigs/` 目录（也可用 Configured Defaults / Default Options），将预调好的 Xaero's 配置作为每个新建存档的默认值。服务端还可进一步强制：Xaero's Minimap 25.3.0+ 提供 Minimap Server Settings，可按权限组强制关闭洞穴模式与实体雷达；配合登录消息暗码（禁用小地图）、药水效果 `xaerominimap:no_entity_radars` / `no_cave_maps` / `no_waypoints`，以及 `minimapItemId` 物品绑定（玩家背包无指南针则不显示小地图）等机制，把地图行为完全纳入设计控制。
+
+**② Explorer's Compass：配置约束 + 配方魔改 + 维度限制**。三层并用：其一，config 层直接调 `maxRadius`（搜索半径）、`maxSamples`（采样次数）与结构黑名单（支持通配符，可屏蔽不希望被定位的结构）；若选用增强分支 Explorer's Compass Enhance，还可配置 `allowTeleport`（关闭其传送按钮）、定位冷却与结构预览，控制更细。其二，用 KJS 重写配方、大幅提高成本（从"一块铁+几根线"改为下界合金级材料 + 3.4 的中间产物），把它从中前期道具改为中后期奖励。其三，用事件限制其可用维度，避免被用于跨维度"抄近路"：
+
+```javascript
+// server_scripts/explorers_compass.js：指南针配方便携化改造
+ServerEvents.recipes(event => {
+  event.remove({ output: 'explorerscompass:explorerscompass' })
+  event.shaped('explorerscompass:explorerscompass', ['NDN', 'DCD', 'NDN'], {
+    N: 'minecraft:netherite_ingot',
+    D: 'kubejs:tempered_steel_billet',
+    C: 'minecraft:compass'
+  })
+})
+
+// 限制使用维度：仅主世界与暮色森林可定位结构
+ItemEvents.rightClicked('explorerscompass:explorerscompass', event => {
+  let dim = event.level.dimension.toString()
+  if (dim != 'minecraft:overworld' && dim != 'twilightforest:twilight_forest') {
+    event.player.tell('§c指南针的魔力在这片空间紊乱，无法定位结构……')
+    event.cancel()
+  }
+})
+```
+
+**③ 替代性探索引导**：被关掉的"捷径"要用更有趣的方式补回来——
+
+- **Waystones（主回程网络）**：必须亲自抵达并激活石碑后才能互传，天然就是探索激励（野外约每 25 chunk 生成、村庄固定生成）；参考 RLCraft 的成熟做法——传送收 XP（≤1000 格免费，之后每 1000 格 1 级，跨维度 3 级），并禁用 Sharestone/Portstone/Warp Plate 等廉价传送变体，堵住旁路；
+- **Fast Travel Waypoints（Xaero×Waystones 联动）**：把 Xaero 世界地图的"右键瞬移"改造成"只能传送到已激活的 Waystone"，并支持必须身处石碑旁、XP 消耗、露天条件等约束——玩家保留地图传送的操作习惯，但传送目的地必须靠双脚解锁；
+- **Antique Atlas 4（可选的氛围向替代）**：手绘风格地图，结构需亲眼看到或踩过才会标注、完全不提供传送，RLCraft 即用它替代小地图雷达；本包可作为难度选项供硬核玩家选用；
+- **FTB Quests 里程碑**：勘察任务用文字描述目标结构的方向与环境线索（配合 3.6），完成即奖励回程手段；参考 FTB StoneBlock 4 的做法，任务奖励可发放**带冷却的定位指南针**，把"找结构"从无限次工具变为限量资源；
+- **村民制图师地图**：沿用原版制图师出售探险家地图的机制，将林地府邸、海底神殿等结构地图作为中期可交易的引导道具，与 YUNG's 系、Cataclysm 结构自带的目标物相互配合。
+- **RoadWeaver 阡陌交通（道路网引导）**：国产模组（作者 shiroha，名出《桃花源记》），自动在村庄与自定义结构之间生成美观道路——寻路支持 A*/双向 A*/流体模拟，遇阻自动生成隧道与桥梁，沿途配路灯、座椅篝火与**路标（指示方向 + 距离）**，H 键可打开道路网络图；最新 2.1.1 版（2026-01）生成速度提升 10 倍以上。它是本包"用脚探索代替传送"链路的核心一环，与上述手段构成完整闭环：**道路网带路（沿路自然抵达村庄与结构）→ Antique Atlas 发现即标注 → Waystones 激活后方可传送 → Explorer's Compass 改配方兜底**，让"跑图"本身成为有路可走、有景可看、有路标可读的旅程而非空白赶路（已有先例：真菌危机 SP 将 RoadWeaver 与探险家指南针搭配并魔改配方）。注意两点：其一，**避开 Tectonic-V3 与 C2ME 旧版冲突**（世界生成/区块引擎组合需锁定兼容版本，首发前实测道路生成稳定性）；其二，道路施工期间勿走近未完工路段（施工路段地形改写可能吞没玩家）。⚠️ **版权争议备注**：2026-02 该模组被举报早期代码涉嫌抄袭 RoadArchitect（Apache-2.0）且未标注，作者称已重构移除、但争议未完全平息——公开发布前必须评估合规风险；备选方案为 Countered's Settlement Roads（RoadWeaver 的原型，74 万+下载，更轻量且无争议，但 1.20.1 Forge 需经 Sinytra Connector 运行、功能较少）。
+
+### 3.8 Epic Fight 适配魔改：让全包武器进入同一套战斗（重点）
+
+Epic Fight 不是"装了就完事"的模组：未经适配的第三方武器在 EF 战斗模式下只能沿用原版攻击方式，动作、判定与平衡都会与 EF 原生武器脱节。本包的适配按"优先复用社区成果 → 数据包/配置适配 → API 自建兜底"的顺序推进。
+
+**① 优先采用社区现成补丁（首选方案）**。Epic Fight 的适配生态已相当成熟，自研前务必先检索现有成果：
+
+- **CompatLink**（Forge 1.20.1 / NeoForge 1.21.1，无代码通用补丁）：只需在 config 里丢入 JSON 映射，即可把**任意模组武器**映射到任意 EF/WoM 动作类型，支持通配符批量匹配、攻击拖尾与战斗属性调整；1.2.0 起还能用一行 JSON 修复战斗模式下模组盔甲渲染损坏的常见问题。这是本包适配工作的主力工具，可将自研工作量降到最低；
+- **EFMCompat**：社区兼容补丁合集，已覆盖 30+ 模组的武器（含 Epic Knights、Simply Swords、斯巴达武器、冰火传说等），直接随包安装即可；
+- **专项数据包**：avindicator 的 Cataclysm / Iron's Spells / Ice and Fire / Spartan Weaponry 系列适配数据包，以及 Epic Knights X Epic Fight、Simply Swords EpicFied 2、Epic Fight x Iron's Spells Armor/Animation Fix 等，恰好覆盖本包 3.5 门控链上的主要内容模组。
+
+**② 数据包适配（官方支持的主流机制，用于补丁未覆盖的武器）**。Epic Fight 将武器/盔甲的战斗能力数据化，适配文件放在数据包目录 `data/<物品所属modid>/capabilities/weapons（或 armors）/<物品注册名>.json`，经 Open Loader 全局加载。JSON 中 `type` 指定动作类型——可使用 16 种内置类型（如 `epicfight:greatsword` 巨剑、`epicfight:katana` 太刀），也可引用附属模组新增的类型（如 Weapons of Miracles 的 `wom:ruine`）；`attributes` 调整 `armor_negation`（护甲穿透）、`impact`（冲击力/削韧）、`max_strikes`（单次挥击命中目标数）等战斗属性；盔甲文件则设置 `stun_armor`（抗击退/霸体值）与 `weight`（重量，影响闪避与体力）。数值一律按 3.3 的三条内容带填写，保证同带武器手感一致。示例：
+
+```json
+// data/cataclysm/capabilities/weapons/the_incinerator.json
+// 将 Cataclysm 的 Boss 武器"焚化者"适配为 EF 巨剑类型
+{
+  "type": "epicfight:greatsword",
+  "attributes": {
+    "armor_negation": 20.0,
+    "impact": 3.0,
+    "max_strikes": 3
+  }
+}
+```
+
+盔甲动作适配（模型弯曲）另有要求：需在膝、肘骨骼处做 3 条环切线并绘制顶点权重（使用 Blender），或按官方 Custom 3D Armor Resource Pack 指南用资源包修复第三方盔甲的渲染；CompatLink 的渲染修复可覆盖多数轻量场景。
+
+**③ API 自建模组（兜底路径）**。仅当数据驱动完全无法覆盖（如带独特机制的 Boss 专属武器、需要全新动作集时）才走代码路线：Java + Forge MDK（1.20.1），build.gradle 通过 Modrinth Maven 依赖 Epic Fight API（官方 API 指南见 epicfight-docs.readthedocs.io），源码可参考 GitHub Epic-Fight/epicfight；自定义动画使用官方 **Blender JSON Exporter 插件**（支持 Blender 2.79–5.0）配合官方 Player Animation Rig 导出；注册侧对应 WeaponCapability 注册与自定义动作动画（1.21.1 起另有 ExCap 混合注册表，本包 1.20.1 不涉及）。该路径成本高，建议整个开发周期至多立项一个。
+
+**④ 校验与迭代**：进游戏逐把武器测试动作衔接、攻击范围与硬直表现（EF 的伤害判定由动画驱动、武器碰撞体相交才结算，必须实测而非只看数值表），按"配置补丁 → 数据包 JSON → API"的顺序修正问题，迭代收敛到平衡线目标。
+
+### 3.9 次核心与扩展层耦合魔改：共生体 × 真菌天灾 × EF 附属 × 圣龙 × 匠魂
+
+本包的次核心模组（Symbiote 共生体、Fungal Infection: Spore 真菌天灾、Sword Soaring/Nightfall 御剑武器）与扩展层模组（新增的 Saint's Dragons 圣龙传说与匠魂 Tinkers' Construct）不是简单装包即用，而是需要针对 EF 底座与主线叙事做定向魔改。其中 Symbiote 与 Spore 均无官方 EF 兼容记录（Sword Soaring/Nightfall 为 EF 原生附属，天然兼容），圣龙传说与 EF 存在已知骑乘崩溃（有专用修复模组），匠魂则需借助专用兼容模组接入 EF，本节给出各自的耦合方案。
+
+**① Symbiote × Epic Fight：按键解冲突与机制调频**
+
+Symbiote 与 EF 同为玩家侧战斗增强，冲突点集中在输入与节奏两处：
+
+- **按键冲突处理**：EF 默认 **R 键=战斗/冒险模式切换、K 键=技能编辑菜单**，而 Symbiote 默认 **R 键=触须猛拉、K 键=掠食者形态**，直接撞键。解决方案是用 **Default Options**（与 3.7 的 Xaero's 配置下发同一通道）把预调好的 `options.txt` / 各模组键位配置作为新建存档默认值下发：Symbiote 侧改绑为 **V=触须猛拉、B=掠食者形态**（或其他不与 EF/小地图冲突的侧键），EF 键位保持默认以降低玩家学习成本；任务序章「觉醒」中以图文说明最终键位表。
+- **劫持机制调频**：Symbiote 的高压（Stress）劫持会夺取玩家操作，若发生在 EF Boss 战中会直接破坏节奏。通过其 config 下调压力积累速度、上调劫持触发阈值，使劫持成为"疏于养成的惩罚"而非常态打断；任务线（3.6 羁绊章）同步教学压力管理，形成"机制压力→任务引导→玩家应对"的闭环。
+- **无官方兼容记录→列入首发前实测清单**：Symbiote 无官方 EF 兼容记录，理论可共存（非骨骼动画类模组），但以下两项必须首发前实测：(a) **活体盔甲**（共生体覆盖玩家模型的视觉形态）与 EF 第一人称视角/战斗模式动画的渲染叠加是否正常；(b) 共生体**吞噬处决**与 EF 处决系统同时触发时的行为（技能优先级/动画抢占）。实测不通过的回退方案为限制掠食者形态在 EF 战斗模式下禁用（KJS 按键事件拦截）。
+
+**② Fungal Infection: Spore × 全包：天灾烈度曲线化**
+
+真菌天灾是阶段Ⅳ的主线与终局对手，魔改目标是让"全图蔓延的不可逆腐蚀"变成"可门控、可清剿、有终局"的战线：
+
+- **sporeconfig.toml 调控**：压低各生物生成率、缩小 proto hivemind 的影响范围、配置生物群系 tag/ID 过滤（如蘑菇岛等特殊群系排除感染），并开启饥饿淘汰计时避免感染生物无限堆积；性能侧必配 Canary + spark 监控（感染按方块 tick，是 TPS 大头）。
+- **Spore Inquisition 数据包**：引入社区数据包 Spore Inquisition（1.20.1 Forge 可用，13.4 万下载），把感染从"随机生成"改为**定点 Mound 坠落制**——感染源以可定位、可清剿的 Mound 为单位出现，与 3.6 天灾防线章的 Mound 清剿任务天然契合，也让阶段Ⅳ的"Mound 活跃化"门控有明确的数值抓手。
+- **CDU 装置任务线教学**：CDU（冷却驱散装置）可压制感染扩散，作为防线核心写进任务线——天灾防线章设置"CDU 部署"教学任务链，引导玩家在基地周边与 Mound 清剿后铺设驱散网络。
+- **In Control! 维度隔离**：用 In Control! 的生成规则把感染生物限制在指定维度/区域（如禁止进入暮色森林，避免天灾吞噬门控维度内容），配合定期备份应对不可逆腐蚀。
+- **Calamity 掉落 → KJS 终局合成链**：9 个 Calamity 级 Boss（Sieger/Howitzer/Stahlmorder/Hohlfresser/Gazenbreacher/Grakensenker/Leviathan/Hindenburg/Verfalldrache）的尸块/生物质掉落，用 KJS 注册进 3.4 的自定义物品体系——例如以**灾变尸块 + tempered_steel_billet 合成共生体进化材料**（呼应"以共生对寄生"叙事：用天灾的组织喂养体内的共生体），并作为 abyss_ingot 终局锻造的上游材料之一，把天灾讨伐接进终局装备链。
+- **EF 共存实测**：Spore 生物为标准 GeckoLib 实体，机制推断与 EF 无硬冲突，但需实测 EF 动作对 Calamity 巨型生物的命中判定（碰撞体巨大，需确认连招命中区），以及 Spore 自带感染武器是否需按 3.8 流程补 EF 武器数据。
+
+**③ Sword Soaring / EpicFight-Nightfall：零适配，仅数值对齐**
+
+两者均为 EF 原生附属（御剑修仙为 P1nero 系 EF 玩法扩展，Nightfall 为原创动作资产的 EF 武器包，阎魔刀/村雨等），动作、判定、动画天然运行在 EF 框架内，**无需任何兼容适配**。唯一魔改项是数值平衡：用 3.8 的数据包 attributes 机制（armor_negation/impact/max_strikes）与 3.3 的 `ItemEvents.modification`，把其武器数值收进全包武器等级阶梯——御剑系定位在模组装备带（暮色/下界侧），Nightfall 武器定位为终局带（Boss 材料终局级）的候选平替，保证"附属武器不碾压主线锻造线、也不沦为收藏品"。
+
+**④ Saint's Dragons（圣龙传说）× Epic Fight：赶路伙伴龙的兼容修复与定位收敛**
+
+Saint's Dragons（作者 SaintVanWinkle/LilRicefield，CF 约 110 万下载，已被 Prominence II 收录；当前全 ALPHA 阶段、高频更新）提供 8 种可驯服骑乘巨龙（雷/火/末地/陆行/水栖/海洋/Boss 级噬焰龙/雪地），驯服方式为"打晕 + 喂食"，配套繁殖、龙匠锻炉与 NPC 商人；美术借鉴怪猎，GeckoLib 动画质量高。其魔改要点是**把龙系统收敛为"赶路/伙伴"定位，而非第二战斗线**：
+
+- **EF 骑乘崩溃修复**：裸装与 Epic Fight 共存时骑乘会崩溃，必须加装专用修复模组 **Mount Fix**（专门修复 EF 骑乘 Saint's Dragons 的崩溃）；同时锁定模组版本与 GeckoLib 4.8.1+ 前置，并接受 Alpha 阶段风险（龙消失/数据丢失 bug 仍在修复中，随包更新策略见版本管理）。
+- **生成走生物群系标签**：龙的生成由生物群系标签驱动，与 Terralith 共存无硬冲突；用数据包把 `saintsdragons:has_<dragon>` 系列标签注入 Terralith 群系，让龙按设计分布在对应地貌（如雪地龙入雪原群系、海洋龙入深海群系），保证"想要某种龙就得去对应群系跑图"，与 3.7 的探索引导线咬合。
+- **属性对齐威胁曲线**：野生龙属性经 config 调整，对齐 3.5 阶段威胁曲线——野生龙的血量/攻击不下压各阶段武器线，驯服战斗（打晕）难度对齐阶段Ⅱ中后期，使"驯服第一头龙"成为该阶段的探索奖励（解锁时点见 3.5 门控表）。
+- **用途限定赶路**：通过任务线（3.6 探索里程碑章）与键位教学（R/G/H 技能键、双击 WASD 闪避）引导玩家将骑乘龙用于赶路/机动作战，而非站撸输出；列入首发前实测清单：骑乘姿态与 EF 战斗模式切换的行为、龙与 Spore 敌对 AI 的仇恨交互。
+- **适配实践参照**：EF × 圣龙传说的兼容性处理与武器平衡做法，可参考国内知名整合包「沉浸战斗」（1.20.1，以 EF + 奇迹武器为核心）的适配实践，作为本包 EF 生态平衡调参的国内先例。
+
+**⑤ 匠魂 Tinkers' Construct × Epic Fight：专用兼容模组 + 工具向开放策略**
+
+TiC 官方已支持 1.20.1（3.11.2.166，2025-12 Throwback 更新，活跃开发；Fabric 移植 Hephaestus 与本包无关）。TiC 接入 EF 的难点在于其工具为单注册名 + NBT 变种，3.8 的 capability JSON 无法区分材料组合；且 EFMCompat 不覆盖 TiC、纯数据包方案过浅，故**必须采用专用兼容模组 Epic Fight: Tinkers Integration**（NeoJaden，1.20.1 Forge 20.2.6）：代码层按部件材料动态计算 EF 三属性、提供 8 种动作切换修饰符 + WoM 扩展、显式兼容 Weapons of Miracles，并附数据包模板供微调（先例：DarkRPG Forge 版 = EF + TiC + Integration）。在此基础上的魔改策略：
+
+- **工具向开放、武器线门控**：冶炼炉与部件打造系统**全开放**（工具、护甲强化等不受阶段限制），但武器线高阶材料（玛玉灵等）纳入 3.5 阶段门控，避免与 Symbiote/御剑线同为"可持续强化武器线"而定位重叠——TiC 武器线定位为"自由搭配的中后期平替"，终局仍归 abyss_ingot 锻造线；
+- **KJS 配方审查防绕过**：TiC 冶炼炉/合金配方可能绕过包内矿物流程与 3.3 的材料链统一，用 KJS 逐一审查熔炼（melting/casting）与合金（alloying）配方，把可被滥用的熔炼产出（如直接熔出高级金属）改写或移除，确保 TiC 的矿物处理与全包矿词/材料链一致；
+- **修饰符终局上限削减**：TiC 修饰符叠加后的终局上限偏高，用 KJS/CrT 移除或改写部分超标修饰符配方、下调数值上限；已知 TiC 修饰符 on-hit 钩子与 EF 命中判定不互通（Integration 已修 Necrotic/Sweeping/Piercing/二段跳等，其余特性修饰符需 EF 实测），动态盔甲渲染成钻甲的问题已由其修复；
+- **门控时点**：TiC 高阶武器材料（玛玉灵等）解锁建议挂在阶段Ⅲ 暮色森林之后（见 3.5 门控表），与暮色武器线同级，构成"锻造系统三选一"（主线锻造/共生强化/匠魂搭配）的自由度而非碾压。
+
+---
+
+## 第4章 开发流程与工程实践
+
+一个以史诗战斗（Epic Fight）为核心的战斗&冒险整合包，模组多、联动密、对操作手感极为敏感，粗放的手动拖 jar 开发方式很快就会失控。本章给出基于 packwiz + Git 的源码化工作流，以及配套的冲突排查与性能测试方法。
+
+### 4.1 packwiz + Git 源码化工作流
+
+packwiz 是目前整合包开发的事实标准。它不直接管理 jar 本体，而是用 Git 友好的 TOML 元数据描述整个包：根目录的 `pack.toml` 记录包名、版本与 Minecraft 1.20.1 / Forge 47.2+ 的加载器信息，`mods/` 下每个模组对应一个 `.pw.toml` 文件，记录其在 CurseForge 或 Modrinth 上的项目 ID、文件 ID 与下载哈希。安装模组用 `packwiz curseforge install` 或 `packwiz modrinth install` 即可，更新时一条 `packwiz update --all` 批量拉取新版——比如 Epic Fight 发布了兼容补丁，一条命令完成升级，无需逐个去网页下载。
+
+packwiz 还能区分模组属于 client 侧、server 侧还是双端。像 Embeddium 这类纯客户端渲染优化，标记为 client-only 后不会进入服务端包，避免服务器启动崩溃。开发完成后，`packwiz curseforge export` 和 `packwiz modrinth export` 一键导出双平台发布格式，配合 packwiz-installer 还能制作自动更新的 Prism 实例。ATM、FTB 等头部整合包均采用这套工作流。
+
+Git 管理遵循三条铁律：① 整个 packwiz 目录入仓库，包括 TOML 元数据与 `config/` 等 overrides 目录——战斗手感的关键调整（如 Epic Fight 的耐力消耗、格挡判定窗口）都存在于配置里，必须与元数据同步版本化；② 绝不提交 jar 本体，.gitignore 中排除 `mods/*.jar`，仓库保持轻量；③ 每次更新一批模组即做一次 commit，提交信息写清变更内容，出问题可直接 `git bisect` 或回滚到任一历史版本。
+
+### 4.2 分批添加与冲突排查
+
+切勿一次性堆入上百个模组。正确做法是按类别分批：第一批放入核心战斗层（Epic Fight 及其武器扩展），确认攻击连招、闪避无敌帧手感正常；**第二批为次核心层，三个模组必须各占一批并单独验证——先 Symbiote（共生体养成循环），再 Sword Soaring / EpicFight-Nightfall（御剑与武器包手感），最后 Fungal Infection: Spore（感染扩散与 Boss 战压力）**——次核心彼此机制耦合度低但与 EF 的交互都缺乏共存先例，合批添加会让兼容问题无法归因；**紧随其后的扩展层同样各占一批单独验证：先 Saint's Dragons（连同前置 GeckoLib 与 EF 骑乘崩溃修复补丁 Mount Fix 一起入包），再 Tinkers' Construct（连同 Mantle 与 Epic Fight: Tinkers Integration 三件套），最后 RoadWeaver**——前两者与 EF 的交互均有已知问题点，RoadWeaver 则需验证与 Terralith 群系的共存与生成期性能，均不宜合批；第三批加入大型内容模组（其余 Boss 模组、地牢结构）；第四批性能优化栈；最后补 QoL 小模组。每批添加后完整启动一次并进存档实测，把问题锁定在最小范围内。
+
+出问题时的排查路径：崩溃先看 `crash-reports/` 下的崩溃报告，无崩溃但行为异常则查 `logs/latest.log`。读崩溃堆栈的诀窍是看最深层的 `Caused by:` 行，并在堆栈中寻找非 `net.minecraft` 的包名——例如出现 `yesman.epicfight` 或某个地牢模组的包路径，肇事者基本就是它。日志无法定位时用二分法兜底：移出一半模组测试，逐步收窄。Prism Launcher 可一键将日志上传 mclo.gs 生成分享链接，方便向社区求助。面向玩家侧，建议预装 Crash Assistant 模组，让玩家崩溃时自动获得诊断提示，大幅减少售后答疑成本。
+
+### 4.3 性能调优与测试
+
+性能分析的事实标准是 spark：`/spark tps` 查看刻率与 TPS，`/spark health` 总览内存与 CPU，`/spark profiler start` 采样后生成火焰图，可精确指出是哪个模组在吞 tick——Boss 战掉刻时用它定位是实体 AI 还是粒子渲染的锅。
+
+优化分两端：客户端用 Embeddium 栈（Forge 端的 Sodium 移植）提升帧率，保证连招动画流畅不卡帧；服务端组合 FerriteCore 降低内存占用、Chunky 预生成出生点与 Boss 区域附近区块、并将 view-distance 降至 8 左右。内存方面，中型包分配 6–8 GB 即可，`-Xms` 与 `-Xmx` 设为相等并搭配 G1GC 参数；1.20.1 使用 Java 17 运行。
+
+**Spore 专项性能治理**：真菌感染的扩散本质是每方块 tick 的运算，是全包最大的 TPS 消耗源，必须标配 Canary（Lithium 的 Forge 移植）并用 spark 持续监控——开新存档跑感染中期阶段，`/spark profiler` 重点观察 `fungal infection` 相关包的采样占比。版本策略上，进包前锁定 Spore 近期稳定版（2.2.x 迭代节奏很快），每次更新后删除旧 config 让其重新生成，避免残留键值引发行为漂移。服务器内存至少 4 GB。此外真菌腐蚀不可逆（decayed 方块与地形改造无法复原），务必定时自动世界备份，配合 config 压低扩散速率与 CDU 引导玩家控制感染范围。
+
+发布前的最终验收必须用全新存档模拟新玩家完整流程：从开局加点、第一场小怪战，到多场 Boss 战连续压测，观察战斗中是否掉刻、技能释放是否因 TPS 波动而吞输入，并记录实测内存需求写进发布页简介。
+
+**次核心专项实测清单**（三个次核心与 EF 均无公开共存先例，验收必须逐项实测）：
+- **Symbiote × EF**：自定义按键重映射后是否仍生效；共生体劫持（hijack）事件触发时能否与 EF 战斗模式正常叠加、是否吞掉战斗输入；活体盔甲模型与 EF 第一人称视角的渲染兼容性。
+- **Spore × EF**：EF 攻击动作对 Calamity 级巨型生物（如 Sieger、Leviathan）的命中判定是否正常；Spore 感染武器在 EF 战斗模式下的属性与动作表现。
+- **Sword Soaring × EF**：御剑飞行/御剑攻击与 EF 技能树的联动是否正常，技能点与熟练度是否互相干扰。
+- **Saint's Dragons × EF**：加装 Mount Fix 后做骑乘崩溃回归测试（驯龙、上龙、下龙、骑乘受击全链路）；EF 战斗模式切换与骑乘姿态、相机表现是否冲突；龙群 AI 与 Spore 生物的仇恨交互（双方遭遇时是否互相索敌或异常拉怪）。该模组全 ALPHA 阶段、仍存在龙消失/数据丢失 bug，测试期间与玩家存档策略上均要求 Alpha 存档定时备份。
+- **TiC × EF**：Tinkers Integration 已修复的仅 Necrotic / Sweeping / Piercing / 二段跳等已列出项，其余特性修饰符的 on-hit 钩子在 EF 战斗模式下不保证生效，必须逐项实测验证（携带不同材料/修饰符组合的匠魂武器进 EF 战斗模式逐一触发，记录生效与失效清单）。
+- **RoadWeaver**：道路生成与 Terralith 群系共存验证（起伏地形下的隧道/桥梁生成质量）；大规模生成期的 TPS 与卡顿实测（2.1.x 生成提速后仍需 spark 采样确认）；结构连接配置——把包内地标结构（地牢、Boss 巢穴等）注册进道路网络，让道路主动串联内容点位。
+
+版本号采用语义化规范（如 1.2.0 表示新增内容、1.2.1 表示修复），让玩家对每次更新的影响一目了然。
+
+---
+
+## 第5章 打包发布与合规
+
+整合包完成开发与测试后，进入打包发布阶段。本章围绕导出格式、两大国际平台与中文社区的发布要求、以及许可证合规四个环节展开，确保整合包既能顺利上架，又不在模组授权上留下法律隐患。
+
+### 5.1 导出格式
+
+主流发布格式有两种，分别对应两大平台：
+
+- **CurseForge zip**：标准 ZIP 结构，核心为 `manifest.json`（声明游戏版本、加载器版本及每个模组的 CurseForge 项目/文件 ID）加 `overrides/` 目录（存放配置、kubejs 脚本、资源包等不随模组分发的文件）。
+- **Modrinth .mrpack**：同样是 ZIP 结构，内含 `modrinth.index.json`（模组引用 + SHA-512 哈希校验）与 `overrides/`。其特点是模组本体不打包进文件，而是在安装时由启动器按索引逐一下载，因此发布包体积极小；服务端部署还可借助 mrpack-install 等工具自动拉取安装。
+
+工程上推荐使用 packwiz 作为源码化工作流：模组以 TOML 元数据形式管理，一条 `packwiz curseforge export` 或 `packwiz modrinth export` 即可从同一仓库导出双平台格式，避免手工维护两套清单。
+
+### 5.2 CurseForge 与 Modrinth 发布要求
+
+**CurseForge**：上传需准备 400×400 像素的 logo 和详细的项目描述——描述应说明整合包主题、核心模组和自定义内容，描述简陋是常见的拒审原因。提交后进入人工审核队列，耗时从数分钟到数天不等。该平台有一条关键限制：模组作者可以关闭第三方下载（opt-out），且新上传的模组默认处于 opt-out 状态，这些模组只能通过官方 CurseForge/Overwolf 生态下载，第三方启动器和 packwiz 均无法拉取；受影响的模组只能引导玩家手动从 CurseForge 下载。更严格的是 FTB 系列模组，仅授权在 CurseForge 平台内分发，不能出现在 Modrinth 或其他渠道的整合包中。
+
+**Modrinth**：上传 .mrpack 后人工审核周期约 24–48 小时。平台对整合包内模组权限有四条规则，满足其一即可入包：① 模组本身已托管在 Modrinth 上；② 模组的开源许可证明确允许再分发；③ 模组项目描述中明确允许收入整合包；④ 以上都不满足时，须取得作者的书面许可。
+
+### 5.3 中文渠道：MC百科收录制
+
+面向中文玩家，MC百科（mcmod.cn）是最重要的收录渠道。其采用收录制而非自由发帖制：投稿需具备标准 ZIP 结构、合法的模组来源与作者授权声明、规范的页面排版，人工审核通常 1–3 个工作日；未经充分测试的"无脑堆砌"包会被直接拒收。通过审核后，常见配套做法是以百度网盘作为国内分流下载，并在 B 站、贴吧进行推广引流。
+
+### 5.4 许可证清单核对
+
+合规是发布前最后一道、也最容易被忽视的检查。首先，整合包自身应声明一个许可证——常见做法是 All Rights Reserved，同时在描述中明确允许他人开服、分享或二次创作的范围。其次，必须逐一核对包内每个模组的许可证及其 modpack 条款，确认允许收入整合包；对未托管在 CurseForge/Modrinth 等平台、又不允许再分发的模组，不要直接把 jar 文件打包进 overrides 再分发，而应通过索引引用或引导玩家自行下载。完成核对后，建议将许可证清单附在发布页中，既保护作者权益，也为后续收录审核减少障碍。
+
+---
+
+## 第6章 实施路线图与风险
+
+前五章已确定：本包为 1.20.1 + Forge 47.2+ 的战斗&冒险主题包，以 Epic Fight 为战斗基石，辅以 WoM、Cataclysm、暮色森林等大型内容模组与性能栈；次核心选定为 **Symbiote 共生体 + Sword Soaring 御剑修仙/EpicFight-Nightfall 武器包 + Fungal Infection: Spore 真菌天灾**，叙事主线「以共生对寄生」；魔改走「CompatLink/EFMCompat → KubeJS/CrT → FTB Quests + GameStages」三层路线；工程上采用 packwiz + Git；发布走 CurseForge / Modrinth / MC百科三渠道。本章将上述方案落地为可执行的路线图，并给出风险预案。
+
+### 6.1 分阶段实施路线图
+
+| 阶段 | 目标 | 主要工作 | 产出里程碑 |
+|---|---|---|---|
+| ① 底座搭建 | 可启动的纯净开发环境 | Prism Launcher 建立开发/测试双实例，安装 Forge 47.2+（Java 17），先入性能栈（Embeddium、FerriteCore、ModernFix、spark、Chunky），初始化 packwiz 仓库并接入 Git，确立「不提交 jar、分批 commit」纪律 | 空包稳定启动，pack.toml 入库 |
+| ② 核心战斗验证 | 战斗手感基准成立 | 安装 Epic Fight 与 Weapons of Miracles，锁定 EF 主版本系列；实测连段、翻滚无敌帧、格挡与体力消耗，确定手感基准配置 | 战斗手感基准文档 + 锁定的 EF 版本号 |
+| ③ 次核心攻坚 | 次核心三连实测通过 | **Symbiote×EF 共存实测**：排查 R/K 键与 EF 默认键冲突、共生体高压劫持对 EF 战斗节奏的打断、共生体渲染/活体盔甲与 EF 模型层兼容性 → **Fungal Infection 扩散控制调参**：sporeconfig 压低生成率与 hivemind 范围、引入 Spore Inquisition 数据包改为定点 Mound 坠落制、用 In Control! 做维度隔离 → **Sword Soaring / EpicFight-Nightfall 数值对齐**：御剑修仙与阎魔刀/村雨等 EF 武器包伤害曲线对齐战斗装备平衡线 | 次核心三连实测通过 |
+| ④ 内容填充 | 内容生态完整且兼容 | **最先确定世界生成**（Terralith 一旦定型不可中途入旧档，故优先于一切内容模组）；随后大型内容模组分批加入（Cataclysm → 暮色森林 → Alex's Caves → Iron's Spells → Epic Knights），每批完整启动并进存档实测；**Saint's Dragons 接入**：加装 GeckoLib 4.8.1+ 与 Mount Fix（修 EF 骑乘崩溃），用数据包将龙生成群系标签注入 Terralith 群系，实测骑乘姿态/EF 模式切换/与 Spore 敌对 AI 仇恨交互，骑乘限定赶路用途；**RoadWeaver 结构连接配置**：设定村庄/自定义结构间道路生成规则（寻路算法、隧道与桥梁、路灯路标密度），与探险家指南针构成「道路网带路 + 指南针兜底」双层探索引导 | 全量模组清单冻结，各批无崩溃 |
+| ⑤ 魔改攻坚 | 两条魔改主线落地 | 按优先级推进：CompatLink + EFMCompat 完成全包武器 EF 适配 → KJS 武器数值对齐与模组材料收束（战斗装备平衡线，原版装备流程不动）与自定义物品（abyss_ingot 等）→ 探索痛点改造（Xaero's 关传送/雷达、Explorer's Compass 配方与维度限制、Waystones 回程网络）→ FTB Quests 任务线与 GameStages 五阶段门控，含**共生体养成线任务**（羁绊五维与成长阶段目标）、**天灾防线任务线**（利用 Spore 聊天事件 Endure/Prepare/Incoming 触发，引导 CDU 布防与 Mound 清除）与 **Calamity 掉落终局合成链**（Spore 九大 Calamity 级 Boss 战利品→终局装备配方）→ **TiC 工具向接入**：采用 Tinkers Integration（勿用纯数据包）完成 EF 适配并实测特性修饰符命中判定；KJS 审查冶炼炉熔炼/合金配方防止绕过包内矿物流程，按 3.9 规定只开放工具向、高阶材料（玛玉灵等）接入 GameStages 五阶段门控，终局上限过高的修饰符用 KJS 削顶 | 武器全部有 EF 动作，任务线主线跑通 |
+| ⑥ 测试调优 | 性能与体验达标 | spark 压测定位吞 tick 模组；重点实测暮色 Boss + Cataclysm Boss + Spore 感染区连续战斗是否掉刻、技能是否因 TPS 波动吞输入；用**全新存档**模拟新玩家完整流程验收，记录实测内存需求 | 压测报告 + 验收通过记录 |
+| ⑦ 发布合规 | 三渠道上架 | 逐一核对许可证与授权清单（含 opt-out 模组处理），`packwiz curseforge export` / `modrinth export` 双平台导出，准备 400×400 logo 与描述投稿，MC百科提交收录并备网盘分流 | 双平台过审 + MC百科收录 |
+
+阶段之间存在两条硬约束：Terralith 必须在创建正式存档前定型（阶段④之首）；Epic Fight 及其附属必须同系列锁定，任何 EF 升级都触发全量武器动作回归测试（贯穿③④⑤⑥）。
+
+### 6.2 风险与对策
+
+| 风险 | 具体表现 | 对策 |
+|---|---|---|
+| 模组停更 / 版本锁定 | 1.20.1 已非最新版，模组更新放缓甚至停更，EF 附属与本体版本耦合紧密 | packwiz 的 .pw.toml 记录精确文件版本，Git 全程可回溯；EF 附属先行冻结、内容模组随后、性能模组最后；停更模组在入库前做替代方案评估 |
+| Symbiote 不成熟风险 | 闭源 ARR 且含 AI 生成代码标注；2025 年中首发太新，无任何 EF 兼容记录；劫持机制与 R/K 键位可能打断 EF 战斗 | 阶段③首发前专项实测（按键/劫持/渲染三项），不过线则启动降级方案直接移除——共生体线对包整体结构无损，任务线相应降级为支线；持续跟踪其 Discord 更新与 issue 反馈，及时跟进修复版本 |
+| Spore TPS 与不可逆腐蚀 | 感染为逐方块 tick 结算，大规模扩散吞 TPS；decayed 方块与地形改造不可逆，可破坏玩家建筑与出生区 | sporeconfig 压低生成率与 hivemind 范围 + Spore Inquisition 数据包改为定点 Mound 坠落制 + In Control! 维度隔离；性能栈 + spark 常驻监控；定期存档备份；任务线与手册中内置 CDU（冷却驱散装置）教学，引导玩家主动压制感染 |
+| Spore 版本迭代快 | 模组更新频繁（2.2.x 系列快速迭代），config 结构易变导致既有调参失效 | 锁定一个稳定版入库，packwiz 精确记录文件版本；每次升级 Spore 时删除旧 sporeconfig/sporedata 重新生成并逐项回填调参值，升级后进档回归实测扩散速率 |
+| Epic Fight 兼容缺口 | 个别模组武器无现成补丁，EF 模式下动作与判定脱节 | 优先检索 EFMCompat（30+ 模组）与社区专项数据包；缺口用 CompatLink 通配符批量映射兜底；仅对带独特机制的 Boss 武器走 EF API 自建附属，全周期至多立项一个 |
+| 性能风险 | 大量实体动画 + Boss 技能粒子叠加，战斗掉帧掉刻 | Embeddium 性能栈 + Entity Culling 常驻；Chunky 预生成 Boss 区域区块；每次优化模组升级后重跑 Boss 压测；发布页写明实测内存门槛（最低 4 GB / 推荐 6–8 GB） |
+| 合规风险 | CurseForge opt-out 模组无法被第三方拉取；FTB 系模组仅限 CF 分发；Modrinth 要求满足四条授权规则之一 | 选模组阶段即核对许可证与 modpack 条款并建立授权清单；opt-out 模组引导玩家手动下载而非打包 jar；发布页附完整许可证清单 |
+| 工作量风险 | 魔改面大（武器适配 + 任务线 + 门控），周期失控 | 武器适配优先复用 CompatLink/EFMCompat 现成方案，自研最小化；任务线分期发布——首版只含主线五章，探索支线与终局挑战后续版本补齐；Custom Machinery 等非必要内容推迟立项 |
+| Saint's Dragons Alpha 风险 | 全系列处于 Alpha 高频更新期，龙消失、绑定数据丢失类 bug 仍在修，存档中龙可能凭空消失或驯服数据损坏 | 锁定单一版本入库、packwiz 精确记录文件版本；定期存档备份；定位为推荐级而非核心内容——若问题集中爆发可直接移除，骑乘赶路生态与主线叙事均不受损；跟踪作者更新日志的 EF 修复条目及时跟进 |
+| RoadWeaver 版权争议 | 2026-02 被举报早期代码涉嫌抄袭 RoadArchitect（Apache-2.0）未标注，作者称重构后已移除，但争议未完全平息 | 公开发布前评估争议状态与代码现状，必要时暂缓收录；备选 Countered's Settlement Roads（RoadWeaver 原型，更轻量无争议，1.20.1 Forge 需经 Sinytra Connector 运行，功能较少） |
+| TiC 定位重叠 | TiC 武器线与共生体养成线、御剑线同为「可持续强化武器」路线，放任武器向开放会稀释次核心定位并冲击战斗装备平衡线 | 按 3.9 规定只开放工具向（采掘/伐木等），武器向关闭；高阶材料（玛玉灵等）由 GameStages 门控到后段阶段；冶炼配方 KJS 审查，终局修饰符削顶，确保与共生/御剑线分工清晰 |
+
+至此，从技术选型到发布合规的完整方案已闭环。按本路线图推进，可在控制工作量与合规风险的前提下，交付一个战斗手感统一、冒险节奏有引导的 Epic Fight 核心整合包。
+
+---
+
+## 参考资料
+
+本方案的关键事实来源于以下公开资料的调研汇总（调研记录见 research/ 目录 dim01-dim08）：
+
+- Epic Fight 官方文档：https://epicfight-docs.readthedocs.io/ ；GitHub：https://github.com/Epic-Fight/epicfight
+- EF 附属：Impactful / Battle Arts / Resurrection / Indestructible / Epic Foes / Sword Soaring / Nightfall / WoM（CurseForge/Modrinth/MC百科）
+- Symbiote: A Bonding Experience：https://modrinth.com/mod/symbiote-a-bonding-experience ；MC百科 class/30078
+- Fungal Infection: Spore 及官方 Wiki：https://www.fungalinfectionspore.wiki/ ；Spore Inquisition 数据包
+- Saint's Dragons：https://www.curseforge.com/minecraft/mc-mods/saints-dragons ；Mount Fix（CurseForge）
+- Tinkers' Construct：https://github.com/SlimeKnights/TinkersConstruct/releases ；Epic Fight: Tinkers Integration（CurseForge）
+- RoadWeaver 阡陌交通：https://modrinth.com/project/6jk8Pote ；MC百科 class/22551
+- Distant Horizons：https://modrinth.com/mod/distanthorizons ；Voxy：https://modrinth.com/mod/voxy
+- CompatLink：https://modrinth.com/project/FLUdglmm ；EFMCompat 及 avindicator 系列兼容数据包
+- KubeJS 官方 Wiki：https://kubejs.com/ ；CraftTweaker 文档：https://docs.blamejared.com/
+- MC百科（mcmod.cn）相关模组与整合包词条（沉浸战斗、远梦之棺、逆转未来、终焉决斗、烦人的村民等）
+- packwiz 官方文档：https://packwiz.infra.link/ ；Prism Launcher
+- CurseForge / Modrinth 发布与授权条款；Xaero's 地图、Explorer's Compass、Waystones 官方页面
+- RLCraft Wiki、DawnCraft、Prominence II 官方页、ATM-9 GitHub Issues

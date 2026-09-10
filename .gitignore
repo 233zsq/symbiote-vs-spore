@@ -1,0 +1,28 @@
+# ============================================================
+# Symbiote vs Spore · packwiz + Git 源码化仓库
+# 铁律②：绝不提交 jar 本体——模组只以 mods/*.pw.toml 元数据入库
+# 铁律①：所有 TOML 元数据与 config/kubejs/scripts 覆盖层必须版本化（不得加入本文件）
+# ============================================================
+
+# --- jar 红线（全局禁止；任何模组 jar 都不进版本库）---
+*.jar
+
+# --- packwiz 导出产物（导出件不上库；确需归档用 git add -f 强制） ---
+*.mrpack
+*.zip
+
+# --- 运行时产物（防御性排除：请勿在包根目录直接跑游戏） ---
+logs/
+crash-reports/
+saves/
+*.log
+.cache/
+
+# --- 操作系统垃圾 ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# --- 编辑器目录 ---
+.vscode/
+.idea/

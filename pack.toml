@@ -1,0 +1,13 @@
+name = "Symbiote vs Spore"
+author = "233zsq"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "d86ebf29f7382c9c0e019ca8e65fef711cf1c3c3da3d71b8f5120db42d141d2f"
+
+[versions]
+forge = "47.2.20"
+minecraft = "1.20.1"
