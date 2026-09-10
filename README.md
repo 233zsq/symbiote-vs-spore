@@ -3,7 +3,7 @@
 > 《我的世界》战斗 & 冒险整合包，以 **Epic Fight（史诗战斗）** 为战斗底座。
 > 叙事主线「**以共生对寄生**」即包名由来——体内养成一个会反抗你的共生体（Symbiote），体外对抗一场不断进化的真菌天灾（Fungal Infection: Spore）；御剑修仙（Sword Soaring）与 Nightfall 动作武器提供 EF 原生战斗纵深。
 >
-> 版本基线：**Minecraft 1.20.1 + Forge 47.2.20+ · Java 17 · packwiz + Git 源码化管理**
+> 版本基线：**Minecraft 1.20.1 + Forge 47.4.23 · Java 17 · packwiz + Git 源码化管理**
 > 作者：233zsq
 
 ## 项目简介
@@ -17,7 +17,7 @@
 | 项目 | 基线 |
 |---|---|
 | Minecraft | 1.20.1 |
-| 加载器 | Forge 47.4.5（pack.toml 冻结；47.2.20+ 均可运行） |
+| 加载器 | Forge 47.4.23（pack.toml 冻结；47.2.20+ 均可运行） |
 | Java | 17（统一发行版，推荐 Temurin 17） |
 | 内存 | 开发实例 6–8 GB；发布门槛：最低 4 GB / 推荐 6–8 GB |
 | 开发工具 | PCL2（版本隔离双实例）、packwiz、Git、spark |
@@ -39,7 +39,7 @@
 ## 快速开始（开发者）
 
 1. 前置：PCL2（Plain Craft Launcher，开启版本隔离）、Java 17（Temurin）、[packwiz](https://packwiz.infra.link/)。
-2. 克隆仓库后，在 PCL2 建立 1.20.1 + Forge 47.4.5 实例（模组增删只走 packwiz，勿用 PCL 的 Mod 管理界面直改），经 packwiz-installer 按 `pack.toml` 同步到版本隔离目录。
+2. 克隆仓库后，在 PCL2 建立 1.20.1 + Forge 47.4.23 实例（模组增删只走 packwiz，勿用 PCL 的 Mod 管理界面直改），经 packwiz-installer 按 `pack.toml` 同步到版本隔离目录。
 3. 仓库骨架（pack.toml、.gitignore、目录、提交规范、JSON 校验脚本）由仓库脚手架初始化任务建立，纪律细节见 `CONTRIBUTING.md`。
 
 ## 文档导航
