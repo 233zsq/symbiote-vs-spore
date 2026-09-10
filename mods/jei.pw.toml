@@ -1,0 +1,13 @@
+name = "Just Enough Items (JEI)"
+filename = "jei-1.20.1-forge-15.58.0.209.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/u6dRKJwZ/versions/1L7W8nyE/jei-1.20.1-forge-15.58.0.209.jar"
+hash-format = "sha512"
+hash = "0944c29eb981aad914d0f023748c4bdf7e0c88c5fc91bb3be3c6d6827c2706d9b1cb2a64ca987546c758fd0232267cc109ff2bec2e6d373a918c6b13350457c3"
+
+[update]
+[update.modrinth]
+mod-id = "u6dRKJwZ"
+version = "1L7W8nyE"

@@ -1,0 +1,9 @@
+# Default Options 键位默认表（格式：key_<键位ID>:<键名>，第三段修饰键省略=NONE）
+# 机制：仅对新安装（无 options.txt）生效；玩家自行改键不会被覆盖，见 https://modrinth.com/mod/default-options
+# 2026-09-10 定型：Symbiote 的 R/K 与 EF 默认键冲突，EF 侧整体右移——本表即全包唯一键位事实源
+key_key.epicfight.switch_mode:key.mouse.5
+key_key.epicfight.weapon_innate_skill:key.keyboard.r
+key_key.epicfight.dodge:key.keyboard.left.alt
+key_key.epicfight.guard:key.mouse.right
+key_key.epicfight.lock_on:key.keyboard.g
+key_key.epicfight.skill_gui:key.keyboard.k
