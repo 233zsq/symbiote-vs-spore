@@ -14,3 +14,22 @@ CONTRIBUTING.md
 
 # 仓库工具（JSON 校验等，仅开发期使用）
 tools/
+
+# jar 红线：packwiz 只索引 .pw.toml 元数据，jar 本体永不入索引
+*.jar
+
+# 游戏目录误指仓库根时的污染（2026-09-10 实发：PCL 游戏目录误设为包根）
+/launcher_profiles.json
+/options.txt
+/PCL.ini
+/PCL/
+/.minecraft/
+/assets/
+/versions/
+/libraries/
+/natives/
+/runtime/
+/screenshots/
+/logs/
+/saves/
+/crash-reports/
