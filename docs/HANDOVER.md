@@ -1,8 +1,18 @@
 # 交接文档 · Symbiote vs Spore
 
-> 最近更新：2026-09-10（阶段②.5 **验收通过并关闭** + 协作拓扑变更）。新会话/新模型接手时先读本文件，再读 `docs/` 下两份方案文档。
+> 最近更新：2026-09-11（阶段③批1 实测前全部离线备件就绪）。新会话/新模型接手时先读本文件，再读 `docs/` 下两份方案文档。
 >
 > **协作拓扑（2026-09-10 起）**：**Kimi Code（K3）= 总设计师/调度者，可直接操控 Qoder 驱动其四个模型执行开发**（经 kimi-cu-win 等本机控制插件操作 Qoder 界面）。Kimi 负责：设计方案、拆解任务、按工作流文档路由模型、把 prompt 喂给 Qoder、审查产物、入库与 commit；Qoder 四模型按原路由表执行。工作流文档（`docs/For User整合包开发AI工作流_模型分配与Prompts.md`）的模型路由与 prompt 库继续有效，但"人工搬运 prompt"环节由 Kimi 代劳；该文档后续按此拓扑重写。
+>
+> **2026-09-11 拓扑落地修订**：实际操作通道 = **qoderclicn**（`C:\Users\zhens\.qoder-cn\bin\qoderclicn\qoderclicn.exe`，已登录，非 qodercli——后者是另一客户端且未登录）。已验证用法：`qoderclicn -p --model "GLM-5.3-Flash" --permission-mode bypass_permissions "<prompt>"`（-p 非交互；模型名以 `--list-models` 为准，有 GLM-5.3/GLM-5.3-Flash/Qwen3.8-Max/Qwen3.8-Flash/DeepSeek 等）。**单任务输出大时务必分片并行**（WoM 335 键整包单次超时，分 4 片×84 键 4 路并行秒过）；产物一律 K3 机器校验（JSON 可解析 + 键数对账 + 占位符对账）+ 人工抽检后才入库。
+
+## 今晚实测行动清单（阶段③批1 · Symbiote，约 1–1.5h）
+
+1. **启动前**：`python tools/sync_mods.py --dry-run` 确认实例与仓库一致（应无差异；**实测通过前不要 packwiz 安装任何新模组**，会污染批次归因）
+2. **进游戏**按 `docs/阶段③批1_Symbiote实测记录.md` 顺序执行：第 0 节准备项 → 第 1 节键位表（jar 已确认，Controlling 复核拼写即可）→ 第 3 节**默认键位冲突实爆**（R/G/K 同按看双触发）→ 游戏内改绑 Y/I/M/;/' → 第 2 节机制实测 → 第 3 节 EF 兼容项 → 第 4 节 EF 处决复测两项（斧 Guillotine 耗体 24 / 匕首 Blade Rush 耗体 25）
+3. **首启动后**（可选但建议同场做）：把生成的 `config/symbiote-*.toml` 对照 `docs/Symbiote配置调频设计.md` §1 键名核对，并按 §2 落地 EF 战斗安全档（关 hunger_stalk/curiosity/predator_hunt 三类移动劫持）
+4. **过线后叫我**：我来做 commit（`mods/symbiote pw.toml + pack.toml/index.toml` 现为未提交状态，专为实测 gate 保留）；**不过线** → 启动降级预案 P12
+5. 日志位置：实例目录下 `logs/latest.log` 与 `crash-reports/`；崩溃/异常截图发我或直接回填实测记录第 5 节
 
 ## 1. 仓库快照
 
