@@ -1,12 +1,14 @@
 # 交接文档 · Symbiote vs Spore
 
-> 最近更新：2026-09-11（阶段③批1 实测前全部离线备件就绪）。新会话/新模型接手时先读本文件，再读 `docs/` 下两份方案文档。
+> 最近更新：2026-09-11 深夜（E 机首次启动实测到主菜单；键位/配置静态验证全过；交互实测因用户在前台玩 Dawnwalker 暂缓，cron 看守中）。新会话/新模型接手时先读本文件，再读 `docs/` 下两份方案文档。
 >
 > **协作拓扑（2026-09-10 起）**：**Kimi Code（K3）= 总设计师/调度者，可直接操控 Qoder 驱动其四个模型执行开发**（经 kimi-cu-win 等本机控制插件操作 Qoder 界面）。Kimi 负责：设计方案、拆解任务、按工作流文档路由模型、把 prompt 喂给 Qoder、审查产物、入库与 commit；Qoder 四模型按原路由表执行。工作流文档（`docs/For User整合包开发AI工作流_模型分配与Prompts.md`）的模型路由与 prompt 库继续有效，但"人工搬运 prompt"环节由 Kimi 代劳；该文档后续按此拓扑重写。
 >
 > **2026-09-11 拓扑落地修订**：实际操作通道 = **qoderclicn**（`C:\Users\zhens\.qoder-cn\bin\qoderclicn\qoderclicn.exe`，已登录，非 qodercli——后者是另一客户端且未登录）。已验证用法：`qoderclicn -p --model "GLM-5.3-Flash" --permission-mode bypass_permissions "<prompt>"`（-p 非交互；模型名以 `--list-models` 为准，有 GLM-5.3/GLM-5.3-Flash/Qwen3.8-Max/Qwen3.8-Flash/DeepSeek 等）。**单任务输出大时务必分片并行**（WoM 335 键整包单次超时，分 4 片×84 键 4 路并行秒过）；产物一律 K3 机器校验（JSON 可解析 + 键数对账 + 占位符对账）+ 人工抽检后才入库。
 
 ## 今晚实测行动清单（阶段③批1 · Symbiote，约 1–1.5h）
+
+> **状态（2026-09-11 23:55 E 机）**：清单第 1/3 项已完成（启动✅ Mod 列表✅ Controlling 键位=options.txt 静态复核✅）；第 2 项中「键位表静态核实」「配置调频键名核对」「EF 安全档落地」✅；**第 2/3/4 节实机交互项暂缓**——用户正在前台全屏玩 Dawnwalker（Steam 3A），已设 cron 每 6 分钟看守前台进程，空出即续测。详见下文「E 机环境（2026-09-11 新建）」。
 
 1. **启动前**：`python tools/sync_mods.py --dry-run` 确认实例与仓库一致（应无差异；**实测通过前不要 packwiz 安装任何新模组**，会污染批次归因）
 2. **进游戏**按 `docs/阶段③批1_Symbiote实测记录.md` 顺序执行：第 0 节准备项 → 第 1 节键位表（jar 已确认，Controlling 复核拼写即可）→ 第 3 节**默认键位冲突实爆**（R/G/K 同按看双触发）→ 游戏内改绑 Y/I/M/;/' → 第 2 节机制实测 → 第 3 节 EF 兼容项 → 第 4 节 EF 处决复测两项（斧 Guillotine 耗体 24 / 匕首 Blade Rush 耗体 25）
@@ -28,9 +30,11 @@
 
 ## 2. 环境拓扑（别再踩坑）
 
+> **本机（E 机，2026-09-11 起）**：仓库克隆在 `E:\mcmp`（远端 origin = GitHub 私有库）；游戏复用 PCL2 的 `.minecraft`（`C:\PCL 正式版 2.8.13\.minecraft`），实例 = `versions\1.20.1-forge-47.4.23`（版本隔离目录即游戏目录）；assets index 5 本地齐全；Java 17 = `C:\Program Files\Java\jdk-17`。下文 D 盘拓扑为原开发机记录，仅作历史参照。
+
 | 项 | 位置 / 值 |
 |---|---|
-| 开发仓库 | `D:\mcmp`（**纯源码，游戏文件永远不该出现**） |
+| 开发仓库（原机） | `D:\mcmp`（**纯源码，游戏文件永远不该出现**） |
 | PCL2 | `D:\mcmp_test\Plain Craft Launcher 2.exe`，游戏目录 = `D:\mcmp_test`，版本隔离已开。**启动游戏 = 直接运行 PCL2 选 `1.20.1-Forge_47.4.23` 启动**；建议分配 6–8 GB 内存；禁用 PCL 的 Mod 管理界面增删模组；仓库有模组变动时先跑 `python tools/sync_mods.py` 再启动 |
 | 开发实例 | `D:\mcmp_test\versions\1.20.1-Forge_47.4.23\`（测试实例未建） |
 | packwiz | `C:\Users\zhens\bin\packwiz.exe`（nightly.link 的 Actions 构建；官方无 Releases） |
@@ -71,6 +75,15 @@
 6. **格挡手感**：用户感觉不如成熟整合包——Impactful 附属入包（阶段④）后再评
 7. ~~**Symbiote 键位追加**~~ **✅ 已落地（2026-09-11，K3，字节码级确认）**：`SymbioteKeybinds.class` javap 复核——实际 **15 个键位**（原记 16+1 未名系误读，全名录与默认键码逐条提取自 `<clinit>`）。改绑五键已写入 `config/defaultoptions/keybindings.txt`：tendril_yank→Y、living_armor_toggle→I、apex→M、strain_power→;、arm_toggle→'。实测仅需 Controlling 复核 ID 拼写。⚠️ 遗留：apex→M 与阶段④ Xaero's 世界图默认 M 撞键，届时改 Xaero 侧、不动本表。**重大发现（推翻方案 3.9 假设）**：STRESS_*/DEFIANCE_*/OVERRIDE_* 等玩法数值全部**硬编码**（166 项 lambda 常量，不暴露 toml）——劫持调频不能调数值，只能开关行为入口；调频设计见 `docs/Symbiote配置调频设计.md`（EF 战斗安全档：关 hunger_stalk/curiosity/predator_hunt 三类移动劫持，保留救命兜底与 desires 养成），硬编码全表存 `docs/archive/symbiote_1.1.3_hardcoded_tuning.txt`（阶段⑤数值对齐引用源）
 8. **packwiz-installer 同步链路**：Java 下载受代理影响，已被 `tools/sync_mods.py` 取代主链路；installer 修复降级为低优先级
+
+### E 机工具箱（2026-09-11 新建，均在 E:\mcmp_test\，勿入仓库）
+
+- `launch.py`：**直连启动器**（替代 PCL 启动游戏）。`python launch.py --check` 校验/下载库与 natives；直接运行启动（默认 6G 内存、Tester 离线账号、1600×900、预置 options.txt language:zh_cn）。实现要点：解析 versions json 继承链；natives 作为独立库（`:natives-windows`）下载并解压；**classpath = 库 + 版本 jar（= forge client slim 补丁副本）+ FML 游戏层 jar（universal/client-extra/fmlcore/三语言模块）**；`${version_name}` 必须替换否则模块冲突。踩过的坑都写进了代码注释
+- `pw_add.py`：**packwiz 本机替代**（nightly.link Artifacts 已过期、无 Go 工具链）。`python pw_add.py <modrinth slug>` 对齐 `packwiz modrinth install -y` 输出格式（含 [update.modrinth]），自动递归必需依赖、重算 index.toml 与 pack.toml 索引哈希；`--list <关键词>` 搜索
+- `activate.ps1` / `restore_pw.ps1` / `enumwin.ps1`：窗口枚举/激活/PrintWindow 后台截图（前台被独占全屏占用时的观察手段）
+- sync_mods 用法：`python tools/sync_mods.py --instance "C:\PCL 正式版 2.8.13\.minecraft\versions\1.20.1-forge-47.4.23"`（注意 Windows 控制台 GBK 下先 `set PYTHONIOENCODING=utf-8`，Jade 标题含 🔍 会炸 print）
+- E 机首次启动验证（2026-09-11 深夜）：主菜单 ✅ 中文 ✅；Symbiote 1.1.3 加载 ✅（"Symbiote loaded: loss of control is the feature."）；Default Options 键位合并进 options.txt ✅（Y/I/M/;/' 五键 + C/X/B/U/O 默认键全在）；symbiote-client/common.toml 生成 ✅，**键名/分组与《Symbiote配置调频设计》§1 全部一致**；实例 config 已按 §2 落地 EF 战斗安全档（hunger_stalk_range=0.0、curiosity/predator_hunt/walk_door_rip/walk_terrain_bite 全 false）；生成物默认值与 §1 记载的四处出入以生成物为准（bond_decay_per_day=1、hunger_stalk_range=28.0→已改 0、tendril_cap=220、crater_rarity=1）
+- 待续：实测记录第 2/3/4 节交互项（等前台 3A 游戏退出，cron 看守中）
 
 ## 6. AI 协作要点（新会话必读）
 
