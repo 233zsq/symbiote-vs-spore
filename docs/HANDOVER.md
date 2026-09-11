@@ -49,16 +49,17 @@
 - **阶段② 核心战斗验证 ▶ 收尾**：手感基准实测通过；已修=战斗相机、键位；处决/体力 jar 级查证 ✅ 完成并回填清单。剩余动作：斧 Guillotine / 匕首 Blade Rush 两项处决复测 → 交 glm5.3flash 整理《战斗手感基准文档》后关闭
 - **阶段②.5 开发环境补齐 ✅（2026-09-10 人工验收通过）**：性能五件套 + QoL 四件 + Default Options 入包并同步实例；实例实测：启动无崩溃、Embeddium×EF 战斗动画/渲染正常、Controlling 可见 EF 键位分类、JEI/Jade 生效。此后一切实测均在最终性能/监控环境进行
 - **阶段③ 次核心攻坚 ▶ 批1 Symbiote 待实测**：Symbiote **1.1.3**（Modrinth，ARR）已 packwiz 入包 + sync 入实例（2026-09-10，未 commit，实测过线才提交）；jar 侦察已完成（见待办池#7）。实测顺序：Symbiote → Sword Soaring/Nightfall（各占一批单独验证）→ Fungal Infection: Spore；Symbiote 实测同场合并阶段②遗留的处决复测两项。Sword Soaring 在 Modrinth 有官方页（`epic-fight-sword-soaring`，前置 Invincible Lib 已在 Modrinth）；**Nightfall 仅 CurseForge**，入包链路待批2再解。Spore 批次 spark 已就位。每批启动实测过线才 commit
+- **批2/批3 入包链路侦察（2026-09-11 K3，Modrinth API 实证）**：Sword Soaring 1.20.1 最新 **20.14.2.8**（2026-04-25，版本号与 EF 20.14.x 同系），依赖 = Epic Fight + Invincible Lib（packwiz 自动解析，EF 已在包）→ `packwiz modrinth install epic-fight-sword-soaring` 即可；**Nightfall 确认不在 Modrinth**（搜索零命中），CurseForge 直连 403 需走 `packwiz curseforge install` 内建通道（若 opt-out 则引导手装），批2 执行时再解；Spore 在 Modrinth（slug `fungal-infectionspore`），1.20.1 最新稳定 **2.2.0j**（2026-06-29 release，无硬前置，2.2.0 系列 62 版迭代极快——锁 j 不再追新）；Spore Inquisition 数据包同在 Modrinth（slug `spore-inquisition`，137k 下载）
 
 ## 5. 待办池（按优先级）
 
 1. ~~②.5 实例验证~~ **✅ 已通过（2026-09-10）**：启动无崩溃、渲染正常、Controlling/JEI/Jade 生效
 2. ~~处决/韧性机制 + 体力数值查证~~ **✅ 已查证（K3，jar 级证据）**：EF 20.14 无通用"韧性→处决"机制（普通怪无韧性条属预期；处决仅斧 The Guillotine / 匕首双持 Blade Rush 两个固有技能）；体力表=上限 15、翻滚 4/跨步 3、回复 1.5s 延迟+前慢后快共约 5s，与实测全吻合。结论已回填 `docs/EF手感基准测试清单.md`，剩两项处决复测后可交 glm5.3flash 整理基准文档
-3. **WoM 汉化缺失**：评估社区汉化资源包或自制 lang 文件（不急，但发布前必须有）
+3. ~~**WoM 汉化缺失**~~ **✅ 初稿已完成（2026-09-11，qoderclicn glm5.3flash×4 分片 + K3 校验）**：自译 zh_cn.json 335 条全键覆盖、占位符/§码零错位，已存 `config/openloader/resources/wom_zh_cn/`（pack_format 15）；**生效依赖 Open Loader 入包**（阶段④工具链），届时进游戏实读一遍校对润色
 4. **处决设计缺口（设计决策待定）**：魂系玩家预期"打空韧性→处决"，EF 原生没有；候选：接受现状（以硬直/倒地呈现）/ 引入社区处决数据包或附属 / 阶段⑤用 KJS 自定义处决触发。建议阶段⑤平衡期与格挡手感（待办#6）一并评估
 5. **无敌帧难度分档**：用户希望按难度可调——阶段⑤平衡时评估（config 分档或任务奖励切换）
 6. **格挡手感**：用户感觉不如成熟整合包——Impactful 附属入包（阶段④）后再评
-7. **Symbiote 键位追加**：jar 侦察（2026-09-10，K3，SymbioteKeybinds.class）——实际有 **16 个键位**（不止方案记载的 R/K 两个）：tendril_yank=R、wall_cling=C、living_armor_toggle=G、radial_menu=X、feed=B、tendril_lash=Z、carapace=H、frenzy=J、apex=K、consume=U、strain_power=T、arm_assign=O、arm_toggle=L、arm_wall=N、graft_ask=V（+1 未名）。**实际冲突 5 个**：R/G/K 撞 EF 六键表、T 撞原版聊天、L 撞原版进度；拟改绑 tendril_yank→Y、living_armor_toggle→I、apex→M、strain_power→;、arm_toggle→'（其余 11 键保持默认）。实测在 Controlling 核实 ID 与冲突后写入 `config/defaultoptions/keybindings.txt`。另：jar 内无 epicfight 字样引用（无硬编码耦合，好兆头）；config 字段已侦察（STRESS_*/DEFIANCE_*/OVERRIDE_*/LIVING_ARMOR_* 等齐全），劫持调频待实测拿到生成的 toml 后设计
+7. ~~**Symbiote 键位追加**~~ **✅ 已落地（2026-09-11，K3，字节码级确认）**：`SymbioteKeybinds.class` javap 复核——实际 **15 个键位**（原记 16+1 未名系误读，全名录与默认键码逐条提取自 `<clinit>`）。改绑五键已写入 `config/defaultoptions/keybindings.txt`：tendril_yank→Y、living_armor_toggle→I、apex→M、strain_power→;、arm_toggle→'。实测仅需 Controlling 复核 ID 拼写。⚠️ 遗留：apex→M 与阶段④ Xaero's 世界图默认 M 撞键，届时改 Xaero 侧、不动本表。**重大发现（推翻方案 3.9 假设）**：STRESS_*/DEFIANCE_*/OVERRIDE_* 等玩法数值全部**硬编码**（166 项 lambda 常量，不暴露 toml）——劫持调频不能调数值，只能开关行为入口；调频设计见 `docs/Symbiote配置调频设计.md`（EF 战斗安全档：关 hunger_stalk/curiosity/predator_hunt 三类移动劫持，保留救命兜底与 desires 养成），硬编码全表存 `docs/archive/symbiote_1.1.3_hardcoded_tuning.txt`（阶段⑤数值对齐引用源）
 8. **packwiz-installer 同步链路**：Java 下载受代理影响，已被 `tools/sync_mods.py` 取代主链路；installer 修复降级为低优先级
 
 ## 6. AI 协作要点（新会话必读）
