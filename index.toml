@@ -78,6 +78,11 @@ hash = "0be4976227df8e261fd362889bf8e85b93e224d1b1c3cd2a11b73a9de3b64083"
 metafile = true
 
 [[files]]
+file = "mods/symbiote-a-bonding-experience.pw.toml"
+hash = "ec2c5ab707a44792b1b90a20a09c78fd041038b5fb9f3b0cb06cfef961757ffd"
+metafile = true
+
+[[files]]
 file = "mods/weapons-of-miracles.pw.toml"
 hash = "daa4b71ced3a7b98f29999388265874f31d459ea6711c9a9edd76e05f65aca22"
 metafile = true

@@ -1,0 +1,13 @@
+name = "Symbiote: A Bonding Experience"
+filename = "symbiote-1.1.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/A4FMcO1J/versions/mXMKrpoC/symbiote-1.1.3.jar"
+hash-format = "sha512"
+hash = "7345c05e7ac487b3443a7c7540974e474e6589c8a02bd93b5f7e5f5644ca1928cb3dc032a39ad817ba95c9e4cb848b29c371b0b6b4a85e4237c61214e68e89cb"
+
+[update]
+[update.modrinth]
+mod-id = "A4FMcO1J"
+version = "mXMKrpoC"
