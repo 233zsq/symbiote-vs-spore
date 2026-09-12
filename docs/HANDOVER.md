@@ -67,6 +67,12 @@
 
 ## 5. 待办池（按优先级）
 
+### 参考包研习结论（2026-09-12 · Immersive Fight 4.2.9 · 同 EF 20.14.17）
+
+- **本地金参考**：`C:\PCL 正式版 2.8.13\.minecraft\versions\Immersive Fight 4.2.9\`（308 mod，MC 1.20.1）——与我们同 EF 版本的可运行组合实证：Sword Soaring 20.14.2.8、Nightfall 3.4.0、Resurrection 0.20.12.2、Indestructible 20.13.0、Invincible Lib 20.14.8.2、knightlib 1.4.2、epicfight-extra 1.2、epicfight_awaken 1.2.6、epic_fight_avalon 20.12.6.3、womplus 20.14.1.1.5、womalt 1.0.0、nightfall_invade 1.3.2。完整调研报告：`E:\mcmp_test\reference_if.md`（不入库）
+- **直接可抄**：① `leawind_third_person` 2.2.0 越肩视角（待办#6 格挡手感的最大嫌疑解）；② 武器适配走 **global_packs 强制数据包**（346 weapon JSON + 99 types，覆写 EF 官方 types 换 epicfightx 动画库，零代码改手感）——与我们的 kubejs/data、openloader 通道三选一，待阶段④拍板；③ 键位排布：攻击/格挡占左右键、闪避 LAlt、锁定 G、技能书 J、附属技能铺鼠标侧键；④ 相机 `ALWAYS_BACK + auto_switch=true`（我们现是 WHEN_AIMING/关自动切换）
+- **排除项**：IF 无 Impactful/Battle Arts/Epic Foes/CompatLink/EFMCompat（"MobsPlus-EFM" ≠ Epic Foes）；无 Symbiote/Spore——我们包的共生体/孢子组合仍是"无公开共存先例"，【需实测】维持
+
 1. ~~②.5 实例验证~~ **✅ 已通过（2026-09-10）**：启动无崩溃、渲染正常、Controlling/JEI/Jade 生效
 2. ~~处决/韧性机制 + 体力数值查证~~ **✅ 已查证（K3，jar 级证据）**：EF 20.14 无通用"韧性→处决"机制（普通怪无韧性条属预期；处决仅斧 The Guillotine / 匕首双持 Blade Rush 两个固有技能）；体力表=上限 15、翻滚 4/跨步 3、回复 1.5s 延迟+前慢后快共约 5s，与实测全吻合。结论已回填 `docs/EF手感基准测试清单.md`，剩两项处决复测后可交 glm5.3flash 整理基准文档
 3. ~~**WoM 汉化缺失**~~ **✅ 初稿已完成（2026-09-11，qoderclicn glm5.3flash×4 分片 + K3 校验）**：自译 zh_cn.json 335 条全键覆盖、占位符/§码零错位，已存 `config/openloader/resources/wom_zh_cn/`（pack_format 15）；**生效依赖 Open Loader 入包**（阶段④工具链），届时进游戏实读一遍校对润色
