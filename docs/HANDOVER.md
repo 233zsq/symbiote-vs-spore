@@ -8,7 +8,7 @@
 
 ## 今晚实测行动清单（阶段③批1 · Symbiote，约 1–1.5h）
 
-> **状态（2026-09-11 23:55 E 机）**：清单第 1/3 项已完成（启动✅ Mod 列表✅ Controlling 键位=options.txt 静态复核✅）；第 2 项中「键位表静态核实」「配置调频键名核对」「EF 安全档落地」✅；**第 2/3/4 节实机交互项暂缓**——用户正在前台全屏玩 Dawnwalker（Steam 3A），已设 cron 每 6 分钟看守前台进程，空出即续测。详见下文「E 机环境（2026-09-11 新建）」。
+> **状态（2026-09-12 晚）**：离线验证全过（启动✅/键位表已按 10 键复核修正✅/EF 安全档落地实例✅）；**实测方式改为用户人工实测**（Kimi 准备环境与清单，用户在 MC 里按 `docs/阶段③批1_Symbiote实测记录.md` 执行并回报现象，Kimi 回填文档与 commit）。**启动命令：`python E:/mcmp_test/launch.py --noearly`**（--noearly 关闭早期显示窗，规避独占全屏争用；约 2 分钟到主菜单）。
 
 1. **启动前**：`python tools/sync_mods.py --dry-run` 确认实例与仓库一致（应无差异；**实测通过前不要 packwiz 安装任何新模组**，会污染批次归因）
 2. **进游戏**按 `docs/阶段③批1_Symbiote实测记录.md` 顺序执行：第 0 节准备项 → 第 1 节键位表（jar 已确认，Controlling 复核拼写即可）→ 第 3 节**默认键位冲突实爆**（R/G/K 同按看双触发）→ 游戏内改绑 Y/I/M/;/' → 第 2 节机制实测 → 第 3 节 EF 兼容项 → 第 4 节 EF 处决复测两项（斧 Guillotine 耗体 24 / 匕首 Blade Rush 耗体 25）
@@ -53,7 +53,7 @@
 | 启动器 | PCL2（版本隔离双实例），模组增删只走 packwiz，禁用 PCL Mod 管理直改 | 方案 1.4 |
 | Forge | 47.4.23 冻结 | pack.toml |
 | EF 系列 | 锁定 20.14.x，当前 20.14.17 | commit `5d61e46` |
-| **键位/配置下发** | **定型：Default Options mod**（`config/defaultoptions/` 只对新安装生效，不覆盖玩家改键；不随包发根目录 options.txt——避免更新冲掉玩家设置）。EF 六键已入表：切战斗=mouse.5、武器固有技能=R、闪避=LAlt、格挡=右键、锁定=G、技能编辑器=K；Symbiote 键位改绑方案见待办池#7（jar 侦察后修正：实际冲突为 R/G/K+T/L 五处，非原估的 V/B 两键） | 阶段②.5 |
+| **键位/配置下发** | **定型：Default Options mod**（`config/defaultoptions/` 只对新安装生效，不覆盖玩家改键；不随包发根目录 options.txt——避免更新冲掉玩家设置）。EF 六键已入表：切战斗=mouse.5、武器固有技能=R、闪避=LAlt、格挡=右键、锁定=G、技能编辑器=K；Symbiote 键位改绑方案见待办池#7（2026-09-12 再修正：真实冲突为 R/G/K+L 四处，T 项系 phantom——strain_power 未注册） | 阶段②.5 |
 | **性能栈时点** | **提前至阶段②.5 入包**（原方案排第四批）：此后一切实测在最终性能/监控环境中进行，避免后期入包导致手感与兼容结论返工；spark 自此常驻支撑 Spore TPS 监控 | 阶段②.5 |
 | 原版干预政策 | 【待定】默认完全自由，决策前任何脚本不得碰原版；当前倾向 A（完全不动），阶段⑤实测数据有反例再翻案 | 方案 3.3 |
 
@@ -73,7 +73,7 @@
 4. **处决设计缺口（设计决策待定）**：魂系玩家预期"打空韧性→处决"，EF 原生没有；候选：接受现状（以硬直/倒地呈现）/ 引入社区处决数据包或附属 / 阶段⑤用 KJS 自定义处决触发。建议阶段⑤平衡期与格挡手感（待办#6）一并评估
 5. **无敌帧难度分档**：用户希望按难度可调——阶段⑤平衡时评估（config 分档或任务奖励切换）
 6. **格挡手感**：用户感觉不如成熟整合包——Impactful 附属入包（阶段④）后再评
-7. ~~**Symbiote 键位追加**~~ **✅ 已落地（2026-09-11，K3，字节码级确认）**：`SymbioteKeybinds.class` javap 复核——实际 **15 个键位**（原记 16+1 未名系误读，全名录与默认键码逐条提取自 `<clinit>`）。改绑五键已写入 `config/defaultoptions/keybindings.txt`：tendril_yank→Y、living_armor_toggle→I、apex→M、strain_power→;、arm_toggle→'。实测仅需 Controlling 复核 ID 拼写。⚠️ 遗留：apex→M 与阶段④ Xaero's 世界图默认 M 撞键，届时改 Xaero 侧、不动本表。**重大发现（推翻方案 3.9 假设）**：STRESS_*/DEFIANCE_*/OVERRIDE_* 等玩法数值全部**硬编码**（166 项 lambda 常量，不暴露 toml）——劫持调频不能调数值，只能开关行为入口；调频设计见 `docs/Symbiote配置调频设计.md`（EF 战斗安全档：关 hunger_stalk/curiosity/predator_hunt 三类移动劫持，保留救命兜底与 desires 养成），硬编码全表存 `docs/archive/symbiote_1.1.3_hardcoded_tuning.txt`（阶段⑤数值对齐引用源）
+7. ~~**Symbiote 键位追加**~~ **✅ 已落地（2026-09-11/12，K3，双层字节码实证）**：`SymbioteKeybinds.class` 构造 15 个 KeyMapping，但注册数组 `ALL` 只装 **10 个**（`TENDRIL_LASH/CARAPACE/FRENZY/STRAIN_POWER/GRAFT_ASK` 未注册；2026-09-12 javap+实例 options.txt 双重实证，修正 09-11"15 键"侦察漏读注册环节）。改绑四键已入 `config/defaultoptions/keybindings.txt`：tendril_yank→Y、living_armor_toggle→I、apex→M、arm_toggle→'（**strain_power→; 已移除**——该键不存在，T 聊天冲突系虚惊；L 撞原版进度为真实冲突，' 生效）。实测复核：Controlling 应恰 10 条 symbiote 条目。⚠️ 遗留：apex→M 与阶段④ Xaero's 世界图默认 M 撞键，届时改 Xaero 侧、不动本表。**重大发现（推翻方案 3.9 假设）**：STRESS_*/DEFIANCE_*/OVERRIDE_* 等玩法数值全部**硬编码**（166 项 lambda 常量，不暴露 toml）——劫持调频不能调数值，只能开关行为入口；调频设计见 `docs/Symbiote配置调频设计.md`（EF 战斗安全档：关 hunger_stalk/curiosity/predator_hunt 三类移动劫持，保留救命兜底与 desires 养成），硬编码全表存 `docs/archive/symbiote_1.1.3_hardcoded_tuning.txt`（阶段⑤数值对齐引用源）
 8. **packwiz-installer 同步链路**：Java 下载受代理影响，已被 `tools/sync_mods.py` 取代主链路；installer 修复降级为低优先级
 
 ### E 机工具箱（2026-09-11 新建，均在 E:\mcmp_test\，勿入仓库）

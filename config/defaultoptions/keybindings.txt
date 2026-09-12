@@ -7,10 +7,10 @@ key_key.epicfight.dodge:key.keyboard.left.alt
 key_key.epicfight.guard:key.mouse.right
 key_key.epicfight.lock_on:key.keyboard.g
 key_key.epicfight.skill_gui:key.keyboard.k
-# 2026-09-11 Symbiote 1.1.3 改绑五键（jar 侦察 com.scout.symbiote.client.SymbioteKeybinds 确认 15 键全名录；
-# 默认 R/G/K 撞 EF 六键表、T/L 撞原版聊天/进度；今晚实测需在 Controlling 复核后生效）
+# 2026-09-11 Symbiote 1.1.3 改绑方案（jar 侦察 SymbioteKeybinds）；
+# 2026-09-12 复核修正：运行时仅注册 10 键，strain_power(T) 构造但未注册——T 冲突系虚惊，
+# 改绑表移除该行；arm_toggle(L) 撞原版进度，改绑 ' 保留生效。
 key_key.symbiote.tendril_yank:key.keyboard.y
 key_key.symbiote.living_armor_toggle:key.keyboard.i
 key_key.symbiote.apex:key.keyboard.m
-key_key.symbiote.strain_power:key.keyboard.semicolon
 key_key.symbiote.arm_toggle:key.keyboard.apostrophe

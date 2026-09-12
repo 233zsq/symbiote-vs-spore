@@ -17,7 +17,7 @@
 ## 1. 键位核实表（15 键 · jar 侦察已确认全名录）
 
 > 冲突背景见头部。改绑落地方式：已按改绑方案追加进 `config/defaultoptions/keybindings.txt`（jar 级确认，进游戏后仅需在 Controlling 复核 ID 拼写一致）。
-> **2026-09-11 K3 复核修正**：`SymbioteKeybinds.class` 字节码确认共 **15 个键位**（原记 16 +1 未名系误读，无未名键）；默认键码逐条提取自 `<clinit>`，与下表一致。
+> **2026-09-12 复核修正（javap + 实例 options.txt 双重实证）**：`<clinit>` 构造 15 个 KeyMapping，但注册数组 `ALL` 只装 **10 个**——`TENDRIL_LASH`/`CARAPACE`/`FRENZY`/`STRAIN_POWER`/`GRAFT_ASK` **构造但未注册**（`ClientModEvents.onRegisterKeyMappings` 只遍历 ALL）。运行时 options.txt 恰 10 条 `key_key.symbiote.*`，与此吻合。因此：**strain_power(T) 与原版聊天的冲突是虚惊（该键不存在）**，原 §3 冲突实爆只需验 R/G/K 三键；未注册五键无键位入口，其触发途径【待核实】。
 
 | 功能名 | 键位ID（jar 字节码已确认，Controlling 复核即可） | 默认键 | 冲突对象 | 改绑方案 | 实测结果 |
 |---|---|---|---|---|---|
@@ -26,9 +26,9 @@
 | Living Armor 开关 | `living_armor_toggle` | G | EF 六键表·lock_on | 改绑 **I**（已入表） | 待填 |
 | 径向菜单 | `radial_menu` | X | 无 | 保持默认 | 待填 |
 | 喂食 | `feed` | B | 无 | 保持默认 | 待填 |
-| Tendril Lash（触手鞭击，细节待现场核实） | `tendril_lash` | Z | 无 | 保持默认 | 待填 |
-| Carapace（功能待现场核实） | `carapace` | H | 无 | 保持默认 | 待填 |
-| Frenzy（功能待现场核实） | `frenzy` | J | 无 | 保持默认 | 待填 |
+| Tendril Lash（触手鞭击，细节待现场核实） | `tendril_lash` | Z | ⚠️ 1.1.3 未注册（无键位入口） | — | 待填 |
+| Carapace（功能待现场核实） | `carapace` | H | ⚠️ 1.1.3 未注册 | — | 待填 |
+| Frenzy（功能待现场核实） | `frenzy` | J | ⚠️ 1.1.3 未注册 | — | 待填 |
 | Apex Form（顶端形态） | `apex` | K | EF 六键表·skill_gui | 改绑 **M**（已入表；⚠️ 阶段④ Xaero's 世界图默认也是 M，届时把 Xaero 侧改走，不动本表） | 待填 |
 | Consume（吞噬） | `consume` | U | 无 | 保持默认 | 待填 |
 | Strain Power（与 strain 资源相关，细节待现场核实） | `strain_power` | T | 原版聊天 | 改绑 **;**（已入表） | 待填 |
