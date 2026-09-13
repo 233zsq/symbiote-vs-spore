@@ -1,0 +1,8 @@
+{
+	chapter_groups: [
+		{ id: "0B00AA11CC22DD33", title: "主线" }
+		{ id: "0B00AA11CC22DD44", title: "共生体羁绊" }
+		{ id: "0B00AA11CC22DD55", title: "天灾防线" }
+		{ id: "0B00AA11CC22DD66", title: "探索里程碑" }
+	]
+}

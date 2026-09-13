@@ -14,3 +14,11 @@ key_key.symbiote.tendril_yank:key.keyboard.y
 key_key.symbiote.living_armor_toggle:key.keyboard.i
 key_key.symbiote.apex:key.keyboard.m
 key_key.symbiote.arm_toggle:key.keyboard.apostrophe
+# 2026-09-13 Xaero's 双侧入包后的撞键清算（IF 方案：杂键全解绑，世界图独占单键）：
+# Xaero 默认 B/N/U/M 与 Symbiote 已注册键 feed=B / arm_wall=N / consume=U / apex=M 全撞——
+# 全解绑，世界图改到 ';'（strain_power 移除后空出的键位），玩家可经 Controlling 自行改绑。
+key_gui.xaero_open_map:key.keyboard.semicolon
+key_gui.xaero_new_waypoint:key.keyboard.unknown
+key_gui.xaero_instant_waypoint:key.keyboard.unknown
+key_gui.xaero_waypoints_key:key.keyboard.unknown
+key_gui.xaero_toggle_waypoints:key.keyboard.unknown
