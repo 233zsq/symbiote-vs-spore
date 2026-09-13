@@ -62,7 +62,9 @@
 - **阶段① 底座搭建 ✅**：空包启动、pack.toml 入库、首次 commit 全部验收
 - **阶段② 核心战斗验证 ▶ 收尾**：手感基准实测通过；已修=战斗相机、键位；处决/体力 jar 级查证 ✅ 完成并回填清单。剩余动作：斧 Guillotine / 匕首 Blade Rush 两项处决复测 → 交 glm5.3flash 整理《战斗手感基准文档》后关闭
 - **阶段②.5 开发环境补齐 ✅（2026-09-10 人工验收通过）**：性能五件套 + QoL 四件 + Default Options 入包并同步实例；实例实测：启动无崩溃、Embeddium×EF 战斗动画/渲染正常、Controlling 可见 EF 键位分类、JEI/Jade 生效。此后一切实测均在最终性能/监控环境进行
-- **阶段③ 次核心攻坚 ▶ 批1 Symbiote ✅ 过线（2026-09-13 人工实测回报「全部通过」并 commit）**：Symbiote **1.1.3**（Modrinth，ARR）入包；E 机重建环境后首启到主菜单 ✅、Controlling 恰 10 键与修正表一致 ✅、EF 安全档落地实例 ✅、改绑 R/G/K/L 四处冲突消除 ✅、处决复测两项体力（24/25）符合预期 ✅。实测记录见 `docs/阶段③批1_Symbiote实测记录.md`。**下一开工点：批2 Sword Soaring（Modrinth 有页，`epic-fight-sword-soaring` 20.14.2.8 + Invincible Lib `epic-fight-invincible-lib`，pw_add 即可；Immersive Fight 已实证与 EF 20.14.17 共存）→ Nightfall 3.4.0（仅 CurseForge，依赖 avalon+aaa_particles 需一并解）→ 批3 Spore 2.2.0j**。每批启动实测过线才 commit
+- **阶段③ 次核心攻坚 ▶ 批2a Sword Soaring 待实测（2026-09-13）**：批1 Symbiote ✅ 过线已 commit（实测记录 §6）。批2a 已入包未 commit：`epic-fight-sword-soaring` **20.14.2.8** + 前置 `epic-fight-invincible-lib` **20.14.8.2**（pw_add 自动解析依赖，EF 已跳过；版本与 Immersive Fight 实证组合一致）；实例已 sync（17 mod）。**实测清单给用户：①启动到主菜单无崩溃；②Mod 列表 17 个；③JEI 搜 sword_soaring 可见物品；④控制界面搜 sword_soaring 核键位；⑤创造档试御剑技能书与飞行；⑥EF 战斗模式共存无冲突**。过线即 commit `feat(mods): 批2a Sword Soaring 20.14.2.8 入包 [K3+人工实测]`
+- **批2b Nightfall 待解**：3.4.0（IF 同款）仅 CurseForge；依赖 epic_fight_avalon（≥20.12.4，也不在 Modrinth）+ aaa_particles（Modrinth 有）+ invincible lib（已入）。入包链路：用户手装 CurseForge 三件套（或等 packwiz CF 通道），我们手工写 pw.toml
+- **批3 Spore**：Modrinth `fungal-infectionspore` 2.2.0j 锁版（62 版迭代不追新）；spark 已就位
 - **批2/批3 入包链路侦察（2026-09-11 K3，Modrinth API 实证）**：Sword Soaring 1.20.1 最新 **20.14.2.8**（2026-04-25，版本号与 EF 20.14.x 同系），依赖 = Epic Fight + Invincible Lib（packwiz 自动解析，EF 已在包）→ `packwiz modrinth install epic-fight-sword-soaring` 即可；**Nightfall 确认不在 Modrinth**（搜索零命中），CurseForge 直连 403 需走 `packwiz curseforge install` 内建通道（若 opt-out 则引导手装），批2 执行时再解；Spore 在 Modrinth（slug `fungal-infectionspore`），1.20.1 最新稳定 **2.2.0j**（2026-06-29 release，无硬前置，2.2.0 系列 62 版迭代极快——锁 j 不再追新）；Spore Inquisition 数据包同在 Modrinth（slug `spore-inquisition`，137k 下载）
 
 ## 5. 待办池（按优先级）
