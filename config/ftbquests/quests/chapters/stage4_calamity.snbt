@@ -1,0 +1,65 @@
+{
+	default_hide_dependency_lines: false
+	filename: "stage4_calamity"
+	group: "0B00AA11CC22DD33"
+	icon: "minecraft:mycelium"
+	id: "A3F1C0DE00000005"
+	order_index: 4
+	title: "Ⅳ·真菌天灾升级"
+	quests: [
+		{
+			id: "A3F1C0DE1000002C"
+			title: "暮色主线收束"
+			subtitle: "Ⅳ·入口"
+			description: ["击败冰雪女王，为暮色之旅收官，", "真菌天灾的阴影已开始蔓延。"]
+			x: 0.0d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: []
+			tasks: [{id: "A3F1C0DE20000031", type: "kill", entity: "twilightforest:snow_queen", value: 1L, title: "击杀冰雪女王"}]
+			rewards: [{id: "A3F1C0DE3000003B", type: "command", command: "/gamestage add @p stage4_calamity"}]
+		}
+		{
+			id: "A3F1C0DE1000002D"
+			title: "清理感染区"
+			subtitle: "感染装备线·入门"
+			description: ["清理 10 只被感染的村民与 5 只被感染的人类。", "人工核实：实体 ID 待核实（spore:inf_villager / spore:inf_human），", "若目标不存在，以实际的感染村民/人类为准。"]
+			x: 1.5d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE1000002C"]
+			tasks: [
+				{id: "A3F1C0DE20000032", type: "checkmark", title: "清理被感染的村民×10"}
+				{id: "A3F1C0DE20000033", type: "checkmark", title: "清理被感染的人类×5"}
+			]
+			rewards: [{id: "A3F1C0DE3000003C", type: "xp", xp: 150}]
+		}
+		{
+			id: "A3F1C0DE1000002E"
+			title: "生物质样本"
+			subtitle: "感染装备线·进阶"
+			description: ["提交 32 个腐肉，作为生物质样本的占位素材。", "人工核实：Spore 生物质素材 ID 待核实，确认后替换。"]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000002D"]
+			tasks: [{id: "A3F1C0DE20000034", type: "item", item: {id: "minecraft:rotten_flesh", Count: 32b}}]
+			rewards: [{id: "A3F1C0DE3000003D", type: "xp", xp: 200}]
+		}
+		{
+			id: "A3F1C0DE1000002F"
+			title: "猎杀裂地者"
+			subtitle: "感染装备线·大成"
+			description: ["击败裂地者 Gazenbreacher，", "斩断感染区的源头，完成天灾装备的试炼。"]
+			x: 4.5d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE1000002E"]
+			tasks: [{id: "A3F1C0DE20000035", type: "kill", entity: "spore:gazenbreacher", value: 1L, title: "击杀 Gazenbreacher"}]
+			rewards: [
+				{id: "A3F1C0DE3000003E", type: "xp", xp: 300}
+				{id: "A3F1C0DE3000003F", type: "item", item: {id: "minecraft:golden_apple", Count: 2b}}
+			]
+		}
+	]
+}

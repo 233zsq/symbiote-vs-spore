@@ -1,0 +1,203 @@
+{
+	default_hide_dependency_lines: false
+	filename: "calamity_front"
+	group: "0B00AA11CC22DD55"
+	icon: "minecraft:mycelium"
+	id: "8D1F6F8B10000001"
+	order_index: 0
+	title: "天灾防线（阶段Ⅳ-Ⅴ）"
+	quests: [
+		{
+			id: "8D1F6F8B20000001"
+			title: "瘴烟起处"
+			subtitle: "阶段Ⅳ：天灾降临"
+			description: ["地面隆起、紫烟渗出——那就是寄生瘟疫的苗床 Mound。", "铲掉你见到的第一座，天灾防线自此开篇。"]
+			x: 0.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: []
+			tasks: [{id: "8D1F6F8B30000001", type: "kill", entity: "spore:mound", value: 1L, title: "摧毁首个 Mound"}]
+			rewards: [
+				{id: "8D1F6F8B40000001", type: "xp", xp: 50},
+				{id: "8D1F6F8B40000002", type: "command", command: "/gamestage add @p stage4_calamity"}
+			]
+		}
+		{
+			id: "8D1F6F8B20000002"
+			title: "Mound 清剿·首战"
+			subtitle: ""
+			description: ["趁瘟疫还没坐大：连清两座 Mound，并处理拱卫的原生体 Proto。"]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B20000001"]
+			tasks: [
+				{id: "8D1F6F8B30000002", type: "kill", entity: "spore:mound", value: 2L, title: "摧毁 Mound"},
+				{id: "8D1F6F8B30000003", type: "kill", entity: "spore:proto", value: 1L, title: "击杀 Proto"}
+			]
+			rewards: [{id: "8D1F6F8B40000003", type: "xp", xp: 75}]
+		}
+		{
+			id: "8D1F6F8B20000003"
+			title: "CDU 部署教学"
+			subtitle: ""
+			description: ["制作冷却驱散装置（CDU），沿基地外围铺成防线，压住感染蔓延。", "人工核实：CDU 物品 ID 待核实，确认已制作并铺设成线。"]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B20000002"]
+			tasks: [{id: "8D1F6F8B30000004", type: "checkmark", title: "铺设 CDU 防线"}]
+			rewards: [{id: "8D1F6F8B40000004", type: "xp", xp: 75}]
+		}
+		{
+			id: "8D1F6F8B20000004"
+			title: "迎击准备"
+			subtitle: ""
+			description: ["天灾来袭前会提前喊话：Endure 撑住、Prepare 备战——按事件提示加固防线。"]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B20000003"]
+			tasks: [{id: "8D1F6F8B30000005", type: "checkmark", title: "响应一次 Endure 或 Prepare 事件"}]
+			rewards: [{id: "8D1F6F8B40000005", type: "xp", xp: 100}]
+		}
+		{
+			id: "8D1F6F8B20000005"
+			title: "Incoming！防线保卫战"
+			subtitle: ""
+			description: ["敌潮压境：守住基地，别让新的 Mound 在你家门口生根。", "人工核实：击退一次 Incoming 进攻，杀 Brute×5 与 Leaper×5（两实体 ID 待核实后可改为击杀任务）。"]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B20000004"]
+			tasks: [{id: "8D1F6F8B30000006", type: "checkmark", title: "击退一次 Incoming 进攻"}]
+			rewards: [{id: "8D1F6F8B40000006", type: "xp", xp: 150}]
+		}
+		{
+			id: "8D1F6F8B20000006"
+			title: "讨伐链·围城者 Sieger"
+			subtitle: "Calamity 讨伐链 1/9"
+			description: ["攻守易形——名单上第一个名字，就是它。", "终局硬条件之一：讨伐链首杀完成即计入终局判定。"]
+			x: 7.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B20000005"]
+			tasks: [{id: "8D1F6F8B30000007", type: "kill", entity: "spore:sieger", value: 1L, title: "击杀 Sieger"}]
+			rewards: [{id: "8D1F6F8B40000007", type: "xp", xp: 200}]
+		}
+		{
+			id: "8D1F6F8B20000007"
+			title: "讨伐链·轰炮 Howitzer"
+			subtitle: "Calamity 讨伐链 2/9"
+			description: ["它管远程，你管近身——别站进它的弹道里。"]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B20000006"]
+			tasks: [{id: "8D1F6F8B30000008", type: "kill", entity: "spore:howitzer", value: 1L, title: "击杀 Howitzer"}]
+			rewards: [{id: "8D1F6F8B40000008", type: "xp", xp: 250}]
+		}
+		{
+			id: "8D1F6F8B20000008"
+			title: "讨伐链·钢躯 Stahl"
+			subtitle: "Calamity 讨伐链 3/9"
+			description: ["一身钢皮的家伙——破甲手段带够了再上。"]
+			x: 10.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B20000007"]
+			tasks: [{id: "8D1F6F8B30000009", type: "kill", entity: "spore:stahl", value: 1L, title: "击杀 Stahl"}]
+			rewards: [{id: "8D1F6F8B40000009", type: "xp", xp: 250}]
+		}
+		{
+			id: "8D1F6F8B20000009"
+			title: "讨伐链·空蚀者 Hohlfresser"
+			subtitle: "Calamity 讨伐链 4/9"
+			description: ["它会掏空一切，包括你的血条——拉开距离周旋。"]
+			x: 12.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B20000008"]
+			tasks: [{id: "8D1F6F8B3000000A", type: "kill", entity: "spore:hohlfresser", value: 1L, title: "击杀 Hohlfresser"}]
+			rewards: [{id: "8D1F6F8B4000000A", type: "xp", xp: 300}]
+		}
+		{
+			id: "8D1F6F8B2000000A"
+			title: "讨伐链·裂地者 Gazenbreacher"
+			subtitle: "Calamity 讨伐链 5/9"
+			description: ["大地都会被它撕开——挑块开阔地当擂台。"]
+			x: 13.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B20000009"]
+			tasks: [{id: "8D1F6F8B3000000B", type: "kill", entity: "spore:gazenbreacher", value: 1L, title: "击杀 Gazenbreacher"}]
+			rewards: [{id: "8D1F6F8B4000000B", type: "xp", xp: 300}]
+		}
+		{
+			id: "8D1F6F8B2000000B"
+			title: "讨伐链·海妖 Kraken"
+			subtitle: "Calamity 讨伐链 6/9"
+			description: ["水下没有公平决斗——把它引上海面再动手。"]
+			x: 15.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B2000000A"]
+			tasks: [{id: "8D1F6F8B3000000C", type: "kill", entity: "spore:kraken", value: 1L, title: "击杀 Kraken"}]
+			rewards: [{id: "8D1F6F8B4000000C", type: "xp", xp: 350}]
+		}
+		{
+			id: "8D1F6F8B2000000C"
+			title: "讨伐链·巨怪利维坦 Leviathan"
+			subtitle: "Calamity 讨伐链 7/9"
+			description: ["名单过半——真正的深海噩梦现在才浮出水面。"]
+			x: 16.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B2000000B"]
+			tasks: [{id: "8D1F6F8B3000000D", type: "kill", entity: "spore:leviathan", value: 1L, title: "击杀 Leviathan"}]
+			rewards: [{id: "8D1F6F8B4000000D", type: "xp", xp: 350}]
+		}
+		{
+			id: "8D1F6F8B2000000D"
+			title: "讨伐链·浮空浩劫 Hindenburg"
+			subtitle: "Calamity 讨伐链 8/9"
+			description: ["会飞的天灾——带上够长的弓和够硬的胆。"]
+			x: 18.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["8D1F6F8B2000000C"]
+			tasks: [{id: "8D1F6F8B3000000E", type: "kill", entity: "spore:hindenburg", value: 1L, title: "击杀 Hindenburg"}]
+			rewards: [{id: "8D1F6F8B4000000E", type: "xp", xp: 400}]
+		}
+		{
+			id: "8D1F6F8B2000000E"
+			title: "讨伐链·腐朽化身 Verfall"
+			subtitle: "Calamity 讨伐链 9/9"
+			description: ["名单上最后一个名字——腐朽的尽头，就在这一战。"]
+			x: 19.5d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: ["8D1F6F8B2000000D"]
+			tasks: [{id: "8D1F6F8B3000000F", type: "kill", entity: "spore:verfall", value: 1L, title: "击杀 Verfall"}]
+			rewards: [
+				{id: "8D1F6F8B4000000F", type: "xp", xp: 500},
+				{id: "8D1F6F8B40000010", type: "item", item: {id: "minecraft:nether_star", Count: 1b}}
+			]
+		}
+		{
+			id: "8D1F6F8B2000000F"
+			title: "以共生对寄生"
+			subtitle: "终局合成链"
+			description: ["上交 4 枚淬火钢坯，铸出深渊锭——用羁绊的产物，终结寄生的瘟疫。"]
+			x: 21.0d
+			y: 0.0d
+			shape: "hexagon"
+			dependencies: ["8D1F6F8B2000000E"]
+			tasks: [{id: "8D1F6F8B30000010", type: "item", item: {id: "kubejs:tempered_steel_billet", Count: 4b}}]
+			rewards: [
+				{id: "8D1F6F8B40000011", type: "item", item: {id: "kubejs:abyss_ingot", Count: 1b}},
+				{id: "8D1F6F8B40000012", type: "command", command: "/gamestage add @p stage5_endgame"}
+			]
+		}
+	]
+}

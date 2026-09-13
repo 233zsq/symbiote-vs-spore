@@ -1,0 +1,89 @@
+{
+	default_hide_dependency_lines: false
+	filename: "exploration"
+	group: "0B00AA11CC22DD66"
+	icon: "minecraft:compass"
+	id: "9E2F7F9C10000001"
+	order_index: 0
+	title: "探索里程碑"
+	quests: [
+		{
+			id: "9E2F7F9C20000001"
+			title: "湖对岸的深色森林"
+			subtitle: "勘察·壹"
+			description: ["出生点环顾四周——那片隔着湖的黑压压深色橡木林，就是第一站。", "人工核实：抵达深色森林边缘。"]
+			x: 0.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: []
+			tasks: [{id: "9E2F7F9C30000001", type: "checkmark", title: "找到深色橡木森林"}]
+			rewards: [{id: "9E2F7F9C40000001", type: "item", item: {id: "waystones:warp_scroll", Count: 2b}}]
+		}
+		{
+			id: "9E2F7F9C20000002"
+			title: "地下有歌声"
+			subtitle: "勘察·贰"
+			description: ["洞穴深处若有矿车轨道与木支架的吱呀声，循声而下。", "人工核实：找到 YUNG 大型矿井（结构 ID 待核实）。"]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["9E2F7F9C20000001"]
+			tasks: [{id: "9E2F7F9C30000002", type: "checkmark", title: "找到一座大型废弃矿井"}]
+			rewards: [{id: "9E2F7F9C40000002", type: "item", item: {id: "waystones:waystone", Count: 1b}}]
+		}
+		{
+			id: "9E2F7F9C20000003"
+			title: "海图之外"
+			subtitle: "勘察·叁"
+			description: ["造条船一路远航，直到手里的地图再也画不出新的海岸线。"]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["9E2F7F9C20000002"]
+			tasks: [{id: "9E2F7F9C30000003", type: "checkmark", title: "航行至地图边缘之外"}]
+			rewards: [{id: "9E2F7F9C40000003", type: "item", item: {id: "waystones:return_scroll", Count: 2b}}]
+		}
+		{
+			id: "9E2F7F9C20000004"
+			title: "异界的轮廓"
+			subtitle: "勘察·肆"
+			description: ["在林间空地以 2×2 水池围满鲜花，向池心投一颗钻石——紫光亮起处，就是异界的入口。"]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["9E2F7F9C20000003"]
+			tasks: [{id: "9E2F7F9C30000004", type: "checkmark", title: "唤开暮色森林之门"}]
+			rewards: [{id: "9E2F7F9C40000004", type: "item", item: {id: "waystones:bound_scroll", Count: 1b}}]
+		}
+		{
+			id: "9E2F7F9C20000005"
+			title: "建厨房"
+			subtitle: "补给支线"
+			description: ["冒险家也要吃饭——上交一口烹饪锅，把营地的灶台支起来。"]
+			x: 1.5d
+			y: 1.5d
+			shape: "square"
+			dependencies: ["9E2F7F9C20000001"]
+			tasks: [{id: "9E2F7F9C30000005", type: "item", item: {id: "farmersdelight:cooking_pot", Count: 1b}}]
+			rewards: [
+				{id: "9E2F7F9C40000005", type: "item", item: {id: "farmersdelight:skillet", Count: 1b}},
+				{id: "9E2F7F9C40000006", type: "xp", xp: 50}
+			]
+		}
+		{
+			id: "9E2F7F9C20000006"
+			title: "备粮"
+			subtitle: ""
+			description: ["远征前囤足 16 块熟牛排——饿着肚子的勇者活不过第一章。"]
+			x: 3.0d
+			y: 1.5d
+			shape: "square"
+			dependencies: ["9E2F7F9C20000005"]
+			tasks: [{id: "9E2F7F9C30000006", type: "item", item: {id: "minecraft:cooked_beef", Count: 16b}}]
+			rewards: [
+				{id: "9E2F7F9C40000007", type: "item", item: {id: "minecraft:golden_apple", Count: 1b}},
+				{id: "9E2F7F9C40000008", type: "xp", xp: 50}
+			]
+		}
+	]
+}

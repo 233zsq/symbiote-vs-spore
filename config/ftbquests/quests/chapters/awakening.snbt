@@ -1,0 +1,207 @@
+{
+	default_hide_dependency_lines: false
+	filename: "awakening"
+	group: "0B00AA11CC22DD33"
+	icon: "minecraft:iron_sword"
+	id: "A3F1C0DE00000001"
+	order_index: 0
+	title: "序章·觉醒"
+	quests: [
+		{
+			id: "A3F1C0DE10000001"
+			title: "切换战斗模式"
+			subtitle: "武道初启"
+			description: ["按下【鼠标侧键】，在普通与战斗模式间切换", "唯有战斗姿态，方能施展连段与技能"]
+			x: 0.0d
+			y: 0.0d
+			shape: "square"
+			dependencies: []
+			tasks: [{
+				id: "A3F1C0DE20000001"
+				type: "checkmark"
+				title: "完成姿态切换"
+			}]
+			rewards: [{
+				id: "A3F1C0DE30000001"
+				type: "xp"
+				xp: 10
+			}]
+		}
+		{
+			id: "A3F1C0DE10000002"
+			title: "轻重连段"
+			subtitle: "行云流水"
+			description: ["在战斗姿态下交替施展轻击与重击", "衔接出一套完整的连招"]
+			x: 1.5d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE10000001"]
+			tasks: [{
+				id: "A3F1C0DE20000002"
+				type: "checkmark"
+				title: "打出一套连段"
+			}]
+			rewards: [{
+				id: "A3F1C0DE30000002"
+				type: "xp"
+				xp: 15
+			}]
+		}
+		{
+			id: "A3F1C0DE10000003"
+			title: "闪避"
+			subtitle: "残影一步"
+			description: ["按下【左Alt】向移动方向闪避", "在刀锋落下之前，抢出半步生机"]
+			x: 3.0d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE10000002"]
+			tasks: [{
+				id: "A3F1C0DE20000003"
+				type: "checkmark"
+				title: "完成一次闪避"
+			}]
+			rewards: [{
+				id: "A3F1C0DE30000003"
+				type: "xp"
+				xp: 15
+			}]
+		}
+		{
+			id: "A3F1C0DE10000004"
+			title: "格挡"
+			subtitle: "铁壁"
+			description: ["按住【右键】格挡来袭的攻击", "招架的瞬间，便是反击的空隙"]
+			x: 4.5d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE10000003"]
+			tasks: [{
+				id: "A3F1C0DE20000004"
+				type: "checkmark"
+				title: "完成一次格挡"
+			}]
+			rewards: [{
+				id: "A3F1C0DE30000004"
+				type: "item"
+				item: {id: "minecraft:shield", Count: 1b}
+			}]
+		}
+		{
+			id: "A3F1C0DE10000005"
+			title: "锁定"
+			subtitle: "猎手之眼"
+			description: ["按下【G】锁定面前的敌人", "视角将紧盯目标，绝不轻易脱战"]
+			x: 6.0d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE10000004"]
+			tasks: [{
+				id: "A3F1C0DE20000005"
+				type: "checkmark"
+				title: "锁定一名敌人"
+			}]
+			rewards: [{
+				id: "A3F1C0DE30000005"
+				type: "xp"
+				xp: 15
+			}]
+		}
+		{
+			id: "A3F1C0DE10000006"
+			title: "技能编辑器"
+			subtitle: "百兵谱"
+			description: ["按下【K】打开技能编辑器", "将习得的武技装配到武器的槽位之中"]
+			x: 7.5d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE10000005"]
+			tasks: [{
+				id: "A3F1C0DE20000006"
+				type: "checkmark"
+				title: "装配一项武技"
+			}]
+			rewards: [{
+				id: "A3F1C0DE30000006"
+				type: "item"
+				item: {id: "kubejs:refined_iron_ingot", Count: 2b}
+			}]
+		}
+		{
+			id: "A3F1C0DE10000007"
+			title: "觉醒之礼：起始武器·铁剑"
+			subtitle: "序章馈赠"
+			description: ["提交信物【精炼铁锭】×1，领取起始武器·铁剑", "以铁之刃，斩开命运之路"]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000006"]
+			tasks: [{
+				id: "A3F1C0DE20000007"
+				type: "item"
+				item: {id: "kubejs:refined_iron_ingot", Count: 1b}
+			}]
+			rewards: [{
+				id: "A3F1C0DE30000007"
+				type: "item"
+				item: {id: "minecraft:iron_sword", Count: 1b}
+			}]
+		}
+		{
+			id: "A3F1C0DE10000008"
+			title: "小试牛刀"
+			subtitle: "初阵"
+			description: ["持新铸的铁剑，击杀 5 只僵尸", "让不安分的亡者重归安息"]
+			x: 10.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000007"]
+			tasks: [{
+				id: "A3F1C0DE20000008"
+				type: "kill"
+				entity: "minecraft:zombie"
+				value: 5L
+				title: "击杀僵尸×5"
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE30000008"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "A3F1C0DE30000009"
+					type: "item"
+					item: {id: "minecraft:cooked_beef", Count: 4b}
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE10000009"
+			title: "整装待发"
+			subtitle: "序章·终"
+			description: ["六项武技尽数掌握，武器行囊俱已齐备", "确认上方试炼全部完成后，手动勾选并启程"]
+			x: 12.0d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: ["A3F1C0DE10000001", "A3F1C0DE10000002", "A3F1C0DE10000003", "A3F1C0DE10000004", "A3F1C0DE10000005", "A3F1C0DE10000006", "A3F1C0DE10000007", "A3F1C0DE10000008"]
+			tasks: [{
+				id: "A3F1C0DE20000009"
+				type: "checkmark"
+				title: "序章试炼全数完成"
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE3000000A"
+					type: "command"
+					command: "/gamestage add @p stage1_departure"
+				}
+				{
+					id: "A3F1C0DE3000000B"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+		}
+	]
+}

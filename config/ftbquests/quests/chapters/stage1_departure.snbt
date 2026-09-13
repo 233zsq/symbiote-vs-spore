@@ -1,0 +1,192 @@
+{
+	default_hide_dependency_lines: false
+	filename: "stage1_departure"
+	group: "0B00AA11CC22DD33"
+	icon: "minecraft:torch"
+	id: "A3F1C0DE00000002"
+	order_index: 1
+	title: "Ⅰ·启程"
+	quests: [
+		{
+			id: "A3F1C0DE1000000A"
+			title: "深入第一座地牢"
+			subtitle: "地下回响"
+			description: ["完成序章「觉醒」后开放本章", "深入地牢，清剿 20 只盘踞的亡者", "注：YUNG 系地牢头目 ID 未核实，暂以清剿占位，实测后替换"]
+			x: 0.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: []
+			tasks: [{
+				id: "A3F1C0DE2000000A"
+				type: "kill"
+				entity: "minecraft:zombie"
+				value: 20L
+				title: "击杀僵尸×20"
+			}]
+			rewards: [{
+				id: "A3F1C0DE3000000C"
+				type: "xp"
+				xp: 100
+			}]
+		}
+		{
+			id: "A3F1C0DE1000000B"
+			title: "铁之军备"
+			subtitle: "军备线·其一"
+			description: ["收集并提交 32 个铁锭", "盔甲与刀剑，皆始于铁"]
+			x: 1.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000000A"]
+			tasks: [{
+				id: "A3F1C0DE2000000B"
+				type: "item"
+				item: {id: "minecraft:iron_ingot", Count: 32b}
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE3000000D"
+					type: "item"
+					item: {id: "kubejs:refined_iron_ingot", Count: 1b}
+				}
+				{
+					id: "A3F1C0DE3000000E"
+					type: "xp"
+					xp: 50
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE1000000C"
+			title: "精炼淬火"
+			subtitle: "军备线·其二"
+			description: ["提交 8 个精炼铁锭", "百炼成钢，军备自此升阶"]
+			x: 3.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000000B"]
+			tasks: [{
+				id: "A3F1C0DE2000000C"
+				type: "item"
+				item: {id: "kubejs:refined_iron_ingot", Count: 8b}
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE3000000F"
+					type: "item"
+					item: {id: "minecraft:diamond", Count: 2b}
+				}
+				{
+					id: "A3F1C0DE30000010"
+					type: "xp"
+					xp: 75
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE1000000D"
+			title: "拆弹专家"
+			subtitle: "军备线·其三"
+			description: ["击杀 10 只苦力怕", "在爆炸吞没你的心血之前，终结它们"]
+			x: 4.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000000C"]
+			tasks: [{
+				id: "A3F1C0DE2000000D"
+				type: "kill"
+				entity: "minecraft:creeper"
+				value: 10L
+				title: "击杀苦力怕×10"
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE30000011"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "A3F1C0DE30000012"
+					type: "item"
+					item: {id: "minecraft:obsidian", Count: 8b}
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE1000000E"
+			title: "首件收藏"
+			subtitle: "收藏线·其一"
+			description: ["获得你的第一件动作武器收藏", "人工核实：确认收藏武器已入包并记录获取途径后勾选"]
+			x: 1.5d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000000A"]
+			tasks: [{
+				id: "A3F1C0DE2000000E"
+				type: "checkmark"
+				title: "获得首件收藏武器"
+			}]
+			rewards: [{
+				id: "A3F1C0DE30000013"
+				type: "xp"
+				xp: 75
+			}]
+		}
+		{
+			id: "A3F1C0DE1000000F"
+			title: "连段精通"
+			subtitle: "收藏线·其二"
+			description: ["以收藏武器在实战中打出一套完整连段", "人工核实：确认连段完整衔接后勾选"]
+			x: 3.0d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000000E"]
+			tasks: [{
+				id: "A3F1C0DE2000000F"
+				type: "checkmark"
+				title: "完成一次完整连段"
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE30000014"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "A3F1C0DE30000015"
+					type: "item"
+					item: {id: "kubejs:refined_iron_ingot", Count: 1b}
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE10000010"
+			title: "白骨精锐"
+			subtitle: "收藏线·其三"
+			description: ["击杀 15 具骷髅（精英战占位）", "注：精英战配置待实测后替换"]
+			x: 4.5d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000000F"]
+			tasks: [{
+				id: "A3F1C0DE20000010"
+				type: "kill"
+				entity: "minecraft:skeleton"
+				value: 15L
+				title: "击杀骷髅×15"
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE30000016"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "A3F1C0DE30000017"
+					type: "item"
+					item: {id: "kubejs:broken_hero_blade", Count: 1b}
+				}
+			]
+		}
+	]
+}

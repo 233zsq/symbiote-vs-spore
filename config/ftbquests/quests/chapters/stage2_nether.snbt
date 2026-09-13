@@ -1,0 +1,262 @@
+{
+	default_hide_dependency_lines: false
+	filename: "stage2_nether"
+	group: "0B00AA11CC22DD33"
+	icon: "minecraft:blaze_rod"
+	id: "A3F1C0DE00000003"
+	order_index: 2
+	title: "Ⅱ·深入下界"
+	quests: [
+		{
+			id: "A3F1C0DE10000011"
+			title: "第一次踏上下界"
+			subtitle: "Ⅱ·入口"
+			description: ["完成「Ⅰ·启程」后，踏入下界传送门", "恶土的征途，自此开始"]
+			x: 0.0d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: []
+			tasks: [{
+				id: "A3F1C0DE20000011"
+				type: "advancement"
+				advancement: "minecraft:nether/enter_the_nether"
+			}]
+			rewards: [{
+				id: "A3F1C0DE30000018"
+				type: "command"
+				command: "/gamestage add @p stage2_nether"
+			}]
+		}
+		{
+			id: "A3F1C0DE10000012"
+			title: "下界要塞·头目战"
+			subtitle: "烈焰要塞"
+			description: ["攻入下界要塞，讨伐盘踞的守军", "击杀凋灵骷髅×8 与烈焰人×10（头目战占位，实测后替换）"]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000011"]
+			tasks: [
+				{
+					id: "A3F1C0DE20000012"
+					type: "kill"
+					entity: "minecraft:wither_skeleton"
+					value: 8L
+					title: "击杀凋灵骷髅×8"
+				}
+				{
+					id: "A3F1C0DE20000013"
+					type: "kill"
+					entity: "minecraft:blaze"
+					value: 10L
+					title: "击杀烈焰人×10"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0DE30000019"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "A3F1C0DE3000001A"
+					type: "item"
+					item: {id: "minecraft:netherite_scrap", Count: 1b}
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE10000013"
+			title: "驯服圣龙"
+			subtitle: "御风而行"
+			description: ["驯服你的第一头圣龙（Saint's Dragons）", "圣龙仅限赶路代步，严禁参战", "人工核实：模组尚处 Alpha，注意存档风险，驯服后勾选"]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000012"]
+			tasks: [{
+				id: "A3F1C0DE20000014"
+				type: "checkmark"
+				title: "驯服一头圣龙"
+			}]
+			rewards: [{
+				id: "A3F1C0DE3000001B"
+				type: "xp"
+				xp: 100
+			}]
+		}
+		{
+			id: "A3F1C0DE10000014"
+			title: "烈焰之证"
+			subtitle: "御剑线·其一"
+			description: ["提交 4 根烈焰棒，领取御剑技能书", "注：技能书暂无对应物品，以勾选占位，领取途径人工核实"]
+			x: 4.5d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000013"]
+			tasks: [
+				{
+					id: "A3F1C0DE20000015"
+					type: "item"
+					item: {id: "minecraft:blaze_rod", Count: 4b}
+				}
+				{
+					id: "A3F1C0DE20000016"
+					type: "checkmark"
+					title: "领取御剑技能书"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0DE3000001C"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "A3F1C0DE3000001D"
+					type: "item"
+					item: {id: "kubejs:refined_iron_ingot", Count: 2b}
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE10000015"
+			title: "剑气成阵"
+			subtitle: "御剑线·其二"
+			description: ["施展剑气，凝剑成阵", "人工核实：确认技能效果实际生效后勾选"]
+			x: 6.0d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000014"]
+			tasks: [{
+				id: "A3F1C0DE20000017"
+				type: "checkmark"
+				title: "施展剑气成阵"
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE3000001E"
+					type: "xp"
+					xp: 125
+				}
+				{
+					id: "A3F1C0DE3000001F"
+					type: "item"
+					item: {id: "kubejs:tempered_steel_billet", Count: 2b}
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE10000016"
+			title: "蛮兵之役"
+			subtitle: "御剑线·其三"
+			description: ["击杀 5 名猪灵蛮兵", "黄金与残骸的守卫者，绝非善茬"]
+			x: 7.5d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000015"]
+			tasks: [{
+				id: "A3F1C0DE20000018"
+				type: "kill"
+				entity: "minecraft:piglin_brute"
+				value: 5L
+				title: "击杀猪灵蛮兵×5"
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE30000020"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "A3F1C0DE30000021"
+					type: "item"
+					item: {id: "minecraft:golden_apple", Count: 2b}
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE10000017"
+			title: "凋灵之首"
+			subtitle: "装备线·其一"
+			description: ["提交 1 个凋灵骷髅头颅", "既是召唤凋灵的钥匙，也是精锐的证明"]
+			x: 4.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000013"]
+			tasks: [{
+				id: "A3F1C0DE20000019"
+				type: "item"
+				item: {id: "minecraft:wither_skeleton_skull", Count: 1b}
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE30000022"
+					type: "xp"
+					xp: 100
+				}
+				{
+					id: "A3F1C0DE30000023"
+					type: "item"
+					item: {id: "minecraft:ghast_tear", Count: 2b}
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE10000018"
+			title: "远古残骸"
+			subtitle: "装备线·其二"
+			description: ["提交 2 块下界合金碎片", "深入废墟，取回下界最坚硬的馈赠"]
+			x: 6.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000017"]
+			tasks: [{
+				id: "A3F1C0DE2000001A"
+				type: "item"
+				item: {id: "minecraft:netherite_scrap", Count: 2b}
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE30000024"
+					type: "xp"
+					xp: 125
+				}
+				{
+					id: "A3F1C0DE30000025"
+					type: "item"
+					item: {id: "minecraft:diamond", Count: 3b}
+				}
+			]
+		}
+		{
+			id: "A3F1C0DE10000019"
+			title: "虚空行者"
+			subtitle: "装备线·其三"
+			description: ["击杀 10 只末影人", "它们凝视虚空，而你凝视它们"]
+			x: 7.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000018"]
+			tasks: [{
+				id: "A3F1C0DE2000001B"
+				type: "kill"
+				entity: "minecraft:enderman"
+				value: 10L
+				title: "击杀末影人×10"
+			}]
+			rewards: [
+				{
+					id: "A3F1C0DE30000026"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "A3F1C0DE30000027"
+					type: "item"
+					item: {id: "minecraft:ender_pearl", Count: 4b}
+				}
+			]
+		}
+	]
+}

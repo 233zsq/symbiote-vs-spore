@@ -1,0 +1,239 @@
+{
+	default_hide_dependency_lines: false
+	filename: "stage3_twilight"
+	group: "0B00AA11CC22DD33"
+	icon: "twilightforest:ironwood_ingot"
+	id: "A3F1C0DE00000004"
+	order_index: 3
+	title: "Ⅲ·暮色森林"
+	quests: [
+		{
+			id: "A3F1C0DE1000001A"
+			title: "击败凋灵"
+			subtitle: "Ⅲ·入口"
+			description: ["击败凋灵，夺取下界之星，", "暮色森林的大门将为你敞开。"]
+			x: 0.0d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: []
+			tasks: [{id: "A3F1C0DE2000001C", type: "kill", entity: "minecraft:wither", value: 1L, title: "击杀凋灵"}]
+			rewards: [{id: "A3F1C0DE30000028", type: "command", command: "/gamestage add @p stage3_twilight"}]
+		}
+		{
+			id: "A3F1C0DE1000001B"
+			title: "讨伐链·娜迦 Naga"
+			subtitle: "暮色讨伐链 1/8"
+			description: ["巨蛇盘踞在暮色大厅的深处，", "斩下它的头颅，证明你的资格。"]
+			x: 1.5d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE1000001A"]
+			tasks: [{id: "A3F1C0DE2000001D", type: "kill", entity: "twilightforest:naga", value: 1L, title: "击杀娜迦"}]
+			rewards: [{id: "A3F1C0DE30000029", type: "xp", xp: 150}]
+		}
+		{
+			id: "A3F1C0DE1000001C"
+			title: "讨伐链·巫妖 Lich"
+			subtitle: "暮色讨伐链 2/8"
+			description: ["高塔之上的巫妖王不会轻易交出权杖，", "击碎它的护盾与傲慢。"]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000001B"]
+			tasks: [{id: "A3F1C0DE2000001E", type: "kill", entity: "twilightforest:lich", value: 1L, title: "击杀巫妖"}]
+			rewards: [{id: "A3F1C0DE3000002A", type: "xp", xp: 200}]
+		}
+		{
+			id: "A3F1C0DE1000001D"
+			title: "讨伐链·米诺菇 Minoshroom"
+			subtitle: "暮色讨伐链 3/8"
+			description: ["迷宫的牛头人守护着深层的秘密，", "用你的剑劈开它的防御。"]
+			x: 4.5d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE1000001C"]
+			tasks: [{id: "A3F1C0DE2000001F", type: "kill", entity: "twilightforest:minoshroom", value: 1L, title: "击杀米诺菇"}]
+			rewards: [{id: "A3F1C0DE3000002B", type: "xp", xp: 200}]
+		}
+		{
+			id: "A3F1C0DE1000001E"
+			title: "讨伐链·九头蛇 Hydra"
+			subtitle: "暮色讨伐链 4/8"
+			description: ["九头蛇的再生快得惊人，", "斩首的速度要快过它长头的速度。"]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000001D"]
+			tasks: [{id: "A3F1C0DE20000020", type: "kill", entity: "twilightforest:hydra", value: 1L, title: "击杀九头蛇"}]
+			rewards: [{id: "A3F1C0DE3000002C", type: "xp", xp: 250}]
+		}
+		{
+			id: "A3F1C0DE1000001F"
+			title: "讨伐链·幻影骑士 Knight Phantom"
+			subtitle: "暮色讨伐链 5/8"
+			description: ["幻影骑士徘徊于地下要塞，", "它手中的剑渴望着你的鲜血。"]
+			x: 7.5d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE1000001E"]
+			tasks: [{id: "A3F1C0DE20000021", type: "kill", entity: "twilightforest:knight_phantom", value: 1L, title: "击杀幻影骑士"}]
+			rewards: [{id: "A3F1C0DE3000002D", type: "xp", xp: 250}]
+		}
+		{
+			id: "A3F1C0DE10000020"
+			title: "讨伐链·乌尔伽斯特 Ur-Ghast"
+			subtitle: "暮色讨伐链 6/8"
+			description: ["高塔顶端的恶魂之王，", "用烈焰与尖啸碾碎一切入侵者。"]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000001F"]
+			tasks: [{id: "A3F1C0DE20000022", type: "kill", entity: "twilightforest:ur_ghast", value: 1L, title: "击杀乌尔伽斯特"}]
+			rewards: [{id: "A3F1C0DE3000002E", type: "xp", xp: 300}]
+		}
+		{
+			id: "A3F1C0DE10000021"
+			title: "讨伐链·雪怪首领 Alpha Yeti"
+			subtitle: "暮色讨伐链 7/8"
+			description: ["雪原深处的雪怪首领，", "它的咆哮足以引发雪崩。"]
+			x: 10.5d
+			y: 0.0d
+			shape: "square"
+			dependencies: ["A3F1C0DE10000020"]
+			tasks: [{id: "A3F1C0DE20000023", type: "kill", entity: "twilightforest:alpha_yeti", value: 1L, title: "击杀雪怪首领"}]
+			rewards: [{id: "A3F1C0DE3000002F", type: "xp", xp: 300}]
+		}
+		{
+			id: "A3F1C0DE10000022"
+			title: "讨伐链·冰雪女王 Snow Queen"
+			subtitle: "暮色讨伐链 8/8"
+			description: ["冰雪王座上的女王统治着永冬，", "用炽热终结这场冰雪的统治。"]
+			x: 12.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000021"]
+			tasks: [{id: "A3F1C0DE20000024", type: "kill", entity: "twilightforest:snow_queen", value: 1L, title: "击杀冰雪女王"}]
+			rewards: [{id: "A3F1C0DE30000030", type: "xp", xp: 350}]
+		}
+		{
+			id: "A3F1C0DE10000023"
+			title: "铁木武装"
+			subtitle: "暮色武器线·其一"
+			description: ["提交 8 个铁木锭，", "换取暮色工匠的认可。"]
+			x: 1.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000001B"]
+			tasks: [{id: "A3F1C0DE20000025", type: "item", item: {id: "twilightforest:ironwood_ingot", Count: 8b}}]
+			rewards: [{id: "A3F1C0DE30000031", type: "xp", xp: 100}]
+		}
+		{
+			id: "A3F1C0DE10000024"
+			title: "钢叶与骑士之证"
+			subtitle: "暮色武器线·其二"
+			description: ["提交 4 个钢叶锭与 2 个骑士金属锭，", "集齐两派的锻造精华。"]
+			x: 3.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000023", "A3F1C0DE1000001C"]
+			tasks: [
+				{id: "A3F1C0DE20000026", type: "item", item: {id: "twilightforest:steeleaf_ingot", Count: 4b}}
+				{id: "A3F1C0DE20000027", type: "item", item: {id: "twilightforest:knightmetal_ingot", Count: 2b}}
+			]
+			rewards: [{id: "A3F1C0DE30000032", type: "xp", xp: 150}]
+		}
+		{
+			id: "A3F1C0DE10000025"
+			title: "炽焰武装"
+			subtitle: "暮色武器线·其三"
+			description: ["提交 4 个炽热锭，", "只有烈焰才能淬炼出至强之刃。"]
+			x: 6.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000024", "A3F1C0DE1000001E"]
+			tasks: [{id: "A3F1C0DE20000028", type: "item", item: {id: "twilightforest:fiery_ingot", Count: 4b}}]
+			rewards: [{id: "A3F1C0DE30000033", type: "xp", xp: 200}]
+		}
+		{
+			id: "A3F1C0DE10000026"
+			title: "锻造的原料"
+			subtitle: "主线锻造·其一"
+			description: ["收集 2 个恶魂之泪与 1 个下界之星，", "它们是钢坯锻造的核心素材。"]
+			x: 0.0d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000001A"]
+			tasks: [
+				{id: "A3F1C0DE20000029", type: "item", item: {id: "minecraft:ghast_tear", Count: 2b}}
+				{id: "A3F1C0DE2000002A", type: "item", item: {id: "minecraft:nether_star", Count: 1b}}
+			]
+			rewards: [{id: "A3F1C0DE30000034", type: "xp", xp: 150}]
+		}
+		{
+			id: "A3F1C0DE10000027"
+			title: "回火钢坯"
+			subtitle: "主线锻造·其二"
+			description: ["将恶魂之泪与下界之星交给铁匠，", "炼成 4 个回火钢坯。"]
+			x: 1.5d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000026"]
+			tasks: [
+				{id: "A3F1C0DE2000002B", type: "item", item: {id: "minecraft:ghast_tear", Count: 2b}}
+				{id: "A3F1C0DE2000002C", type: "item", item: {id: "minecraft:nether_star", Count: 1b}}
+			]
+			rewards: [
+				{id: "A3F1C0DE30000035", type: "xp", xp: 150}
+				{id: "A3F1C0DE30000036", type: "item", item: {id: "kubejs:tempered_steel_billet", Count: 4b}}
+			]
+		}
+		{
+			id: "A3F1C0DE10000028"
+			title: "钢坯储备"
+			subtitle: "主线锻造·其三"
+			description: ["攒够 8 个回火钢坯，", "为下一阶段的锻造做好储备。"]
+			x: 3.0d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000027"]
+			tasks: [{id: "A3F1C0DE2000002D", type: "item", item: {id: "kubejs:tempered_steel_billet", Count: 8b}}]
+			rewards: [{id: "A3F1C0DE30000037", type: "xp", xp: 200}]
+		}
+		{
+			id: "A3F1C0DE10000029"
+			title: "冶炼炉建成"
+			subtitle: "匠魂线·其一"
+			description: ["建成你的第一座冶炼炉，", "熔融金属的轰鸣将拉开匠魂的序幕。"]
+			x: 0.0d
+			y: -3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000001A"]
+			tasks: [{id: "A3F1C0DE2000002E", type: "checkmark", title: "建成一座冶炼炉"}]
+			rewards: [{id: "A3F1C0DE30000038", type: "xp", xp: 100}]
+		}
+		{
+			id: "A3F1C0DE1000002A"
+			title: "玛玉灵的前奏"
+			subtitle: "匠魂线·其二"
+			description: ["提交 2 根烈焰棒，作为玛玉灵解锁的占位素材。", "人工核实：玛玉灵配方未核实，解锁后请对照 JEI 确认。"]
+			x: 1.5d
+			y: -3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE10000029"]
+			tasks: [{id: "A3F1C0DE2000002F", type: "item", item: {id: "minecraft:blaze_rod", Count: 2b}}]
+			rewards: [{id: "A3F1C0DE30000039", type: "xp", xp: 150}]
+		}
+		{
+			id: "A3F1C0DE1000002B"
+			title: "自由构筑挑战"
+			subtitle: "匠魂线·其三"
+			description: ["用你自己的构筑击杀 20 只苦力怕，", "证明你的武器不只是摆设。"]
+			x: 3.0d
+			y: -3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1000002A"]
+			tasks: [{id: "A3F1C0DE20000030", type: "kill", entity: "minecraft:creeper", value: 20L, title: "击杀苦力怕×20"}]
+			rewards: [{id: "A3F1C0DE3000003A", type: "xp", xp: 250}]
+		}
+	]
+}
