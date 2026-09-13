@@ -43,6 +43,16 @@ hash = "5ec0c37f3f4ad07a40c10376668bca80334ddb7ad2bab06eb4de8f7aac339c8e"
 metafile = true
 
 [[files]]
+file = "mods/epic-fight-invincible-lib.pw.toml"
+hash = "c826c180ac4e1c2c0577fcba79bd3f0ddd9854ce566f4e74244e4ebdf136e79d"
+metafile = true
+
+[[files]]
+file = "mods/epic-fight-sword-soaring.pw.toml"
+hash = "a652361a3ea39768f4b5b3db4ad2c7aa35f306552271ce123e75ab1b899be122"
+metafile = true
+
+[[files]]
 file = "mods/epic-fight.pw.toml"
 hash = "01ad46d3f76d8355935ccee7e9f364961b455e5d217692356d8f03e99b811f47"
 metafile = true

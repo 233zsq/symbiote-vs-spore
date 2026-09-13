@@ -1,0 +1,13 @@
+name = "Epic Fight - Invincible Lib"
+filename = "epic-fight-invincible-lib-20.14.8.2-mc1.20.1-forge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/cdaWrTra/versions/dDWp05UU/epic-fight-invincible-lib-20.14.8.2-mc1.20.1-forge.jar"
+hash-format = "sha512"
+hash = "ebb999382e8ed783830127f7c8bdc75b008c9cae504035fe2f86de35cd40789121dbb546c57bad822439d52a1cb98f3e098a0cf53d5f640c6d97106fc8dd3fc2"
+
+[update]
+[update.modrinth]
+mod-id = "cdaWrTra"
+version = "dDWp05UU"
