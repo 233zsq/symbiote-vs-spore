@@ -1,0 +1,10 @@
+ {
+    "type": "wom:solar",
+    "attributes": {
+        "common": {
+            "armor_negation": 20,
+                "impact": 4.4,
+            "max_strikes": 5
+        }
+    }
+ }

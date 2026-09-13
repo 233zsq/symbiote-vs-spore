@@ -1,0 +1,68 @@
+{
+	"category": "dagger",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_small",
+	"styles": {
+		"cases": [
+			{
+				"conditions": [
+					{
+						"predicate": "epicfight:offhand_item_category",
+						"category": "dagger"
+					}
+				],
+				"style": "two_hand"
+			}
+		],
+		"default": "one_hand"
+	},
+	"offhand_item_compatible_predicate": [
+		{
+			"predicate": "epicfight:offhand_item_category",
+			"category": "dagger"
+		}
+	],
+	"collider": {
+		"number": 3,
+		"size": [0.4, 0.4, 0.6],
+		"center": [0.0, 0.0, -0.1]
+	},
+	"combos": {
+		"one_hand": [
+			"epicfight:biped/combat/dagger_auto1",
+			"epicfight:biped/combat/dagger_auto2",
+			"epicfight:biped/combat/dagger_auto3",
+			"epicfight:biped/combat/dagger_dash",
+			"epicfight:biped/combat/dagger_airslash"
+		],
+		"two_hand": [
+			"epicfight:biped/combat/dagger_dual_auto1",
+			"epicfight:biped/combat/dagger_dual_auto2",
+			"epicfight:biped/combat/dagger_dual_auto3",
+			"epicfight:biped/combat/dagger_dual_auto4",
+			"epicfight:biped/combat/dagger_dual_dash",
+			"epicfight:biped/combat/dagger_dual_airslash"
+		],
+		"mount": [
+			"epicfight:biped/combat/sword_mount_attack"
+		]
+	},
+	"innate_skills": {
+		"one_hand": "epicfight:eviscerate",
+		"two_hand": "epicfight:blade_rush"
+	},
+	"livingmotion_modifier": {
+		"two_hand": {
+			"idle": "epicfight:biped/living/hold_dual_weapon",
+			"kneel": "epicfight:biped/living/hold_dual_weapon",
+			"walk": "epicfight:biped/living/hold_dual_weapon",
+			"chase": "epicfight:biped/living/hold_dual_weapon",
+			"run": "epicfight:biped/living/run_dual",
+			"sneak": "epicfight:biped/living/hold_dual_weapon",
+			"swim": "epicfight:biped/living/hold_dual_weapon",
+			"float": "epicfight:biped/living/hold_dual_weapon",
+			"fall": "epicfight:biped/living/hold_dual_weapon"
+		}
+	}
+}

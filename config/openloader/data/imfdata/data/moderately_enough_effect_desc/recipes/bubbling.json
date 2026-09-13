@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "enlightened_end:bubbling",
+  "providers": [
+    {
+      "item": "enlightened_end:bubble_jelly_bottle"
+    }
+  ]
+}

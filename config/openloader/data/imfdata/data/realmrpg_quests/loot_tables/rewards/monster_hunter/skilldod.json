@@ -1,0 +1,90 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"epicfight:step\"}" 
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"wom:punishment_kick\"}" 
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"wom:ender_step\"}" 
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"wom:ender_obscuris\"}" 
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"wom:dodge_master\"}" 
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"wom:precise_roll\"}" 
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"wom:bull_charge\"}" 
+            }
+          ]
+        }
+
+
+      ]
+    }
+  ],
+  "random_sequence": "realmrpg_quests:rewards/skilldod"
+}

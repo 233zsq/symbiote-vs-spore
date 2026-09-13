@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "realmrpg_quests:headless_skeletons",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1224320461,
+    "exclusion_zone": {
+      "other_set": "minecraft:nether_complexes",
+      "chunk_count": 3
+    },
+    "spacing": 38,
+    "separation": 34
+  }
+}

@@ -1,0 +1,86 @@
+{
+	"category": "dagger",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_small",
+	"styles":
+	{
+		"cases":
+		[
+			{
+				 "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "dagger"
+          }
+        ],		
+				"style": "two_hand"
+			}
+		],
+		"default": "one_hand"
+	},
+	  "offhand_item_compatible_predicate": [
+    {
+      "predicate": "epicfight:offhand_item_category",
+      "category": "dagger"
+    }
+  ],					
+	"collider":							
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 0.8]
+    },
+    "combos":
+    {
+    	"one_hand":
+    	[
+			"epicfightx:biped/combat/dagger_auto1",
+			"epicfightx:biped/combat/dagger_auto2",
+			"epicfightx:biped/combat/dagger_auto3",
+			"epicfightx:biped/combat/dagger_auto4",
+			"epicfightx:biped/combat/dagger_auto5",
+			"epicfightx:biped/combat/dagger_dash",
+			"wom:biped/combat/moonless_crescent"
+    	],								
+    	"two_hand":		
+    	[
+			"epicfightx:biped/combat/dagger_dual_auto1",
+			"epicfightx:biped/combat/dagger_dual_auto2",
+			"epicfightx:biped/combat/dagger_dual_auto3",
+			"epicfightx:biped/combat/dagger_dual_auto4",
+			"epicfightx:biped/combat/dagger_dual_auto5",
+			"wom:biped/combat/nova_attack_3",
+			"wom:biped/combat/nova_attack_airslash"
+    	],
+    	"mount":
+    	[
+    		"epicfight:biped/combat/sword_mount_attack"
+    	]
+    },
+    "innate_skills":
+    {
+    	"one_hand": "epicfightx:eviscerate",
+    	"two_hand": "epicfightx:dancing_edge"
+    },
+    "livingmotion_modifier": {
+    	"one_hand":
+    	{
+    		"idle": "wom:biped/living/ruine_boosted_idle",
+    		"walk": "wom:biped/living/ruine_boosted_walk",
+		"run": "epicfightx:biped/living/run_onehand_light"
+    	},
+    	"two_hand":
+    	{
+    		"block": "epicfight:biped/skill/guard_dualsword",
+    		"idle": "wom:biped/living/ruine_boosted_idle",
+    		"walk": "wom:biped/living/ruine_boosted_walk",
+    		"kneel": "epicfight:biped/living/hold_dual",		
+    		"run": "epicfight:biped/living/run_dual",
+    		"sneak": "epicfight:biped/living/hold_dual",
+    		"swim": "epicfight:biped/living/hold_dual",
+    		"float": "epicfight:biped/living/hold_dual",
+    		"fall": "epicfight:biped/living/hold_dual"
+    	}
+    }
+}

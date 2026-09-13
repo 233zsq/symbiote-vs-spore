@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " CC",
+    "BXC",
+    "AB "
+  ],
+  "key": {
+    "A": {
+      "item": "epicfight:netherite_longsword"
+    },
+    "B": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "minecraft:blaze_powder"
+    },
+    "X": {
+      "item": "bosses_of_mass_destruction:blazing_eye"
+    }
+  },
+  "result": {
+    "item": "epicfight_awaken:rage_of_flame"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " CC",
+    "BXC",
+    "AB "
+  ],
+  "key": {
+    "A": {
+      "item": "epicfight:netherite_longsword"
+    },
+    "B": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "minecraft:diamond"
+    },
+    "X": {
+      "item": "mythical_weaponry:lightning_upgrade_template"
+    }
+  },
+  "result": {
+    "item": "epicfight_awaken:will_of_king"
+  }
+}

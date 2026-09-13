@@ -1,0 +1,10 @@
+{
+	"type": "cdmoveset:s_greatsword",
+	"attributes": {
+		"common": {
+			"armor_negation": 20,
+  			"impact": 5.0,
+			"max_strikes": 4
+		}
+	}
+}

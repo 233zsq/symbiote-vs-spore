@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "base": {
+        "item": "efn:hf_ingot"
+    },
+    "addition": {
+        "item" : "legendary_monsters:corrupted_soul"
+    },
+    "result": {
+        "item": "efn:hf_ingot_b"
+    },
+    "template": {
+      "item": "minecraft:diamond"
+    }
+}

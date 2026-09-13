@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 400,
+  "ingredient": {
+    "item": "cataclysm:infernal_forge"
+  },
+  "result": "fight_more:gems_nether"
+}

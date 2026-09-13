@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smithing_transform",
+
+    "addition": {
+        "item": "dungeons_and_combat:armor_plate"
+    },
+    "base": {
+        "item": "fantasy_armor:dark_cover_leggings"
+    },
+    "template": {
+        "item": "fantasy_armor:moon_crystal"
+    },
+    "result": {
+        "item": "fantasy_armor:sunset_wings_leggings"
+    }
+}

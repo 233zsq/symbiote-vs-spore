@@ -1,0 +1,54 @@
+{
+	"category": "crossbow",
+  "usable_in_offhand": true,
+	"hit_particle": "epicfight:entity.hit.blade",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_hard",
+	"styles":
+	{
+		"cases":
+		[
+			{
+				 "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "crossbow"
+          }
+        ],
+				"style": "two_hand"
+			}
+		],
+		"default": "one_hand"
+	},
+	  "offhand_item_compatible_predicate": [
+    {
+      "predicate": "epicfight:offhand_item_category",
+      "category": "crossbow"
+    }
+  ],
+	"collider":
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 1.8]
+    },
+    "combos":
+    {
+    	"two_hand":
+    	[
+
+
+    	]
+    	
+    },
+    "innate_skills":
+    {
+
+    },
+    "livingmotion_modifier": {
+    	"one_hand":
+    	{
+
+    	}
+    }
+}

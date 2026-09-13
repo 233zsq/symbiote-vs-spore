@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "tombstone:prayer",
+  "providers": [
+    {
+      "item": "tombstone:ankh_of_pray"
+    }
+  ]
+}

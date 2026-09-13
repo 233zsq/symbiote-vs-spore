@@ -1,0 +1,101 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "mcdw:axe_anchor",
+      "required": false
+    },
+    {
+      "id": "mcdw:axe_axe",
+      "required": false
+    },
+    {
+      "id": "mcdw:axe_encrusted_anchor",
+      "required": false
+    },
+    {
+      "id": "mcdw:axe_firebrand",
+      "required": false
+    },
+    {
+      "id": "mcdw:axe_highland",
+      "required": false
+    },
+    {
+      "id": "mcdw:axe_cursed",
+      "required": false
+    },
+    {
+      "id": "mcdw:axe_double",
+      "required": false
+    },
+    {
+      "id": "mcdw:axe_whirlwind",
+      "required": false
+    },
+    {
+      "id": "mcdw:hammer_boneclub",
+      "required": false
+    },
+    {
+      "id": "mcdw:hammer_bone_cudgel",
+      "required": false
+    },
+    {
+      "id": "mcdw:hammer_flail",
+      "required": false
+    },
+    {
+      "id": "mcdw:hammer_gravity",
+      "required": false
+    },
+    {
+      "id": "mcdw:hammer_great_hammer",
+      "required": false
+    },
+    {
+      "id": "mcdw:hammer_mace",
+      "required": false
+    },
+    {
+      "id": "mcdw:hammer_stormlander",
+      "required": false
+    },
+    {
+      "id": "mcdw:hammer_suns_grace",
+      "required": false
+    },
+    {
+      "id": "mcdw:spear_spear",
+      "required": false
+    },
+    {
+      "id": "mcdw:spear_whispering_spear",
+      "required": false
+    },
+    {
+      "id": "mcdw:spear_fortune",
+      "required": false
+    },
+    {
+      "id": "mcdw:staff_battlestaff",
+      "required": false
+    },
+    {
+      "id": "mcdw:staff_battlestaff_of_terror",
+      "required": false
+    },
+    {
+      "id": "mcdw:staff_growing_staff",
+      "required": false
+    },
+    {
+      "id": "mcdw:whip_vine_whip",
+      "required": false
+    },
+    {
+      "id": "mcdw:whip_whip",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "simplyswords:empowered_remnant"
+  },
+  "base": {
+    "item": "simplyswords:runic_chakram"
+  },
+  "result": {
+    "item": "simplyswords:tempest"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

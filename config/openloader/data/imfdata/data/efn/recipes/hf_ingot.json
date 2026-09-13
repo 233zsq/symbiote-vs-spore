@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ACA",
+        "BSB",
+        "ACA"
+    ],
+    "key":
+    {
+        "A": { "item" : "minecraft:diamond" },
+        "B": { "item" : "minecraft:redstone_block" },
+        "C": { "item" : "minecraft:netherite_ingot" },
+        "S": { "item" : "cataclysm:witherite_ingot" }
+    },
+    "result": {
+        "item": "efn:hf_ingot",
+        "count": 2
+    }
+}

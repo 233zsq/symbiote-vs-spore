@@ -1,0 +1,23 @@
+{
+  "type": "celestisynth:starlit_factory",
+  "core_material": {
+    "item": "celestisynth:zephyr_deposit"
+  },
+  "extra_core_material": {
+    "item": "celestisynth:celestial_netherite_ingot"
+  },
+  "forging_time": 700,
+  "result": "celestisynth:breezebreaker",
+  "supporting_core_material": {
+    "item": "cataclysm:essence_of_the_storm"
+  },
+  "supporting_material_bottom": {
+    "item": "simplyswords:whisperwind"
+  },
+  "supporting_material_middle": {
+    "item": "ringsofascension:ring_speed"
+  },
+  "supporting_material_top": {
+    "item": "cataclysm:sandstorm_in_a_bottle"
+  }
+}

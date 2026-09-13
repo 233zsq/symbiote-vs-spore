@@ -1,0 +1,43 @@
+{
+	"category": "tachi",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_big",
+	"styles": {
+		"default": "two_hand"
+	},
+	"usable_in_offhand": false,
+	"collider": {
+		"number": 1,
+		"size": [0.4, 0.8, 1.8],
+		"center": [0.0, 0.0, 0.0]
+	},
+	"combos": {
+		"two_hand": [
+			"epicfightx:biped/combat/scythe_twohand_auto1",
+			"epicfightx:biped/combat/scythe_twohand_auto2",
+			"epicfightx:biped/combat/scythe_twohand_auto3",
+			"epicfightx:biped/combat/scythe_twohand_dash",
+			"epicfightx:biped/combat/scythe_twohand_airslash"
+		]
+	},
+	"innate_skills": {
+		"two_hand": "epicfightx:scythe_skill"
+	},
+	"livingmotion_modifier": {
+		"two_hand": {
+			"idle": "epicfightx:biped/living/hold_onehand_polearm",
+			"walk": "epicfightx:biped/living/walk_onehand_polearm",
+			"run": "epicfightx:biped/living/run_onehand_polearm",
+			"jump": "epicfightx:biped/living/jump",
+			"chase": "epicfightx:biped/living/walk_greatsword",
+			"kneel": "epicfightx:biped/living/hold_greatsword",
+			"sneak": "epicfightx:biped/living/hold_greatsword",
+			"swim": "epicfightx:biped/living/hold_greatsword",
+			"fly": "epicfightx:biped/living/hold_greatsword",
+			"creative_fly": "epicfightx:biped/living/hold_greatsword",
+			"creative_idle": "epicfightx:biped/living/hold_greatsword",
+			"block": "epicfightx:biped/skill/guard_spear"
+		}
+	}
+}

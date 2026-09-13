@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smithing_transform",
+
+    "addition": {
+        "item": "minecraft:blaze_rod"
+    },
+    "base": {
+        "item": "minecraft:netherite_helmet"
+    },
+    "template": {
+        "item": "fantasy_armor:moon_crystal"
+    },
+    "result": {
+        "item": "fantasy_armor:dragonslayer_helmet"
+    }
+}

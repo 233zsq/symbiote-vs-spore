@@ -1,0 +1,8 @@
+name = "Cupboard"
+filename = "cupboard-1.20.1-2.1.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/cupboard"
+hash-format = "sha512"
+hash = "2d8054d5edc6c0931cf22b037409b478f3cd1b988ff9ffc7b355d2a1b533187493760bdd9895748678bf401254b541835d2b1ad9a8700d4243c353f08d9c3842"

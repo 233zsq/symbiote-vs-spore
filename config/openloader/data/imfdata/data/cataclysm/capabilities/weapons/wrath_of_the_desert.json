@@ -1,0 +1,14 @@
+{
+  "attributes": {
+    "common": {
+      "impact": 1.2,
+      "speed_bonus": -3.4,
+      "max_strikes": 10,
+      "damage_bonus": 5.0
+    },
+    "ranged": {
+      "max_strikes": 3
+    }
+  },
+  "type": "p1nero_bow:mortis"
+}

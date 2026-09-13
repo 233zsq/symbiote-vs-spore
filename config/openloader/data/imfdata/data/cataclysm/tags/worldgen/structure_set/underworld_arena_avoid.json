@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "cataclysm:soul_black_smith",
+    "minecraft:nether_complexes",
+"betterfortresses:fortress",
+"netherexp:sanctum",
+"cataclysm:burning_arena"
+  ]
+}

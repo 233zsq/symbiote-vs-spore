@@ -1,0 +1,12 @@
+{
+	"attributes":
+	{
+		"common":
+		{
+			"armor_negation":40.0,
+			"impact":2.5,
+			"max_strikes":3
+		}
+	},
+	"type":"simplyswords:nb_dualgreat2"
+}

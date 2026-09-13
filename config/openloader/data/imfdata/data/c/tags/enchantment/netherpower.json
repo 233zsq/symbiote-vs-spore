@@ -1,0 +1,10 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:protection",
+    "minecraft:sweeping",
+    "minecraft:riptide",
+    "minecraft:channeling",
+    "minecraft:fire_aspect"
+  ]
+}

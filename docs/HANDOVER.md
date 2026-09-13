@@ -56,6 +56,7 @@
 | **键位/配置下发** | **定型：Default Options mod**（`config/defaultoptions/` 只对新安装生效，不覆盖玩家改键；不随包发根目录 options.txt——避免更新冲掉玩家设置）。EF 六键已入表：切战斗=mouse.5、武器固有技能=R、闪避=LAlt、格挡=右键、锁定=G、技能编辑器=K；Symbiote 键位改绑方案见待办池#7（2026-09-12 再修正：真实冲突为 R/G/K+L 四处，T 项系 phantom——strain_power 未注册） | 阶段②.5 |
 | **性能栈时点** | **提前至阶段②.5 入包**（原方案排第四批）：此后一切实测在最终性能/监控环境中进行，避免后期入包导致手感与兼容结论返工；spark 自此常驻支撑 Spore TPS 监控 | 阶段②.5 |
 | 原版干预政策 | 【待定】默认完全自由，决策前任何脚本不得碰原版；当前倾向 A（完全不动），阶段⑤实测数据有反例再翻案 | 方案 3.3 |
+| **成品优先模式（用户拍板 2026-09-13）** | 用户指令：取消「每批完整实测才 commit」的 gate，速度优先；直接借鉴 Immersive Fight 的模组设置/优化/魔改成品化；FTB 任务+主线按方案《任务线章节框架》落地。风险补偿：改动后**启动冒烟到主菜单**仍保留（不玩家长测）；红线条款（EF 锁定/ID 核实/不碰原版）不变 | 用户指令 |
 
 ## 4. 阶段进度
 
@@ -70,7 +71,6 @@
 ## 5. 待办池（按优先级）
 
 ### 参考包研习结论（2026-09-12 · Immersive Fight 4.2.9 · 同 EF 20.14.17）
-
 - **本地金参考**：`C:\PCL 正式版 2.8.13\.minecraft\versions\Immersive Fight 4.2.9\`（308 mod，MC 1.20.1）——与我们同 EF 版本的可运行组合实证：Sword Soaring 20.14.2.8、Nightfall 3.4.0、Resurrection 0.20.12.2、Indestructible 20.13.0、Invincible Lib 20.14.8.2、knightlib 1.4.2、epicfight-extra 1.2、epicfight_awaken 1.2.6、epic_fight_avalon 20.12.6.3、womplus 20.14.1.1.5、womalt 1.0.0、nightfall_invade 1.3.2。完整调研报告：`E:\mcmp_test\reference_if.md`（不入库）
 - **直接可抄**：① `leawind_third_person` 2.2.0 越肩视角（待办#6 格挡手感的最大嫌疑解）；② 武器适配走 **global_packs 强制数据包**（346 weapon JSON + 99 types，覆写 EF 官方 types 换 epicfightx 动画库，零代码改手感）——与我们的 kubejs/data、openloader 通道三选一，待阶段④拍板；③ 键位排布：攻击/格挡占左右键、闪避 LAlt、锁定 G、技能书 J、附属技能铺鼠标侧键；④ 相机 `ALWAYS_BACK + auto_switch=true`（我们现是 WHEN_AIMING/关自动切换）
 - **排除项**：IF 无 Impactful/Battle Arts/Epic Foes/CompatLink/EFMCompat（"MobsPlus-EFM" ≠ Epic Foes）；无 Symbiote/Spore——我们包的共生体/孢子组合仍是"无公开共存先例"，【需实测】维持

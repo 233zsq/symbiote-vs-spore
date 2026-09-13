@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:entity",
+  "random_sequence": "saintsdragons:entities/stegonaut",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "saintsdragons:stegonaut_scale",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

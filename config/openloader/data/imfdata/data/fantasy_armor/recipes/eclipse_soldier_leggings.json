@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "DXD",
+	    "#M#"
+    ],
+    "key": {
+        "#": { "item": "minecraft:glowstone" },
+		"D": { "item": "minecraft:diamond" },
+		"M": { "item": "fantasy_armor:moon_crystal" },
+        "X": { "tag": "fantasy_armor:initial_leggings" }
+    },
+    "result": { "item": "fantasy_armor:eclipse_soldier_leggings" }
+}

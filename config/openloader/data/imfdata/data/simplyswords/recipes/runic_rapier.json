@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "refm:netherite_rapier"
+  },
+  "addition": {
+    "item": "minecraft:diamond_block"
+  },
+  "result": {
+    "item": "simplyswords:runic_rapier"
+  },
+  "template": {
+    "item": "simplyswords:runic_tablet"
+  }
+}

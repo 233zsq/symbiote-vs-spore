@@ -1,0 +1,7 @@
+
+["Chance Values"]
+	#Replace Default Epic Fight Mount Idle
+	"Whether The Default Mount Idle Animation Should Be Replaced" = true
+	#Use Mount Ride Animations
+	"Whether The Player Should Play A Riding Animation When Moving Forward Or Backward On A Mount (Such As A Horse)" = true
+

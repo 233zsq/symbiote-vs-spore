@@ -1,0 +1,43 @@
+{
+	"weight": 0,
+	"quality": 0,
+	"mainhands": [{
+			"weight": 1,
+			"stack": {
+				"item": "soul_like_armors_reworked:darkknighttrident"
+			},
+            "drop_chance": 0
+		}
+	],
+	"offhands": [],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "fantasy_armor:dark_cover_boots"
+		},
+        "drop_chance": 0
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "fantasy_armor:dark_cover_leggings"
+		},
+        "drop_chance": 0
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "fantasy_armor:dark_cover_chestplate"
+		},
+        "drop_chance": 0
+	}],
+	"helmets": [{
+		"weight": 1,
+		"stack": {
+			"item": "fantasy_armor:dark_cover_helmet"
+		},
+        "drop_chance": 0
+	}],
+	"tags": [
+	]
+}

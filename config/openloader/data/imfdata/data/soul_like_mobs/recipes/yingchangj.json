@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "legendary_monsters:void_entity_warper"
+  },
+  "base": {
+    "item": "simplyswords:runic_rapier"
+  },
+  "result": {
+    "item": "simplyswords:shadowsting"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

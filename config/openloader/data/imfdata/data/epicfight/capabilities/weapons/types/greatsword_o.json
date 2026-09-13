@@ -1,0 +1,46 @@
+{
+	"category": "greatsword",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_big",
+	"styles": {
+		"default": "two_hand"
+	},
+	"usable_in_offhand": false,
+	"reach": 1.0,
+	"collider": {
+		"number": 3,
+		"size": [0.5, 0.8, 1.0],
+		"center": [0.0, 0.0, -1.0]
+	},
+	"combos": {
+		"two_hand": [
+			"epicfight:biped/combat/greatsword_auto1",
+			"epicfight:biped/combat/greatsword_auto2",
+			"epicfight:biped/combat/greatsword_dash",
+			"epicfight:biped/combat/greatsword_airslash"
+		],
+		"mount": [
+			"epicfightx:biped/combat/sword_mount_attack"
+		]
+	},
+	"innate_skills": {
+		"two_hand": "epicfight:steel_whirlwind"
+	},
+	"livingmotion_modifier": {
+		"two_hand": {
+			"idle": "epicfight:biped/living/hold_greatsword",
+			"walk": "epicfight:biped/living/walk_greatsword",
+			"chase": "epicfight:biped/living/walk_greatsword",
+			"run": "epicfight:biped/living/run_greatsword",
+			"jump": "epicfight:biped/living/hold_greatsword",
+			"kneel": "epicfight:biped/living/hold_greatsword",
+			"sneak": "epicfight:biped/living/hold_greatsword",
+			"swim": "epicfight:biped/living/hold_greatsword",
+			"fly": "epicfight:biped/living/hold_greatsword",
+			"creative_fly": "epicfight:biped/living/hold_greatsword",
+			"creative_idle": "epicfight:biped/living/hold_greatsword",
+			"block": "epicfight:biped/skill/guard_greatsword"
+		}
+	}
+}

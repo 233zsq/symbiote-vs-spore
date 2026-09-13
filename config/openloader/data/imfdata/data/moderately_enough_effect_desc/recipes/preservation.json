@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "tombstone:preservation",
+  "providers": [
+    {
+      "item": "tombstone:scroll_of_preservation"
+    }
+  ]
+}

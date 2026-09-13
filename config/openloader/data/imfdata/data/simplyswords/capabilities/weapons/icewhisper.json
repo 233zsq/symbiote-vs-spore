@@ -1,0 +1,10 @@
+{
+	"type":"simplyswords:guandaog"
+    "attributes": {
+        "common": {
+            "armor_negation": 7.0,
+                "impact": 2.5,
+            "max_strikes": 3
+        }
+    }
+ }

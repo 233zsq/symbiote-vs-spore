@@ -1,0 +1,8 @@
+name = "Epic Fight - Indestructible"
+filename = "indestructible-20.13.0.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/indestructible"
+hash-format = "sha512"
+hash = "e58eee2adc7fb3cd1b9399c692d482bd0a6985ec9074639faf0d879915f9e296651fcbe85ebc4a0e1ca53de242ad0181b783dd7d7f9ff57e29a1a704fcbaf0f5"

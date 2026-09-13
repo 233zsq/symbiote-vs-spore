@@ -1,0 +1,12 @@
+{
+  "values": [
+	{
+      "id": "soul_like_mobs:hollowknightspear",
+      "required": false
+    },
+	{
+      "id": "soul_like_mobs:hollowknightmace",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "celestisynth:add_spawns",
+  "spawners": {
+    "type": "netherexp:banshee",
+    "maxCount": 4,
+    "minCount": 2,
+    "weight": 4
+  },
+  "structure": "betterfortresses:fortress"
+}

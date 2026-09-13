@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"epicfight:endurance\"}" 
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"epicfight:emergency_escape\"}" 
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"wom:arrow_tenacity\"}" 
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "epicfight:skillbook",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{skill:\"epicfight:stamina_pillager\"}" 
+            }
+          ]
+        }
+
+
+      ]
+    }
+  ],
+  "random_sequence": "realmrpg_quests:rewards/skillpasg1"
+}

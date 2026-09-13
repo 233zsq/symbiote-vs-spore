@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smithing_transform",
+
+    "addition": {
+        "item": "legendary_monsters:molten_metal_ingot"
+    },
+    "base": {
+        "item": "fantasy_armor:gilded_hunt_leggings"
+    },
+    "template": {
+        "item": "fantasy_armor:moon_crystal"
+    },
+    "result": {
+        "item": "fantasy_armor:chess_board_knight_leggings"
+    }
+}

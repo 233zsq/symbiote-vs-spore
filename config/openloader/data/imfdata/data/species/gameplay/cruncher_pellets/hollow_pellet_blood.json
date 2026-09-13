@@ -1,0 +1,9 @@
+{
+  "type": "soul_like_mobs:hollowsoldier",
+  "item": {
+    "id": "soul_like_mobs:sacredforce",
+    "Count": 1
+  },
+  "minTries": 12,
+  "maxTries": 24
+}

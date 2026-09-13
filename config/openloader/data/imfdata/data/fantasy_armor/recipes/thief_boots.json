@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smithing_transform",
+
+    "addition": {
+        "item": "minecraft:phantom_membrane"
+    },
+    "base": {
+        "item": "minecraft:diamond_boots"
+    },
+    "template": {
+        "item": "fantasy_armor:moon_crystal"
+    },
+    "result": {
+        "item": "fantasy_armor:thief_boots"
+    }
+}

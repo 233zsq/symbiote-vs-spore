@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smithing_transform",
+    "category": "equipment",
+    "addition": {
+        "item": "legendary_monsters:withered_bone"
+    },
+    "base": {
+        "item": "fantasy_armor:silver_knight_leggings"
+    },
+    "template": {
+        "item": "fantasy_armor:moon_crystal"
+    },
+    "result": {
+        "item": "fantasy_armor:dark_cover_leggings"
+    }
+}

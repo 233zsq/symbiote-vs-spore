@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "simplyswords:magiblade"
+    },
+    "title": "古代科技",
+    "description": "找到独特武器秘法双头剑.",
+    "hidden": true,
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "simplyswords:decaying_relic",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simplyswords:magiblade"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

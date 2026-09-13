@@ -1,0 +1,14 @@
+{
+	"type": "forge:add_spawns",
+	"biomes": [
+		"minecraft:desert",
+  "regions_unexplored:saguaro_desert",
+"regions_unexplored:joshua_desert"
+	],
+	"spawners":{
+		"type": "wom:saulomonk",
+		"weight": 1,
+		"minCount": 1,
+		"maxCount": 1
+	}
+}

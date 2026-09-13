@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "AB"
+    ],
+    "key":
+    {
+        "A": { "item" : "minecraft:glass_bottle" },
+        "B": { "item" : "minecraft:glistering_melon_slice" }
+    },
+    "result":
+    {
+        "item" : "fight_more:magic_potion",
+        "count" : 1
+    }
+}

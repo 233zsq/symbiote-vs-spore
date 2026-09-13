@@ -1,0 +1,8 @@
+name = "Chunk Sending"
+filename = "chunksending-1.20.1-2.7.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/chunksending"
+hash-format = "sha512"
+hash = "8d3160f9237e5ff9de37b03c6f9176c63399e2b51036fab0418a424bd6874f1f9c60882204799917f653c9d608cf3388558ed7701e467d089a76ef918fac9f83"

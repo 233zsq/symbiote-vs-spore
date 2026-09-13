@@ -1,0 +1,10 @@
+{
+	"type": "soul_like_armors_reworked:newlongsw2",
+	"attributes": {
+		"common": {
+			"armor_negation": 2.2,
+  			"impact": 3.2,
+			"max_strikes": 1
+		}
+	}
+}

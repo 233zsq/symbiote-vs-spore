@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 400,
+  "ingredient": {
+    "item": "cataclysm:ceraunus"
+  },
+  "result": "fight_more:gems_tide"
+}

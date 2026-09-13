@@ -1,0 +1,15 @@
+{
+"type": "minecraft:smithing_transform",
+	"base": {
+        "item": "cataclysm:the_incinerator"
+    },
+    "addition": {
+        "item" : "cataclysm:ignitium_ingot"
+    },
+    "result": {
+        "item": "wom:solar"
+    },
+	"template": {
+		"item": "wom:eternal_fire_arcane"
+	}
+}

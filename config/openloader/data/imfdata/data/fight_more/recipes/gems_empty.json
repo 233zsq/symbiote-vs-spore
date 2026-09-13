@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " B ",
+        "BAB",
+        " B "
+    ],
+    "key":
+    {
+        "A": { "item" : "minecraft:stone" },
+        "B": { "item" : "minecraft:white_stained_glass" }
+    },
+    "result":
+    {
+        "item" : "fight_more:gems_empty",
+        "count" : 1
+    }
+}

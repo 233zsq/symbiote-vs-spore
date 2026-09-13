@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:pillager",
+  "item": {
+    "id": "minecraft:emerald",
+    "Count": 1
+  },
+  "minTries": 12,
+  "maxTries": 32
+}

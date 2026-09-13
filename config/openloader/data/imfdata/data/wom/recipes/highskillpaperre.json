@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "B"
+    ],
+    
+    "key":
+    {
+        "B": { "item" : "enchanlownew:paper_skill_high" }
+    },
+    
+    "result":
+    {
+        "item" : "enchanlownew:paper_skill_low",
+        "count" : 4
+    }
+}

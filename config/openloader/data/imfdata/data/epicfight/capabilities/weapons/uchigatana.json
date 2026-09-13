@@ -1,0 +1,12 @@
+{
+	"attributes":
+	{
+		"common":
+		{
+         			"armor_negation": 20.0,
+			"impact":0.6,
+			"max_strikes":1
+		}
+	},
+	"type":"fight_more:uchigatana_x"
+}

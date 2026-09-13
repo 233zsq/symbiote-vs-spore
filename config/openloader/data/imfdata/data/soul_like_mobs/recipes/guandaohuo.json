@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "legendary_monsters:lava_eaters_skin"
+  },
+  "base": {
+    "item": "simplyswords:runic_glaive"
+  },
+  "result": {
+    "item": "simplyswords:flamewind"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

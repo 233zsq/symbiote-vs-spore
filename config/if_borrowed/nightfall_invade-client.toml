@@ -1,0 +1,5 @@
+
+[BossBarConfig]
+	#Enable Custom BossBar Bar.
+	EnableCustomBossBar = true
+

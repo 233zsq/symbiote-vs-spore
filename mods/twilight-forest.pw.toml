@@ -1,0 +1,8 @@
+name = "The Twilight Forest"
+filename = "twilightforest-1.20.1-4.3.2508-universal.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/twilight-forest"
+hash-format = "sha512"
+hash = "340b42ca27cac8c011a97eff5999b675e5f7e13f9d5b035ca94767ce3868d2168dd3ad81448a2d5e7bdf06cf08ed6b4bcf90edf8df68e452d222448868aa6a7c"

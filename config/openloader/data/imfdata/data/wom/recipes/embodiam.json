@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "SSS",
+        "SBS",
+        "SSS"
+    ],
+    
+    "key":
+    {
+        "B": { "item" : "minecraft:coal" },
+        "S": { "item" : "minecraft:emerald" }
+    },
+    
+    "result":
+    {
+        "item" : "minecraft:diamond",
+        "count" : 1
+    }
+}

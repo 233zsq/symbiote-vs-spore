@@ -1,0 +1,12 @@
+{
+	"attributes":
+	{
+		"common":
+		{
+
+			"impact":2.1,
+			"max_strikes":6
+		}
+	},
+	"type":"wom:antitheus"
+}

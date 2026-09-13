@@ -1,0 +1,26 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "#c:mountain_peak",
+      "required": false
+    },
+    {
+      "id": "#c:is_mountain/peak",
+      "required": false
+    },
+    {
+      "id": "#forge:is_peak",
+      "required": false
+    },
+    "minecraft:stony_peaks",
+    "minecraft:jagged_peaks",
+    "minecraft:frozen_peaks",
+    "minecraft:grove",
+    "minecraft:cherry_grove",
+    "minecraft:meadow",
+"regions_unexplored:pine_slopes",
+"regions_unexplored:highland_fields",
+"minecraft:snowy_slopes"
+  ]
+}

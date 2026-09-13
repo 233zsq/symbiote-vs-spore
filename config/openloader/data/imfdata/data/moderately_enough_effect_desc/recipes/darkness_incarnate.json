@@ -1,0 +1,12 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "alexscaves:darkness_incarnate",
+  "providers": [
+    {
+      "item": "alexscaves:hood_of_darkness"
+    },
+    {
+      "item": "alexscaves:cloak_of_darkness"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "realmrpg_quests:lumberjacks",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 345727523,
+    "exclusion_zone": {
+      "other_set": "minecraft:villages",
+      "chunk_count": 5
+    },
+    "spacing": 44,
+    "separation": 40
+  }
+}

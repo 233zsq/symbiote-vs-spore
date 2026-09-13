@@ -1,0 +1,64 @@
+{
+	"size": "small",
+	"color": "#FF4500",
+	"waves": [
+	{
+"entities": [
+    {
+        "entity": "piglin_brute",
+        "count": 1,
+        "nbt": {
+            "Health": 1000.0,
+            "Attributes": [
+                {
+                    "Name": "generic.max_health",
+                    "Base": 1000
+                },
+                {
+                    "Name": "generic.movement_speed",
+                    "Base": 0
+                },
+                {
+                    "Name": "generic.follow_range", 
+                    "Base": 0
+                },
+                {
+                    "Name": "generic.attack_damage",
+                    "Base": -10
+                }
+            ],
+            "IsImmuneToZombification": 1,
+            "ActiveEffects": [
+                {
+                    "Id": 10,
+                    "Amplifier": 19,
+                    "Duration": 19999980,
+                    "ShowParticles": 0
+                }
+            ]
+        }
+    }
+],
+
+			"rewards": [
+				{
+					"type": "gateways:experience",
+					"experience": 50,
+                    "orb_size": 25
+				}
+			],
+			"max_wave_time": 12000,
+			"setup_time": 40
+		}
+	],
+			"rewards": [
+				{
+					"type": "gateways:experience",
+					"experience": 50,
+                    "orb_size": 25
+				}
+			],
+    "boss_event": {
+        "mode": "name_plate"
+    }
+}

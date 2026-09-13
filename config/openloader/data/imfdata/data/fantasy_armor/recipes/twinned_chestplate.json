@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smithing_transform",
+    "category": "equipment",
+    "addition": {
+        "item": "cataclysm:koboleton_bone"
+    },
+    "base": {
+        "item": "fantasy_armor:ronin_chestplate"
+    },
+    "template": {
+        "item": "fantasy_armor:moon_crystal"
+    },
+    "result": {
+        "item": "fantasy_armor:twinned_chestplate"
+    }
+}

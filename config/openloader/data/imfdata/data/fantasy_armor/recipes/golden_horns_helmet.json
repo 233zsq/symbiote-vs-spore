@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smithing_transform",
+
+    "addition": {
+        "item": "minecraft:enchanted_golden_apple"
+    },
+    "base": {
+        "item": "fantasy_armor:redeemer_helmet"
+    },
+    "template": {
+        "item": "fantasy_armor:moon_crystal"
+    },
+    "result": {
+        "item": "fantasy_armor:golden_horns_helmet"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "type": "simplyswords:staf2",
+    "attributes": {
+        "common": {
+            "armor_negation": 6.0,
+                "impact": 1.1,
+            "max_strikes": 5
+        }
+    }
+ }

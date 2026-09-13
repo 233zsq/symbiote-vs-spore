@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#X#",
+        "###"
+    ],
+    "key": {
+        "#": { "item": "soul_like_mobs:sacredforce" },
+        "X": { "item": "minecraft:amethyst_shard" }
+    },
+    "result": { "item": "fantasy_armor:moon_crystal" }
+}

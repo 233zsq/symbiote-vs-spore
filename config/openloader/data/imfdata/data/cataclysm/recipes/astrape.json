@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "cataclysm:lacrima"
+    },
+    "X": {
+      "item": "cataclysm:essence_of_the_storm"
+    },
+    "P": {
+      "item": "epicfight:netherite_spear"
+    }
+  },
+  "pattern": [
+    " X#",
+    " #X",
+    "P  "
+  ],
+  "result": {
+    "item": "cataclysm:astrape"
+  }
+}

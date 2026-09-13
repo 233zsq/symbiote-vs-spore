@@ -1,0 +1,13 @@
+name = "RoadWeaver"
+filename = "roadweaver-forge-2.3.0-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/6jk8Pote/versions/7dhS67wp/roadweaver-forge-2.3.0-1.20.1.jar"
+hash-format = "sha512"
+hash = "0a82d2ca62ab6f6f3af67c30735eaea4912651a38e5c322c0863ea1f702f1d264bf254ed3d42a469913f910020ef50f06c766055ca68c1f6d72748156bf05dfd"
+
+[update]
+[update.modrinth]
+mod-id = "6jk8Pote"
+version = "7dhS67wp"

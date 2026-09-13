@@ -1,0 +1,12 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "cataclysm:blazing_brand",
+  "providers": [
+    {
+      "item": "cataclysm:gauntlet_of_bulwark"
+    },
+    {
+      "item": "cataclysm:ignis_spawn_egg"
+    }
+  ]
+}

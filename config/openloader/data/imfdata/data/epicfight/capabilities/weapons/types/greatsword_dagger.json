@@ -1,0 +1,87 @@
+{
+	"category": "greatsword",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_big",
+	"styles": {
+		"cases": [
+			{
+				"conditions": [
+					{
+						"predicate": "epicfight:offhand_item_category",
+						"category": "dagger"
+					}
+				],
+				"style": "greatsword_dagger"
+			}
+		],
+		"default": "common"
+	},
+	"offhand_item_compatible_predicate": [
+		{
+			"predicate": "epicfight:offhand_item_category",
+			"category": "dagger"
+		}
+	],
+	"usable_in_offhand": true,
+	"reach": 1.0,
+	"collider": {
+		"number": 3,
+		"size": [0.5, 0.8, 1.0],
+		"center": [0.0, 0.0, -1.0]
+	},
+	"combos": {
+		"common": [
+			"epicfightx:biped/combat/greatsword_auto1",
+			"epicfightx:biped/combat/greatsword_auto2",
+			"epicfightx:biped/combat/greatsword_auto3",
+			"epicfightx:biped/combat/greatsword_auto4",
+			"epicfightx:biped/combat/greatsword_auto5",
+			"epicfightx:biped/combat/greatsword_dash",
+			"epicfightx:biped/combat/greatsword_airslash"
+		],
+		"greatsword_dagger": [
+			"epicfightx:biped/combat/greatsword_dagger_wield_auto1",
+			"epicfightx:biped/combat/greatsword_dagger_wield_auto2",
+			"epicfightx:biped/combat/greatsword_dagger_wield_auto3",
+			"epicfightx:biped/combat/greatsword_dagger_wield_auto4",
+			"epicfightx:biped/combat/greatsword_dagger_wield_auto5",
+			"epicfightx:biped/combat/greatsword_dash",
+			"epicfightx:biped/combat/greatsword_airslash"
+		]
+	},
+	"innate_skills": {
+		"common": "epicfightx:steel_whirlwind",
+		"greatsword_dagger": "epicfightx:greatsword_dagger_skill"
+	},
+	"livingmotion_modifier": {
+		"common": {
+			"idle": "epicfightx:biped/living/hold_twohand_heavy",
+			"walk": "epicfightx:biped/living/walk_twohand_heavy",
+			"run": "epicfightx:biped/living/run_twohand_heavy",
+			"jump": "epicfightx:biped/living/jump_twohand_heavy",
+			"chase": "epicfightx:biped/living/walk_spear",
+			"kneel": "epicfightx:biped/living/hold_spear",
+			"sneak": "epicfightx:biped/living/hold_spear",
+			"swim": "epicfightx:biped/living/hold_spear",
+			"fly": "epicfightx:biped/living/hold_spear",
+			"creative_fly": "epicfightx:biped/living/hold_spear",
+			"creative_idle": "epicfightx:biped/living/hold_spear",
+			"block": "epicfightx:biped/skill/guard_greatsword"
+		},
+		"greatsword_dagger": {
+			"idle": "epicfightx:biped/living/hold_wield_heavy_light",
+			"walk": "epicfightx:biped/living/walk_twohand_heavy",
+			"run": "epicfightx:biped/living/run_twohand_heavy",
+			"jump": "epicfightx:biped/living/jump_twohand_heavy",
+			"chase": "epicfightx:biped/living/walk_spear",
+			"kneel": "epicfightx:biped/living/hold_spear",
+			"sneak": "epicfightx:biped/living/hold_spear",
+			"swim": "epicfightx:biped/living/hold_spear",
+			"fly": "epicfightx:biped/living/hold_spear",
+			"creative_fly": "epicfightx:biped/living/hold_spear",
+			"creative_idle": "epicfightx:biped/living/hold_spear",
+			"block": "epicfightx:biped/skill/guard_greatsword"
+		}
+	}
+}

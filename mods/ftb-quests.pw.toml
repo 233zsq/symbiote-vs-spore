@@ -1,0 +1,8 @@
+name = "FTB Quests"
+filename = "ftb-quests-forge-2001.4.22.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/ftb-quests"
+hash-format = "sha512"
+hash = "7ffec667d4bb73e33e1815655361c93a7564d9040af937b26035bfa3cc26f6125962f173c623eb71cf949b0b0a49181a0459648007b3054e97150bd72fcc0bf8"

@@ -1,0 +1,19 @@
+{
+  "values": [
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    "minecraft:jungle",
+    "minecraft:sparse_jungle",
+    "minecraft:bamboo_jungle",
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp",
+    "minecraft:savanna",
+    "minecraft:windswept_gravelly_hills",
+    "minecraft:windswept_forest",
+"regions_unexplored:sparse_rainforest",
+"regions_unexplored:sparse_redwoods",
+"biomeswevegone:cika_woods",
+"biomeswevegone:baobab_savanna",
+"biomeswevegone:coniferous_forest"
+  ]
+}

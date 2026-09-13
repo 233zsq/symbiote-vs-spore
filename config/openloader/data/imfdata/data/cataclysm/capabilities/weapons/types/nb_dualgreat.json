@@ -1,0 +1,80 @@
+{
+	"category": "s_greatsword",
+	"hit_particle": "epicfight:entity.hit.blunt_hard",
+	"hit_sound": "epicfight:entity.hit.blunt_hard",
+	"swing_sound": "epicfight:entity.weapon.whoosh_hard",
+	"styles":
+	{
+		"cases":
+		[
+			{
+				 "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "s_greatsword"
+          }
+        ],
+				"style": "two_hand"
+			}
+		],
+		"default": "one_hand"
+	},
+	  "offhand_item_compatible_predicate": [
+    {
+      "predicate": "epicfight:offhand_item_category",
+      "category": "s_greatsword"
+    }
+  ],
+	"collider":
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 0.8]
+    },
+    "combos":
+    {
+    	"one_hand":
+    	[
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_twohand_auto_1",
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_twohand_auto_2",
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_twohand_auto_3",
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_dash",
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_airslash"
+    	],
+    	"two_hand":
+    	[
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_dual_auto_1",
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_dual_auto_2",
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_dual_auto_3",
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_dual_dash",
+			"cdmoveset:biped/new/dual_greatsword/combat/greatsword_dual_airslash"
+    	],
+    	"mount":
+    	[
+    		"epicfight:biped/combat/sword_mount_attack"
+    	]
+    },
+    "innate_skills":
+    {
+    	"one_hand": "epicfight:steel_whirlwind",
+    	"two_hand": "cdmoveset:greatsword_dual_skill"
+    },
+    "livingmotion_modifier": {
+    	"one_hand":
+    	{
+  		"block": "epicfight:biped/skill/guard_greatsword",
+    		"idle": "cdmoveset:biped/new/dual_greatsword/living/hold_greatsword",
+    		"walk": "cdmoveset:biped/new/dual_greatsword/living/walk_greatsword",
+    		"run": "cdmoveset:biped/new/dual_greatsword/living/run_greatsword"
+    	
+    	},
+    	"two_hand":
+    	{
+    		"block": "epicfight:biped/skill/guard_dualsword",
+    		"idle": "cdmoveset:biped/new/dual_greatsword/living/greatsword_dual_idle",
+    		"walk": "cdmoveset:biped/new/dual_greatsword/living/greatsword_dual_walk",
+    		"run": "cdmoveset:biped/new/dual_greatsword/living/greatsword_dual_run"
+  
+    	}
+    }
+}

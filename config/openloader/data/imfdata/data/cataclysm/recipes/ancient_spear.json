@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "R": {
+      "item": "cataclysm:ancient_metal_ingot"
+    },
+    "X": {
+      "item": "epicfight:netherite_spear"
+    }
+  },
+  "pattern": [
+    " R ",
+    " RR",
+    "X  "
+  ],
+  "result": {
+    "item": "cataclysm:ancient_spear"
+  }
+}

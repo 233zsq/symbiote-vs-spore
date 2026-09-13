@@ -1,0 +1,10 @@
+ {
+    "type": "refm:rapier",
+    "attributes": {
+        "common": {
+            "armor_negation": 20.0,
+                "impact": 1.1,
+            "max_strikes": 2
+        }
+    }
+ }

@@ -1,0 +1,12 @@
+{
+  "replace": true,
+  "values": [
+"wom:iron_staff",
+"wom:golden_staff",
+"wom:diamond_staff",
+"wom:netherite_staff",
+"wom:napoleon",
+
+    "wom:blackstar"
+  ]
+}

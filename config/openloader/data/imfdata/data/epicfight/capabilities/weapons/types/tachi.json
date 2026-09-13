@@ -1,0 +1,45 @@
+{
+	"category": "tachi",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh",
+	"styles": {
+		"default": "two_hand"
+	},
+	"usable_in_offhand": false,
+	"collider": {
+		"number": 3,
+		"size": [0.4, 0.4, 0.95],
+		"center": [0.0, 0.0, -0.95]
+	},
+	"combos": {
+		"two_hand": [
+			"epicfightx:biped/combat/tachi_auto1",
+			"epicfightx:biped/combat/tachi_auto2",
+			"epicfightx:biped/combat/tachi_auto3",
+			"epicfightx:biped/combat/tachi_dash",
+			"epicfightx:biped/combat/tachi_airslash"
+		],
+		"mount": [
+			"epicfightx:biped/combat/sword_mount_attack"
+		]
+	},
+	"innate_skills": {
+		"two_hand": "epicfightx:rushing_tempo"
+	},
+	"livingmotion_modifier": {
+		"two_hand": {
+			"idle": "epicfightx:biped/living/hold_onehand_medium",
+			"jump": "epicfightx:biped/living/jump",
+			"kneel": "epicfightx:biped/living/hold_tachi",
+			"walk": "epicfightx:biped/living/walk_onehand_medium",
+			"chase": "epicfightx:biped/living/run_onehand_medium",
+			"run": "epicfightx:biped/living/run_onehand_medium",
+			"sneak": "epicfightx:biped/living/hold_tachi",
+			"swim": "epicfightx:biped/living/hold_tachi",
+			"float": "epicfightx:biped/living/hold_tachi",
+			"fall": "epicfightx:biped/living/hold_tachi",
+			"block": "epicfightx:biped/skill/guard_longsword"
+		}
+	}
+}

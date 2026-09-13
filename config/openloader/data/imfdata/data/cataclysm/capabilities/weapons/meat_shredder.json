@@ -1,0 +1,10 @@
+ {
+    "type": "cataclysm:axe2",
+    "attributes": {
+        "common": {
+            "armor_negation": 3.0,
+                "impact": 0.1,
+            "max_strikes": 5
+        }
+    }
+ }

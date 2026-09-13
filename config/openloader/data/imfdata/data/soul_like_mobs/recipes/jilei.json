@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "alexscaves:tesla_bulb"
+  },
+  "base": {
+    "item": "simplyswords:runic_halberd"
+  },
+  "result": {
+    "item": "simplyswords:thunderbrand"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

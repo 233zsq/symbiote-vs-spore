@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "tombstone:true_sight",
+  "providers": [
+    {
+      "item": "tombstone:scroll_of_true_sight"
+    }
+  ]
+}

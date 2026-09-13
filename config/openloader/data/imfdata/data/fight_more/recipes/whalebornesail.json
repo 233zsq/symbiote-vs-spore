@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [   "ABA",
+        "BBB",
+        "ABA"
+    ],
+    "key":
+    {
+        "A": { "item" : "minecraft:stick" },
+        "B": { "item" : "minecraft:white_wool" }
+    },
+    "result":
+    {
+        "item" : "whaleborne:sail",
+        "count" : 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+	"category": "fist",
+	"hit_sound": "epicfight:entity.hit.blunt",
+	"hit_particle": "epicfight:entity.hit.blunt",
+	"swing_sound": "epicfight:entity.weapon.whoosh",
+	"styles": {
+		"default": "one_hand"
+	},
+	"collider": {
+		"number": 3,
+		"size": [0.4, 0.4, 0.4],
+		"center": [0.0, 0.0, 0.0]
+	},
+	"combos": {
+		"one_hand": [
+			"epicfight:biped/combat/fist_auto1",
+			"epicfight:biped/combat/fist_auto2",
+			"epicfight:biped/combat/fist_auto3",
+			"epicfight:biped/combat/fist_dash",
+			"epicfight:biped/combat/fist_airslash"
+		]
+	},
+	"innate_skills": {
+		"one_hand": "epicfight:relentless_combo"
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "enlightened_end:dazed",
+  "providers": [
+    {
+      "item": "enlightened_end:flash_bomb"
+    }
+  ]
+}

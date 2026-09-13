@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "simplyswords:echo",
+  "providers": [
+    {
+      "item": "simplyswords:whisperwind"
+    }
+  ]
+}

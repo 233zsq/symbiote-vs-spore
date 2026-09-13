@@ -1,0 +1,12 @@
+{
+	"type": "forge:add_spawns",
+	"biomes": [
+		"regions_unexplored:alpha_grove"
+	],
+	"spawners":{
+		"type": "wom:evil_skeleton",
+		"weight": 1,
+		"minCount": 1,
+		"maxCount": 1
+	}
+}

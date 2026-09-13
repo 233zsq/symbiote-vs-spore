@@ -1,0 +1,69 @@
+{
+	"category": "tachi",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh",
+	"styles": {
+		"cases": [
+			{
+				"conditions": [
+					{
+						"predicate": "epicfight:offhand_item_category",
+						"category": "tachi"
+					}
+				],
+				"style": "two_hand"
+			}
+		],
+		"default": "one_hand"
+	},
+	"offhand_item_compatible_predicate": [
+		{
+			"predicate": "epicfight:offhand_item_category",
+			"category": "tachi"
+		}
+	],
+	"collider": {
+		"number": 5,
+		"size": [0.2, 0.3, 1.6],
+		"center": [0.0, 0.0, -1.2]
+	},
+	"combos": {
+		"one_hand": [
+			"epicfightx:biped/combat/tachi_auto1",
+			"epicfightx:biped/combat/tachi_auto2",
+			"epicfightx:biped/combat/tachi_auto3",
+			"epicfightx:biped/combat/tachi_dash",
+			"wom:biped/skill/nova_buster_release"
+		],
+		"two_hand": [
+			"wom:biped/combat/nova_attack_1",
+			"wom:biped/combat/nova_attack_2", 
+			"wom:biped/combat/nova_attack_3",
+			"wom:biped/combat/nova_attack_4",
+			"wom:biped/combat/nova_attack_dash",
+			"wom:biped/combat/nova_attack_airslash"
+		],
+		"mount": [
+			"epicfight:biped/combat/sword_mount_attack"
+		]
+	},
+	"innate_skills": {
+		"one_hand": "epicfightx:sweeping_edge",
+		"two_hand": "epicfightx:dancing_edge"
+	},
+	"livingmotion_modifier": {
+		"one_hand": {
+			"idle": "wom:biped/living/ruine_idle",
+			"walk": "wom:biped/living/ruine_walk",
+			"run": "wom:biped/living/ruine_run",
+			"block": "wom:biped/skill/ruine_guard"
+		},
+		"two_hand": {
+			"idle": "wom:biped/living/nova_idle",
+			"walk": "wom:biped/living/nova_walk",
+			"run": "wom:biped/living/nova_run",
+			"block": "wom:biped/skill/nova_guard_hold"
+		}
+	}
+}

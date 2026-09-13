@@ -1,0 +1,33 @@
+{
+	"category": "axe",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh",
+	"styles": {
+		"default": "one_hand"
+	},
+	"collider": {
+		"number": 3,
+		"size": [0.4, 0.4, 0.55],
+		"center": [0.0, 0.0, -0.25]
+	},
+	"combos": {
+		"one_hand": [
+			"epicfight:biped/combat/axe_auto1",
+			"epicfight:biped/combat/axe_auto2",
+			"epicfight:biped/combat/axe_dash",
+			"epicfight:biped/combat/axe_airslash"
+		],
+		"mount": [
+			"epicfight:biped/combat/sword_mount_attack"
+		]
+	},
+	"innate_skills": {
+		"one_hand": "epicfight:the_guillotine"
+	},
+	"livingmotion_modifier": {
+		"one_hand": {
+			"block": "epicfight:biped/skill/guard_sword"
+		}
+	}
+}

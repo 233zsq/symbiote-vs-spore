@@ -1,0 +1,13 @@
+name = "L_Ender's Cataclysm"
+filename = "L_Enders_Cataclysm-3.31.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/46KJle7n/versions/C3H0azzB/L_Enders_Cataclysm-3.31.jar"
+hash-format = "sha512"
+hash = "0dccedd79e3e555f5a38075612d91aec23e1f6ca674e7637ea88c669095b44554385abb75826dfa5a0170585c6b3c3b6d9465bed049c0186d80f75d88f45c5e8"
+
+[update]
+[update.modrinth]
+mod-id = "46KJle7n"
+version = "C3H0azzB"

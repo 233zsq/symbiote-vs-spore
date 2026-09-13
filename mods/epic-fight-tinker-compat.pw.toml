@@ -1,0 +1,13 @@
+name = "Epic Fight: Tinkers Integration"
+filename = "epicfighttinkercompat-20.2.8-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/wN34gDMH/versions/wcfhFGtn/epicfighttinkercompat-20.2.8-forge-1.20.1.jar"
+hash-format = "sha512"
+hash = "471873086cfe26be0ba3bcda5a40b760a8c65851fe904248481d3ddac4365f925b0fe2bceb92c72c75ac4b3f3d77aeb27019beddeed5b4dcf63461129a0c7a09"
+
+[update]
+[update.modrinth]
+mod-id = "wN34gDMH"
+version = "wcfhFGtn"

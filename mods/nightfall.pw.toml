@@ -1,0 +1,8 @@
+name = "EpicFight Nightfall"
+filename = "nightfall-3.4.0.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/nightfall"
+hash-format = "sha512"
+hash = "5cee0134902053694116f1bd1f6cee9f8ebb83d89c1c0254d922276ffdecfc0c24ceedfe0f69ab29ce532dd86294d472320964a6a2c00347fc16f57b62d88aad"

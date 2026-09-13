@@ -1,0 +1,10 @@
+{
+  "type": "celestisynth:add_spawns",
+  "spawners": {
+    "type": "celestisynth:traverser",
+    "maxCount": 3,
+    "minCount": 1,
+    "weight": 4
+  },
+  "structure": "betterfortresses:fortress"
+}

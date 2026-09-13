@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "dcd",
+    "bab",
+    "dbd"
+  ],
+  "key": {
+    "a": {
+      "item": "simplyswords:runic_tablet"
+    },
+    "b": {
+      "item": "minecraft:emerald_block"
+    },
+    "c": {
+      "item": "soul_like_mobs:cupofsacredforce"
+    },
+    "d": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "item": "enchanlownew:power_rune",
+    "count": 1
+  }
+}

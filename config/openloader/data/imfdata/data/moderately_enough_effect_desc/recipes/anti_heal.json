@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "relics:anti_heal",
+  "providers": [
+    {
+      "item": "relics:spore_sack"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "type":"crafting_shapeless",
+    "ingredients":[
+ {
+      "item": "alexscaves:tectonic_shard"
+    },
+{
+      "item": "minecraft:netherite_chestplate"
+    }
+    ],
+  "result": {
+    "item": "alexscaves_torpedoes:tectonic_chestplate",
+    "count": 1
+  }
+}

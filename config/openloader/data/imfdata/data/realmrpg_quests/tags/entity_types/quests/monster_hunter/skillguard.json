@@ -1,0 +1,12 @@
+{
+  "values": [
+	{
+      "id": "soul_like_mobs:heavyarmorhollow",
+      "required": false
+    },
+	{
+      "id": "soul_like_mobs:hollowknighthammer",
+      "required": false
+    }
+  ]
+}

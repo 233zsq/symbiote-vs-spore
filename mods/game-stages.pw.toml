@@ -1,0 +1,13 @@
+name = "Game Stages"
+filename = "GameStages-Forge-1.20.1-15.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/iAlZk5aS/versions/El97XbC9/GameStages-Forge-1.20.1-15.0.2.jar"
+hash-format = "sha512"
+hash = "3ae3a8b7d7f505a422b06eca4f2f9ed6233c646a53d8c004a27c373c145ea38979ad82d2169b39ba0219668e0c3cff7c908c018cd4c64ea0af03c0d48ee513d6"
+
+[update]
+[update.modrinth]
+mod-id = "iAlZk5aS"
+version = "El97XbC9"

@@ -1,0 +1,10 @@
+{
+	"type": "simplyswords:chui4",
+	"attributes": {
+		"common": {
+			"armor_negation": 20,
+  			"impact": 3.2,
+			"max_strikes": 3
+		}
+	}
+}

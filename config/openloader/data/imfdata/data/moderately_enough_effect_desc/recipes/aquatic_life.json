@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "tombstone:aquatic_life",
+  "providers": [
+    {
+      "item": "tombstone:scroll_of_aquatic_life"
+    }
+  ]
+}

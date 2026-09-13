@@ -1,0 +1,8 @@
+name = "Epic Fight Avalon"
+filename = "epic_fight_avalon-20.12.6.3.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/avalon"
+hash-format = "sha512"
+hash = "ee1ca81047d2daa9a536ef60537023549c270cb386fd507d4a59e75a13d94eb1c5e797adcd4ccfa80f8287f96f08aaf498308a121d385cb2a41bc33a8abb8cc5"

@@ -1,0 +1,78 @@
+{
+	"category": "dagger",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_small",
+	"styles": {
+		"cases": [
+			{
+				"conditions": [
+					{
+						"predicate": "epicfight:offhand_item_category",
+						"category": "dagger"
+					}
+				],
+				"style": "two_hand"
+			}
+		],
+		"default": "one_hand"
+	},
+	"offhand_item_compatible_predicate": [
+		{
+			"predicate": "epicfight:offhand_item_category",
+			"category": "dagger"
+		}
+	],
+	"collider": {
+		"number": 3,
+		"size": [0.4, 0.4, 0.6],
+		"center": [0.0, 0.0, -0.1]
+	},
+	"combos": {
+		"one_hand": [
+			"epicfightx:biped/combat/dagger_auto1",
+			"epicfightx:biped/combat/dagger_auto2",
+			"epicfightx:biped/combat/dagger_auto3",
+			"epicfightx:biped/combat/dagger_auto4",
+			"epicfightx:biped/combat/dagger_auto5",
+			"epicfightx:biped/combat/dagger_dash",
+			"epicfightx:biped/combat/dagger_airslash"
+		],
+		"two_hand": [
+			"epicfightx:biped/combat/dagger_dual_auto1",
+			"epicfightx:biped/combat/dagger_dual_auto2",
+			"epicfightx:biped/combat/dagger_dual_auto3",
+			"epicfightx:biped/combat/dagger_dual_auto4",
+			"epicfightx:biped/combat/dagger_dual_auto5",
+			"epicfightx:biped/combat/dagger_dual_dash",
+			"epicfightx:biped/combat/dagger_dual_airslash"
+		],
+		"mount": [
+			"epicfightx:biped/combat/sword_mount_attack"
+		]
+	},
+	"innate_skills": {
+		"one_hand": "epicfightx:eviscerate",
+		"two_hand": "epicfightx:blade_rush"
+	},
+	"livingmotion_modifier": {
+		"one_hand": {
+			"idle": "epicfightx:biped/living/hold_onehand_light",
+			"walk": "epicfightx:biped/living/walk_onehand_light",
+			"jump": "epicfightx:biped/living/jump",
+			"run": "epicfightx:biped/living/run_onehand_light"
+		},
+		"two_hand": {
+			"idle": "epicfightx:biped/living/hold_dual_weapon",
+			"jump": "epicfightx:biped/living/jump",
+			"kneel": "epicfightx:biped/living/hold_dual_weapon",
+			"walk": "epicfightx:biped/living/hold_dual_weapon",
+			"chase": "epicfightx:biped/living/hold_dual_weapon",
+			"run": "epicfightx:biped/living/run_dual_light",
+			"sneak": "epicfightx:biped/living/hold_dual_weapon",
+			"swim": "epicfightx:biped/living/hold_dual_weapon",
+			"float": "epicfightx:biped/living/hold_dual_weapon",
+			"fall": "epicfightx:biped/living/hold_dual_weapon"
+		}
+	}
+}

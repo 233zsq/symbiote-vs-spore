@@ -1,0 +1,13 @@
+name = "Perspective API"
+filename = "perspective_api-1.5.0-beta+forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/LIqveQm1/versions/QJaJLFdM/perspective_api-1.5.0-beta%2Bforge-1.20.1.jar"
+hash-format = "sha512"
+hash = "9124b5f128ee507e585d195e3754972ad20eaa232907b7fe2b1637ec5fb38e62ff0ba32df84dd2e863cc9171fc78107a3ea60aeb68a5b883b89aa625712e7e48"
+
+[update]
+[update.modrinth]
+mod-id = "LIqveQm1"
+version = "QJaJLFdM"

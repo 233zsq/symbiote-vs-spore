@@ -1,0 +1,9 @@
+
+[ingame]
+	boosted_mob_over_distance = false
+	mob_drop_emerald_over_health = false
+	mob_more_xp_over_health = false
+	skeleton_melee = true
+	#Range: 1 ~ 100
+	skeleton_mele_percentage = 70
+

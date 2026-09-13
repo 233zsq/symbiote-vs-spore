@@ -1,0 +1,39 @@
+{
+	"category": "tachi",
+  	"usable_in_offhand": false,
+	"hit_particle": "epicfight:entity.hit.blunt",
+	"hit_sound": "epicfight:entity.hit.blunt",
+	"swing_sound": "epicfight:entity.weapon.whoosh_hard",
+	"styles": {
+    "default": "two_hand"
+  },
+	"collider":
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 0.8]
+    },
+    "combos":
+    {
+    	"two_hand":
+    	[
+			"wom:biped/combat/staff_auto_1",
+			"wom:biped/combat/staff_auto_2",
+			"wom:biped/combat/staff_auto_3",
+			"wom:biped/combat/staff_dash",
+			"fight_more:biped/combat/staff_kingkong"
+    	]
+    },
+    "innate_skills":
+    {
+    	"two_hand": "wom:charybdis"
+    },
+    "livingmotion_modifier": {
+    	"two_hand":
+    	{
+    	    		"idle": "wom:biped/living/staff_idle",
+    	    		"block": "epicfight:biped/skill/guard_spear",
+    		         	  "run": "wom:biped/living/staff_run"
+    	}
+    }
+}

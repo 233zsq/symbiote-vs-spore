@@ -1,0 +1,36 @@
+
+["Sword Properties 剑配置"]
+	#A list of items considered as sword.
+	#被视为剑的物品
+	items_considered_as_sword = ["cataclysm:the_incinerator", "cataclysm:ancient_spear", "cataclysm:soul_render", "cataclysm:coral_bardiche", "arsenal:charge_halberd", "arsenal:soul_knight_great_sword", "cataclysm:astrape", "cataclysm:ceraunus"]
+	#A list of items not considered as sword.
+	#不被视为剑的物品
+	items_not_considered_as_sword = ["sword_soaring:vatansever", "wom:ender_blaster", "epicfight:glove"]
+
+	["Sword Properties 剑配置"."Sword Soaring 御剑凌虚"]
+		#time mills between double click of starting flying
+		#起飞的双击间隔的毫秒数
+		#Range: > -2147483648
+		fly_delay = 200
+
+	["Sword Properties 剑配置"."Gate of Babylon Skill 王之财宝"]
+		#should the item shot glowing
+		#发射的物品是否发光
+		items_bloom = false
+		#BE CAREFUL TO CHANGE!! remove the item in backpack and spawn when shot
+		#【慎重启用！】发射物品时是否删除背包内的物品，并在射出去后掉落。若有遗失概不负责。
+		remove_item = false
+
+	["Sword Properties 剑配置"."Sword Convergence 万剑归宗"]
+		#additional swords per tick
+		#每秒聚集的剑数（仅特效）
+		#Range: > -2147483648
+		sword_effect_per_tick = 0
+		#trail effect update interval
+		#刀光刷新频率，0为关闭
+		#Range: > -2147483648
+		wan_trail_update_tick = 0
+		#default trail particle type
+		#默认刀光类型
+		trail_particle_type = "epicfight:swing_trail"
+

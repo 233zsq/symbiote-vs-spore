@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "enlightened_end:burdened",
+  "providers": [
+    {
+      "item": "enlightened_end:stalker_spawn_egg"
+    }
+  ]
+}

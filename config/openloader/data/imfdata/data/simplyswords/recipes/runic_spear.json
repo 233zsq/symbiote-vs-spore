@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "epicfight:netherite_spear"
+  },
+  "addition": {
+    "item": "minecraft:diamond_block"
+  },
+  "result": {
+    "item": "simplyswords:runic_spear"
+  },
+  "template": {
+    "item": "simplyswords:runic_tablet"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "efn:exsiliumgladius",
+  "attributes": {
+    "common": {
+      "impact": 2,
+"speed_bonus":-0.3,
+      "armor_negation":40.0,
+      "max_strikes":5
+    }
+  }
+}

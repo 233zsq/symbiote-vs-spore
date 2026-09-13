@@ -1,0 +1,24 @@
+{
+  "name": "minecraft:ancient_city/lantern",
+  "fallback": "minecraft:empty",
+  "elements": [
+	{
+      "weight": 1,
+      "element": {
+        "location": "minecraft:ancient_city/structures/ancient_citty_lantern",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+	{
+      "weight": 3,
+      "element": {
+        "location": "minecraft:ancient_city/structures/ancient_citty_lantern_fail",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

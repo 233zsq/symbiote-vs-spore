@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "alexscaves:tectonic_shard"
+  },
+  "base": {
+    "item": "simplyswords:runic_longsword"
+  },
+  "result": {
+    "item": "simplyswords:ribboncleaver"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

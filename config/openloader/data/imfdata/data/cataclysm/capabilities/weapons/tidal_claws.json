@@ -1,0 +1,12 @@
+{
+	"attributes":
+	{
+		"common":
+		{
+			"impact":1.0,
+			"speed_bonus":2.0,
+			"max_strikes":4
+		}
+	},
+	"type":"wom:clawed_gauntle"
+}

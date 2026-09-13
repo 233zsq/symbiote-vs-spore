@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [   "BAB",
+        "B B"
+    ],
+    "key":
+    {
+        "A": { "item" : "minecraft:lead" },
+        "B": { "item" : "minecraft:leather" }
+    },
+    "result":
+    {
+        "item" : "minecraft:saddle",
+        "count" : 1
+    }
+}

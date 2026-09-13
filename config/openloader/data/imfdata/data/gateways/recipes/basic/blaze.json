@@ -1,0 +1,8 @@
+{
+  "type": "gateways:gate_recipe",
+  "group": "gateways",
+  "result": {
+    "item": "gateways:gate_pearl"
+  },
+  "gateway": "gateways:basic/blaze"
+}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " D ",
+        "CAB"
+    ],
+    "key":
+    {
+        "A": { "item" : "fight_more:magic_potion" },
+        "B": { "item" : "bosses_of_mass_destruction:crystal_fruit" },
+        "C": { "item" : "minecraft:nether_star" },
+        "D": { "item" : "minecraft:enchanted_golden_apple" }
+    },
+    "result":
+    {
+        "item" : "fight_more:strong_magic_potion",
+        "count" : 1
+    }
+}

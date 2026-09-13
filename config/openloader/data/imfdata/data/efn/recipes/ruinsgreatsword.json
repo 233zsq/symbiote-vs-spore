@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "base": {
+        "item": "epicfight:netherite_greatsword"
+    },
+    "addition": {
+        "item" : "cataclysm:black_steel_ingot"
+    },
+    "result": {
+        "item": "efn:ruinsgreatsword"
+    },
+    "template": {
+        "item": "minecraft:nether_star"
+    }
+}

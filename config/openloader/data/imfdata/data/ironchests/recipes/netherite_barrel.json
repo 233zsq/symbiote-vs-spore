@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "#B#",
+    "AAA"
+  ],
+  "key": {
+    "#": {"item": "minecraft:netherite_ingot"},
+    "A": {"item": "minecraft:diamond"},
+    "B": {"item": "ironchests:diamond_barrel"}
+  },
+  "result": {
+    "item": "ironchests:netherite_barrel"
+  }
+}

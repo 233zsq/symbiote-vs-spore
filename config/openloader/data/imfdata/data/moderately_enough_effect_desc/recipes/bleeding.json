@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "relics:bleeding",
+  "providers": [
+    {
+      "item": "relics:rage_glove"
+    }
+  ]
+}

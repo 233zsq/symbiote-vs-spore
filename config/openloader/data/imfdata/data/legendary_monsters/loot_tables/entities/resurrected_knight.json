@@ -1,0 +1,36 @@
+{
+  "pools": [
+    {
+      "name": "rune",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "legendary_monsters:metal_debris"
+
+        }
+
+      ]
+    },
+    {
+      "name": "rune1",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "legendary_monsters:somber_key_ring"
+
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bosses_of_mass_destruction:soul_star"
+        }
+      ]
+    }
+  ]
+}

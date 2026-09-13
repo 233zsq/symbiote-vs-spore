@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [   " B ",  
+        "BAB",
+        " B "
+    ],
+    "key":
+    {
+        "A": { "item" : "alexscaves:telecore" },
+        "B": { "item" : "minecraft:iron_ingot" }
+    },
+    "result":
+    {
+        "item" : "ringsofascension:ring_magnetism",
+        "count" : 1
+    }
+}

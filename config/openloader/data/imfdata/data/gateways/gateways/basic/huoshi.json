@@ -1,0 +1,183 @@
+{
+	"size": "medium",
+	"color": "#BA5F5F",
+	"waves": [{
+			"entities": [{
+				"entity": "soul_like_mobs:hollowknight",
+				"count": 2
+			},
+			{
+				"entity": "soul_like_mobs:hollowknightspear",
+				"count": 1
+			}
+			],
+			"rewards": [
+				{
+					"type": "gateways:experience",
+					"experience": 50,
+                    "orb_size": 25
+				}
+			],
+			"max_wave_time": 1200,
+			"setup_time": 100
+		},
+		{
+			"entities": [
+			{
+				"entity": "soul_like_mobs:hollowknight",
+				"count": 2
+			},
+			{
+				"entity": "soul_like_mobs:hollowknightspear",
+				"count": 1
+			},
+			{
+				"entity": "soul_like_mobs:hollowknightmace",
+				"count": 1
+			}
+			],
+			"modifiers": [{
+					"attribute": "generic.max_health",
+					"operation": "MULTIPLY_TOTAL",
+					"value": 0.15
+				},
+				{
+					"attribute": "generic.attack_damage",
+					"operation": "MULTIPLY_TOTAL",
+					"value": 0.15
+				}
+
+			],
+			"rewards": [
+				{
+					"type": "gateways:experience",
+					"experience": 100,
+                    "orb_size": 25
+				}
+			],
+			"max_wave_time":2400,
+			"setup_time": 150
+		},
+		{
+			"entities": [
+			    {
+					"entity": "soul_like_mobs:hollowknight",
+                    "count": 2
+				},
+				{
+					"entity": "soul_like_mobs:hollowsoldier",
+                    "count": 2
+				},
+				{
+					"entity": "soul_like_mobs:hollowknighthammer",
+                    "count": 1
+				}
+			],
+			"modifiers": [{
+					"attribute": "generic.max_health",
+					"operation": "MULTIPLY_TOTAL",
+					"value": 0.20
+				},
+				{
+					"attribute": "generic.attack_damage",
+					"operation": "MULTIPLY_TOTAL",
+					"value": 0.20
+				}
+			],
+			"rewards": [
+				{
+					"type": "gateways:experience",
+					"experience": 100,
+                    "orb_size": 25
+				}
+			],
+			"max_wave_time": 3000,
+			"setup_time": 200
+		},
+		{
+			"entities": [
+			{
+					"entity": "soul_like_mobs:hollowknight",
+                    "count": 2
+			},
+			{
+					"entity": "soul_like_mobs:heavyarmorhollow",
+                    "count": 1
+			},
+			{
+					"entity": "soul_like_mobs:darkknight",
+                    "count": 2
+			},
+			{
+					"entity": "soul_like_mobs:hollowknighthammer",
+                    "count": 1
+			}
+			],
+			"modifiers": [{
+					"attribute": "generic.max_health",
+					"operation": "MULTIPLY_TOTAL",
+					"value": 0.25
+				},
+				{
+					"attribute": "generic.attack_damage",
+					"operation": "MULTIPLY_TOTAL",
+					"value": 0.30
+				}
+			],
+			"rewards": [
+				{
+					"type": "gateways:experience",
+					"experience": 100,
+                    "orb_size": 25
+				}
+			],
+			"max_wave_time": 3600,
+			"setup_time": 280
+		},
+		{
+			"entities": [
+			{
+					"entity": "soul_like_mobs:hollowknight",
+                    "count": 3
+			},
+			{
+					"entity": "soul_like_mobs:hollowknightspear",
+                    "count": 2
+			},
+			{
+					"entity": "soul_like_mobs:darkknight",
+                    "count": 2
+			}
+			],
+			"modifiers": [{
+					"attribute": "generic.max_health",
+					"operation": "MULTIPLY_TOTAL",
+					"value": 0.35
+				},
+				{
+					"attribute": "generic.attack_damage",
+					"operation": "MULTIPLY_TOTAL",
+					"value": 0.50
+				}
+			],
+			"rewards": [
+				{
+					"type": "gateways:experience",
+					"experience": 100,
+                    "orb_size": 25
+				}
+			],
+			"max_wave_time": 3600,
+			"setup_time": 340
+		}
+	],
+			"rewards": [
+				{
+					"type": "gateways:experience",
+					"experience": 100,
+                    "orb_size": 25
+				}
+			],
+    "failures": [
+    ]
+}

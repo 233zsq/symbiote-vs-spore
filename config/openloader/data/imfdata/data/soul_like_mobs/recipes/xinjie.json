@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "betterend:eternal_crystal"
+  },
+  "base": {
+    "item": "simplyswords:runic_longsword"
+  },
+  "result": {
+    "item": "simplyswords:caelestis"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

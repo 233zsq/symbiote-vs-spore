@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "alexscaves:stunned",
+  "providers": [
+    {
+      "item": "alexscaves:primitive_club"
+    }
+  ]
+}

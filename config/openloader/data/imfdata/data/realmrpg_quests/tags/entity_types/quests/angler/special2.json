@@ -1,0 +1,8 @@
+{
+  "values": [
+	{
+      "id": "raidsenhanced:zapper",
+      "required": false
+    }
+  ]
+}

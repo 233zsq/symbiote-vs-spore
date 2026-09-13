@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": ["minecraft:plains","minecraft:meadow","minecraft:grove","minecraft:snowy_slopes","minecraft:jagged_peaks","minecraft:frozen_peaks","minecraft:savanna","minecraft:snowy_plains","minecraft:taiga"],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin",
+  "start_pool": "revampedvillages:outpost/start",
+  "size": 2,
+  "start_height": {
+    "absolute": 0
+  },
+  "project_start_to_heightmap": "WORLD_SURFACE",
+  "max_distance_from_center": 80,
+  "use_expansion_hack": false
+}

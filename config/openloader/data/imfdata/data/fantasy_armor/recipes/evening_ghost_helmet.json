@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#X#"
+    ],
+    "key": {
+        "#": { "item": "minecraft:iron_ingot" },
+        "X": { "item": "minecraft:white_dye" }
+    },
+    "result": { "item": "fantasy_armor:evening_ghost_helmet" }
+}

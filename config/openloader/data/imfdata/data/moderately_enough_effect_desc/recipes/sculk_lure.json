@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "sculkhorde:sculk_lure",
+  "providers": [
+    {
+      "item": "sculkhorde:sculk_spore_spewer_spawn_egg"
+    }
+  ]
+}

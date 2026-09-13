@@ -1,0 +1,10 @@
+ {
+    "type": "wom:torment",
+    "attributes": {
+        "common": {
+            "armor_negation": 10,
+                "impact": 1.0,
+            "max_strikes": 5
+        }
+    }
+ }

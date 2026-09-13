@@ -1,0 +1,10 @@
+{
+	"type": "simplyswords:dagger_em",
+	"attributes": {
+		"common": {
+			"armor_negation": 1.2,
+  			"impact": 1.2,
+			"max_strikes": 1
+		}
+	}
+}

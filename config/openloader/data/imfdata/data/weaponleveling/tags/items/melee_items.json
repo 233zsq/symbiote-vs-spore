@@ -1,0 +1,49 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "fight_more:agony_p",
+      "required": false
+    },
+    {
+      "id": "fight_more:ruine_p",
+      "required": false
+    },
+    {
+      "id": "fight_more:satsujin_p",
+      "required": false
+    },
+    {
+      "id": "fight_more:solar_p",
+      "required": false
+    },
+    {
+      "id": "fight_more:torment_p",
+      "required": false
+    },
+    {
+      "id": "fight_more:gesetz_p",
+      "required": false
+    },
+    {
+      "id": "fight_more:herrscher_p",
+      "required": false
+    },
+    {
+      "id": "fight_more:ender_blaster_p",
+      "required": false
+    },
+    {
+      "id": "fight_more:antitheus_p",
+      "required": false
+    },
+    {
+      "id": "fight_more:moonless_p",
+      "required": false
+    },
+    {
+      "id": "wukong:jingubang",
+      "required": false
+    }
+  ]
+}

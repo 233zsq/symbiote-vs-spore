@@ -1,0 +1,6 @@
+{
+  "type": "betterend:eternal_portal",
+  "biomes": "regions_unexplored:alpha_grove",
+  "spawn_overrides": {},
+  "step": "raw_generation"
+}

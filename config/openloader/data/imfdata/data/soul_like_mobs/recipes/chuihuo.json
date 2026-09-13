@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "alexscaves:tectonic_shard"
+  },
+  "base": {
+    "item": "simplyswords:runic_greathammer"
+  },
+  "result": {
+    "item": "simplyswords:hearthflame"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

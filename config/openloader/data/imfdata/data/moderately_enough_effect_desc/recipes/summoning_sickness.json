@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "ars_nouveau:summoning_sickness",
+  "providers": [
+    {
+      "item": "ars_nouveau:glyph_summon_wolves"
+    }
+  ]
+}

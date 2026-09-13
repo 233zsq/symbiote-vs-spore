@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "born_in_chaos_v1:corpse_maggot"
+    },
+    {
+      "item": "alexsmobs:mosquito_proboscis"
+    }
+  ],
+  "result": {
+    "item": "alexsmobs:mosquito_larva"
+  }
+}

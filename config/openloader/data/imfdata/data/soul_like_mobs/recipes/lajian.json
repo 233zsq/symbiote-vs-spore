@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraftdungeons:broken_staff_pieces"
+  },
+  "base": {
+    "item": "epicfight:netherite_longsword"
+  },
+  "result": {
+    "item": "simplyswords:waxweaver"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

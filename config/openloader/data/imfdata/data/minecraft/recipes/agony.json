@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "gag",
+    "bcb",
+    "def"
+  ],
+  "key": {
+    "a": {
+      "item": "soul_like_mobs:cupofsacredforce"
+    },
+    "b": {
+      "item": "betterend:aeternium_ingot"
+    },
+    "c": {
+      "item": "simplyswords:runic_spear"
+    },
+    "d": {
+      "item": "soul_like_mobs:cupofsacredforce"
+    },
+    "e": {
+      "item": "minecraft:gold_block"
+    },
+    "f": {
+      "item": "soul_like_mobs:cupofsacredforce"
+    },
+    "g": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "wom:agony",
+    "count": 1
+  }
+}

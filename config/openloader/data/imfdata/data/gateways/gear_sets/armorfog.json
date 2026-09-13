@@ -1,0 +1,49 @@
+{
+	"weight": 0,
+	"quality": 0,
+	"mainhands": [{
+			"weight": 1,
+			"stack": {
+				"item": "soul_like_armors_reworked:farrondagger"
+			},
+            "drop_chance": 0
+		}
+	],
+	"offhands": [{
+			"weight": 1,
+			"stack": {
+				"item": "soul_like_armors_reworked:farrondagger"
+			},
+            "drop_chance": 0
+		}],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "fantasy_armor:fog_guard_boots"
+		},
+        "drop_chance": 0
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "fantasy_armor:fog_guard_leggings"
+		},
+        "drop_chance": 0
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "fantasy_armor:fog_guard_chestplate"
+		},
+        "drop_chance": 0
+	}],
+	"helmets": [{
+		"weight": 1,
+		"stack": {
+			"item": "fantasy_armor:fog_guard_helmet"
+		},
+        "drop_chance": 0
+	}],
+	"tags": [
+	]
+}

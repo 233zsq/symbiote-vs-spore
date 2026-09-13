@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:jigsaw",
+  "start_pool": "mythical_weaponry:mjolnir_structure/start_pool",
+  "size": 2,
+  "max_distance_from_center": 20,
+  "biomes": [
+    "minecraft:snowy_taiga",
+"regions_unexplored:frozen_pine_taiga",
+"regions_unexplored:frozen_tundra",
+"regions_unexplored:spires",
+"regions_unexplored:icy_heights"
+  ],
+  "step": "surface_structures",
+  "start_height": {
+    "absolute": 0
+  },
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+  "use_expansion_hack": false,
+  "spawn_overrides": {}
+}

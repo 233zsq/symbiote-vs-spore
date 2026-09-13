@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "alexscaves:pure_darkness"
+  },
+  "base": {
+    "item": "epicfight:netherite_longsword"
+  },
+  "result": {
+    "item": "dungeons_and_combat:crimson_bloodweave_sword"
+  },
+  "template": {
+    "item": "alexscaves:occult_gem"
+  }
+}

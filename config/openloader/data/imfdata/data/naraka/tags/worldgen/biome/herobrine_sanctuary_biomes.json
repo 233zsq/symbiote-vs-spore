@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    "minecraft:forest",
+    "minecraft:birch_forest",
+"regions_unexplored:prairie",
+"regions_unexplored:shrubland",
+    "regions_unexplored:grassland",
+"biomeswevegone:temperate_grove",
+"biomeswevegone:orchard",
+    "regions_unexplored:temperate_grove"
+  ]
+}

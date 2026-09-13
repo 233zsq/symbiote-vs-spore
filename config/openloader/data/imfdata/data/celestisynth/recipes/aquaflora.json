@@ -1,0 +1,23 @@
+{
+  "type": "celestisynth:starlit_factory",
+  "core_material": {
+     "item": "simplyswords:runic_cutlass"
+  },
+  "extra_core_material": {
+    "item": "celestisynth:celestial_netherite_ingot"
+  },
+  "forging_time": 400,
+  "result": "celestisynth:aquaflora",
+  "supporting_core_material": {
+    "item": "bosses_of_mass_destruction:crystal_fruit"
+  },
+  "supporting_material_bottom": {
+    "item": "oddities:orchid_queen_carapace"
+  },
+  "supporting_material_middle": {
+    "item": "betterend:end_lily_leaf"
+  },
+  "supporting_material_top": {
+    "item": "betterend:dense_vine"
+  }
+}

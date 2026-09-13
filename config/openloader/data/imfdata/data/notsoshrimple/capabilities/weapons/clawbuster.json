@@ -1,0 +1,10 @@
+{
+    "type": "simplyswords:efnbigsw2",
+    "attributes": {
+        "common": {
+            "armor_negation": 40.0,
+                "impact": 15.5,
+            "max_strikes": 5
+        }
+    }
+ }

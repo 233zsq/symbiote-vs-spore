@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "tombstone:mercy",
+  "providers": [
+    {
+      "item": "tombstone:scroll_of_mercy"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:emerald"
+    },
+    "b": {
+      "item": "minecraft:honey_bottle"
+    }
+  },
+  "result": {
+    "item": "realmrpg_quests:potion_of_oblivion",
+    "count": 8
+  }
+}

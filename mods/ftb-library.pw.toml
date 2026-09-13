@@ -1,0 +1,8 @@
+name = "FTB Library"
+filename = "ftb-library-forge-1.20.1-2001.2.12.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/ftb-library"
+hash-format = "sha512"
+hash = "6c2c88ce9e456197895b32a8995adf13a1923c5a35c967593308af1322bb47136fc92305f350544febcc05d0227d2a3f282d9e9d4c8ec5aacdc36176af78809b"

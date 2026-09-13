@@ -1,0 +1,19 @@
+{
+	"weight": 0,
+	"quality": 0,
+	"mainhands": [{
+			"weight": 1,
+			"stack": {
+				"item": "minecraft:air"
+			},
+            "drop_chance": 0
+		}
+	],
+	"offhands": [],
+	"boots": [],
+	"leggings": [],
+	"chestplates": [],
+	"helmets": [],
+	"tags": [
+	]
+}

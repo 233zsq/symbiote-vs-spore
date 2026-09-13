@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "alexscaves:tesla_bulb"
+  },
+  "base": {
+    "item": "simplyswords:runic_twinblade"
+  },
+  "result": {
+    "item": "simplyswords:storms_edge"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

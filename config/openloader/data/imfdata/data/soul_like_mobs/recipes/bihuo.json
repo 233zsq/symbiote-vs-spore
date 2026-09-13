@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "bosses_of_mass_destruction:blazing_eye"
+  },
+  "base": {
+    "item": "simplyswords:runic_cutlass"
+  },
+  "result": {
+    "item": "simplyswords:emberlash"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

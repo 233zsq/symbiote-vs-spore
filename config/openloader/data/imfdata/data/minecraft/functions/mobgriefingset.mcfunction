@@ -1,0 +1,12 @@
+mobgriefing bosses_of_mass_destruction:lich false
+mobgriefing bosses_of_mass_destruction:gauntlet false
+mobgriefing alexscaves:luxtructosaurus false
+mobgriefing infinitygolem:infinity_golem false
+mobgriefing cataclysm:ignis false
+mobgriefing cataclysm:maledictus false
+mobgriefing cataclysm:the_harbinger false
+mobgriefing minecraft:ender_dragon false
+mobgriefing dodosmobs:dead_horn false
+mobgriefing alexscaves:tremorzilla false
+mobgriefing minecraft:zombie false
+mobgriefing notsoshrimple:crayfish false

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "legendary_monsters:crystal_of_sandstorm"
+  },
+  "base": {
+    "item": "simplyswords:runic_longsword"
+  },
+  "result": {
+    "item": "simplyswords:enigma"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

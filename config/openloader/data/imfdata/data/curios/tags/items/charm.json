@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "realmrpg_quests:necklace_of_fishing",
+    "realmrpg_quests:necklace_of_grace",
+    "realmrpg_quests:necklace_of_satiety",
+    "realmrpg_quests:ring_of_wind_greater",
+    "realmrpg_quests:ring_of_fire_greater",
+    "realmrpg_quests:ring_of_greater_ice",
+    "cataclysm:sandstorm_in_a_bottle",
+    "eeeabsmobs:soul_summon_necklace",
+    "minecraft:lantern",
+    "minecraft:soul_lantern",
+    "dungeons_and_combat:blessed_amulet",
+    "raccompat:desolate_pendant",
+    "dungeons_and_combat:thirsty_necklace",
+"cataclysm:vitality_ankh",
+"cataclysm:berserker_soul_amulet",
+"cataclysm:unbreakable_skull",
+"alexscaves_torpedoes:pocket_magnet"
+
+  ]
+}

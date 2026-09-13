@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "alexscaves:telecore"
+    },
+    "C": {
+      "item": "alexscaves:scarlet_neodymium_ingot"
+    },
+    "S": {
+      "item": "alexscaves:azure_neodymium_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "C#S",
+    "   "
+  ],
+  "result": {
+    "count": 2,
+    "item": "alexscaves:telecore"
+  },
+  "show_notification": true
+}

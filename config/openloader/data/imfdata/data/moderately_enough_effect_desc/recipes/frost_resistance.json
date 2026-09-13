@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "tombstone:frost_resistance",
+  "providers": [
+    {
+      "item": "tombstone:scroll_of_frost_resistance"
+    }
+  ]
+}

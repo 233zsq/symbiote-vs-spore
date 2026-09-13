@@ -1,0 +1,41 @@
+{
+  "replace": true,
+  "values": [
+	{
+      "id": "bosses_of_mass_destruction:gauntlet",
+      "required": false
+    },
+	{
+      "id": "alexscaves:luxtructosaurus",
+      "required": false
+    },
+	{
+      "id": "cataclysm:ignis",
+      "required": false
+    },
+	{
+      "id": "cataclysm:ignited_revenant",
+      "required": false
+    },
+	{
+      "id": "cataclysm:ignited_berserker",
+      "required": false
+    },
+	{
+      "id": "cataclysm:netherite_monstrosity",
+      "required": false
+    },
+	{
+      "id": "legendary_monsters:lava_eater",
+      "required": false
+    },
+	{
+      "id": "block_factorys_bosses:infernal_dragon",
+      "required": false
+    },
+	{
+      "id": "infinitygolem:infinity_golem",
+      "required": false
+    }
+  ]
+}

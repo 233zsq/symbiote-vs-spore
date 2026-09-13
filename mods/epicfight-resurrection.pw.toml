@@ -1,0 +1,8 @@
+name = "EpicFight-Resurrection"
+filename = "EpicFight-Resurrection-forge1.20.1-0.20.12.2.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/epicfight-resurrection"
+hash-format = "sha512"
+hash = "06f373fcee35b8764b009304df6e87dbcfcdea269a53ed8e30c9c12036bf4d35fd8a59f90d3ea0e06f9f69b1af6040289549767c5edd044328083d1d699db3fd"

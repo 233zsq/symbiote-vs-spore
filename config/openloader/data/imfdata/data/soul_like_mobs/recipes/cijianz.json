@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "item": "refm:netherite_rapier"
+  },
+  "show_notification": true
+}

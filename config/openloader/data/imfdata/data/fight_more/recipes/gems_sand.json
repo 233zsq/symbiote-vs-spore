@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 400,
+  "ingredient": {
+    "item": "cataclysm:ancient_spear"
+  },
+  "result": "fight_more:gems_sand"
+}

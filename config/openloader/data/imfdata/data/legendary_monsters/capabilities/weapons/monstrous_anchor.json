@@ -1,0 +1,10 @@
+ {
+	"type":"cataclysm:bighamnor",
+    "attributes": {
+        "common": {
+            "armor_negation": 50.0,
+                "impact": 20.0,
+            "max_strikes": 5
+        }
+    }
+ }

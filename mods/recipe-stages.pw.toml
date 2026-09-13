@@ -1,0 +1,13 @@
+name = "Recipe Stages"
+filename = "RecipeStages-8.0.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/qXkLFB0L/versions/iZsXzfY9/RecipeStages-8.0.0.2.jar"
+hash-format = "sha512"
+hash = "a01ad6353b94c0cb84cce7683013def602b99f29c2fd4923bf10fc3ce9d7309fa212cc84c3489a775e5517fb345c372013f7b18dce18ea45359bb2bd92b818cd"
+
+[update]
+[update.modrinth]
+mod-id = "qXkLFB0L"
+version = "iZsXzfY9"

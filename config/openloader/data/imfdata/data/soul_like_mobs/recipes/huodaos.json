@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:blaze_rod"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "item": "simplyswords:emberblade"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

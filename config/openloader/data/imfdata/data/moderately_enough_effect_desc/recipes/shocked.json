@@ -1,0 +1,18 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "ars_nouveau:shocked",
+  "providers": [
+    {
+      "item": "ars_nouveau:glyph_lightning"
+    }
+  ]
+},
+{
+  "type": "jeed:effect_provider",
+  "effect": "biomemakeover:shocked",
+  "providers": [
+    {
+      "item": "biomemakeover:lightning_bottle"
+    }
+  ]
+}

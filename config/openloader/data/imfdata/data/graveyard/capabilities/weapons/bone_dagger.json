@@ -1,0 +1,10 @@
+{
+	"type": "epicfight:dagger",
+	"attributes": {
+		"one_hand": {
+			"armor_negation": 10,
+  			"impact": 1,
+			"max_strikes": 1
+		}
+	}
+}

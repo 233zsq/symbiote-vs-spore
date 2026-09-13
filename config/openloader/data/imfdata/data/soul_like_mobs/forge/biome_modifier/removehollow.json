@@ -1,0 +1,5 @@
+{
+    "type": "forge:remove_spawns",
+    "biomes": "#alexscaves:alexs_caves_biomes",
+    "entity_types":["soul_like_mobs:darkknight","soul_like_mobs:hollowsoldier","soul_like_mobs:hollowknight","soul_like_mobs:heavyarmorhollow","soul_like_mobs:hollowknighthammer","soul_like_mobs:hollowknightmace","soul_like_mobs:hollowknightspear"]
+}

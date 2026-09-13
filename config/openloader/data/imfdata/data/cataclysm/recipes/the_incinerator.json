@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " /#",
+        "/#/",
+        "N/ "
+    ],
+    "key": {
+        "/": {
+            "item": "minecraft:blaze_rod"
+        },
+        "#": {
+            "item": "cataclysm:ignitium_ingot"
+        },
+        "N": {
+            "item": "epicfight:netherite_greatsword"
+        }
+    },
+    "result": {
+        "item": "cataclysm:the_incinerator",
+        "count": 1
+    }
+}

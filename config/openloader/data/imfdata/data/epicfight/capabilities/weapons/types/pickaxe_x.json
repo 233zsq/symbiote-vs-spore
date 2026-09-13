@@ -1,0 +1,36 @@
+{
+	"category": "pickaxe",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh",
+	"styles": {
+		"default": "one_hand"
+	},
+	"collider": {
+		"number": 3,
+		"size": [0.4, 0.4, 0.55],
+		"center": [0.0, 0.0, -0.25]
+	},
+	"combos": {
+		"one_hand": [
+			"epicfightx:biped/combat/picaxe_auto1",
+			"epicfightx:biped/combat/picaxe_auto2",
+			"epicfightx:biped/combat/picaxe_auto3",
+			"epicfightx:biped/combat/picaxe_auto4",
+			"epicfightx:biped/combat/picaxe_auto5",
+			"epicfightx:biped/combat/picaxe_dash",
+			"epicfightx:biped/combat/picaxe_airslash"
+		],
+		"mount": [
+			"epicfightx:biped/combat/sword_mount_attack"
+		]
+	},
+	"innate_skills": {
+		"one_hand": "epicfightx:pickaxe_skill"
+	},
+	"livingmotion_modifier": {
+		"one_hand": {
+			"run": "epicfightx:biped/living/run_onehand_light_alt"
+		}
+	}
+}

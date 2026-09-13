@@ -1,0 +1,101 @@
+{
+	"category": "longsword",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh",
+	"styles": {
+		"cases": [
+			{
+				"conditions": [
+					{
+						"predicate": "epicfight:offhand_item_category",
+						"category": "shield"
+					}
+				],
+				"style": "one_hand"
+			},
+			{
+				"conditions": [
+					{
+						"predicate": "epicfight:skill_active",
+						"skill": "epicfight:liechtenauer"
+					}
+				],
+				"style": "ochs"
+			}
+		],
+		"default": "two_hand"
+	},
+	"offhand_item_compatible_predicate": [
+		{
+			"predicate": "epicfight:offhand_item_category",
+			"category": "shield"
+		}
+	],
+	"usable_in_offhand": false,
+	"collider": {
+		"number": 3,
+		"size": [0.4, 0.4, 0.8],
+		"center": [0.0, 0.0, -0.75]
+	},
+	"combos": {
+		"one_hand": [
+			"epicfight:biped/combat/longsword_auto1",
+			"epicfight:biped/combat/longsword_auto2",
+			"epicfight:biped/combat/longsword_auto3",
+			"epicfight:biped/combat/longsword_dash",
+			"epicfight:biped/combat/longsword_airslash"
+		],
+		"two_hand": [
+			"epicfight:biped/combat/longsword_auto1",
+			"epicfight:biped/combat/longsword_auto2",
+			"epicfight:biped/combat/longsword_auto3",
+			"epicfight:biped/combat/longsword_dash",
+			"epicfight:biped/combat/longsword_airslash"
+		],
+		"ochs": [
+			"epicfight:biped/combat/longsword_liechtenauer_auto1",
+			"epicfight:biped/combat/longsword_liechtenauer_auto2",
+			"epicfight:biped/combat/longsword_liechtenauer_auto3",
+			"epicfight:biped/combat/longsword_dash",
+			"epicfight:biped/combat/longsword_airslash"
+		],
+		"mount": [
+			"epicfightx:biped/combat/spear_mount_attack"
+		]
+	},
+	"innate_skills": {
+		"one_hand": "epicfight:sharp_stab",
+		"two_hand": "epicfight:liechtenauer",
+		"ochs": "epicfight:liechtenauer"
+	},
+	"livingmotion_modifier": {
+		"common": {
+			"idle": "epicfight:biped/living/hold_longsword",
+			"walk": "epicfight:biped/living/walk_longsword",
+			"chase": "epicfight:biped/living/walk_longsword",
+			"run": "epicfight:biped/living/run_longsword",
+			"sneak": "epicfight:biped/living/hold_longsword",
+			"kneel": "epicfight:biped/living/hold_longsword",
+			"jump": "epicfight:biped/living/hold_longsword",
+			"swim": "epicfight:biped/living/hold_longsword",
+			"block": "epicfight:biped/skill/guard_longsword"
+		},
+		"ochs": {
+			"idle": "epicfight:biped/living/hold_liechtenauer",
+			"walk": "epicfight:biped/living/walk_liechtenauer",
+			"chase": "epicfight:biped/living/walk_liechtenauer",
+			"run": "epicfight:biped/living/hold_liechtenauer",
+			"sneak": "epicfight:biped/living/hold_liechtenauer",
+			"kneel": "epicfight:biped/living/hold_liechtenauer",
+			"jump": "epicfight:biped/living/hold_liechtenauer",
+			"swim": "epicfight:biped/living/hold_liechtenauer"
+		},
+		"one_hand": {
+			"block": "epicfight:biped/skill/guard_sword"
+		},
+		"two_hand": {
+			"block": "epicfight:biped/skill/guard_longsword"
+		}
+	}
+}

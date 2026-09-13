@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "#X#"
+    ],
+    "key": {
+        "#": { "item": "minecraft:iron_ingot" },
+        "X": { "item": "minecraft:red_dye" }
+    },
+    "result": { "item": "fantasy_armor:lady_maria_boots" }
+}

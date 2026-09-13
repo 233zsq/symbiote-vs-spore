@@ -1,0 +1,10 @@
+{
+	"type": "cdmoveset:s_longsword",
+	"attributes": {
+		"common": {
+			"armor_negation": 5.0,
+  			"impact": 2.2,
+			"max_strikes": 3
+		}
+	}
+}

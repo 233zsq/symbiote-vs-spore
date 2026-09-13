@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cde",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gold_ingot"
+    },
+    "b": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "c": {
+      "item": "oddities:giant_purple_orchid"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "e": {
+      "item": "oddities:giant_white_orchid"
+    }
+  },
+  "result": {
+    "item": "oddities:orchid_heart",
+    "count": 1
+  }
+}

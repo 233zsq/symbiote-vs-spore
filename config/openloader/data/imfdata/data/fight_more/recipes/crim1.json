@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "alexscaves:pure_darkness"
+  },
+  "base": {
+    "item": "simplyswords:netherite_scythe"
+  },
+  "result": {
+    "item": "dungeons_and_combat:crimson_scythe"
+  },
+  "template": {
+    "item": "alexscaves:occult_gem"
+  }
+}

@@ -1,0 +1,13 @@
+name = "Explorer's Compass"
+filename = "ExplorersCompass-1.20.1-1.4.0-forge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/RV1qfVQ8/versions/7ZdJbCOx/ExplorersCompass-1.20.1-1.4.0-forge.jar"
+hash-format = "sha512"
+hash = "cc95056c371c4588d7e5f26509f58118f2335faa6985832cb9df0814877ac8b0aee7910dc5d30953b8b3571d7b6a99d76871a22f55f8f415266185ce6ec2285e"
+
+[update]
+[update.modrinth]
+mod-id = "RV1qfVQ8"
+version = "7ZdJbCOx"

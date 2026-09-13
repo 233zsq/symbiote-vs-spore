@@ -1,0 +1,12 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "enlightened_end:enderstride",
+  "providers": [
+    {
+      "item": "enlightened_end:ooze_bottle"
+    },
+    {
+      "item": "enlightened_end:ooze_fluid_bucket"
+    }
+  ]
+}

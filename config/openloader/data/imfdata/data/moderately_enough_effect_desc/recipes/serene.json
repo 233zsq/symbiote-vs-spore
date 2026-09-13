@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "tomeofblood:serene",
+  "providers": [
+    {
+      "item": "tomeofblood:mint_tea"
+    }
+  ]
+}

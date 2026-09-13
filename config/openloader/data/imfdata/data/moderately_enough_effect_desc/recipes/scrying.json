@@ -1,0 +1,12 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "ars_nouveau:scrying",
+  "providers": [
+    {
+      "item": "ars_nouveau:ritual_scrying"
+    },
+    {
+      "item": "ars_nouveau:dowsing_rod"
+    }
+  ]
+}

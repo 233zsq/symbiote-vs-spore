@@ -1,0 +1,88 @@
+#Login information for epic fight patron server. Do not change these values manually
+access_token = ""
+refresh_token = ""
+#Allowed Values: NULL, DISCORD, PATREON
+provider = "NULL"
+
+[ingame]
+	#Range: 1 ~ 10
+	long_press_count = 2
+	#Allowed Values: NONE, HURT, TARGET, TARGET_AND_HURT
+	health_bar_show_option = "TARGET"
+	show_target_indicator = true
+	camera_auto_switch = true
+	blood_effects = true
+	#Range: 0 ~ 30
+	max_hit_projectiles = 5
+	show_epicfight_attributes = false
+	first_person_model = true
+	use_compute_shader = true
+	enable_pov_action = false
+	enable_cosmetics = false
+	combat_preferred_items = ["minecraft:iron_sword"]
+	enable_target_entity_guide = false
+	#Allowed Values: NONE, CROSSHAIR, HIGHLIGHT, CROSSHAIR_AND_HIGHLIGHT
+	mine_block_guide_option = "NONE"
+	enable_player_vanilla_model = true
+	#Allowed Values: NONE, INTERACTION, ITEM_USE, INTERACTION_AND_ITEMUSE
+	key_conflict_resolve_scope = "NONE"
+	#Allowed Values: ADAPTIVE, SWITCH_MODE
+	preference_work = "ADAPTIVE"
+	#Range: 0.0 ~ 1.0
+	target_outline_color = 0.0
+	#Defines how the camera toggles perspectives.
+	#
+	#    1. Vanilla (Default)
+	#       Uses Minecraft's default behavior.
+	#       Cycles through all available perspectives.
+	#
+	#    2. Skip Third-Person Front Perspective
+	#       Skips only the front view when toggling.
+	#       Other perspectives remain available.
+	#
+	#Allowed Values: VANILLA, SKIP_THIRD_PERSON_FRONT
+	camera_perspective_toggle_mode = "VANILLA"
+	ground_slams = true
+	mining_preferred_items = ["minecraft:iron_axe"]
+
+	[ingame.ui]
+		stamina_bar_x = -59
+		stamina_bar_y = 40
+		#Allowed Values: LEFT, RIGHT, CENTER
+		stamina_bar_x_base = "CENTER"
+		#Allowed Values: TOP, BOTTOM, CENTER
+		stamina_bar_y_base = "BOTTOM"
+		weapon_innate_x = 42
+		weapon_innate_y = 48
+		#Allowed Values: LEFT, RIGHT, CENTER
+		weapon_innate_x_base = "RIGHT"
+		#Allowed Values: TOP, BOTTOM, CENTER
+		weapon_innate_y_base = "BOTTOM"
+		passives_x = 70
+		passives_y = 36
+		#Allowed Values: LEFT, RIGHT, CENTER
+		passives_x_base = "RIGHT"
+		#Allowed Values: TOP, BOTTOM, CENTER
+		passives_y_base = "BOTTOM"
+		#Allowed Values: HORIZONTAL, VERTICAL
+		passives_align_direction = "HORIZONTAL"
+		charging_bar_x = -70
+		charging_bar_y = 48
+		#Allowed Values: LEFT, RIGHT, CENTER
+		charging_bar_x_base = "CENTER"
+		#Allowed Values: TOP, BOTTOM, CENTER
+		charging_bar_y_base = "CENTER"
+
+	[ingame.camera]
+		#Allowed Values: ALWAYS_BACK, WHEN_AIMING, ALWAYS
+		camera_mode = "ALWAYS_BACK"
+		#Range: -10 ~ 10
+		horizontal_location = -4
+		#Range: -2 ~ 5
+		vertical_location = 0
+		#Range: 6 ~ 10
+		zoom = 6
+		#Range: 5 ~ 25
+		lock_on_range = 25
+		lock_on_quick_shift = true
+

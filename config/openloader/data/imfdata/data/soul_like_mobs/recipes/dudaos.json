@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "legendary_monsters:nature_crystal"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "item": "simplyswords:toxic_longsword"
+  },
+  "template": {
+    "item": "enchanlownew:power_rune"
+  }
+}

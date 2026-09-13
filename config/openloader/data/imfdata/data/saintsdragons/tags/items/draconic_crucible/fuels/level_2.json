@@ -1,0 +1,9 @@
+{
+  "replace": true,
+  "values": [
+    "cataclysm:burning_ashes",
+    "saintsdragons:searing_coal",
+"cataclysm:lava_power_cell",
+"block_factorys_bosses:dragon_bone"
+  ]
+}

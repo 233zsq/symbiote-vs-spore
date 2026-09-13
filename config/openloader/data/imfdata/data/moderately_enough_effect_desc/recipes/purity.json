@@ -1,0 +1,9 @@
+{
+  "type": "jeed:effect_provider",
+  "effect": "sculkhorde:purity",
+  "providers": [
+    {
+      "item": "sculkhorde:purity_splash_potion"
+    }
+  ]
+}
