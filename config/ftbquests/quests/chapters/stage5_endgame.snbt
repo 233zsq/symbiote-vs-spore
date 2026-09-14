@@ -1,7 +1,7 @@
 {
 	default_hide_dependency_lines: false
 	filename: "stage5_endgame"
-	group: "0B00AA11CC22DD33"
+	group: "0B00AA11CC22DD11"
 	icon: "kubejs:abyss_ingot"
 	id: "A3F1C0DE00000006"
 	order_index: 5

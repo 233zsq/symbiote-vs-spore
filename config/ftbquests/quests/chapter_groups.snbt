@@ -1,8 +1,12 @@
 {
 	chapter_groups: [
-		{ id: "0B00AA11CC22DD33", title: "主线" }
+		{ id: "0B00AA11CC22DD33", title: "序章·征途指南" }
+		{ id: "0B00AA11CC22DD11", title: "主线·成长之路" }
 		{ id: "0B00AA11CC22DD44", title: "共生体羁绊" }
 		{ id: "0B00AA11CC22DD55", title: "天灾防线" }
-		{ id: "0B00AA11CC22DD66", title: "探索里程碑" }
+		{ id: "0B00AA11CC22DD66", title: "探索图鉴" }
+		{ id: "0B00AA11CC22DD77", title: "Boss 全攻略" }
+		{ id: "0B00AA11CC22DD88", title: "武器图鉴" }
+		{ id: "0B00AA11CC22DD99", title: "匠魂工坊" }
 	]
 }

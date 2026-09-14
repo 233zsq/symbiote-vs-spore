@@ -68,6 +68,13 @@
 - **冒烟验证（2026-09-14 00:15 终验）**：92 mod + 九章任务线 + imfdata 数据包 + IF 资源包三件 → 主菜单 ✅，64.9s，零严重错误；KubeJS 1/1 零错误、Open Loader 1/1（gitkeep 占位已清）、FTB Quests 网络注册正常
 - **任务线已落地（2026-09-14）**：`config/ftbquests/quests/` 九章 SNBT（序章觉醒/成长Ⅰ-Ⅴ/共生体羁绊/天灾防线/探索里程碑，325 个全局唯一 id，机器校验零错误）——GLM-5.3 分 3 片生成 + DeepSeek-V4-Pro 补片（qoderclicn 在 bypass_permissions 下会直接写文件进 cwd，注意）；全部实体/物品 ID 经 jar 实核（暮色 8 Boss、灾变 8 Boss、Spore 九 Calamity 真实 ID：stahl=Stahlmorder、kraken=Grakensenker、verfall=Verfalldrache 等）；**待人工项**全写在任务 description 里（结构 ID、Spore 素材 ID、玛玉灵等）
 - **待用户拍板**：① EF 20.14.17 vs 20.14.16-beta（ex_cap API 存续差异 → 影响 Battle Arts 是否回归）；② IMF-Trans/Trail/Modify 与 imfdata 的发布授权（IF 作者劳动成果，发布前必须取得授权或重做）；③ GitHub 推送时点
+
+### 任务书 v2 设计（2026-09-14，参考龙之冒险v2.4a + CTI）
+
+- **八板块**：序章·征途指南（preface+awakening）/ 主线·成长之路（stage1-5）/ 共生体羁绊 / 天灾防线 / 探索图鉴（exploration+structure_guide）/ Boss 全攻略 / 武器图鉴 / 匠魂工坊
+- **借鉴手法**（龙之冒险/CTI）：图鉴类奖励压小（xp 为主、大奖归主线）；分级标题任务（checkmark+diamond 形状）做 T1/T2/T3/论外分区；Boss 任务=定位+召唤+机制+推荐挑战阶段；description 写全「在哪找/怎么打/何时打」；任务目标用 item/collect 宽泛化
+- **生成管线**：DeepSeek-V4-Pro × 5 片（preface/boss_guide/weapon_guide/tinkers_workshop/structure_guide），全部 ID jar 实核白名单；机器校验（括号配平/16hex 唯一 id/分组字段）后装机
+- 参考报告：`E:\mcmp_test\reference_cti_ftb.md`（CTI 3362 任务手法）、会话内龙之冒险 v2.4a 调研（三分组/单大主线章/图鉴四连/双货币商店）
 - **阶段③ 次核心攻坚 ▶ 批2a Sword Soaring 待实测（2026-09-13）**：批1 Symbiote ✅ 过线已 commit（实测记录 §6）。批2a 已入包未 commit：`epic-fight-sword-soaring` **20.14.2.8** + 前置 `epic-fight-invincible-lib` **20.14.8.2**（pw_add 自动解析依赖，EF 已跳过；版本与 Immersive Fight 实证组合一致）；实例已 sync（17 mod）。**实测清单给用户：①启动到主菜单无崩溃；②Mod 列表 17 个；③JEI 搜 sword_soaring 可见物品；④控制界面搜 sword_soaring 核键位；⑤创造档试御剑技能书与飞行；⑥EF 战斗模式共存无冲突**。过线即 commit `feat(mods): 批2a Sword Soaring 20.14.2.8 入包 [K3+人工实测]`
 - **批2b Nightfall 待解**：3.4.0（IF 同款）仅 CurseForge；依赖 epic_fight_avalon（≥20.12.4，也不在 Modrinth）+ aaa_particles（Modrinth 有）+ invincible lib（已入）。入包链路：用户手装 CurseForge 三件套（或等 packwiz CF 通道），我们手工写 pw.toml
 - **批3 Spore**：Modrinth `fungal-infectionspore` 2.2.0j 锁版（62 版迭代不追新）；spark 已就位

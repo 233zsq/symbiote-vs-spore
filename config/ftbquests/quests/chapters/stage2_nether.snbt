@@ -1,7 +1,7 @@
 {
 	default_hide_dependency_lines: false
 	filename: "stage2_nether"
-	group: "0B00AA11CC22DD33"
+	group: "0B00AA11CC22DD11"
 	icon: "minecraft:blaze_rod"
 	id: "A3F1C0DE00000003"
 	order_index: 2
