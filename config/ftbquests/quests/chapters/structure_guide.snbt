@@ -1,0 +1,445 @@
+{
+	default_hide_dependency_lines: false
+	filename: "structure_guide"
+	group: "0B00AA11CC22DD66"
+	icon: "minecraft:map"
+	id: "A3F1C0E400000066"
+	order_index: 1
+	title: "结构图鉴"
+	quests: [
+		{
+			id: "A3F1C0E416000001"
+			title: "序·文明足迹"
+			subtitle: "原版九大结构"
+			description: [
+				"文明在大地上留下印记，废墟与聚落皆有其主。",
+				"本分区收录原版九大结构，沿链而行，按图索骥。"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			tasks: [
+				{id: "A3F1C0E426000001", type: "checkmark", title: "点亮文明足迹"}
+			]
+		}
+		{
+			id: "A3F1C0E416000002"
+			title: "村庄：最初的灯火"
+			subtitle: "主世界·平原聚落"
+			description: [
+				"平原与草原之上，木门后有人烟。",
+				"交易、床铺与铁傀儡——旅人歇脚的第一站。",
+				"当心僵尸围城之夜，与来犯的掠夺者。"
+			]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E416000001"]
+			tasks: [
+				{id: "A3F1C0E426000002", type: "structure", structure: "minecraft:village", title: "到访一座村庄"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000002", type: "item", item: {id: "waystones:return_scroll", Count: 1b}}
+			]
+		}
+		{
+			id: "A3F1C0E416000003"
+			title: "掠夺者前哨站"
+			subtitle: "主世界·灾厄之塔"
+			description: [
+				"高塔矗立，不祥旗帜猎猎作响。",
+				"塔顶宝箱藏金，塔下常有铁傀儡受囚。",
+				"清剿此处，村庄英雄的声望便近了一步。"
+			]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E416000002"]
+			tasks: [
+				{id: "A3F1C0E426000003", type: "structure", structure: "minecraft:pillager_outpost", title: "到访掠夺者前哨站"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000003", type: "item", item: {id: "waystones:return_scroll", Count: 1b}}
+			]
+		}
+		{
+			id: "A3F1C0E416000004"
+			title: "海底神殿"
+			subtitle: "主世界·深海棱宫"
+			description: [
+				"深海中沉眠的棱柱宫殿，守卫者层层拱卫。",
+				"海晶灯与潮涌核心价值不菲。",
+				"备好水下呼吸与夜视药水，再潜下去。"
+			]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E416000003"]
+			tasks: [
+				{id: "A3F1C0E426000004", type: "structure", structure: "minecraft:monument", title: "潜入海底神殿"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000004", type: "item", item: {id: "waystones:return_scroll", Count: 1b}}
+			]
+		}
+		{
+			id: "A3F1C0E416000005"
+			title: "林地府邸"
+			subtitle: "主世界·黑森林深处"
+			description: [
+				"黑森林深处的深宅大院，灾厄村民的老巢。",
+				"唤魔者腰间悬着不死图腾——夺下它，便多一条命。",
+				"向制图师购得林地探险家地图，方能定位。"
+			]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E416000004"]
+			tasks: [
+				{id: "A3F1C0E426000005", type: "structure", structure: "minecraft:mansion", title: "探访林地府邸"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000005", type: "xp", xp: 15}
+			]
+		}
+		{
+			id: "A3F1C0E416000006"
+			title: "下界要塞"
+			subtitle: "下界·黑石关隘"
+			description: [
+				"绯红废土上崛起的黑石要塞，烈焰人与凋灵骷髅盘踞。",
+				"烈焰棒在此取得，凋灵骷髅头颅亦是屠龙之路的钥匙。"
+			]
+			x: 7.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E416000005"]
+			tasks: [
+				{id: "A3F1C0E426000006", type: "structure", structure: "minecraft:fortress", title: "闯入下界要塞"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000006", type: "xp", xp: 20}
+			]
+		}
+		{
+			id: "A3F1C0E416000007"
+			title: "堡垒遗迹"
+			subtitle: "下界·熔金之域"
+			description: [
+				"猪灵一族的黑石堡垒，金块与远古残骸藏于深处。",
+				"别在它们眼前开箱——穿上金甲，或备好迎战猪灵蛮兵的觉悟。"
+			]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E416000006"]
+			tasks: [
+				{id: "A3F1C0E426000007", type: "structure", structure: "minecraft:bastion_remnant", title: "深入堡垒遗迹"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000007", type: "xp", xp: 25}
+			]
+		}
+		{
+			id: "A3F1C0E416000008"
+			title: "要塞：通往终末"
+			subtitle: "主世界·石砖迷宫"
+			description: [
+				"深埋地下的石砖迷宫，蠹虫在墙缝间窸窣。",
+				"以末影之眼定位，寻得传送门，点亮它。",
+				"那是前往末地、直面末影龙的唯一通路。"
+			]
+			x: 10.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E416000007"]
+			tasks: [
+				{id: "A3F1C0E426000008", type: "structure", structure: "minecraft:stronghold", title: "寻得要塞传送门"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000008", type: "xp", xp: 30}
+			]
+		}
+		{
+			id: "A3F1C0E416000009"
+			title: "远古城市"
+			subtitle: "主世界·深暗之域"
+			description: [
+				"深板岩下的亡城，幽暗回响不绝。",
+				"静步潜行，铺羊毛缓行——惊动监守者即宣告死亡。",
+				"迅捷潜行与经验修补，皆在遗物之中。"
+			]
+			x: 12.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E416000008"]
+			tasks: [
+				{id: "A3F1C0E426000009", type: "structure", structure: "minecraft:ancient_city", title: "潜入远古城市"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000009", type: "xp", xp: 35}
+			]
+		}
+		{
+			id: "A3F1C0E41600000A"
+			title: "末地城"
+			subtitle: "末地·虚空浮城"
+			description: [
+				"虚空之上的浮空之城，潜影贝与紫颂果的家园。",
+				"末地船的桅杆之上，鞘翅静候主人。",
+				"击败末影龙后，经折跃门方可抵达。"
+			]
+			x: 13.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E416000009"]
+			tasks: [
+				{id: "A3F1C0E42600000A", type: "structure", structure: "minecraft:end_city", title: "登临末地城"}
+			]
+			rewards: [
+				{id: "A3F1C0E43600000A", type: "xp", xp: 40}
+			]
+		}
+		{
+			id: "A3F1C0E41600000B"
+			title: "秘·诸界异境"
+			subtitle: "模组结构"
+			description: [
+				"原版之外，模组在大地上埋下了更多秘境。",
+				"本分区均为文字指引，标注未核实者请以游戏内为准。"
+			]
+			x: 0.0d
+			y: 1.5d
+			shape: "diamond"
+			tasks: [
+				{id: "A3F1C0E42600000B", type: "checkmark", title: "点亮诸界异境"}
+			]
+		}
+		{
+			id: "A3F1C0E41600000C"
+			title: "YUNG 地牢"
+			subtitle: "betterdungeons·主世界地下"
+			description: [
+				"模组：YUNG's Better Dungeons，主世界地下。",
+				"结构名与生成群系未核实——人工核实。",
+				"风险：中等。建议装备：铁甲以上，火把带足。"
+			]
+			x: 1.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E41600000B"]
+			tasks: [
+				{id: "A3F1C0E42600000C", type: "checkmark", title: "探明地牢"}
+			]
+			rewards: [
+				{id: "A3F1C0E43600000C", type: "xp", xp: 10}
+			]
+		}
+		{
+			id: "A3F1C0E41600000D"
+			title: "YUNG 矿井"
+			subtitle: "bettermineshafts·主世界地下"
+			description: [
+				"模组：YUNG's Better Mineshafts，主世界地下。",
+				"矿车与蛛网交错，宝藏与塌方并存。",
+				"风险：中等。建议装备：铁镐以上，小心洞穴蜘蛛。"
+			]
+			x: 3.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E41600000B"]
+			tasks: [
+				{id: "A3F1C0E42600000D", type: "checkmark", title: "探明矿井"}
+			]
+			rewards: [
+				{id: "A3F1C0E43600000D", type: "xp", xp: 10}
+			]
+		}
+		{
+			id: "A3F1C0E41600000E"
+			title: "YUNG 要塞"
+			subtitle: "betterstrongholds·主世界深层"
+			description: [
+				"模组：YUNG's Better Strongholds，深藏主世界地下。",
+				"结构名未核实——人工核实。",
+				"风险：高。建议装备：钻石甲以上，末影珍珠必备。"
+			]
+			x: 4.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E41600000B"]
+			tasks: [
+				{id: "A3F1C0E42600000E", type: "checkmark", title: "探明要塞"}
+			]
+			rewards: [
+				{id: "A3F1C0E43600000E", type: "xp", xp: 15}
+			]
+		}
+		{
+			id: "A3F1C0E41600000F"
+			title: "YUNG 下界堡垒"
+			subtitle: "betterfortresses·下界"
+			description: [
+				"模组：YUNG's Better Fortresses，下界大型结构。",
+				"结构名未核实——人工核实。",
+				"风险：高。建议装备：附魔钻石甲，抗火药水。"
+			]
+			x: 6.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E41600000B"]
+			tasks: [
+				{id: "A3F1C0E42600000F", type: "checkmark", title: "探明堡垒"}
+			]
+			rewards: [
+				{id: "A3F1C0E43600000F", type: "xp", xp: 15}
+			]
+		}
+		{
+			id: "A3F1C0E416000010"
+			title: "暮色森林入口"
+			subtitle: "Twilight Forest·异界之门"
+			description: [
+				"模组：暮色森林（Twilight Forest）。",
+				"在地上挖 2×2 水潭，四周种花，",
+				"再向水中投入一颗钻石——雷霆过后，异界之门洞开。",
+				"风险：入门即逢娜迦，切莫大意。"
+			]
+			x: 7.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E41600000B"]
+			tasks: [
+				{id: "A3F1C0E426000010", type: "checkmark", title: "开启暮色之门"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000010", type: "xp", xp: 20}
+			]
+		}
+		{
+			id: "A3F1C0E416000011"
+			title: "Alex's Caves 洞穴群系"
+			subtitle: "alexscaves·主世界地下"
+			description: [
+				"模组：Alex's Caves，主世界地下三大洞穴群系：",
+				"磁力洞穴、糖果洞穴、原始洞穴（群系名未核实——人工核实）。",
+				"风险：中到高。建议装备：钻石甲与附魔工具。"
+			]
+			x: 9.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E41600000B"]
+			tasks: [
+				{id: "A3F1C0E426000011", type: "checkmark", title: "探明三大洞穴群系"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000011", type: "xp", xp: 20}
+			]
+		}
+		{
+			id: "A3F1C0E416000012"
+			title: "圣龙巢穴"
+			subtitle: "saintsdragons·Terralith 群系"
+			description: [
+				"模组：圣龙（Saints Dragons），龙巢群系标签已注入 Terralith 地形。",
+				"结构名与具体群系未核实——人工核实。",
+				"风险：极高。建议装备：最强装备，备好屠龙之计。",
+				"详见「Boss 全攻略」章。"
+			]
+			x: 10.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E41600000B"]
+			tasks: [
+				{id: "A3F1C0E426000012", type: "checkmark", title: "探明龙巢"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000012", type: "xp", xp: 25}
+			]
+		}
+		{
+			id: "A3F1C0E416000013"
+			title: "真菌 Mound"
+			subtitle: "spore·定点坠落"
+			description: [
+				"模组：Spore，真菌巨丘自天而降，落点固定。",
+				"生成机制与应对详见「天灾防线」章。",
+				"风险：极高。建议装备：全套真菌防护装备。"
+			]
+			x: 12.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E41600000B"]
+			tasks: [
+				{id: "A3F1C0E426000013", type: "checkmark", title: "确认坠落地带"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000013", type: "xp", xp: 25}
+			]
+		}
+		{
+			id: "A3F1C0E416000014"
+			title: "灾变三境"
+			subtitle: "cataclysm·燃烧竞技场等"
+			description: [
+				"模组：灾变（Cataclysm），燃烧竞技场等三处遗迹。",
+				"结构名未核实——人工核实。",
+				"风险：毁灭级。建议装备：史诗战斗娴熟，满配神装。",
+				"详见「Boss 全攻略」章。"
+			]
+			x: 13.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E41600000B"]
+			tasks: [
+				{id: "A3F1C0E426000014", type: "checkmark", title: "探明三处遗迹"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000014", type: "xp", xp: 30}
+			]
+		}
+		{
+			id: "A3F1C0E416000015"
+			title: "行者无疆"
+			subtitle: "图鉴终章"
+			description: [
+				"你走过了文明的废墟，也踏遍了诸界的秘境。",
+				"地图上每一处标记，都已烙进你的足迹。",
+				"带上这座传送石碑——从此四海为家。",
+				"而路，仍在脚下延伸。"
+			]
+			x: 6.75d
+			y: 3.0d
+			shape: "pentagon"
+			dependencies: [
+				"A3F1C0E416000001",
+				"A3F1C0E416000002",
+				"A3F1C0E416000003",
+				"A3F1C0E416000004",
+				"A3F1C0E416000005",
+				"A3F1C0E416000006",
+				"A3F1C0E416000007",
+				"A3F1C0E416000008",
+				"A3F1C0E416000009",
+				"A3F1C0E41600000A",
+				"A3F1C0E41600000B",
+				"A3F1C0E41600000C",
+				"A3F1C0E41600000D",
+				"A3F1C0E41600000E",
+				"A3F1C0E41600000F",
+				"A3F1C0E416000010",
+				"A3F1C0E416000011",
+				"A3F1C0E416000012",
+				"A3F1C0E416000013",
+				"A3F1C0E416000014"
+			]
+			tasks: [
+				{id: "A3F1C0E426000015", type: "checkmark", title: "遍历全部结构"}
+			]
+			rewards: [
+				{id: "A3F1C0E436000015", type: "item", item: {id: "waystones:waystone", Count: 2b}},
+				{id: "A3F1C0E436000016", type: "xp_levels", xp_levels: 5}
+			]
+		}
+	]
+}

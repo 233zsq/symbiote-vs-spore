@@ -1,0 +1,407 @@
+{
+	default_hide_dependency_lines: false
+	filename: "preface"
+	group: "0B00AA11CC22DD33"
+	icon: "minecraft:book"
+	id: "A3F1C0E000000033"
+	order_index: 0
+	title: "序章·征途指南"
+	quests: [
+		{
+			id: "A3F1C0E010000001"
+			title: "欢迎来到共生对寄生的世界"
+			subtitle: "这是你的第一份礼物"
+			description: [
+				"欢迎，旅人。这片大陆正被两股力量撕扯——来自星空的共生体，与来自地底的真菌天灾。"
+				"本包主题「以共生对寄生」：与陨石坠落的共生体缔结羁绊，借它的力量对抗吞噬万物的 Spore 真菌。"
+				"主线共五阶段：征途启程 → 烈焰下界 → 暮色森林 → 灾变之地 → 终局决战。"
+				"每个阶段都有专属 Boss、锻造线与成长路线，序章将带你熟悉这片世界的规则。"
+				"拿好这份见面礼，活下去，然后变强。"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "circle"
+			tasks: [
+				{
+					id: "A3F1C0E020000001"
+					type: "checkmark"
+					title: "收下见面礼"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E030000001"
+					type: "item"
+					item: {id: "minecraft:iron_sword", Count: 1b}
+				}
+				{
+					id: "A3F1C0E030000002"
+					type: "item"
+					item: {id: "minecraft:cooked_beef", Count: 8b}
+				}
+				{
+					id: "A3F1C0E030000003"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+		}
+		{
+			id: "A3F1C0E010000002"
+			title: "EF 操作速查"
+			subtitle: "活着靠肌肉记忆"
+			description: [
+				"本包以 Epic Fight 动作战斗为底座，请熟记以下键位："
+				"鼠标侧键 = 切换战斗/采集姿态；R = 固有技能；左Alt = 闪避翻滚。"
+				"右键长按 = 格挡（部分武器可弹反）；G = 锁定目标；K = 打开技能编辑器。"
+				"提示：进游戏后先按 K 打开技能树，优先点出「闪避」与「格挡」——它们是活下来的本钱。"
+			]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E010000001"]
+			tasks: [
+				{
+					id: "A3F1C0E020000002"
+					type: "checkmark"
+					title: "牢记键位"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E030000004"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0E010000003"
+			title: "共生体须知"
+			subtitle: "了解你的体内伙伴"
+			description: [
+				"陨石坑是缔结之地：与共生体融合后，它将寄宿于你的体内，与你共同成长。"
+				"濒死时共生体有 10% 概率爆发反杀来敌，护你一条命。"
+				"键位速查：Y 拉拽 / I 装甲 / M 顶端形态 / B 喂食 / X 径向菜单 / ' 臂收放 / C 贴墙 / O 臂槽 / N 建造 / U 吞噬。"
+				"压力值（Stress）超过 70 会进入高压状态，喂食与休息可缓解。"
+				"本包已启用安全档设置，劫持事件不会摧毁存档，放心体验。"
+			]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E010000002"]
+			tasks: [
+				{
+					id: "A3F1C0E020000003"
+					type: "checkmark"
+					title: "读懂共生体"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E030000005"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0E010000004"
+			title: "真菌天灾须知"
+			subtitle: "认清敌人"
+			description: [
+				"Spore 真菌天灾贯穿全包：感染不可逆，被感染的生物将永堕菌群。"
+				"Mound（菌巢）定点坠落入侵，数据包「Inquisition」驱动着天灾的扩张。"
+				"CDU 防线装置可净化并阻挡菌群蔓延，是基地防御的核心。"
+				"九大 Calamity 灾变首领各怀绝技，主线后期将逐一讨伐。"
+				"感染装备线：生物质 → Living 活化套 → Flesh 血肉套，以菌制菌。"
+			]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E010000003"]
+			tasks: [
+				{
+					id: "A3F1C0E020000004"
+					type: "checkmark"
+					title: "认清天灾"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E030000006"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0E010000005"
+			title: "世界与探索须知"
+			subtitle: "世界很大，路在脚下"
+			description: [
+				"Terralith 重塑了地形：新群系与地貌遍布大陆，备足补给再出远门。"
+				"RoadWeaver 道路网会为你带路——沿着古道走，总能找到村镇。"
+				"按 ';' 打开 Xaero 世界地图（M 键已让给共生体顶端形态）。"
+				"传送石需要先激活才能使用，激活后是长距离移动的首选。"
+				"勘察类任务不给坐标：自己探索，地图与道路就是你的向导。"
+			]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E010000004"]
+			tasks: [
+				{
+					id: "A3F1C0E020000005"
+					type: "checkmark"
+					title: "学会看路"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E030000007"
+					type: "xp"
+					xp: 15
+				}
+			]
+		}
+		{
+			id: "A3F1C0E010000006"
+			title: "任务书使用教学"
+			subtitle: "书读百遍"
+			description: [
+				"本任务书由 FTB Quests 驱动，可从背包界面按钮或任务书快捷键打开。"
+				"全书共八板块：序章·征途指南 / 主线·成长之路 / 共生体羁绊 / 天灾防线 / 探索图鉴 / Boss 全攻略 / 武器图鉴 / 匠魂工坊。"
+				"带锁图标的任务表示前置未完成，顺着依赖线推进即可。"
+				"图鉴与教学页只给少量经验，材料与大奖集中在主线任务。"
+			]
+			x: 7.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E010000005"]
+			tasks: [
+				{
+					id: "A3F1C0E020000006"
+					type: "checkmark"
+					title: "熟悉任务书"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E030000008"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0E010000007"
+			title: "难度与死亡"
+			subtitle: "死亡只是新的开始"
+			description: [
+				"与共生体缔结后，死亡并非结束：它会守在尸体旁等你 rebond 复活，物品全数保留。"
+				"缔结之前请按原版规则小心行事，死亡会掉落身上物品。"
+				"本包难度偏高：Boss 战前备好满耐久装备、药水与撤退路线。"
+				"建议定期备份存档：世界目录手动复制或使用自动备份工具均可。"
+			]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E010000006"]
+			tasks: [
+				{
+					id: "A3F1C0E020000007"
+					type: "checkmark"
+					title: "看淡生死"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E030000009"
+					type: "xp"
+					xp: 15
+				}
+			]
+		}
+		{
+			id: "A3F1C0E010000008"
+			title: "性能与画面"
+			subtitle: "流畅才是硬道理"
+			description: [
+				"本包内置完整性能栈（渲染优化、实体剔除与内存优化），默认配置即可流畅运行。"
+				"光影默认关闭；配置富余可自行开启兼容光影，卡顿请优先回退光影。"
+				"内存建议分配 6-8G：太少会频繁卡顿，太多反而拖慢垃圾回收。"
+				"长时间游玩若帧数下降，重启游戏即可。"
+			]
+			x: 10.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E010000007"]
+			tasks: [
+				{
+					id: "A3F1C0E020000008"
+					type: "checkmark"
+					title: "调校完毕"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E03000000A"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0E010000009"
+			title: "前期生存路线建议"
+			subtitle: "老猎人的路线图"
+			description: [
+				"推荐节奏：伐木起家 → 石质与铁质装备 → 探明一座地牢搜刮战利品。"
+				"随后前往陨石坑缔结共生体，解锁第二生命线与共生技能。"
+				"基础扎实后挑战首个 Boss，再沿主线阶段一路推进。"
+				"动作战斗讲究节奏，不要贪刀——打不过就回头发育。"
+			]
+			x: 12.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E010000008"]
+			tasks: [
+				{
+					id: "A3F1C0E020000009"
+					type: "checkmark"
+					title: "规划路线"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E03000000B"
+					type: "xp"
+					xp: 15
+				}
+			]
+		}
+		{
+			id: "A3F1C0E01000000A"
+			title: "武器线总览"
+			subtitle: "九条路线，一把好剑"
+			description: [
+				"本包共九条武器线，各有所长："
+				"① 主线锻造：随阶段解锁，稳扎稳打；② 暮色武器：铁木/钢叶/骑士金属三阶。"
+				"③ 御剑 Nightfall：高速连斩；④ 共生体强化：以共生之力淬锋。"
+				"⑤ 匠魂：自由组装、自定义属性；⑥ 动作收藏：WoM 与简易刀剑名器。"
+				"⑦ 中世纪骑士：长短兵器齐全；⑧ 法术：魔力驱动；⑨ 感染：以菌制菌的生化武装。"
+				"各线毕业武器详见「武器图鉴」章。"
+			]
+			x: 13.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E010000009"]
+			tasks: [
+				{
+					id: "A3F1C0E02000000A"
+					type: "checkmark"
+					title: "心中有剑"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E03000000C"
+					type: "xp"
+					xp: 15
+				}
+			]
+		}
+		{
+			id: "A3F1C0E01000000B"
+			title: "Boss 挑战节奏"
+			subtitle: "知己知彼"
+			description: [
+				"Boss 按 T 级划分：T1 起步、T5 终局，等级越高容错越低。"
+				"切勿越级挑战——装备未成型时跨 T 讨伐等于送死。"
+				"每个 Boss 的掉落、位置与打法详见「Boss 全攻略」章。"
+				"Boss 战前三样缺一不可：满耐久装备、药水、回城卷轴。"
+			]
+			x: 15.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E01000000A"]
+			tasks: [
+				{
+					id: "A3F1C0E02000000B"
+					type: "checkmark"
+					title: "量力而行"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E03000000D"
+					type: "xp"
+					xp: 15
+				}
+			]
+		}
+		{
+			id: "A3F1C0E01000000C"
+			title: "多人与队伍"
+			subtitle: "独行快，众行远"
+			description: [
+				"FTB Teams 支持组队：创建或加入队伍后，任务进度全队共享。"
+				"队伍中任一成员完成任务，全队同步解锁；Boss 讨伐可分工协作。"
+				"指令：/ftbteams party create 创建队伍；/ftbteams party invite <玩家名> 邀请队友。"
+				"队伍权限与仓库可在队伍界面自行配置。"
+			]
+			x: 16.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E01000000B"]
+			tasks: [
+				{
+					id: "A3F1C0E02000000C"
+					type: "checkmark"
+					title: "呼朋引伴"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E03000000E"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0E01000000D"
+			title: "开拔！"
+			subtitle: "踏上征途"
+			description: [
+				"序章已毕，剑已出鞘。"
+				"前往「主线·成长之路」的 awakening 章领取首个主线任务，踏上五阶段征程。"
+				"记住：共生为友，寄生为敌。愿星光与你的剑同在。"
+			]
+			x: 18.0d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: ["A3F1C0E01000000C"]
+			tasks: [
+				{
+					id: "A3F1C0E02000000D"
+					type: "checkmark"
+					title: "启程"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E03000000F"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					id: "A3F1C0E030000010"
+					type: "item"
+					item: {id: "minecraft:golden_apple", Count: 2b}
+				}
+			]
+		}
+	]
+}

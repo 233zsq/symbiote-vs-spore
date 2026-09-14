@@ -1,0 +1,342 @@
+{
+	default_hide_dependency_lines: false
+	filename: "tinkers_workshop"
+	group: "0B00AA11CC22DD99"
+	icon: "tconstruct:pickaxe"
+	id: "A3F1C0E300000099"
+	order_index: 0
+	title: "匠魂工坊"
+	quests: [
+		{
+			id: "A3F1C0E319000000"
+			title: "第一课·匠魂之门"
+			subtitle: "从一捧砖泥开始"
+			description: ["一切传奇武器，皆始于一把镐与一捧砖泥。", "完成本章课程，掌握锻造万物的技艺。"]
+			x: -1.5d
+			y: 0.0d
+			shape: "diamond"
+			dependencies: []
+			tasks: [{id: "A3F1C0E329000000", type: "checkmark", title: "推开匠魂之门"}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000001"
+			title: "入学"
+			subtitle: "知识即力量"
+			description: ["《Materials and You》是匠魂的第一课。", "制作或取得这本书，它会指引你走向工具、冶炼炉与合金。"]
+			x: 0.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000000"]
+			tasks: [{id: "A3F1C0E329000001", type: "item", item: {id: "tconstruct:materials_and_you", Count: 1b}}]
+			rewards: [{id: "A3F1C0E339000101", type: "item", item: {id: "tconstruct:encyclopedia", Count: 1b}}]
+		}
+		{
+			id: "A3F1C0E319000002"
+			title: "砖泥与焦炉"
+			subtitle: "沙砾、沙与黏土"
+			description: ["沙砾、沙与黏土球揉成砖泥（Grout）。", "砖泥入炉烧炼，即得焦黑砖——冶炼炉的骨与肉。"]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000001"]
+			tasks: [{id: "A3F1C0E329000002", type: "item", item: {id: "tconstruct:grout", Count: 16b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000003"
+			title: "部件制造台"
+			subtitle: "削木为形"
+			description: ["部件制造台将木、石、骨与金属削成部件：镐头、手柄、绑定结。"]
+			x: 3.0d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000002"]
+			tasks: [{id: "A3F1C0E329000003", type: "item", item: {id: "tconstruct:part_builder", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000004"
+			title: "模具桌"
+			subtitle: "雕版定式"
+			description: ["模具桌雕刻模板，模板决定部件的形状。", "一张模具可反复使用——精打细算是匠人的美德。"]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000002"]
+			tasks: [{id: "A3F1C0E329000004", type: "item", item: {id: "tconstruct:stencil_table", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000005"
+			title: "工匠站"
+			subtitle: "组装成器"
+			description: ["工匠站负责总装：把镐头、手柄与绑定结拼成完整工具。", "它也支持随时换件与查看强化槽。"]
+			x: 3.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000002"]
+			tasks: [{id: "A3F1C0E329000005", type: "item", item: {id: "tconstruct:tinker_station", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000006"
+			title: "首把工具"
+			subtitle: "它不会坏，只会磨损"
+			description: ["在工匠站组装你的第一把匠魂镐。", "匠魂工具不会被用坏——磨损了，用修复材料在工匠站修葺如新。"]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000003", "A3F1C0E319000004", "A3F1C0E319000005"]
+			tasks: [{id: "A3F1C0E329000006", type: "item", item: {id: "tconstruct:pickaxe", Count: 1b}}]
+			rewards: [
+				{id: "A3F1C0E339000401", type: "item", item: {id: "tconstruct:repair_kit", Count: 2b}},
+				{id: "A3F1C0E339000402", type: "xp_levels", xp_levels: 3}
+			]
+		}
+		{
+			id: "A3F1C0E319000007"
+			title: "冶炼与铸造"
+			subtitle: "炉火纯青"
+			description: ["把矿石熔成液，把熔液铸成器——这是匠魂的看家本领。"]
+			x: 4.5d
+			y: -1.75d
+			shape: "diamond"
+			dependencies: []
+			tasks: [{id: "A3F1C0E329000007", type: "checkmark", title: "开炉"}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000008"
+			title: "冶炼炉之魂"
+			subtitle: "三十二块砖"
+			description: ["集齐三十二块焦黑砖，垒起你的第一座冶炼炉。", "焦黑石围出熔炼空间，记得给控制器与排液口留出位置。"]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000006", "A3F1C0E319000007"]
+			tasks: [{id: "A3F1C0E329000008", type: "item", item: {id: "tconstruct:seared_brick", Count: 32b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000009"
+			title: "炉控"
+			subtitle: "冶炼炉的大脑"
+			description: ["冶炼炉控制器是炉子的大脑，右键即可查看炉内熔液。", "没有它，冶炼炉只是一堆石头。"]
+			x: 7.5d
+			y: -0.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000008"]
+			tasks: [{id: "A3F1C0E329000009", type: "item", item: {id: "tconstruct:smeltery_controller", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E31900000A"
+			title: "排液"
+			subtitle: "炽热的咽喉"
+			description: ["焦黑龙头接在排液口上，把炽热的金属液注入浇筑器。", "右键开启，再右键关闭——手要稳。"]
+			x: 7.5d
+			y: 0.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000008"]
+			tasks: [{id: "A3F1C0E32900000A", type: "item", item: {id: "tconstruct:seared_faucet", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E31900000B"
+			title: "浇筑台"
+			subtitle: "铸件成型"
+			description: ["把熔液浇进台上的模具，冷却后得到工具部件。", "金质模具出镐头，沙质模具出铸锭。"]
+			x: 9.0d
+			y: -0.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000009"]
+			tasks: [{id: "A3F1C0E32900000B", type: "item", item: {id: "tconstruct:casting_table", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E31900000C"
+			title: "浇筑盆"
+			subtitle: "一锭一盆"
+			description: ["浇筑盆更深更大，一锭金属液在此凝成方块。", "合金与储液，全靠这一口盆。"]
+			x: 9.0d
+			y: 0.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E31900000A"]
+			tasks: [{id: "A3F1C0E32900000C", type: "item", item: {id: "tconstruct:casting_basin", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E31900000D"
+			title: "炉边升级"
+			subtitle: "锻打成形"
+			description: ["工匠砧是工匠站的进阶：组装位更多，部件上限更高。", "高级工具与武器，都将在这张砧上锻打成形。"]
+			x: 10.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E31900000B", "A3F1C0E31900000C"]
+			tasks: [{id: "A3F1C0E32900000D", type: "item", item: {id: "tconstruct:tinkers_anvil", Count: 1b}}]
+			rewards: [{id: "A3F1C0E339000D01", type: "item", item: {id: "tconstruct:modifier_crystal", Count: 1b}}]
+		}
+		{
+			id: "A3F1C0E31900000E"
+			title: "利刃与合金"
+			subtitle: "杀伐与下界"
+			description: ["削木为柄、熔石为刃。接下来的课程，关乎杀伐与下界。"]
+			x: 10.5d
+			y: -1.75d
+			shape: "diamond"
+			dependencies: []
+			tasks: [{id: "A3F1C0E32900000E", type: "checkmark", title: "磨刀霍霍"}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E31900000F"
+			title: "利刃初成·斩骨刀"
+			subtitle: "重刃斩首"
+			description: ["斩骨刀势大力沉，专为斩首与收割而生。", "与阔斧二选其一即可——重刃还是重斧，任君抉择。"]
+			x: 12.0d
+			y: -0.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E31900000D", "A3F1C0E31900000E"]
+			tasks: [{id: "A3F1C0E32900000F", type: "item", item: {id: "tconstruct:cleaver", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000010"
+			title: "利刃初成·阔斧"
+			subtitle: "开山破盾"
+			description: ["阔斧开山劈木，也是天生的破盾利器。", "与斩骨刀二选其一即可——重刃还是重斧，任君抉择。"]
+			x: 12.0d
+			y: 0.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E31900000D", "A3F1C0E31900000E"]
+			tasks: [{id: "A3F1C0E329000010", type: "item", item: {id: "tconstruct:broad_axe", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000011"
+			title: "下界矿脉"
+			subtitle: "蓝色的血"
+			description: ["钴矿只生在下界，常与岩浆为邻。", "带回四锭钴——赫帕提佐与玛玉灵都需要它蓝色的血液。"]
+			x: 13.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E31900000F", "A3F1C0E319000010"]
+			dependency_requirement: "any_completed"
+			tasks: [{id: "A3F1C0E329000011", type: "item", item: {id: "tconstruct:cobalt_ingot", Count: 4b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000012"
+			title: "合金之门·黏钢"
+			subtitle: "韧性的结合"
+			description: ["在冶炼炉中熔合铁、黏液与焦黑石，铸出黏钢。", "弹性与韧性兼具，适合做手柄与弓臂。", "具体配方以 JEI 为准。"]
+			x: 15.0d
+			y: -0.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000011"]
+			tasks: [{id: "A3F1C0E329000012", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 4b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000013"
+			title: "合金之门·赫帕提佐"
+			subtitle: "冷峻如夜色"
+			description: ["铜与钴熔合的合金，冷峻如夜色。", "它是通往玛玉灵的最后一级台阶。", "具体配方以 JEI 为准。"]
+			x: 15.0d
+			y: 0.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000011"]
+			tasks: [{id: "A3F1C0E329000013", type: "item", item: {id: "tconstruct:hepatizon_ingot", Count: 4b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000014"
+			title: "玛玉灵之锁"
+			subtitle: "合金之巅"
+			description: ["玛玉灵，匠魂合金之巅——淬炼而出的紫色金属。", "配方随阶段Ⅲ（暮色线）解锁，详情见主线章节。", "以它铸刃，可斩下界之骨。"]
+			x: 16.5d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: ["A3F1C0E319000012", "A3F1C0E319000013"]
+			tasks: [{id: "A3F1C0E329000014", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}]
+			rewards: [{id: "A3F1C0E339001401", type: "xp_levels", xp_levels: 5}]
+		}
+		{
+			id: "A3F1C0E319000015"
+			title: "强化入门"
+			subtitle: "不可逆的选择"
+			description: ["每件匠魂工具生来带有强化槽。", "强化水晶（Modifier Crystal）可为工具再添一个强化槽。", "强化不可逆——耐久、锋利还是速度，动手前想清楚。"]
+			x: 12.0d
+			y: 1.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E31900000D"]
+			tasks: [{id: "A3F1C0E329000015", type: "checkmark", title: "掌握强化"}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000016"
+			title: "血染的女王史莱姆"
+			subtitle: "支线·黏液王族"
+			description: ["女王黏液合金，传闻与下界深处的黏液王族有关。", "本包未实测其来源，配方与掉落请以 JEI 为准（人工核实）。"]
+			x: 15.0d
+			y: 1.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E31900000D", "A3F1C0E319000011"]
+			tasks: [{id: "A3F1C0E329000016", type: "item", item: {id: "tconstruct:queens_slime_ingot", Count: 2b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000017"
+			title: "万用农具"
+			subtitle: "支线·锄斧合一"
+			description: ["鹤嘴锄集斧与锄于一身，开荒农场的万用农具。", "种地砍树两不误——冒险之余，也别忘了温饱。"]
+			x: 6.0d
+			y: 1.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000006"]
+			tasks: [{id: "A3F1C0E329000017", type: "item", item: {id: "tconstruct:mattock", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000018"
+			title: "短匕背刺"
+			subtitle: "支线·出鞘无声"
+			description: ["短匕轻快，出鞘无声。", "配合 Epic Fight 的双持与处决，或许能走出一条刺杀流。"]
+			x: 7.5d
+			y: 1.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000006"]
+			tasks: [{id: "A3F1C0E329000018", type: "item", item: {id: "tconstruct:dagger", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E319000019"
+			title: "妙想熔炉"
+			subtitle: "支线·更高阶的知识"
+			description: ["《妙想熔炉》记载着更高阶的冶炼知识。", "拿到它，炉火与合金的边界又向外扩了一寸。"]
+			x: 9.0d
+			y: 1.75d
+			shape: "circle"
+			dependencies: ["A3F1C0E319000009", "A3F1C0E31900000A"]
+			tasks: [{id: "A3F1C0E329000019", type: "item", item: {id: "tconstruct:fantastic_foundry", Count: 1b}}]
+			rewards: []
+		}
+		{
+			id: "A3F1C0E31900001A"
+			title: "毕业铸就"
+			subtitle: "锤与火的结业礼"
+			description: ["玛玉灵入手，匠魂工坊的学业至此圆满。", "带上你的刀与锤，去主线锻造线与武器图鉴寻找下一段传奇。"]
+			x: 18.0d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: ["A3F1C0E319000014"]
+			tasks: [{id: "A3F1C0E32900001A", type: "checkmark", title: "结业"}]
+			rewards: [
+				{id: "A3F1C0E339001A01", type: "xp_levels", xp_levels: 5},
+				{id: "A3F1C0E339001A02", type: "item", item: {id: "tconstruct:modifier_crystal", Count: 1b}}
+			]
+		}
+	]
+}
