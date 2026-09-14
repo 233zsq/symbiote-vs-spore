@@ -1,0 +1,20 @@
+{
+ "betterstrongholds.commands.locate.stronghold": "请改用 /locate structure betterstrongholds:stronghold！",
+ "Use /locate structure betterstrongholds:stronghold instead!": "请改用 /locate structure betterstrongholds:stronghold！",
+ "text.autoconfig.betterstrongholds-fabric-1_20.title": "YUNG 的更好的要塞",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds": "YUNG 的更好的要塞",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general": "常规设置",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.@Tooltip": "常规设置。",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceNormal": "蜘蛛网生成率（普通）",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceNormal.@Tooltip[0]": "要塞各处蜘蛛网的生成率。",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceNormal.@Tooltip[1]": "默认值：0.1",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceSpawner": "蜘蛛网生成率（刷怪笼）",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceSpawner.@Tooltip[0]": "图书馆中蜘蛛刷怪笼周围蜘蛛网的生成率。",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceSpawner.@Tooltip[1]": "默认值：0.3",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.torchSpawnRate": "火把生成率",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.torchSpawnRate.@Tooltip[0]": "要塞各处火把的生成率。",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.torchSpawnRate.@Tooltip[1]": "默认值：0.1",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.lanternSpawnRate": "灯笼生成率",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.lanternSpawnRate.@Tooltip[0]": "要塞各处灯笼的生成率。",
+ "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.lanternSpawnRate.@Tooltip[1]": "默认值：0.2"
+}
