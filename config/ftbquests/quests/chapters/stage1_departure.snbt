@@ -1,7 +1,7 @@
 {
 	default_hide_dependency_lines: false
 	filename: "stage1_departure"
-	group: "0B00AA11CC22DD11"
+	group: "0B00AA11CC22DD33"
 	icon: "minecraft:torch"
 	id: "A3F1C0DE00000002"
 	order_index: 1

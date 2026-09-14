@@ -14,11 +14,15 @@ hash = "04179e7444dd784e26c1965152ff0faae785baaab8bed9f46a7a35af4344e124"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "c43ffe2612cbeb40d4af9c19a3a666d823799bc0784a8b53db16db394743893e"
+hash = "0389c8bd8f4779152ec2e3ebc7259eddc9a9345221fb01873b6b5101c5f3aa64"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/awakening.snbt"
 hash = "3cf4e727ed89b9ade1cee228d71cd7a47e2c2c9dc7d4612066d72d2cfc5ed4e8"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/boss_guide.snbt"
+hash = "dadbecc69b388d0b54811940ff9be461263cabee638feb87aa5c763ece056b76"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/calamity_front.snbt"
@@ -27,6 +31,10 @@ hash = "35575d874dc5483f4bf4351e94d0d27e6afdfbbd8d15a2e0eda26b1645508ee5"
 [[files]]
 file = "config/ftbquests/quests/chapters/exploration.snbt"
 hash = "c91f6e7eeafcb9608e4829bd17e4705a2b309fd83321a4880b3150b5a487da2a"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/preface.snbt"
+hash = "9eb32263fedb5c90abc86f60371dc42c7507bd9191bb40711352da8dbac85e1e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage1_departure.snbt"
@@ -38,19 +46,31 @@ hash = "617cacd9120812b86c84150d8b4303452864b15bc2990ac98aa5f7ad14b73ef9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage3_twilight.snbt"
-hash = "1c01af60ca7f49c333edd0c43812382f62d01eac14e8ed6cd165d6dbb15b6290"
+hash = "5b1611bbf9fa4e583cd94433b5b66bba3b019c24036eeb00e8382ffa7ce5c0a9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage4_calamity.snbt"
-hash = "9a0a6810266861455dc75fc2b93608fa3a1ed8757c5ab93c7de7b11f2315a118"
+hash = "5039e3d1a9343e9c4e0b370833a9ba73d7acc940f26e568081434781b8e3bdcd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage5_endgame.snbt"
-hash = "5ed5b4037fa54a8b7daa35d4564cb04fc68d5e75b2fc11526d922ba291f197e9"
+hash = "81d940a53c959cee275d62e0b9bab68c51cb8a0f6cf2c5a0bfccf153a05f8449"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/structure_guide.snbt"
+hash = "b2968707609376b8d5d86ad498dbe77e3fc492bfd06dc3f513d241fa1fd12f4e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/symbiote_bond.snbt"
 hash = "98be3048836bd28910130e3c1b03069760268ff46d60822e33d09ee799158b0e"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/tinkers_workshop.snbt"
+hash = "256931e6d02a9b8a01eb17ddec9ba89265ef27048910c223d87bf4de9d024040"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/weapon_guide.snbt"
+hash = "2b0deeeca91d2e77eb858cd1c33685ab5c1e1950d83741beb9de8b44a72e0949"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -351,6 +371,42 @@ hash = "c36a59b11bf15c1a3eb01307c23967300c64f6d7db9fb385b8a62be7e9a15096"
 [[files]]
 file = "config/openloader/data/imfdata/data/alexscaves/tags/worldgen/biome/has_underground_cabins.json"
 hash = "33975eff3c2c6cf9000bce7825e1256f756eb8a353be7e9b7011bb4298f97a65"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/block_factorys_bosses/capabilities/weapons/dagger.json"
+hash = "132a46da2dd737a2fdcc7a04df293646d611599832101cbfc0f7335d3aff2de0"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/block_factorys_bosses/capabilities/weapons/ice_gauntlet.json"
+hash = "c4ac1072faf9b3e3c59e99d74603eff4d2b622676d18df9b7f12d03cac52b2e5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/block_factorys_bosses/capabilities/weapons/knight_sword.json"
+hash = "7678e24441dd561495b08cae3f60e7cbd8d19584c6ab797ff6614c719a3722e4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/block_factorys_bosses/capabilities/weapons/kraken_trident.json"
+hash = "ac9d3e4d3047d859c845d4421232a20c40d905e49752292a56f41405140e2fe8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/block_factorys_bosses/capabilities/weapons/large_sword.json"
+hash = "af56d5b39a4c4a51d3c053f4349b5789656b027e1731bcbf6b65000762c03184"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/block_factorys_bosses/capabilities/weapons/pirate_saber.json"
+hash = "5b3964b529805c19c88ab53cce06038ffe5159c97c5290bf26f97a3baef40322"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/block_factorys_bosses/capabilities/weapons/sandworm_gauntlet.json"
+hash = "c4ac1072faf9b3e3c59e99d74603eff4d2b622676d18df9b7f12d03cac52b2e5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/block_factorys_bosses/tags/worldgen/biome/kraken_ship.json"
+hash = "5c08c75f20861fe881e95b46e0e83f55ab0b598ef7698013d2d19f7c070ebb68"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/block_factorys_bosses/tags/worldgen/biome/underworld_arena.json"
+hash = "8f97ac5d54c4e710688f392bb3deea02572e34ca706d1dcdc791116931beeee3"
 
 [[files]]
 file = "config/openloader/data/imfdata/data/c/tags/enchantment/netherpower.json"
@@ -979,6 +1035,66 @@ hash = "d7093bdac038c35eea06be3cccd27a8f738ef5e545eea1407d24e3b971120a22"
 [[files]]
 file = "config/openloader/data/imfdata/data/init/functions/load.mcfunction"
 hash = "0036f148760f31d97b8d336c6e3e00ba4f8f629d31dd42890319e31cc7de5624"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/axe_of_lightning.json"
+hash = "bba5a769621164041b4e8dd31f9504bc71cc9c70aed6483e62a1b169e541afee"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/dinosaur_bone_club.json"
+hash = "ab9e54bd0db1f379f5111563d9a1ff13e85ae67101940af36d7238ad83e85760"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/fiery_jaw.json"
+hash = "c4ac1072faf9b3e3c59e99d74603eff4d2b622676d18df9b7f12d03cac52b2e5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/golden_halbert.json"
+hash = "5723e167254af3262175496d9ae1e6986f5ee29b78a0b5ff9d153512fd3e5f08"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/knights_sword.json"
+hash = "0c79589e057180f134cde4d5993c5b10afd7e8547b2cf744460b9b934d312485"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/monstrous_anchor.json"
+hash = "2f780869d590d5e550fca01794bc96b4c720e4a74a3430f6c9e6b1e1e34df9cc"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/mossy_hammer.json"
+hash = "527e9ced768ab9982f2a8faacc57dac694685fe09acf8b146df9bad86d21dd58"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/resurrected_javelin.json"
+hash = "490a1cbe0fc1400c64d2d4b7c2b3298b9ec3803d75897642ea9366c7f73f285c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/shattered_greatsword.json"
+hash = "67d621dae6abf4ea51b3deefa5596c6090e6ba9040b3a46eae29a04107fedf71"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/soul_great_sword.json"
+hash = "67d621dae6abf4ea51b3deefa5596c6090e6ba9040b3a46eae29a04107fedf71"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/the_tesseract.json"
+hash = "67d621dae6abf4ea51b3deefa5596c6090e6ba9040b3a46eae29a04107fedf71"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/withered_scythe.json"
+hash = "14ef5d15831b8ac1eca0a43aed830cf47ecec8eed98e7e446d94d39ed9de00a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/recipes/ancient_spike.json"
+hash = "943ef21d8d94e98455b36a2a2391c49ee3ecd2da08e0645df14ce9b1b4d23786"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/tags/worldgen/biome/has_structure/cloudy_temple_biomes.json"
+hash = "df2bd39cc8cd6ec557df106553d0818dd5bb2d17f5c2ec88c011044aed28fb33"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/worldgen/structure_set/ruined_pyramid.json"
+hash = "81e34188d9d03cc8c51e819cb1870532d2684e8eaf70463c87f0e7ebc78fe22f"
 
 [[files]]
 file = "config/openloader/data/imfdata/data/lootr/advancements/100loot.json"
@@ -2066,7 +2182,7 @@ hash = "596d4b57f3d78f36796f8b425b232b209af964109f297dd5704357344383eaf2"
 
 [[files]]
 file = "config/openloader/data/imfdata/data/monsterexpansion/forge/biome_modifier/add_kobeko_spawn.json"
-hash = "3f96016690ae4aff43af02056bd8fa33bda8cc7caaa11e2fc281a10874277bd9"
+hash = "d27e31dab6d90842cfcfde651749ccf9b06db92235a0ae1c845de0cd163bb015"
 
 [[files]]
 file = "config/openloader/data/imfdata/data/monsterexpansion/recipes/diamond_spear.json"
@@ -2582,7 +2698,7 @@ hash = "74fbe41691725a0dcf76b9e076ce65f7d8cfa7da41a3fa6b5cac02221c14e826"
 
 [[files]]
 file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/icewhisper.json"
-hash = "554cfc7a8331a8926507c18625057f8a256b6d4b8382d179a3abd112f435f43e"
+hash = "e7ba9a22abd41b249238ae7611e3497819919afcb015b7138214de1076b1497d"
 
 [[files]]
 file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_chakram.json"
@@ -3454,6 +3570,11 @@ hash = "4e81241ba2da06f425efc5e09fb6b38470125c1581c39e1310c5843a0b96ec76"
 metafile = true
 
 [[files]]
+file = "mods/ash-of-sin.pw.toml"
+hash = "8b803302809148962c6b722223240817077e8d07cdec83ee43d475ec2029d078"
+metafile = true
+
+[[files]]
 file = "mods/avalon.pw.toml"
 hash = "8b36ac68d03b374842550528af72443d4461abfcedbbd360b6f1d0ccde5d1c24"
 metafile = true
@@ -3471,6 +3592,11 @@ metafile = true
 [[files]]
 file = "mods/bookshelf-lib.pw.toml"
 hash = "ba71bdea2bb0e65eb53646a70e710a23bd711743aba3bc8ba1f2e1034f1cbc50"
+metafile = true
+
+[[files]]
+file = "mods/bossesrise.pw.toml"
+hash = "ee892fd4cbe8b81cc7cb59c7238029b1053a157f76a0e7c0b0315b176fb18a86"
 metafile = true
 
 [[files]]
@@ -3686,6 +3812,11 @@ metafile = true
 [[files]]
 file = "mods/leawind-third-person.pw.toml"
 hash = "d21d6458fc5e4f6171e97a37cf68b8175e3f0a8cde075de3d90c497c0ed41470"
+metafile = true
+
+[[files]]
+file = "mods/legendary-monsters.pw.toml"
+hash = "53e5814c098cb6af168808fd3c0185ad4bfe73559bc1478d8f102505eecf46c7"
 metafile = true
 
 [[files]]

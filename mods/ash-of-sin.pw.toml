@@ -1,0 +1,8 @@
+name = "Ash Of Sin: Soul Like Boss Battle"
+filename = "ash_of_sin-soul_like_boss_battle-1.20.1-1.0.7.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/ash-of-sin-soul-like-boss-battle"
+hash-format = "sha512"
+hash = "c63794458237fb6100a79fc0b6369945233f481cd93d0de6d67856d4036c3d1aff3be9528d992bffd5ff8d31d0ddc9b58ab11e7d26a7ffd82b9384417001853e"
