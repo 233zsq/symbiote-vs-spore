@@ -1,0 +1,46 @@
+{
+	"category": "longsword",
+  "usable_in_offhand": false,
+	"hit_particle": "epicfight:entity.hit.blade",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_hard",
+	"styles": {
+    "default": "two_hand"
+  },
+	"collider":
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 0.8]
+    },
+    "combos":
+    {
+    	"two_hand":
+    	[
+			"fight_more:biped/nf_tachi/nf_tachi_auto3",
+			"fight_more:biped/nf_tachi/nf_tachi_auto4",
+			"epicfight:biped/combat/tachi_auto3",
+			"wom:biped/combat/ruine_auto_3",
+			"wom:biped/combat/orbit_mad_reach"
+
+    	],
+    	"mount":
+    	[
+    		"epicfight:biped/combat/sword_mount_attack"
+    	]
+    },
+    "innate_skills":
+    {
+    	"two_hand": "cdmoveset:lethalslicing"
+    },
+    "livingmotion_modifier": {
+    	"two_hand":
+    	{
+    		"idle": "wom:biped/living/solar_idle",
+    		"block": "wom:biped/skill/solar_guard",
+    		"walk": "wom:biped/living/solar_walk",
+    		"chase": "wom:biped/living/solar_run",
+    		"run": "wom:biped/living/solar_run"
+    	}
+    }
+}

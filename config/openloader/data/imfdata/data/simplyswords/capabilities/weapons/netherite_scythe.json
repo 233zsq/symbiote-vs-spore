@@ -1,0 +1,10 @@
+ {
+    "type": "epicfight:scythe_lite",
+    "attributes": {
+        "common": {
+            "armor_negation": 9.0,
+                "impact": 1.1,
+            "max_strikes": 5
+        }
+    }
+ }

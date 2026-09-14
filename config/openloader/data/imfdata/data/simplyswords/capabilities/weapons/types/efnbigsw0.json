@@ -1,0 +1,44 @@
+{
+	"category": "greatsword",
+  "usable_in_offhand": false,
+	"hit_particle": "epicfight:entity.hit.blunt",
+	"hit_sound": "epicfight:entity.hit.blunt",
+	"swing_sound": "epicfight:entity.weapon.whoosh_hard",
+	"styles": {
+    "default": "two_hand"
+  },
+
+	"collider":
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 1.8]
+    },
+    "combos":
+    {
+    	"two_hand":
+    	[
+			"efn:biped/ng_greatsword/ng_great_auto1",
+			"efn:biped/ng_greatsword/ng_great_auto2",
+			"efn:biped/ng_greatsword/ng_great_auto3",
+                                                "cdmoveset:biped/new/dual_greatsword/combat/greatsword_dash",			
+                                                "epicfight:biped/combat/greatsword_dash"
+
+    	]
+    	
+    },
+    "innate_skills":
+    {
+    	"two_hand": "cdmoveset:wind_slash"
+    },
+    "livingmotion_modifier": {
+    	"two_hand":
+    	{
+    		"block": "epicfight:biped/skill/guard_greatsword",
+		"jump": "epicfightx:biped/living/jump_twohand_heavy",
+    		"idle": "efn:biped/ng_greatsword/ng_great_idle",
+    		"walk": "efn:biped/ng_greatsword/ng_great_walk",
+    		"run": "efn:biped/ng_greatsword/ng_great_run"
+    	}
+    }
+}

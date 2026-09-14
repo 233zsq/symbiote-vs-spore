@@ -1,0 +1,44 @@
+{
+	"category": "spear",
+  "usable_in_offhand": false,
+	"hit_particle": "epicfight:entity.hit.blunt",
+	"hit_sound": "epicfight:entity.hit.blunt",
+	"swing_sound": "epicfight:entity.weapon.whoosh_hard",
+	"styles": {
+    "default": "two_hand"
+  },
+	"collider":
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 0.8]
+    },
+    "combos":
+    {
+    	"two_hand":
+    	[
+			"wom:biped/combat/staff_auto_1",
+			"wom:biped/combat/staff_auto_2",
+			"wom:biped/combat/staff_auto_3",
+			"wom:biped/combat/staff_dash",
+			"wom:biped/combat/staff_kingkong"
+    	],
+    	"mount":
+    	[
+    		"epicfight:biped/combat/sword_mount_attack"
+    	]
+    },
+    "innate_skills":
+    {
+    	"one_hand": "wom:charybdis",
+    	"two_hand": "wom:charybdis"
+    },
+    "livingmotion_modifier": {
+    	"two_hand":
+    	{
+    	    		"idle": "wom:biped/living/staff_idle",
+    	    		"aim": "epicfight:biped/living/hold_liechtenauer",
+    		           "run": "wom:biped/living/staff_run"
+    	}
+    }
+}

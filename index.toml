@@ -745,6 +745,30 @@ file = "config/openloader/data/imfdata/data/curios/tags/items/waist.json"
 hash = "9555d6da26ba8a8da934a610abb05c1feba5819c023d9bd715f94d45c426f233"
 
 [[files]]
+file = "config/openloader/data/imfdata/data/eeeabsmobs/capabilities/weapons/buster_gauntlet.json"
+hash = "c4ac1072faf9b3e3c59e99d74603eff4d2b622676d18df9b7f12d03cac52b2e5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/eeeabsmobs/capabilities/weapons/doombolt_battleaxe.json"
+hash = "74fbe41691725a0dcf76b9e076ce65f7d8cfa7da41a3fa6b5cac02221c14e826"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/eeeabsmobs/capabilities/weapons/guardian_axe.json"
+hash = "98b99aa8f68538a80c7f58eb87973312272e8ef73f6ca693e3a9758e44a93348"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/eeeabsmobs/capabilities/weapons/netherworld_katana.json"
+hash = "283807928f7725cdca2080f21b0ad7ee1349fce71a724603a4a84f6ecef2d5af"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/eeeabsmobs/capabilities/weapons/skyfall_hammer.json"
+hash = "06cf481b18c8d06bc86826d4efb46b712819cecd641f42f06cbe4a2704783b08"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/eeeabsmobs/loot_tables/entities/immortal.json"
+hash = "792abaf53a06363ea4baf6788d8eae2884a61c5adf4c9fa771231b28657906e7"
+
+[[files]]
 file = "config/openloader/data/imfdata/data/efn/capabilities/weapons/exsiliumgladius.json"
 hash = "c046dd464aa273e39aee3c4c02d6923c3417a051baa8a4f2a1904a6fdc0e5bda"
 
@@ -1993,6 +2017,86 @@ file = "config/openloader/data/imfdata/data/modifiers/recipes/reforging_template
 hash = "f8a5a26e3056eb6fb06deeb3dbccfd88ae74900200c98c70b5966bbb7ec9d4de"
 
 [[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/charcraw.json"
+hash = "206af51a2fb2322343b13f2ae4a34c6e07c1a4f84bffaaf4e0ad40718b0d7c96"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/diamond_mace.json"
+hash = "2613cf0866616329f3a71cb41cf53c513e720fc4a273eb2af0ae852faed4933c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/duskrend.json"
+hash = "bc1b5d9ff2cf673af482953dc3b3ea63fba8a7aa8607cffbef6c526ee8a4b285"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/golden_mace.json"
+hash = "2613cf0866616329f3a71cb41cf53c513e720fc4a273eb2af0ae852faed4933c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/horn_of_the_shattercry.json"
+hash = "4f9918568f0d17d6a676f3b38ad1f56130852609abbed57e39e0b7e98b956349"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/iron_mace.json"
+hash = "2613cf0866616329f3a71cb41cf53c513e720fc4a273eb2af0ae852faed4933c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/netherite_mace.json"
+hash = "2613cf0866616329f3a71cb41cf53c513e720fc4a273eb2af0ae852faed4933c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/rimescourge.json"
+hash = "382939d278a5fa2afc15bcbcb90bbdfa08bb5119931ea32295a0ab3fc69bbc42"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/spire_shell_bulwark.json"
+hash = "b2d049e0ef21d472bdc1042e44f695dc2de6b79162263465e8167b6ba605e0dd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/stone_mace.json"
+hash = "2613cf0866616329f3a71cb41cf53c513e720fc4a273eb2af0ae852faed4933c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/capabilities/weapons/wooden_mace.json"
+hash = "2613cf0866616329f3a71cb41cf53c513e720fc4a273eb2af0ae852faed4933c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/forge/biome_modifier/add_arborix_spawn.json"
+hash = "596d4b57f3d78f36796f8b425b232b209af964109f297dd5704357344383eaf2"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/forge/biome_modifier/add_kobeko_spawn.json"
+hash = "3f96016690ae4aff43af02056bd8fa33bda8cc7caaa11e2fc281a10874277bd9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/recipes/diamond_spear.json"
+hash = "c6f8281620c2b87cf6a94f523311eae977e420ef9a6cda8667f61be906ceca90"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/recipes/golden_spear.json"
+hash = "c6f8281620c2b87cf6a94f523311eae977e420ef9a6cda8667f61be906ceca90"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/recipes/iron_spear.json"
+hash = "c6f8281620c2b87cf6a94f523311eae977e420ef9a6cda8667f61be906ceca90"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/recipes/netherite_spear.json"
+hash = "c6f8281620c2b87cf6a94f523311eae977e420ef9a6cda8667f61be906ceca90"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/recipes/stone_spear.json"
+hash = "c6f8281620c2b87cf6a94f523311eae977e420ef9a6cda8667f61be906ceca90"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/recipes/wooden_spear.json"
+hash = "c6f8281620c2b87cf6a94f523311eae977e420ef9a6cda8667f61be906ceca90"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/monsterexpansion/tags/worldgen/biome/ignathos_biomes.json"
+hash = "024a1f12454b7986da23aaf719e46a43759e57567028b95203dcb8fb5f655480"
+
+[[files]]
 file = "config/openloader/data/imfdata/data/p1nero_bow/skill_parameters/mortis_innate.json"
 hash = "777667e55776df66e8699b7774cd16ecb4a7acadd795b46845178c79b54412ea"
 
@@ -2115,6 +2219,914 @@ hash = "3cc0e04fe64f58a6589030d378702a6f06e0554f44711844eabe78098f1ae43a"
 [[files]]
 file = "config/openloader/data/imfdata/data/saintsdragons/tags/worldgen/biome/has_varasuchus_roost.json"
 hash = "aaf7feaad3657ffcf5187dc386e4971d3d4048acb26687017a4a20f9c0b0d753"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/arcanethyst.json"
+hash = "0de6462a68bba105c80c294b33044a266b28cb24c3a9c2d2220188fa644ec6f8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/bramblethorn.json"
+hash = "c39ba1bcf6955ed3e86733b6d4c96bcd2ea2975dae8857c886b925ed291930ac"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/brimstone.json"
+hash = "e7aa551db96f8275e50f1f90956a79c6f316ad10b4e1dfae3e36e62051ab2fb4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/caelestis.json"
+hash = "9e0558490db61714f262c7e03019379a88b1aa62eedd4902b71ec33e31916234"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/decaying_relic.json"
+hash = "423fba3fb09062fc9493fbf651b7115a22be7587414a602e3921f55c9ba2fca4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/dormant_relic.json"
+hash = "2db5b5910e40c73555cb7cc7dcbbd0a6c46fe157381f29d5e2264bef653fd39e"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/emberblade.json"
+hash = "a38cd5eb0d8fab878c5709b8bb6b2172fd82b23366a915c289fa6d59db95fb61"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/emberlash.json"
+hash = "1f6628d8234880e6b934cfc2ace9a435c3d8e60a93b236261421a1a6716138d0"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/enigma.json"
+hash = "ee07bd1ac1dfdbd50c3be46192ff86b1849cd77137e05a76c92d550824dca284"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/flamewind.json"
+hash = "2a4ad01663ce3fdf6ef7af33aacd6c02af21349eaed35ca6e7b764f1e68890b1"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/frostfall.json"
+hash = "0ad7a8e7791dc2c9aa0ae3590def01404038d7c7f410fbc75a8636058f0cc2c7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/grant_book_on_first_join.json"
+hash = "25f1d0680b0040ccd3cbd21ce2ef0ede274806f54cb075ee7c8e818da3870b5d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/harbinger.json"
+hash = "d5ff7a36a6a053cb324d079a8ccad38571e352dbec6cff74a750120b0513e14a"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/hearthflame.json"
+hash = "0a4ffb9558276ba877086710efb21e323bb46af6a0c6eddb21ff4582fdd59605"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/hiveheart.json"
+hash = "abe2f0ec279c66113a7179e4ecf305529e805d3d7e6852a0c385d3cfdec21ee1"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/icewhisper.json"
+hash = "f4a886d20f1181004832ee4d07a1118a3240092dd1e05635213ef841b3805e16"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/livyatan.json"
+hash = "3bfd06c1dcb05c7429855b3cc6a29edd9d92e05e501ef5c4ed76b2836ae2717d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/longsword_plague.json"
+hash = "f9b70b74e2430c5a028d1bcd7789d69ebe14ac7169cc11f404eb610ee3ab3f0c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/magiblade.json"
+hash = "c47ba83625c64b3e83bda2ff3a8b9ae628d965020cbe4888a5161ca16121524c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/magiscythe.json"
+hash = "8bbef5e42d960199cc3190df79247dc5125b8802358f5f5183c5208e175c1cfb"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/magispear.json"
+hash = "886324fb81248d22ba6978f143a09a68bf7e264f876c350096778d1a09206dec"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/mjolnir.json"
+hash = "d36532a4447128cbcfaf989fdcfc9dc2dba5697214d3c4461e9692fe830adb36"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/molten_edge.json"
+hash = "ea0917578b1e2cc22b92f6af9ae8c226246966192d3b8d9948912369b3aa30b2"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/ribboncleaver.json"
+hash = "31a954f9297f95e85112bcd0c9533cb6d7b0165792323bdb58d5120fa69129c2"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/runic_weapon.json"
+hash = "112eb6af7881510628cf18b556432c7cdd41eb2cfae312a84c2b285bc5dc64c2"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/shadowsting.json"
+hash = "37b8df182f39ce19a6f73fcfd11be0ab4a3ebeeb5af023abb302363d76763241"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/simplyswords.json"
+hash = "db4bcff40c063e4d9f49a220f3738888403722a689a56c504644e4abfa6e1aeb"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/slumbering_lichblade.json"
+hash = "31f432390da96cbd3ac07874db2c09752d857bba6b6d9979886cf84c1002b9f6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/soulkeeper.json"
+hash = "429e465a5f9a26a7f2fe55616b2215803340c5686256658c7cb49234b7a91709"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/soulpyre.json"
+hash = "94519d15f0defc28b400c46aaddc5c488e55b7687b1e1ddf9384cb248a915196"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/soulrender.json"
+hash = "cf84b380c31bf551f1fa20dc3367789ded75faf27ee178173dbdac7a82649af3"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/soulstealer.json"
+hash = "ed40311ac68c7a6a4b4a05bf8e8d2a8fa406d59e9cedded6eb63a424cb5d251c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/stars_edge.json"
+hash = "fb4762433d345f7f36b75f769026c4fea548251858250493ae314b5c0ee7eb25"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/stormbringer.json"
+hash = "79d2903dc6818ab1feac2ccb3a7e0b31c5f077eaeed9d8fba16eecd61a621138"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/storms_edge.json"
+hash = "fe8699c1639a573162ab35b795c68297acf098af5983e4f31bfdf3fedd1c0670"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/sunfire.json"
+hash = "d2f97d7d026150dddf11c817ab39e44bb83e9a55a70dcc2c32013647ab42f6a1"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/sword_on_a_stick.json"
+hash = "7407d16088f4e7c273f6b942c8987c4015a1ad2daf78fbcfacc0c6bc20a0f19f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/tempest.json"
+hash = "f793adfc2bcdd93580f3ee7acbbd3ba572526f863ca59ac04c0a0256f484c8df"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/the_watcher.json"
+hash = "80cad61ffad7978806cec8d76ac19614d0f4d430ffce9bf81ef9d1dcef013ac6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/thunderbrand.json"
+hash = "7ea6c426e0b18c2b5960b54baf3d94dcae20b0187c6c5e2cd500399c0f1a19c2"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/twisted_blade.json"
+hash = "9626ff6bcb8e28aa65fbbb4baf5f0dc5c2e323c6d78699b57a9bc58f10c7ed20"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/watching_warglaive.json"
+hash = "b01957a83587f3d27434f6de10ed9cf05323d4fdd9f177ba81a20b407f8ace65"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/waxweaver.json"
+hash = "c27c25e539c0367c20a8891a182d60d1a9211bd60a5f313a07db671fd7c79559"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/whisperwind.json"
+hash = "28b938058f072427f6cb9ea526db8041f71fd5b17e50b65b526ac53544bda749"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/advancements/wickpiercer.json"
+hash = "daaedd3a3b7016ae9b10cdeb82f532dc64c6ddb7c0b3058102dd368085a66128"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/arcanethyst.json"
+hash = "e7ba9a22abd41b249238ae7611e3497819919afcb015b7138214de1076b1497d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/awakened_lichblade.json"
+hash = "e909567d7c6bd49a304f6962ef02531a7df9d76f8786f66fb740094a506cc684"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/bramblethorn.json"
+hash = "615375f68dafb0a6273b2a3190609f7b5927fa29ba45532819fe9723e75e11d0"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/brimstone_claymore.json"
+hash = "a2001813c0a69333cf44e60d7c986a01c6bdd82824ce76ceb8746f485b097964"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/caelestis.json"
+hash = "ec47942e8e3bd3f833b565347a81cd4281f1ae584b136143a2e4dc58d411fe47"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/decaying_relic.json"
+hash = "464acf86b9ba3cf08e9ea3fa0400a76b6c9fdc8cfae897a2e7664edccd085926"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_chakram.json"
+hash = "7b5e9645e1c756388f2341bb6634e6bf997317126b1f95ee07ba611e7a4a6280"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_claymore.json"
+hash = "80f1032b5639cfde6a1760af775b25b0c4f991c97829f479adc4be088becd8d9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_cutlass.json"
+hash = "9970f15987a1dba263cde0ca9bd47881e737baa7a1c44ebb3901e5b761239ac6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_glaive.json"
+hash = "4946debbf48a8c98fcdc5dd0c4547db6665cdd3052f6f298b5ad5009c48f8652"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_greataxe.json"
+hash = "359ed1077aedaa159dab3e9fadb94056cd7751ff9cf9fc5d13b826007244b47c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_greathammer.json"
+hash = "7f7b073291c6dd2f40250c967266c5252553c0fcfa2b2d3696899c047c225b60"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_halberd.json"
+hash = "004df6e53cac18c534ce89869a05f69fc6b4beb02c792629e55cf72554f3f834"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_katana.json"
+hash = "2babc32d9b10dc9645e89139bb2ef4edeca78a687430696ad9f6e80d2cc2aed9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_longsword.json"
+hash = "9af6191feb30993c6eee45942b8108ecf425f6df4836c385bc4021a7d9947967"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_rapier.json"
+hash = "2cf174b4ccbf0077c551e1765bd75ad3a11ef9ebdddd2575243cfe9bc6eb68f4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_sai.json"
+hash = "9970f15987a1dba263cde0ca9bd47881e737baa7a1c44ebb3901e5b761239ac6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_scythe.json"
+hash = "7a60f5b885c8710efb03b178985496ad3e0777496ad94bae129592703ea0818e"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_spear.json"
+hash = "4946debbf48a8c98fcdc5dd0c4547db6665cdd3052f6f298b5ad5009c48f8652"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_twinblade.json"
+hash = "423ce06a0ef7b79650a27be2711f5b539ffa77a93ced6f9b49ef55841d73f4fb"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/diamond_warglaive.json"
+hash = "e40d15bc3d685b0973646060f0e2d75d34f6c51d5e6f6aa7138105dbb8f311c4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/dormant_relic.json"
+hash = "efbfc37f4739e65fb3e77e48a7def2c640809c02e053d69db171284e1e6b3276"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/emberblade.json"
+hash = "65da0bd14c30d92c6458acd11d7efe5a48007d7858abf69e89de85072ba03ba8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/emberlash.json"
+hash = "63037be153beff68f0afb3d1b5ac5b90634edddffdce43972f9d294519409868"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/enigma.json"
+hash = "c6f03134b478e86b8d0319221b091e3559901d31ffb3e7dc71d390a449190577"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/flamewind.json"
+hash = "cc3be638993a7db92d180062f990abebc8c66d8172d5e6142e4ed9ed93c745fb"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/frostfall.json"
+hash = "88b262ff3fdc2859ed2636dbdb87a524f446314d49914495f2054e7581b01d0f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_chakram.json"
+hash = "7997be3f96a7a2a63ed5652e23fba54aa567d3e44594e4e6e81b2fa8b1589d9d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_claymore.json"
+hash = "80f1032b5639cfde6a1760af775b25b0c4f991c97829f479adc4be088becd8d9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_cutlass.json"
+hash = "9970f15987a1dba263cde0ca9bd47881e737baa7a1c44ebb3901e5b761239ac6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_glaive.json"
+hash = "4946debbf48a8c98fcdc5dd0c4547db6665cdd3052f6f298b5ad5009c48f8652"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_greataxe.json"
+hash = "359ed1077aedaa159dab3e9fadb94056cd7751ff9cf9fc5d13b826007244b47c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_greathammer.json"
+hash = "7f7b073291c6dd2f40250c967266c5252553c0fcfa2b2d3696899c047c225b60"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_halberd.json"
+hash = "004df6e53cac18c534ce89869a05f69fc6b4beb02c792629e55cf72554f3f834"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_katana.json"
+hash = "2babc32d9b10dc9645e89139bb2ef4edeca78a687430696ad9f6e80d2cc2aed9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_longsword.json"
+hash = "9af6191feb30993c6eee45942b8108ecf425f6df4836c385bc4021a7d9947967"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_rapier.json"
+hash = "2cf174b4ccbf0077c551e1765bd75ad3a11ef9ebdddd2575243cfe9bc6eb68f4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_sai.json"
+hash = "9970f15987a1dba263cde0ca9bd47881e737baa7a1c44ebb3901e5b761239ac6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_scythe.json"
+hash = "e9f2be52624c6e4d2adf9be7d308f4fa4eb40ba463d98cb85eb8226eb7ceec7f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_spear.json"
+hash = "4946debbf48a8c98fcdc5dd0c4547db6665cdd3052f6f298b5ad5009c48f8652"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_twinblade.json"
+hash = "423ce06a0ef7b79650a27be2711f5b539ffa77a93ced6f9b49ef55841d73f4fb"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/gold_warglaive.json"
+hash = "e40d15bc3d685b0973646060f0e2d75d34f6c51d5e6f6aa7138105dbb8f311c4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/harbinger.json"
+hash = "1130a1142ccc2b8a9d65574ec90ee69fefd95c9f9db85faebe080be6d8a63334"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/hearthflame.json"
+hash = "74fbe41691725a0dcf76b9e076ce65f7d8cfa7da41a3fa6b5cac02221c14e826"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/hiveheart.json"
+hash = "74fbe41691725a0dcf76b9e076ce65f7d8cfa7da41a3fa6b5cac02221c14e826"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/icewhisper.json"
+hash = "554cfc7a8331a8926507c18625057f8a256b6d4b8382d179a3abd112f435f43e"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_chakram.json"
+hash = "7997be3f96a7a2a63ed5652e23fba54aa567d3e44594e4e6e81b2fa8b1589d9d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_claymore.json"
+hash = "80f1032b5639cfde6a1760af775b25b0c4f991c97829f479adc4be088becd8d9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_cutlass.json"
+hash = "9970f15987a1dba263cde0ca9bd47881e737baa7a1c44ebb3901e5b761239ac6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_glaive.json"
+hash = "4946debbf48a8c98fcdc5dd0c4547db6665cdd3052f6f298b5ad5009c48f8652"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_greataxe.json"
+hash = "359ed1077aedaa159dab3e9fadb94056cd7751ff9cf9fc5d13b826007244b47c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_greathammer.json"
+hash = "7f7b073291c6dd2f40250c967266c5252553c0fcfa2b2d3696899c047c225b60"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_halberd.json"
+hash = "004df6e53cac18c534ce89869a05f69fc6b4beb02c792629e55cf72554f3f834"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_katana.json"
+hash = "2babc32d9b10dc9645e89139bb2ef4edeca78a687430696ad9f6e80d2cc2aed9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_longsword.json"
+hash = "9af6191feb30993c6eee45942b8108ecf425f6df4836c385bc4021a7d9947967"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_rapier.json"
+hash = "2cf174b4ccbf0077c551e1765bd75ad3a11ef9ebdddd2575243cfe9bc6eb68f4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_sai.json"
+hash = "9970f15987a1dba263cde0ca9bd47881e737baa7a1c44ebb3901e5b761239ac6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_scythe.json"
+hash = "e9f2be52624c6e4d2adf9be7d308f4fa4eb40ba463d98cb85eb8226eb7ceec7f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_spear.json"
+hash = "4946debbf48a8c98fcdc5dd0c4547db6665cdd3052f6f298b5ad5009c48f8652"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_twinblade.json"
+hash = "423ce06a0ef7b79650a27be2711f5b539ffa77a93ced6f9b49ef55841d73f4fb"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/iron_warglaive.json"
+hash = "e40d15bc3d685b0973646060f0e2d75d34f6c51d5e6f6aa7138105dbb8f311c4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/livyatan.json"
+hash = "bba5a769621164041b4e8dd31f9504bc71cc9c70aed6483e62a1b169e541afee"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/magiblade.json"
+hash = "02206b81abc86dfd02723a76258745dd4fed96526415db0afae42e92ae78f214"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/magiscythe.json"
+hash = "dcb50873af064cb1649f0af237263ec54342b58586c6c726aeffe0fe33049125"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/magispear.json"
+hash = "e0344b501cac62d96738cd26b1ac1eaf6d3e098e718ce62820598eadde94d69f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/mjolnir.json"
+hash = "0529cb5214e6ee10d3e70fe56f5a0423b86bda34d5a9916e46f895cd7ab49da5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/molten_edge.json"
+hash = "bba5a769621164041b4e8dd31f9504bc71cc9c70aed6483e62a1b169e541afee"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_chakram.json"
+hash = "7b5e9645e1c756388f2341bb6634e6bf997317126b1f95ee07ba611e7a4a6280"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_claymore.json"
+hash = "80f1032b5639cfde6a1760af775b25b0c4f991c97829f479adc4be088becd8d9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_cutlass.json"
+hash = "9970f15987a1dba263cde0ca9bd47881e737baa7a1c44ebb3901e5b761239ac6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_glaive.json"
+hash = "4946debbf48a8c98fcdc5dd0c4547db6665cdd3052f6f298b5ad5009c48f8652"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_greataxe.json"
+hash = "359ed1077aedaa159dab3e9fadb94056cd7751ff9cf9fc5d13b826007244b47c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_greathammer.json"
+hash = "7f7b073291c6dd2f40250c967266c5252553c0fcfa2b2d3696899c047c225b60"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_halberd.json"
+hash = "004df6e53cac18c534ce89869a05f69fc6b4beb02c792629e55cf72554f3f834"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_katana.json"
+hash = "2babc32d9b10dc9645e89139bb2ef4edeca78a687430696ad9f6e80d2cc2aed9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_longsword.json"
+hash = "9af6191feb30993c6eee45942b8108ecf425f6df4836c385bc4021a7d9947967"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_rapier.json"
+hash = "2cf174b4ccbf0077c551e1765bd75ad3a11ef9ebdddd2575243cfe9bc6eb68f4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_sai.json"
+hash = "1d2475f3fffe3b6cc8d53047e52ea34f36ee53744acb3e0b0fbb6897527b2e39"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_scythe.json"
+hash = "7a60f5b885c8710efb03b178985496ad3e0777496ad94bae129592703ea0818e"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_spear.json"
+hash = "a7f3de3f0df9a80b63f0da3db38d1350b600a7e9d75d0192a2e56d0205290208"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_twinblade.json"
+hash = "423ce06a0ef7b79650a27be2711f5b539ffa77a93ced6f9b49ef55841d73f4fb"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/netherite_warglaive.json"
+hash = "e40d15bc3d685b0973646060f0e2d75d34f6c51d5e6f6aa7138105dbb8f311c4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/ribboncleaver.json"
+hash = "ec47942e8e3bd3f833b565347a81cd4281f1ae584b136143a2e4dc58d411fe47"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/righteous_relic.json"
+hash = "efbfc37f4739e65fb3e77e48a7def2c640809c02e053d69db171284e1e6b3276"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_chakram.json"
+hash = "7b5e9645e1c756388f2341bb6634e6bf997317126b1f95ee07ba611e7a4a6280"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_claymore.json"
+hash = "89a97331057fba434b27f8814f3762d0ebe29d260499e61264029bb3b7dd9c9c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_cutlass.json"
+hash = "88ef8ba555cc5a80a3c2cb9ed68f8b542ff1e74c32edc46b99bdf124d3a957af"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_glaive.json"
+hash = "bdbdfd8e6ecaf19404f5b078ec54fe919faa1dd6cc44468330c1911daf44e5d5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_greataxe.json"
+hash = "975cc97879edd0ce5a62f84b70b2a56cd2354c5604864ed8bed2c2822686cd70"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_greathammer.json"
+hash = "f468e620e3b308bd6c1a4f6b4448c0dca9efad2748476fa77da4e5be12b5199f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_halberd.json"
+hash = "004df6e53cac18c534ce89869a05f69fc6b4beb02c792629e55cf72554f3f834"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_katana.json"
+hash = "e21ef3284076ef33e63ddd92efb8d90e424b7766c9f54ad8c5b17d012d388884"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_longsword.json"
+hash = "cb3ed2422a4b662d655eed6209e5515b54a12b1ee86e9763fcb60f9366bfa8b5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_rapier.json"
+hash = "615375f68dafb0a6273b2a3190609f7b5927fa29ba45532819fe9723e75e11d0"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_sai.json"
+hash = "1d2475f3fffe3b6cc8d53047e52ea34f36ee53744acb3e0b0fbb6897527b2e39"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_scythe.json"
+hash = "865c83f5722aeb02f0447120e960f9b158344e1eb7feff2b64253a8947851182"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_spear.json"
+hash = "087021f6e00441a287d92fe938a3b7280b1df5adc9be639824a8cc8babe2ae32"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_twinblade.json"
+hash = "8781e98dd0b5c19cd07ee4053e1e91cba3b7646338c152852b46af751ee3d05e"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/runic_warglaive.json"
+hash = "e40d15bc3d685b0973646060f0e2d75d34f6c51d5e6f6aa7138105dbb8f311c4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/shadowsting.json"
+hash = "e865979dfe444bcbb6db4721aba0d98f7a2d42e70d6d9d23e0ab686582db5866"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/slumbering_lichblade.json"
+hash = "cb3ed2422a4b662d655eed6209e5515b54a12b1ee86e9763fcb60f9366bfa8b5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/soulkeeper.json"
+hash = "74fbe41691725a0dcf76b9e076ce65f7d8cfa7da41a3fa6b5cac02221c14e826"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/soulpyre.json"
+hash = "74fbe41691725a0dcf76b9e076ce65f7d8cfa7da41a3fa6b5cac02221c14e826"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/soulrender.json"
+hash = "dcb50873af064cb1649f0af237263ec54342b58586c6c726aeffe0fe33049125"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/soulstealer.json"
+hash = "eaaaef2591b4121649348f42a16ac4ffe456787ed6c761e03922f5bd63ce533a"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/stars_edge.json"
+hash = "fe5293e76b50dd76f4ae7cd07968b374939f11b09f44c864773ba0a74ef21254"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/stormbringer.json"
+hash = "57f4e89b4834702d507475c9d008590c11521e06515795e6d565676ec8beab34"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/storms_edge.json"
+hash = "fe5293e76b50dd76f4ae7cd07968b374939f11b09f44c864773ba0a74ef21254"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/sunfire.json"
+hash = "1130a1142ccc2b8a9d65574ec90ee69fefd95c9f9db85faebe080be6d8a63334"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/sword_on_a_stick.json"
+hash = "8d65aa3b2eca77f5eb2461928795d52ad890e5638aa175f7979c191467e459e7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/tainted_relic.json"
+hash = "efbfc37f4739e65fb3e77e48a7def2c640809c02e053d69db171284e1e6b3276"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/tempest.json"
+hash = "34d9f575048093aac7694992c01fb285d6a261e5d30897fab2a71a7158f10435"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/thunderbrand.json"
+hash = "e7ba9a22abd41b249238ae7611e3497819919afcb015b7138214de1076b1497d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/toxic_longsword.json"
+hash = "4e73529f6461e92da5853a353ae8a4a17b1ea881b2add37ec5ec9ca4e95a0e6e"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/twisted_blade.json"
+hash = "c5cd6a568b05b0bb4567503fcf0289fa02c2b2b0fa658238d4c9baa740461e51"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/bigham.json"
+hash = "ac2213c02aee73c1e2fab4000f40abd01cab7dd135989e08a0ef8543a2bad0c1"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/bigsw.json"
+hash = "957f83f2b94658944e4b46de5e2ff582000a91876d921ba2f65610d1995e40ee"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/bigswlich.json"
+hash = "1ce207436b0abca5719f8566132069328776a6cc12b211653221751554a51d50"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/bokken21.json"
+hash = "537fa227ec52b44543a7435e8a613a72e3171f7aa4989c36c98f091b04b9a07f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/chui2.json"
+hash = "7c9c2b19998edc3c52e37ba18056250412f82989b9689295e908b88de10b539d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/chui3.json"
+hash = "76ddaabcb3e70b8eede2ae226286768160cec33bff64e28ade3093f077697c61"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/chui4.json"
+hash = "14b5a95736225e3d6671eec2a2eb0065c7fc7ba0974ae413b6ab1ae47b9decbf"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/dage2.json"
+hash = "b50c62e77c8c0cf0456c0b920f4a1d93496e0ed359ce183ebb99dbf42963f025"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/dage5.json"
+hash = "0d2656c0d22cb94c3b418464ed02de47dd6bbe643a805a6c182bac464e6c0247"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/dagger_em.json"
+hash = "1f67563f2f3094d28b761d76d514bdd77ae8c8af623e2679a1a4b8b4b9db93d2"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/dagger_ss.json"
+hash = "73ef322ebaea0de5332037a1c829ef949f4890b80dccb9da0ecfac2a23391df1"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/dashguandao.json"
+hash = "9956983693354ea54b9abcc7e12f4c44269894df190286eaa4e06169a7127588"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/efnbigsw.json"
+hash = "320b4f0f48a252e92cae8b92e4310a84baf0aa9996adc2ebcc08c9e1d0e576f6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/efnbigsw0.json"
+hash = "ae30a5f5052d93c05dd5a5d6ca4ded06015d051708e542c33425471326b05260"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/efnbigsw2.json"
+hash = "a639e9a9599089cc8107bc6bc1f0ec1458c8771694898d068b14ef08ee434802"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/efnbigsw3.json"
+hash = "7af1fd744059228dac2a31d954199fc72102c255e1defed120b6d6c2f1da67a8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/efnbigswr.json"
+hash = "834a127b48c24d33da087abd46427f69ee76d7c8450148358a3f1d76ebcdb43f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/emberblade.json"
+hash = "5b1a4b06df860c3035c6c63d7c9930827193d87b70ba484b7ad823d3947caaf8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/greataxe.json"
+hash = "1131aeab7c9aef40ea5dd5796adcc39cb21542131684068a719f39bead4b5bc8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/guandaog.json"
+hash = "11c726658b1ecfdfa91a1695be1e8e1d9d1f35197669508f3cc78b1dd596936f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/huan.json"
+hash = "e0af2cf85a465811eb597210a79c8f8337ea8709e331c98150a46df47fae692f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/huan2.json"
+hash = "7b9d70887dba64188c187ab08f25bfe64feeb529226da67b952eab082938fffe"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/liand.json"
+hash = "fa7701a172418cc5f8f322cf39fb7aabf57d55d6b5b29ae97947c1c11567c9d8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/liandao3.json"
+hash = "9bf9a7b420eadf1504e83fe53eb5cec67343412dbf69976d21f0a810a2bd5e06"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/liandao4.json"
+hash = "d5db741bfa3fe6701856ce116392b3e0f857578dbe6d4387adf7c995ceafa79f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/littorment.json"
+hash = "e499d92a084df548c44487d03b38fb2d1e2c6cf7e0026facd3d20c8a99734bf9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/littorment2.json"
+hash = "523ed2b5d8a96045e4be0fafc6d6c520bfb38c2368c7d9bbfdbc43b95c70848d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/littormentgre.json"
+hash = "7317fa6797721e5348e173447bfd2945fd0fbce8a447eea717a3357b2270c01b"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/nb_dualgreat2.json"
+hash = "5ea230da1d5c3588a4284c013cf4f528906fce1f9dd66e48833a0e4ec7be6ebd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/nbguandao.json"
+hash = "5e49c606f127ed50ed65a9d23a827a743e6740b2e75a41474faa42df183a3e80"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/newlongsw.json"
+hash = "dbe4268b914954ff1aa37a793142e93015d694beff1fde771434d31db701ad29"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/newspear.json"
+hash = "e04921369b1e405669536c6da6028791fc2679ca55bac12f4d6bb0f6b8bcac31"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/newspear2.json"
+hash = "d8ef17835324dad6ffedca1acbfe21dd967d85808db125408d04047ad3048cfb"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/newspear3.json"
+hash = "b00dc28c7ba219a1b2b603addec2791f3073e0ea20607e3cc01539778e1a074c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/newspear4.json"
+hash = "32c15b05975c52c53a542fbec60a2544257f95fdcca72b9359da287f32505718"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/newspear8.json"
+hash = "c958da27b3c372971729ad017f8ca862e986963b7984d3b0ddafd2fa014e15a8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/ruine_l.json"
+hash = "186142177dbfb412b23e878e592a588f4b46a3648fc9ac0f04e441d16c78f272"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/spear_one.json"
+hash = "10a41341faad92b46a0cd03cdd27cf624129ecc2f94531de4f8f0d0274a56522"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/staf.json"
+hash = "661667bd87fc27f40ec0dc06e01c259e334044c52290681810e70161ebaf18f4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/staf2.json"
+hash = "175a0d58e6e44c09a5e84a0567196888ca4e06a6a3c467d5961a7a42e8ef6584"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/stafnew.json"
+hash = "44c9a84d1652b5605835f2631976e0341218ce41a66eb64d48e2989387479150"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/stafnew0.json"
+hash = "44c9a84d1652b5605835f2631976e0341218ce41a66eb64d48e2989387479150"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/stormbringer.json"
+hash = "d1dc2406e6680c96a6437a345dfcc6d804d34dbd3f8b1fb0ed4d35cd16f4bd1b"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/types/tachi3.json"
+hash = "036e4ee22022ea660b1de1d70c8093370f07d3d0d188224add8f22f82f5a54f8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/waking_lichblade.json"
+hash = "c6f03134b478e86b8d0319221b091e3559901d31ffb3e7dc71d390a449190577"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/watcher_claymore.json"
+hash = "3c0ab4aad315e833507a6906611864721c6055fe3d431c715c405c6683c2ea21"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/watching_warglaive.json"
+hash = "5957eec357e43bff867773aef41c606fad1bd7e562307697b9840abaf7b5703c"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/waxweaver.json"
+hash = "f13c8be50bcb3501c676d446555427e32e78d3357bb05c4d05c44cb0a79a7176"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/whisperwind.json"
+hash = "283807928f7725cdca2080f21b0ad7ee1349fce71a724603a4a84f6ecef2d5af"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/capabilities/weapons/wickpiercer.json"
+hash = "1115972a13c452b232e051baa7c8c861465ed478030e51106915a843f94f4264"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/diamond_sai.json"
+hash = "807775fd5ec109c71bb2d062589f42ffa525ffeb7af577155212e282eeecf42b"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/gold_sai.json"
+hash = "1f0ba2d8da206dcdc675541d64dfdfb6c86594d9a259585593c1a9cac0511877"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/iron_sai.json"
+hash = "c25b4e29ec581ce3a5be1656c7ceb4d79d46ab370024d68b10158fa62bfc8db1"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/netherfused_gem_reroll.json"
+hash = "0a604f02babf635f03bf99c9b67914fb62143f516fb740556b3507de11c591a4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_chakram.json"
+hash = "7ceefc09aa6e5a893c2a0e7e7600dd13dbf6b7d838defd954ffc17ac03839c24"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_claymore.json"
+hash = "81379bbb15ffb8f868f9d4cdb59f77f289083aec3556f65930f68b602aa5e757"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_cutlass.json"
+hash = "65a671847b57a782e47f5e881465cf2ac63098f5f90acbe7015832347689b335"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_greataxe.json"
+hash = "6452f0ca9959ec2232e0863c82f53fcd43119b0745e96578fd49d07e7a8ad691"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_greathammer.json"
+hash = "132749afcbf8a3894f08ebc0d0c4296f598c8a33285c8329f157f95d0a01cdf1"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_halberd.json"
+hash = "ac22e5959eb4e5a536cd297ae28eefdde44db781fb3b99f024aaadeb11278a3f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_katana.json"
+hash = "36173ef5fa54dac958a4ca300c9b388792bb6dc8c5463af6b41b2b19f378c366"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_longsword.json"
+hash = "6e9e4eac072630414ac97bf2823ec2f4ce9869e665ea4ac95608c865d5846b4f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_sai.json"
+hash = "6e33577c7445c8a9dd6c9c44d37878694ab8db8eb524a2f8b98963596dc32300"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_scythe.json"
+hash = "7cc677de5702ee3952830a864d3330485e664df124098539d89dbc842b3b9d49"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_spear.json"
+hash = "b841baa47596e379c3592a645348bc82929ea1e87e0947e568f1276a2c77209b"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_twinblade.json"
+hash = "adaebce95a916970d09635447d4f40c6722c695d405de308d5301e43a87876f6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_warglaive.json"
+hash = "9d1c6da9121d209c50f919486e75999fe3e86ac080ff5c285b82ad8deef7f1e1"
 
 [[files]]
 file = "config/openloader/data/imfdata/data/waystones/recipes/waystone.json"
@@ -2452,6 +3464,11 @@ hash = "17c8014eb1049735ee66833b371593964e3a86c3ad288fe7b60766573badd931"
 metafile = true
 
 [[files]]
+file = "mods/bonfires.pw.toml"
+hash = "058e298390894ec2fc78388ac5b82a53501e2d73a0c48f09466721a4464bd8ca"
+metafile = true
+
+[[files]]
 file = "mods/bookshelf-lib.pw.toml"
 hash = "ba71bdea2bb0e65eb53646a70e710a23bd711743aba3bc8ba1f2e1034f1cbc50"
 metafile = true
@@ -2524,6 +3541,11 @@ metafile = true
 [[files]]
 file = "mods/dynamic-fps.pw.toml"
 hash = "506f772362246301d553e9a09236776b5dc84fe3703c7ed126bbcdcada2d3092"
+metafile = true
+
+[[files]]
+file = "mods/eeeabs-mobs.pw.toml"
+hash = "da4fc8b24e5d8bfa6875a7d02ff876a5459bc3c11f860847cbb8054d931c9bfb"
 metafile = true
 
 [[files]]
@@ -2702,6 +3724,11 @@ hash = "603738bc213fc5df525acbba58f81dc23def2191ec7067ae78bee7f6c006c138"
 metafile = true
 
 [[files]]
+file = "mods/monster-expansion.pw.toml"
+hash = "8bcc8e5012be8c02f82f49bf32da75d1064bb30e50ff93e07e1d531cf0942356"
+metafile = true
+
+[[files]]
 file = "mods/moonlight.pw.toml"
 hash = "685d7c61f7d5e1c16e3de6f7e16e090c0355cf38e7d416b730093d4dc239d9d2"
 metafile = true
@@ -2779,6 +3806,11 @@ metafile = true
 [[files]]
 file = "mods/searchables.pw.toml"
 hash = "b453964c97825e80e139bcbac6c61f6b2bbddd1a2a898b807499e12b55e19c98"
+metafile = true
+
+[[files]]
+file = "mods/simply-swords.pw.toml"
+hash = "e7b4f5d39d49d95fc3b11d7e39b29dc7206ef38274200f745912aae332d496e7"
 metafile = true
 
 [[files]]

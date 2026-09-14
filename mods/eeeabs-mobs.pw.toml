@@ -1,0 +1,8 @@
+name = "EEEAB's Mobs"
+filename = "eeeabsmobs-1.20.1-0.98.1.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/eeeabs-mobs"
+hash-format = "sha512"
+hash = "6f3335b4c1f2442ae7233f4c6dc128ac3502b1997b859fce191fe887b4ff71371689b404e5a3e278eea47ab5ffe08d263c80d1e4c2e690cd30d6b1e6175187e1"

@@ -1,0 +1,13 @@
+name = "Bonfires"
+filename = "Bonfires-1.20.1-1.2.20d-5d9820a.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/amg8VIPH/versions/boLB5KV5/Bonfires-1.20.1-1.2.20d-5d9820a.jar"
+hash-format = "sha512"
+hash = "62b71454b48044ccc3c3c854b1631e6f1b70ddc69b2318de5ac4e454442cebd000678310720320d5720990180b9b53897c969c240d897a0158661e16cf72ac14"
+
+[update]
+[update.modrinth]
+mod-id = "amg8VIPH"
+version = "boLB5KV5"

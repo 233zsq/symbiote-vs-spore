@@ -1,0 +1,47 @@
+{
+	"category": "longsword",
+  "usable_in_offhand": false,
+	"hit_particle": "epicfight:entity.hit.blade",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_hard",
+	"styles": {
+    "default": "two_hand"
+  },
+	"collider":
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 0.8]
+    },
+    "combos":
+    {
+    	"two_hand":
+    	[
+			"fight_more:biped/nf_tachi/nf_tachi_auto1",
+			"fight_more:biped/nf_tachi/nf_tachi_auto2",
+			"fight_more:biped/nf_tachi/nf_tachi_auto3",
+			"fight_more:biped/nf_tachi/nf_tachi_auto4",
+			"fight_more:biped/nf_tachi/nf_tachi_dash",
+			"fight_more:biped/nf_tachi/nf_tachi_airslash"
+
+    	],
+    	"mount":
+    	[
+    		"epicfight:biped/combat/sword_mount_attack"
+    	]
+    },
+    "innate_skills":
+    {
+    	"two_hand": "cdmoveset:lethalslicing"
+    },
+    "livingmotion_modifier": {
+    	"two_hand":
+    	{
+    		"idle": "efn:biped/nf_tachi/nf_tachi_idle",
+    		"block": "cdmoveset:biped/hit/guard_longsword",
+    		"walk": "efn:biped/nf_tachi/nf_tachi_walk",
+    		"chase": "efn:biped/nf_tachi/nf_tachi_run",
+    		"run": "efn:biped/nf_tachi/nf_tachi_run"
+    	}
+    }
+}
