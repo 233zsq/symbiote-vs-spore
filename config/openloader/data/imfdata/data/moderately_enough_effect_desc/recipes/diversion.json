@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "tombstone:diversion",
-  "providers": [
-    {
-      "item": "tombstone:dust_of_vanishing"
-    }
-  ]
-}

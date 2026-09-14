@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "tombstone:feather_fall",
-  "providers": [
-    {
-      "item": "tombstone:scroll_of_feather_fall"
-    }
-  ]
-}

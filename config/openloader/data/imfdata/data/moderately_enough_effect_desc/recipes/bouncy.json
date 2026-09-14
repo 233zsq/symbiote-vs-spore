@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "enlightened_end:bouncy",
-  "providers": [
-    {
-      "item": "enlightened_end:squished_bouncer"
-    }
-  ]
-}

@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "tombstone:lightning_resistance",
-  "providers": [
-    {
-      "item": "tombstone:scroll_of_lightning_resistance"
-    }
-  ]
-}

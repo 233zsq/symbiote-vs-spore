@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "sculkhorde:sculk_infected",
-  "providers": [
-    {
-      "item": "sculkhorde:sculk_mite_spawn_egg"
-    }
-  ]
-}

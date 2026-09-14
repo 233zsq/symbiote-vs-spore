@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {"id": "minecraft:forest", "required": false},
-"biomeswevegone:black_forest",
-"biomeswevegone:coniferous_forest",
-"regions_unexplored:temperate_grove"
-  ]
-}

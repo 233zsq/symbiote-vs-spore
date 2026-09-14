@@ -2,7 +2,6 @@
   "replace": true,
   "values": [
     {
-      "id": "#c:is_cold/overworld",
       "required": false
     },
     {
@@ -10,8 +9,6 @@
       "required": false
     },
     "minecraft:snowy_plains",
-    "minecraft:ice_spikes",
-"regions_unexplored:frozen_tundra",
-"biomeswevegone:rugged_badlands"
+    "minecraft:ice_spikes"
   ]
 }

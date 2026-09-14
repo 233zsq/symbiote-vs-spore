@@ -10,12 +10,6 @@
     {
       "id": "forge:is_beach",
       "required": false
-    },
-"regions_unexplored:grassy_beach",
-"regions_unexplored:gravel_beach",
-"regions_unexplored:fen",
-"regions_unexplored:bayou",
-"regions_unexplored:marsh",
-"biomeswevegone:cypress_wetlands"
+    }
   ]
 }

@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "enlightened_end:suffocation",
-  "providers": [
-    {
-      "item": "enlightened_end:fumesplat_spawn_egg"
-    }
-  ]
-}

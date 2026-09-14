@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "ars_nouveau:flight",
-  "providers": [
-    {
-      "item": "ars_nouveau:ritual_flight"
-    }
-  ]
-}

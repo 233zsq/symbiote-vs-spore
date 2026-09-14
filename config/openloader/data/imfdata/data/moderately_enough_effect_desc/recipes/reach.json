@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "tombstone:reach",
-  "providers": [
-    {
-      "item": "tombstone:scroll_of_reach"
-    }
-  ]
-}

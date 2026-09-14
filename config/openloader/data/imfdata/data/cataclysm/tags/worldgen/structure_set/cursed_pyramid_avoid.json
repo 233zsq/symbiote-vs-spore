@@ -1,9 +1,4 @@
 {
   "replace": false,
-  "values": [
-"ati_structures:desert_outpost",
-"imf_bosses:rockarena",
-"legendary_monsters:ruined_pyramid",
-"nightfall_invade:gate_of_disaster"
-  ]
+  "values": []
 }

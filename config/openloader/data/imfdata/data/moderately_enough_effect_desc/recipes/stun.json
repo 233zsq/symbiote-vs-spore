@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "cataclysm:stun",
-  "providers": [
-    {
-      "item": "cataclysm:bulwark_of_the_flame"
-    }
-  ]
-}

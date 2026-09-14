@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "ars_nouveau:snared",
-  "providers": [
-    {
-      "item": "ars_nouveau:glyph_snare"
-    }
-  ]
-}

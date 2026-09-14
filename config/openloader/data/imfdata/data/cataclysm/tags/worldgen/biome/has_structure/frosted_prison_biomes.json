@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:snowy_plains",
-  "regions_unexplored:frozen_tundra",
-"regions_unexplored:spires"
+    "minecraft:snowy_plains"
   ]
 }

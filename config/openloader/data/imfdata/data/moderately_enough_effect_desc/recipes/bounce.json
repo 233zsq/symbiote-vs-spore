@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "ars_nouveau:bounce",
-  "providers": [
-    {
-      "item": "ars_nouveau:glyph_bounce"
-    }
-  ]
-}

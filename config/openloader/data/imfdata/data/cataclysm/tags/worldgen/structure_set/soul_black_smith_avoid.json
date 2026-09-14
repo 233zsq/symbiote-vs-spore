@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:nether_complexes",
-"block_factorys_bosses:underworld_arena",
-"betterfortresses:fortress",
-"netherexp:sanctum"
+    "betterfortresses:fortress"
   ]
 }

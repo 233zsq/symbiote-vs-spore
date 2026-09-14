@@ -1,8 +1,6 @@
 {
   "replace": true,
   "values": [
-    "minecraft:end_barrens",
-"betterend:shadow_forest",
-"betterend:chorus_forest"
+    "minecraft:end_barrens"
   ]
 }

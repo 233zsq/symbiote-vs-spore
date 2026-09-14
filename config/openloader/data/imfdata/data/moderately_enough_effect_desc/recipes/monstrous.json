@@ -1,9 +1,0 @@
-{
-  "type": "jeed:effect_provider",
-  "effect": "cataclysm:monstrous",
-  "providers": [
-    {
-      "item": "cataclysm:monstrous_helm"
-    }
-  ]
-}
