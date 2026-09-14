@@ -151,7 +151,11 @@
 			id: "A3F1C0E110000002"
 			title: "T2·领主级"
 			subtitle: "统御一方的领主"
-			description: ["统御一方的领主级 Boss，多数需主动深入领地或完成仪式。", "部分 Boss 可链式挑战，逐级推进切勿冒进。"]
+			description: [
+				"统御一方的领主级 Boss，多数需主动深入领地或完成仪式。",
+				"原版、EEEAB 三尊、怪物扩展六神、灾变前四、传奇怪物五尊与 Bosses'Rise 六杰皆在此列。",
+				"部分 Boss 可链式挑战，逐级推进切勿冒进。"
+			]
 			x: 0.0d
 			y: 5.0d
 			shape: "diamond"
@@ -629,12 +633,356 @@
 			]
 		}
 		{
+			id: "A3F1C0E110000051"
+			title: "远古巨像"
+			subtitle: "苔痕满身的活体遗迹"
+			description: [
+				"传奇怪物五尊之首，被丛林吞没的活体巨像。",
+				"刷新结构与召唤方式：人工核实。",
+				"重踏与投石交替，破甲缓慢但一击致命。",
+				"推荐挑战阶段：stage3 前后，五尊链开启。"
+			]
+			x: 1.5d
+			y: 10.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000002"]
+			tasks: [
+				{
+					id: "A3F1C0E120000051"
+					type: "kill"
+					entity: "legendary_monsters:overgrown_colossus"
+					value: 1L
+					title: "远古巨像"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000051"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+		}
+		{
+			id: "A3F1C0E110000052"
+			title: "上古守卫"
+			subtitle: "失落神殿的千年门卫"
+			description: [
+				"五尊之二，镇守失落遗迹的千年门卫。",
+				"刷新结构与召唤方式：人工核实。",
+				"格挡姿态免疫正面伤害，抓攻击硬直出手。",
+				"推荐挑战阶段：stage3 后期。"
+			]
+			x: 3.0d
+			y: 10.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000051"]
+			tasks: [
+				{
+					id: "A3F1C0E120000052"
+					type: "kill"
+					entity: "legendary_monsters:ancient_guardian"
+					value: 1L
+					title: "上古守卫"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000052"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+			]
+		}
+		{
+			id: "A3F1C0E110000053"
+			title: "无头骑士"
+			subtitle: "断首仍执剑的亡魂"
+			description: [
+				"五尊之三，游荡于古战场的无头亡魂。",
+				"刷新结构与召唤方式：人工核实，夜间遭遇概率更高。",
+				"冲锋突刺与处决斩，残血时愈发癫狂。",
+				"推荐挑战阶段：stage3 后期～stage4。"
+			]
+			x: 4.5d
+			y: 10.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000052"]
+			tasks: [
+				{
+					id: "A3F1C0E120000053"
+					type: "kill"
+					entity: "legendary_monsters:beheaded_knight"
+					value: 1L
+					title: "无头骑士"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000053"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+			]
+		}
+		{
+			id: "A3F1C0E110000054"
+			title: "复生骑士"
+			subtitle: "从墓土归来的战魂"
+			description: [
+				"五尊之四，自无头骑士倒下的墓土中重生。",
+				"讨伐无头骑士后于同一地点触发：人工核实。",
+				"继承前身剑技并强化，连战两场备足补给。",
+				"推荐挑战阶段：stage4。"
+			]
+			x: 6.0d
+			y: 10.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000053"]
+			tasks: [
+				{
+					id: "A3F1C0E120000054"
+					type: "kill"
+					entity: "legendary_monsters:resurrected_knight"
+					value: 1L
+					title: "复生骑士"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000054"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+			]
+		}
+		{
+			id: "A3F1C0E110000055"
+			title: "积雨云魔像"
+			subtitle: "驾驭风暴的云中巨像"
+			description: [
+				"五尊压轴，于雷暴天候自云端降下。",
+				"生成条件与召唤方式：人工核实，雨天高山优先排查。",
+				"雷击与冰雹覆盖全场，注意脚下落雷预警。",
+				"推荐挑战阶段：stage4，五尊链终结。"
+			]
+			x: 7.5d
+			y: 10.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000054"]
+			tasks: [
+				{
+					id: "A3F1C0E120000055"
+					type: "kill"
+					entity: "legendary_monsters:cloud_golem"
+					value: 1L
+					title: "积雨云魔像"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000055"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+		}
+		{
+			id: "A3F1C0E110000056"
+			title: "海盗船长"
+			subtitle: "七海之上的亡命枭雄"
+			description: [
+				"Bosses'Rise 六杰之首，率船队劫掠沿海的海盗头目。",
+				"据点与召唤方式：人工核实，留意海盗船与藏宝点。",
+				"火铳齐射与跳帮突袭，先清船员再单挑。",
+				"推荐挑战阶段：stage3 前后，六杰链开启。"
+			]
+			x: 1.5d
+			y: 11.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000002"]
+			tasks: [
+				{
+					id: "A3F1C0E120000056"
+					type: "kill"
+					entity: "block_factorys_bosses:pirate_captain"
+					value: 1L
+					title: "海盗船长"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000056"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+		}
+		{
+			id: "A3F1C0E110000057"
+			title: "雪怪斯柯尔"
+			subtitle: "雪山之巅的白色暴君"
+			description: [
+				"六杰之二，盘踞雪人巢穴的雪怪 Skor。",
+				"巢穴结构定位：人工核实，冰原雪山重点搜索。",
+				"雪崩践踏与寒冰投掷，近身撕咬极痛。",
+				"推荐挑战阶段：stage3，备好抗寒装备。"
+			]
+			x: 3.0d
+			y: 11.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000056"]
+			tasks: [
+				{
+					id: "A3F1C0E120000057"
+					type: "kill"
+					entity: "block_factorys_bosses:yeti"
+					value: 1L
+					title: "雪怪斯柯尔"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000057"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+			]
+		}
+		{
+			id: "A3F1C0E110000058"
+			title: "沙虫西罗克"
+			subtitle: "沙海之下的流沙死神"
+			description: [
+				"六杰之三，潜行于沙虫巢之下的沙虫 Sirok。",
+				"巢穴结构定位：人工核实，荒漠留意沙面波纹。",
+				"遁地突袭与沙暴喷吐，立于岩石暂避锋芒。",
+				"推荐挑战阶段：stage4 前后。"
+			]
+			x: 4.5d
+			y: 11.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000057"]
+			tasks: [
+				{
+					id: "A3F1C0E120000058"
+					type: "kill"
+					entity: "block_factorys_bosses:sandworm"
+					value: 1L
+					title: "沙虫西罗克"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000058"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+			]
+		}
+		{
+			id: "A3F1C0E110000059"
+			title: "克拉肯·涅拉克西斯"
+			subtitle: "深渊漩涡中的巨触"
+			description: [
+				"六杰之四，于深海漩涡现身的克拉肯 Nerakyss。",
+				"现身方式：人工核实，深海沉船或祭坛或有关联。",
+				"触手横扫与漩涡牵引，水下作战注意氧气。",
+				"推荐挑战阶段：stage4，备齐深海装备。"
+			]
+			x: 6.0d
+			y: 11.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000058"]
+			tasks: [
+				{
+					id: "A3F1C0E120000059"
+					type: "kill"
+					entity: "block_factorys_bosses:kraken"
+					value: 1L
+					title: "克拉肯·涅拉克西斯"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000059"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+			]
+		}
+		{
+			id: "A3F1C0E11000005A"
+			title: "炼狱龙·灰烬领主"
+			subtitle: "龙塔之巅的灰烬领主"
+			description: [
+				"六杰之五，盘踞龙塔之巅的炼狱龙 Ashlord。",
+				"龙塔结构定位：人工核实，灼热群系概率较高。",
+				"龙息火雨与俯冲抓取，空战与地对空并用。",
+				"推荐挑战阶段：stage5，六杰的第五战。"
+			]
+			x: 7.5d
+			y: 11.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000059"]
+			tasks: [
+				{
+					id: "A3F1C0E12000005A"
+					type: "kill"
+					entity: "block_factorys_bosses:infernal_dragon"
+					value: 1L
+					title: "炼狱龙·灰烬领主"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E13000005A"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+		}
+		{
+			id: "A3F1C0E11000005B"
+			title: "冥界骑士·赫尔瓦"
+			subtitle: "冥界之门的最终守将"
+			description: [
+				"六杰压轴，镇守冥界之门的骑士 Helvar。",
+				"现身条件：人工核实，据传需前五杰尽数讨伐。",
+				"暗影突进与灵魂斩击，半血进入二阶段狂暴。",
+				"推荐挑战阶段：stage5，六杰链终结。"
+			]
+			x: 9.0d
+			y: 11.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E11000005A"]
+			tasks: [
+				{
+					id: "A3F1C0E12000005B"
+					type: "kill"
+					entity: "block_factorys_bosses:underworld_knight"
+					value: 1L
+					title: "冥界骑士·赫尔瓦"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E13000005B"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+		}
+		{
 			id: "A3F1C0E110000003"
 			title: "T3·灾厄级"
 			subtitle: "改写命运的灾厄"
-			description: ["改写命运的灾厄级 Boss，每一场都是史诗之战。", "暮色八连、灾变四后与末影龙皆在此列。"]
+			description: [
+				"改写命运的灾厄级 Boss，每一场都是史诗之战。",
+				"暮色八连、灾变后四、末影龙与罪业余烬皆在此列。"
+			]
 			x: 0.0d
-			y: 11.0d
+			y: 14.0d
 			shape: "diamond"
 			tasks: [
 				{
@@ -655,7 +1003,7 @@
 				"推荐挑战阶段：stage3 开局，暮色八连之首。"
 			]
 			x: 1.5d
-			y: 10.0d
+			y: 13.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000003"]
 			tasks: [
@@ -686,7 +1034,7 @@
 				"推荐挑战阶段：stage3 前期。"
 			]
 			x: 3.0d
-			y: 10.0d
+			y: 13.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000031"]
 			tasks: [
@@ -717,7 +1065,7 @@
 				"推荐挑战阶段：stage3 前期。"
 			]
 			x: 4.5d
-			y: 10.0d
+			y: 13.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000032"]
 			tasks: [
@@ -748,7 +1096,7 @@
 				"推荐挑战阶段：stage3 中期。"
 			]
 			x: 6.0d
-			y: 10.0d
+			y: 13.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000033"]
 			tasks: [
@@ -779,7 +1127,7 @@
 				"推荐挑战阶段：stage3 中期。"
 			]
 			x: 7.5d
-			y: 10.0d
+			y: 13.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000034"]
 			tasks: [
@@ -810,7 +1158,7 @@
 				"推荐挑战阶段：stage3 后期。"
 			]
 			x: 9.0d
-			y: 10.0d
+			y: 13.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000035"]
 			tasks: [
@@ -841,7 +1189,7 @@
 				"推荐挑战阶段：stage3 后期。"
 			]
 			x: 10.5d
-			y: 10.0d
+			y: 13.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000036"]
 			tasks: [
@@ -872,7 +1220,7 @@
 				"推荐挑战阶段：stage3 后期～stage4。"
 			]
 			x: 12.0d
-			y: 10.0d
+			y: 13.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000037"]
 			tasks: [
@@ -903,7 +1251,7 @@
 				"推荐挑战阶段：stage4。"
 			]
 			x: 1.5d
-			y: 12.0d
+			y: 14.5d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000003"]
 			tasks: [
@@ -934,7 +1282,7 @@
 				"推荐挑战阶段：stage4。"
 			]
 			x: 3.0d
-			y: 12.0d
+			y: 14.5d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000039"]
 			tasks: [
@@ -965,7 +1313,7 @@
 				"推荐挑战阶段：stage4 中后期。"
 			]
 			x: 4.5d
-			y: 12.0d
+			y: 14.5d
 			shape: "circle"
 			dependencies: ["A3F1C0E11000003A"]
 			tasks: [
@@ -996,7 +1344,7 @@
 				"推荐挑战阶段：stage4 后期。"
 			]
 			x: 6.0d
-			y: 12.0d
+			y: 14.5d
 			shape: "circle"
 			dependencies: ["A3F1C0E11000003B"]
 			tasks: [
@@ -1027,7 +1375,7 @@
 				"推荐挑战阶段：stage4，T3 区收官之战。"
 			]
 			x: 1.5d
-			y: 13.5d
+			y: 16.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000003"]
 			tasks: [
@@ -1048,12 +1396,45 @@
 			]
 		}
 		{
+			id: "A3F1C0E110000061"
+			title: "挑战罪业余烬"
+			subtitle: "灰烬之中·魂火不熄"
+			description: [
+				"Ash Of Sin 类魂 Boss 战，国创原生中文模组。",
+				"实体 ID 与召唤方式：人工核实。",
+				"弹反、翻滚与处决构成的硬核对决，死亡惩罚极重。",
+				"推荐挑战阶段：stage5，T3 真正的收官之战。"
+			]
+			x: 1.5d
+			y: 17.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000003"]
+			tasks: [
+				{
+					id: "A3F1C0E120000061"
+					type: "checkmark"
+					title: "挑战罪业余烬"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000061"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+		}
+		{
 			id: "A3F1C0E110000004"
 			title: "论外·天灾级"
 			subtitle: "不属于此世的灾祸"
-			description: ["不属于此世的灾祸，真菌天灾的最终兵器。", "每一尊 Calamity 都是对整合包配装的终极检验。"]
+			description: [
+				"不属于此世的灾祸，真菌天灾的最终兵器。",
+				"每一尊 Calamity 都是对整合包配装的终极检验。",
+				"黑魂结构群为结构讨伐备注，详见「类魂结构探索」章。"
+			]
 			x: 0.0d
-			y: 15.5d
+			y: 20.0d
 			shape: "diamond"
 			tasks: [
 				{
@@ -1074,7 +1455,7 @@
 				"推荐挑战阶段：跟随天灾防线章节进度。"
 			]
 			x: 1.5d
-			y: 15.5d
+			y: 20.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000004"]
 			tasks: [
@@ -1102,10 +1483,10 @@
 				"九 Calamity 之二，远程轰炸型感染体。",
 				"天灾升级阶段放开，详见天灾防线章。",
 				"优先摧毁其输出阵地再近身。",
-				"推荐挑战阶段：				"推荐挑战阶段：跟随天灾防线进度。"
+				"推荐挑战阶段：跟随天灾防线进度。"
 			]
 			x: 3.0d
-			y: 15.5d
+			y: 20.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000041"]
 			tasks: [
@@ -1136,7 +1517,7 @@
 				"推荐挑战阶段：跟随天灾防线进度。"
 			]
 			x: 4.5d
-			y: 15.5d
+			y: 20.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000042"]
 			tasks: [
@@ -1167,7 +1548,7 @@
 				"推荐挑战阶段：跟随天灾防线进度。"
 			]
 			x: 6.0d
-			y: 15.5d
+			y: 20.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000043"]
 			tasks: [
@@ -1198,7 +1579,7 @@
 				"推荐挑战阶段：跟随天灾防线进度。"
 			]
 			x: 7.5d
-			y: 15.5d
+			y: 20.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000044"]
 			tasks: [
@@ -1229,7 +1610,7 @@
 				"推荐挑战阶段：跟随天灾防线进度。"
 			]
 			x: 9.0d
-			y: 15.5d
+			y: 20.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000045"]
 			tasks: [
@@ -1260,7 +1641,7 @@
 				"推荐挑战阶段：跟随天灾防线进度。"
 			]
 			x: 10.5d
-			y: 15.5d
+			y: 20.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000046"]
 			tasks: [
@@ -1291,7 +1672,7 @@
 				"推荐挑战阶段：跟随天灾防线进度。"
 			]
 			x: 12.0d
-			y: 15.5d
+			y: 20.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000047"]
 			tasks: [
@@ -1322,7 +1703,7 @@
 				"推荐挑战阶段：stage5，论外区收官之战。"
 			]
 			x: 13.5d
-			y: 15.5d
+			y: 20.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E110000048"]
 			tasks: [
@@ -1339,6 +1720,35 @@
 					id: "A3F1C0E130000049"
 					type: "xp_levels"
 					xp_levels: 5
+				}
+			]
+		}
+		{
+			id: "A3F1C0E110000062"
+			title: "黑魂结构群"
+			subtitle: "探索即战斗·类魂遗迹"
+			description: [
+				"传奇怪物的遗迹金字塔、Bosses'Rise 的龙塔·沙虫巢·雪人巢、罪业余烬竞技场。",
+				"这些结构本身就是战场，踏入即开战。",
+				"结构与掉落详情：详见「类魂结构探索」章。",
+				"推荐挑战阶段：stage4 以后，做好连战准备。"
+			]
+			x: 1.5d
+			y: 21.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E110000004"]
+			tasks: [
+				{
+					id: "A3F1C0E120000062"
+					type: "checkmark"
+					title: "黑魂结构群"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E130000062"
+					type: "xp_levels"
+					xp_levels: 2
 				}
 			]
 		}

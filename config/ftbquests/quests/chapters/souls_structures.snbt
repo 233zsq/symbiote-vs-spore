@@ -1,0 +1,295 @@
+{
+	default_hide_dependency_lines: false
+	filename: "souls_structures"
+	group: "0B00AA11CC22DD66"
+	icon: "minecraft:lodestone"
+	id: "A3F1C0DE00000007"
+	order_index: 2
+	title: "类魂结构探索"
+	quests: [
+		{
+			id: "A3F1C0DE17000001"
+			title: "何为黑魂结构"
+			subtitle: "类魂包三件套结构群导览"
+			description: [
+				"此方天地之间，巨构林立，皆有其主。",
+				"传奇怪物、方块工厂 Boss、罪业余烬与灾变……每一处废墟都盘踞着镇守者。",
+				"循链而行，逐一点名；未核实之处已注明，行者当亲眼验证。"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			tasks: [
+				{id: "A3F1C0DE27000001", type: "checkmark", title: "翻开结构导览"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000001", type: "xp", xp: 10}
+			]
+		}
+		{
+			id: "A3F1C0DE17000002"
+			title: "远古金字塔"
+			subtitle: "Legendary Monsters·沙漠遗迹"
+			description: [
+				"模组：Legendary Monsters；结构：远古金字塔 ruined_pyramid。",
+				"生成群系：沙漠系（人工核实）；镇守：远古巨像 Overgrown Colossus。",
+				"石躯藤蔓缠身，寻常刀斧难破其甲，建议阶段Ⅲ后、附魔铁器以上再叩门。"
+			]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE17000001"]
+			tasks: [
+				{id: "A3F1C0DE27000002", type: "checkmark", title: "探访远古金字塔"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000002", type: "xp", xp: 20}
+			]
+		}
+		{
+			id: "A3F1C0DE17000003"
+			title: "云端魔像"
+			subtitle: "Legendary Monsters·云端巨像"
+			description: [
+				"模组：Legendary Monsters；结构：云端魔像 cloud_golem 出没的天空结构。",
+				"生成位置与结构形态：人工核实。",
+				"云中巨像俯瞰大地，坠落之拳可碎金铁，需以远程周旋、备好鞘翅。"
+			]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE17000002"]
+			tasks: [
+				{id: "A3F1C0DE27000003", type: "checkmark", title: "仰望云端魔像"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000003", type: "xp", xp: 20}
+			]
+		}
+		{
+			id: "A3F1C0DE17000004"
+			title: "龙塔"
+			subtitle: "Block Factory's Bosses·炼狱龙巢"
+			description: [
+				"模组：Block Factory's Bosses；结构：龙塔 dragon_tower。",
+				"生成群系：人工核实；镇守：Ashlord 炼狱龙。",
+				"高塔即是龙巢，焰息自塔顶倾泻，建议阶段Ⅳ、火抗齐备再登塔。"
+			]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE17000003"]
+			tasks: [
+				{id: "A3F1C0DE27000004", type: "checkmark", title: "登临龙塔"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000004", type: "xp", xp: 30}
+				{id: "A3F1C0DE37000005", type: "item", item: {id: "waystones:warp_scroll", Count: 1b}}
+			]
+		}
+		{
+			id: "A3F1C0DE17000005"
+			title: "沙虫巢"
+			subtitle: "Block Factory's Bosses·荒漠之喉"
+			description: [
+				"模组：Block Factory's Bosses；结构：沙虫巢 sandworm_nest。",
+				"生成群系：人工核实；镇守：Sirok 沙虫。",
+				"沙丘之下暗流涌动，钻地突袭防不胜防，站上硬地、莫踏流沙。"
+			]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE17000004"]
+			tasks: [
+				{id: "A3F1C0DE27000005", type: "checkmark", title: "直面沙虫之巢"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000006", type: "xp", xp: 25}
+			]
+		}
+		{
+			id: "A3F1C0DE17000006"
+			title: "雪人巢"
+			subtitle: "Block Factory's Bosses·极寒洞窟"
+			description: [
+				"模组：Block Factory's Bosses；结构：雪人巢 yeti_hideout。",
+				"生成群系：人工核实；镇守：Skor 雪怪。",
+				"寒风封路，雪怪抡起冰拳，备好御寒装备与抗寒手段再入洞。"
+			]
+			x: 7.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE17000005"]
+			tasks: [
+				{id: "A3F1C0DE27000006", type: "checkmark", title: "闯入雪人巢"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000007", type: "xp", xp: 25}
+			]
+		}
+		{
+			id: "A3F1C0DE17000007"
+			title: "克拉肯沉船"
+			subtitle: "Block Factory's Bosses·深海巨兽"
+			description: [
+				"模组：Block Factory's Bosses；结构：克拉肯 kraken 海战结构（人工核实）。",
+				"镇守：Kraken 克拉肯。",
+				"沉船之下触手翻涌，水下呼吸与速泳是活命之本，勿被拖入深渊。"
+			]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE17000006"]
+			tasks: [
+				{id: "A3F1C0DE27000007", type: "checkmark", title: "扬帆迎战克拉肯"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000008", type: "xp", xp: 35}
+				{id: "A3F1C0DE37000009", type: "item", item: {id: "waystones:return_scroll", Count: 1b}}
+			]
+		}
+		{
+			id: "A3F1C0DE17000008"
+			title: "冥界骑士堡"
+			subtitle: "Block Factory's Bosses·幽暗要塞"
+			description: [
+				"模组：Block Factory's Bosses；结构：冥界骑士 underworld_knight 堡垒（人工核实）。",
+				"镇守：Underworld Knight 冥界骑士。",
+				"幽冥甲胄难破，圣光与火焰可寻其隙，建议阶段Ⅴ前先磨刃。"
+			]
+			x: 10.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE17000007"]
+			tasks: [
+				{id: "A3F1C0DE27000008", type: "checkmark", title: "叩响冥界之门"}
+			]
+			rewards: [
+				{id: "A3F1C0DE3700000A", type: "xp", xp: 35}
+			]
+		}
+		{
+			id: "A3F1C0DE17000009"
+			title: "罪业余烬竞技场"
+			subtitle: "Ash of Sin·国创原生引导"
+			description: [
+				"模组：Ash of Sin 罪业余烬；结构：竞技场（人工核实）。",
+				"国创模组，内含原生中文引导，循其指引踏入试炼。",
+				"余烬未冷，罪业待焚，此战最得魂系试炼之正味。"
+			]
+			x: 12.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE17000008"]
+			tasks: [
+				{id: "A3F1C0DE27000009", type: "checkmark", title: "踏入罪业竞技场"}
+			]
+			rewards: [
+				{id: "A3F1C0DE3700000B", type: "xp", xp: 30}
+				{id: "A3F1C0DE3700000C", type: "item", item: {id: "waystones:bound_scroll", Count: 1b}}
+			]
+		}
+		{
+			id: "A3F1C0DE1700000A"
+			title: "灾变燃烧竞技场"
+			subtitle: "Cataclysm·烈焰试炼"
+			description: [
+				"模组：Cataclysm 灾变；结构：燃烧竞技场（人工核实）。",
+				"镇守者盘踞于火狱中央，Boss 战节奏紧凑。",
+				"建议阶段Ⅳ装备入场，火抗药水常备无患。"
+			]
+			x: 13.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE17000009"]
+			tasks: [
+				{id: "A3F1C0DE2700000A", type: "checkmark", title: "亲历燃烧竞技场"}
+			]
+			rewards: [
+				{id: "A3F1C0DE3700000D", type: "xp", xp: 35}
+			]
+		}
+		{
+			id: "A3F1C0DE1700000B"
+			title: "灾变灵魂铁匠铺"
+			subtitle: "Cataclysm·魂锻遗迹"
+			description: [
+				"模组：Cataclysm 灾变；结构：灵魂铁匠铺（人工核实）。",
+				"传闻此处可寻灾变强装的材料与锻造线索。",
+				"灵魂火炉不熄，造访时留意角落里的特殊熔炉。"
+			]
+			x: 15.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1700000A"]
+			tasks: [
+				{id: "A3F1C0DE2700000B", type: "checkmark", title: "造访灵魂铁匠铺"}
+			]
+			rewards: [
+				{id: "A3F1C0DE3700000E", type: "xp", xp: 35}
+				{id: "A3F1C0DE3700000F", type: "item", item: {id: "waystones:return_scroll", Count: 1b}}
+			]
+		}
+		{
+			id: "A3F1C0DE1700000C"
+			title: "圣龙巢穴"
+			subtitle: "Saints Dragons·龙眠之地"
+			description: [
+				"模组：Saints Dragons；结构：圣龙巢穴。",
+				"群系标签已注入 Terralith 世界生成，可按图索骥。",
+				"巢中皆是龙属霸主；圣龙仅可骑乘赶路，不可令其参战。"
+			]
+			x: 16.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1700000B"]
+			tasks: [
+				{id: "A3F1C0DE2700000C", type: "checkmark", title: "寻访圣龙巢穴"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000010", type: "xp", xp: 40}
+				{id: "A3F1C0DE37000011", type: "item", item: {id: "waystones:warp_scroll", Count: 1b}}
+			]
+		}
+		{
+			id: "A3F1C0DE1700000D"
+			title: "真菌 Mound 坠落点"
+			subtitle: "Spore·天灾定点"
+			description: [
+				"模组：Spore；结构：Mound 坠落点。",
+				"Inquisition 定点坠落制，真菌巨构自天而降，详见天灾防线章。",
+				"坠点即是战场，共生体武装与真菌克星武器请提前备好。"
+			]
+			x: 18.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0DE1700000C"]
+			tasks: [
+				{id: "A3F1C0DE2700000D", type: "checkmark", title: "记录真菌坠落点"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000012", type: "xp", xp: 40}
+			]
+		}
+		{
+			id: "A3F1C0DE1700000E"
+			title: "魂路行者"
+			subtitle: "十三巨构·尽数踏破"
+			description: [
+				"十三处巨构，十三位镇守者，皆已刻入你的战历。",
+				"魂路至此，行者不孤——归途石在，来去自如。"
+			]
+			x: 19.5d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: ["A3F1C0DE17000001", "A3F1C0DE17000002", "A3F1C0DE17000003", "A3F1C0DE17000004", "A3F1C0DE17000005", "A3F1C0DE17000006", "A3F1C0DE17000007", "A3F1C0DE17000008", "A3F1C0DE17000009", "A3F1C0DE1700000A", "A3F1C0DE1700000B", "A3F1C0DE1700000C", "A3F1C0DE1700000D"]
+			tasks: [
+				{id: "A3F1C0DE2700000E", type: "checkmark", title: "点亮全部结构导览"}
+			]
+			rewards: [
+				{id: "A3F1C0DE37000013", type: "item", item: {id: "waystones:waystone", Count: 1b}}
+				{id: "A3F1C0DE37000014", type: "xp_levels", xp_levels: 5}
+			]
+		}
+	]
+}
