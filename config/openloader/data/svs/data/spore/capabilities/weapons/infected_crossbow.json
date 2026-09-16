@@ -1,0 +1,10 @@
+{
+  "type": "epicfight:crossbow",
+  "attributes": {
+    "common": {
+      "armor_negation": 0.0,
+      "impact": 1.5,
+      "max_strikes": 1
+    }
+  }
+}
