@@ -1,0 +1,8 @@
+name = "WOC: Remastered"
+filename = "WOC-Remastered-1.5.0-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/woc-remastered"
+hash-format = "sha512"
+hash = "ec9bb668f87969c62fae54c0e1f784bbee03856a01d840a72ec41939d102a33691553cbfc0af9fb6c0152ab6de0da00c422b4a71a9fdbd33d94ebb536a265041"

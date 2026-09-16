@@ -1,0 +1,8 @@
+name = "ExtraSounds Next"
+filename = "ExtraSoundsNext-forge-1.20.1-1.4.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/extrasoundsnext"
+hash-format = "sha512"
+hash = "020040780c2677e536d3acfdca5c600e0b47f2b833337089796142ef1da32c0c9f84012be37b9bce9c141055c879ca38d49835cd320886d73620de62ab45e59f"

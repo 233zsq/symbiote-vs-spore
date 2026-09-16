@@ -1,0 +1,8 @@
+name = "Entity Respawner"
+filename = "entityrespawner-1.1.0.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/entity-respawner"
+hash-format = "sha512"
+hash = "cf0e826ac2e90c0fc3b0b9b0327ddbcd4858efb6e32a899494a8cba479c627eba4cf042738ef7869a39552261b4e35465221f9d4c014162dc41058ed75b3ce0c"

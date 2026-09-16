@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "epicfight:netherite_dagger"
+  },
+  "addition": {
+    "item": "epicfight_awaken:ender_essence"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
+  "result": {
+    "item": "epicfight_awaken:darknight_pursuiters",
+    "count": 2
+  }
+}

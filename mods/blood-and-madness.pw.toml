@@ -1,0 +1,8 @@
+name = "Blood And Madness"
+filename = "BloodAndMadness-Forge1.20.1-v2.1.5.2.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/blood-and-madness"
+hash-format = "sha512"
+hash = "0b349b00a46d052a91215c2d063e3a9c46687bdd9c8fb8c00c673c5465b2ca0d4b81450c6a9125f8544408c6b2c26c96006865b69f52a1b1ea235ff8cb96e151"

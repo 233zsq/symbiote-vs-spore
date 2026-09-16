@@ -1,0 +1,8 @@
+name = "FTB Ultimine"
+filename = "ftb-ultimine-forge-1.20.1-2001.1.4.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine"
+hash-format = "sha512"
+hash = "f4798f2c9f547a240119abace92ac45e4ff769ba7dd9f898a5dcedafafd079aaf5644f4e4828118e94bad47b5b82c17871ae1da8fca138e880cfac35fe1d0a02"

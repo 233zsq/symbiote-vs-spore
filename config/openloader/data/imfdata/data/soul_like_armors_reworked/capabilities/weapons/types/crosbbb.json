@@ -1,0 +1,38 @@
+{
+	"category": "greatsword",
+  "usable_in_offhand": false,
+	"hit_particle": "epicfight:entity.hit.blade",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_hard",
+	"styles": {
+    "default": "two_hand"
+  },
+
+	"collider":
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 1.8]
+    },
+    "combos":
+    {
+    	"two_hand":
+    	[
+
+
+    	]
+    	
+    },
+    "innate_skills":
+    {
+
+    },
+    "livingmotion_modifier": {
+    	"two_hand":
+    	{
+    		"idle": "epicfight:biped/living/hold_crossbow",
+    		"walk": "epicfight:biped/living/hold_crossbow",
+    		"run": "epicfight:biped/living/hold_crossbow"
+    	}
+    }
+}

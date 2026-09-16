@@ -1,0 +1,10 @@
+{
+    "type": "soul_like_armors_reworked:stafftype",
+    "attributes": {
+        "common": {
+            "armor_negation": 3.0,
+                "impact": 1.1,
+            "max_strikes": 5
+        }
+    }
+ }

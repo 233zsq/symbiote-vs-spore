@@ -1,0 +1,8 @@
+name = "P1nero's Epic Cataclysm"
+filename = "p1nero_ec-20.14.0.9.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/p1neros-epic-x-cataclysm"
+hash-format = "sha512"
+hash = "0c62179518d40281d51f652fcd2662aff79c4978e6dd4231796d0cfa84289b34d98e847b1b698dab5052ca564e1b8299e89ae8b368edf1d1434b2c8ece6a68eb"

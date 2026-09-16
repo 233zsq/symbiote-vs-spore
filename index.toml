@@ -14,7 +14,11 @@ hash = "04179e7444dd784e26c1965152ff0faae785baaab8bed9f46a7a35af4344e124"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "0389c8bd8f4779152ec2e3ebc7259eddc9a9345221fb01873b6b5101c5f3aa64"
+hash = "c717edbbef41808c368b192f44bd732f5bcbb5c9cf8daf714d563bc14b88b788"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/arcane_guide.snbt"
+hash = "fd9ae57888631f03e104a90cccb19d30d49476dfe8fa52d0050ac8b8e0a8390d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/awakening.snbt"
@@ -29,12 +33,24 @@ file = "config/ftbquests/quests/chapters/calamity_front.snbt"
 hash = "35575d874dc5483f4bf4351e94d0d27e6afdfbbd8d15a2e0eda26b1645508ee5"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/dragons_guide.snbt"
+hash = "bf2540b91647c046624eb1403eaac818597e050046d3bce8d6241baeb0a27c60"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/exploration.snbt"
 hash = "c91f6e7eeafcb9608e4829bd17e4705a2b309fd83321a4880b3150b5a487da2a"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/kitchen_guide.snbt"
+hash = "68f9bdc1ecd965c55d078dcaebcd3ab7bc8dfff3dccea67f8a6090e390c1e5be"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/preface.snbt"
 hash = "9eb32263fedb5c90abc86f60371dc42c7507bd9191bb40711352da8dbac85e1e"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/souls_guide.snbt"
+hash = "fd1efa2073d3550410886badaa9a8f8a9ffe912708c52d783cb659ba05b173df"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/souls_structures.snbt"
@@ -63,6 +79,10 @@ hash = "81d940a53c959cee275d62e0b9bab68c51cb8a0f6cf2c5a0bfccf153a05f8449"
 [[files]]
 file = "config/ftbquests/quests/chapters/structure_guide.snbt"
 hash = "b2968707609376b8d5d86ad498dbe77e3fc492bfd06dc3f513d241fa1fd12f4e"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/sword_soaring.snbt"
+hash = "bf4f76dd260433496ba17da12fa391e348b01ad7d3b6774cadc6b8c7034ed1ef"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/symbiote_bond.snbt"
@@ -1031,6 +1051,30 @@ hash = "e4d93818daa95fc03382deb7369e4a4bbf2e8123158dd865af2f0f437cb34ada"
 [[files]]
 file = "config/openloader/data/imfdata/data/epicfight/skill_parameters/vengeance.json"
 hash = "706b6560e419bb5c694add773206b3a630a4608532c856f5de556734712b476f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/epicfight_awaken/recipes/bleak_ender_essence.json"
+hash = "54021f70f4e3170f427343c04030a4746f59ee47283c2ea9db4d265f42b4f6be"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/epicfight_awaken/recipes/darknight_pursuiters.json"
+hash = "2252b12d06098e02f8fe0ebfc0cfd57857d21854d2ba48379d3f9f0e6cfa525d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/epicfight_awaken/skill_parameters/focused_strike.json"
+hash = "1ce37cd887260460b6c9ca36f19a57fb61ca10635354e63cc64ea98ae6b7e48a"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/epicfight_awaken/skill_parameters/rhythmic_endurance.json"
+hash = "597c59a7515427075402907640299a8a20a381925b1a0350c7cb1c42935fc595"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/epicfight_awaken/skill_parameters/unyielding_will.json"
+hash = "24495d073a93f01ce4258fcc9aff9aa4fd933c41d1cf2ac81a7f91658fab5cad"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/epicfight_awaken/skill_parameters/vulnerability_strike.json"
+hash = "91ce317dcb6d986d4c579526519b6bad701acf98012eca16ec5c5e1d3a17dc0b"
 
 [[files]]
 file = "config/openloader/data/imfdata/data/init/functions/do_init.mcfunction"
@@ -3249,6 +3293,178 @@ file = "config/openloader/data/imfdata/data/simplyswords/recipes/runic_warglaive
 hash = "9d1c6da9121d209c50f919486e75999fe3e86ac080ff5c285b82ad8deef7f1e1"
 
 [[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/alloygreatsword.json"
+hash = "6d9aaace13c3e74e45817ebde77a6cfb1047ffbd3d88b7211cc4d69be2151cc9"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/blackkatana.json"
+hash = "3d064b19ea2bfebd2dafc867a233959782745fb04d34eda2f66ffd8a4a586833"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/bloodtrident.json"
+hash = "a7f3de3f0df9a80b63f0da3db38d1350b600a7e9d75d0192a2e56d0205290208"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/cinderkingblade.json"
+hash = "22f91c13c1d0ab97be303530ee16d443272a668638c6a5c25f6fa9f7dbce89d5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/crystaltrident.json"
+hash = "8d65aa3b2eca77f5eb2461928795d52ad890e5638aa175f7979c191467e459e7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/darkknightsword.json"
+hash = "a0500d888857cb5a84ff5c9c238929b091f14ee9468f7b350ab392d5b57008f6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/darkknighttrident.json"
+hash = "c1694f01c45b1f9e1709387ed8acf881def905de3b157740a0532975d6769ebb"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/darkmoongreatsword.json"
+hash = "a991cec150535b66b4d6694f80c0dd4c5048344271cd6f47c3d750f1b6bdbed7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/dragonslayeraxe.json"
+hash = "31caf2c4e64e9b9193fe1932f3adcfaa8efe2a275ea9f5ee077949f9954bb3d6"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/farrondagger.json"
+hash = "fb774abffbd66a7f0172b1ee456008778f1b06523680febdd40aba119cb86a07"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/kata_sword.json"
+hash = "3d064b19ea2bfebd2dafc867a233959782745fb04d34eda2f66ffd8a4a586833"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/lightningsword.json"
+hash = "a991cec150535b66b4d6694f80c0dd4c5048344271cd6f47c3d750f1b6bdbed7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/longinustrident.json"
+hash = "a7f3de3f0df9a80b63f0da3db38d1350b600a7e9d75d0192a2e56d0205290208"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/monkeyhammer.json"
+hash = "c681b299e364354d547f8d2bc4c79037e0f852da7161c21add6326e3d40dcfce"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/moonkatana.json"
+hash = "a991cec150535b66b4d6694f80c0dd4c5048344271cd6f47c3d750f1b6bdbed7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/ornsteinspsword.json"
+hash = "a7f3de3f0df9a80b63f0da3db38d1350b600a7e9d75d0192a2e56d0205290208"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/platinumspsword.json"
+hash = "8d65aa3b2eca77f5eb2461928795d52ad890e5638aa175f7979c191467e459e7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/sawblade.json"
+hash = "22f91c13c1d0ab97be303530ee16d443272a668638c6a5c25f6fa9f7dbce89d5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/sickle.json"
+hash = "759c6d905e5840bac3debcd67c71ffd22c26d0aa63f3505b93f439381c47545a"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/soldiertrident.json"
+hash = "548ac08f7bf3addcba102e699ecf404b0a097060bb71a196cfa482c841ffc6aa"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/crosbbb.json"
+hash = "d0ac5b33647c6007bd698b3dd755fddab574f11f6f4de39ff7839f8cb1e1d215"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/dage2.json"
+hash = "72d382f135fc4ed124af6fa7a911210d284977960146e8f72909e5fa40e7a870"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/dage3.json"
+hash = "4c9aaed00f5b5462a5a1ec744dc3919bb9c205a269d6506bbfce8250c1e4115d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/gousuo.json"
+hash = "b2c18c2222d2cc1726294ccb6891d97dc8844faa6f14d68e726b43dbc88c4ac4"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/guandaotype.json"
+hash = "c086c72caf2e282593f1d6692a59b0e2fb1b259932f819c37612d4ccd093e534"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/newlongsw.json"
+hash = "32abea96f9216db6fb67d6754b1be14f75a2607951e2dda9dff54a448b4d4aa7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/newlongsw2.json"
+hash = "3c50e91492ee685949221f915f7776f722195dc531239334fae852db0a3ef59f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/newlongsw3.json"
+hash = "9fd1f3e60a4ef5b3df416dd810f37abce776d95f954272199919c9c7b896868e"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/staf.json"
+hash = "a5d2cc46ea0d2590e933a4a9b75227b2cd1d71c21a89ecc3dad162e10336db50"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/stafftype.json"
+hash = "ea20e4e26a1aa85304c9e3bf2b61f9794b0675bf6b685ca512634e614e096180"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/voidreaper.json"
+hash = "90c4d43d6700933d04006addc46b94f340e690e56466960a22de4f1856a63654"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/types/voidsgrasp.json"
+hash = "8ba00123686cd1d626a759297e3ede4bdebfc90f8c4bfee45d7f6c506218f557"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/capabilities/weapons/wolfknightsword.json"
+hash = "2148985dcada9fedced07a113700392e0a4400632eef9c829562eeda19c419b8"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_armors_reworked/recipes/estusflaskrecipe.json"
+hash = "f8a5a26e3056eb6fb06deeb3dbccfd88ae74900200c98c70b5966bbb7ec9d4de"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_mobs/capabilities/weapons/sacredblade.json"
+hash = "a991cec150535b66b4d6694f80c0dd4c5048344271cd6f47c3d750f1b6bdbed7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_mobs/forge/biome_modifier/removehollow.json"
+hash = "9b2ee8894cd76fdf78b9ef0f4fc7db1fac0caab5a3d44765087aa95c8ae0e944"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_mobs/recipes/zzchangjian.json"
+hash = "0c464eb8be32b6c3e0f7c5388469e987a7d6d535cd93b1bc9d660e5b8342fa59"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_mobs/recipes/zzchui.json"
+hash = "01c34267b08eeded2a94c7a6235c8a242b912ea4b9a513577816f447eecae6fd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_mobs/recipes/zzhuan.json"
+hash = "eab931d19fd3938afb63098013d74a3bf4d44e1c5962e88eba4a0b2d1b793cf3"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_mobs/recipes/zzjufu.json"
+hash = "d7bdf6fe4640d4e7f74bf6cd4b46ff73c51bb476d88c5bce84562c075a7a4167"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_mobs/recipes/zzliandao.json"
+hash = "60fa427392da59a127f2930a3b4330d1102b792601020caffeea885a3e624104"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_mobs/recipes/zzren.json"
+hash = "3874183f55341fe08f66f91a10d7547b96b4bb7a51c6f9d7d2268659d039a843"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/soul_like_mobs/recipes/zzzhang.json"
+hash = "2bc32df7723ed1d8f25dcdf705bfecd93f142a563892f30d5dee260f09e04154"
+
+[[files]]
 file = "config/openloader/data/imfdata/data/waystones/recipes/waystone.json"
 hash = "e90fce7012dddaf2f5e34d8263fcd620272168d844a5da7b5946c9dff253bc11"
 
@@ -3604,6 +3820,11 @@ hash = "e1016eb125a5a41a10f80847eb00affae0e539e703846f303949ed5d82b7f1bf"
 metafile = true
 
 [[files]]
+file = "mods/ambientsounds.pw.toml"
+hash = "ea2dd870aab8b1cb3b2bf5b4ac19fd6771b7dbba068b38d53218c55e4ebb173f"
+metafile = true
+
+[[files]]
 file = "mods/appleskin.pw.toml"
 hash = "f33810d5961a90de469504fbe8c2058f807bebffc663385347d419bde3a147ac"
 metafile = true
@@ -3626,6 +3847,16 @@ metafile = true
 [[files]]
 file = "mods/balm.pw.toml"
 hash = "17c8014eb1049735ee66833b371593964e3a86c3ad288fe7b60766573badd931"
+metafile = true
+
+[[files]]
+file = "mods/betterlockon.pw.toml"
+hash = "86f0cb11e61156587798eae19b95abe97b7982ac61890da5d5fdba0dff2d0b14"
+metafile = true
+
+[[files]]
+file = "mods/blood-and-madness.pw.toml"
+hash = "2e4992b822c834517bc1cd2bf8cba8852e08a7ff01212ebfb45350d0f0630ce0"
 metafile = true
 
 [[files]]
@@ -3684,6 +3915,11 @@ hash = "903352ffbd84d4b95fed905893f4715d9c3f88ec9fff6fb06f6e359e0b839dc3"
 metafile = true
 
 [[files]]
+file = "mods/combat-evolution.pw.toml"
+hash = "ef758f68f59bcc92e7f6ae4ae496a65c0898f1a4e4aa354e2461ccc2f965e391"
+metafile = true
+
+[[files]]
 file = "mods/compatlink-epic-fight-weapons-compat.pw.toml"
 hash = "072608592f04adf833ed2c091ec398ea02715044df58af5ff9637b58117081e6"
 metafile = true
@@ -3696,6 +3932,11 @@ metafile = true
 [[files]]
 file = "mods/crafttweaker.pw.toml"
 hash = "1334bf569d947857d5cdd95fb4fb5f52d01bc3f866b7388159b82352c6fb3cab"
+metafile = true
+
+[[files]]
+file = "mods/creativecore.pw.toml"
+hash = "d584896433cab9fdba6034182ce0f8376cfd5eb1255fa98ed47e535b94f7674b"
 metafile = true
 
 [[files]]
@@ -3739,6 +3980,11 @@ hash = "9ddb37809dbf50f17ccfca4039149524ec0ed8f5838441a94fbb1de3a780c9b5"
 metafile = true
 
 [[files]]
+file = "mods/entity-respawner.pw.toml"
+hash = "81d35e5cfdac3f08622ebd80be0be54d841b8507babbf3d5275b8a115a9f6b2c"
+metafile = true
+
+[[files]]
 file = "mods/entityculling.pw.toml"
 hash = "afc6ad3d297505cffc339ed20e2839b9cde693bebdb8614a50261cbe89d4e3c0"
 metafile = true
@@ -3769,6 +4015,16 @@ hash = "559efa085cac2b3a8b7a94444153b67ed0a0ac5e9ebfd901d1219b473507480a"
 metafile = true
 
 [[files]]
+file = "mods/epicfight-awaken.pw.toml"
+hash = "836685cb7cca1a3915b4a16d5de46b943882b27cfe0db1c363805f3547144c0f"
+metafile = true
+
+[[files]]
+file = "mods/epicfight-extra.pw.toml"
+hash = "3eebe8da700692d631370724c5f3e9752a5992d551df34aa2a300e0a4e86a14a"
+metafile = true
+
+[[files]]
 file = "mods/epicfight-resurrection.pw.toml"
 hash = "3de972a9ea638c1382a5df6e7c30bd32852fb8a109316e068ebc058de00f585f"
 metafile = true
@@ -3776,6 +4032,11 @@ metafile = true
 [[files]]
 file = "mods/explorers-compass.pw.toml"
 hash = "8d11358dfd1f3591ee0ce8728d6a3234e1edef5db39c52fe68264ecf7684968d"
+metafile = true
+
+[[files]]
+file = "mods/extrasoundsnext.pw.toml"
+hash = "c94a97f4e230dd860d081465a62d29d170d329c084043234d6c50cffa28c368d"
 metafile = true
 
 [[files]]
@@ -3801,6 +4062,11 @@ metafile = true
 [[files]]
 file = "mods/ftb-teams.pw.toml"
 hash = "c61a2971d87fb6b153b9812603f02d3cb85910d666f2d78d63c24e4a7a7fbb10"
+metafile = true
+
+[[files]]
+file = "mods/ftb-ultimine.pw.toml"
+hash = "a56b1959dde1e2330bab830fee65495e89fd5ced754d91c33049f7d81a520484"
 metafile = true
 
 [[files]]
@@ -3929,8 +4195,18 @@ hash = "b375f3bbdec0ad58758bcbecea9329e2bdfb10289fc43e314cc43eb4da42069f"
 metafile = true
 
 [[files]]
+file = "mods/multiplayer-boss-attribute-modifier.pw.toml"
+hash = "e664931a6f536c84973d948682e361c436e5a910676117cca198a0c3b4623a03"
+metafile = true
+
+[[files]]
 file = "mods/nethers-delight.pw.toml"
 hash = "a1d3b1b3f1a9ec557cbe63ea70dfc6f7048312ae5f807a7f0ebaa3278dcef594"
+metafile = true
+
+[[files]]
+file = "mods/nightfall-invade.pw.toml"
+hash = "c8a6001335a69513ab80ea18e01c4e043a3bf98f252abf2fd08a6c2950b35ec4"
 metafile = true
 
 [[files]]
@@ -3946,6 +4222,11 @@ metafile = true
 [[files]]
 file = "mods/open-loader.pw.toml"
 hash = "6bbb14bde3a05517dc0435b45500f4178ef0d25c5012478690cd90c9afe098ae"
+metafile = true
+
+[[files]]
+file = "mods/p1neros-epic-x-cataclysm.pw.toml"
+hash = "d5da114c672fe53b884ab71937235d99d17c6119316e56b668b22770fac21571"
 metafile = true
 
 [[files]]
@@ -3971,6 +4252,11 @@ metafile = true
 [[files]]
 file = "mods/polymorph.pw.toml"
 hash = "ea8571ba9dc8e74bad5e4257d50e9bb80d02be8f3d5de7fe3dede969e26fa15c"
+metafile = true
+
+[[files]]
+file = "mods/qualitysounds.pw.toml"
+hash = "448f4ef45dbbe43ecb46f642029875f60dad4633b8310d31616c0c291670baf8"
 metafile = true
 
 [[files]]
@@ -4029,6 +4315,11 @@ hash = "78d0bcccf940dcdcd9745849964cbc2dfcdeea9127494d7ad741046a26291d98"
 metafile = true
 
 [[files]]
+file = "mods/souls-like-universe.pw.toml"
+hash = "f3db05be7b1c018341032fec71fe5f67b5a2d20f64a7f58a6fd0b1fa09d1e4cd"
+metafile = true
+
+[[files]]
 file = "mods/spark.pw.toml"
 hash = "df58afd70db5e503f4241668e004707cb9a202a354ec035dea17b41528295f24"
 metafile = true
@@ -4071,6 +4362,21 @@ metafile = true
 [[files]]
 file = "mods/weapons-of-miracles.pw.toml"
 hash = "f0b9442acbbc097dac4a9e7778d5b307c4c84e822ac828d55a67d1f3357403b3"
+metafile = true
+
+[[files]]
+file = "mods/wo-legendary-monsters.pw.toml"
+hash = "a3afa6244dd092ab0091274618955a39dc9182c3e9bdfd510542709ab2da9e7e"
+metafile = true
+
+[[files]]
+file = "mods/woc-remastered.pw.toml"
+hash = "7531a722940f40b3d949317b1aa17603ade049214b80e8054aa0036f230cb25c"
+metafile = true
+
+[[files]]
+file = "mods/womplus.pw.toml"
+hash = "eb106826d1501b0db4cf097dce3926ae889a6428612a592917b0844726b64032"
 metafile = true
 
 [[files]]

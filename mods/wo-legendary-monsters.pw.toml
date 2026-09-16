@@ -1,0 +1,8 @@
+name = "Weapons of Legendary Monsters"
+filename = "WOLegendaryMonsters-1.1.0-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/wo-legendary-monsters"
+hash-format = "sha512"
+hash = "165c4dd779dafbe2ec5b6b3d09c98a893b936f10bd0c3ebea467c81a8bf15a36650bd9279e91fbba0dc83bb184948fb6f79eb930b549d673270b20098bf41fcd"

@@ -1,0 +1,8 @@
+name = "WoM Plus"
+filename = "womplus-20.14.1.3.0.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/womplus"
+hash-format = "sha512"
+hash = "106729d19669a1014f3259e7237fd75ef4bb46d4752e61ce5cc5babe1e09bac0ab5be1c6670e165f3e5cf1942ed431da3bfa518be5fe69d0a8ed43d3349aa5dd"

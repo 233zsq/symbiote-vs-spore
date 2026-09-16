@@ -1,0 +1,8 @@
+name = "Multiplayer Boss Attribute Modifier"
+filename = "multiplayer_boss_fight-forge1.20.1-1.0.3.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/multiplayer-boss-attribute-modifier"
+hash-format = "sha512"
+hash = "f81271d2c76a6f3512f809eba99d08975c58499c840098f618a6faa4c953cbe83a9d268f5be953322336776225f64201f1e55a9f72d5b33853f7a40d3cec1dcc"

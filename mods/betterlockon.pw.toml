@@ -1,0 +1,8 @@
+name = "Better Lock On"
+filename = "betterlockon-2.0.13-forge.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/betterlockon"
+hash-format = "sha512"
+hash = "242efafb21624b41f1bc00a5fcc1f0ba27f14abab5b2c22e70796e3bbc3ba6aa8c06fa8f0f86a167d61951e9b873ef0536c2bec3a9f280b3d5a546548dad2b8e"

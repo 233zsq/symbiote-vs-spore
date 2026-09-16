@@ -1,0 +1,8 @@
+name = "Nightfall Invade"
+filename = "nightfall_invade-1.3.2.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/nightfall-invade"
+hash-format = "sha512"
+hash = "9c05a10cd8a1d429e5bde513403d01f170f43f2bd5bc0c5d3f0d1479e3e749970279d24f2459755ca17ef31f0bdccca70032b5e3f402a5574def2f190e13f80e"

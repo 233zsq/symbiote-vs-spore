@@ -1,0 +1,39 @@
+{
+	"category": "sword",
+	"hit_particle": "epicfight:entity.hit.blade",
+	"hit_sound": "epicfight:entity.hit.blade",
+	"swing_sound": "epicfight:entity.weapon.whoosh_hard",
+	"styles": {
+    "default": "one_hand"
+  },
+	  
+	"collider":
+    {
+        "number": 3,
+        "center": [0.0, 0.0, -0.75],
+        "size": [0.4, 0.4, 1.8]
+    },
+    "combos":
+    {
+    	"one_hand":
+    	[
+			"wom:biped/combat/ruine_auto_1",
+			"wom:biped/combat/agony_auto_1",
+			"wom:biped/combat/ruine_auto_3",
+			"wom:biped/combat/ruine_dash",
+			"wom:biped/combat/staff_kingkong"
+    	]
+    },
+    "innate_skills":
+    {
+    	"one_hand": "epicfight:wrathful_lighting"
+    },
+    "livingmotion_modifier": {
+    	"one_hand":
+    	{
+    		"block": "wom:biped/skill/ruine_block",
+			"run": "wom:biped/living/ruine_run",
+				"idle": "wom:biped/living/herrscher_idle"
+    	}
+    }
+}

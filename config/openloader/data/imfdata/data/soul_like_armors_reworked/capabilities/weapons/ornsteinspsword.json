@@ -1,0 +1,10 @@
+{
+	"type": "simplyswords:newspear",
+	"attributes": {
+		"common": {
+			"armor_negation": 10,
+  			"impact": 3.2,
+			"max_strikes": 1
+		}
+	}
+}
