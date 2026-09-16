@@ -59,7 +59,6 @@
 | **成品优先模式（用户拍板 2026-09-13）** | 用户指令：取消「每批完整实测才 commit」的 gate，速度优先；直接借鉴 Immersive Fight 的模组设置/优化/魔改成品化；FTB 任务+主线按方案《任务线章节框架》落地。风险补偿：改动后**启动冒烟到主菜单**仍保留（不玩家长测）；红线条款（EF 锁定/ID 核实/不碰原版）不变 | 用户指令 |
 
 ## 4. 阶段进度
-
 - **阶段① 底座搭建 ✅**：空包启动、pack.toml 入库、首次 commit 全部验收
 - **阶段② 核心战斗验证 ▶ 收尾**：手感基准实测通过；已修=战斗相机、键位；处决/体力 jar 级查证 ✅ 完成并回填清单。剩余动作：斧 Guillotine / 匕首 Blade Rush 两项处决复测 → 交 glm5.3flash 整理《战斗手感基准文档》后关闭
 - **阶段②.5 开发环境补齐 ✅（2026-09-10 人工验收通过）**：性能五件套 + QoL 四件 + Default Options 入包并同步实例；实例实测：启动无崩溃、Embeddium×EF 战斗动画/渲染正常、Controlling 可见 EF 键位分类、JEI/Jade 生效。此后一切实测均在最终性能/监控环境进行
@@ -101,6 +100,7 @@
 - `launch.py`：**直连启动器**（替代 PCL 启动游戏）。`python launch.py --check` 校验/下载库与 natives；直接运行启动（默认 6G 内存、Tester 离线账号、1600×900、预置 options.txt language:zh_cn）。实现要点：解析 versions json 继承链；natives 作为独立库（`:natives-windows`）下载并解压；**classpath = 库 + 版本 jar（= forge client slim 补丁副本）+ FML 游戏层 jar（universal/client-extra/fmlcore/三语言模块）**；`${version_name}` 必须替换否则模块冲突。踩过的坑都写进了代码注释
 - `pw_add.py`：**packwiz 本机替代**（nightly.link Artifacts 已过期、无 Go 工具链）。`python pw_add.py <modrinth slug>` 对齐 `packwiz modrinth install -y` 输出格式（含 [update.modrinth]），自动递归必需依赖、重算 index.toml 与 pack.toml 索引哈希；`--list <关键词>` 搜索
 - `activate.ps1` / `restore_pw.ps1` / `enumwin.ps1`：窗口枚举/激活/PrintWindow 后台截图（前台被独占全屏占用时的观察手段）
+- **qoderclicn 直写陷阱（2026-09-16/17 实证）**：`qoderclicn -p --permission-mode bypass_permissions` 会**越过 stdout 直接把文件写进 cwd**——批处理调用时 cwd 必须在 E:\mcmp_test（隔离区），绝不能是仓库根；且 prompt 头拼装时不得混入其它任务的轮廓（v4 暮色章曾因拼入 boss 攻略头被生成成 Boss 章，stage3 内容被覆盖，靠 git 恢复）。生成后一律机器校验再入库
 - sync_mods 用法：`python tools/sync_mods.py --instance "C:\PCL 正式版 2.8.13\.minecraft\versions\1.20.1-forge-47.4.23"`（注意 Windows 控制台 GBK 下先 `set PYTHONIOENCODING=utf-8`，Jade 标题含 🔍 会炸 print）
 - E 机首次启动验证（2026-09-11 深夜）：主菜单 ✅ 中文 ✅；Symbiote 1.1.3 加载 ✅（"Symbiote loaded: loss of control is the feature."）；Default Options 键位合并进 options.txt ✅（Y/I/M/;/' 五键 + C/X/B/U/O 默认键全在）；symbiote-client/common.toml 生成 ✅，**键名/分组与《Symbiote配置调频设计》§1 全部一致**；实例 config 已按 §2 落地 EF 战斗安全档（hunger_stalk_range=0.0、curiosity/predator_hunt/walk_door_rip/walk_terrain_bite 全 false）；生成物默认值与 §1 记载的四处出入以生成物为准（bond_decay_per_day=1、hunger_stalk_range=28.0→已改 0、tendril_cap=220、crater_rarity=1）
 - 待续：实测记录第 2/3/4 节交互项（等前台 3A 游戏退出，cron 看守中）
