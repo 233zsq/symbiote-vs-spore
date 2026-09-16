@@ -1,0 +1,1077 @@
+{
+	default_hide_dependency_lines: false
+	filename: "souls_codex"
+	group: "0B00AA11CC22DD77"
+	icon: "minecraft:wither_skeleton_skull"
+	id: "A3F1C0E500000077"
+	order_index: 1
+	title: "魂界志·诸王列传"
+	quests: [
+		{
+			id: "A3F1C0E510000001"
+			title: "狭间诸王"
+			subtitle: "《艾尔登法环》一系——狭间之地的王与半神"
+			description: [
+				"黄金律法破碎，碎片战争落幕，诸王仍在雾中等待挑战者。"
+				"此分区记载《艾尔登法环》出身的十四位王者，链式解锁。"
+				"每场讨伐完成后自动点亮下一目标。"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			tasks: [{
+				id: "A3F1C0E520000001"
+				type: "checkmark"
+				title: "点亮「狭间诸王」分区"
+			}]
+			rewards: [{
+				id: "A3F1C0E530000001"
+				type: "xp"
+				xp: 2
+			}]
+		}
+		{
+			id: "A3F1C0E510000101"
+			title: "噩兆妖鬼·玛尔基特"
+			subtitle: "《艾尔登法环》·史东薇尔城门，褪色者的第一道铁闸"
+			description: [
+				"史东薇尔城门前的守门噩兆，王城伸向新手之地的一记重锤。"
+				"金杖横扫、光刃突刺，招式大开大合却极少留白，贪刀即是死。"
+				"推荐 Stage3 装备后再战；召唤方式需人工核实。"
+			]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000001"]
+			tasks: [{
+				id: "A3F1C0E520000101"
+				type: "kill"
+				entity: "slu:boss_margit"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000101"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000102"
+			title: "恶兆王·蒙葛特"
+			subtitle: "《艾尔登法环》·王城罗德尔，赐福之王的垂死之舞"
+			description: [
+				"王城罗德尔的末代之主，玛尔基特的真身，黄金树的忠犬。"
+				"圣剑与咒刃交错，快慢刀变化多端，压制力远胜其城门之影。"
+				"推荐 Stage3 中期挑战；召唤方式需人工核实。"
+			]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000101"]
+			tasks: [{
+				id: "A3F1C0E520000102"
+				type: "kill"
+				entity: "slu:boss_morgott"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000102"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000103"
+			title: "初代艾尔登之王·葛孚雷"
+			subtitle: "《艾尔登法环》·初代艾尔登之王，蛮荒时代的征服者"
+			description: [
+				"以蛮力踏平狭间的初代王，被放逐又归来的狮子。"
+				"巨斧撼地、践踏连击，纯力量流的极致，站桩硬拼绝非上策。"
+				"推荐 Stage3 后期挑战；召唤方式需人工核实。"
+			]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000102"]
+			tasks: [{
+				id: "A3F1C0E520000103"
+				type: "kill"
+				entity: "slu:boss_godfrey"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000103"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000104"
+			title: "战王·荷莱·露"
+			subtitle: "《艾尔登法环》·褪去王冠，以战王之名撕裂战场"
+			description: [
+				"葛孚雷褪去王冕后的真姿，纯粹以武艺与肉体称王的狂战士。"
+				"投技与跳跃践踏层出不穷，被抓住即是重伤，务必保持距离。"
+				"推荐 Stage4 装备再战；召唤方式需人工核实。"
+			]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000103"]
+			tasks: [{
+				id: "A3F1C0E520000104"
+				type: "kill"
+				entity: "slu:boss_hoarah_loux"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000104"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000105"
+			title: "碎星·拉塔恩"
+			subtitle: "《艾尔登法环》·红狮子将军，以重力锁住群星之人"
+			description: [
+				"卡利亚战争中的红狮子，封印群星的碎星将军，传奇中的传奇。"
+				"巨弓与双刀远近皆精，重力魔法撕裂大地，是一场堂堂正正的会战。"
+				"推荐 Stage4 组队挑战；召唤方式需人工核实。"
+			]
+			x: 7.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000104"]
+			tasks: [{
+				id: "A3F1C0E520000105"
+				type: "kill"
+				entity: "slu:boss_radahn"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000105"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000106"
+			title: "约定之王·拉塔恩"
+			subtitle: "《艾尔登法环》·黄金树之影，履行约定的王"
+			description: [
+				"黄金树之影中的约定之王，碎星将军的另一种姿态。"
+				"圣光与重力交织的最终形态，速度与压迫感全面凌驾于前。"
+				"推荐 Stage5 再行挑战；召唤方式需人工核实。"
+			]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000105"]
+			tasks: [{
+				id: "A3F1C0E520000106"
+				type: "kill"
+				entity: "slu:boss_radahn_2"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000106"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000107"
+			title: "米凯拉的锋刃·玛莲妮亚"
+			subtitle: "《艾尔登法环》·米凯拉的锋刃，不败的猩红剑姬"
+			description: [
+				"自猩红腐败中诞生的女武神，据传从未尝过败绩。"
+				"太刀如流水，水鸟乱舞起手极快，贪刀者会被瞬间反噬。"
+				"推荐 Stage4 后期挑战；召唤方式需人工核实。"
+			]
+			x: 10.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000106"]
+			tasks: [{
+				id: "A3F1C0E520000107"
+				type: "kill"
+				entity: "slu:boss_malenia"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000107"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000108"
+			title: "腐败女神·玛莲妮亚"
+			subtitle: "《艾尔登法环》·猩红艾奥尼亚，腐败女神的绽放"
+			description: [
+				"二度绽放的腐败女神，艾奥尼亚之花的本体降临。"
+				"猩红腐败弥漫全场，空中突进愈发致命，容错极低。"
+				"推荐 Stage5 极限挑战；召唤方式需人工核实。"
+			]
+			x: 12.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000107"]
+			tasks: [{
+				id: "A3F1C0E520000108"
+				type: "kill"
+				entity: "slu:boss_malenia_2"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000108"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000109"
+			title: "鲜血君王·蒙格"
+			subtitle: "《艾尔登法环》·鲜血王朝之主，无形之母的眷属"
+			description: [
+				"盘踞地下的鲜血君王，觊觎神人之躯的阴谋家。"
+				"血焰三叉戟与鲜血诅咒齐发，倒计时般的血液沸腾令人窒息。"
+				"推荐 Stage4 挑战；召唤方式需人工核实。"
+			]
+			x: 13.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000108"]
+			tasks: [{
+				id: "A3F1C0E520000109"
+				type: "kill"
+				entity: "slu:boss_mohg"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000109"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E51000010A"
+			title: "神皮使徒"
+			subtitle: "《艾尔登法环》·神皮双人组之一，剥皮者的使徒"
+			description: [
+				"以神皮缝衣的异端使徒，身形修长、动作诡谲。"
+				"黑焰环绕，身躯如蛇般延展突袭，贴身战极为凶险。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 15.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000109"]
+			tasks: [{
+				id: "A3F1C0E52000010A"
+				type: "kill"
+				entity: "slu:boss_godskin_apostle"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E53000010A"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E51000010B"
+			title: "神皮贵族"
+			subtitle: "《艾尔登法环》·神皮双人组之一，臃肿的贵族"
+			description: [
+				"神皮使徒的同袍，臃肿的身躯里藏着惊人的敏捷。"
+				"滚动冲撞势不可挡，刺剑快如蜂刺，与使徒联手更为棘手。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 16.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E51000010A"]
+			tasks: [{
+				id: "A3F1C0E52000010B"
+				type: "kill"
+				entity: "slu:boss_godskin_noble"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E53000010B"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E51000010C"
+			title: "黑剑·玛利喀斯"
+			subtitle: "《艾尔登法环》·命定之死，黑剑的看门犬"
+			description: [
+				"看守命定之死的黑剑，兽性与神性交织的恐怖存在。"
+				"黑焰斩击削减生命上限，空中翻腾难以锁定，速战为上。"
+				"推荐 Stage4 挑战；召唤方式需人工核实。"
+			]
+			x: 18.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E51000010B"]
+			tasks: [{
+				id: "A3F1C0E52000010C"
+				type: "kill"
+				entity: "slu:boss_maliketh"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E53000010C"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E51000010D"
+			title: "艾尔登之王·拉达冈"
+			subtitle: "《艾尔登法环》·黄金律法的红发之王"
+			description: [
+				"黄金树的守门人，以凡躯承载律法的红发之王。"
+				"锤击如审判降临，圣光破碎地面，节奏沉稳却步步紧逼。"
+				"推荐 Stage5 决战装备；召唤方式需人工核实。"
+			]
+			x: 19.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E51000010C"]
+			tasks: [{
+				id: "A3F1C0E52000010D"
+				type: "kill"
+				entity: "slu:boss_radagon"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E53000010D"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E51000010E"
+			title: "艾尔登之兽"
+			subtitle: "《艾尔登法环》·黄金树的具现，狭间终局"
+			description: [
+				"律法的具现、黄金树意志的化身，狭间之战的终点。"
+				"星光剑雨与飞空游弋，追击战漫长而华美，耐心胜过蛮勇。"
+				"推荐 Stage5 最终决战；召唤方式需人工核实。"
+			]
+			x: 21.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E51000010D"]
+			tasks: [{
+				id: "A3F1C0E52000010E"
+				type: "kill"
+				entity: "slu:boss_elden_beast"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E53000010E"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000201"
+			title: "初火余烬"
+			subtitle: "《黑暗之魂》一系——传火时代的英雄与枭雄"
+			description: [
+				"初火将熄，不死人踏上巡礼之路，余烬中仍存旧王身影。"
+				"此分区记载《黑暗之魂》系列出身的十一位王者，链式解锁。"
+				"每场讨伐完成后自动点亮下一目标。"
+			]
+			x: 0.0d
+			y: 1.5d
+			shape: "diamond"
+			tasks: [{
+				id: "A3F1C0E520000201"
+				type: "checkmark"
+				title: "点亮「初火余烬」分区"
+			}]
+			rewards: [{
+				id: "A3F1C0E530000201"
+				type: "xp"
+				xp: 2
+			}]
+		}
+		{
+			id: "A3F1C0E510000211"
+			title: "灰烬审判者·古达"
+			subtitle: "《黑暗之魂3》·灰烬墓地，审判者的枪"
+			description: [
+				"灰烬墓地的守门人，一柄长戟拦住无数初火新人的去路。"
+				"二阶段黑泥爆体，动作陡然加速，初见杀名不虚传。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 1.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000201"]
+			tasks: [{
+				id: "A3F1C0E520000211"
+				type: "kill"
+				entity: "slu:boss_gundyr"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000211"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000212"
+			title: "深渊监视者"
+			subtitle: "《黑暗之魂3》·法兰不死队，深渊监视者"
+			description: [
+				"以狼血立誓的法兰不死队，监视深渊却自身被深渊侵蚀。"
+				"刀光如舞蹈，同袍相残的战场混战，最后一人格外凌厉。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 3.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000211"]
+			tasks: [{
+				id: "A3F1C0E520000212"
+				type: "kill"
+				entity: "slu:boss_abyss_watcher"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000212"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000213"
+			title: "深渊漫步者·亚尔特留斯"
+			subtitle: "《黑暗之魂》·乌拉席露，深渊漫步者的末路"
+			description: [
+				"为拯救乌拉席露踏入深渊的狼骑士，右臂已折仍傲立不倒。"
+				"单手巨剑大开大合，翻滚突进如狼扑食，纯粹的剑术之美。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 4.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000212"]
+			tasks: [{
+				id: "A3F1C0E520000213"
+				type: "kill"
+				entity: "slu:boss_artorias"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000213"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000214"
+			title: "猎龙者·翁斯坦"
+			subtitle: "《黑暗之魂》·亚诺尔隆德，猎龙四骑士之首"
+			description: [
+				"亚诺尔隆德的龙枪骑士，葛温麾下四骑士之首。"
+				"枪出如龙、闪电随行，与处刑者斯摩并立时最为难缠。"
+				"推荐 Stage4 挑战；召唤方式需人工核实。"
+			]
+			x: 6.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000213"]
+			tasks: [{
+				id: "A3F1C0E520000214"
+				type: "kill"
+				entity: "slu:boss_ornstein"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000214"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000215"
+			title: "处刑者·斯摩"
+			subtitle: "《黑暗之魂》·亚诺尔隆德，食人的处刑者"
+			description: [
+				"亚诺尔隆德的巨锤处刑者，以处刑为乐的暴君。"
+				"重锤砸地、冲撞碾人，若与翁斯坦同场，先破其一为上。"
+				"推荐 Stage4 挑战；召唤方式需人工核实。"
+			]
+			x: 7.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000214"]
+			tasks: [{
+				id: "A3F1C0E520000215"
+				type: "kill"
+				entity: "slu:boss_smough"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000215"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000216"
+			title: "猎龙铠甲"
+			subtitle: "《黑暗之魂3》·洛斯里克，无人穿着的猎龙甲"
+			description: [
+				"洛斯里克王城的猎龙铠甲，甲胄之内空无一物。"
+				"巨盾硬如城墙，斧与雷光交替轰落，绕背才是正解。"
+				"推荐 Stage4 挑战；召唤方式需人工核实。"
+			]
+			x: 9.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000215"]
+			tasks: [{
+				id: "A3F1C0E520000216"
+				type: "kill"
+				entity: "slu:boss_dragon_slayer_armour"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000216"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000217"
+			title: "镜之骑士"
+			subtitle: "《黑暗之魂2》·多兰古雷格，暴雨中的镜骑士"
+			description: [
+				"多兰古雷格王城的镜之骑士，巨镜可唤来帮手。"
+				"雷雨交加的城头死斗，镜面召援令战局再生变数。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 10.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000216"]
+			tasks: [{
+				id: "A3F1C0E520000217"
+				type: "kill"
+				entity: "slu:boss_looking_glass_knight"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000217"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000218"
+			title: "无名王者"
+			subtitle: "《黑暗之魂3》·古龙之顶，与龙为伍的王者"
+			description: [
+				"古龙之顶的骑龙王者，身份成谜的神族末裔。"
+				"骑龙战与步战两段，枪雷之速冠绝群王，延迟出手最是杀招。"
+				"推荐 Stage4 后期挑战；召唤方式需人工核实。"
+			]
+			x: 12.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000217"]
+			tasks: [{
+				id: "A3F1C0E520000218"
+				type: "kill"
+				entity: "slu:boss_nameless_king"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000218"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000219"
+			title: "暗影太阳·葛温德林"
+			subtitle: "《黑暗之魂》·亚诺尔隆德的暗影太阳"
+			description: [
+				"藏身亚诺尔隆德幻象之后的神子，月光与暗影的操纵者。"
+				"魔法箭雨连绵不绝，长廊追击宛如与月光赛跑。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 13.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000218"]
+			tasks: [{
+				id: "A3F1C0E520000219"
+				type: "kill"
+				entity: "slu:boss_gwyndolin"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000219"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E51000021A"
+			title: "奴隶骑士·盖尔"
+			subtitle: "《黑暗之魂3》·环印城，末世中最后的骑士"
+			description: [
+				"自绘画世界跋涉至世界尽头的奴隶骑士，以人之身追寻黑暗之魂。"
+				"十字弩与巨剑轮番上阵，三阶段愈战愈狂，堪称魂系最终试炼。"
+				"推荐 Stage5 极限挑战；召唤方式需人工核实。"
+			]
+			x: 15.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000219"]
+			tasks: [{
+				id: "A3F1C0E52000021A"
+				type: "kill"
+				entity: "slu:boss_gael"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E53000021A"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E51000021B"
+			title: "薪王们的化身"
+			subtitle: "《黑暗之魂3》·初始火炉，薪火的化身"
+			description: [
+				"初火前最后的守护者，历届薪王意志的集合体。"
+				"百般武艺信手拈来，二阶段化身葛温，令人梦回初代。"
+				"推荐 Stage5 最终决战；召唤方式需人工核实。"
+			]
+			x: 16.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E51000021A"]
+			tasks: [{
+				id: "A3F1C0E52000021B"
+				type: "kill"
+				entity: "slu:boss_soul_of_cinder"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E53000021B"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000301"
+			title: "符文之地"
+			subtitle: "《英雄联盟》一系——瓦罗兰大陆的传奇战士"
+			description: [
+				"自瓦罗兰大陆穿越而来的传奇战士，每一位都身经百战。"
+				"此分区记载《英雄联盟》出身的四位强者，链式解锁。"
+				"每场讨伐完成后自动点亮下一目标。"
+			]
+			x: 0.0d
+			y: 3.0d
+			shape: "diamond"
+			tasks: [{
+				id: "A3F1C0E520000301"
+				type: "checkmark"
+				title: "点亮「符文之地」分区"
+			}]
+			rewards: [{
+				id: "A3F1C0E530000301"
+				type: "xp"
+				xp: 2
+			}]
+		}
+		{
+			id: "A3F1C0E510000311"
+			title: "暗裔剑魔·亚托克斯"
+			subtitle: "《英雄联盟》·暗裔剑魔，被囚于剑中的古神"
+			description: [
+				"囚于巨剑中的暗裔古神，以杀戮填满永恒的饥渴。"
+				"巨剑劈斩带起血浪，冲锋与跃击凶悍绝伦，正面硬撼者先亡。"
+				"推荐 Stage4 挑战；召唤方式需人工核实。"
+			]
+			x: 1.5d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000301"]
+			tasks: [{
+				id: "A3F1C0E520000311"
+				type: "kill"
+				entity: "slu:boss_aatrox"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000311"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000312"
+			title: "不屈之枪·潘森"
+			subtitle: "《英雄联盟》·不屈之枪，以凡躯战神的凡人"
+			description: [
+				"执枪与盾的战争星灵宿主，以凡人之躯行神之事。"
+				"盾击枪刺攻防一体，跳劈如流星坠地，气势碾压一切。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 3.0d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000311"]
+			tasks: [{
+				id: "A3F1C0E520000312"
+				type: "kill"
+				entity: "slu:boss_pantheon"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000312"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000313"
+			title: "武器大师·贾克斯"
+			subtitle: "《英雄联盟》·武器大师，艾卡西亚的幸存者"
+			description: [
+				"自称仅用灯柱便无敌于世的武器大师，艾卡西亚灾变的幸存者。"
+				"攻速越战越快，反击风暴弹开一切近战，绵里藏针的狠角色。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 4.5d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000312"]
+			tasks: [{
+				id: "A3F1C0E520000313"
+				type: "kill"
+				entity: "slu:boss_jax"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000313"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000314"
+			title: "诺克萨斯之手·德莱厄斯"
+			subtitle: "《英雄联盟》·诺克萨斯之手，帝国的利斧"
+			description: [
+				"诺克萨斯帝国的行刑官，以巨斧丈量国土的将军。"
+				"巨斧划出圆弧，流血不止的伤口与处决斩首，压迫感十足。"
+				"推荐 Stage4 挑战；召唤方式需人工核实。"
+			]
+			x: 6.0d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000313"]
+			tasks: [{
+				id: "A3F1C0E520000314"
+				type: "kill"
+				entity: "slu:boss_darius"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000314"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000401"
+			title: "异界来宾"
+			subtitle: "其他世界的来客与深藏的彩蛋"
+			description: [
+				"不属于三大系谱的异界强者与模组彩蛋，尽汇于此。"
+				"此分区记载九位异界来宾，链式解锁。"
+				"每场讨伐完成后自动点亮下一目标。"
+			]
+			x: 0.0d
+			y: 4.5d
+			shape: "diamond"
+			tasks: [{
+				id: "A3F1C0E520000401"
+				type: "checkmark"
+				title: "点亮「异界来宾」分区"
+			}]
+			rewards: [{
+				id: "A3F1C0E530000401"
+				type: "xp"
+				xp: 2
+			}]
+		}
+		{
+			id: "A3F1C0E510000411"
+			title: "齐天大圣·孙悟空"
+			subtitle: "《黑神话：悟空》·齐天大圣，大闹天宫的顽主"
+			description: [
+				"自花果山踏云而来的齐天大圣，金箍棒下无生魂。"
+				"棒法千变万化，身外化身与筋斗云防不胜防，猴王之名不虚。"
+				"推荐 Stage5 极限挑战；召唤方式需人工核实。"
+			]
+			x: 1.5d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000401"]
+			tasks: [{
+				id: "A3F1C0E520000411"
+				type: "kill"
+				entity: "slu:boss_wukong"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000411"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000412"
+			title: "熔炉骑士·奥多维斯"
+			subtitle: "《艾尔登法环》·熔炉百相，黄金树时代的余晖"
+			description: [
+				"黄金树时代遗留的熔炉骑士，奥多维斯之名仍在传说中回响。"
+				"盾枪合一，尾部横扫与圣翼突进连绵不绝，攻守兼备的苦战。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 3.0d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000411"]
+			tasks: [{
+				id: "A3F1C0E520000412"
+				type: "kill"
+				entity: "slu:boss_crucible_knight"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000412"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000413"
+			title: "铃珠猎人·艾尔默"
+			subtitle: "《艾尔登法环》·掳掠铃珠的猎人"
+			description: [
+				"以猎杀商旅为生的铃珠猎人，掳人铃珠如探囊取物。"
+				"长剑如钩、出手迅疾，压迫式的连击不给人喘息之机。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 4.5d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000412"]
+			tasks: [{
+				id: "A3F1C0E520000413"
+				type: "kill"
+				entity: "slu:boss_elemer"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000413"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000414"
+			title: "罗贝尔伯爵"
+			subtitle: "出处待考·异界的优雅伯爵"
+			description: [
+				"身世成谜的异界伯爵，优雅外表下藏着冰冷杀意。"
+				"出处与召唤方式均需人工核实，交手时切勿被礼数迷惑。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 6.0d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000413"]
+			tasks: [{
+				id: "A3F1C0E520000414"
+				type: "kill"
+				entity: "slu:boss_count_robert"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000414"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000415"
+			title: "野兽祭司·古兰格"
+			subtitle: "《艾尔登法环》·贪食死根的野兽祭司"
+			description: [
+				"以死根为食的野兽祭司，温驯的外皮下潜伏着野兽之怒。"
+				"爪击如风暴，跃扑快若闪电，兽性觉醒后判若两人。"
+				"推荐 Stage4 挑战；召唤方式需人工核实。"
+			]
+			x: 7.5d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000414"]
+			tasks: [{
+				id: "A3F1C0E520000415"
+				type: "kill"
+				entity: "slu:boss_beast_clergyman"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000415"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000416"
+			title: "远古战士"
+			subtitle: "出处待考·自远古苏醒的武人"
+			description: [
+				"自远古遗迹中苏醒的无名武人，招式古朴而致命。"
+				"出处与召唤方式均需人工核实，其剑术颇有古风。"
+				"推荐 Stage3 挑战；召唤方式需人工核实。"
+			]
+			x: 9.0d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000415"]
+			tasks: [{
+				id: "A3F1C0E520000416"
+				type: "kill"
+				entity: "slu:boss_ancient_warrior"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000416"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000417"
+			title: "陨落之王"
+			subtitle: "出处待考·自王座坠落的败者"
+			description: [
+				"失去王座的陨落之主，怨念支撑着他再度站起。"
+				"出处与召唤方式均需人工核实，败者的执念最为灼人。"
+				"推荐 Stage4 挑战；召唤方式需人工核实。"
+			]
+			x: 10.5d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000416"]
+			tasks: [{
+				id: "A3F1C0E520000417"
+				type: "kill"
+				entity: "slu:boss_fallen_lord"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000417"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000418"
+			title: "创世者·Notch"
+			subtitle: "《Minecraft》·创世者降临的彩蛋"
+			description: [
+				"本作最大彩蛋——世界创始者的化身，亲自下场试炼勇者。"
+				"彩蛋 Boss，难度成谜，建议满配 Stage5 再来一探究竟。"
+				"推荐 Stage5 挑战；召唤方式需人工核实。"
+			]
+			x: 12.0d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000417"]
+			tasks: [{
+				id: "A3F1C0E520000418"
+				type: "kill"
+				entity: "slu:boss_notch"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000418"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000419"
+			title: "方块之王"
+			subtitle: "《Minecraft》·方块世界的王者彩蛋"
+			description: [
+				"方块世界的王者，与 Notch 并列的隐藏彩蛋 Boss。"
+				"彩蛋 Boss，机制成谜，击败他即是通关隐藏试炼的证明。"
+				"推荐 Stage5 挑战；召唤方式需人工核实。"
+			]
+			x: 13.5d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E510000418"]
+			tasks: [{
+				id: "A3F1C0E520000419"
+				type: "kill"
+				entity: "slu:boss_minecraft_lord"
+				value: 1L
+			}]
+			rewards: [{
+				id: "A3F1C0E530000419"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			id: "A3F1C0E510000501"
+			title: "诸王之王"
+			subtitle: "四系魂之王的讨伐证明，封王之路的终点"
+			description: [
+				"狭间、余烬、符文之地、异界——四大系谱的王者皆已俯首。"
+				"手持此证者，方有资格自称「诸王之王」。"
+				"此志完成，魂界志全书收官。"
+			]
+			x: 22.5d
+			y: 2.25d
+			shape: "pentagon"
+			dependencies: ["A3F1C0E51000010E", "A3F1C0E51000021B", "A3F1C0E510000314", "A3F1C0E510000419"]
+			tasks: [{
+				id: "A3F1C0E520000501"
+				type: "checkmark"
+				title: "集齐四系王者讨伐证明"
+			}]
+			rewards: [{
+				id: "A3F1C0E530000501"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+		}
+	]
+}

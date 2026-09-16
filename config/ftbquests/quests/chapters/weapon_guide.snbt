@@ -12,8 +12,8 @@
 			title: "T1·入门"
 			subtitle: "铁与青铜的年代"
 			description: [
-				"征途的第一批刀剑，铁与青铜的年代。"
-				"锻造入门，手感至上——从这里学会挥剑。"
+				"征途的第一批刀剑——原版、暮色、青铜与简易刀剑的起点。"
+				"锻造入门，手感至上，从这里学会挥剑。"
 			]
 			x: 0.0d
 			y: 0.0d
@@ -26,6 +26,13 @@
 					title: "T1·入门"
 				}
 			]
+			rewards: [
+				{
+					id: "A3F1C0E238800001"
+					type: "xp"
+					xp: 5
+				}
+			]
 		}
 		{
 			id: "A3F1C0E218800002"
@@ -34,8 +41,7 @@
 			description: [
 				"原版基础线，冒险者人手一把的起点。"
 				"获取：2 铁锭 + 1 木棍竖排合成，开局即得。"
-				"手感均衡轻快，伤害与攻速都在及格线上。"
-				"EF 单手剑动作，斩击干净，最适合练格挡与走位。"
+				"手感均衡轻快，EF 单手剑式斩击干净，最适合练格挡与走位。"
 			]
 			x: 1.5d
 			y: 0.0d
@@ -55,7 +61,7 @@
 				{
 					id: "A3F1C0E238800002"
 					type: "xp"
-					xp: 5
+					xp: 10
 				}
 			]
 		}
@@ -67,7 +73,6 @@
 				"原版主线的收官之刃。"
 				"获取：2 钻石 + 1 木棍合成，挖到钻石即可打造。"
 				"比铁剑更耐用更锋利，容错显著提高。"
-				"EF 单手剑式不变，节奏熟悉，手感全面升级。"
 			]
 			x: 3.0d
 			y: 0.0d
@@ -87,7 +92,7 @@
 				{
 					id: "A3F1C0E238800003"
 					type: "xp"
-					xp: 5
+					xp: 10
 				}
 			]
 		}
@@ -98,8 +103,7 @@
 			description: [
 				"暮色森林入门线，铁木系列兵器。"
 				"获取：铁木锭合成，暮色开荒即可打造。"
-				"手感接近铁剑，耐用度更佳，透着森林的质朴。"
-				"EF 单手剑动作，挥动平稳，适合前期探索。"
+				"手感接近铁剑而更耐用，透着森林的质朴。"
 			]
 			x: 4.5d
 			y: 0.0d
@@ -119,19 +123,18 @@
 				{
 					id: "A3F1C0E238800004"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 			]
 		}
 		{
 			id: "A3F1C0E218800005"
-			title: "青铜混种剑"
+			title: "青铜手半剑"
 			subtitle: "剑盾之姿的起点"
 			description: [
 				"Epic Knights 青铜线第一把。"
 				"获取：青铜锭锻造，铁砧捶打成型。"
-				"比原版剑长出一截，重而不钝。"
-				"EF 双手剑式，横扫气势足，范围感明显。"
+				"比原版剑长出一截，攻守均衡，EF 双手剑式横扫气势足。"
 			]
 			x: 6.0d
 			y: 0.0d
@@ -151,7 +154,7 @@
 				{
 					id: "A3F1C0E238800005"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 			]
 		}
@@ -162,8 +165,7 @@
 			description: [
 				"Epic Knights 青铜线的重装代表。"
 				"获取：青铜锭加大分量锻造。"
-				"更重更长，攻速偏慢但距离极远。"
-				"EF 双手重剑动作，大开大合，一骑当千。"
+				"更重更长，起手偏慢但距离极远，一骑当千。"
 			]
 			x: 7.5d
 			y: 0.0d
@@ -183,19 +185,18 @@
 				{
 					id: "A3F1C0E238800006"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 			]
 		}
 		{
 			id: "A3F1C0E218800007"
-			title: "铁制长剑"
+			title: "铁长刀"
 			subtitle: "加长刀刃的入门"
 			description: [
-				"简易刀剑的入门之作。"
+				"简易刀剑（Simply Swords）的入门之作。"
 				"获取：铁锭为主材合成。"
-				"刀刃加长，劈砍范围出色。"
-				"EF 双手刀式，架势稳重，新手友好。"
+				"刀刃加长，劈砍范围出色，EF 双手刀式新手友好。"
 			]
 			x: 9.0d
 			y: 0.0d
@@ -215,19 +216,18 @@
 				{
 					id: "A3F1C0E238800007"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 			]
 		}
 		{
 			id: "A3F1C0E218800008"
-			title: "钻石巨剑"
+			title: "钻石大剑"
 			subtitle: "T1 之巅"
 			description: [
 				"简易刀剑钻石级，入门线的顶点。"
 				"获取：钻石锭合成。"
 				"笨重却威猛，每一击都沉甸甸。"
-				"EF 双手重剑动作，砸地感十足。"
 			]
 			x: 10.5d
 			y: 0.0d
@@ -249,15 +249,110 @@
 					type: "xp"
 					xp: 10
 				}
+			]
+		}
+		{
+			id: "A3F1C0E218800009"
+			title: "青铜骑士枪"
+			subtitle: "冲刺与戳刺的浪漫"
+			description: [
+				"Epic Knights 青铜线，骑枪是骑士的浪漫。"
+				"获取：青铜锭锻打，配方书可查。"
+				"戳刺距离极长，架枪冲锋时无人敢挡。"
+			]
+			x: 12.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800006"]
+			tasks: [
 				{
-					id: "A3F1C0E238800048"
+					id: "A3F1C0E228800009"
+					type: "item"
+					item: {
+						id: "magistuarmory:bronze_chivalrylance"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800009"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800010"
+			title: "长剑"
+			subtitle: "类魂直剑，一板一眼"
+			description: [
+				"Soul Like Armors 类魂线：标准的直剑。"
+				"获取：以游戏内战利品与配方为准。"
+				"招式朴素但性能全面，是类魂系万金油。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 13.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800008"]
+			tasks: [
+				{
+					id: "A3F1C0E228800010"
+					type: "item"
+					item: {
+						id: "soul_like_armors_reworked:longsword"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800010"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800011"
+			title: "战斧"
+			subtitle: "类魂重击的开端"
+			description: [
+				"Soul Like Armors 类魂线：挥击沉重的战斧。"
+				"获取：以游戏内战利品与配方为准。"
+				"起手慢而伤害足，破盾与失衡效果拔群。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 15.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800010"]
+			tasks: [
+				{
+					id: "A3F1C0E228800011"
+					type: "item"
+					item: {
+						id: "soul_like_armors_reworked:battleaxe"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800011"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "A3F1C0E238890011"
 					type: "xp_levels"
 					xp_levels: 3
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800011"
+			id: "A3F1C0E218800012"
 			title: "T2·进阶"
 			subtitle: "钢与魔法入局"
 			description: [
@@ -267,32 +362,38 @@
 			x: 0.0d
 			y: 3.0d
 			shape: "diamond"
-			dependencies: ["A3F1C0E218800008"]
+			dependencies: []
 			tasks: [
 				{
-					id: "A3F1C0E228800011"
+					id: "A3F1C0E228800012"
 					type: "checkmark"
 					title: "T2·进阶"
 				}
 			]
+			rewards: [
+				{
+					id: "A3F1C0E238800012"
+					type: "xp"
+					xp: 5
+				}
+			]
 		}
 		{
-			id: "A3F1C0E218800012"
+			id: "A3F1C0E218800013"
 			title: "钢叶剑"
 			subtitle: "会自我修复的活剑"
 			description: [
 				"暮色钢叶线，会自我修复的活剑。"
-				"获取：钢叶锭锻打，耐久随时间缓慢自愈。"
+				"获取：钢叶锭锻打，耐久会随时间缓慢自愈。"
 				"轻快锋利，耐久与伤害俱佳。"
-				"EF 单手剑式，连击顺滑。"
 			]
 			x: 1.5d
 			y: 3.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800011"]
+			dependencies: ["A3F1C0E218800012"]
 			tasks: [
 				{
-					id: "A3F1C0E228800012"
+					id: "A3F1C0E228800013"
 					type: "item"
 					item: {
 						id: "twilightforest:steeleaf_sword"
@@ -302,29 +403,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800012"
+					id: "A3F1C0E238800013"
 					type: "xp"
-					xp: 10
+					xp: 15
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800013"
+			id: "A3F1C0E218800014"
 			title: "骑士金剑"
 			subtitle: "破甲的骑士之证"
 			description: [
 				"暮色骑士线，破甲的骑士之证。"
-				"获取：骑士金属锭打造，材料取自骑士墓穴。"
+				"获取：骑士金属锭打造，材料取自骑士要塞。"
 				"沉手但出手果断，对重甲目标效果拔群。"
-				"EF 单手剑动作，破防感明显。"
 			]
 			x: 3.0d
 			y: 3.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800012"]
+			dependencies: ["A3F1C0E218800013"]
 			tasks: [
 				{
-					id: "A3F1C0E228800013"
+					id: "A3F1C0E228800014"
 					type: "item"
 					item: {
 						id: "twilightforest:knightmetal_sword"
@@ -334,29 +434,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800013"
+					id: "A3F1C0E238800014"
 					type: "xp"
-					xp: 10
+					xp: 15
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800014"
+			id: "A3F1C0E218800015"
 			title: "下界合金太刀"
 			subtitle: "居合之梦的开始"
 			description: [
 				"简易刀剑顶级，居合之梦的开始。"
 				"获取：下界合金锻刀，合成台打造。"
-				"太刀轻盈，出刀迅捷。"
-				"EF 武士刀式动作，居合风韵十足。"
+				"太刀轻盈，出刀迅捷，居合风韵十足。"
 			]
 			x: 4.5d
 			y: 3.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800013"]
+			dependencies: ["A3F1C0E218800014"]
 			tasks: [
 				{
-					id: "A3F1C0E228800014"
+					id: "A3F1C0E228800015"
 					type: "item"
 					item: {
 						id: "simplyswords:netherite_katana"
@@ -366,29 +465,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800014"
+					id: "A3F1C0E238800015"
 					type: "xp"
-					xp: 12
+					xp: 15
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800015"
+			id: "A3F1C0E218800016"
 			title: "风暴之刃"
 			subtitle: "风雷随刃的稀有物"
 			description: [
 				"简易刀剑稀有掉落线。"
 				"获取：地牢宝箱或特定强敌掉落（人工核实）。"
 				"刀身似有风雷缠绕，挥动带风压。"
-				"EF 快速连斩式，爽快感拉满。"
 			]
 			x: 6.0d
 			y: 3.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800014"]
+			dependencies: ["A3F1C0E218800015"]
 			tasks: [
 				{
-					id: "A3F1C0E228800015"
+					id: "A3F1C0E228800016"
 					type: "item"
 					item: {
 						id: "simplyswords:tempest"
@@ -398,29 +496,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800015"
+					id: "A3F1C0E238800016"
 					type: "xp"
-					xp: 12
+					xp: 15
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800016"
+			id: "A3F1C0E218800017"
 			title: "风语"
 			subtitle: "轻如羽、快如风"
 			description: [
 				"简易刀剑稀有线。"
 				"获取：冒险途中寻得（人工核实）。"
-				"重量几乎为零，攻速极快。"
-				"EF 轻盈剑式，如风穿梭。"
+				"重量几乎为零，攻速极快，如风穿梭。"
 			]
 			x: 7.5d
 			y: 3.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800015"]
+			dependencies: ["A3F1C0E218800016"]
 			tasks: [
 				{
-					id: "A3F1C0E228800016"
+					id: "A3F1C0E228800017"
 					type: "item"
 					item: {
 						id: "simplyswords:whisperwind"
@@ -430,29 +527,59 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800016"
+					id: "A3F1C0E238800017"
 					type: "xp"
-					xp: 12
+					xp: 15
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800017"
+			id: "A3F1C0E218800018"
+			title: "缎带斩刃"
+			subtitle: "薄如缎带的快刀"
+			description: [
+				"简易刀剑稀有线。"
+				"获取：掉落入手（人工核实）。"
+				"刃薄如缎，出招极快，飘逸难防。"
+			]
+			x: 9.0d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800017"]
+			tasks: [
+				{
+					id: "A3F1C0E228800018"
+					type: "item"
+					item: {
+						id: "simplyswords:ribboncleaver"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800018"
+					type: "xp"
+					xp: 15
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800019"
 			title: "虚空长剑"
 			subtitle: "中空的诡丽剑身"
 			description: [
 				"WoM 武器线的诡丽之作。"
 				"获取：特殊材料锻造，任务或合成入手（人工核实）。"
-				"剑身中空，造型诡丽，分量恰好。"
-				"EF 双手长剑动作，沉稳有力。"
+				"剑身中空，造型诡丽，EF 双手长剑式沉稳有力。"
 			]
-			x: 9.0d
+			x: 10.5d
 			y: 3.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800016"]
+			dependencies: ["A3F1C0E218800018"]
 			tasks: [
 				{
-					id: "A3F1C0E228800017"
+					id: "A3F1C0E228800019"
 					type: "item"
 					item: {
 						id: "wom:hollow_longsword"
@@ -462,29 +589,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800017"
+					id: "A3F1C0E238800019"
 					type: "xp"
-					xp: 12
+					xp: 15
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800018"
+			id: "A3F1C0E218800020"
 			title: "下界合金巨斧"
 			subtitle: "一斧开山的重器"
 			description: [
 				"WoM 重武线的开山重器。"
 				"获取：下界合金打造。"
-				"巨斧沉重，单发伤害惊人。"
-				"EF 双手斧式，大开大合，破盾有力。"
+				"巨斧沉重，单发伤害惊人，破盾有力。"
 			]
-			x: 10.5d
+			x: 12.0d
 			y: 3.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800017"]
+			dependencies: ["A3F1C0E218800019"]
 			tasks: [
 				{
-					id: "A3F1C0E228800018"
+					id: "A3F1C0E228800020"
 					type: "item"
 					item: {
 						id: "wom:netherite_greataxe"
@@ -494,29 +620,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800018"
+					id: "A3F1C0E238800020"
 					type: "xp"
-					xp: 12
+					xp: 15
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800019"
+			id: "A3F1C0E218800021"
 			title: "阔刃"
 			subtitle: "攻守兼备的厚刃"
 			description: [
-				"Nightfall 武器线的守备之选。"
+				"Nightfall（夜陨）武器线的守备之选。"
 				"获取：任务奖励或锻造（人工核实）。"
-				"阔刃厚重，防守反击出色。"
-				"EF 双手剑动作，攻守兼备。"
+				"阔刃厚重，防守反击出色，攻守兼备。"
 			]
-			x: 12.0d
+			x: 13.5d
 			y: 3.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800018"]
+			dependencies: ["A3F1C0E218800020"]
 			tasks: [
 				{
-					id: "A3F1C0E228800019"
+					id: "A3F1C0E228800021"
 					type: "item"
 					item: {
 						id: "efn:broadblade"
@@ -526,81 +651,23 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800019"
+					id: "A3F1C0E238800021"
 					type: "xp"
-					xp: 14
-				}
-			]
-		}
-		{
-			id: "A3F1C0E21880001A"
-			title: "开拓者之剑"
-			subtitle: "平衡的万金油"
-			description: [
-				"Nightfall 武器线的平衡之作。"
-				"获取：合成或探索奖励（人工核实）。"
-				"剑型古典，平衡性极佳。"
-				"EF 标准剑式进阶，万金油手感。"
-			]
-			x: 13.5d
-			y: 3.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E218800019"]
-			tasks: [
-				{
-					id: "A3F1C0E22880001A"
-					type: "item"
-					item: {
-						id: "efn:sword_of_pioneer"
-						Count: 1b
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "A3F1C0E23880001A"
-					type: "xp"
-					xp: 14
-				}
-				{
-					id: "A3F1C0E23880005A"
-					type: "xp_levels"
-					xp_levels: 3
-				}
-			]
-		}
-		{
-			id: "A3F1C0E218800021"
-			title: "T3·大成"
-			subtitle: "传说之刃出鞘"
-			description: [
-				"传说之刃出鞘，强者之证。"
-				"每一把都值得一场宿命对决。"
-			]
-			x: 0.0d
-			y: 6.0d
-			shape: "diamond"
-			dependencies: ["A3F1C0E21880001A"]
-			tasks: [
-				{
-					id: "A3F1C0E228800021"
-					type: "checkmark"
-					title: "T3·大成"
+					xp: 15
 				}
 			]
 		}
 		{
 			id: "A3F1C0E218800022"
-			title: "炽焰剑"
-			subtitle: "九头蛇的怒火"
+			title: "开拓者之剑"
+			subtitle: "平衡的万金油"
 			description: [
-				"暮色炽焰线，九头蛇的怒火。"
-				"获取：炽焰锭锻打，材料出自九头蛇。"
-				"挥动如焰，命中点燃目标。"
-				"EF 单手剑式，攻势如火。"
+				"Nightfall（夜陨）武器线的平衡之作。"
+				"获取：合成或探索奖励（人工核实）。"
+				"剑型古典，平衡性极佳，万金油手感。"
 			]
-			x: 1.5d
-			y: 6.0d
+			x: 15.0d
+			y: 3.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E218800021"]
 			tasks: [
@@ -608,7 +675,7 @@
 					id: "A3F1C0E228800022"
 					type: "item"
 					item: {
-						id: "twilightforest:fiery_sword"
+						id: "efn:sword_of_pioneer"
 						Count: 1b
 					}
 				}
@@ -623,16 +690,15 @@
 		}
 		{
 			id: "A3F1C0E218800023"
-			title: "魔刃"
-			subtitle: "缠绕魔力的利刃"
+			title: "楔丸"
+			subtitle: "忍者之刃的机敏"
 			description: [
-				"简易刀剑魔法线。"
-				"获取：稀有掉落（人工核实）。"
-				"剑刃缠魔，攻击附魔能量。"
-				"EF 剑式轻盈，魔法感强。"
+				"Nightfall（夜陨）武器线，致敬《只狼》。"
+				"获取：掉落或任务（人工核实）。"
+				"轻巧灵活，攻速一流，机敏迅捷。"
 			]
-			x: 3.0d
-			y: 6.0d
+			x: 16.5d
+			y: 3.0d
 			shape: "circle"
 			dependencies: ["A3F1C0E218800022"]
 			tasks: [
@@ -640,7 +706,7 @@
 					id: "A3F1C0E228800023"
 					type: "item"
 					item: {
-						id: "simplyswords:magiblade"
+						id: "efn:kusabimaru"
 						Count: 1b
 					}
 				}
@@ -655,24 +721,24 @@
 		}
 		{
 			id: "A3F1C0E218800024"
-			title: "魔镰"
-			subtitle: "收割的弧光"
+			title: "大剑"
+			subtitle: "类魂重剑的第一次心跳"
 			description: [
-				"简易刀剑魔法线，收割的弧光。"
-				"获取：稀有掉落（人工核实）。"
-				"镰刃弧长，攻击范围大。"
-				"EF 长柄镰式，横扫一片。"
+				"Soul Like Armors 类魂线：沉重的大剑。"
+				"获取：以游戏内战利品与配方为准。"
+				"重剑无锋，大巧不工，起手慢但威力惊人。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
 			]
-			x: 4.5d
-			y: 6.0d
+			x: 18.0d
+			y: 4.5d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800023"]
+			dependencies: ["A3F1C0E218800012"]
 			tasks: [
 				{
 					id: "A3F1C0E228800024"
 					type: "item"
 					item: {
-						id: "simplyswords:magiscythe"
+						id: "soul_like_armors_reworked:greatsword"
 						Count: 1b
 					}
 				}
@@ -687,16 +753,16 @@
 		}
 		{
 			id: "A3F1C0E218800025"
-			title: "缎带斩刃"
-			subtitle: "薄如缎带的快刀"
+			title: "贵族细剑"
+			subtitle: "类魂优雅的刺剑"
 			description: [
-				"简易刀剑稀有线。"
-				"获取：掉落入手（人工核实）。"
-				"刃薄如缎，出招极快。"
-				"EF 快速斩击式，飘逸难防。"
+				"Soul Like Armors 类魂线：贵族风格的细剑。"
+				"获取：以游戏内战利品与配方为准。"
+				"刺击轻快精准，讲究距离与时机。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
 			]
-			x: 6.0d
-			y: 6.0d
+			x: 19.5d
+			y: 4.5d
 			shape: "circle"
 			dependencies: ["A3F1C0E218800024"]
 			tasks: [
@@ -704,7 +770,7 @@
 					id: "A3F1C0E228800025"
 					type: "item"
 					item: {
-						id: "simplyswords:ribboncleaver"
+						id: "slu:noble_sword"
 						Count: 1b
 					}
 				}
@@ -719,21 +785,241 @@
 		}
 		{
 			id: "A3F1C0E218800026"
-			title: "雷轰"
-			subtitle: "雷声轰鸣的重斩"
+			title: "黑刀"
+			subtitle: "类魂暗色的太刀"
 			description: [
-				"简易刀剑雷电线。"
-				"获取：稀有掉落（人工核实）。"
-				"刀鸣如雷，电光随刃。"
-				"EF 重斩式，一击震地。"
+				"Soul Like Armors 类魂线：通体漆黑的太刀。"
+				"获取：以游戏内战利品与配方为准。"
+				"刀光晦暗，拔刀斩迅疾如影。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
 			]
-			x: 7.5d
-			y: 6.0d
+			x: 21.0d
+			y: 4.5d
 			shape: "circle"
 			dependencies: ["A3F1C0E218800025"]
 			tasks: [
 				{
 					id: "A3F1C0E228800026"
+					type: "item"
+					item: {
+						id: "slu:black_katana"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800026"
+					type: "xp"
+					xp: 15
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800027"
+			title: "手杖鞭刃"
+			subtitle: "血狂变形武器·鞭与杖"
+			description: [
+				"Blood and Madness 血狂线：致敬《血源》的变形武器。"
+				"获取：以游戏内战利品与配方为准。"
+				"平时是轻快的手杖，右键变形为鞭刃，远近皆可。"
+				"※ 本条目 ID 未列入白名单实核，变形机制以游戏内为准（人工核实）。"
+			]
+			x: 22.5d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800026"]
+			tasks: [
+				{
+					id: "A3F1C0E228800027"
+					type: "item"
+					item: {
+						id: "bloodandmadness:threaded_cane"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800027"
+					type: "xp"
+					xp: 15
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800028"
+			title: "猎人斧"
+			subtitle: "血狂变形武器·斧与长柄"
+			description: [
+				"Blood and Madness 血狂线：致敬《血源》猎人开局之斧。"
+				"获取：以游戏内战利品与配方为准。"
+				"右键变形后拉长柄距，横扫范围大幅提升。"
+				"※ 本条目 ID 未列入白名单实核，变形机制以游戏内为准（人工核实）。"
+			]
+			x: 24.0d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800027"]
+			tasks: [
+				{
+					id: "A3F1C0E228800028"
+					type: "item"
+					item: {
+						id: "bloodandmadness:hunter_axe"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800028"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "A3F1C0E238890028"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800029"
+			title: "T3·大成"
+			subtitle: "传说之刃出鞘"
+			description: [
+				"传说之刃出鞘，强者之证。"
+				"每一把都值得一场宿命对决。"
+			]
+			x: 0.0d
+			y: 6.0d
+			shape: "diamond"
+			dependencies: []
+			tasks: [
+				{
+					id: "A3F1C0E228800029"
+					type: "checkmark"
+					title: "T3·大成"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800029"
+					type: "xp"
+					xp: 5
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800030"
+			title: "炽焰剑"
+			subtitle: "九头蛇的怒火"
+			description: [
+				"暮色炽焰线，九头蛇的怒火。"
+				"获取：炽焰锭锻打，材料出自九头蛇。"
+				"挥动如焰，命中点燃目标，攻势如火。"
+			]
+			x: 1.5d
+			y: 6.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800029"]
+			tasks: [
+				{
+					id: "A3F1C0E228800030"
+					type: "item"
+					item: {
+						id: "twilightforest:fiery_sword"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800030"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800031"
+			title: "魔刃"
+			subtitle: "缠绕魔力的利刃"
+			description: [
+				"简易刀剑魔法线。"
+				"获取：稀有掉落（人工核实）。"
+				"剑刃缠魔，攻击附魔能量，魔法感强。"
+			]
+			x: 3.0d
+			y: 6.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800030"]
+			tasks: [
+				{
+					id: "A3F1C0E228800031"
+					type: "item"
+					item: {
+						id: "simplyswords:magiblade"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800031"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800032"
+			title: "魔镰"
+			subtitle: "收割的弧光"
+			description: [
+				"简易刀剑魔法线，收割的弧光。"
+				"获取：稀有掉落（人工核实）。"
+				"镰刃弧长，攻击范围大，横扫一片。"
+			]
+			x: 4.5d
+			y: 6.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800031"]
+			tasks: [
+				{
+					id: "A3F1C0E228800032"
+					type: "item"
+					item: {
+						id: "simplyswords:magiscythe"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800032"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800033"
+			title: "雷轰"
+			subtitle: "雷声轰鸣的重斩"
+			description: [
+				"简易刀剑雷电线。"
+				"获取：稀有掉落（人工核实）。"
+				"刀鸣如雷，电光随刃，重斩震地。"
+			]
+			x: 6.0d
+			y: 6.0d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800032"]
+			tasks: [
+				{
+					id: "A3F1C0E228800033"
 					type: "item"
 					item: {
 						id: "simplyswords:thunderbrand"
@@ -743,29 +1029,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800026"
+					id: "A3F1C0E238800033"
 					type: "xp"
-					xp: 18
+					xp: 20
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800027"
+			id: "A3F1C0E218800034"
 			title: "守魂者"
 			subtitle: "收纳亡魂的肃杀"
 			description: [
 				"简易刀剑灵魂线。"
 				"获取：亡灵系掉落（人工核实）。"
-				"剑纳魂魄，气质肃杀。"
-				"EF 单手剑式，斩杀感强。"
+				"剑纳魂魄，气质肃杀，斩杀感强。"
 			]
-			x: 9.0d
+			x: 7.5d
 			y: 6.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800026"]
+			dependencies: ["A3F1C0E218800033"]
 			tasks: [
 				{
-					id: "A3F1C0E228800027"
+					id: "A3F1C0E228800034"
 					type: "item"
 					item: {
 						id: "simplyswords:soulkeeper"
@@ -775,29 +1060,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800027"
+					id: "A3F1C0E238800034"
 					type: "xp"
-					xp: 18
+					xp: 20
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800028"
+			id: "A3F1C0E218800035"
 			title: "魂火"
 			subtitle: "燃烧魂焰的幽蓝"
 			description: [
 				"简易刀剑灵魂线，幽蓝魂焰。"
 				"获取：掉落或锻造（人工核实）。"
-				"刃燃魂火，幽蓝夺目。"
-				"EF 剑式带焰，气势逼人。"
+				"刃燃魂火，幽蓝夺目，气势逼人。"
 			]
-			x: 10.5d
+			x: 9.0d
 			y: 6.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800027"]
+			dependencies: ["A3F1C0E218800034"]
 			tasks: [
 				{
-					id: "A3F1C0E228800028"
+					id: "A3F1C0E228800035"
 					type: "item"
 					item: {
 						id: "simplyswords:soulpyre"
@@ -807,29 +1091,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800028"
+					id: "A3F1C0E238800035"
 					type: "xp"
-					xp: 18
+					xp: 20
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800029"
+			id: "A3F1C0E218800036"
 			title: "烈阳"
 			subtitle: "灼热刺目的日轮"
 			description: [
 				"简易刀剑圣光线，灼热的日轮。"
 				"获取：稀有掉落（人工核实）。"
-				"剑光如日，灼热刺目。"
-				"EF 双手剑式，光焰随挥。"
+				"剑光如日，灼热刺目，光焰随挥。"
 			]
-			x: 12.0d
+			x: 10.5d
 			y: 6.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800028"]
+			dependencies: ["A3F1C0E218800035"]
 			tasks: [
 				{
-					id: "A3F1C0E228800029"
+					id: "A3F1C0E228800036"
 					type: "item"
 					item: {
 						id: "simplyswords:sunfire"
@@ -839,29 +1122,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800029"
+					id: "A3F1C0E238800036"
 					type: "xp"
-					xp: 18
+					xp: 20
 				}
 			]
 		}
 		{
-			id: "A3F1C0E21880002A"
+			id: "A3F1C0E218800037"
 			title: "觉醒巫妖之刃"
 			subtitle: "巫妖苏醒的寒意"
 			description: [
 				"简易刀剑巫妖线。"
 				"获取：巫妖级强敌掉落（人工核实）。"
-				"剑藏死气，寒意逼人。"
-				"EF 剑式诡谲，攻速与威力并重。"
+				"剑藏死气，寒意逼人，攻速与威力并重。"
 			]
-			x: 13.5d
+			x: 12.0d
 			y: 6.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800029"]
+			dependencies: ["A3F1C0E218800036"]
 			tasks: [
 				{
-					id: "A3F1C0E22880002A"
+					id: "A3F1C0E228800037"
 					type: "item"
 					item: {
 						id: "simplyswords:awakened_lichblade"
@@ -871,29 +1153,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E23880002A"
+					id: "A3F1C0E238800037"
 					type: "xp"
 					xp: 20
 				}
 			]
 		}
 		{
-			id: "A3F1C0E21880002B"
+			id: "A3F1C0E218800038"
 			title: "阎魔刀·原式"
 			subtitle: "鞘中藏锋的居合"
 			description: [
-				"Nightfall 名刀线，鞘中藏锋。"
+				"Nightfall（夜陨）名刀线，致敬《鬼泣》。"
 				"获取：任务获取（人工核实）。"
-				"拔刀迅疾，招式华丽。"
-				"EF 武士刀式，居合感拉满。"
+				"入鞘藏锋不露，拔刀迅疾，招式华丽。"
 			]
-			x: 15.0d
+			x: 13.5d
 			y: 6.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E21880002A"]
+			dependencies: ["A3F1C0E218800037"]
 			tasks: [
 				{
-					id: "A3F1C0E22880002B"
+					id: "A3F1C0E228800038"
 					type: "item"
 					item: {
 						id: "efn:yamato_dmc_in_sheath"
@@ -903,29 +1184,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E23880002B"
+					id: "A3F1C0E238800038"
 					type: "xp"
 					xp: 20
 				}
 			]
 		}
 		{
-			id: "A3F1C0E21880002C"
+			id: "A3F1C0E218800039"
 			title: "高频村正"
 			subtitle: "高频振动的斩铁"
 			description: [
-				"Nightfall 名刀线。"
+				"Nightfall（夜陨）名刀线，致敬《合金装备崛起》。"
 				"获取：获取途径人工核实。"
-				"斩击如电，声势凌厉。"
-				"EF 快刀式，连斩华丽。"
+				"斩击如电，声势凌厉，连斩华丽。"
 			]
-			x: 16.5d
+			x: 15.0d
 			y: 6.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E21880002B"]
+			dependencies: ["A3F1C0E218800038"]
 			tasks: [
 				{
-					id: "A3F1C0E22880002C"
+					id: "A3F1C0E228800039"
 					type: "item"
 					item: {
 						id: "efn:hf_murasama"
@@ -935,61 +1215,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E23880002C"
+					id: "A3F1C0E238800039"
 					type: "xp"
 					xp: 20
 				}
 			]
 		}
 		{
-			id: "A3F1C0E21880002D"
-			title: "楔丸"
-			subtitle: "忍者之刃的机敏"
-			description: [
-				"Nightfall 名刀线，忍者之刃。"
-				"获取：掉落或任务（人工核实）。"
-				"轻巧灵活，攻速一流。"
-				"EF 短刀式，机敏迅捷。"
-			]
-			x: 18.0d
-			y: 6.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E21880002C"]
-			tasks: [
-				{
-					id: "A3F1C0E22880002D"
-					type: "item"
-					item: {
-						id: "efn:kusabimaru"
-						Count: 1b
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "A3F1C0E23880002D"
-					type: "xp"
-					xp: 20
-				}
-			]
-		}
-		{
-			id: "A3F1C0E21880002E"
+			id: "A3F1C0E218800040"
 			title: "遗迹巨剑"
 			subtitle: "遗迹宝材的巨物"
 			description: [
-				"Nightfall 重剑线。"
+				"Nightfall（夜陨）重剑线，致敬《艾尔登法环》。"
 				"获取：遗迹材料锻造（人工核实）。"
-				"剑身庞大，单发极重。"
-				"EF 巨剑式，毁天灭地。"
+				"剑身如断柱，单发极重，毁天灭地。"
 			]
-			x: 19.5d
+			x: 16.5d
 			y: 6.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E21880002D"]
+			dependencies: ["A3F1C0E218800039"]
 			tasks: [
 				{
-					id: "A3F1C0E22880002E"
+					id: "A3F1C0E228800040"
 					type: "item"
 					item: {
 						id: "efn:ruinsgreatsword"
@@ -999,29 +1246,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E23880002E"
+					id: "A3F1C0E238800040"
 					type: "xp"
 					xp: 20
 				}
 			]
 		}
 		{
-			id: "A3F1C0E21880002F"
-			title: "双刃剑"
+			id: "A3F1C0E218800041"
+			title: "夜陨双刃"
 			subtitle: "左右开弓的连舞"
 			description: [
-				"Nightfall 双持线。"
+				"Nightfall（夜陨）双持线。"
 				"获取：成对打造或奖励（人工核实）。"
-				"左右开弓，攻势连绵。"
-				"EF 双持剑式，压制力强。"
+				"左右开弓，攻势连绵，压制力强。"
 			]
-			x: 21.0d
+			x: 18.0d
 			y: 6.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E21880002E"]
+			dependencies: ["A3F1C0E218800040"]
 			tasks: [
 				{
-					id: "A3F1C0E22880002F"
+					id: "A3F1C0E228800041"
 					type: "item"
 					item: {
 						id: "efn:nf_dual_sword"
@@ -1031,29 +1277,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E23880002F"
+					id: "A3F1C0E238800041"
 					type: "xp"
 					xp: 20
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800030"
+			id: "A3F1C0E218800042"
 			title: "反神者"
 			subtitle: "向神挥剑的终局"
 			description: [
 				"WoM 终局线，向神挥剑。"
 				"获取：神话材料锻造（人工核实）。"
-				"剑含神威，气势无双。"
-				"EF 双手神剑式，王者之姿。"
+				"剑含神威，气势无双，王者之姿。"
 			]
-			x: 22.5d
+			x: 19.5d
 			y: 6.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E21880002F"]
+			dependencies: ["A3F1C0E218800041"]
 			tasks: [
 				{
-					id: "A3F1C0E228800030"
+					id: "A3F1C0E228800042"
 					type: "item"
 					item: {
 						id: "wom:antitheus"
@@ -1063,54 +1308,316 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800030"
+					id: "A3F1C0E238800042"
 					type: "xp"
-					xp: 25
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800043"
+			title: "月光大剑"
+			subtitle: "月光的眷顾"
+			description: [
+				"Soul Like Armors 类魂线：月光之力铸成的大剑。"
+				"获取：以游戏内战利品与配方为准。"
+				"剑身如月华凝成，挥动时洒落清辉。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 21.0d
+			y: 7.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800042"]
+			tasks: [
+				{
+					id: "A3F1C0E228800043"
+					type: "item"
+					item: {
+						id: "soul_like_armors_reworked:moonkatana"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800043"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800044"
+			title: "暗月大剑"
+			subtitle: "暗月的裁决"
+			description: [
+				"Soul Like Armors 类魂线：暗月之力的巨剑。"
+				"获取：以游戏内战利品与配方为准。"
+				"月光大剑的暗色双生，寒意更胜。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 22.5d
+			y: 7.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800043"]
+			tasks: [
+				{
+					id: "A3F1C0E228800044"
+					type: "item"
+					item: {
+						id: "soul_like_armors_reworked:darkmoongreatsword"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800044"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800045"
+			title: "翁斯坦之枪"
+			subtitle: "猎龙者的长枪"
+			description: [
+				"Soul Like Armors 类魂线：致敬猎龙者翁斯坦。"
+				"获取：以游戏内战利品与配方为准。"
+				"枪出如龙，突刺与雷电相伴。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 24.0d
+			y: 7.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800044"]
+			tasks: [
+				{
+					id: "A3F1C0E228800045"
+					type: "item"
+					item: {
+						id: "soul_like_armors_reworked:ornsteinspsword"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800045"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800046"
+			title: "玛莲妮亚的剑"
+			subtitle: "猩红腐败之刃"
+			description: [
+				"Soul Like Armors 类魂线：致敬女武神玛莲妮亚。"
+				"获取：以游戏内战利品与配方为准。"
+				"刀身修长，刃风如花瓣纷飞。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 25.5d
+			y: 7.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800045"]
+			tasks: [
+				{
+					id: "A3F1C0E228800046"
+					type: "item"
+					item: {
+						id: "slu:malenia_sword"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800046"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800047"
+			title: "拉塔恩大剑"
+			subtitle: "碎星的双剑"
+			description: [
+				"Soul Like Armors 类魂线：致敬碎星将军拉塔恩。"
+				"获取：以游戏内战利品与配方为准。"
+				"成对巨剑，仅靠体型便压迫感十足。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 27.0d
+			y: 7.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800046"]
+			tasks: [
+				{
+					id: "A3F1C0E228800047"
+					type: "item"
+					item: {
+						id: "slu:radahn_sword"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800047"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800048"
+			title: "葬刃"
+			subtitle: "猎人的终章"
+			description: [
+				"Blood and Madness 血狂线：致敬《血源》的葬仪之刃。"
+				"获取：以游戏内战利品与配方为准。"
+				"镰形剑刃，斩击如为敌人送葬。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 28.5d
+			y: 7.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800047"]
+			tasks: [
+				{
+					id: "A3F1C0E228800048"
+					type: "item"
+					item: {
+						id: "bloodandmadness:burial_blade"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800048"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800049"
+			title: "教会石锤"
+			subtitle: "锤与剑一体"
+			description: [
+				"Blood and Madness 血狂线：致敬《血源》的教会石锤。"
+				"获取：以游戏内战利品与配方为准。"
+				"平时是银剑，变形后石锤砸落，重击无双。"
+				"※ 本条目 ID 未列入白名单实核，变形机制以游戏内为准（人工核实）。"
+			]
+			x: 30.0d
+			y: 7.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800048"]
+			tasks: [
+				{
+					id: "A3F1C0E228800049"
+					type: "item"
+					item: {
+						id: "bloodandmadness:kirkhammer"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800049"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800050"
+			title: "慈悲之刃"
+			subtitle: "双刃的慈悲"
+			description: [
+				"Blood and Madness 血狂线：致敬《血源》的慈悲之刃。"
+				"获取：以游戏内战利品与配方为准。"
+				"轻巧的成对短刃，终结技快如骤雨。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 31.5d
+			y: 7.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800049"]
+			tasks: [
+				{
+					id: "A3F1C0E228800050"
+					type: "item"
+					item: {
+						id: "bloodandmadness:blade_of_mercy"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800050"
+					type: "xp"
+					xp: 20
 				}
 				{
-					id: "A3F1C0E238800070"
+					id: "A3F1C0E238890050"
 					type: "xp_levels"
 					xp_levels: 3
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800031"
+			id: "A3F1C0E218800051"
 			title: "论外·名刀"
 			subtitle: "规则之外的收藏"
 			description: [
 				"规则之外的收藏，论战力已无意义。"
-				"入手途径多不可考（人工核实），收藏即胜利。"
+				"入手途径多不可考，收藏即胜利。"
 			]
 			x: 0.0d
 			y: 9.0d
 			shape: "diamond"
-			dependencies: ["A3F1C0E218800030"]
+			dependencies: []
 			tasks: [
 				{
-					id: "A3F1C0E228800031"
+					id: "A3F1C0E228800051"
 					type: "checkmark"
 					title: "论外·名刀"
 				}
 			]
+			rewards: [
+				{
+					id: "A3F1C0E238800051"
+					type: "xp"
+					xp: 5
+				}
+			]
 		}
 		{
-			id: "A3F1C0E218800032"
+			id: "A3F1C0E218800052"
 			title: "拿破仑"
 			subtitle: "名将之刃的威仪"
 			description: [
 				"WoM 传说线，名将之刃。"
 				"获取：史诗级入手途径（人工核实）。"
 				"威仪自生，仿佛千军随行。"
-				"EF 军刀式，指挥若定。"
 			]
 			x: 1.5d
 			y: 9.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800031"]
+			dependencies: ["A3F1C0E218800051"]
 			tasks: [
 				{
-					id: "A3F1C0E228800032"
+					id: "A3F1C0E228800052"
 					type: "item"
 					item: {
 						id: "wom:napoleon"
@@ -1120,29 +1627,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800032"
+					id: "A3F1C0E238800052"
 					type: "xp"
-					xp: 25
+					xp: 30
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800033"
+			id: "A3F1C0E218800053"
 			title: "废墟"
 			subtitle: "残破不掩的悍勇"
 			description: [
 				"WoM 传说线。"
 				"获取：废墟遗宝（人工核实）。"
-				"伤痕即勋章，粗犷耐用。"
-				"EF 重剑式，狂野不羁。"
+				"伤痕即勋章，粗犷耐用，狂野不羁。"
 			]
 			x: 3.0d
 			y: 9.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800032"]
+			dependencies: ["A3F1C0E218800052"]
 			tasks: [
 				{
-					id: "A3F1C0E228800033"
+					id: "A3F1C0E228800053"
 					type: "item"
 					item: {
 						id: "wom:ruine"
@@ -1152,29 +1658,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800033"
+					id: "A3F1C0E238800053"
 					type: "xp"
-					xp: 25
+					xp: 30
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800034"
+			id: "A3F1C0E218800054"
 			title: "阎魔刀·DMC4"
 			subtitle: "四代鞘装的传说"
 			description: [
-				"Nightfall 传说名刀，四代鞘装。"
+				"Nightfall（夜陨）论外名刀，四代鞘装。"
 				"获取：获取途径人工核实。"
-				"居合如诗，斩击如画。"
-				"EF 武士刀式巅峰，动作收藏两相宜。"
+				"居合如诗，斩击如画，动作收藏两相宜。"
 			]
 			x: 4.5d
 			y: 9.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800033"]
+			dependencies: ["A3F1C0E218800053"]
 			tasks: [
 				{
-					id: "A3F1C0E228800034"
+					id: "A3F1C0E228800054"
 					type: "item"
 					item: {
 						id: "efn:yamato_dmc4_in_sheath"
@@ -1184,29 +1689,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800034"
+					id: "A3F1C0E238800054"
 					type: "xp"
 					xp: 30
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800035"
+			id: "A3F1C0E218800055"
 			title: "高频之刃"
 			subtitle: "斩断一切的蝉鸣"
 			description: [
-				"Nightfall 传说名刀。"
+				"Nightfall（夜陨）论外名刀。"
 				"获取：获取途径人工核实。"
-				"高频刃身，万物皆可斩。"
-				"EF 快刀式，炫技必备。"
+				"高频刃身，万物皆可斩，炫技必备。"
 			]
 			x: 6.0d
 			y: 9.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800034"]
+			dependencies: ["A3F1C0E218800054"]
 			tasks: [
 				{
-					id: "A3F1C0E228800035"
+					id: "A3F1C0E228800055"
 					type: "item"
 					item: {
 						id: "efn:hf_blade"
@@ -1216,29 +1720,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800035"
+					id: "A3F1C0E238800055"
 					type: "xp"
 					xp: 30
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800036"
+			id: "A3F1C0E218800056"
 			title: "绯月"
-			subtitle: "双持血月的华光"
+			subtitle: "血月的刀光"
 			description: [
-				"Nightfall 传说线。"
+				"Nightfall（夜陨）论外。"
 				"获取：获取途径人工核实。"
-				"血红月刃，双持形态下月华同辉。"
-				"EF 双剑式，血月连舞。"
+				"血红月刃，刀光如血月当空，凄美而致命。"
 			]
 			x: 7.5d
 			y: 9.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800035"]
+			dependencies: ["A3F1C0E218800055"]
 			tasks: [
 				{
-					id: "A3F1C0E228800036"
+					id: "A3F1C0E228800056"
 					type: "item"
 					item: {
 						id: "efn:crimson_moon"
@@ -1248,29 +1751,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800036"
+					id: "A3F1C0E238800056"
 					type: "xp"
 					xp: 30
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800037"
-			title: "流放银刃"
-			subtitle: "放逐者的双持银辉"
+			id: "A3F1C0E218800057"
+			title: "流放者之剑"
+			subtitle: "双持形态的流放剑"
 			description: [
-				"Nightfall 名刀，放逐者的银辉。"
+				"Nightfall（夜陨）论外：拉丁语「流放之剑」。"
 				"获取：获取途径人工核实。"
-				"银刃成对，双持形态左右开弓。"
-				"EF 双持剑式，疾风骤雨。"
+				"可双持形态作战，左右剑光织成剑网。"
 			]
 			x: 9.0d
 			y: 9.0d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800036"]
+			dependencies: ["A3F1C0E218800056"]
 			tasks: [
 				{
-					id: "A3F1C0E228800037"
+					id: "A3F1C0E228800057"
 					type: "item"
 					item: {
 						id: "efn:exsiliumgladius"
@@ -1280,29 +1782,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800037"
+					id: "A3F1C0E238800057"
 					type: "xp"
 					xp: 30
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800038"
+			id: "A3F1C0E218800058"
 			title: "星锋"
 			subtitle: "群星坠落的刃光"
 			description: [
-				"简易刀剑传说级。"
+				"简易刀剑论外级。"
 				"获取：稀有途径（人工核实）。"
-				"刃光如星河倾泻。"
-				"EF 快剑式，华丽至极。"
+				"刃光如星河倾泻，华丽至极。"
 			]
 			x: 10.5d
-			y: 9.0d
+			y: 10.5d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800037"]
+			dependencies: ["A3F1C0E218800051"]
 			tasks: [
 				{
-					id: "A3F1C0E228800038"
+					id: "A3F1C0E228800058"
 					type: "item"
 					item: {
 						id: "simplyswords:stars_edge"
@@ -1312,29 +1813,28 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800038"
+					id: "A3F1C0E238800058"
 					type: "xp"
 					xp: 30
 				}
 			]
 		}
 		{
-			id: "A3F1C0E218800039"
+			id: "A3F1C0E218800059"
 			title: "利维坦"
 			subtitle: "深海巨兽的咆哮"
 			description: [
-				"简易刀剑传说级。"
+				"简易刀剑论外级。"
 				"获取：稀有途径（人工核实）。"
-				"巨刃如海啸压境。"
-				"EF 巨剑式，势不可挡。"
+				"巨刃如海啸压境，势不可挡。"
 			]
 			x: 12.0d
-			y: 9.0d
+			y: 10.5d
 			shape: "circle"
-			dependencies: ["A3F1C0E218800038"]
+			dependencies: ["A3F1C0E218800058"]
 			tasks: [
 				{
-					id: "A3F1C0E228800039"
+					id: "A3F1C0E228800059"
 					type: "item"
 					item: {
 						id: "simplyswords:livyatan"
@@ -1344,12 +1844,140 @@
 			]
 			rewards: [
 				{
-					id: "A3F1C0E238800039"
+					id: "A3F1C0E238800059"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800060"
+			title: "朗基努斯之枪"
+			subtitle: "弑神之枪"
+			description: [
+				"Soul Like Armors 论外：传说中刺穿神明的长枪。"
+				"获取：以游戏内战利品与配方为准。"
+				"枪身螺旋，一击之下万物皆穿。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 13.5d
+			y: 10.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800059"]
+			tasks: [
+				{
+					id: "A3F1C0E228800060"
+					type: "item"
+					item: {
+						id: "slu:lance_of_longinus"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800060"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800061"
+			title: "拉亚斯特之镰"
+			subtitle: "暗裔的镰刀"
+			description: [
+				"Soul Like Armors 论外：暗裔拉亚斯特的巨镰。"
+				"获取：以游戏内战利品与配方为准。"
+				"镰刃赤红，收割战场如麦田。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 15.0d
+			y: 10.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800060"]
+			tasks: [
+				{
+					id: "A3F1C0E228800061"
+					type: "item"
+					item: {
+						id: "slu:legendary_rhaast_scythe"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800061"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800062"
+			title: "亚托克斯之剑"
+			subtitle: "胜利者的魔剑"
+			description: [
+				"Soul Like Armors 论外：暗裔剑魔亚托克斯的佩剑。"
+				"获取：以游戏内战利品与配方为准。"
+				"巨剑如墓碑，挥下即是终结。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 16.5d
+			y: 10.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800061"]
+			tasks: [
+				{
+					id: "A3F1C0E228800062"
+					type: "item"
+					item: {
+						id: "slu:legendary_victorious_aatrox_sword"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800062"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "A3F1C0E218800063"
+			title: "神圣月光大剑"
+			subtitle: "月光的最终形态"
+			description: [
+				"Blood and Madness 论外：致敬《血源》的神圣月光大剑。"
+				"获取：以游戏内战利品与配方为准。"
+				"碧光盈刃，是本线所有猎人的最终梦想。"
+				"※ 本条目 ID 未列入白名单实核，细节以游戏内为准（人工核实）。"
+			]
+			x: 18.0d
+			y: 10.5d
+			shape: "circle"
+			dependencies: ["A3F1C0E218800062"]
+			tasks: [
+				{
+					id: "A3F1C0E228800063"
+					type: "item"
+					item: {
+						id: "bloodandmadness:moonlight_greatsword"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0E238800063"
 					type: "xp"
 					xp: 30
 				}
 				{
-					id: "A3F1C0E238800079"
+					id: "A3F1C0E238890063"
 					type: "xp_levels"
 					xp_levels: 3
 				}
