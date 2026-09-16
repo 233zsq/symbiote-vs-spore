@@ -1,0 +1,13 @@
+name = "Boss Checklist"
+filename = "boss_checklist-forge-5.2.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/z1Dv56jq/versions/EdmO2QdY/boss_checklist-forge-5.2.0.jar"
+hash-format = "sha512"
+hash = "eb0ef792cdbc2eaad6ea9bdcc267523247e4935e5a7b573435a969ddc1230cc5d07e6ce9c228e6fb1fce4e97134ddda2a9ccdb13e6ef7dbd6ed6c89071cfab67"
+
+[update]
+[update.modrinth]
+mod-id = "z1Dv56jq"
+version = "EdmO2QdY"

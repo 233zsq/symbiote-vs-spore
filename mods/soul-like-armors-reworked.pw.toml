@@ -1,0 +1,8 @@
+name = "Soul Like Armors Reworked"
+filename = "soul_like_armors_reworked_1.20.1_(v140).jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/soul-like-armors-reworked"
+hash-format = "sha512"
+hash = "2b0ed433791f4e208b2eefcf4dbb313935e4ce34fa1141a56bfa66dd73ed56d1497160c8d2bf4cd87c915c4c4fb079f2d1e1e284451c0ae61395c6c6e95c6e66"

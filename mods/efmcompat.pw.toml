@@ -1,0 +1,13 @@
+name = "Epic Fight & Other Mods Weapons Compabilities"
+filename = "EFMCompat 2.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/upBx6tuB/versions/AfuFakPO/EFMCompat%202.0.jar"
+hash-format = "sha512"
+hash = "eccac214a5ef2243f685c5fd027da67c42913c68be76958073892856bdd1b62597b50b4805fe4535828606cd9367935b8bceb2f8d0129f88f1e5ee5fbcccde56"
+
+[update]
+[update.modrinth]
+mod-id = "upBx6tuB"
+version = "AfuFakPO"

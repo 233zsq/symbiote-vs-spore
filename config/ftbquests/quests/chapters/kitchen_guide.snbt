@@ -1,0 +1,251 @@
+{
+	default_hide_dependency_lines: false
+	filename: "kitchen_guide"
+	group: "0B00AA11CC22DDAA"
+	icon: "farmersdelight:cooking_pot"
+	id: "A3F1C0F800000003"
+	order_index: 3
+	title: "战斗口粮"
+	quests: [
+		{
+			id: "A3F1C0F810000001"
+			title: "安家先安灶"
+			subtitle: "炉火起处，方为营地"
+			description: [
+				"想在孢子天灾下活得滋润，先得把灶支起来。",
+				"农夫乐事的「烹饪锅」是一切料理的起点——砖块与铁料按 JEI 合成，锅底还需热源（营火/熔炉皆可）。",
+				"放入食材与容器，静候锅中咕嘟作响。"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "circle"
+			tasks: [
+				{
+					id: "A3F1C0F820000001"
+					type: "item"
+					item: {
+						id: "farmersdelight:cooking_pot"
+						Count: 1b
+					}
+				}
+			]
+		}
+		{
+			id: "A3F1C0F810000002"
+			title: "煎锅上手"
+			subtitle: "随身灶台，边走边吃"
+			description: [
+				"「煎锅」是冒险者的移动厨房：几块铁锭与木棍即可锻成（合成见 JEI）。",
+				"一手煎锅一手生肉，对准营火翻煎，逃命路上也能吃上热食。",
+				"残血被追时边跑边煎——这是共生体宿主也要会的手艺。"
+			]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F810000001"]
+			tasks: [
+				{
+					id: "A3F1C0F820000002"
+					type: "item"
+					item: {
+						id: "farmersdelight:skillet"
+						Count: 1b
+					}
+				}
+			]
+		}
+		{
+			id: "A3F1C0F810000003"
+			title: "一口热饭"
+			subtitle: "熟食下肚，方有力气挥剑"
+			description: [
+				"Epic Fight 的连招与闪避极耗体力；饥饿低于九格鸡腿时，你无法自然回血。",
+				"烤熟 8 份牛排塞满行囊——熟食的饱腹远胜生食，是远征的底气。",
+				"常备高饱和度食物，别在 Boss 战中途饿着肚子硬撑。"
+			]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F810000002"]
+			tasks: [
+				{
+					id: "A3F1C0F820000003"
+					type: "item"
+					item: {
+						id: "minecraft:cooked_beef"
+						Count: 8b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F830000001"
+					type: "xp"
+					xp: 50
+				}
+			]
+		}
+		{
+			id: "A3F1C0F810000004"
+			title: "农夫的馈赠"
+			subtitle: "锄头与种子，最早的军备"
+			description: [
+				"农夫乐事为原野添了卷心菜、番茄、洋葱、稻米等作物，村庄农田与野外草丛皆可寻得种子。",
+				"一畦菜田加一口热锅，营地便永远饿不死人：稻米煮饭、洋葱熬汤、番茄入酱。",
+				"注：完整作物列表与配方以 JEI 为准（人工核实）。"
+			]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F810000003"]
+			tasks: [
+				{
+					id: "A3F1C0F820000004"
+					type: "checkmark"
+					title: "农夫的馈赠"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F810000005"
+			title: "下界风味"
+			subtitle: "来自下界的硬菜"
+			description: [
+				"Nether's Delight 把下界变成猎场：疣猪兽肉、绯红菌与诡异菌皆可入馔。",
+				"下界料理以高饱腹与独特增益见长，是讨伐暮色强敌前的能量底牌。",
+				"本包已附汉化；具体菜品与效果以 JEI 为准（人工核实）。"
+			]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F810000004"]
+			tasks: [
+				{
+					id: "A3F1C0F820000005"
+					type: "checkmark"
+					title: "下界风味"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F810000006"
+			title: "小酌怡情"
+			subtitle: "战前一壶，战吼三声"
+			description: [
+				"Brewin' & Chewin' 的酿造饮品能提供战前增益：力量、抗性、急迫……各有妙用。",
+				"酒有代价——留意副作用与持续时间，别在 Boss 战中途上头。",
+				"本包已附汉化；配方与效果以 JEI 为准（人工核实）。"
+			]
+			x: 7.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F810000005"]
+			tasks: [
+				{
+					id: "A3F1C0F820000006"
+					type: "checkmark"
+					title: "小酌怡情"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F810000007"
+			title: "宴会与便当"
+			subtitle: "远征的底气，藏在食盒里"
+			description: [
+				"高级料理（宴会大餐、拼盘等）常附带长效的「舒适」状态，饱食更持久。",
+				"深入结构远征前，把增益料理、金苹果与应急干粮分栏收纳——背包即粮仓。",
+				"具体菜品与效果以 JEI 为准（人工核实）。"
+			]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F810000006"]
+			tasks: [
+				{
+					id: "A3F1C0F820000007"
+					type: "checkmark"
+					title: "宴会与便当"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F810000008"
+			title: "口粮纪律"
+			subtitle: "出征三问，三问皆备方可出营"
+			description: [
+				"一问口粮：熟食与增益料理可够三日之征？",
+				"二问药剂：治疗、抗火与夜视是否备齐？",
+				"三问归途：传送石可已绑定、床铺坐标可还记得？",
+				"三问皆备，方可拔营。"
+			]
+			x: 10.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F810000007"]
+			tasks: [
+				{
+					id: "A3F1C0F820000008"
+					type: "checkmark"
+					title: "口粮纪律"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F810000009"
+			title: "AppleSkin 读数"
+			subtitle: "会看饥饿条，才会活命"
+			description: [
+				"AppleSkin 在食物提示中叠加显示：深色为饥饿回复，金色为饱和回复。",
+				"金色越长的食物越「抗饿」——金胡萝卜、熟牛排、蜂蜜瓶皆是常青之选。",
+				"战前选高饱和食物补满状态，别让饥饿条跌破九格。"
+			]
+			x: 12.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F810000008"]
+			tasks: [
+				{
+					id: "A3F1C0F820000009"
+					type: "checkmark"
+					title: "AppleSkin 读数"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F81000000A"
+			title: "收官「后勤保障」"
+			subtitle: "兵马未动，粮草先行"
+			description: [
+				"至此后勤线毕业：从支灶、煎锅到宴会便当，从口粮纪律到饱食读数，你已是合格的「粮草官」。",
+				"收下金苹果与历练之证，背起满仓口粮——下一站，主线成长之路。"
+			]
+			x: 13.5d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: ["A3F1C0F810000009"]
+			tasks: [
+				{
+					id: "A3F1C0F82000000A"
+					type: "checkmark"
+					title: "收官「后勤保障」"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F830000002"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					id: "A3F1C0F830000003"
+					type: "item"
+					item: {
+						id: "minecraft:golden_apple"
+						Count: 2b
+					}
+				}
+			]
+		}
+	]
+}

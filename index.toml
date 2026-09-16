@@ -22,7 +22,7 @@ hash = "3cf4e727ed89b9ade1cee228d71cd7a47e2c2c9dc7d4612066d72d2cfc5ed4e8"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/boss_guide.snbt"
-hash = "dadbecc69b388d0b54811940ff9be461263cabee638feb87aa5c763ece056b76"
+hash = "5d4cb1af8dfbe91723aaf168b14f7a2718ccd86853f94127174a0751c111bf2b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/calamity_front.snbt"
@@ -35,6 +35,10 @@ hash = "c91f6e7eeafcb9608e4829bd17e4705a2b309fd83321a4880b3150b5a487da2a"
 [[files]]
 file = "config/ftbquests/quests/chapters/preface.snbt"
 hash = "9eb32263fedb5c90abc86f60371dc42c7507bd9191bb40711352da8dbac85e1e"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/souls_structures.snbt"
+hash = "5628b86f2a47f979cbfc10f6ffc832d4514fa1c1c9632f8778e05d9b0aba4623"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage1_departure.snbt"
@@ -3521,6 +3525,46 @@ file = "config/openloader/data/imfdata/pack.mcmeta"
 hash = "4cebc384d1f92e61ec7d770bfe663b93630ec4315cd65293d39bac2f96c4fc8e"
 
 [[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/betterfortresses/lang/zh_cn.json"
+hash = "8905765fd7c7d418933c13598a0f0331cec02a1853c648f1f36f79fcb78a68af"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/bettermineshafts/lang/zh_cn.json"
+hash = "0cf5d60d8bde7cbb2cdd3ea465d423f65da57b8a736df55980b8e3d5c3a6ab6e"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/betterstrongholds/lang/zh_cn.json"
+hash = "7da4d6430f42b794af80edad24335aeaf84abca21fadaf133ffdda997a507da9"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/brewinandchewin/lang/zh_cn.json"
+hash = "0f0ebd45220406f7c609380be9c98fb9565df97b3fdd953cccd234bbe7e8c7d2"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/epicfighttinkercompat/lang/zh_cn.json"
+hash = "100e89e683d70d6b466e92333a43146b54663f1dee0ddfea14f67eefcb483527"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/kubejs/lang/zh_cn.json"
+hash = "1039d77eb773affe9719e504069f54050c042e92db0e4ef9c3f5c00cfa3d7ad7"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/nethersdelight/lang/zh_cn.json"
+hash = "a51f33f983790f3915c451d4461578bf86cc7c119772a4d3a2ce90b213dc6b2b"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/symbiote/lang/zh_cn.json"
+hash = "fcaefc1626ef4a810321196ebf624200b0efdf207748eae24d02084fc7724cca"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/terralith/lang/zh_cn.json"
+hash = "902783fdd140a2e54eb46380c246f8a8d9081b2f26a13dce62116f759969b830"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/pack.mcmeta"
+hash = "3a42579d81655476ca14ee3e7e99bc4e8df0923c8ce050936f9160fa5b2401b9"
+
+[[files]]
 file = "config/openloader/resources/wom_zh_cn/assets/wom/lang/zh_cn.json"
 hash = "684f639e4cb6d8ef9c87514637fc458cade71ebba52e94d03f8d74a02f549e93"
 
@@ -3595,6 +3639,11 @@ hash = "ba71bdea2bb0e65eb53646a70e710a23bd711743aba3bc8ba1f2e1034f1cbc50"
 metafile = true
 
 [[files]]
+file = "mods/boss-checklist.pw.toml"
+hash = "37f82fb6469ea1b66807cc2058180d5ba10be0503fde0ad6dc284e21dbafd4df"
+metafile = true
+
+[[files]]
 file = "mods/bossesrise.pw.toml"
 hash = "ee892fd4cbe8b81cc7cb59c7238029b1053a157f76a0e7c0b0315b176fb18a86"
 metafile = true
@@ -3635,6 +3684,11 @@ hash = "903352ffbd84d4b95fed905893f4715d9c3f88ec9fff6fb06f6e359e0b839dc3"
 metafile = true
 
 [[files]]
+file = "mods/compatlink-epic-fight-weapons-compat.pw.toml"
+hash = "072608592f04adf833ed2c091ec398ea02715044df58af5ff9637b58117081e6"
+metafile = true
+
+[[files]]
 file = "mods/controlling.pw.toml"
 hash = "ae0a3a2ada91088822989239b896b1ab0e4b870537bdcf46b2c7c0a5eea46e1f"
 metafile = true
@@ -3672,6 +3726,11 @@ metafile = true
 [[files]]
 file = "mods/eeeabs-mobs.pw.toml"
 hash = "da4fc8b24e5d8bfa6875a7d02ff876a5459bc3c11f860847cbb8054d931c9bfb"
+metafile = true
+
+[[files]]
+file = "mods/efmcompat.pw.toml"
+hash = "f097c3ab0f651fef79d04a17d6b6fa7a227e990592b47da90120d13069fb7b38"
 metafile = true
 
 [[files]]
@@ -3957,6 +4016,16 @@ metafile = true
 [[files]]
 file = "mods/sophisticated-storage.pw.toml"
 hash = "a59d27eba58d24698ea2a3d0a41d5486f834ce8c9fa4c124633e829ee401ae71"
+metafile = true
+
+[[files]]
+file = "mods/soul-like-armors-reworked.pw.toml"
+hash = "ac1c1c7ce88601c2b31bb6c75adc85928eb58cadb959d68e0faf4dcee1a99f2f"
+metafile = true
+
+[[files]]
+file = "mods/soul-like-mobs.pw.toml"
+hash = "78d0bcccf940dcdcd9745849964cbc2dfcdeea9127494d7ad741046a26291d98"
 metafile = true
 
 [[files]]

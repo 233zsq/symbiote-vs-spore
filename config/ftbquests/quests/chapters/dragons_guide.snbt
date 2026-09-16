@@ -1,0 +1,143 @@
+{
+	default_hide_dependency_lines: false
+	filename: "dragons_guide"
+	group: "0B00AA11CC22DDAA"
+	icon: "saintsdragons:dragonheart_alloy"
+	id: "A3F1C0F700000077"
+	order_index: 2
+	title: "圣龙驯养"
+	quests: [
+		{
+			id: "A3F1C0F710000001"
+			title: "八龙传说"
+			subtitle: "天空的传说"
+			description: ["圣龙传说：可驯服、可骑乘的伙伴龙，定位为赶路坐骑。", "群系标签已注入 Terralith，按高山、雪原、熔岩等地貌寻龙。", "模组尚处 Alpha 阶段，异常行为请备份存档后反馈。"]
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			tasks: [{id: "A3F1C0F720000001", type: "checkmark", title: "阅读八龙传说"}]
+		}
+		{
+			id: "A3F1C0F710000002"
+			title: "驯龙要诀"
+			subtitle: "先打晕，再喂食"
+			description: ["驯服流程：压低血线将龙打晕，趁其倒地时喂食。", "鞍具是骑乘的前置；骑乘仅限赶路，正面战斗请下马。", "打晕不是打死——血线压过头，就只能捡龙鳞了。"]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F710000001"]
+			tasks: [{id: "A3F1C0F720000002", type: "checkmark", title: "研读驯龙要诀"}]
+		}
+		{
+			id: "A3F1C0F710000003"
+			title: "雷翼 Raevyx"
+			subtitle: "雷翼·山地形"
+			description: ["栖息于山地与陡峭高原，常伴雷雨现身。", "驯服：山地形压血线打晕后喂食；个性高傲，认主后极忠。", "※ 刷新条件等细节需人工核实。"]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F710000002"]
+			tasks: [{id: "A3F1C0F720000003", type: "checkmark", title: "记录雷翼"}]
+		}
+		{
+			id: "A3F1C0F710000004"
+			title: "烬羽 Cindervane"
+			subtitle: "烬羽·多乘客位"
+			description: ["火山与焦土地带的赤翼飞龙，飞行平稳。", "独有亮点：多乘客位，可载队友同游天际。", "※ 驯服细节需人工核实。"]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F710000003"]
+			tasks: [{id: "A3F1C0F720000004", type: "checkmark", title: "记录烬羽"}]
+		}
+		{
+			id: "A3F1C0F710000005"
+			title: "堕影 Atroxiia"
+			subtitle: "堕影"
+			description: ["盘踞于幽暗密林与洞穴穹顶，行踪诡秘的暗色龙。", "低血线时会凶狠反扑，打晕阶段务必留足余量。", "※ 群系与行为细节需人工核实。"]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F710000004"]
+			tasks: [{id: "A3F1C0F720000005", type: "checkmark", title: "记录堕影"}]
+		}
+		{
+			id: "A3F1C0F710000006"
+			title: "虚颚 Nulljaw"
+			subtitle: "虚颚"
+			description: ["出没于荒芜恶地与幽谷，咬合力惊人。", "个性凶悍，驯服时的血线控制是关键。", "※ 刷新群系与喂食材料需人工核实。"]
+			x: 7.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F710000005"]
+			tasks: [{id: "A3F1C0F720000006", type: "checkmark", title: "记录虚颚"}]
+		}
+		{
+			id: "A3F1C0F710000007"
+			title: "剑背 Stegonaut"
+			subtitle: "剑背·装死行家"
+			description: ["沼泽湿地的重甲龙，浑身披甲。", "装死行家：被打残时会倒地装死——别停手，继续喂到驯服。", "※ 装死触发机制需人工核实。"]
+			x: 7.5d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F710000006"]
+			tasks: [{id: "A3F1C0F720000007", type: "checkmark", title: "记录剑背"}]
+		}
+		{
+			id: "A3F1C0F710000008"
+			title: "钩鳄 Varasuchus"
+			subtitle: "钩鳄"
+			description: ["潜伏于河流三角洲的鳄形龙，半水栖。", "水性极佳；先打晕再喂食，追进水里时注意呼吸。", "※ 具体习性需人工核实。"]
+			x: 9.0d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F710000007"]
+			tasks: [{id: "A3F1C0F720000008", type: "checkmark", title: "记录钩鳄"}]
+		}
+		{
+			id: "A3F1C0F710000009"
+			title: "熔喉 Ignivorus"
+			subtitle: "熔喉·熔岩柱"
+			description: ["熔岩湖畔的霸主，常盘踞于熔岩柱旁。", "火焰亲和；驯服它务必备好防火手段，控血更要精准。", "※ 喂食材料以游戏内为准，需人工核实。"]
+			x: 10.5d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F710000008"]
+			tasks: [{id: "A3F1C0F720000009", type: "checkmark", title: "记录熔喉"}]
+		}
+		{
+			id: "A3F1C0F71000000A"
+			title: "浮羽 Volitans"
+			subtitle: "浮羽"
+			description: ["云海高空的游弋者，现身于天域般的高空地貌。", "长途耐力最佳，公认最理想的赶路伙伴。", "※ 刷新条件与驯服细节需人工核实。"]
+			x: 12.0d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F710000009"]
+			tasks: [{id: "A3F1C0F72000000A", type: "checkmark", title: "记录浮羽"}]
+		}
+		{
+			id: "A3F1C0F71000000B"
+			title: "龙心合金"
+			subtitle: "龙匠锻炉产物"
+			description: ["龙心合金：龙匠锻炉的产物，圣龙装备的起点。", "集齐龙鳞等材料，交由龙匠锻炉熔炼成锭。", "※ 具体配方与材料需人工核实。"]
+			x: 13.5d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F71000000A"]
+			tasks: [{id: "A3F1C0F72000000B", type: "item", item: {id: "saintsdragons:dragonheart_alloy", Count: 1b}}]
+		}
+		{
+			id: "A3F1C0F71000000C"
+			title: "龙骑士"
+			subtitle: "飞吧，骑士"
+			description: ["八龙图鉴已全，龙心合金在手——龙骑士的资格，你已具备。", "挑一匹心仪的伙伴，驰骋天际吧。", "祝旅途顺风。"]
+			x: 15.0d
+			y: -1.5d
+			shape: "pentagon"
+			dependencies: ["A3F1C0F710000001", "A3F1C0F710000002", "A3F1C0F710000003", "A3F1C0F710000004", "A3F1C0F710000005", "A3F1C0F710000006", "A3F1C0F710000007", "A3F1C0F710000008", "A3F1C0F710000009", "A3F1C0F71000000A", "A3F1C0F71000000B"]
+			tasks: [{id: "A3F1C0F72000000C", type: "checkmark", title: "达成龙骑士"}]
+			rewards: [{id: "A3F1C0F73000000C", type: "xp_levels", xp_levels: 5}]
+		}
+	]
+}

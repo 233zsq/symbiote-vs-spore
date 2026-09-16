@@ -1,0 +1,372 @@
+{
+	default_hide_dependency_lines: false
+	filename: "souls_guide"
+	group: "0B00AA11CC22DDAA"
+	icon: "minecraft:soul_lantern"
+	id: "A3F1C0F5000000AA"
+	order_index: 0
+	title: "类魂模组指南"
+	quests: [
+		{
+			id: "A3F1C0F510000001"
+			title: "何为类魂"
+			subtitle: "类魂模组指南 · 开篇"
+			description: [
+				"Ash Of Sin、Legendary Monsters、Bosses'Rise 三件套，共同撑起本包的类魂 Boss 体系。",
+				"定位：高难度 Boss 战 + 专属结构 + 独立奖励线，与 Epic Fight 动作系统深度咬合。",
+				"难度警告：切勿无备挑战——护甲、药水、附魔缺一不可，战败风险自行承担。"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			tasks: [
+				{
+					id: "A3F1C0F520000001"
+					type: "checkmark"
+					title: "何为类魂"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F510000002"
+			title: "远古巨像"
+			subtitle: "Legendary Monsters 图鉴 ①"
+			description: [
+				"出没地：沙海金字塔遗迹的镇守者，藤蔓缠身的石质泰坦。",
+				"打法要点：绕后攻击其腿部弱点，躲开地震践踏与藤蔓鞭击。",
+				"掉落看点：专属战利品与古代遗物，具体清单人工核实。"
+			]
+			x: -3.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F510000001"]
+			tasks: [
+				{
+					id: "A3F1C0F520000002"
+					type: "checkmark"
+					title: "远古巨像"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F510000003"
+			title: "远古守卫"
+			subtitle: "Legendary Monsters 图鉴 ②"
+			description: [
+				"出没地：远古遗迹深处的机关守卫，出没结构人工核实。",
+				"打法要点：利用柱体卡视角规避冲撞，优先打断其蓄力招式。",
+				"掉落看点：守卫核心等稀有材料，掉落人工核实。"
+			]
+			x: -1.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F510000002"]
+			tasks: [
+				{
+					id: "A3F1C0F520000003"
+					type: "checkmark"
+					title: "远古守卫"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F510000004"
+			title: "无头骑士"
+			subtitle: "Legendary Monsters 图鉴 ③"
+			description: [
+				"出没地：亡者之地游荡的无头骑士，击杀后可能以复活骑士之姿再临。",
+				"打法要点：复活形态 resurrected_knight 数值全面强化，务必留好后手。",
+				"掉落看点：骑士遗物类战利品，掉落人工核实。"
+			]
+			x: 0.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F510000003"]
+			tasks: [
+				{
+					id: "A3F1C0F520000004"
+					type: "checkmark"
+					title: "无头骑士"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F510000005"
+			title: "怨灵骑士"
+			subtitle: "Legendary Monsters 图鉴 ④"
+			description: [
+				"出没地：阴森遗迹与古战场，出没条件人工核实。",
+				"打法要点：怨灵攻击附带负面效果，备好牛奶与抗性药水。",
+				"掉落看点：幽灵系材料，用途人工核实。"
+			]
+			x: 1.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F510000004"]
+			tasks: [
+				{
+					id: "A3F1C0F520000005"
+					type: "checkmark"
+					title: "怨灵骑士"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F510000006"
+			title: "积雨云魔像"
+			subtitle: "Legendary Monsters 图鉴 ⑤"
+			description: [
+				"出没地：盘踞天空结构的积雨云魔像，雷暴之时最为活跃，结构位置人工核实。",
+				"打法要点：远程职业占优；落雷与坠落才是最大死因，注意脚下。",
+				"掉落看点：云气与雷电系材料，掉落人工核实。"
+			]
+			x: 3.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F510000005"]
+			tasks: [
+				{
+					id: "A3F1C0F520000006"
+					type: "checkmark"
+					title: "积雨云魔像"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F510000007"
+			title: "海盗船长"
+			subtitle: "Bosses'Rise 六杰 ①"
+			description: [
+				"出没地：沉船结构——海上的亡命之徒。",
+				"打法要点：出刀快、范围大，用 Epic Fight 翻滚躲开三段连斩再反击。",
+				"掉落看点：船长宝箱与沉船宝藏，内容人工核实。"
+			]
+			x: -3.75d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F510000001"]
+			tasks: [
+				{
+					id: "A3F1C0F520000007"
+					type: "kill"
+					entity: "block_factorys_bosses:pirate_captain"
+					value: 1L
+					title: "海盗船长"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F510000008"
+			title: "雪怪 Skor"
+			subtitle: "Bosses'Rise 六杰 ②"
+			description: [
+				"出没地：雪人巢——雪原深处的冰霜猎手。",
+				"打法要点：注意冰霜减速与投掷雪球，火系武器与抗寒药剂必备。",
+				"掉落看点：寒冰素材与雪怪皮毛，用途人工核实。"
+			]
+			x: -2.25d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F510000007"]
+			tasks: [
+				{
+					id: "A3F1C0F520000008"
+					type: "kill"
+					entity: "block_factorys_bosses:yeti"
+					value: 1L
+					title: "雪怪 Skor"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F510000009"
+			title: "沙虫 Sirok"
+			subtitle: "Bosses'Rise 六杰 ③"
+			description: [
+				"出没地：沙虫巢——沙海之下潜行的巨兽。",
+				"打法要点：地面震颤即翻滚，勿站流沙之上；它钻出地面的瞬间是输出窗口。",
+				"掉落看点：沙虫甲壳与腺体素材，用途人工核实。"
+			]
+			x: -0.75d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F510000008"]
+			tasks: [
+				{
+					id: "A3F1C0F520000009"
+					type: "kill"
+					entity: "block_factorys_bosses:sandworm"
+					value: 1L
+					title: "沙虫 Sirok"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F51000000A"
+			title: "克拉肯 Nerakyss"
+			subtitle: "Bosses'Rise 六杰 ④"
+			description: [
+				"出没地：深海海域的海战 Boss，触手会自船下袭来。",
+				"打法要点：备船、水下呼吸与远程武器，优先清理触手再击其本体。",
+				"掉落看点：深海素材，或关联水下装备线，人工核实。"
+			]
+			x: 0.75d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F510000009"]
+			tasks: [
+				{
+					id: "A3F1C0F52000000A"
+					type: "kill"
+					entity: "block_factorys_bosses:kraken"
+					value: 1L
+					title: "克拉肯 Nerakyss"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F51000000B"
+			title: "炼狱龙 Ashlord"
+			subtitle: "Bosses'Rise 六杰 ⑤"
+			description: [
+				"出没地：龙塔——炼狱气息盘踞的高塔之巅。",
+				"打法要点：躲火柱、抓落点，乘其喷息后摇全力输出。",
+				"掉落看点：稀有龙类材料，掉落人工核实。"
+			]
+			x: 2.25d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F51000000A"]
+			tasks: [
+				{
+					id: "A3F1C0F52000000B"
+					type: "kill"
+					entity: "block_factorys_bosses:infernal_dragon"
+					value: 1L
+					title: "炼狱龙 Ashlord"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F51000000C"
+			title: "冥界骑士 Helvar"
+			subtitle: "Bosses'Rise 六杰 ⑥"
+			description: [
+				"出没地：冥界堡垒——六杰之末，类魂之魂。",
+				"打法要点：六杰最强之敌；满配护甲与药水，Epic Fight 完美格挡是必修课。",
+				"掉落看点：冥界装备线材料，掉落人工核实。"
+			]
+			x: 3.75d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F51000000B"]
+			tasks: [
+				{
+					id: "A3F1C0F52000000C"
+					type: "kill"
+					entity: "block_factorys_bosses:underworld_knight"
+					value: 1L
+					title: "冥界骑士 Helvar"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F53000000C"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+		}
+		{
+			id: "A3F1C0F51000000D"
+			title: "Ash Of Sin"
+			subtitle: "国创类魂 · 罪业余烬"
+			description: [
+				"国创类魂 Boss 战模组，原生中文引导，剧情沉浸无需翻译。",
+				"Boss 名单与召唤方式请以游戏内引导为准，人工核实。",
+				"建议与 Legendary Monsters、Bosses'Rise 一并讨伐，体验完整类魂生态。"
+			]
+			x: -1.5d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F51000000C"]
+			tasks: [
+				{
+					id: "A3F1C0F52000000D"
+					type: "checkmark"
+					title: "Ash Of Sin"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F51000000E"
+			title: "类魂小怪与盔甲"
+			subtitle: "Soul Like 系列"
+			description: [
+				"Soul Like Mobs：类魂风格小怪体系，让野外与夜晚更具压迫感。",
+				"Soul Like Armors Reworked：类魂盔甲线，外观与数值贴合 Epic Fight。",
+				"两件均已入包，具体套装属性见装备图鉴，人工核实。"
+			]
+			x: 0.0d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F51000000D"]
+			tasks: [
+				{
+					id: "A3F1C0F52000000E"
+					type: "checkmark"
+					title: "类魂小怪与盔甲"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F51000000F"
+			title: "类魂武器库"
+			subtitle: "Epic Fight 适配"
+			description: [
+				"类魂系 Boss 掉落的武器已通过 imfdata 数据包完成 Epic Fight 适配。",
+				"挥舞它们拥有专属动作与打击感，详情见「武器图鉴」章。",
+				"提示：部分武器特效与技能绑定，入手后记得先试刀。"
+			]
+			x: 1.5d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F51000000E"]
+			tasks: [
+				{
+					id: "A3F1C0F52000000F"
+					type: "checkmark"
+					title: "类魂武器库"
+				}
+			]
+		}
+		{
+			id: "A3F1C0F510000010"
+			title: "魂学大师"
+			subtitle: "类魂模组指南 · 收官"
+			description: [
+				"你已通读类魂生态全貌，并亲手讨伐 Bosses'Rise 六杰。",
+				"从此，所有 Boss 在你眼中不过是一段血条。",
+				"但记住：魂类游戏的终点，永远是下一场更强的战斗。"
+			]
+			x: 0.0d
+			y: 6.0d
+			shape: "pentagon"
+			dependencies: ["A3F1C0F510000006", "A3F1C0F51000000C", "A3F1C0F51000000F"]
+			tasks: [
+				{
+					id: "A3F1C0F520000010"
+					type: "checkmark"
+					title: "魂学大师"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F530000010"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,468 @@
+{
+	default_hide_dependency_lines: false
+	filename: "arcane_guide"
+	group: "0B00AA11CC22DDAA"
+	icon: "irons_spellbooks:diamond_spell_book"
+	id: "A3F1C0F6000000F6"
+	order_index: 1
+	title: "法术指南"
+	quests: [
+		{
+			id: "A3F1C0F610000001"
+			title: "初识法术"
+			subtitle: "铜卷秘典，奥法之门"
+			description: [
+				"将一本【铜制法术书】握在手中，",
+				"你便踏上了九大学派的求索之路。",
+				"施法需要法袍与法力，法力见底时，",
+				"等待自然回复，或饮用法力药水。"
+			]
+			x: 0.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: []
+			tasks: [
+				{
+					id: "A3F1C0F620000001"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:copper_spell_book"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F630000001"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+			]
+		}
+		{
+			id: "A3F1C0F610000002"
+			title: "奥术素材"
+			subtitle: "万物皆有奥能"
+			description: [
+				"奥术精华是铁之咒语体系的通用货币，",
+				"用于合成与升级法术书、法袍。",
+				"收集 4 份【奥术精华】，",
+				"为你的法典进阶备好原料。"
+			]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F610000001"]
+			tasks: [
+				{
+					id: "A3F1C0F620000002"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:arcane_essence"
+						Count: 4b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F630000002"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0F610000003"
+			title: "法典进阶"
+			subtitle: "钻石铸就的篇章"
+			description: [
+				"铜典只是序言，钻石法典才是正文。",
+				"持有【钻石法术书】，",
+				"解锁更高等阶的法术栏位。"
+			]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F610000002"]
+			tasks: [
+				{
+					id: "A3F1C0F620000003"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:diamond_spell_book"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F630000003"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+		}
+		{
+			id: "A3F1C0F610000004"
+			title: "学派的抉择"
+			subtitle: "九大学派，九条道路"
+			description: [
+				"火——烈焰的破坏与灼烧。",
+				"冰——寒霜的迟滞与冻结。",
+				"雷——雷霆的爆发与穿透。",
+				"血——以生命为代价的禁忌之力。",
+				"自然——荆棘、兽灵与治愈的平衡。",
+				"末影——空间与虚空的戏法。",
+				"圣——光明的净化与守护。",
+				"唤魔——失落于高塔的唤魔秘术。",
+				"邪术——古神低语中的暗影知识。"
+			]
+			x: 4.5d
+			y: 0.0d
+			shape: "diamond"
+			dependencies: ["A3F1C0F610000003"]
+			tasks: [
+				{
+					id: "A3F1C0F620000004"
+					type: "checkmark"
+					title: "九大学派一览"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F630000004"
+					type: "xp"
+					xp: 5
+				}
+			]
+		}
+		{
+			id: "A3F1C0F610000005"
+			title: "龙皮秘典"
+			subtitle: "鳞片上的咒文"
+			description: [
+				"龙皮鞣制的书页，天生亲和元素。",
+				"【龙皮法术书】是九派之外的均衡之选。",
+				"获取途径：龙族掉落或合成（人工核实）。"
+			]
+			x: 6.0d
+			y: -3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F610000004"]
+			tasks: [
+				{
+					id: "A3F1C0F620000005"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:dragonskin_spell_book"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F630000005"
+					type: "xp"
+					xp: 5
+				}
+			]
+		}
+		{
+			id: "A3F1C0F610000006"
+			title: "血杖"
+			subtitle: "禁忌的权柄"
+			description: [
+				"血杖以生命为墨、以灵魂为纸。",
+				"持有【血之法杖】，可施放血学派高阶法术。",
+				"记住：力量源于你血管里流淌的代价。"
+			]
+			x: 6.0d
+			y: -1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F610000004"]
+			tasks: [
+				{
+					id: "A3F1C0F620000006"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:blood_staff"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F630000006"
+					type: "xp"
+					xp: 5
+				}
+			]
+		}
+		{
+			id: "A3F1C0F610000007"
+			title: "工匠手杖"
+			subtitle: "学者与匠人的合璧"
+			description: [
+				"【工匠手杖】将奥术与匠魂熔于一炉，",
+				"既有法术书的优雅，亦有工具的实用。",
+				"获取方式请查阅 JEI 合成配方。"
+			]
+			x: 6.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F610000004"]
+			tasks: [
+				{
+					id: "A3F1C0F620000007"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:artificer_cane"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F630000007"
+					type: "xp"
+					xp: 5
+				}
+			]
+		}
+		{
+			id: "A3F1C0F610000008"
+			title: "德鲁伊残卷"
+			subtitle: "自然的低语"
+			description: [
+				"兽皮与藤蔓装订的残卷，",
+				"记载着自然学派的古老咒文。",
+				"【德鲁伊法术书】是森林的馈赠，",
+				"荆棘与治愈皆听你号令。"
+			]
+			x: 6.0d
+			y: 3.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F610000004"]
+			tasks: [
+				{
+					id: "A3F1C0F620000008"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:druidic_spell_book"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F630000008"
+					type: "xp"
+					xp: 5
+				}
+			]
+		}
+		{
+			id: "A3F1C0F610000009"
+			title: "烈焰手册"
+			subtitle: "地底的炽热篇章"
+			description: [
+				"来自下界的炽热知识。",
+				"【烈焰法术书】专精火学派法术，",
+				"小心——知识本身也会灼人。"
+			]
+			x: 6.0d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F610000004"]
+			tasks: [
+				{
+					id: "A3F1C0F620000009"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:blaze_spell_book"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F630000009"
+					type: "xp"
+					xp: 5
+				}
+			]
+		}
+		{
+			id: "A3F1C0F61000000A"
+			title: "邪术手稿"
+			subtitle: "不该被翻阅的一页"
+			description: [
+				"【邪术手稿】记载着古神的耳语，",
+				"翻阅者将获得邪术学派之力。",
+				"代价是……你最好别问。",
+				"获取途径：深渊之地的邪神造物（人工核实）。"
+			]
+			x: 7.5d
+			y: 4.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F610000009"]
+			tasks: [
+				{
+					id: "A3F1C0F62000000A"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:eldritch_manuscript"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F63000000A"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+		}
+		{
+			id: "A3F1C0F61000000B"
+			title: "法袍集"
+			subtitle: "衣冠亦是法器"
+			description: [
+				"法袍决定学派亲和与法术强度。",
+				"【唤魔者兜帽】【寒霜术士兜帽】【邪教徒兜帽】",
+				"三种法袍任选其一集齐即可，",
+				"掉落来源：对应学派法师与高塔（人工核实）。"
+			]
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F610000004"]
+			tasks: [
+				{
+					id: "A3F1C0F62000000B"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:archevoker_helmet"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F63000000B"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0F61000000C"
+			title: "饰品槽位"
+			subtitle: "细节决定施法者"
+			description: [
+				"法师的指尖从不空着。",
+				"将【亲和戒指】戴入 Curios 饰品槽，",
+				"替代之选：施法时间戒指、冷却戒指。",
+				"戒指不占盔甲位，可与 EF 战斗装备共存。"
+			]
+			x: 7.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F61000000B"]
+			tasks: [
+				{
+					id: "A3F1C0F62000000C"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:affinity_ring"
+						Count: 1b
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F63000000C"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0F61000000D"
+			title: "法力与 EF 的共舞"
+			subtitle: "剑与咒的协奏"
+			description: [
+				"法术不会绕过 Epic Fight 的战斗规则：",
+				"硬直、格挡与体力照常生效。",
+				"被近身围殴时吟唱等于自寻死路——",
+				"先以武器逼退敌人，拉开距离再吟唱。",
+				"近战切入，法术收割，方为大法师。"
+			]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F61000000C"]
+			tasks: [
+				{
+					id: "A3F1C0F62000000D"
+					type: "checkmark"
+					title: "读完本节"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F63000000D"
+					type: "xp"
+					xp: 10
+				}
+			]
+		}
+		{
+			id: "A3F1C0F61000000E"
+			title: "大法师"
+			subtitle: "九派归一，万法皆通"
+			description: [
+				"集齐六部秘典、备好法袍与饰品，",
+				"并通晓法术与 Epic Fight 的共舞之道。",
+				"现在，你是行走的奥术图书馆——",
+				"让 Spore 天灾见识一下，",
+				"什么叫「以共生对寄生」的施法者。"
+			]
+			x: 10.5d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: [
+				"A3F1C0F61000000D"
+				"A3F1C0F610000005"
+				"A3F1C0F610000006"
+				"A3F1C0F610000007"
+				"A3F1C0F610000008"
+				"A3F1C0F610000009"
+				"A3F1C0F61000000A"
+			]
+			tasks: [
+				{
+					id: "A3F1C0F62000000E"
+					type: "checkmark"
+					title: "受封大法师"
+				}
+			]
+			rewards: [
+				{
+					id: "A3F1C0F63000000E"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					id: "A3F1C0F63000000F"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:arcane_ingot"
+						Count: 2b
+					}
+				}
+			]
+		}
+	]
+}

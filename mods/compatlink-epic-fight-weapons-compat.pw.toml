@@ -1,0 +1,13 @@
+name = "CompatLink - Epic Fight Weapons Compat"
+filename = "compatlink-1.1.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/FLUdglmm/versions/XEIDxmP3/compatlink-1.1.2.jar"
+hash-format = "sha512"
+hash = "1b4167d52f147ee67be156294f812b139e8ed6ec2696f9f5675217a3959ed8159107e9f03a2da9383ac589235724a6e0fc08a1ad10ea0403711406c91b503b09"
+
+[update]
+[update.modrinth]
+mod-id = "FLUdglmm"
+version = "XEIDxmP3"

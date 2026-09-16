@@ -1,0 +1,155 @@
+{
+	default_hide_dependency_lines: false
+	filename: "sword_soaring"
+	group: "0B00AA11CC22DD11"
+	icon: "sword_soaring:vatansever"
+	id: "A3F1C0F600000011"
+	order_index: 1
+	title: "御剑修仙"
+	quests: [
+		{
+			id: "A3F1C0F611000001"
+			title: "阶段Ⅰ·御剑入门"
+			subtitle: "剑起微澜"
+			description: ["御剑之术，起于足下。", "先习御剑飞行，再谈剑气万剑。"]
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			dependencies: []
+			tasks: [{id: "A3F1C0F621000001", type: "checkmark", title: "第一阶段·御剑入门（共三式）"}]
+		}
+		{
+			id: "A3F1C0F611000002"
+			title: "御剑之资"
+			subtitle: "修行前置"
+			description: ["欲御剑，先筑基。", "御剑能力依赖 Epic Fight 技能树与模组内修行等级，具体解锁条件以技能树面板为准（人工核实）。"]
+			x: 1.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F611000001"]
+			tasks: [{id: "A3F1C0F621000002", type: "checkmark", title: "确认自身修行资质与前置条件"}]
+			rewards: [{id: "A3F1C0F631000002", type: "xp", xp: 10}]
+		}
+		{
+			id: "A3F1C0F611000003"
+			title: "入门·御剑初鸣"
+			subtitle: "第一式"
+			description: ["获得御剑术入门技能书，正式踏上剑修之路。", "技能书发放方式请以整合包手册为准（人工核实）。"]
+			x: 1.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F611000001"]
+			tasks: [{id: "A3F1C0F621000003", type: "checkmark", title: "获得御剑术入门技能书"}]
+			rewards: [{id: "A3F1C0F631000003", type: "xp_levels", xp_levels: 3}]
+		}
+		{
+			id: "A3F1C0F611000004"
+			title: "踏剑而行"
+			subtitle: "第二式"
+			description: ["御剑飞行，乘风万里。", "具体键位与操作方式以模组内提示为准。"]
+			x: 3.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F611000003"]
+			tasks: [{id: "A3F1C0F621000004", type: "checkmark", title: "完成一次御剑飞行"}]
+			rewards: [{id: "A3F1C0F631000004", type: "xp_levels", xp_levels: 2}]
+		}
+		{
+			id: "A3F1C0F611000005"
+			title: "剑气护体"
+			subtitle: "第三式"
+			description: ["剑气绕身，百邪不侵。", "在技能树中解锁护体剑气节点。"]
+			x: 4.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F611000004"]
+			tasks: [{id: "A3F1C0F621000005", type: "checkmark", title: "解锁护体剑气节点"}]
+			rewards: [{id: "A3F1C0F631000005", type: "xp_levels", xp_levels: 2}]
+		}
+		{
+			id: "A3F1C0F611000006"
+			title: "阶段Ⅱ·剑道精进"
+			subtitle: "剑意渐成"
+			description: ["入门已毕，剑意渐成。", "自本阶段起发放修行技能书，节奏参考 DawnCraft。"]
+			x: 6.0d
+			y: 0.0d
+			shape: "diamond"
+			dependencies: ["A3F1C0F611000005"]
+			tasks: [{id: "A3F1C0F621000006", type: "checkmark", title: "第二阶段·剑道精进"}]
+		}
+		{
+			id: "A3F1C0F611000007"
+			title: "万剑归宗"
+			subtitle: "御剑绝学"
+			description: ["万剑齐发，剑如雨落。", "此式为阶段Ⅲ+ 目标，当前先窥门径（解锁条件人工核实）。"]
+			x: 7.5d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F611000006"]
+			tasks: [{id: "A3F1C0F621000007", type: "checkmark", title: "解锁万剑诀节点"}]
+			rewards: [{id: "A3F1C0F631000007", type: "xp_levels", xp_levels: 3}]
+		}
+		{
+			id: "A3F1C0F611000008"
+			title: "人剑合一"
+			subtitle: "心剑相通"
+			description: ["剑即我，我即剑。", "在御剑状态下完成一场 Boss 战，证你剑道。"]
+			x: 9.0d
+			y: 0.0d
+			shape: "circle"
+			dependencies: ["A3F1C0F611000007"]
+			tasks: [{id: "A3F1C0F621000008", type: "checkmark", title: "御剑状态下击败一名 Boss"}]
+			rewards: [{id: "A3F1C0F631000008", type: "xp_levels", xp_levels: 4}]
+		}
+		{
+			id: "A3F1C0F611000009"
+			title: "名剑·Vatansever"
+			subtitle: "支线·传奇之刃"
+			description: ["剑名 Vatansever，传说由陨铁与龙息锻成，剑身嗡鸣不止。", "其余能力走技能树解锁，技能书获取方式需人工核实。"]
+			x: 7.5d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F611000006"]
+			tasks: [{id: "A3F1C0F621000009", type: "item", item: {id: "sword_soaring:vatansever", Count: 1b}}]
+			rewards: [{id: "A3F1C0F631000009", type: "xp_levels", xp_levels: 3}]
+		}
+		{
+			id: "A3F1C0F61100000A"
+			title: "剑冢问道"
+			subtitle: "流派心得"
+			description: ["万剑归处，剑冢巍然。", "御剑可与共生体增幅、Epic Fight 连段相辅相成，流派搭配以实战手感为准。"]
+			x: 9.0d
+			y: 1.5d
+			shape: "circle"
+			dependencies: ["A3F1C0F611000009"]
+			tasks: [{id: "A3F1C0F62100000A", type: "checkmark", title: "研读御剑流派搭配心得"}]
+			rewards: [{id: "A3F1C0F63100000A", type: "xp", xp: 10}]
+		}
+		{
+			id: "A3F1C0F61100000B"
+			title: "阶段Ⅲ·剑仙之路"
+			subtitle: "大道可期"
+			description: ["剑心通明，大道可期。", "万剑归宗、人剑合一皆在此阶段大成。"]
+			x: 10.5d
+			y: 0.0d
+			shape: "diamond"
+			dependencies: ["A3F1C0F611000008"]
+			tasks: [{id: "A3F1C0F62100000B", type: "checkmark", title: "第三阶段·剑仙之路"}]
+		}
+		{
+			id: "A3F1C0F61100000C"
+			title: "御剑终章「剑仙」"
+			subtitle: "终章·剑仙"
+			description: ["御剑五式皆成，剑仙之名当之无愧。", "以共生之躯，御万剑破 Spore 天灾。"]
+			x: 12.0d
+			y: 0.0d
+			shape: "pentagon"
+			dependencies: ["A3F1C0F611000003", "A3F1C0F611000004", "A3F1C0F611000005", "A3F1C0F611000007", "A3F1C0F611000008"]
+			tasks: [{id: "A3F1C0F62100000C", type: "checkmark", title: "完成御剑修行全部考验"}]
+			rewards: [
+				{id: "A3F1C0F63100000C", type: "xp_levels", xp_levels: 5}
+				{id: "A3F1C0F63100000D", type: "item", item: {id: "kubejs:tempered_steel_billet", Count: 2b}}
+			]
+		}
+	]
+}
