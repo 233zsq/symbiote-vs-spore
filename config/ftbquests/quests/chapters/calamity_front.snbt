@@ -8,6 +8,8 @@
 	title: "天灾防线（阶段Ⅳ-Ⅴ）"
 	quests: [
 		{
+			invisible: true
+			dependencies: ["A3F1C0DE00000005"]
 			id: "8D1F6F8B20000001"
 			title: "瘴烟起处"
 			subtitle: "阶段Ⅳ：天灾降临"
@@ -15,7 +17,6 @@
 			x: 0.0d
 			y: 0.0d
 			shape: "circle"
-			dependencies: []
 			tasks: [{id: "8D1F6F8B30000001", type: "kill", entity: "spore:mound", value: 1L, title: "摧毁首个 Mound"}]
 			rewards: [
 				{id: "8D1F6F8B40000001", type: "xp", xp: 50},
@@ -23,6 +24,7 @@
 			]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B20000002"
 			title: "Mound 清剿·首战"
 			subtitle: ""
@@ -38,6 +40,7 @@
 			rewards: [{id: "8D1F6F8B40000003", type: "xp", xp: 75}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B20000003"
 			title: "CDU 部署教学"
 			subtitle: ""
@@ -50,6 +53,7 @@
 			rewards: [{id: "8D1F6F8B40000004", type: "xp", xp: 75}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B20000004"
 			title: "迎击准备"
 			subtitle: ""
@@ -62,6 +66,7 @@
 			rewards: [{id: "8D1F6F8B40000005", type: "xp", xp: 100}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B20000005"
 			title: "Incoming！防线保卫战"
 			subtitle: ""
@@ -74,6 +79,7 @@
 			rewards: [{id: "8D1F6F8B40000006", type: "xp", xp: 150}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B20000006"
 			title: "讨伐链·围城者 Sieger"
 			subtitle: "Calamity 讨伐链 1/9"
@@ -86,6 +92,7 @@
 			rewards: [{id: "8D1F6F8B40000007", type: "xp", xp: 200}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B20000007"
 			title: "讨伐链·轰炮 Howitzer"
 			subtitle: "Calamity 讨伐链 2/9"
@@ -98,6 +105,7 @@
 			rewards: [{id: "8D1F6F8B40000008", type: "xp", xp: 250}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B20000008"
 			title: "讨伐链·钢躯 Stahl"
 			subtitle: "Calamity 讨伐链 3/9"
@@ -110,6 +118,7 @@
 			rewards: [{id: "8D1F6F8B40000009", type: "xp", xp: 250}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B20000009"
 			title: "讨伐链·空蚀者 Hohlfresser"
 			subtitle: "Calamity 讨伐链 4/9"
@@ -122,6 +131,7 @@
 			rewards: [{id: "8D1F6F8B4000000A", type: "xp", xp: 300}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B2000000A"
 			title: "讨伐链·裂地者 Gazenbreacher"
 			subtitle: "Calamity 讨伐链 5/9"
@@ -134,6 +144,7 @@
 			rewards: [{id: "8D1F6F8B4000000B", type: "xp", xp: 300}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B2000000B"
 			title: "讨伐链·海妖 Kraken"
 			subtitle: "Calamity 讨伐链 6/9"
@@ -146,6 +157,7 @@
 			rewards: [{id: "8D1F6F8B4000000C", type: "xp", xp: 350}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B2000000C"
 			title: "讨伐链·巨怪利维坦 Leviathan"
 			subtitle: "Calamity 讨伐链 7/9"
@@ -158,6 +170,7 @@
 			rewards: [{id: "8D1F6F8B4000000D", type: "xp", xp: 350}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B2000000D"
 			title: "讨伐链·浮空浩劫 Hindenburg"
 			subtitle: "Calamity 讨伐链 8/9"
@@ -170,6 +183,7 @@
 			rewards: [{id: "8D1F6F8B4000000E", type: "xp", xp: 400}]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B2000000E"
 			title: "讨伐链·腐朽化身 Verfall"
 			subtitle: "Calamity 讨伐链 9/9"
@@ -185,6 +199,7 @@
 			]
 		}
 		{
+			invisible: true
 			id: "8D1F6F8B2000000F"
 			title: "以共生对寄生"
 			subtitle: "终局合成链"

@@ -8,6 +8,8 @@
 	title: "共生体养成·羁绊线"
 	quests: [
 		{
+			invisible: true
+			dependencies: ["A3F1C0DE10000009"]
 			id: "7C0F5E7A20000001"
 			title: "坠星之夜"
 			subtitle: "Attached 缔结期"
@@ -15,11 +17,11 @@
 			x: 0.0d
 			y: 0.0d
 			shape: "circle"
-			dependencies: []
 			tasks: [{id: "7C0F5E7A30000001", type: "checkmark", title: "寻找地表 Symbiote 陨石坑（休眠样本）"}]
 			rewards: [{id: "7C0F5E7A40000001", type: "xp", xp: 25}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A20000002"
 			title: "缔结羁绊"
 			subtitle: ""
@@ -32,6 +34,7 @@
 			rewards: [{id: "7C0F5E7A40000002", type: "xp", xp: 50}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A20000003"
 			title: "第一顿饭"
 			subtitle: ""
@@ -44,6 +47,7 @@
 			rewards: [{id: "7C0F5E7A40000003", type: "xp", xp: 50}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A20000004"
 			title: "Bond 120：磨合期"
 			subtitle: "Integrated 磨合期"
@@ -56,6 +60,7 @@
 			rewards: [{id: "7C0F5E7A40000004", type: "item", item: {id: "kubejs:refined_iron_ingot", Count: 4b}}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A20000005"
 			title: "有求必应"
 			subtitle: ""
@@ -68,6 +73,7 @@
 			rewards: [{id: "7C0F5E7A40000005", type: "xp", xp: 50}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A20000006"
 			title: "压力管理课"
 			subtitle: ""
@@ -80,6 +86,7 @@
 			rewards: [{id: "7C0F5E7A40000006", type: "xp", xp: 75}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A20000007"
 			title: "Bond 240：协作期"
 			subtitle: "Cooperative 协作期"
@@ -92,6 +99,7 @@
 			rewards: [{id: "7C0F5E7A40000007", type: "xp", xp: 75}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A20000008"
 			title: "四式在手"
 			subtitle: ""
@@ -104,6 +112,7 @@
 			rewards: [{id: "7C0F5E7A40000008", type: "xp", xp: 75}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A20000009"
 			title: "睡前安神"
 			subtitle: ""
@@ -116,6 +125,7 @@
 			rewards: [{id: "7C0F5E7A40000009", type: "xp", xp: 75}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A2000000A"
 			title: "Bond 400：支配期"
 			subtitle: "Dominant 支配期"
@@ -128,6 +138,7 @@
 			rewards: [{id: "7C0F5E7A4000000A", type: "xp", xp: 100}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A2000000B"
 			title: "掠食者夜猎"
 			subtitle: ""
@@ -140,6 +151,7 @@
 			rewards: [{id: "7C0F5E7A4000000B", type: "xp", xp: 100}]
 		}
 		{
+			invisible: true
 			id: "7C0F5E7A2000000C"
 			title: "羁绊毕业"
 			subtitle: ""

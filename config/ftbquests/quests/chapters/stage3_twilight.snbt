@@ -8,6 +8,8 @@
 	title: "Ⅲ·暮色森林"
 	quests: [
 		{
+			invisible: true
+			dependencies: ["A3F1C0DE10000016"]
 			id: "A3F1C0DE1000001A"
 			title: "击败凋灵"
 			subtitle: "Ⅲ·入口"
@@ -15,11 +17,11 @@
 			x: 0.0d
 			y: 0.0d
 			shape: "pentagon"
-			dependencies: []
 			tasks: [{id: "A3F1C0DE2000001C", type: "kill", entity: "minecraft:wither", value: 1L, title: "击杀凋灵"}]
 			rewards: [{id: "A3F1C0DE30000028", type: "command", command: "/gamestage add @p stage3_twilight"}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000001B"
 			title: "讨伐链·娜迦 Naga"
 			subtitle: "暮色讨伐链 1/8"
@@ -32,6 +34,7 @@
 			rewards: [{id: "A3F1C0DE30000029", type: "xp", xp: 150}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000001C"
 			title: "讨伐链·巫妖 Lich"
 			subtitle: "暮色讨伐链 2/8"
@@ -44,6 +47,7 @@
 			rewards: [{id: "A3F1C0DE3000002A", type: "xp", xp: 200}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000001D"
 			title: "讨伐链·米诺菇 Minoshroom"
 			subtitle: "暮色讨伐链 3/8"
@@ -56,6 +60,7 @@
 			rewards: [{id: "A3F1C0DE3000002B", type: "xp", xp: 200}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000001E"
 			title: "讨伐链·九头蛇 Hydra"
 			subtitle: "暮色讨伐链 4/8"
@@ -68,6 +73,7 @@
 			rewards: [{id: "A3F1C0DE3000002C", type: "xp", xp: 250}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000001F"
 			title: "讨伐链·幻影骑士 Knight Phantom"
 			subtitle: "暮色讨伐链 5/8"
@@ -80,6 +86,7 @@
 			rewards: [{id: "A3F1C0DE3000002D", type: "xp", xp: 250}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000020"
 			title: "讨伐链·乌尔伽斯特 Ur-Ghast"
 			subtitle: "暮色讨伐链 6/8"
@@ -92,6 +99,7 @@
 			rewards: [{id: "A3F1C0DE3000002E", type: "xp", xp: 300}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000021"
 			title: "讨伐链·雪怪首领 Alpha Yeti"
 			subtitle: "暮色讨伐链 7/8"
@@ -104,6 +112,7 @@
 			rewards: [{id: "A3F1C0DE3000002F", type: "xp", xp: 300}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000022"
 			title: "讨伐链·冰雪女王 Snow Queen"
 			subtitle: "暮色讨伐链 8/8"
@@ -116,6 +125,7 @@
 			rewards: [{id: "A3F1C0DE30000030", type: "xp", xp: 350}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000023"
 			title: "铁木武装"
 			subtitle: "暮色武器线·其一"
@@ -128,6 +138,7 @@
 			rewards: [{id: "A3F1C0DE30000031", type: "xp", xp: 100}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000024"
 			title: "钢叶与骑士之证"
 			subtitle: "暮色武器线·其二"
@@ -143,6 +154,7 @@
 			rewards: [{id: "A3F1C0DE30000032", type: "xp", xp: 150}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000025"
 			title: "炽焰武装"
 			subtitle: "暮色武器线·其三"
@@ -155,6 +167,7 @@
 			rewards: [{id: "A3F1C0DE30000033", type: "xp", xp: 200}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000026"
 			title: "锻造的原料"
 			subtitle: "主线锻造·其一"
@@ -170,6 +183,7 @@
 			rewards: [{id: "A3F1C0DE30000034", type: "xp", xp: 150}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000027"
 			title: "回火钢坯"
 			subtitle: "主线锻造·其二"
@@ -188,6 +202,7 @@
 			]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000028"
 			title: "钢坯储备"
 			subtitle: "主线锻造·其三"
@@ -200,6 +215,7 @@
 			rewards: [{id: "A3F1C0DE30000037", type: "xp", xp: 200}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000029"
 			title: "冶炼炉建成"
 			subtitle: "匠魂线·其一"
@@ -212,6 +228,7 @@
 			rewards: [{id: "A3F1C0DE30000038", type: "xp", xp: 100}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000002A"
 			title: "玛玉灵的前奏"
 			subtitle: "匠魂线·其二"
@@ -224,6 +241,7 @@
 			rewards: [{id: "A3F1C0DE30000039", type: "xp", xp: 150}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000002B"
 			title: "自由构筑挑战"
 			subtitle: "匠魂线·其三"

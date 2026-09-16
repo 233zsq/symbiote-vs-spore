@@ -8,6 +8,8 @@
 	title: "Ⅴ·终局"
 	quests: [
 		{
+			invisible: true
+			dependencies: ["A3F1C0DE00000005"]
 			id: "A3F1C0DE10000030"
 			title: "双重毕业"
 			subtitle: "Ⅴ·入口"
@@ -15,11 +17,11 @@
 			x: 0.0d
 			y: 0.0d
 			shape: "hexagon"
-			dependencies: []
 			tasks: [{id: "A3F1C0DE20000036", type: "checkmark", title: "确认共生体 Dominant 与首个 Calamity 讨伐均已完成"}]
 			rewards: [{id: "A3F1C0DE30000040", type: "command", command: "/gamestage add @p stage5_endgame"}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000031"
 			title: "讨伐链·下界合金巨兽 Netherite Monstrosity"
 			subtitle: "灾变讨伐链 1/8"
@@ -32,6 +34,7 @@
 			rewards: [{id: "A3F1C0DE30000041", type: "xp", xp: 300}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000032"
 			title: "讨伐链·伊格尼斯 Ignis"
 			subtitle: "灾变讨伐链 2/8"
@@ -44,6 +47,7 @@
 			rewards: [{id: "A3F1C0DE30000042", type: "xp", xp: 350}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000033"
 			title: "讨伐链·末影守卫 Ender Guardian"
 			subtitle: "灾变讨伐链 3/8"
@@ -56,6 +60,7 @@
 			rewards: [{id: "A3F1C0DE30000043", type: "xp", xp: 350}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000034"
 			title: "讨伐链·先驱者 The Harbinger"
 			subtitle: "灾变讨伐链 4/8"
@@ -68,6 +73,7 @@
 			rewards: [{id: "A3F1C0DE30000044", type: "xp", xp: 400}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000035"
 			title: "讨伐链·利维坦 The Leviathan"
 			subtitle: "灾变讨伐链 5/8"
@@ -80,6 +86,7 @@
 			rewards: [{id: "A3F1C0DE30000045", type: "xp", xp: 400}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000036"
 			title: "讨伐链·远古遗骸 Ancient Remnant"
 			subtitle: "灾变讨伐链 6/8"
@@ -92,6 +99,7 @@
 			rewards: [{id: "A3F1C0DE30000046", type: "xp", xp: 450}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000037"
 			title: "讨伐链·被诅咒者 Maledictus"
 			subtitle: "灾变讨伐链 7/8"
@@ -104,6 +112,7 @@
 			rewards: [{id: "A3F1C0DE30000047", type: "xp", xp: 450}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000038"
 			title: "讨伐链·斯库拉 Scylla"
 			subtitle: "灾变讨伐链 8/8"
@@ -116,6 +125,7 @@
 			rewards: [{id: "A3F1C0DE30000048", type: "xp", xp: 500}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE10000039"
 			title: "深渊铸锭"
 			subtitle: "终局锻造·其一"
@@ -134,6 +144,7 @@
 			]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000003A"
 			title: "毕业之作"
 			subtitle: "终局锻造·其二"
@@ -149,6 +160,7 @@
 			]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000003B"
 			title: "终极试炼"
 			subtitle: "终局锻造·其三"
@@ -161,6 +173,7 @@
 			rewards: [{id: "A3F1C0DE3000004D", type: "xp", xp: 500}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000003C"
 			title: "灾变武器收藏"
 			subtitle: "武器收藏·其一"
@@ -173,6 +186,7 @@
 			rewards: [{id: "A3F1C0DE3000004E", type: "xp", xp: 200}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000003D"
 			title: "共生体武器收藏"
 			subtitle: "武器收藏·其二"
@@ -185,6 +199,7 @@
 			rewards: [{id: "A3F1C0DE3000004F", type: "xp", xp: 200}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000003E"
 			title: "凋灵再临"
 			subtitle: "武器收藏·其三"

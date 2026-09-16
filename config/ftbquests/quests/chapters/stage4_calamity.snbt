@@ -8,6 +8,8 @@
 	title: "Ⅳ·真菌天灾升级"
 	quests: [
 		{
+			invisible: true
+			dependencies: ["A3F1C0DE10000022"]
 			id: "A3F1C0DE1000002C"
 			title: "暮色主线收束"
 			subtitle: "Ⅳ·入口"
@@ -15,11 +17,11 @@
 			x: 0.0d
 			y: 0.0d
 			shape: "pentagon"
-			dependencies: []
 			tasks: [{id: "A3F1C0DE20000031", type: "kill", entity: "twilightforest:snow_queen", value: 1L, title: "击杀冰雪女王"}]
 			rewards: [{id: "A3F1C0DE3000003B", type: "command", command: "/gamestage add @p stage4_calamity"}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000002D"
 			title: "清理感染区"
 			subtitle: "感染装备线·入门"
@@ -35,6 +37,7 @@
 			rewards: [{id: "A3F1C0DE3000003C", type: "xp", xp: 150}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000002E"
 			title: "生物质样本"
 			subtitle: "感染装备线·进阶"
@@ -47,6 +50,7 @@
 			rewards: [{id: "A3F1C0DE3000003D", type: "xp", xp: 200}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0DE1000002F"
 			title: "猎杀裂地者"
 			subtitle: "感染装备线·大成"
