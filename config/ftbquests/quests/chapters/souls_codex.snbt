@@ -1,13 +1,16 @@
 {
 	default_hide_dependency_lines: false
 	filename: "souls_codex"
-	group: "0B00AA11CC22DD77"
+	group: "0B00AA11CC22DD11"
 	icon: "minecraft:wither_skeleton_skull"
 	id: "A3F1C0E500000077"
-	order_index: 1
-	title: "魂界志·诸王列传"
+	order_index: 3
+	title: "Ⅲ·魂界列传"
 	quests: [
 		{
+			dependencies: ["A3F1C0E610000016"]
+			
+			invisible: true
 			id: "A3F1C0E510000001"
 			title: "狭间诸王"
 			subtitle: "《艾尔登法环》一系——狭间之地的王与半神"
@@ -31,6 +34,7 @@
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000101"
 			title: "噩兆妖鬼·玛尔基特"
 			subtitle: "《艾尔登法环》·史东薇尔城门，褪色者的第一道铁闸"
@@ -49,13 +53,15 @@
 				entity: "slu:boss_margit"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF118937060604", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000101"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000102"
 			title: "恶兆王·蒙葛特"
 			subtitle: "《艾尔登法环》·王城罗德尔，赐福之王的垂死之舞"
@@ -74,13 +80,15 @@
 				entity: "slu:boss_morgott"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF338255645326", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000102"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000103"
 			title: "初代艾尔登之王·葛孚雷"
 			subtitle: "《艾尔登法环》·初代艾尔登之王，蛮荒时代的征服者"
@@ -99,13 +107,15 @@
 				entity: "slu:boss_godfrey"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF238275627408", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000103"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000104"
 			title: "战王·荷莱·露"
 			subtitle: "《艾尔登法环》·褪去王冠，以战王之名撕裂战场"
@@ -124,13 +134,15 @@
 				entity: "slu:boss_hoarah_loux"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF350273948392", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000104"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000105"
 			title: "碎星·拉塔恩"
 			subtitle: "《艾尔登法环》·红狮子将军，以重力锁住群星之人"
@@ -149,13 +161,15 @@
 				entity: "slu:boss_radahn"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF887808088367", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000105"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000106"
 			title: "约定之王·拉塔恩"
 			subtitle: "《艾尔登法环》·黄金树之影，履行约定的王"
@@ -174,13 +188,15 @@
 				entity: "slu:boss_radahn_2"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF286468640736", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000106"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000107"
 			title: "米凯拉的锋刃·玛莲妮亚"
 			subtitle: "《艾尔登法环》·米凯拉的锋刃，不败的猩红剑姬"
@@ -199,13 +215,15 @@
 				entity: "slu:boss_malenia"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF332957942359", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000107"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000108"
 			title: "腐败女神·玛莲妮亚"
 			subtitle: "《艾尔登法环》·猩红艾奥尼亚，腐败女神的绽放"
@@ -224,13 +242,15 @@
 				entity: "slu:boss_malenia_2"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF548024549250", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000108"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000109"
 			title: "鲜血君王·蒙格"
 			subtitle: "《艾尔登法环》·鲜血王朝之主，无形之母的眷属"
@@ -249,13 +269,15 @@
 				entity: "slu:boss_mohg"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF453306013530", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000109"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E51000010A"
 			title: "神皮使徒"
 			subtitle: "《艾尔登法环》·神皮双人组之一，剥皮者的使徒"
@@ -274,13 +296,15 @@
 				entity: "slu:boss_godskin_apostle"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF006915120431", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E53000010A"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E51000010B"
 			title: "神皮贵族"
 			subtitle: "《艾尔登法环》·神皮双人组之一，臃肿的贵族"
@@ -299,13 +323,15 @@
 				entity: "slu:boss_godskin_noble"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF444752192877", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E53000010B"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E51000010C"
 			title: "黑剑·玛利喀斯"
 			subtitle: "《艾尔登法环》·命定之死，黑剑的看门犬"
@@ -324,13 +350,15 @@
 				entity: "slu:boss_maliketh"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF600524922324", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E53000010C"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E51000010D"
 			title: "艾尔登之王·拉达冈"
 			subtitle: "《艾尔登法环》·黄金律法的红发之王"
@@ -349,13 +377,15 @@
 				entity: "slu:boss_radagon"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF996693821609", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E53000010D"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E51000010E"
 			title: "艾尔登之兽"
 			subtitle: "《艾尔登法环》·黄金树的具现，狭间终局"
@@ -374,13 +404,17 @@
 				entity: "slu:boss_elden_beast"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF420344131258", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E53000010E"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			dependencies: ["A3F1C0E610000016"]
+			
+			invisible: true
 			id: "A3F1C0E510000201"
 			title: "初火余烬"
 			subtitle: "《黑暗之魂》一系——传火时代的英雄与枭雄"
@@ -404,6 +438,7 @@
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000211"
 			title: "灰烬审判者·古达"
 			subtitle: "《黑暗之魂3》·灰烬墓地，审判者的枪"
@@ -422,13 +457,15 @@
 				entity: "slu:boss_gundyr"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF205608713049", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000211"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000212"
 			title: "深渊监视者"
 			subtitle: "《黑暗之魂3》·法兰不死队，深渊监视者"
@@ -447,13 +484,15 @@
 				entity: "slu:boss_abyss_watcher"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF452399142421", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000212"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000213"
 			title: "深渊漫步者·亚尔特留斯"
 			subtitle: "《黑暗之魂》·乌拉席露，深渊漫步者的末路"
@@ -472,13 +511,15 @@
 				entity: "slu:boss_artorias"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF665804953386", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000213"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000214"
 			title: "猎龙者·翁斯坦"
 			subtitle: "《黑暗之魂》·亚诺尔隆德，猎龙四骑士之首"
@@ -497,13 +538,15 @@
 				entity: "slu:boss_ornstein"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF075141200197", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000214"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000215"
 			title: "处刑者·斯摩"
 			subtitle: "《黑暗之魂》·亚诺尔隆德，食人的处刑者"
@@ -522,13 +565,15 @@
 				entity: "slu:boss_smough"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF307959058973", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000215"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000216"
 			title: "猎龙铠甲"
 			subtitle: "《黑暗之魂3》·洛斯里克，无人穿着的猎龙甲"
@@ -547,13 +592,15 @@
 				entity: "slu:boss_dragon_slayer_armour"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF921501349060", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000216"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000217"
 			title: "镜之骑士"
 			subtitle: "《黑暗之魂2》·多兰古雷格，暴雨中的镜骑士"
@@ -572,13 +619,15 @@
 				entity: "slu:boss_looking_glass_knight"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF077867492451", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000217"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000218"
 			title: "无名王者"
 			subtitle: "《黑暗之魂3》·古龙之顶，与龙为伍的王者"
@@ -597,13 +646,15 @@
 				entity: "slu:boss_nameless_king"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF531184019881", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000218"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000219"
 			title: "暗影太阳·葛温德林"
 			subtitle: "《黑暗之魂》·亚诺尔隆德的暗影太阳"
@@ -622,13 +673,15 @@
 				entity: "slu:boss_gwyndolin"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF055325177436", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000219"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E51000021A"
 			title: "奴隶骑士·盖尔"
 			subtitle: "《黑暗之魂3》·环印城，末世中最后的骑士"
@@ -647,13 +700,15 @@
 				entity: "slu:boss_gael"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF544978850969", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E53000021A"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E51000021B"
 			title: "薪王们的化身"
 			subtitle: "《黑暗之魂3》·初始火炉，薪火的化身"
@@ -672,13 +727,17 @@
 				entity: "slu:boss_soul_of_cinder"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF261367739658", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E53000021B"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			dependencies: ["A3F1C0E610000016"]
+			
+			invisible: true
 			id: "A3F1C0E510000301"
 			title: "符文之地"
 			subtitle: "《英雄联盟》一系——瓦罗兰大陆的传奇战士"
@@ -702,6 +761,7 @@
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000311"
 			title: "暗裔剑魔·亚托克斯"
 			subtitle: "《英雄联盟》·暗裔剑魔，被囚于剑中的古神"
@@ -720,13 +780,15 @@
 				entity: "slu:boss_aatrox"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF811133476894", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000311"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000312"
 			title: "不屈之枪·潘森"
 			subtitle: "《英雄联盟》·不屈之枪，以凡躯战神的凡人"
@@ -745,13 +807,15 @@
 				entity: "slu:boss_pantheon"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF038172808637", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000312"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000313"
 			title: "武器大师·贾克斯"
 			subtitle: "《英雄联盟》·武器大师，艾卡西亚的幸存者"
@@ -770,13 +834,15 @@
 				entity: "slu:boss_jax"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF879952392719", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000313"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000314"
 			title: "诺克萨斯之手·德莱厄斯"
 			subtitle: "《英雄联盟》·诺克萨斯之手，帝国的利斧"
@@ -795,13 +861,17 @@
 				entity: "slu:boss_darius"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF421156217085", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000314"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			dependencies: ["A3F1C0E610000016"]
+			
+			invisible: true
 			id: "A3F1C0E510000401"
 			title: "异界来宾"
 			subtitle: "其他世界的来客与深藏的彩蛋"
@@ -825,6 +895,7 @@
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000411"
 			title: "齐天大圣·孙悟空"
 			subtitle: "《黑神话：悟空》·齐天大圣，大闹天宫的顽主"
@@ -843,13 +914,15 @@
 				entity: "slu:boss_wukong"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF586480656765", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000411"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000412"
 			title: "熔炉骑士·奥多维斯"
 			subtitle: "《艾尔登法环》·熔炉百相，黄金树时代的余晖"
@@ -868,13 +941,15 @@
 				entity: "slu:boss_crucible_knight"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF956234276797", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000412"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000413"
 			title: "铃珠猎人·艾尔默"
 			subtitle: "《艾尔登法环》·掳掠铃珠的猎人"
@@ -893,13 +968,15 @@
 				entity: "slu:boss_elemer"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF264792184980", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000413"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000414"
 			title: "罗贝尔伯爵"
 			subtitle: "出处待考·异界的优雅伯爵"
@@ -918,13 +995,15 @@
 				entity: "slu:boss_count_robert"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF601742774426", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000414"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000415"
 			title: "野兽祭司·古兰格"
 			subtitle: "《艾尔登法环》·贪食死根的野兽祭司"
@@ -943,13 +1022,15 @@
 				entity: "slu:boss_beast_clergyman"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF483838316835", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000415"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000416"
 			title: "远古战士"
 			subtitle: "出处待考·自远古苏醒的武人"
@@ -968,13 +1049,15 @@
 				entity: "slu:boss_ancient_warrior"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF058875324622", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000416"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000417"
 			title: "陨落之王"
 			subtitle: "出处待考·自王座坠落的败者"
@@ -993,13 +1076,15 @@
 				entity: "slu:boss_fallen_lord"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF643596397417", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000417"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000418"
 			title: "创世者·Notch"
 			subtitle: "《Minecraft》·创世者降临的彩蛋"
@@ -1018,13 +1103,15 @@
 				entity: "slu:boss_notch"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF442442289830", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000418"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000419"
 			title: "方块之王"
 			subtitle: "《Minecraft》·方块世界的王者彩蛋"
@@ -1043,13 +1130,15 @@
 				entity: "slu:boss_minecraft_lord"
 				value: 1L
 			}]
-			rewards: [{
+			rewards: [
+				{id: "BEEF172797351698", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
 				id: "A3F1C0E530000419"
 				type: "xp"
 				xp: 5
 			}]
 		}
 		{
+			invisible: true
 			id: "A3F1C0E510000501"
 			title: "诸王之王"
 			subtitle: "四系魂之王的讨伐证明，封王之路的终点"

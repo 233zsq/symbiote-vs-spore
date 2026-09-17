@@ -31,7 +31,8 @@
 			shape: "square"
 			dependencies: ["A3F1C0DE10000030"]
 			tasks: [{id: "A3F1C0DE20000037", type: "kill", entity: "cataclysm:netherite_monstrosity", value: 1L, title: "击杀下界合金巨兽"}]
-			rewards: [{id: "A3F1C0DE30000041", type: "xp", xp: 300}]
+			rewards: [
+				{id: "BEEF500022364224", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000041", type: "xp", xp: 300}]
 		}
 		{
 			invisible: true
@@ -44,7 +45,8 @@
 			shape: "circle"
 			dependencies: ["A3F1C0DE10000031"]
 			tasks: [{id: "A3F1C0DE20000038", type: "kill", entity: "cataclysm:ignis", value: 1L, title: "击杀伊格尼斯"}]
-			rewards: [{id: "A3F1C0DE30000042", type: "xp", xp: 350}]
+			rewards: [
+				{id: "BEEF647353548663", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000042", type: "xp", xp: 350}]
 		}
 		{
 			invisible: true
@@ -57,7 +59,8 @@
 			shape: "square"
 			dependencies: ["A3F1C0DE10000032"]
 			tasks: [{id: "A3F1C0DE20000039", type: "kill", entity: "cataclysm:ender_guardian", value: 1L, title: "击杀末影守卫"}]
-			rewards: [{id: "A3F1C0DE30000043", type: "xp", xp: 350}]
+			rewards: [
+				{id: "BEEF931151139669", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000043", type: "xp", xp: 350}]
 		}
 		{
 			invisible: true
@@ -70,7 +73,8 @@
 			shape: "circle"
 			dependencies: ["A3F1C0DE10000033"]
 			tasks: [{id: "A3F1C0DE2000003A", type: "kill", entity: "cataclysm:the_harbinger", value: 1L, title: "击杀先驱者"}]
-			rewards: [{id: "A3F1C0DE30000044", type: "xp", xp: 400}]
+			rewards: [
+				{id: "BEEF630121771010", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000044", type: "xp", xp: 400}]
 		}
 		{
 			invisible: true
@@ -83,7 +87,8 @@
 			shape: "square"
 			dependencies: ["A3F1C0DE10000034"]
 			tasks: [{id: "A3F1C0DE2000003B", type: "kill", entity: "cataclysm:the_leviathan", value: 1L, title: "击杀利维坦"}]
-			rewards: [{id: "A3F1C0DE30000045", type: "xp", xp: 400}]
+			rewards: [
+				{id: "BEEF013556495823", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000045", type: "xp", xp: 400}]
 		}
 		{
 			invisible: true
@@ -96,7 +101,8 @@
 			shape: "circle"
 			dependencies: ["A3F1C0DE10000035"]
 			tasks: [{id: "A3F1C0DE2000003C", type: "kill", entity: "cataclysm:ancient_remnant", value: 1L, title: "击杀远古遗骸"}]
-			rewards: [{id: "A3F1C0DE30000046", type: "xp", xp: 450}]
+			rewards: [
+				{id: "BEEF119665013832", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000046", type: "xp", xp: 450}]
 		}
 		{
 			invisible: true
@@ -109,7 +115,8 @@
 			shape: "square"
 			dependencies: ["A3F1C0DE10000036"]
 			tasks: [{id: "A3F1C0DE2000003D", type: "kill", entity: "cataclysm:maledictus", value: 1L, title: "击杀被诅咒者"}]
-			rewards: [{id: "A3F1C0DE30000047", type: "xp", xp: 450}]
+			rewards: [
+				{id: "BEEF208668493639", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000047", type: "xp", xp: 450}]
 		}
 		{
 			invisible: true
@@ -122,7 +129,8 @@
 			shape: "circle"
 			dependencies: ["A3F1C0DE10000037"]
 			tasks: [{id: "A3F1C0DE2000003E", type: "kill", entity: "cataclysm:scylla", value: 1L, title: "击杀斯库拉"}]
-			rewards: [{id: "A3F1C0DE30000048", type: "xp", xp: 500}]
+			rewards: [
+				{id: "BEEF092392558281", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000048", type: "xp", xp: 500}]
 		}
 		{
 			invisible: true
@@ -170,7 +178,8 @@
 			shape: "square"
 			dependencies: ["A3F1C0DE1000003A"]
 			tasks: [{id: "A3F1C0DE20000042", type: "kill", entity: "cataclysm:maledictus", value: 1L, title: "击杀 Maledictus"}]
-			rewards: [{id: "A3F1C0DE3000004D", type: "xp", xp: 500}]
+			rewards: [
+				{id: "BEEF946602086320", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE3000004D", type: "xp", xp: 500}]
 		}
 		{
 			invisible: true
@@ -209,7 +218,8 @@
 			shape: "square"
 			dependencies: ["A3F1C0DE1000003D"]
 			tasks: [{id: "A3F1C0DE20000045", type: "kill", entity: "minecraft:wither", value: 1L, title: "击杀凋灵"}]
-			rewards: [{id: "A3F1C0DE30000050", type: "xp", xp: 300}]
+			rewards: [
+				{id: "BEEF959119474452", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000050", type: "xp", xp: 300}]
 		}
 	]
 }

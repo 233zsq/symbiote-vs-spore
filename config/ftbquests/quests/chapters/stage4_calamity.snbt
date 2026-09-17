@@ -9,7 +9,7 @@
 	quests: [
 		{
 			invisible: true
-			dependencies: ["A3F1C0DE10000022"]
+			dependencies: ["A3F1C0E510000501"]
 			id: "A3F1C0DE1000002C"
 			title: "暮色主线收束"
 			subtitle: "Ⅳ·入口"

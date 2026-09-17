@@ -19,6 +19,7 @@
 			shape: "circle"
 			tasks: [{id: "8D1F6F8B30000001", type: "kill", entity: "spore:mound", value: 1L, title: "摧毁首个 Mound"}]
 			rewards: [
+				{id: "BEEF705786528472", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}
 				{id: "8D1F6F8B40000001", type: "xp", xp: 50},
 				{id: "8D1F6F8B40000002", type: "command", command: "/gamestage add @p stage4_calamity"}
 			]
@@ -37,7 +38,8 @@
 				{id: "8D1F6F8B30000002", type: "kill", entity: "spore:mound", value: 2L, title: "摧毁 Mound"},
 				{id: "8D1F6F8B30000003", type: "kill", entity: "spore:proto", value: 1L, title: "击杀 Proto"}
 			]
-			rewards: [{id: "8D1F6F8B40000003", type: "xp", xp: 75}]
+			rewards: [
+				{id: "BEEF964673825039", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}{id: "8D1F6F8B40000003", type: "xp", xp: 75}]
 		}
 		{
 			invisible: true
@@ -89,7 +91,8 @@
 			shape: "circle"
 			dependencies: ["8D1F6F8B20000005"]
 			tasks: [{id: "8D1F6F8B30000007", type: "kill", entity: "spore:sieger", value: 1L, title: "击杀 Sieger"}]
-			rewards: [{id: "8D1F6F8B40000007", type: "xp", xp: 200}]
+			rewards: [
+				{id: "BEEF866932588062", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}{id: "8D1F6F8B40000007", type: "xp", xp: 200}]
 		}
 		{
 			invisible: true
@@ -102,7 +105,8 @@
 			shape: "circle"
 			dependencies: ["8D1F6F8B20000006"]
 			tasks: [{id: "8D1F6F8B30000008", type: "kill", entity: "spore:howitzer", value: 1L, title: "击杀 Howitzer"}]
-			rewards: [{id: "8D1F6F8B40000008", type: "xp", xp: 250}]
+			rewards: [
+				{id: "BEEF211663361412", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}{id: "8D1F6F8B40000008", type: "xp", xp: 250}]
 		}
 		{
 			invisible: true
@@ -115,7 +119,8 @@
 			shape: "circle"
 			dependencies: ["8D1F6F8B20000007"]
 			tasks: [{id: "8D1F6F8B30000009", type: "kill", entity: "spore:stahl", value: 1L, title: "击杀 Stahl"}]
-			rewards: [{id: "8D1F6F8B40000009", type: "xp", xp: 250}]
+			rewards: [
+				{id: "BEEF628253741491", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}{id: "8D1F6F8B40000009", type: "xp", xp: 250}]
 		}
 		{
 			invisible: true
@@ -128,7 +133,8 @@
 			shape: "circle"
 			dependencies: ["8D1F6F8B20000008"]
 			tasks: [{id: "8D1F6F8B3000000A", type: "kill", entity: "spore:hohlfresser", value: 1L, title: "击杀 Hohlfresser"}]
-			rewards: [{id: "8D1F6F8B4000000A", type: "xp", xp: 300}]
+			rewards: [
+				{id: "BEEF881314374350", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}{id: "8D1F6F8B4000000A", type: "xp", xp: 300}]
 		}
 		{
 			invisible: true
@@ -141,7 +147,8 @@
 			shape: "circle"
 			dependencies: ["8D1F6F8B20000009"]
 			tasks: [{id: "8D1F6F8B3000000B", type: "kill", entity: "spore:gazenbreacher", value: 1L, title: "击杀 Gazenbreacher"}]
-			rewards: [{id: "8D1F6F8B4000000B", type: "xp", xp: 300}]
+			rewards: [
+				{id: "BEEF039425252358", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}{id: "8D1F6F8B4000000B", type: "xp", xp: 300}]
 		}
 		{
 			invisible: true
@@ -154,7 +161,8 @@
 			shape: "circle"
 			dependencies: ["8D1F6F8B2000000A"]
 			tasks: [{id: "8D1F6F8B3000000C", type: "kill", entity: "spore:kraken", value: 1L, title: "击杀 Kraken"}]
-			rewards: [{id: "8D1F6F8B4000000C", type: "xp", xp: 350}]
+			rewards: [
+				{id: "BEEF460570611915", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}{id: "8D1F6F8B4000000C", type: "xp", xp: 350}]
 		}
 		{
 			invisible: true
@@ -167,7 +175,8 @@
 			shape: "circle"
 			dependencies: ["8D1F6F8B2000000B"]
 			tasks: [{id: "8D1F6F8B3000000D", type: "kill", entity: "spore:leviathan", value: 1L, title: "击杀 Leviathan"}]
-			rewards: [{id: "8D1F6F8B4000000D", type: "xp", xp: 350}]
+			rewards: [
+				{id: "BEEF243516558516", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}{id: "8D1F6F8B4000000D", type: "xp", xp: 350}]
 		}
 		{
 			invisible: true
@@ -180,7 +189,8 @@
 			shape: "circle"
 			dependencies: ["8D1F6F8B2000000C"]
 			tasks: [{id: "8D1F6F8B3000000E", type: "kill", entity: "spore:hindenburg", value: 1L, title: "击杀 Hindenburg"}]
-			rewards: [{id: "8D1F6F8B4000000E", type: "xp", xp: 400}]
+			rewards: [
+				{id: "BEEF840355077108", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}{id: "8D1F6F8B4000000E", type: "xp", xp: 400}]
 		}
 		{
 			invisible: true
@@ -194,6 +204,7 @@
 			dependencies: ["8D1F6F8B2000000D"]
 			tasks: [{id: "8D1F6F8B3000000F", type: "kill", entity: "spore:verfall", value: 1L, title: "击杀 Verfall"}]
 			rewards: [
+				{id: "BEEF965491737088", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 1b}}
 				{id: "8D1F6F8B4000000F", type: "xp", xp: 500},
 				{id: "8D1F6F8B40000010", type: "item", item: {id: "minecraft:nether_star", Count: 1b}}
 			]
