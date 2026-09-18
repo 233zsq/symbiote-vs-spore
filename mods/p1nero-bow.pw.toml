@@ -1,0 +1,8 @@
+name = "P1nero Bow"
+filename = "p1nero_bow-forge1.20.1-20.14.1.6.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/p1nero-bow"
+hash-format = "sha512"
+hash = "50097d7e0b345c51c807f4b7fc025dc08e780065cdde0ec28f51bbbe1e1aeac00c66f2320732e29ff1176cc2b2a2190a1e31e06af0093b3e26101eea4aa1b9c3"

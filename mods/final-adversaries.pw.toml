@@ -1,0 +1,8 @@
+name = "Final Adversaries"
+filename = "final_adversaries_1.3_alexscaves+aether_Forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/final-adversaries"
+hash-format = "sha512"
+hash = "ef982dfda72861330632ec99dea67ab759d9958e05956ee624ba2c529996778e5fcae18847a0792715c99d88b2ad584c6e9252421f1b1f9571b705ad08eb4bb0"

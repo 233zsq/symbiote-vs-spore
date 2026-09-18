@@ -1,0 +1,8 @@
+name = "Rapier For EpicFightMod"
+filename = "refm-0.3.11-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/refm"
+hash-format = "sha512"
+hash = "79f9f59571249a15f0805cb12eaa62ea2b1e4f556a24ddfe155c9d999d88d01e5b60af4cca30bfa879bb71326c8eaba6441632e2deb032a78ee42761303847c9"

@@ -26,11 +26,11 @@ hash = "3cf4e727ed89b9ade1cee228d71cd7a47e2c2c9dc7d4612066d72d2cfc5ed4e8"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/boss_guide.snbt"
-hash = "5d4cb1af8dfbe91723aaf168b14f7a2718ccd86853f94127174a0751c111bf2b"
+hash = "d017742398fcb6110ab248cf8a5905494d6b0b26a7c21589c691d87f51d006be"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/calamity_front.snbt"
-hash = "35575d874dc5483f4bf4351e94d0d27e6afdfbbd8d15a2e0eda26b1645508ee5"
+hash = "efe0006f6e581afcded940eb9171c81a4542fbd56f5cca4c258adc02b5d6fb9d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dragons_guide.snbt"
@@ -49,6 +49,10 @@ file = "config/ftbquests/quests/chapters/preface.snbt"
 hash = "9eb32263fedb5c90abc86f60371dc42c7507bd9191bb40711352da8dbac85e1e"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/souls_codex.snbt"
+hash = "d9761e35751e4b30c0dfc3fe687538d02f50e2296c0e476efda21202357e33c2"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/souls_guide.snbt"
 hash = "fd1efa2073d3550410886badaa9a8f8a9ffe912708c52d783cb659ba05b173df"
 
@@ -58,23 +62,19 @@ hash = "5628b86f2a47f979cbfc10f6ffc832d4514fa1c1c9632f8778e05d9b0aba4623"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage1_departure.snbt"
-hash = "ebe5a555a678a62fb6668ebaea113e916b5313e79d4b30c7cfcef6367abacfd9"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/stage2_nether.snbt"
-hash = "617cacd9120812b86c84150d8b4303452864b15bc2990ac98aa5f7ad14b73ef9"
+hash = "04182f40d5280ed2a6113bc47dc3dd061f7cffc7a3f19d4124fec921e80b31a0"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage3_twilight.snbt"
-hash = "5b1611bbf9fa4e583cd94433b5b66bba3b019c24036eeb00e8382ffa7ce5c0a9"
+hash = "1122f983bcd92d360021ae0beb723b9e56ca92799e1b4e44ea515b8c06efe384"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage4_calamity.snbt"
-hash = "5039e3d1a9343e9c4e0b370833a9ba73d7acc940f26e568081434781b8e3bdcd"
+hash = "7eff6a3c750004eb87199532942eb9d64cc641bbae4d4eb22024fd29ce7be077"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage5_endgame.snbt"
-hash = "81d940a53c959cee275d62e0b9bab68c51cb8a0f6cf2c5a0bfccf153a05f8449"
+hash = "1963f847f303fbe5add88b525b7a14db5ad6027442bcc44c4ee6f50e753f7ef8"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/structure_guide.snbt"
@@ -86,7 +86,7 @@ hash = "bf4f76dd260433496ba17da12fa391e348b01ad7d3b6774cadc6b8c7034ed1ef"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/symbiote_bond.snbt"
-hash = "98be3048836bd28910130e3c1b03069760268ff46d60822e33d09ee799158b0e"
+hash = "9cf16ec2e8354f97ee690b1ff48cd78fce3e479fc1cc31f1d34d76504dd01bd4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/tinkers_workshop.snbt"
@@ -94,7 +94,7 @@ hash = "256931e6d02a9b8a01eb17ddec9ba89265ef27048910c223d87bf4de9d024040"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/weapon_guide.snbt"
-hash = "2b0deeeca91d2e77eb858cd1c33685ab5c1e1950d83741beb9de8b44a72e0949"
+hash = "6adf17c070f9b23e27b0b3ee3c74c6abe7dac334eb866ec3269aa5b262c8bc6c"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -2265,6 +2265,18 @@ file = "config/openloader/data/imfdata/data/p1nero_bow/skill_parameters/mortis_i
 hash = "777667e55776df66e8699b7774cd16ecb4a7acadd795b46845178c79b54412ea"
 
 [[files]]
+file = "config/openloader/data/imfdata/data/refm/capabilities/weapons/enderite_rapier.json"
+hash = "d2522a009f298d2bc8367a5817ca486391a3ea1b7fbb58305567036179e6b259"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/refm/capabilities/weapons/netherite_rapier.json"
+hash = "554a4d052251014f25e9b7578a017be871ec4181052dbc555d5cf40d517bd87d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/refm/capabilities/weapons/types/rapier.json"
+hash = "0222d4a97d3740651a0ff7e166732aba8f4693e8dc703e3a9fa4671d510ff583"
+
+[[files]]
 file = "config/openloader/data/imfdata/data/saintsdragons/capabilities/weapons/blood_tempest_katana.json"
 hash = "45a72f024d4f17d3377a04f9894c1d0ffed2552caa5ab09f3f89c2412f531201"
 
@@ -3737,8 +3749,76 @@ file = "config/openloader/data/imfdata/data/wom/skill_parameters/voodoo_magic.js
 hash = "4b6216d2338a1d3300c4508be8dc4e053311d8854846a8024a151401e9934d42"
 
 [[files]]
+file = "config/openloader/data/imfdata/data/womalt/capabilities/weapons/agony_alt.json"
+hash = "572f476bc1977821ec8ff6d766f1d07ac055fd315432d41e8f7b76a19eeebdbc"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/womalt/capabilities/weapons/antitheus_alt.json"
+hash = "1db6e8f1da0e664ce25f8b8e1dca19ae5c037fe41a71a372395ce8ebd02e51cd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/womalt/capabilities/weapons/ender_blaster_alt.json"
+hash = "364969b2b1b247339bb04c4bb55041e38a751b38d032a34b928c743c4cd6b685"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/womalt/capabilities/weapons/gesetz_alt.json"
+hash = "41909b7a05bafcbc4c18dc8b793fd132c88fa371bf1dfde91df7b6e55b66ab71"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/womalt/capabilities/weapons/herrscher_alt.json"
+hash = "2af9c294ab2116f18eeae03d1d888ac50b63f9cbe8397a768153cc0530e1b555"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/womalt/capabilities/weapons/moonless_alt.json"
+hash = "c5056429699d611cb0851cba8f0baaaeec643be310ceb7637f27b0362e05ed9f"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/womalt/capabilities/weapons/ruine_alt.json"
+hash = "70271415022c082702515d3f7c6977d0c90c360b732df2247a41a826c0eab67a"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/womalt/capabilities/weapons/satsujin_alt.json"
+hash = "5a35238e7b5044774dd7eb10759395f1322619350b72c89b43ad0b07468cd094"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/womalt/capabilities/weapons/tormented_mind_alt.json"
+hash = "ed791cf23d7e6d5a0f7cef4164e3112628d089dec4480395f9cb59b2ee2af3b9"
+
+[[files]]
 file = "config/openloader/data/imfdata/pack.mcmeta"
 hash = "4cebc384d1f92e61ec7d770bfe663b93630ec4315cd65293d39bac2f96c4fc8e"
+
+[[files]]
+file = "config/openloader/data/svs/data/spore/capabilities/weapons/cleaver.json"
+hash = "2712dd7c3f4a0902884a9aa1a57ec2a776ef52196ffc3f0a42d44b92273b443a"
+
+[[files]]
+file = "config/openloader/data/svs/data/spore/capabilities/weapons/infected_bow.json"
+hash = "1611d88e9818529b03d9c8b0f884ad08c131e60023f2ea37adadce99b2c709ac"
+
+[[files]]
+file = "config/openloader/data/svs/data/spore/capabilities/weapons/infected_crossbow.json"
+hash = "69a8818f19baaec1593ba5bf8d0721c88cc57981fb09c9bfb1826c341a27bb70"
+
+[[files]]
+file = "config/openloader/data/svs/data/spore/capabilities/weapons/infected_spear.json"
+hash = "f6f44bd1bdbf1e2d5ce8a7ab6015e3557dc1bd983863ff0dfc1396bdba005b11"
+
+[[files]]
+file = "config/openloader/data/svs/data/spore/capabilities/weapons/mace.json"
+hash = "0038ea7f22ef435f4baa3b7f653fc7274f6d3dba10c6e57d6922056f54bc5f4c"
+
+[[files]]
+file = "config/openloader/data/svs/data/spore/capabilities/weapons/saber.json"
+hash = "d81242c3114cf1be2b35f6bc5a10813b4a5ead04d5425351d1640518e0ecc71a"
+
+[[files]]
+file = "config/openloader/data/svs/data/spore/capabilities/weapons/scythe.json"
+hash = "32083d35d92008f6d24112a7602182d497155a19d3d959df037fdfdc21658163"
+
+[[files]]
+file = "config/openloader/data/svs/pack.mcmeta"
+hash = "8f25abd09f4a7f629bcace759b0ae5840a578a4f021391027e37fcdebc02bd00"
 
 [[files]]
 file = "config/openloader/resources/svs_zh_cn/assets/betterfortresses/lang/zh_cn.json"
@@ -3965,6 +4045,11 @@ hash = "4f9f42729849acf0cc5b5b456bcee2398ba753669f35b873f4b33240ec3abce4"
 metafile = true
 
 [[files]]
+file = "mods/dungeons-and-combat.pw.toml"
+hash = "a89bc27e440958066b23e2feb68ee38f9f28f81c6f7a1504a51bf51a0afb8430"
+metafile = true
+
+[[files]]
 file = "mods/dynamic-fps.pw.toml"
 hash = "506f772362246301d553e9a09236776b5dc84fe3703c7ed126bbcdcada2d3092"
 metafile = true
@@ -4045,6 +4130,11 @@ hash = "c94a97f4e230dd860d081465a62d29d170d329c084043234d6c50cffa28c368d"
 metafile = true
 
 [[files]]
+file = "mods/falchionmoveset.pw.toml"
+hash = "373fca9769e688e21eb66b8afa3a56af08e1e22dcd76fbd698643299a6bee809"
+metafile = true
+
+[[files]]
 file = "mods/farmers-delight.pw.toml"
 hash = "c83385838fbf5cdd40684e5f6d4b7bcc2126de4abca229a60b7063e57a5a4615"
 metafile = true
@@ -4052,6 +4142,11 @@ metafile = true
 [[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "3b026ffc2963974cc8252d83e91587b5ac357ab2b59eb1e77e74e82eb3d635d6"
+metafile = true
+
+[[files]]
+file = "mods/final-adversaries.pw.toml"
+hash = "f0a54ddb2546e5ab77eec933d6cbf4996e0e56bb64da4649bee395abe0248008"
 metafile = true
 
 [[files]]
@@ -4127,6 +4222,16 @@ metafile = true
 [[files]]
 file = "mods/jei.pw.toml"
 hash = "8c6e07876d5219952572c110782fa14c7036f705db6add0d1246ac1e32db475d"
+metafile = true
+
+[[files]]
+file = "mods/jerotes.pw.toml"
+hash = "feae23a1b1c9dcbbe4bbcd69d70f8f72677ac747ed016d38277139092a8fef72"
+metafile = true
+
+[[files]]
+file = "mods/jerotesvillage.pw.toml"
+hash = "8c46d8ad09ed23888b36be872700fd48ae6216dec8bedf49b114536f2870ad4d"
 metafile = true
 
 [[files]]
@@ -4230,6 +4335,11 @@ hash = "6bbb14bde3a05517dc0435b45500f4178ef0d25c5012478690cd90c9afe098ae"
 metafile = true
 
 [[files]]
+file = "mods/p1nero-bow.pw.toml"
+hash = "bd526b96a4e1d2d97324c8885309ad0dd01c95523996dac7477c3aa83199876e"
+metafile = true
+
+[[files]]
 file = "mods/p1neros-epic-x-cataclysm.pw.toml"
 hash = "d5da114c672fe53b884ab71937235d99d17c6119316e56b668b22770fac21571"
 metafile = true
@@ -4270,6 +4380,11 @@ hash = "ff94210597f5bf032a675a4be94f4707913d2bfacbe9a02a49b6982adf6b749a"
 metafile = true
 
 [[files]]
+file = "mods/refm.pw.toml"
+hash = "4e786ea2b69f8d3e5addf52aa87c8d5804c17e4d29a8c4fd31dc3a40b83e48b4"
+metafile = true
+
+[[files]]
 file = "mods/rhino.pw.toml"
 hash = "5b92406160d9ea8a61ddf111caaecb7f6283678e2c40b08b72dce3eeaf20dc96"
 metafile = true
@@ -4292,6 +4407,11 @@ metafile = true
 [[files]]
 file = "mods/simply-swords.pw.toml"
 hash = "e7b4f5d39d49d95fc3b11d7e39b29dc7206ef38274200f745912aae332d496e7"
+metafile = true
+
+[[files]]
+file = "mods/skyarena.pw.toml"
+hash = "d73c9bfe5ba1662154a26433df07a80d9b47e79be241250d96a5f7b3cd037ab0"
 metafile = true
 
 [[files]]

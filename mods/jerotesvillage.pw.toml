@@ -1,0 +1,8 @@
+name = "Jerotes Village"
+filename = "jerotesvillage-1.20.1-1.1.5.20.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/jerotesvillage"
+hash-format = "sha512"
+hash = "f7ac38e24ed8d8486f371f8eb4835c5bc77ffaf4b850974ed4e80ff5d1568df0aa5c84b85cba66fc13b2743553a5c2c2ae30e5feed76efc0a297c8b517c1cf4f"

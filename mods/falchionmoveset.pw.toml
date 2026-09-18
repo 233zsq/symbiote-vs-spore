@@ -1,0 +1,8 @@
+name = "Falchion Moveset"
+filename = "falchionmoveset-20.14.0.jar"
+side = "both"
+
+[download]
+url = "https://www.curseforge.com/minecraft/mc-mods/falchionmoveset"
+hash-format = "sha512"
+hash = "a975ac5ffd064eeeb4b9d097f52eb076ee87ce85f342861f61dd526fb373b9bda642dde2d47ae1d5f905abf86b05ccf57112b74cb76ca0c1f3edb69189659909"
