@@ -3873,6 +3873,14 @@ file = "kubejs/client_scripts/jei_hide.js"
 hash = "b1f08d6c93e6314aa26380e9bb601189a37cb6816c4e5eb5941148670e9b3c11"
 
 [[files]]
+file = "kubejs/data/final_adversaries/worldgen/structure/minor_light_tree.json"
+hash = "354f43871e961dbf7b665520a297e89a85a8adbe2a015d97b870fc799c27b1f9"
+
+[[files]]
+file = "kubejs/data/final_adversaries/worldgen/structure/tree_of_light.json"
+hash = "3e7d114ab1346bf83478d23cb477860febf3fc14ab86d1bebca6dd30b0dd03fa"
+
+[[files]]
 file = "kubejs/server_scripts/explorers_compass.js"
 hash = "f5d710533d9d6b26ceac5344284fdcf40bcd94b8e38e2861852d69d406c3b787"
 
@@ -4037,11 +4045,6 @@ metafile = true
 [[files]]
 file = "mods/default-options.pw.toml"
 hash = "e3f4f3cfdf82a3867d1096651c46138a94bfc118efb60016a31d9411f7747b51"
-metafile = true
-
-[[files]]
-file = "mods/distanthorizons.pw.toml"
-hash = "4f9f42729849acf0cc5b5b456bcee2398ba753669f35b873f4b33240ec3abce4"
 metafile = true
 
 [[files]]
