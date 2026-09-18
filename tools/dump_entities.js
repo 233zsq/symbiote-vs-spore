@@ -8,16 +8,17 @@
     var EntityTypeCls = Java.loadClass("net.minecraft.world.entity.EntityType")
     var ATR = ForgeRegistries.ATTRIBUTES
     var ATTR_HP = ATR.getValue(new RL("minecraft:generic.max_health"))
+    var DA_CLS = new DefaultAttributes().getClass()
     var ATTR_ATK = ATR.getValue(new RL("minecraft:generic.attack_damage"))
     var ATTR_ARMOR = ATR.getValue(new RL("minecraft:generic.armor"))
 
         // 诊断：注册表规模 + 探针单个实体的调用链
-    var esz = ForgeRegistries.ENTITY_TYPES.entrySet().size()
+    var esz = ForgeRegistries.ENTITY_TYPES.getValues().size()
     console.log("[DUMP_E] SRC_SIZE=" + esz)
     try {
       var zombie = ForgeRegistries.ENTITY_TYPES.getValue(new RL("minecraft:zombie"))
       console.log("[DUMP_E] zombie=" + (zombie == null ? "null" : zombie.getClass().getName()))
-      var zsup = DefaultAttributes.m_22297_(zombie)
+      var zsup = DA_CLS.getMethod("m_22297_", EntityTypeCls).invoke(null, zombie)
       console.log("[DUMP_E] zombie sup=" + (zsup == null ? "null" : "ok"))
       if (zsup != null) {
         console.log("[DUMP_E] zombie hp=" + zsup.getClass().getMethod("m_22253_", AttributeCls).invoke(zsup, ATTR_HP))
@@ -26,14 +27,14 @@
       console.log("[DUMP_E] probe ERR " + e)
     }
     var rows = []
-    var types = ForgeRegistries.ENTITY_TYPES.iterator()
+    var types = ForgeRegistries.ENTITY_TYPES.getValues().iterator()
     var cnt = 0
     while (types.hasNext()) {
       var et = types.next()
       try {
         var eid = ForgeRegistries.ENTITY_TYPES.getKey(et).toString()
         var cat = "" + et.getClass().getMethod("m_20674_").invoke(et).toString()   // getCategory
-        var sup = DefaultAttributes.m_22297_(et)   // getSupplier 静态直调（NativeJavaClass 支持静态）
+        var sup = DA_CLS.getMethod("m_22297_", EntityTypeCls).invoke(null, et)   // getSupplier 反射直取
         if (sup == null) continue
         var sc = sup.getClass()
         var hp = sc.getMethod("m_22258_", AttributeCls).invoke(sup, ATTR_HP) ? sc.getMethod("m_22253_", AttributeCls).invoke(sup, ATTR_HP) : ""
