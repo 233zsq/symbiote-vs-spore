@@ -4497,11 +4497,6 @@ hash = "9aef0713a2ca181ba3f833b49dc95fecb3a5dc8518b86461004a75775bc5f512"
 metafile = true
 
 [[files]]
-file = "mods/warriors-of-world2.pw.toml"
-hash = "7dd27c598394e413ff4df199c96e8db330e98541f6b88aa088c4bb3e9c9f9ae5"
-metafile = true
-
-[[files]]
 file = "mods/waystones.pw.toml"
 hash = "1dc6ca31c7b6912c494caa2a4f5f9f7250af50fbeb9ce9141ae9b741f9861987"
 metafile = true

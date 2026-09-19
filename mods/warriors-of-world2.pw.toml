@@ -1,8 +1,0 @@
-name = "Warriors Of World 2"
-filename = "WarriorsOfWorld2-1.1.1-forge-1.20.1.jar"
-side = "both"
-
-[download]
-url = "https://mediafilez.forgecdn.net/files/7008/14/WarriorsOfWorld2-1.1.1-forge-1.20.1.jar"
-hash-format = "sha512"
-hash = "668ec46ad6bdeb0390841ea73a899e8f52fc74ec3ed540a23b498899bb0b1f543c03ebf28204c3de8baf6703f52895d022f8e06092ebc0425c08c790aa6ab403"
