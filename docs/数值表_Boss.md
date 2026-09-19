@@ -1,353 +1,227 @@
-# 全包 Boss/精英数值表（实采）
+# 全包 Boss/精英数值表（实采 · 血量排序）
 
-> 2026-09-19 KubeJS 运行时实采（DefaultAttributes.getSupplier 全量 960 实体；本表收 HP≥100）。攻击为属性基础值（多数 Boss 实际伤害由技能/AI 决定，高于此值）。
+> 2026-09-19 KubeJS 运行时实采（全量 960 实体，本表收 HP≥100 共 219 个，全局按血量降序）。攻击为属性基础值（多数 Boss 实际伤害由技能/AI 决定，高于此值）。
 > 等级带：B0 天灾 ≥800 / B1 领主 ≥400 / B2 精英 ≥200 / B3 勇士 ≥100
+> 注意：`efn:doppelganger`/`efn:guardian` 约 10 亿血为机制锁血实体；`jerotes:test`/`jerotesvillage:smart` 疑似测试实体——魔改时均跳过。
 
-## efn · 2 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `efn:doppelganger` | 999999999.0 | 10.0 | 0.0 | B0 天灾 |
-| `efn:guardian` | 999999999.0 | 10.0 | 0.0 | B0 天灾 |
-
-## bloodandmadness · 4 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `bloodandmadness:micolash` | 1500.0 | 12.0 | 0.0 | B0 天灾 |
-| `bloodandmadness:father_gascoigne` | 1000.0 | 12.0 | 0.0 | B0 天灾 |
-| `bloodandmadness:gascoigne_beast` | 1000.0 | 12.0 | 0.0 | B0 天灾 |
-| `bloodandmadness:silverbeast` | 200.0 | 5.0 | 0.0 | B2 精英 |
-
-## jerotes · 3 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `jerotes:test` | 1024.0 | 0.0 | 0.0 | B0 天灾 |
-| `jerotes:big_beast` | 400.0 | 15.0 | 0.0 | B1 领主 |
-| `jerotes:jerotes_iron_golem` | 100.0 | 15.0 | 0.0 | B3 勇士 |
-
-## jerotesvillage · 41 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `jerotesvillage:smart` | 1024.0 | 0.0 | 0.0 | B0 天灾 |
-| `jerotesvillage:variant_zsiein` | 730.0 | 35.0 | 30.0 | B1 领主 |
-| `jerotesvillage:bright_land_beast` | 650.0 | 40.0 | 4.0 | B1 领主 |
-| `jerotesvillage:meror_monstrosity` | 640.0 | 30.0 | 12.0 | B1 领主 |
-| `jerotesvillage:second_rounder_golem` | 436.0 | 36.0 | 20.0 | B1 领主 |
-| `jerotesvillage:second_rounder_golem_sword` | 436.0 | 36.0 | 20.0 | B1 领主 |
-| `jerotesvillage:celestial_coilvine` | 420.0 | 18.0 | 15.0 | B1 领主 |
-| `jerotesvillage:gemstone_malignasaur` | 408.0 | 18.0 | 4.0 | B1 领主 |
-| `jerotesvillage:archnosed_hornbeast` | 400.0 | 28.0 | 2.0 | B1 领主 |
-| `jerotesvillage:tyrant_of_the_mountain_realm` | 360.0 | 12.0 | 4.0 | B2 精英 |
-| `jerotesvillage:meror_champion` | 355.0 | 16.0 | 14.0 | B2 精英 |
-| `jerotesvillage:primordier` | 320.0 | 25.0 | 8.0 | B2 精英 |
-| `jerotesvillage:malignasaur` | 310.0 | 15.0 | 2.0 | B2 精英 |
-| `jerotesvillage:duneshockler` | 290.0 | 28.0 | 16.0 | B2 精英 |
-| `jerotesvillage:serpon_combat_executer` | 270.0 | 8.0 | 5.0 | B2 精英 |
-| `jerotesvillage:darisorder` | 230.0 | 20.0 | 4.0 | B2 精英 |
-| `jerotesvillage:fury_darisorder` | 230.0 | 20.0 | 4.0 | B2 精英 |
-| `jerotesvillage:corrosiver` | 225.0 | 12.0 | 5.0 | B2 精英 |
-| `jerotesvillage:prosperous_envoy` | 225.0 | 12.0 | 12.0 | B2 精英 |
-| `jerotesvillage:firepower_pourer` | 220.0 | 12.0 | 16.0 | B2 精英 |
-| `jerotesvillage:meror_golem` | 220.0 | 20.0 | 8.0 | B2 精英 |
-| `jerotesvillage:ominous_banner_projection` | 200.0 | 2.0 | 0.0 | B2 精英 |
-| `jerotesvillage:fluffmound` | 170.0 | 8.0 | 2.0 | B3 勇士 |
-| `jerotesvillage:sediment_lord` | 170.0 | 6.0 | 3.0 | B3 勇士 |
-| `jerotesvillage:purple_sand_hag` | 165.0 | 13.0 | 15.0 | B3 勇士 |
-| `jerotesvillage:adventurer` | 140.0 | 8.0 | 3.0 | B3 勇士 |
-| `jerotesvillage:lightning_worm` | 135.0 | 16.0 | 11.0 | B3 勇士 |
-| `jerotesvillage:woodland_heart_guardian` | 135.0 | 11.0 | 4.0 | B3 勇士 |
-| `jerotesvillage:giant_monster` | 130.0 | 12.0 | 4.0 | B3 勇士 |
-| `jerotesvillage:frost_yeti` | 128.0 | 14.0 | 12.0 | B3 勇士 |
-| `jerotesvillage:cohort_hag` | 121.0 | 12.0 | 12.0 | B3 勇士 |
-| `jerotesvillage:coven_hag_one` | 121.0 | 12.0 | 12.0 | B3 勇士 |
-| `jerotesvillage:coven_hag_two` | 121.0 | 12.0 | 12.0 | B3 勇士 |
-| `jerotesvillage:ax_crazy` | 120.0 | 12.0 | 12.0 | B3 勇士 |
-| `jerotesvillage:carved_iron_golem` | 120.0 | 17.0 | 17.0 | B3 勇士 |
-| `jerotesvillage:drought_wildfire` | 120.0 | 7.0 | 8.0 | B3 勇士 |
-| `jerotesvillage:fury_drought_wildfire` | 120.0 | 7.0 | 8.0 | B3 勇士 |
-| `jerotesvillage:vineheart_bomb` | 120.0 | 24.0 | 0.0 | B3 勇士 |
-| `jerotesvillage:fire_secretor` | 102.0 | 4.0 | 12.0 | B3 勇士 |
-| `jerotesvillage:cogon_sword` | 100.0 | 24.0 | 0.0 | B3 勇士 |
-| `jerotesvillage:serpon_combat_platform` | 100.0 | 5.0 | 16.0 | B3 勇士 |
-
-## combat_evolution · 1 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `combat_evolution:shelmarow` | 1000.0 | 0.0 | 0.0 | B0 天灾 |
-
-## irons_spellbooks · 3 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `irons_spellbooks:fire_boss` | 1000.0 | 10.0 | 15.0 | B0 天灾 |
-| `irons_spellbooks:dead_king` | 500.0 | 10.0 | 15.0 | B1 领主 |
-| `irons_spellbooks:dead_king_corpse` | 500.0 | 10.0 | 15.0 | B1 领主 |
-
-## monsterexpansion · 6 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `monsterexpansion:leivekilth` | 1000.0 | 20.0 | 5.0 | B0 天灾 |
-| `monsterexpansion:rakoth` | 750.0 | 15.0 | 5.0 | B1 领主 |
-| `monsterexpansion:skrythe` | 750.0 | 15.0 | 5.0 | B1 领主 |
-| `monsterexpansion:ignathos` | 500.0 | 6.0 | 5.0 | B1 领主 |
-| `monsterexpansion:rhyza` | 500.0 | 10.0 | 5.0 | B1 领主 |
-| `monsterexpansion:arborix` | 100.0 | 5.0 | 5.0 | B3 勇士 |
-
-## slu · 43 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `slu:boss_minecraft_lord` | 1000.0 | 32.0 | 0.0 | B0 天灾 |
-| `slu:boss_ancient_warrior` | 370.0 | 1.0 | 0.0 | B2 精英 |
-| `slu:boss_elden_beast` | 350.0 | 7.0 | 0.0 | B2 精英 |
-| `slu:boss_aatrox` | 330.0 | 3.0 | 0.0 | B2 精英 |
-| `slu:boss_notch` | 300.0 | 12.0 | 25.0 | B2 精英 |
-| `slu:boss_darius` | 290.0 | 6.0 | 0.0 | B2 精英 |
-| `slu:boss_mohg` | 290.0 | 3.0 | 0.0 | B2 精英 |
-| `slu:boss_soul_of_cinder` | 290.0 | 10.0 | 0.0 | B2 精英 |
-| `slu:boss_hoarah_loux` | 250.0 | 16.0 | 25.0 | B2 精英 |
-| `slu:boss_maliketh` | 250.0 | 7.0 | 0.0 | B2 精英 |
-| `slu:boss_pantheon` | 250.0 | 6.0 | 0.0 | B2 精英 |
-| `slu:boss_crucible_knight` | 230.0 | 3.0 | 0.0 | B2 精英 |
-| `slu:boss_gael` | 230.0 | 1.0 | 0.0 | B2 精英 |
-| `slu:boss_fallen_lord` | 210.0 | 3.0 | 0.0 | B2 精英 |
-| `slu:boss_nameless_king` | 210.0 | 1.0 | 0.0 | B2 精英 |
-| `slu:boss_wukong` | 210.0 | 4.0 | 0.0 | B2 精英 |
-| `slu:boss_godfrey` | 200.0 | 1.0 | 0.0 | B2 精英 |
-| `slu:boss_radagon` | 200.0 | 7.0 | 25.0 | B2 精英 |
-| `slu:boss_dragon_slayer_armour` | 190.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_malenia` | 175.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_malenia_2` | 175.0 | 3.0 | 25.0 | B3 勇士 |
-| `slu:boss_elemer` | 170.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_jax` | 170.0 | 6.0 | 0.0 | B3 勇士 |
-| `slu:boss_looking_glass_knight` | 170.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_artorias` | 150.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_radahn` | 150.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_radahn_2` | 150.0 | 3.0 | 0.0 | B3 勇士 |
-| `slu:boss_gwyndolin` | 140.0 | 0.0 | 24.0 | B3 勇士 |
-| `slu:boss_abyss_watcher` | 130.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_count_robert` | 130.0 | 3.0 | 0.0 | B3 勇士 |
-| `slu:boss_godskin_apostle` | 125.0 | 2.0 | 0.0 | B3 勇士 |
-| `slu:boss_gundyr` | 125.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_margit` | 125.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_morgott` | 125.0 | 3.0 | 0.0 | B3 勇士 |
-| `slu:boss_beast_clergyman` | 120.0 | 5.0 | 0.0 | B3 勇士 |
-| `slu:boss_ornstein` | 120.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:boss_smough` | 120.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:white_phantom` | 120.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:clone_abyss_watcher` | 110.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:magma_giant` | 100.0 | 8.0 | 5.0 | B3 勇士 |
-| `slu:monster_crucible_knight` | 100.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:monster_crucible_knight_2` | 100.0 | 1.0 | 0.0 | B3 勇士 |
-| `slu:monster_tower_knight` | 100.0 | 1.0 | 0.0 | B3 勇士 |
-
-## alexscaves · 8 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `alexscaves:luxtructosaurus` | 600.0 | 12.0 | 20.0 | B1 领主 |
-| `alexscaves:tremorzilla` | 500.0 | 30.0 | 10.0 | B1 领主 |
-| `alexscaves:atlatitan` | 400.0 | 8.0 | 0.0 | B1 领主 |
-| `alexscaves:hullbreaker` | 400.0 | 16.0 | 0.0 | B1 领主 |
-| `alexscaves:forsaken` | 250.0 | 10.0 | 0.0 | B2 精英 |
-| `alexscaves:gum_worm` | 150.0 | 9.0 | 10.0 | B3 勇士 |
-| `alexscaves:tremorsaurus` | 150.0 | 14.0 | 8.0 | B3 勇士 |
-| `alexscaves:relicheirus` | 120.0 | 12.0 | 0.0 | B3 勇士 |
-
-## cataclysm · 20 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `cataclysm:netherite_monstrosity` | 600.0 | 25.0 | 12.0 | B1 领主 |
-| `cataclysm:ancient_remnant` | 450.0 | 25.0 | 12.0 | B1 领主 |
-| `cataclysm:ignis` | 450.0 | 14.0 | 10.0 | B1 领主 |
-| `cataclysm:maledictus` | 420.0 | 13.0 | 10.0 | B1 领主 |
-| `cataclysm:the_leviathan` | 400.0 | 15.0 | 10.0 | B1 领主 |
-| `cataclysm:scylla` | 390.0 | 18.0 | 12.0 | B2 精英 |
-| `cataclysm:the_harbinger` | 390.0 | 9.0 | 12.0 | B2 精英 |
-| `cataclysm:ender_guardian` | 333.0 | 16.0 | 20.0 | B2 精英 |
-| `cataclysm:clawdian` | 225.0 | 16.0 | 12.0 | B2 精英 |
-| `cataclysm:amethyst_crab` | 200.0 | 13.0 | 10.0 | B2 精英 |
-| `cataclysm:kobolediator` | 180.0 | 14.0 | 10.0 | B3 勇士 |
-| `cataclysm:aptrgangr` | 160.0 | 18.0 | 10.0 | B3 勇士 |
-| `cataclysm:coralssus` | 160.0 | 10.0 | 5.0 | B3 勇士 |
-| `cataclysm:the_prowler` | 160.0 | 14.0 | 10.0 | B3 勇士 |
-| `cataclysm:ender_golem` | 150.0 | 10.0 | 12.0 | B3 勇士 |
-| `cataclysm:modern_remnant` | 150.0 | 6.0 | 5.0 | B3 勇士 |
-| `cataclysm:wadjet` | 150.0 | 11.0 | 5.0 | B3 勇士 |
-| `cataclysm:netherite_ministrosity` | 120.0 | 0.0 | 5.0 | B3 勇士 |
-| `cataclysm:the_baby_leviathan` | 120.0 | 4.0 | 5.0 | B3 勇士 |
-| `cataclysm:coral_golem` | 110.0 | 11.0 | 5.0 | B3 勇士 |
-
-## block_factorys_bosses · 5 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `block_factorys_bosses:kraken` | 500.0 | 10.0 | 20.0 | B1 领主 |
-| `block_factorys_bosses:infernal_dragon` | 250.0 | 14.0 | 15.0 | B2 精英 |
-| `block_factorys_bosses:underworld_knight` | 250.0 | 15.0 | 0.0 | B2 精英 |
-| `block_factorys_bosses:yeti` | 250.0 | 18.0 | 2.0 | B2 精英 |
-| `block_factorys_bosses:sandworm` | 150.0 | 10.0 | 20.0 | B3 勇士 |
-
-## minecraft · 6 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `minecraft:warden` | 500.0 | 30.0 | 0.0 | B1 领主 |
-| `minecraft:wither` | 300.0 | 2.0 | 4.0 | B2 精英 |
-| `minecraft:ender_dragon` | 200.0 | 10.0 | 0.0 | B2 精英 |
-| `minecraft:giant` | 100.0 | 50.0 | 0.0 | B3 勇士 |
-| `minecraft:iron_golem` | 100.0 | 15.0 | 0.0 | B3 勇士 |
-| `minecraft:ravager` | 100.0 | 12.0 | 0.0 | B3 勇士 |
-
-## spore · 16 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `spore:howitzer` | 500.0 | 15.0 | 10.0 | B1 领主 |
-| `spore:leviathan` | 450.0 | 30.0 | 25.0 | B1 领主 |
-| `spore:leviathan_seg` | 450.0 | 30.0 | 25.0 | B1 领主 |
-| `spore:hindenburg` | 400.0 | 15.0 | 5.0 | B1 领主 |
-| `spore:kraken` | 400.0 | 15.0 | 15.0 | B1 领主 |
-| `spore:tumoroid_nuke` | 400.0 | 15.0 | 5.0 | B1 领主 |
-| `spore:gazenbreacher` | 350.0 | 25.0 | 15.0 | B2 精英 |
-| `spore:sieger` | 300.0 | 30.0 | 25.0 | B2 精英 |
-| `spore:verfall` | 300.0 | 10.0 | 15.0 | B2 精英 |
-| `spore:hohlfresser` | 250.0 | 20.0 | 25.0 | B2 精英 |
-| `spore:hohlfresser_seg` | 250.0 | 20.0 | 25.0 | B2 精英 |
-| `spore:stahl` | 200.0 | 35.0 | 10.0 | B2 精英 |
-| `spore:howit_arm` | 125.0 | 0.0 | 2.5 | B3 勇士 |
-| `spore:vanguard` | 110.0 | 12.0 | 8.0 | B3 勇士 |
-| `spore:ogre` | 100.0 | 20.0 | 12.0 | B3 勇士 |
-| `spore:proto` | 100.0 | 10.0 | 10.0 | B3 勇士 |
-
-## souls_like_bosses · 1 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `souls_like_bosses:nightlord` | 500.0 | 8.0 | 10.0 | B1 领主 |
-
-## legendary_monsters · 18 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `legendary_monsters:the_obliterator` | 450.0 | 6.0 | 14.0 | B1 领主 |
-| `legendary_monsters:posessed_paladin` | 400.0 | 15.0 | 12.0 | B1 领主 |
-| `legendary_monsters:cloud_golem` | 350.0 | 0.0 | 10.0 | B2 精英 |
-| `legendary_monsters:frostbitten_golem` | 220.0 | 16.0 | 10.0 | B2 精英 |
-| `legendary_monsters:annihilation_pursuer` | 210.0 | 10.0 | 13.0 | B2 精英 |
-| `legendary_monsters:endersent` | 200.0 | 16.0 | 10.0 | B2 精英 |
-| `legendary_monsters:shulker_mimic` | 200.0 | 12.0 | 15.0 | B2 精英 |
-| `legendary_monsters:beheaded_knight` | 195.0 | 10.0 | 14.0 | B3 勇士 |
-| `legendary_monsters:resurrected_knight` | 190.0 | 10.0 | 12.0 | B3 勇士 |
-| `legendary_monsters:withered_abomination` | 190.0 | 15.0 | 12.0 | B3 勇士 |
-| `legendary_monsters:ancient_guardian` | 170.0 | 20.0 | 13.0 | B3 勇士 |
-| `legendary_monsters:dune_sentinel` | 170.0 | 16.0 | 16.0 | B3 勇士 |
-| `legendary_monsters:lava_eater` | 170.0 | 11.0 | 15.0 | B3 勇士 |
-| `legendary_monsters:overgrown_colossus` | 170.0 | 14.0 | 10.0 | B3 勇士 |
-| `legendary_monsters:skeletosaurus` | 150.0 | 13.0 | 15.0 | B3 勇士 |
-| `legendary_monsters:guard` | 140.0 | 18.0 | 14.0 | B3 勇士 |
-| `legendary_monsters:knights_armor` | 120.0 | 18.0 | 14.0 | B3 勇士 |
-| `legendary_monsters:warped_fungussus` | 100.0 | 7.0 | 10.0 | B3 勇士 |
-
-## saintsdragons · 6 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `saintsdragons:ignivorus` | 450.0 | 50.0 | 4.0 | B1 领主 |
-| `saintsdragons:atroxiia` | 200.0 | 10.0 | 10.0 | B2 精英 |
-| `saintsdragons:varasuchus` | 200.0 | 10.0 | 8.0 | B2 精英 |
-| `saintsdragons:raevyx` | 180.0 | 0.0 | 8.0 | B3 勇士 |
-| `saintsdragons:volitans` | 160.0 | 0.0 | 6.0 | B3 勇士 |
-| `saintsdragons:stegonaut` | 100.0 | 2.0 | 15.0 | B3 勇士 |
-
-## eeeabsmobs · 7 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `eeeabsmobs:immortal` | 400.0 | 12.0 | 10.0 | B1 领主 |
-| `eeeabsmobs:realm_warden` | 400.0 | 15.0 | 15.0 | B1 领主 |
-| `eeeabsmobs:nameless_guardian` | 350.0 | 15.0 | 10.0 | B2 精英 |
-| `eeeabsmobs:relic_annihilator` | 300.0 | 12.0 | 10.0 | B2 精英 |
-| `eeeabsmobs:corpse_warlock` | 150.0 | 5.0 | 0.0 | B3 勇士 |
-| `eeeabsmobs:relic_earthshaker` | 150.0 | 9.0 | 15.0 | B3 勇士 |
-| `eeeabsmobs:immortal_executioner` | 120.0 | 8.0 | 6.0 | B3 勇士 |
-
-## nightfall_invade · 3 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `nightfall_invade:arterius` | 400.0 | 4.0 | 30.0 | B1 领主 |
-| `nightfall_invade:scarlet_hunter` | 350.0 | 1.0 | 10.0 | B2 精英 |
-| `nightfall_invade:fallen_knight` | 150.0 | 1.0 | 10.0 | B3 勇士 |
-
-## woc_remastered · 2 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `woc_remastered:zertar` | 400.0 | 3.0 | 15.0 | B1 领主 |
-| `woc_remastered:mechx_12` | 270.0 | 4.0 | 0.0 | B2 精英 |
-
-## twilightforest · 7 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `twilightforest:hydra` | 360.0 | 0.0 | 0.0 | B2 精英 |
-| `twilightforest:ur_ghast` | 250.0 | 0.0 | 0.0 | B2 精英 |
-| `twilightforest:alpha_yeti` | 200.0 | 1.0 | 0.0 | B2 精英 |
-| `twilightforest:snow_queen` | 200.0 | 7.0 | 0.0 | B2 精英 |
-| `twilightforest:minoshroom` | 120.0 | 2.0 | 0.0 | B3 勇士 |
-| `twilightforest:naga` | 120.0 | 5.0 | 0.0 | B3 勇士 |
-| `twilightforest:lich` | 100.0 | 3.0 | 0.0 | B3 勇士 |
-
-## dungeons_and_combat · 7 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `dungeons_and_combat:high_priest` | 320.0 | 0.0 | 12.0 | B2 精英 |
-| `dungeons_and_combat:kamath` | 320.0 | 16.0 | 12.0 | B2 精英 |
-| `dungeons_and_combat:sunleia` | 320.0 | 1.0 | 22.0 | B2 精英 |
-| `dungeons_and_combat:mimy_chest` | 250.0 | 1.0 | 4.0 | B2 精英 |
-| `dungeons_and_combat:pyro_knight` | 240.0 | 1.0 | 0.0 | B2 精英 |
-| `dungeons_and_combat:torture` | 110.0 | 8.0 | 2.0 | B3 勇士 |
-| `dungeons_and_combat:the_grave_watcher` | 100.0 | 1.0 | 0.0 | B3 勇士 |
-
-## alexsmobs · 4 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `alexsmobs:sea_bear` | 200.0 | 8.0 | 0.0 | B2 精英 |
-| `alexsmobs:cachalot_whale` | 160.0 | 30.0 | 0.0 | B3 勇士 |
-| `alexsmobs:void_worm` | 160.0 | 5.0 | 4.0 | B3 勇士 |
-| `alexsmobs:warped_mosco` | 100.0 | 10.0 | 10.0 | B3 勇士 |
-
-## cdmoveset · 1 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `cdmoveset:corrupt_dog` | 200.0 | 3.0 | 0.0 | B2 精英 |
-
-## dummmmmmy · 1 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `dummmmmmy:target_dummy` | 200.0 | 0.0 | 0.0 | B2 精英 |
-
-## simplyswords · 2 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `simplyswords:battlestandard` | 150.0 | 0.0 | 0.0 | B3 勇士 |
-| `simplyswords:battlestandarddark` | 150.0 | 0.0 | 0.0 | B3 勇士 |
-
-## wom · 2 个
-
-| 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|
-| `wom:saulomonk` | 120.0 | 8.0 | 0.0 | B3 勇士 |
-| `wom:lupus_rex` | 100.0 | 2.0 | 30.0 | B3 勇士 |
+| 排名 | 实体 | 血量 | 攻击 | 护甲 | 等级带 |
+|---|---|---|---|---|---|
+| 1 | `efn:doppelganger` | 1e+09 | 10.0 | 0.0 | B0 天灾 |
+| 2 | `efn:guardian` | 1e+09 | 10.0 | 0.0 | B0 天灾 |
+| 3 | `bloodandmadness:micolash` | 1500 | 12.0 | 0.0 | B0 天灾 |
+| 4 | `jerotes:test` | 1024 | 0.0 | 0.0 | B0 天灾 |
+| 5 | `jerotesvillage:smart` | 1024 | 0.0 | 0.0 | B0 天灾 |
+| 6 | `bloodandmadness:father_gascoigne` | 1000 | 12.0 | 0.0 | B0 天灾 |
+| 7 | `bloodandmadness:gascoigne_beast` | 1000 | 12.0 | 0.0 | B0 天灾 |
+| 8 | `combat_evolution:shelmarow` | 1000 | 0.0 | 0.0 | B0 天灾 |
+| 9 | `irons_spellbooks:fire_boss` | 1000 | 10.0 | 15.0 | B0 天灾 |
+| 10 | `monsterexpansion:leivekilth` | 1000 | 20.0 | 5.0 | B0 天灾 |
+| 11 | `slu:boss_minecraft_lord` | 1000 | 32.0 | 0.0 | B0 天灾 |
+| 12 | `monsterexpansion:rakoth` | 750 | 15.0 | 5.0 | B1 领主 |
+| 13 | `monsterexpansion:skrythe` | 750 | 15.0 | 5.0 | B1 领主 |
+| 14 | `jerotesvillage:variant_zsiein` | 730 | 35.0 | 30.0 | B1 领主 |
+| 15 | `jerotesvillage:bright_land_beast` | 650 | 40.0 | 4.0 | B1 领主 |
+| 16 | `jerotesvillage:meror_monstrosity` | 640 | 30.0 | 12.0 | B1 领主 |
+| 17 | `alexscaves:luxtructosaurus` | 600 | 12.0 | 20.0 | B1 领主 |
+| 18 | `cataclysm:netherite_monstrosity` | 600 | 25.0 | 12.0 | B1 领主 |
+| 19 | `alexscaves:tremorzilla` | 500 | 30.0 | 10.0 | B1 领主 |
+| 20 | `block_factorys_bosses:kraken` | 500 | 10.0 | 20.0 | B1 领主 |
+| 21 | `irons_spellbooks:dead_king` | 500 | 10.0 | 15.0 | B1 领主 |
+| 22 | `irons_spellbooks:dead_king_corpse` | 500 | 10.0 | 15.0 | B1 领主 |
+| 23 | `minecraft:warden` | 500 | 30.0 | 0.0 | B1 领主 |
+| 24 | `monsterexpansion:ignathos` | 500 | 6.0 | 5.0 | B1 领主 |
+| 25 | `monsterexpansion:rhyza` | 500 | 10.0 | 5.0 | B1 领主 |
+| 26 | `spore:howitzer` | 500 | 15.0 | 10.0 | B1 领主 |
+| 27 | `souls_like_bosses:nightlord` | 500 | 8.0 | 10.0 | B1 领主 |
+| 28 | `cataclysm:ancient_remnant` | 450 | 25.0 | 12.0 | B1 领主 |
+| 29 | `cataclysm:ignis` | 450 | 14.0 | 10.0 | B1 领主 |
+| 30 | `legendary_monsters:the_obliterator` | 450 | 6.0 | 14.0 | B1 领主 |
+| 31 | `saintsdragons:ignivorus` | 450 | 50.0 | 4.0 | B1 领主 |
+| 32 | `spore:leviathan` | 450 | 30.0 | 25.0 | B1 领主 |
+| 33 | `spore:leviathan_seg` | 450 | 30.0 | 25.0 | B1 领主 |
+| 34 | `jerotesvillage:second_rounder_golem` | 436 | 36.0 | 20.0 | B1 领主 |
+| 35 | `jerotesvillage:second_rounder_golem_sword` | 436 | 36.0 | 20.0 | B1 领主 |
+| 36 | `cataclysm:maledictus` | 420 | 13.0 | 10.0 | B1 领主 |
+| 37 | `jerotesvillage:celestial_coilvine` | 420 | 18.0 | 15.0 | B1 领主 |
+| 38 | `jerotesvillage:gemstone_malignasaur` | 408 | 18.0 | 4.0 | B1 领主 |
+| 39 | `alexscaves:atlatitan` | 400 | 8.0 | 0.0 | B1 领主 |
+| 40 | `alexscaves:hullbreaker` | 400 | 16.0 | 0.0 | B1 领主 |
+| 41 | `cataclysm:the_leviathan` | 400 | 15.0 | 10.0 | B1 领主 |
+| 42 | `eeeabsmobs:immortal` | 400 | 12.0 | 10.0 | B1 领主 |
+| 43 | `eeeabsmobs:realm_warden` | 400 | 15.0 | 15.0 | B1 领主 |
+| 44 | `jerotes:big_beast` | 400 | 15.0 | 0.0 | B1 领主 |
+| 45 | `jerotesvillage:archnosed_hornbeast` | 400 | 28.0 | 2.0 | B1 领主 |
+| 46 | `legendary_monsters:posessed_paladin` | 400 | 15.0 | 12.0 | B1 领主 |
+| 47 | `nightfall_invade:arterius` | 400 | 4.0 | 30.0 | B1 领主 |
+| 48 | `spore:hindenburg` | 400 | 15.0 | 5.0 | B1 领主 |
+| 49 | `spore:kraken` | 400 | 15.0 | 15.0 | B1 领主 |
+| 50 | `spore:tumoroid_nuke` | 400 | 15.0 | 5.0 | B1 领主 |
+| 51 | `woc_remastered:zertar` | 400 | 3.0 | 15.0 | B1 领主 |
+| 52 | `cataclysm:scylla` | 390 | 18.0 | 12.0 | B2 精英 |
+| 53 | `cataclysm:the_harbinger` | 390 | 9.0 | 12.0 | B2 精英 |
+| 54 | `slu:boss_ancient_warrior` | 370 | 1.0 | 0.0 | B2 精英 |
+| 55 | `jerotesvillage:tyrant_of_the_mountain_realm` | 360 | 12.0 | 4.0 | B2 精英 |
+| 56 | `twilightforest:hydra` | 360 | 0.0 | 0.0 | B2 精英 |
+| 57 | `jerotesvillage:meror_champion` | 355 | 16.0 | 14.0 | B2 精英 |
+| 58 | `eeeabsmobs:nameless_guardian` | 350 | 15.0 | 10.0 | B2 精英 |
+| 59 | `legendary_monsters:cloud_golem` | 350 | 0.0 | 10.0 | B2 精英 |
+| 60 | `nightfall_invade:scarlet_hunter` | 350 | 1.0 | 10.0 | B2 精英 |
+| 61 | `slu:boss_elden_beast` | 350 | 7.0 | 0.0 | B2 精英 |
+| 62 | `spore:gazenbreacher` | 350 | 25.0 | 15.0 | B2 精英 |
+| 63 | `cataclysm:ender_guardian` | 333 | 16.0 | 20.0 | B2 精英 |
+| 64 | `slu:boss_aatrox` | 330 | 3.0 | 0.0 | B2 精英 |
+| 65 | `dungeons_and_combat:high_priest` | 320 | 0.0 | 12.0 | B2 精英 |
+| 66 | `dungeons_and_combat:kamath` | 320 | 16.0 | 12.0 | B2 精英 |
+| 67 | `dungeons_and_combat:sunleia` | 320 | 1.0 | 22.0 | B2 精英 |
+| 68 | `jerotesvillage:primordier` | 320 | 25.0 | 8.0 | B2 精英 |
+| 69 | `jerotesvillage:malignasaur` | 310 | 15.0 | 2.0 | B2 精英 |
+| 70 | `eeeabsmobs:relic_annihilator` | 300 | 12.0 | 10.0 | B2 精英 |
+| 71 | `minecraft:wither` | 300 | 2.0 | 4.0 | B2 精英 |
+| 72 | `slu:boss_notch` | 300 | 12.0 | 25.0 | B2 精英 |
+| 73 | `spore:sieger` | 300 | 30.0 | 25.0 | B2 精英 |
+| 74 | `spore:verfall` | 300 | 10.0 | 15.0 | B2 精英 |
+| 75 | `jerotesvillage:duneshockler` | 290 | 28.0 | 16.0 | B2 精英 |
+| 76 | `slu:boss_darius` | 290 | 6.0 | 0.0 | B2 精英 |
+| 77 | `slu:boss_mohg` | 290 | 3.0 | 0.0 | B2 精英 |
+| 78 | `slu:boss_soul_of_cinder` | 290 | 10.0 | 0.0 | B2 精英 |
+| 79 | `jerotesvillage:serpon_combat_executer` | 270 | 8.0 | 5.0 | B2 精英 |
+| 80 | `woc_remastered:mechx_12` | 270 | 4.0 | 0.0 | B2 精英 |
+| 81 | `alexscaves:forsaken` | 250 | 10.0 | 0.0 | B2 精英 |
+| 82 | `block_factorys_bosses:infernal_dragon` | 250 | 14.0 | 15.0 | B2 精英 |
+| 83 | `block_factorys_bosses:underworld_knight` | 250 | 15.0 | 0.0 | B2 精英 |
+| 84 | `block_factorys_bosses:yeti` | 250 | 18.0 | 2.0 | B2 精英 |
+| 85 | `dungeons_and_combat:mimy_chest` | 250 | 1.0 | 4.0 | B2 精英 |
+| 86 | `slu:boss_hoarah_loux` | 250 | 16.0 | 25.0 | B2 精英 |
+| 87 | `slu:boss_maliketh` | 250 | 7.0 | 0.0 | B2 精英 |
+| 88 | `slu:boss_pantheon` | 250 | 6.0 | 0.0 | B2 精英 |
+| 89 | `spore:hohlfresser` | 250 | 20.0 | 25.0 | B2 精英 |
+| 90 | `spore:hohlfresser_seg` | 250 | 20.0 | 25.0 | B2 精英 |
+| 91 | `twilightforest:ur_ghast` | 250 | 0.0 | 0.0 | B2 精英 |
+| 92 | `dungeons_and_combat:pyro_knight` | 240 | 1.0 | 0.0 | B2 精英 |
+| 93 | `jerotesvillage:darisorder` | 230 | 20.0 | 4.0 | B2 精英 |
+| 94 | `jerotesvillage:fury_darisorder` | 230 | 20.0 | 4.0 | B2 精英 |
+| 95 | `slu:boss_crucible_knight` | 230 | 3.0 | 0.0 | B2 精英 |
+| 96 | `slu:boss_gael` | 230 | 1.0 | 0.0 | B2 精英 |
+| 97 | `cataclysm:clawdian` | 225 | 16.0 | 12.0 | B2 精英 |
+| 98 | `jerotesvillage:corrosiver` | 225 | 12.0 | 5.0 | B2 精英 |
+| 99 | `jerotesvillage:prosperous_envoy` | 225 | 12.0 | 12.0 | B2 精英 |
+| 100 | `jerotesvillage:firepower_pourer` | 220 | 12.0 | 16.0 | B2 精英 |
+| 101 | `jerotesvillage:meror_golem` | 220 | 20.0 | 8.0 | B2 精英 |
+| 102 | `legendary_monsters:frostbitten_golem` | 220 | 16.0 | 10.0 | B2 精英 |
+| 103 | `legendary_monsters:annihilation_pursuer` | 210 | 10.0 | 13.0 | B2 精英 |
+| 104 | `slu:boss_fallen_lord` | 210 | 3.0 | 0.0 | B2 精英 |
+| 105 | `slu:boss_nameless_king` | 210 | 1.0 | 0.0 | B2 精英 |
+| 106 | `slu:boss_wukong` | 210 | 4.0 | 0.0 | B2 精英 |
+| 107 | `alexsmobs:sea_bear` | 200 | 8.0 | 0.0 | B2 精英 |
+| 108 | `bloodandmadness:silverbeast` | 200 | 5.0 | 0.0 | B2 精英 |
+| 109 | `cataclysm:amethyst_crab` | 200 | 13.0 | 10.0 | B2 精英 |
+| 110 | `cdmoveset:corrupt_dog` | 200 | 3.0 | 0.0 | B2 精英 |
+| 111 | `dummmmmmy:target_dummy` | 200 | 0.0 | 0.0 | B2 精英 |
+| 112 | `jerotesvillage:ominous_banner_projection` | 200 | 2.0 | 0.0 | B2 精英 |
+| 113 | `legendary_monsters:endersent` | 200 | 16.0 | 10.0 | B2 精英 |
+| 114 | `legendary_monsters:shulker_mimic` | 200 | 12.0 | 15.0 | B2 精英 |
+| 115 | `minecraft:ender_dragon` | 200 | 10.0 | 0.0 | B2 精英 |
+| 116 | `saintsdragons:atroxiia` | 200 | 10.0 | 10.0 | B2 精英 |
+| 117 | `saintsdragons:varasuchus` | 200 | 10.0 | 8.0 | B2 精英 |
+| 118 | `slu:boss_godfrey` | 200 | 1.0 | 0.0 | B2 精英 |
+| 119 | `slu:boss_radagon` | 200 | 7.0 | 25.0 | B2 精英 |
+| 120 | `spore:stahl` | 200 | 35.0 | 10.0 | B2 精英 |
+| 121 | `twilightforest:alpha_yeti` | 200 | 1.0 | 0.0 | B2 精英 |
+| 122 | `twilightforest:snow_queen` | 200 | 7.0 | 0.0 | B2 精英 |
+| 123 | `legendary_monsters:beheaded_knight` | 195 | 10.0 | 14.0 | B3 勇士 |
+| 124 | `legendary_monsters:resurrected_knight` | 190 | 10.0 | 12.0 | B3 勇士 |
+| 125 | `legendary_monsters:withered_abomination` | 190 | 15.0 | 12.0 | B3 勇士 |
+| 126 | `slu:boss_dragon_slayer_armour` | 190 | 1.0 | 0.0 | B3 勇士 |
+| 127 | `cataclysm:kobolediator` | 180 | 14.0 | 10.0 | B3 勇士 |
+| 128 | `saintsdragons:raevyx` | 180 | 0.0 | 8.0 | B3 勇士 |
+| 129 | `slu:boss_malenia` | 175 | 1.0 | 0.0 | B3 勇士 |
+| 130 | `slu:boss_malenia_2` | 175 | 3.0 | 25.0 | B3 勇士 |
+| 131 | `jerotesvillage:fluffmound` | 170 | 8.0 | 2.0 | B3 勇士 |
+| 132 | `jerotesvillage:sediment_lord` | 170 | 6.0 | 3.0 | B3 勇士 |
+| 133 | `legendary_monsters:ancient_guardian` | 170 | 20.0 | 13.0 | B3 勇士 |
+| 134 | `legendary_monsters:dune_sentinel` | 170 | 16.0 | 16.0 | B3 勇士 |
+| 135 | `legendary_monsters:lava_eater` | 170 | 11.0 | 15.0 | B3 勇士 |
+| 136 | `legendary_monsters:overgrown_colossus` | 170 | 14.0 | 10.0 | B3 勇士 |
+| 137 | `slu:boss_elemer` | 170 | 1.0 | 0.0 | B3 勇士 |
+| 138 | `slu:boss_jax` | 170 | 6.0 | 0.0 | B3 勇士 |
+| 139 | `slu:boss_looking_glass_knight` | 170 | 1.0 | 0.0 | B3 勇士 |
+| 140 | `jerotesvillage:purple_sand_hag` | 165 | 13.0 | 15.0 | B3 勇士 |
+| 141 | `alexsmobs:cachalot_whale` | 160 | 30.0 | 0.0 | B3 勇士 |
+| 142 | `alexsmobs:void_worm` | 160 | 5.0 | 4.0 | B3 勇士 |
+| 143 | `cataclysm:aptrgangr` | 160 | 18.0 | 10.0 | B3 勇士 |
+| 144 | `cataclysm:coralssus` | 160 | 10.0 | 5.0 | B3 勇士 |
+| 145 | `cataclysm:the_prowler` | 160 | 14.0 | 10.0 | B3 勇士 |
+| 146 | `saintsdragons:volitans` | 160 | 0.0 | 6.0 | B3 勇士 |
+| 147 | `alexscaves:gum_worm` | 150 | 9.0 | 10.0 | B3 勇士 |
+| 148 | `alexscaves:tremorsaurus` | 150 | 14.0 | 8.0 | B3 勇士 |
+| 149 | `block_factorys_bosses:sandworm` | 150 | 10.0 | 20.0 | B3 勇士 |
+| 150 | `cataclysm:ender_golem` | 150 | 10.0 | 12.0 | B3 勇士 |
+| 151 | `cataclysm:modern_remnant` | 150 | 6.0 | 5.0 | B3 勇士 |
+| 152 | `cataclysm:wadjet` | 150 | 11.0 | 5.0 | B3 勇士 |
+| 153 | `eeeabsmobs:corpse_warlock` | 150 | 5.0 | 0.0 | B3 勇士 |
+| 154 | `eeeabsmobs:relic_earthshaker` | 150 | 9.0 | 15.0 | B3 勇士 |
+| 155 | `legendary_monsters:skeletosaurus` | 150 | 13.0 | 15.0 | B3 勇士 |
+| 156 | `nightfall_invade:fallen_knight` | 150 | 1.0 | 10.0 | B3 勇士 |
+| 157 | `simplyswords:battlestandard` | 150 | 0.0 | 0.0 | B3 勇士 |
+| 158 | `simplyswords:battlestandarddark` | 150 | 0.0 | 0.0 | B3 勇士 |
+| 159 | `slu:boss_artorias` | 150 | 1.0 | 0.0 | B3 勇士 |
+| 160 | `slu:boss_radahn` | 150 | 1.0 | 0.0 | B3 勇士 |
+| 161 | `slu:boss_radahn_2` | 150 | 3.0 | 0.0 | B3 勇士 |
+| 162 | `jerotesvillage:adventurer` | 140 | 8.0 | 3.0 | B3 勇士 |
+| 163 | `legendary_monsters:guard` | 140 | 18.0 | 14.0 | B3 勇士 |
+| 164 | `slu:boss_gwyndolin` | 140 | 0.0 | 24.0 | B3 勇士 |
+| 165 | `jerotesvillage:lightning_worm` | 135 | 16.0 | 11.0 | B3 勇士 |
+| 166 | `jerotesvillage:woodland_heart_guardian` | 135 | 11.0 | 4.0 | B3 勇士 |
+| 167 | `jerotesvillage:giant_monster` | 130 | 12.0 | 4.0 | B3 勇士 |
+| 168 | `slu:boss_abyss_watcher` | 130 | 1.0 | 0.0 | B3 勇士 |
+| 169 | `slu:boss_count_robert` | 130 | 3.0 | 0.0 | B3 勇士 |
+| 170 | `jerotesvillage:frost_yeti` | 128 | 14.0 | 12.0 | B3 勇士 |
+| 171 | `slu:boss_godskin_apostle` | 125 | 2.0 | 0.0 | B3 勇士 |
+| 172 | `slu:boss_gundyr` | 125 | 1.0 | 0.0 | B3 勇士 |
+| 173 | `slu:boss_margit` | 125 | 1.0 | 0.0 | B3 勇士 |
+| 174 | `slu:boss_morgott` | 125 | 3.0 | 0.0 | B3 勇士 |
+| 175 | `spore:howit_arm` | 125 | 0.0 | 2.5 | B3 勇士 |
+| 176 | `jerotesvillage:cohort_hag` | 121 | 12.0 | 12.0 | B3 勇士 |
+| 177 | `jerotesvillage:coven_hag_one` | 121 | 12.0 | 12.0 | B3 勇士 |
+| 178 | `jerotesvillage:coven_hag_two` | 121 | 12.0 | 12.0 | B3 勇士 |
+| 179 | `alexscaves:relicheirus` | 120 | 12.0 | 0.0 | B3 勇士 |
+| 180 | `cataclysm:netherite_ministrosity` | 120 | 0.0 | 5.0 | B3 勇士 |
+| 181 | `cataclysm:the_baby_leviathan` | 120 | 4.0 | 5.0 | B3 勇士 |
+| 182 | `eeeabsmobs:immortal_executioner` | 120 | 8.0 | 6.0 | B3 勇士 |
+| 183 | `jerotesvillage:ax_crazy` | 120 | 12.0 | 12.0 | B3 勇士 |
+| 184 | `jerotesvillage:carved_iron_golem` | 120 | 17.0 | 17.0 | B3 勇士 |
+| 185 | `jerotesvillage:drought_wildfire` | 120 | 7.0 | 8.0 | B3 勇士 |
+| 186 | `jerotesvillage:fury_drought_wildfire` | 120 | 7.0 | 8.0 | B3 勇士 |
+| 187 | `jerotesvillage:vineheart_bomb` | 120 | 24.0 | 0.0 | B3 勇士 |
+| 188 | `legendary_monsters:knights_armor` | 120 | 18.0 | 14.0 | B3 勇士 |
+| 189 | `slu:boss_beast_clergyman` | 120 | 5.0 | 0.0 | B3 勇士 |
+| 190 | `slu:boss_ornstein` | 120 | 1.0 | 0.0 | B3 勇士 |
+| 191 | `slu:boss_smough` | 120 | 1.0 | 0.0 | B3 勇士 |
+| 192 | `slu:white_phantom` | 120 | 1.0 | 0.0 | B3 勇士 |
+| 193 | `twilightforest:minoshroom` | 120 | 2.0 | 0.0 | B3 勇士 |
+| 194 | `twilightforest:naga` | 120 | 5.0 | 0.0 | B3 勇士 |
+| 195 | `wom:saulomonk` | 120 | 8.0 | 0.0 | B3 勇士 |
+| 196 | `cataclysm:coral_golem` | 110 | 11.0 | 5.0 | B3 勇士 |
+| 197 | `dungeons_and_combat:torture` | 110 | 8.0 | 2.0 | B3 勇士 |
+| 198 | `slu:clone_abyss_watcher` | 110 | 1.0 | 0.0 | B3 勇士 |
+| 199 | `spore:vanguard` | 110 | 12.0 | 8.0 | B3 勇士 |
+| 200 | `jerotesvillage:fire_secretor` | 102 | 4.0 | 12.0 | B3 勇士 |
+| 201 | `alexsmobs:warped_mosco` | 100 | 10.0 | 10.0 | B3 勇士 |
+| 202 | `dungeons_and_combat:the_grave_watcher` | 100 | 1.0 | 0.0 | B3 勇士 |
+| 203 | `jerotes:jerotes_iron_golem` | 100 | 15.0 | 0.0 | B3 勇士 |
+| 204 | `jerotesvillage:cogon_sword` | 100 | 24.0 | 0.0 | B3 勇士 |
+| 205 | `jerotesvillage:serpon_combat_platform` | 100 | 5.0 | 16.0 | B3 勇士 |
+| 206 | `legendary_monsters:warped_fungussus` | 100 | 7.0 | 10.0 | B3 勇士 |
+| 207 | `minecraft:giant` | 100 | 50.0 | 0.0 | B3 勇士 |
+| 208 | `minecraft:iron_golem` | 100 | 15.0 | 0.0 | B3 勇士 |
+| 209 | `minecraft:ravager` | 100 | 12.0 | 0.0 | B3 勇士 |
+| 210 | `monsterexpansion:arborix` | 100 | 5.0 | 5.0 | B3 勇士 |
+| 211 | `saintsdragons:stegonaut` | 100 | 2.0 | 15.0 | B3 勇士 |
+| 212 | `slu:magma_giant` | 100 | 8.0 | 5.0 | B3 勇士 |
+| 213 | `slu:monster_crucible_knight` | 100 | 1.0 | 0.0 | B3 勇士 |
+| 214 | `slu:monster_crucible_knight_2` | 100 | 1.0 | 0.0 | B3 勇士 |
+| 215 | `slu:monster_tower_knight` | 100 | 1.0 | 0.0 | B3 勇士 |
+| 216 | `spore:ogre` | 100 | 20.0 | 12.0 | B3 勇士 |
+| 217 | `spore:proto` | 100 | 10.0 | 10.0 | B3 勇士 |
+| 218 | `twilightforest:lich` | 100 | 3.0 | 0.0 | B3 勇士 |
+| 219 | `wom:lupus_rex` | 100 | 2.0 | 30.0 | B3 勇士 |
