@@ -4527,6 +4527,11 @@ hash = "eb106826d1501b0db4cf097dce3926ae889a6428612a592917b0844726b64032"
 metafile = true
 
 [[files]]
+file = "mods/wow-armors-and-weapons.pw.toml"
+hash = "cc65b641a61829dfa7fc2bf0b5f5e617cb4dbaf6ac560cdf25165b50701948a4"
+metafile = true
+
+[[files]]
 file = "mods/wukong-compact.pw.toml"
 hash = "9eb268529eecf6709c02fd05edb8a874bdbbb275a6d94f5bb5ce22cd207f9007"
 metafile = true
