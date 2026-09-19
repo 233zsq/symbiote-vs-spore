@@ -1,0 +1,8 @@
+name = "Epic Fight - Wukong Moveset Compact (Unofficial Port)"
+filename = "wukong_compact-forge-1.20.1-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8739/029/wukong_compact-forge-1.20.1-1.0.0.jar"
+hash-format = "sha512"
+hash = "6a4b8485a215e9cf4272eb84b6b8152de51f0ceee5b76ed60c8e1462e1a043cb2d1321b605c3a702fe309aa2379b04ad232bbc3d268475c43c7045c592d5ae2e"

@@ -1,0 +1,8 @@
+name = "Lazy Utilities"
+filename = "lazy_utilities-2.9.8.1-forge.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "d72fc642e0f4c2da21156a4e784b2b9ca5f1392690ed28510a586c907b63fa6400b7b05ebcbb421de49b7b5c79f505a4ad6f2821cf3b0a2aa6e2c7d20f8e603d"

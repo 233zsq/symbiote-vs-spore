@@ -1,6 +1,6 @@
 # 全包 Boss/精英数值表（实采）
 
-> 2026-09-19 KubeJS 运行时实采（DefaultAttributes.getSupplier 全量 958 实体；本表收 HP≥100）。攻击为属性基础值（多数 Boss 实际伤害由技能/AI 决定，高于此值）。
+> 2026-09-19 KubeJS 运行时实采（DefaultAttributes.getSupplier 全量 960 实体；本表收 HP≥100）。攻击为属性基础值（多数 Boss 实际伤害由技能/AI 决定，高于此值）。
 > 等级带：B0 天灾 ≥800 / B1 领主 ≥400 / B2 精英 ≥200 / B3 勇士 ≥100
 
 ## efn · 2 个

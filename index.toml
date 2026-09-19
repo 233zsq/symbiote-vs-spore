@@ -4262,6 +4262,11 @@ hash = "dfdd246954f9bcfbff66668558b17ba5b3e75a12ba6031c441750a472670fbd8"
 metafile = true
 
 [[files]]
+file = "mods/lazy-utilities.pw.toml"
+hash = "55dcf51c4990fd9cfc47b93cf6499665529a65bff39552a7881244f52680f991"
+metafile = true
+
+[[files]]
 file = "mods/leawind-third-person.pw.toml"
 hash = "d21d6458fc5e4f6171e97a37cf68b8175e3f0a8cde075de3d90c497c0ed41470"
 metafile = true
@@ -4519,6 +4524,11 @@ metafile = true
 [[files]]
 file = "mods/womplus.pw.toml"
 hash = "eb106826d1501b0db4cf097dce3926ae889a6428612a592917b0844726b64032"
+metafile = true
+
+[[files]]
+file = "mods/wukong-compact.pw.toml"
+hash = "9eb268529eecf6709c02fd05edb8a874bdbbb275a6d94f5bb5ce22cd207f9007"
 metafile = true
 
 [[files]]
