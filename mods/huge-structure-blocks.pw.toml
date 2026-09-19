@@ -1,0 +1,8 @@
+name = "Huge Structure Blocks"
+filename = "huge-structure-blocks-forge-1.1.10.jar"
+side = "both"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/8465/155/huge-structure-blocks-forge-1.1.10.jar"
+hash-format = "sha512"
+hash = "6de595a756bc0e4dcc4b40c312a7235d4aaf81750fc7b6c47a8b9618fbbba777ef18ea2b4e2bdeab47804c9958a7b17e9d6b947edad310ededb873324f37f064"

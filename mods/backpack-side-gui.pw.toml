@@ -1,0 +1,8 @@
+name = "Backpack Side GUI"
+filename = "backpack_side_gui-1.2.9-beta.jar"
+side = "both"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/8592/336/backpack_side_gui-1.2.9-beta.jar"
+hash-format = "sha512"
+hash = "7c8a6febb71088d3c5a273249c6381e67f70b95cd637fa17ea426c10731e1b3dcd0c0427441ef27f91c2240bf3c1cf83befd925ab70ec314f9cb33d7ac0a1e16"

@@ -3881,6 +3881,10 @@ file = "kubejs/data/final_adversaries/worldgen/structure/tree_of_light.json"
 hash = "3e7d114ab1346bf83478d23cb477860febf3fc14ab86d1bebca6dd30b0dd03fa"
 
 [[files]]
+file = "kubejs/server_scripts/bloodandmadness_fix.js"
+hash = "1bef066d859e315166bd0d43b1e68fa37b1ca466b63b6f4618a80f25bcbf2545"
+
+[[files]]
 file = "kubejs/server_scripts/explorers_compass.js"
 hash = "f5d710533d9d6b26ceac5344284fdcf40bcd94b8e38e2861852d69d406c3b787"
 
@@ -3930,6 +3934,11 @@ metafile = true
 [[files]]
 file = "mods/avalon.pw.toml"
 hash = "8b36ac68d03b374842550528af72443d4461abfcedbbd360b6f1d0ccde5d1c24"
+metafile = true
+
+[[files]]
+file = "mods/backpack-side-gui.pw.toml"
+hash = "0d78cecd2c3158d0f6c0c390c73d001b042a33b8f5e2f47fb20dc69ef91c917e"
 metafile = true
 
 [[files]]
@@ -4193,6 +4202,11 @@ hash = "7ffae05c3b8101588b231db8116c34b36a77a0c6e6d7e6af867ae1c5b47e4d10"
 metafile = true
 
 [[files]]
+file = "mods/huge-structure-blocks.pw.toml"
+hash = "7feda3121dd2950d6d69275cd25ed074ef778451f7eaf1339ea907d63265da28"
+metafile = true
+
+[[files]]
 file = "mods/immediatelyfast.pw.toml"
 hash = "7f285d9334610b10ee176b3b676d8a97afc70a9b5f89a696153b17b3bb6a4a14"
 metafile = true
@@ -4433,13 +4447,8 @@ hash = "a59d27eba58d24698ea2a3d0a41d5486f834ce8c9fa4c124633e829ee401ae71"
 metafile = true
 
 [[files]]
-file = "mods/soul-like-armors-reworked.pw.toml"
-hash = "ac1c1c7ce88601c2b31bb6c75adc85928eb58cadb959d68e0faf4dcee1a99f2f"
-metafile = true
-
-[[files]]
-file = "mods/soul-like-mobs.pw.toml"
-hash = "78d0bcccf940dcdcd9745849964cbc2dfcdeea9127494d7ad741046a26291d98"
+file = "mods/souls-like-bosses.pw.toml"
+hash = "516b0c6e15851ca9205f40026ed7cd369eabb0eb4bdeec0c9e17904bae8f1fe1"
 metafile = true
 
 [[files]]
@@ -4480,6 +4489,16 @@ metafile = true
 [[files]]
 file = "mods/twilight-forest.pw.toml"
 hash = "9e96d32cf4f732ba4dd5d5a77abb910106f1e56cf68df4717795efbf5bc3b40b"
+metafile = true
+
+[[files]]
+file = "mods/twilightforest-efcompat.pw.toml"
+hash = "9aef0713a2ca181ba3f833b49dc95fecb3a5dc8518b86461004a75775bc5f512"
+metafile = true
+
+[[files]]
+file = "mods/warriors-of-world2.pw.toml"
+hash = "7dd27c598394e413ff4df199c96e8db330e98541f6b88aa088c4bb3e9c9f9ae5"
 metafile = true
 
 [[files]]
