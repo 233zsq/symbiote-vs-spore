@@ -1,0 +1,8 @@
+name = "Epic Fight - Particles On The Blades"
+filename = "ParticlesOnTheBlades-2.3.1-1.20.1+[Forge].jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8510/959/ParticlesOnTheBlades-2.3.1-1.20.1%2B%5BForge%5D.jar"
+hash-format = "sha512"
+hash = "c4eeb6fe6149aa799a068be86c5d47c47c61b56431d503dfdd16d58fe4b0bc0ce25a8d783728180a870aec6dee332bca7b2fdbfbefe9fd39286854f83be70dbe"

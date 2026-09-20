@@ -1,0 +1,8 @@
+name = "Su's Instant Swap"
+filename = "Sus_InstantSwap-3.0.0-Forge1.20.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "f1c9b3ae1deb4b8ad4fb6b48d19b9af8f86cd4acfdeecd2573e378c3d0c4c77654ac187abcd3e70715a7bc15264ebc66a4d2f136e5bc7eb6eb915e9b69a47da2"

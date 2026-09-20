@@ -1,0 +1,8 @@
+name = "SLM Shaders"
+filename = "SLM-Shaders-2.2.2-1.20.1+[Forge].jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8692/526/SLM-Shaders-2.2.2-1.20.1%2B%5BForge%5D.jar"
+hash-format = "sha512"
+hash = "7c0b9a6eefd4fbe6f5018b47ea2f0895030cd2be3191248ae4f87ed94832134e7b9d1d019f2c79bff246421dfc5ba14bd7ecb7a447aab59fa0f1cb671c9095ca"

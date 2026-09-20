@@ -1,0 +1,8 @@
+name = "SLM Codex"
+filename = "SLM-Codex-1.4-1.20.1+[Forge].jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8510/929/SLM-Codex-1.4-1.20.1%2B%5BForge%5D.jar"
+hash-format = "sha512"
+hash = "0ed6702676e03f6d095a092e01a5a56dad170e8b29b7e69c9b6fb410bc90be3427acdcd582b39f108c7cf30d565f896fa5df98ed842e64babc028aa45afae45c"

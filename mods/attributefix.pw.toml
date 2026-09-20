@@ -1,0 +1,8 @@
+name = "AttributeFix"
+filename = "AttributeFix-Forge-1.20.1-21.0.5.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "0d631c06820257e70a9a0dafbd74fc6412c337deb0631af0e084dfdcce4405d7980e6b4d4c3cf8840cff51d32ad9fc8d9a2a69bf0a6cd9b492cdc6efc23cf9ee"

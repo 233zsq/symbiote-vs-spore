@@ -1,0 +1,8 @@
+name = "Cataclysmic Arsenal - Epic Fight"
+filename = "CataclysmicArsenal-0.6.1.4+1.20.1[Forge].jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "c4f8a48f3dff91693d7c5e26d221d4109a569e4042ac88fbb18038066c282100c340348985386e4d8a6e739e186f4411453d31e1c4c146a922a8466dbe4a29ec"

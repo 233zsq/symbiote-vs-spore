@@ -1,0 +1,8 @@
+name = "Armor Curve"
+filename = "armorcurve-3.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "a1baa020f5260a4fd64279c364ab28859131db2b09be349b7d3bdf9ff8c4d58961c400b542bdd80448db2f1ef24b1a2e4addd1b0760047659acbcf9d619e2718"

@@ -1,0 +1,8 @@
+name = "SLM Elements"
+filename = "SLM-Elements-1.1.3-1.20.1+[Forge].jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8671/411/SLM-Elements-1.1.3-1.20.1%2B%5BForge%5D.jar"
+hash-format = "sha512"
+hash = "1a60e2ba8ee530769e73c301b10486eb33ca259233712ba28bc57a97881d8d60cbbe557df8ae22735c6dd5f3f09e0d8e7e1cd18caa8697b750e6d73718fa57ed"

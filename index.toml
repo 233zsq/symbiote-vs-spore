@@ -3905,6 +3905,10 @@ file = "kubejs/startup_scripts/items.js"
 hash = "a9bc79e2bcbe18af0a30e5034c6c9d242dca5825b42a91872a259718181c90cd"
 
 [[files]]
+file = "mc_character_render.png"
+hash = "810f354e19434b37c6706adfc126eba20756c815e7cf85d33a4db3af2b1e75b7"
+
+[[files]]
 file = "mods/aaa-particles.pw.toml"
 hash = "4067d5fa7e82d09f54d91db5bab063a34ca4970cd608d20e5b3d0adb160a7b41"
 metafile = true
@@ -3935,8 +3939,18 @@ hash = "4e81241ba2da06f425efc5e09fb6b38470125c1581c39e1310c5843a0b96ec76"
 metafile = true
 
 [[files]]
+file = "mods/armorcurve.pw.toml"
+hash = "127cc80624809d690b01e9e2aa27c494b459b714a14cac321803b1a2ecd062ee"
+metafile = true
+
+[[files]]
 file = "mods/ash-of-sin.pw.toml"
 hash = "8b803302809148962c6b722223240817077e8d07cdec83ee43d475ec2029d078"
+metafile = true
+
+[[files]]
+file = "mods/attributefix.pw.toml"
+hash = "65d6d25408299e1ca6556a56e7566dad61e71608a71d9fcab20f5c89b7588b81"
 metafile = true
 
 [[files]]
@@ -3995,6 +4009,11 @@ hash = "14481081a9e233f4ba57df8a77ce028184818143eae1c73b60749ea482c912e9"
 metafile = true
 
 [[files]]
+file = "mods/cataclysmic-arsenal.pw.toml"
+hash = "7c46c05d9a888aa6ff9ba3f95b3f28a93f12125afd3ee9fcadd41f57463125ff"
+metafile = true
+
+[[files]]
 file = "mods/chunksending.pw.toml"
 hash = "99ec3ff69ae792d578ee737f2e475eb6438e4859c37d7a872bd0a167dfc4aa24"
 metafile = true
@@ -4007,6 +4026,11 @@ metafile = true
 [[files]]
 file = "mods/citadel.pw.toml"
 hash = "c7ac7f84731a0ca1fefb3491c3f65c2767afd4be207e094fcb65c4cea99c9549"
+metafile = true
+
+[[files]]
+file = "mods/civillis.pw.toml"
+hash = "9b107ceabbee4a3e03e007fa372da3b69cd61d7adb9d4c985a0b1e957242ae71"
 metafile = true
 
 [[files]]
@@ -4112,6 +4136,11 @@ metafile = true
 [[files]]
 file = "mods/epic-fight-invincible-lib.pw.toml"
 hash = "c826c180ac4e1c2c0577fcba79bd3f0ddd9854ce566f4e74244e4ebdf136e79d"
+metafile = true
+
+[[files]]
+file = "mods/epic-fight-potb.pw.toml"
+hash = "d800d41a7e2d01300894f71e954d66e39d77122de181ba7de96961b7a1081dc1"
 metafile = true
 
 [[files]]
@@ -4350,6 +4379,11 @@ hash = "b375f3bbdec0ad58758bcbecea9329e2bdfb10289fc43e314cc43eb4da42069f"
 metafile = true
 
 [[files]]
+file = "mods/mowziesmobs.pw.toml"
+hash = "e19721f57f18df04c5883749b0038267bbff66c34183a05c0e57a34b4943998d"
+metafile = true
+
+[[files]]
 file = "mods/multiplayer-boss-attribute-modifier.pw.toml"
 hash = "e664931a6f536c84973d948682e361c436e5a910676117cca198a0c3b4623a03"
 metafile = true
@@ -4415,6 +4449,11 @@ hash = "ea8571ba9dc8e74bad5e4257d50e9bb80d02be8f3d5de7fe3dede969e26fa15c"
 metafile = true
 
 [[files]]
+file = "mods/propertymodifier.pw.toml"
+hash = "248b064d47de397eaf306fc1b9afeebf4e431660f0cbf379e4a8e6f0b05d86c7"
+metafile = true
+
+[[files]]
 file = "mods/qualitysounds.pw.toml"
 hash = "448f4ef45dbbe43ecb46f642029875f60dad4633b8310d31616c0c291670baf8"
 metafile = true
@@ -4460,6 +4499,31 @@ hash = "d73c9bfe5ba1662154a26433df07a80d9b47e79be241250d96a5f7b3cd037ab0"
 metafile = true
 
 [[files]]
+file = "mods/sl-library.pw.toml"
+hash = "05fdfeb4079fc835b0898f880891bcfb562104625e4e2621f24e0fdbd6e237f8"
+metafile = true
+
+[[files]]
+file = "mods/slm-codex.pw.toml"
+hash = "a54798bcc9829babffdc8e2f7d51c96d67d76b26e0b2c7eafb99e3f102bca112"
+metafile = true
+
+[[files]]
+file = "mods/slm-elements.pw.toml"
+hash = "9204862875656defb072d5918e5535342c84496dfb747e87e9f261870943aa84"
+metafile = true
+
+[[files]]
+file = "mods/slm-epic-fight.pw.toml"
+hash = "c4271b63b6ec8834a16b5bd0875ac6436bd47c1493d454aef05fd6f7981f236a"
+metafile = true
+
+[[files]]
+file = "mods/slm-shader.pw.toml"
+hash = "8d771b505685877feb91bd3403689daa22ae714d97183bd9f0705769a7b744e3"
+metafile = true
+
+[[files]]
 file = "mods/sophisticated-backpacks.pw.toml"
 hash = "6c1d136055e54b2232e281e6236de18672a509cc9537a9e0e48ceef50129bb18"
 metafile = true
@@ -4490,8 +4554,18 @@ hash = "df58afd70db5e503f4241668e004707cb9a202a354ec035dea17b41528295f24"
 metafile = true
 
 [[files]]
+file = "mods/spoornarmorattributes.pw.toml"
+hash = "ae0475d88e37b90e4367bb03055ef6acb26a70e6dec9c4093c394341532f1002"
+metafile = true
+
+[[files]]
 file = "mods/spore-inquisition.pw.toml"
 hash = "9cb4e87c26fa223f9ee94d1194c1b71fa012429a113e1f13a81801ae5b0ddbc8"
+metafile = true
+
+[[files]]
+file = "mods/sus-instantswap.pw.toml"
+hash = "2735532ee0f0ff71d629d961f7c0fde87822c23d51ce84875b0183330b4f05d8"
 metafile = true
 
 [[files]]
@@ -4597,3 +4671,11 @@ metafile = true
 [[files]]
 file = "scripts/stages.zs"
 hash = "09a310ba121982a744a6064a71553da7884d7db274513973360d0017653d4efc"
+
+[[files]]
+file = "skin_shinigami.png"
+hash = "8b308cfeb03194ca5ebf06f124bedc6ffb41b1540124776e6e4b8b1848b905a0"
+
+[[files]]
+file = "skin_shinigami_preview.png"
+hash = "cbdfa8b7aee183c303664901c6943c118e9be444afdb67d16749f608cf388890"

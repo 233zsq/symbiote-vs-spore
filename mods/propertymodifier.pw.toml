@@ -1,0 +1,8 @@
+name = "Property Modifier"
+filename = "propertymodifier-1.20.1-0.1-all.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "b90e58a87dec0ffa9da236da7f8e5dc78286f0d7eacb7f4e7d280c6fa10e0db8e838df3b7d61b93eaa670a264cbe0f4d2148e3ed65b1b72f97ea2f5a04d934db"

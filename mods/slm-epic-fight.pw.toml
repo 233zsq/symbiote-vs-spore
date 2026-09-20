@@ -1,0 +1,8 @@
+name = "SLM EpicFight"
+filename = "SLM-EpicFight-1.3.1-1.20.1+[Forge].jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8510/928/SLM-EpicFight-1.3.1-1.20.1%2B%5BForge%5D.jar"
+hash-format = "sha512"
+hash = "ffd2af998261c692cdf348afea75367617b96eeb4d1c96214c7ddeb968893e92b4cea3665f3cfc5e916170a8c7178c609726bb1480b1c3e949838ad630d22cd9"

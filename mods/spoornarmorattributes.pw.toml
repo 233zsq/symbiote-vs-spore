@@ -1,0 +1,8 @@
+name = "Spoorn Armor Attributes"
+filename = "spoornarmorattributes-3.0-1.20.1-forge.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "d02fcf9d5b4ddc2fac4a529a16cd9924cf6aab5a7f2bfd441d3749ed83a5e23e1c929db926682b83d67391c0b2e019d773075f32e3e1bd85cb13baac71ca7243"

@@ -1,0 +1,8 @@
+name = "SL Library"
+filename = "SL-Library-1.6.2-1.20.1+[Forge].jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8860/283/SL-Library-1.6.2-1.20.1%2B%5BForge%5D.jar"
+hash-format = "sha512"
+hash = "98bb0a29c56e5d07231c87a943e91b82e9aaabc0a564c8bf6759fb82c1afe2d208377c4f906da4fbf938dec6d8e4e0857cbf1d0820cd438e314808bbd51e0306"
