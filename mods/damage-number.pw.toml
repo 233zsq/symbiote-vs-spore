@@ -1,0 +1,8 @@
+name = "Damage Number"
+filename = "1.20.1-damage_number-2.0.5-all.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "adfab79176a28285f257b7d05c343a01a1f33e6c352438a09b3beb7cf8f9f6276644c52b791c63d0392361e7132bbc7053852105e8a55e33e7e1767a040676d9"

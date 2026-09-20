@@ -5,6 +5,14 @@ file = "README.md"
 hash = "02f50a73dc07a31fd3cbe10a61eb8bb452f0de01d0f22eccb6b8da5122caa379"
 
 [[files]]
+file = "cat_zh2.json"
+hash = "37313b64c7282e09c32de4d5b2e170254a1d891e3c19fee1aa73e50f54c9b7a6"
+
+[[files]]
+file = "cat_zh_tmp.json"
+hash = "fe820b72e1d975235746faaeabd8d4d3c3669c2a54080816423ff6b4ac12a70a"
+
+[[files]]
 file = "config/defaultoptions/keybindings.txt"
 hash = "93593c0d58243e3e2af861ab88ba0d43191d017a33604bfa68a502f0d0a13f37"
 
@@ -4052,8 +4060,18 @@ hash = "9eefd607e0d54ec444e798ccdeede1a09a3939440bd1e11c11b84c07a5134be2"
 metafile = true
 
 [[files]]
+file = "mods/damage-number.pw.toml"
+hash = "deb747159f7e5094650099bf15e7501f2a345f2a4b63d5522ae69ab40fbd855b"
+metafile = true
+
+[[files]]
 file = "mods/default-options.pw.toml"
 hash = "e3f4f3cfdf82a3867d1096651c46138a94bfc118efb60016a31d9411f7747b51"
+metafile = true
+
+[[files]]
+file = "mods/distant-horizons.pw.toml"
+hash = "92cdb3642ecb5ce3047b1c74ef027ea55164b0a806a55d49b6f0da2a893350f2"
 metafile = true
 
 [[files]]
@@ -4114,6 +4132,11 @@ metafile = true
 [[files]]
 file = "mods/epic-knights-shields-armor-and-weapons.pw.toml"
 hash = "559efa085cac2b3a8b7a94444153b67ed0a0ac5e9ebfd901d1219b473507480a"
+metafile = true
+
+[[files]]
+file = "mods/epic-terrain-compatible.pw.toml"
+hash = "b498147913f0cc4458e44758a5f12368fbb7f773abd38d230ee13bc2fd05195b"
 metafile = true
 
 [[files]]

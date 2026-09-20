@@ -1,0 +1,8 @@
+name = "Distant Horizons"
+filename = "DistantHorizons-3.3.0-1.20.1-fabric-forge.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "230aa8404500902694da4071dd4f0a1d05dc26712ce0f1fb3014dab0af5848c20481f756104c84f572e0a67273134f68b2013409511404383e58abca758d8da6"
