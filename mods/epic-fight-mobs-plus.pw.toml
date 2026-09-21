@@ -1,0 +1,8 @@
+name = "Epic Fight - Mobs Plus"
+filename = "MobsPlus-Forge-EFM-20.14.11-1.1.5.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8152/400/MobsPlus-Forge-EFM-20.14.11-1.1.5.jar"
+hash-format = "sha512"
+hash = "ec2c7b22171844f791030bbcad3af42bd543c1127f452388402f56de0ec940d51b919786cfc4ac325ca9876757d0f8c091dd817972313c8549856665d88f2a99"

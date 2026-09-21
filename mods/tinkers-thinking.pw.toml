@@ -1,0 +1,8 @@
+name = "Tinkers' Thinking"
+filename = "Tinkers-Thinking-0.1.6.6.3.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "97834d93970ad8bfef6be75f90a7f2289d80683c8a0779f3137659bcd362cb82be6dd5d01dcd75b0deb6c87e515043f80561dfef2a4e04b8e4f13d70c368d518"

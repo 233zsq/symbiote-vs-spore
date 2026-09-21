@@ -1,0 +1,8 @@
+name = "Epic Fight - Super Warden"
+filename = "super_warden-20.13.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/7144/759/super_warden-20.13.0.jar"
+hash-format = "sha512"
+hash = "2ab0749bac0df656e8f1ff3f9765c04153562ce3d481cd855d6b8baefbad1350f0efe20a921cdf3ba82e08f6cc110685ce0c17242cbafb6b8dc5bc20666ce2e5"

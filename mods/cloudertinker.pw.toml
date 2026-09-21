@@ -1,0 +1,8 @@
+name = "Cloudertinker"
+filename = "cloudertinker-1.20.1-forge-1.2.10.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "1b606a32d62f764f829bc89e069e88c1c281513303c081ee59d4d393b31b03f3c5549a9208752047ebfa1ac4927e18426fc0b43659cf61fb0b389b200ffa1f09"

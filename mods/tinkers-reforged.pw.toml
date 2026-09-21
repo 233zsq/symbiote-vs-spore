@@ -1,0 +1,8 @@
+name = "Tinkers Reforged"
+filename = "Tinkers Reforged 1.20.1-2.20.0.7.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "debb7ac058b82c425d0bfa395b1ef5fbedff03f5bf273a3ecb40e4e11c30b040fbd765b981cfcf7c002b108cb6fdf0d4f1b047fed0cfa544cfa12368fa9d3752"

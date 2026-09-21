@@ -1,0 +1,8 @@
+name = "Cherry Tinker"
+filename = "cherrytinker-1.0.0-1.20.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "3a9ca341109dd0e4d72952a3591e59cc4800e288f80c886e8a802e397a261b2ea5685cb0236e08f01280bb5291688b6f67bee130b47417900bfc382034cecffd"

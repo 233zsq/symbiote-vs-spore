@@ -1,0 +1,8 @@
+name = "Tinkers' Ingenuity"
+filename = "tinkers_ingenuity-1.1.9.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "b09a431c173d3b043d405cbf3cce95ce515faa67ffef3d4eaf9beecf5d9d1b5958328dbd42ac138f0a3d6ea2e82eadcb04f8f7aaafa3fd2b8e900be0b28803d4"

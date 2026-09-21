@@ -1,0 +1,8 @@
+name = "TConJEI"
+filename = "tconjei-1.20.1-1.6.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "e326d020ed30495b57dd28257294a78b5cad0abc2c5e5b1d62c497ae5214ade5edd1c373f3fd72186b1a4ec185a4396e25dcc54d2f9d3172b070bd380c93eba9"

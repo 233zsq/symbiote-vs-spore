@@ -4014,6 +4014,11 @@ hash = "7c46c05d9a888aa6ff9ba3f95b3f28a93f12125afd3ee9fcadd41f57463125ff"
 metafile = true
 
 [[files]]
+file = "mods/cherry-tinker.pw.toml"
+hash = "05848833ace12f12d1a94c9f002a69b99672f2e6eb8170442b1b7ea3fabbe0e6"
+metafile = true
+
+[[files]]
 file = "mods/chunksending.pw.toml"
 hash = "99ec3ff69ae792d578ee737f2e475eb6438e4859c37d7a872bd0a167dfc4aa24"
 metafile = true
@@ -4036,6 +4041,11 @@ metafile = true
 [[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "e3dd03e7fec88831974857e2cdded54dd5c5bdcaa3f6d6248c2800e82db4dd41"
+metafile = true
+
+[[files]]
+file = "mods/cloudertinker.pw.toml"
+hash = "2eabe4a1a56e52aa33f34fff4360c6bcedcd4b55ce3e9eab144e302a62dd4b3c"
 metafile = true
 
 [[files]]
@@ -4136,6 +4146,11 @@ metafile = true
 [[files]]
 file = "mods/epic-fight-invincible-lib.pw.toml"
 hash = "c826c180ac4e1c2c0577fcba79bd3f0ddd9854ce566f4e74244e4ebdf136e79d"
+metafile = true
+
+[[files]]
+file = "mods/epic-fight-mobs-plus.pw.toml"
+hash = "23bf1ecac120262e533414deb8251b135edc903841f5678f14cfcf0fed67a12b"
 metafile = true
 
 [[files]]
@@ -4564,6 +4579,11 @@ hash = "9cb4e87c26fa223f9ee94d1194c1b71fa012429a113e1f13a81801ae5b0ddbc8"
 metafile = true
 
 [[files]]
+file = "mods/super-warden.pw.toml"
+hash = "362e8f30d53652ec55f06d5c805327eac3b021e396bc4e4a36d2cc8cf18e5811"
+metafile = true
+
+[[files]]
 file = "mods/sus-instantswap.pw.toml"
 hash = "2735532ee0f0ff71d629d961f7c0fde87822c23d51ce84875b0183330b4f05d8"
 metafile = true
@@ -4571,6 +4591,11 @@ metafile = true
 [[files]]
 file = "mods/symbiote-a-bonding-experience.pw.toml"
 hash = "ec2c5ab707a44792b1b90a20a09c78fd041038b5fb9f3b0cb06cfef961757ffd"
+metafile = true
+
+[[files]]
+file = "mods/tconjei.pw.toml"
+hash = "e329fca1671160c5bd0d8f375a372e1bc8a4b51d166dd32d2480a33355121aad"
 metafile = true
 
 [[files]]
@@ -4586,6 +4611,26 @@ metafile = true
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
 hash = "bc5859e34251b8484cf5b5457d6ad3a8a164e60e7014acdd960137107e263b47"
+metafile = true
+
+[[files]]
+file = "mods/tinkers-ingenuity.pw.toml"
+hash = "5bda35ecf4a5947a55e666c975c143bd340dd4008922d9f7a6e2b757c368a2b8"
+metafile = true
+
+[[files]]
+file = "mods/tinkers-levelling-addon.pw.toml"
+hash = "e03c5f2cc879d1e934175bb1245438ad25196902d76958373f0c299cd3d5bd6f"
+metafile = true
+
+[[files]]
+file = "mods/tinkers-reforged.pw.toml"
+hash = "ff23cd6259060147a6b3e81ba13b67c5536a1f5e533cdd618dfb581525638a7b"
+metafile = true
+
+[[files]]
+file = "mods/tinkers-thinking.pw.toml"
+hash = "840a53afe8b6795230234b56a9e04b98259e06cc7cb5978a4143be177cf486cb"
 metafile = true
 
 [[files]]
