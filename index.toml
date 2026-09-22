@@ -3914,11 +3914,6 @@ hash = "4067d5fa7e82d09f54d91db5bab063a34ca4970cd608d20e5b3d0adb160a7b41"
 metafile = true
 
 [[files]]
-file = "mods/alexs-caves.pw.toml"
-hash = "0cbc4b2c6b58b7a94f030ae84f18057e5dc78a17bad429f40b8884926a6ab233"
-metafile = true
-
-[[files]]
 file = "mods/alexs-mobs.pw.toml"
 hash = "e1016eb125a5a41a10f80847eb00affae0e539e703846f303949ed5d82b7f1bf"
 metafile = true
@@ -4221,11 +4216,6 @@ metafile = true
 [[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "3b026ffc2963974cc8252d83e91587b5ac357ab2b59eb1e77e74e82eb3d635d6"
-metafile = true
-
-[[files]]
-file = "mods/final-adversaries.pw.toml"
-hash = "f0a54ddb2546e5ab77eec933d6cbf4996e0e56bb64da4649bee395abe0248008"
 metafile = true
 
 [[files]]
@@ -4631,16 +4621,6 @@ metafile = true
 [[files]]
 file = "mods/tinkers-thinking.pw.toml"
 hash = "840a53afe8b6795230234b56a9e04b98259e06cc7cb5978a4143be177cf486cb"
-metafile = true
-
-[[files]]
-file = "mods/twilight-forest.pw.toml"
-hash = "9e96d32cf4f732ba4dd5d5a77abb910106f1e56cf68df4717795efbf5bc3b40b"
-metafile = true
-
-[[files]]
-file = "mods/twilightforest-efcompat.pw.toml"
-hash = "9aef0713a2ca181ba3f833b49dc95fecb3a5dc8518b86461004a75775bc5f512"
 metafile = true
 
 [[files]]
