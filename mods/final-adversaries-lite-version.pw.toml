@@ -1,0 +1,8 @@
+name = "Final Adversaries Lite Version"
+filename = "final_adversaries_lite_1.7_Forge+Fabric-1.20.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "4ebcdfafac8e1f647b44a5b90cafcc384a2abfb0fd1af0d06da032ab0a1a7b0f0a2a7afc0a9c8399b89a72670d358bb2fc6fbb476116ddf89ddd56620ac03df7"

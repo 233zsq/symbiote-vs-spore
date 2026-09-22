@@ -1,0 +1,8 @@
+name = "BadMobs"
+filename = "BadMobs-1.20.1-19.0.4.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "3b98341e67a9fc9af4541b014213efa66a8f060370835c45271b70365ba09ba104128b6394bd31107488828ebf44f31c1f4dbcffb5be930f0e3b987342b99191"

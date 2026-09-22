@@ -1,0 +1,8 @@
+name = "LootBeams"
+filename = "lootbeams-1.20.1-1.2.6.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "cd9e15a26b423ff0ccc7aebb48eac883d0c203ea159540ffeeecdb2c2b437add9adb7a4c941c367c93829751892f73510c64dec3e27d2ca46e6aff50c4a15479"

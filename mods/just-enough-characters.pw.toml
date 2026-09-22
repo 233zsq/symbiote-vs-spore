@@ -1,0 +1,8 @@
+name = "Just Enough Characters"
+filename = "jecharacters-1.20.1-forge-4.6.11.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "6076fe02c880dfad4491728e352cfc68c6f3e2fb7227cbc83764caeb82f0c39147f31fd9a28dd05d2c9527a96ab7103fc5a7f773a08ae599b40343859f3f66aa"

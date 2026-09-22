@@ -1,0 +1,8 @@
+name = "EnchantmentDescriptions"
+filename = "EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "5581f7d706809f079bb1847637c8ce8f9abbf0102c647960b54908e0080387702fdaedb31c87ec1e30f729051e3f7194d6ca33e3016a033bc794981b492def5e"

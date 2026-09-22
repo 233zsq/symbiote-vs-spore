@@ -1,0 +1,8 @@
+name = "AdvancedCoreInfo"
+filename = "AdvancedCoreInfo-forge-1.20.1-1.2.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "77e09e1e3b395a7adcaacf89523d4bd4531d631b5c01c0d854ec07cc86a6841fa628b2b3ec0071595531fa47b9d98fa7ac7b86c3f14188cf18c7562c9f02e146"

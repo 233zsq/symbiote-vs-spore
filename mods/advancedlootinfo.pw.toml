@@ -1,0 +1,8 @@
+name = "AdvancedLootInfo"
+filename = "AdvancedLootInfo-forge-1.20.1-2.2.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "ce57903593aa63e47181586f8cdd17ecbbf16ef67ea4c4dd44639f9e98057461836d78b6680025d40f15edf4772802f1e15a26d1b03d9b77f10a5276a50e6b69"

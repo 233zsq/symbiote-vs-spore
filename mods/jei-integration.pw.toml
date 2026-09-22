@@ -1,0 +1,8 @@
+name = "JEI Integration"
+filename = "jeiintegration_1.20.1-10.0.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "792d384da6e9b7971f70fd6dbc5c2e61112a9bba5dc1fef9ce3718523634894980aecebe6835a81afe63f8437e1b26bacc3d367c28c168b1d149164eeeaeb5b7"

@@ -1,0 +1,8 @@
+name = "IMBlocker"
+filename = "IMBlocker-5.6.1-forge+1.17-1.20.4.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "d2173aba7ac7cf6fd675c54cb627fcb90a71922e52f2dd88d67ba62e013796b8086f50117d6ca991b40c82d3380e84b192417d0474a47e812487c5e341534219"

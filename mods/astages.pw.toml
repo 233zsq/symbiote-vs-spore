@@ -1,0 +1,8 @@
+name = "AStages"
+filename = "astages-2.5.3-1.20.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "e74bb8f708df3fa13409796efb0f6631fbcd7ea50e209e8f8742195fbf4425b2df6e1fff855ff7e403bc7a15b18e89fc8c21a99c01f1774bf29f9cb59f47e824"

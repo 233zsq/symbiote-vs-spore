@@ -1,0 +1,8 @@
+name = "Ash Of Sin: Lib"
+filename = "Ash Of Sin-Lib-1.20.1-1.0.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "e12b3a8156fa18ba9622488b74d9f36c7a5523f2026f1f84430c459627c19d3cba3eab23ddf580a5b1b20ccc28e7b6e8e418215ea498f848124e781d7acd426e"

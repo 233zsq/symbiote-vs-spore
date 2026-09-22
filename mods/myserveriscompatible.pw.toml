@@ -1,0 +1,8 @@
+name = "MyServerIsCompatible"
+filename = "MyServerIsCompatible-1.20-1.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "fb87751a60e48579d6f9bb117d459c6dc157c87fe71c8e2bc088ba859ff2725112b5330d4c3d4c1ab2d29073a0c2668edcd6b6f547a9666b284b022616bf99cf"

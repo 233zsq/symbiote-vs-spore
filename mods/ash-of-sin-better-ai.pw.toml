@@ -1,0 +1,8 @@
+name = "Ash Of Sin: Better AI"
+filename = "Ash Of Sin-Better AI-1.20.1-1.2.1-all.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "2cd1648a38d55d71e95ca2536d019aa39d9192a76d6f19c379a1358d6335e206dcdeee5a9687748f87da97dc67ff41c15701f5954327614d3895674108097a85"
