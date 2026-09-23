@@ -1,0 +1,8 @@
+name = "Rings of Ascension"
+filename = "RingsOfAscension-1.20.1-2.0.2.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "afe4f6aba24fbea5d96cdf61c45ce7d58c5252dc9882ea8581cb4865f7055668130154f465c09e6fdd5426ac6f8305828e6637ffb2923b572ad97133abd55ab1"

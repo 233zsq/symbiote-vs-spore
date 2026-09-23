@@ -1,0 +1,8 @@
+name = "Artifacts"
+filename = "artifacts-forge-9.5.19.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "bea709250d367fa7957d523e51771b4fe3183678625dd20824722d9702523b076b0b9787331a954f7fd4184c00e450186c8756b710686eacf5f81ed66726a6a3"

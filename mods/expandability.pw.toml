@@ -1,0 +1,8 @@
+name = "ExpandAbility"
+filename = "expandability-9.0.4.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "1894912ec74d1379cbe86e0197955daadf3998f398abe8d01d5f8636e8035db87bc0c0f786c726426cd465ec9ecdcd89f62e5b5ceb23ac4f506632e84295e2ca"

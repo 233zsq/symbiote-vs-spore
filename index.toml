@@ -3954,6 +3954,11 @@ hash = "127cc80624809d690b01e9e2aa27c494b459b714a14cac321803b1a2ecd062ee"
 metafile = true
 
 [[files]]
+file = "mods/artifacts.pw.toml"
+hash = "9406c34c30841db0a2410b593af26bbeb92c120984e03e2e44b77dfd08f03a5d"
+metafile = true
+
+[[files]]
 file = "mods/ash-of-sin-better-ai.pw.toml"
 hash = "038db8320d3b49bc4b47802c0f773f3a53780d0b46d777943512097a551e5a49"
 metafile = true
@@ -4066,6 +4071,11 @@ metafile = true
 [[files]]
 file = "mods/cerbons-api.pw.toml"
 hash = "ff3943d37dd12f0eef4f3e2e2f71c5f6615740d472a9845c57111a3d62543baf"
+metafile = true
+
+[[files]]
+file = "mods/charm-of-undying.pw.toml"
+hash = "15538e9b438754747066f64a1d877121c09728d7e544fe186c4ac29f85143dcb"
 metafile = true
 
 [[files]]
@@ -4321,6 +4331,11 @@ metafile = true
 [[files]]
 file = "mods/epicfight-resurrection.pw.toml"
 hash = "3de972a9ea638c1382a5df6e7c30bd32852fb8a109316e068ebc058de00f585f"
+metafile = true
+
+[[files]]
+file = "mods/expandability.pw.toml"
+hash = "f4913a2b535362732edf6b775bd2f62d3fcdd0dab61c356dcf0845929511605c"
 metafile = true
 
 [[files]]
@@ -4614,6 +4629,11 @@ hash = "83f1a25791a00c02a5e08cd41a9d4b26772e1a350083c727eeb2226fbcaf6a09"
 metafile = true
 
 [[files]]
+file = "mods/octolib.pw.toml"
+hash = "be08e3776ce8075a45a623aa6f02671c05251afa0bf2a1ffa2e89b1b399e2d48"
+metafile = true
+
+[[files]]
 file = "mods/oculus.pw.toml"
 hash = "da42026b60d85c1a1d82f9be5b8441b9f086a157ce8c0c8c851f33fb40618ad0"
 metafile = true
@@ -4679,6 +4699,11 @@ hash = "4e786ea2b69f8d3e5addf52aa87c8d5804c17e4d29a8c4fd31dc3a40b83e48b4"
 metafile = true
 
 [[files]]
+file = "mods/relics.pw.toml"
+hash = "9904fffbf4f54a2cd94986bac7faa9c59d44d7366d913ee39e19c575e313c71a"
+metafile = true
+
+[[files]]
 file = "mods/resourcefulconfig.pw.toml"
 hash = "e179e0789ccffce73e59681d1ba025af37d5e312dd3deb42c41448ff55054696"
 metafile = true
@@ -4686,6 +4711,11 @@ metafile = true
 [[files]]
 file = "mods/rhino.pw.toml"
 hash = "5b92406160d9ea8a61ddf111caaecb7f6283678e2c40b08b72dce3eeaf20dc96"
+metafile = true
+
+[[files]]
+file = "mods/rings-of-ascension.pw.toml"
+hash = "3244f5255b5d4ac3d37402ca2ba4d766139a2463ad4dcb85ffd418244b65e74f"
 metafile = true
 
 [[files]]
