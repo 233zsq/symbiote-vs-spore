@@ -1,0 +1,8 @@
+name = "EpicFight - Dawnday"
+filename = "EpicfightDd-20.14.1.18.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "7a3072ad8cfeb55b85eb6e8db34874cb2f409b92f5bacb07a5fb403095673a142ea85fd872d8f02a7b5dccc241dda6d8c5211a1d46918289125a44d0eab39976"

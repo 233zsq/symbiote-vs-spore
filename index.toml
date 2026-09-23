@@ -3914,6 +3914,11 @@ hash = "4067d5fa7e82d09f54d91db5bab063a34ca4970cd608d20e5b3d0adb160a7b41"
 metafile = true
 
 [[files]]
+file = "mods/accelerated-rendering.pw.toml"
+hash = "e5e06fcf316228192fa2cfb308eafd19a28f425722c91d5bdbcc358c0ac7a010"
+metafile = true
+
+[[files]]
 file = "mods/advancedcoreinfo.pw.toml"
 hash = "c9152e98353de6fe4604e431f476eb9547aac56bc0675ff54499b3950bec107c"
 metafile = true
@@ -3974,6 +3979,16 @@ hash = "5df66ed15fe01fdb719324e721d64203d341d30e89c265714595680f76bfbc8d"
 metafile = true
 
 [[files]]
+file = "mods/async-locator.pw.toml"
+hash = "ca26a687ca42b34d6c6db85d1a73aa3c76b65d6cc74a4600fe5e0d646df51af9"
+metafile = true
+
+[[files]]
+file = "mods/async-logger.pw.toml"
+hash = "480884b6c7befc5d2fd8197969fc1328585b63de8e0aea237dbecf2128d4c626"
+metafile = true
+
+[[files]]
 file = "mods/attributefix.pw.toml"
 hash = "65d6d25408299e1ca6556a56e7566dad61e71608a71d9fcab20f5c89b7588b81"
 metafile = true
@@ -4024,6 +4039,11 @@ hash = "37f82fb6469ea1b66807cc2058180d5ba10be0503fde0ad6dc284e21dbafd4df"
 metafile = true
 
 [[files]]
+file = "mods/bosses-of-mass-destruction.pw.toml"
+hash = "d0d671085bb736016eb427911527cf38202b01244c1979d4fcb333ceadcc8eba"
+metafile = true
+
+[[files]]
 file = "mods/bossesrise.pw.toml"
 hash = "ee892fd4cbe8b81cc7cb59c7238029b1053a157f76a0e7c0b0315b176fb18a86"
 metafile = true
@@ -4041,6 +4061,11 @@ metafile = true
 [[files]]
 file = "mods/cataclysmic-arsenal.pw.toml"
 hash = "7c46c05d9a888aa6ff9ba3f95b3f28a93f12125afd3ee9fcadd41f57463125ff"
+metafile = true
+
+[[files]]
+file = "mods/cerbons-api.pw.toml"
+hash = "ff3943d37dd12f0eef4f3e2e2f71c5f6615740d472a9845c57111a3d62543baf"
 metafile = true
 
 [[files]]
@@ -4084,6 +4109,16 @@ hash = "903352ffbd84d4b95fed905893f4715d9c3f88ec9fff6fb06f6e359e0b839dc3"
 metafile = true
 
 [[files]]
+file = "mods/combat-evolution-2.pw.toml"
+hash = "816dd2858b94e4cfc196d58e415c3a5d9fb26e49583c8d94daf556619cc18e85"
+metafile = true
+
+[[files]]
+file = "mods/combat-evolution-more-execution-animations.pw.toml"
+hash = "85ea771243819834650eed19faf2b38a34e0a567d09b9f146c92d990e7f17434"
+metafile = true
+
+[[files]]
 file = "mods/combat-evolution.pw.toml"
 hash = "ef758f68f59bcc92e7f6ae4ae496a65c0898f1a4e4aa354e2461ccc2f965e391"
 metafile = true
@@ -4124,8 +4159,33 @@ hash = "9eefd607e0d54ec444e798ccdeede1a09a3939440bd1e11c11b84c07a5134be2"
 metafile = true
 
 [[files]]
+file = "mods/daily-boss-x-bosses-of-mass-destruction.pw.toml"
+hash = "84dcbca042fee66bbb639c6da1b1347146fdaf26bc0a9725ab89905343d50e3f"
+metafile = true
+
+[[files]]
+file = "mods/daily-boss-x-bosses-rise.pw.toml"
+hash = "0aa88b87f7c343cd4369ebda77f05f2cc80d46653e4afbbffdc8d9ee37781c1e"
+metafile = true
+
+[[files]]
+file = "mods/daily-boss-x-l-ender-s-cataclysm.pw.toml"
+hash = "d4996b1c29a595ef767bf5be0ddb87b1aca215522d37c9e549acbc81c1d6b0d0"
+metafile = true
+
+[[files]]
+file = "mods/daily-boss.pw.toml"
+hash = "1d8797851d63efbd54e8cf74155c4487a9ba06e0fb4abc59250c0e15da96ec16"
+metafile = true
+
+[[files]]
 file = "mods/damage-number.pw.toml"
 hash = "deb747159f7e5094650099bf15e7501f2a345f2a4b63d5522ae69ab40fbd855b"
+metafile = true
+
+[[files]]
+file = "mods/dbmb.pw.toml"
+hash = "e09ba9e01fcb3fc2e496bbb18b03982cd313f61846b356e957e9b52a0941ed85"
 metafile = true
 
 [[files]]
@@ -4166,6 +4226,11 @@ metafile = true
 [[files]]
 file = "mods/efmcompat.pw.toml"
 hash = "f097c3ab0f651fef79d04a17d6b6fa7a227e990592b47da90120d13069fb7b38"
+metafile = true
+
+[[files]]
+file = "mods/embeddium-extra.pw.toml"
+hash = "d5b37000eeca63fabf2c9d261ebc0e9686b42ed8482526384afd37438f883ca5"
 metafile = true
 
 [[files]]
@@ -4229,8 +4294,23 @@ hash = "b498147913f0cc4458e44758a5f12368fbb7f773abd38d230ee13bc2fd05195b"
 metafile = true
 
 [[files]]
+file = "mods/epicfight-awaken-2.pw.toml"
+hash = "66304ff21e7da49110d94cb9fae01008cbf5f4c74c0d95ea30578aa8ebc9fb13"
+metafile = true
+
+[[files]]
 file = "mods/epicfight-awaken.pw.toml"
 hash = "836685cb7cca1a3915b4a16d5de46b943882b27cfe0db1c363805f3547144c0f"
+metafile = true
+
+[[files]]
+file = "mods/epicfight-clash-blade.pw.toml"
+hash = "672304a28c9055060965911f2937427548731b373e02eac88bb708ec9b16017b"
+metafile = true
+
+[[files]]
+file = "mods/epicfight-dawnday.pw.toml"
+hash = "a90610fc0cadfa34e419c34a0c1a38cb7285199a8a90400e9b44e698f6f1d56b"
 metafile = true
 
 [[files]]
@@ -4266,6 +4346,11 @@ metafile = true
 [[files]]
 file = "mods/farmers-delight.pw.toml"
 hash = "c83385838fbf5cdd40684e5f6d4b7bcc2126de4abca229a60b7063e57a5a4615"
+metafile = true
+
+[[files]]
+file = "mods/fastchunkgen.pw.toml"
+hash = "e0c16c4bac44d9b91339996cb2c4372690f803cab9b9c7d7addd29e8a8711ce7"
 metafile = true
 
 [[files]]
@@ -4316,6 +4401,11 @@ metafile = true
 [[files]]
 file = "mods/geckolib.pw.toml"
 hash = "7ffae05c3b8101588b231db8116c34b36a77a0c6e6d7e6af867ae1c5b47e4d10"
+metafile = true
+
+[[files]]
+file = "mods/gpu-memory-leak-fix.pw.toml"
+hash = "a915e2c8d4ea6d98af0fb0fd48be039d5beeaa330c7953ed0bbd2b50f82e6062"
 metafile = true
 
 [[files]]
@@ -4386,6 +4476,11 @@ metafile = true
 [[files]]
 file = "mods/konkrete.pw.toml"
 hash = "db866750534b752822e4a6e9be5bcbdedda401a9e8eab2d4d3e4aa8605908302"
+metafile = true
+
+[[files]]
+file = "mods/krypton-reno.pw.toml"
+hash = "b88a47d44fb7c3ce3f0b8a159fd867e1d5761315bd85efedb7839217037f349c"
 metafile = true
 
 [[files]]
@@ -4489,6 +4584,11 @@ hash = "37e37b10e3b0ddebed6ac4c650f365587583de66ab8219437a88fd1b8fb7544a"
 metafile = true
 
 [[files]]
+file = "mods/netherportalfix.pw.toml"
+hash = "94923ca8895b8a00da0bcd325c637ff4ff673d1da0d276a1760e14d677fa0ad0"
+metafile = true
+
+[[files]]
 file = "mods/nethers-delight.pw.toml"
 hash = "a1d3b1b3f1a9ec557cbe63ea70dfc6f7048312ae5f807a7f0ebaa3278dcef594"
 metafile = true
@@ -4511,6 +4611,11 @@ metafile = true
 [[files]]
 file = "mods/not-enough-animations.pw.toml"
 hash = "83f1a25791a00c02a5e08cd41a9d4b26772e1a350083c727eeb2226fbcaf6a09"
+metafile = true
+
+[[files]]
+file = "mods/oculus.pw.toml"
+hash = "da42026b60d85c1a1d82f9be5b8441b9f086a157ce8c0c8c851f33fb40618ad0"
 metafile = true
 
 [[files]]
@@ -4571,6 +4676,11 @@ metafile = true
 [[files]]
 file = "mods/refm.pw.toml"
 hash = "4e786ea2b69f8d3e5addf52aa87c8d5804c17e4d29a8c4fd31dc3a40b83e48b4"
+metafile = true
+
+[[files]]
+file = "mods/resourcefulconfig.pw.toml"
+hash = "e179e0789ccffce73e59681d1ba025af37d5e312dd3deb42c41448ff55054696"
 metafile = true
 
 [[files]]
@@ -4674,6 +4784,11 @@ hash = "9cb4e87c26fa223f9ee94d1194c1b71fa012429a113e1f13a81801ae5b0ddbc8"
 metafile = true
 
 [[files]]
+file = "mods/structure-layout-optimizer.pw.toml"
+hash = "a4efef9e8e2191db0164fc1bd95fe5742a118ee1e290b57595c0bbee161aad57"
+metafile = true
+
+[[files]]
 file = "mods/super-warden.pw.toml"
 hash = "362e8f30d53652ec55f06d5c805327eac3b021e396bc4e4a36d2cc8cf18e5811"
 metafile = true
@@ -4699,8 +4814,18 @@ hash = "14117b94c456598c9acece143c7a0da3cf56d13182d035a74a2da8a52dd19cbd"
 metafile = true
 
 [[files]]
+file = "mods/terrablenderfix.pw.toml"
+hash = "31f40220b83ec4ea007e8c769029f9326c505e36c8dbb47464734261a73e47ad"
+metafile = true
+
+[[files]]
 file = "mods/terralith.pw.toml"
 hash = "3b61fcf1c80cfdd79282be71ddfa9cce02fc13f8d87a760db455e2a97b801f40"
+metafile = true
+
+[[files]]
+file = "mods/timeout-fixes.pw.toml"
+hash = "83aca636a383510b54acf9939853162694472753ce9e296e7e4d0e5a4f443479"
 metafile = true
 
 [[files]]
@@ -4729,6 +4854,11 @@ hash = "840a53afe8b6795230234b56a9e04b98259e06cc7cb5978a4143be177cf486cb"
 metafile = true
 
 [[files]]
+file = "mods/ultimine-line-render-fix.pw.toml"
+hash = "d1c23579adc4a1a45bc965ebe976f68c9f150c80541551e7b33c1f3a145179ef"
+metafile = true
+
+[[files]]
 file = "mods/waystones.pw.toml"
 hash = "1dc6ca31c7b6912c494caa2a4f5f9f7250af50fbeb9ce9141ae9b741f9861987"
 metafile = true
@@ -4746,6 +4876,11 @@ metafile = true
 [[files]]
 file = "mods/woc-remastered.pw.toml"
 hash = "7531a722940f40b3d949317b1aa17603ade049214b80e8054aa0036f230cb25c"
+metafile = true
+
+[[files]]
+file = "mods/wom-plus.pw.toml"
+hash = "02b49d0faa24b20970b4245d03bbbb90b0f97fa71208ccebd5202e1fbc9a8c37"
 metafile = true
 
 [[files]]

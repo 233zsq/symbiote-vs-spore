@@ -1,0 +1,8 @@
+name = "EpicFight Awaken"
+filename = "epicfight_awaken-1.2.7.3-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "6fbe403ba8eec1cab6a4737587a0117717b5e55625b0447411328bb6fa718014a64b1a127afb0e9e3fff7c3594caa6be2255c00322b624c0aaee0ceac5ed956f"

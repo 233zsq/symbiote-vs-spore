@@ -1,0 +1,8 @@
+name = "Ultimine Line Render Fix"
+filename = "ultiminelinerenderfix-1.0.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "9a4e83722f957d9d4cb5e4213cca2931ce3e34a8cff817c09679f7dd076f8112ee8af2820fbfa3b63c8c6e437c1c6712834958054ea934545763d91ee6639cba"

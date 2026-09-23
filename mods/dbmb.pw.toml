@@ -1,0 +1,8 @@
+name = "DBMB"
+filename = "dbmb-1.1.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "536623cb49086737a47d58afb294d6f55371f66c198de34e44da31050df429f8530ea2d7445203fc8c938878adb2bf75ba7769edf37932ede666e9b7ab85c5e7"

@@ -1,0 +1,8 @@
+name = "Daily Boss x L_Ender 's Cataclysm"
+filename = "DailyBoss-Cataclysm-1.20.1-1.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "ce7ee467bd43117961d3ce0331896ee03b6e13700ca0e8faf025503896cf798c219d2009b644f0ec1b489b936bbf2a7f4a70c50b88d6da187ad7182f6f67e846"

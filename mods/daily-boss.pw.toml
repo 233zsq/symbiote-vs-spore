@@ -1,0 +1,8 @@
+name = "Daily Boss"
+filename = "DailyBoss-1.20.1-1.8.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "79834936587205a82b948cea71b94545d60532f4eaac8f5b484a62b1f21e3ee98bad8cbfaa4005fdd1f83d3ed78b5ddcb62becadf025a3e0c4163c197be71ec1"

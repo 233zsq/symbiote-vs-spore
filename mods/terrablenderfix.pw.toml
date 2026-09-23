@@ -1,0 +1,8 @@
+name = "TerraBlenderFix"
+filename = "terrablenderfix-forge-1.20.1-0.0.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "c37dafeb81d022d9aa0cafc3f1d55a657763937415bd4f9579547a328c59e0ffd776399f1ef1785edba77a4bbcf2a611a682a87ce2e5ddcdc967a737b2865a4d"

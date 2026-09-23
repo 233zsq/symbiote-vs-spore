@@ -1,0 +1,8 @@
+name = "Bosses of Mass Destruction"
+filename = "BOMD-Forge-1.20.1-1.1.2.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "af395e7ac283fcf40e92485763851901af8aa5bdfe694a59ae62474a4e9223e8119a0a6978651fd3ea5cbe99e469a34097456ff7bf98cd2bc70508fb3daa5165"

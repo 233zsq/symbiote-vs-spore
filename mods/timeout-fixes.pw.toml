@@ -1,0 +1,8 @@
+name = "Timeout Fixes"
+filename = "timeout_fixes-1.20.1-1.0.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "31836a3caaf6be67d3943e956fbffa2d58b5188b7421a91462d7a04656c655ab7782e87f77290d7df7fdd62361b01501191ab719ebf5075b4ca99c6babbc76ef"

@@ -1,0 +1,8 @@
+name = "Combat Evolution"
+filename = "CombatEvolution-2.2.8.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "ae576973a3d504333505407c8581b499e2dd6628ad0ba601567dd091e7a01998de427204bd75f5d9ff35f291cb7074837209d43dc4778133bde8101f48a527a8"

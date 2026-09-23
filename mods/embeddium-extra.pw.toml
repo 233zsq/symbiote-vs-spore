@@ -1,0 +1,8 @@
+name = "Embeddium Extra"
+filename = "rubidium-extra-0.5.4.4+mc1.20.1-build.131.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "4067ef8d94fd4022a5f4feb02250d86c96ab10867f526c64e7e02a409ac6d46fbc32e87ffd735b1203f328d147c291e4a8dda1288c1deb3e232a1e5cb13701fb"

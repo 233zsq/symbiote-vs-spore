@@ -1,0 +1,8 @@
+name = "Daily Boss x Bosses of Mass Destruction"
+filename = "DailyBoss-BossesofMassDestruction-1.20.1-1.0.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "461b158c875a06135d198b5eeaf78416d78be257fc825596bb04f774cf6e471ce0d6445f61cf16b7adf9f9644f5f68a23f53859ac50f280df7a0cb12741afe2b"

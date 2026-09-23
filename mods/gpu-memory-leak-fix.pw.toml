@@ -1,0 +1,8 @@
+name = "Gpu memory leak fix"
+filename = "gpumemleakfix-1.20.1-1.8.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "6e513fa050f21d7f43f1c8a698d3702e08836ef1dfcdc5fdd20ad9dc51f25d3934b11149095240899adb88eec2602cb858ce23dc32f770b118e9438fd68561cb"

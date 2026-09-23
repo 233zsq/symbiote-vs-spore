@@ -1,0 +1,8 @@
+name = "Daily Boss x Bosses Rise"
+filename = "DailyBoss-BossesRise-1.20.1-1.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "6d2c85c8241414870bcc814f42f34c7ba61bb63f1b3b108b5aea7059796d7faf2a0299e597fafe102b4e3f097b31e3e6ace43bc04c1a4098cb441bcffd01c9fa"

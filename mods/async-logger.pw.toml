@@ -1,0 +1,8 @@
+name = "Async Logger"
+filename = "asynclogger-2.2.1+1.20.1-forge.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "63dadd7bee7681c04a14ba859f96cf17675f0485d5ef59cc70dbbec75ce3348eaf2961f43a8003865dd72f4ab7a58f8a3ce4fdeceaa42fd04e77657a6629c5c7"

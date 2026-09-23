@@ -1,0 +1,8 @@
+name = "Accelerated Rendering"
+filename = "acceleratedrendering-1.0.14-1.20.1-alpha.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "08a5f2a0f1189931684d853ba38b93b1f27155bceb4be75a0c51529d25513024cf9212c4d5dc5e82499c0c222a22efe643dc4725a4cfc605e7a7e8e4462d8b48"

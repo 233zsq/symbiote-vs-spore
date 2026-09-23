@@ -1,0 +1,8 @@
+name = "WoM Plus"
+filename = "womplus-20.14.1.3.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "9405210de558a11e373f9a8160d1c394bb1bca5ce5f0c7b863e3379c5f5468ec427ecbe93816a3900321fcfcd53b2f63cff57c82d693823a89715b12aee9fd8c"

@@ -1,0 +1,8 @@
+name = "NetherPortalFix"
+filename = "netherportalfix-forge-1.20-13.0.1.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "06c111ca77413c33a214b0557f517674652c02c1b17380d33de2037389aabd5e85f484f42724a26e37f24ea4deda9b01c63f2b2762e5752ae7a561674694d267"
