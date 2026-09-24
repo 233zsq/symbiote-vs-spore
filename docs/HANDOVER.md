@@ -48,13 +48,14 @@
 | 7 | monsterexpansion.test_sword 紫黑贴图 | mod 自带调试物品缺贴图（mod bug），后续可 JEI 隐藏，不紧急 |
 | 8 | 怪物索敌有问题 | **根因已修**：symbiote_counter tick 每次循环 `const p` 重声明报错刷屏（同时是卡顿元凶之一）→ 已改变量提升；待复测 |
 
-**Rhino 血泪教训（写 KubeJS 必记）**：循环体内禁用 `const`/`let` 声明（重声明报错）→ 循环外声明循环内赋值；跨脚本共享作用域，全局 `const` 必须加脚本前缀防撞；`java.lang.Class`（含 forName/getClass 扫描）和 `java.lang.reflect` 被类过滤器拦截 → 静态字段用 NativeJavaClass 直读（如 `VillagerTrades.f_35627_`），职业/物品等用 `ForgeRegistries` 按 id 取，数组扩容用 `java.util.Arrays.copyOf`。
+**Rhino 血泪教训（写 KubeJS 必记）**：循环体内禁用 `const`/`let` 声明（重声明报错）→ 循环外声明循环内赋值；跨脚本共享作用域，全局 `const` 必须加脚本前缀防撞；`java.lang.Class`（含 forName/getClass 扫描）和 `java.lang.reflect` 被类过滤器拦截；**成员访问一律写 mojmap 名**（KubeJS Rhino 生产环境自动 remap mojmap→SRG，直写 SRG 名反而报 no public instance field）；优先用 Forge 原生事件（如 VillagerTradesEvent）零反射。
 
-## 四点五、9-24 22:08 错误报告分析（已处理）
+## 四点五、9-24 错误报告分析（22:08 + 22:42 两份，均已处理）
 
-- **POTB 又崩（22:07:05 FATAL）**：`WeaponryParticleRender.onRenderParticleEvent:48` NPE，`ParticleEvent.getEntityPatch()` 返回 null。与上次"空粒子映射"不是同一处，资源包覆盖治不了 → 坐实只能 **POTB jar 层根治**（待办 #5）。崩在退出世界前约 8 秒，疑似退出时实体 patch 已卸载仍发粒子事件
-- **KubeJS 1 error**：spore_coin 村民交易反射被 Rhino 类过滤器拦（`java.lang.Class` not allowed）——三处文件都还是旧代码（上次"已修"实际没落盘）→ **已真修**（直读静态字段+ForgeRegistries，commit 3d1ae69），待复测村民交易
+- **POTB NPE 崩溃（22:07 与 22:42 两次，第二次硬崩在游戏中）**：`WeaponryParticleRender.onRenderParticleEvent:48` 对 `getEntityPatch()` 未判空。CFR 反编译实证：tick 循环对 `blade_config_tag:valid_entity` 标签生物发事件，EF 不给 piglin/vex 等打补丁 → patch 为 null 必崩；ParticleEvent 无 @Cancelable 事件层拦不住，配置无实体开关。**已修**：svs 数据包置空该标签（replace:true values:[]，commit b1ef352），只保留玩家（必有 EF 补丁）。代价：怪物武器不再冒粒子（纯装饰）。根治收尾：自研 tweak mod mixin 给 onRenderParticleEvent 补判空后可恢复标签
+- **KubeJS 1 error（spore_coin 村民交易）两轮失败**：① `java.lang.Class.forName` 被类过滤器拦（22:05）→ ② 改直读静态字段仍挂（22:39）——实踩结论：**KubeJS Rhino 生产环境自动 remap mojmap→SRG，直写 SRG 名（f_35627_）反而报 "no public instance field"，成员访问必须写 mojmap 名** → ③ 最终改 Forge 原生 `VillagerTradesEvent`（ForgeEvents.onEvent）零反射（commit cd77c4c），待复测村民交易
 - **SimplySwords 配置损坏**：test4 的 `simplyswords_main` 里 gem_effects/general/status_effects 三个 json5 被刷成全空白（mod 回退默认值）→ 已从副本完好文件覆盖修复
+- **symbiote_counter 确认修好**：22:42 日志无 tick 刷屏错误（#8 索敌/卡顿复测通过一半，剩游戏内体感确认）
 - 无害噪音（不修）：fancymenu 枚举 6 个 ns 资源失败、epic_fight_avalon 1 个空 JSON、l2weaponry 3 个 cloggrum 武器 JSON 解析失败、EF 一批 "Skill xxx doesn't exist"（mod 自带引用缺失技能）、woc_remastered refmap 警告
 
 ## 五、待办（按优先级）
