@@ -6,8 +6,9 @@
 //   ③ 村民交易：农民加 12 币→8 匠魂 grout，工具匠加 20 币→1 火种绑定工具（kubejs:fireseed_token）
 // 环境（开包实证）：KubeJS 2001.6.5(Rhino) + Forge 47.4.23（1.20.1，运行时 SRG 名）；
 //   TConstruct 3.12（tconstruct:grout ✓）、spore 2.2.0j、spore_inquisition 3.1、symbiote 1.1.3。
-//   包内无 MoreJS、KubeJS 无原生村民交易事件 → 交易走反射改原版 VillagerTrades.TRADES
-//   （SRG 字段名 f_35627_，javap 实证），职业与 SAM 均按签名/函数适配定位，不猜 SRG 名。
+//   包内无 MoreJS、KubeJS 无原生村民交易事件 → 交易改原版 VillagerTrades.TRADES
+//   （public static final，SRG 字段名 f_35627_，NativeJavaClass 直接读；java.lang.Class 反射
+//   会被 Rhino 类过滤器拦截），职业从 ForgeRegistries.VILLAGER_PROFESSIONS 按 id 取，不猜 SRG 名。
 
 
 const SP_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
@@ -42,10 +43,10 @@ EntityEvents.drops(event => {
 })
 
 // ── 村民交易 ─────────────────────────────────────────────────────────────────
-// 反射方案：取 VillagerTrades.TRADES（SRG f_35627_）。外层 Map 不可变、内层 Int2ObjectMap
-// 可变（原版数据包 trades.json 重载即走此路径），故只对目标职业 put 追加，不动其他行。
-// 职业定位不硬编码 SRG：VillagerProfession 是 record，其 String 组件（name）的访问器在运行时
-// 可能被 SRG 重命名，按"无参、非静态、返回 String"的签名反射扫描取职业 id。
+// 方案：NativeJavaClass 直读 VillagerTrades.TRADES（SRG f_35627_）。外层 Map 不可变、内层
+// Int2ObjectMap 可变（原版数据包 trades.json 重载即走此路径），故只对目标职业 put 追加，不动其他行。
+// 职业定位走 ForgeRegistries.VILLAGER_PROFESSIONS 按 id 取；java.lang.Class / reflect 路径会被
+// Rhino 类过滤器拦截（2026-09-24 22:05 实踩），一律绕开。
 ;(function registerVillagerTrades() {
   let VillagerTrades, ItemListing, MerchantOffer
   try {
@@ -59,39 +60,27 @@ EntityEvents.drops(event => {
 
   let trades
   try {
-    const VTClass = Java.loadClass('java.lang.Class').forName('net.minecraft.world.entity.npc.VillagerTrades')
-    const f = VTClass.getDeclaredField('f_35627_')   // VillagerTrades.TRADES（javap 实证）
-    f.setAccessible(true)
-    trades = f.get(null)
+    // TRADES 是 public static final，NativeJavaClass 可直接读静态字段。
+    // 不要走 java.lang.Class.forName 反射——Rhino 类过滤器拦截 java.lang.Class（22:05 实踩报错）。
+    // 生产运行时是 SRG 名 f_35627_，开发环境回退 mojmap 名 TRADES。
+    trades = VillagerTrades.f_35627_ || VillagerTrades.TRADES
+    if (!trades) throw new Error('TRADES 字段读取为空')
   } catch (e) {
-    console.error('[SVS-真菌币] TRADES(f_35627_) 反射失败，村民交易跳过: ' + e)
+    console.error('[SVS-真菌币] TRADES(f_35627_) 读取失败，村民交易跳过: ' + e)
     return
   }
 
-  function professionId(p) {
-    try {
-      const ms = p.getClass().getDeclaredMethods()
-      for (let i = 0; i < ms.length; i++) {
-        const m = ms[i]
-        if (m.getParameterCount() !== 0 || m.isSynthetic()) continue
-        if (String(m.getReturnType().getName()) !== 'java.lang.String') continue
-        if (java.lang.reflect.Modifier.isStatic(m.getModifiers())) continue
-        if (String(m.getName()) === 'toString') continue
-        m.setAccessible(true)
-        return String(m.invoke(p))
-      }
-    } catch (e) { }
-    return null
-  }
-
+  // 职业定位走 Forge 注册表按 id 取，避免 getClass()/方法反射扫描（同属被过滤的 java.lang.Class 路径）
   let farmer = null, toolsmith = null
-  const it = trades.keySet().iterator()
-  let prof = null
-  while (it.hasNext()) {
-    prof = it.next()
-    const id = professionId(prof)
-    if (id === 'farmer') farmer = prof
-    else if (id === 'toolsmith') toolsmith = prof
+  try {
+    const ForgeRegistries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')
+    const ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+    const profReg = ForgeRegistries.VILLAGER_PROFESSIONS
+    farmer = profReg.getValue(new ResourceLocation('minecraft:farmer'))
+    toolsmith = profReg.getValue(new ResourceLocation('minecraft:toolsmith'))
+  } catch (e) {
+    console.error('[SVS-真菌币] 职业注册表读取失败，村民交易跳过: ' + e)
+    return
   }
   if (!farmer || !toolsmith) {
     console.error('[SVS-真菌币] 未定位到农民/工具匠职业，村民交易跳过')
@@ -113,6 +102,10 @@ EntityEvents.drops(event => {
     }
   }
 
+  // 数组扩容用 java.util.Arrays.copyOf（沿用原数组的 ItemListing[] 类型），
+  // 避开 java.lang.reflect.Array.newInstance——reflect 包与 java.lang.Class 同属 Rhino 类过滤器高危区。
+  const JArrays = Java.loadClass('java.util.Arrays')
+
   function addTrade(profession, level, listing) {
     if (!listing) return
     try {
@@ -122,13 +115,20 @@ EntityEvents.drops(event => {
         return
       }
       const old = intMap.get(level)
-      const arr = []
+      let out
       if (old) {
-        for (let i = 0; i < old.length; i++) arr.push(old[i])
+        out = JArrays.copyOf(old, old.length + 1)
+        out[old.length] = listing
+      } else {
+        // 该等级原本无交易（农民/工具匠 1 级不会出现，仅兜底）：
+        // 从相邻等级借数组类型做 copyOf 长度 0 基底
+        let anyArr = null
+        const lvIt = intMap.keySet().iterator()
+        while (lvIt.hasNext() && !anyArr) { anyArr = intMap.get(lvIt.next()) }
+        if (!anyArr) throw new Error('该职业交易表为空，无法构造数组')
+        out = JArrays.copyOf(anyArr, 1)
+        out[0] = listing
       }
-      arr.push(listing)
-      const out = java.lang.reflect.Array.newInstance(ItemListing, arr.length)
-      for (let i = 0; i < arr.length; i++) out[i] = arr[i]
       intMap.put(level, out)
     } catch (e) {
       console.error('[SVS-真菌币] 追加交易失败: ' + e)
