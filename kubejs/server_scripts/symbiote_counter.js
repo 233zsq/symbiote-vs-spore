@@ -5,6 +5,8 @@
 //   ② 受真菌减伤：玩家被 spore 实体伤害减免 10% / 15% / 22% / 30%
 //   ③ 狩猎红利：狩猎状态下击杀真菌按档位回 饥饿/耐力/信赖（Boss 全满），写失败不崩只打日志
 //   ④ 天敌仇恨：每秒 1 次、10% 概率，让 24 格内目标为空/非玩家的 spore Monster 改仇恨为已结合玩家
+//   ⑤ 围城压力联动（决议五-3）：围城窗口内（siege.js 写 persistentData svs_siege_active_until）
+//      已结合玩家压力每秒 +3（初版默认，实测调）
 // 事件名与规格差异（javap 实证：KubeJS 2001.6.5 的 EntityEvents 仅有 death/hurt/checkSpawn/spawned）：
 //   规格写的 EntityEvents.damaged → 实际为 EntityEvents.hurt
 //   规格写的 EntityEvents.tick  → 不存在，用 ServerEvents.tick 等价实现（每 tick 清队列 + 每秒扫描）
@@ -190,8 +192,9 @@ EntityEvents.death(event => {
   // player.foodLevel；是否同步喂 symbiote 内部饥饿值，待 K3 定夺后在此补一行
 })
 
-// ── 队列消费（每 tick）+ ④ 天敌仇恨（每秒）──
+// ── 队列消费（每 tick）+ ④ 天敌仇恨（每秒）+ ⑤ 围城压力（每秒）──
 let tickCounter = 0
+const SC_SIEGE_STRESS = 3     // 围城窗口内每秒压力增量（决议五-3 初版默认，实测调）
 
 ServerEvents.tick(event => {
   tickCounter++
@@ -224,12 +227,22 @@ ServerEvents.tick(event => {
 
   if (tickCounter % 20 !== 0) return          // 每秒 1 次
   if (!event.server) return
+  let gameTime = -1
+  try { gameTime = event.server.overworld().gameTime } catch (e) { }
   const players = event.server.getPlayers()
   let aggroTarget = null
   for (let i = 0; i < players.size(); i++) {
     aggroTarget = players.get(i)
     const stage = getBondStage(aggroTarget)
     if (!stage || stage === 'UNBONDED') continue
+    // ⑤ 围城压力联动：围城窗口内压力加速上涨
+    if (gameTime >= 0 && SymbioteTracker) {
+      try {
+        if (aggroTarget.getPersistentData().getInt('svs_siege_active_until') > gameTime) {
+          SymbioteTracker.adjustStress(aggroTarget.level, aggroTarget, SC_SIEGE_STRESS, 'svs_siege')
+        }
+      } catch (e) { warnOnce('围城压力', e) }
+    }
     let monsters
     try {
       // 24 格扫描：以玩家包围盒 inflate 24 取 spore Monster（与"怪物 24 格内找玩家"等价，范围对称）
