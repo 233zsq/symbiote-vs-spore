@@ -1,5 +1,5 @@
 # 角色你是一名 Minecraft 整合包开发助手，知晓查询mc百科和 CurseForge网站解决各模组问题，熟悉 CurseForge 模组协议、史诗战斗（Epic Fight）适配与整合包流程设计。
-# 项目背景我正在制作一个【1.20.1 Forge】的整合包，方向是**线性流程、偏 ARPG 和类魂**，目标是摆脱目前整合包同质化的情况，因此加入了大量冷门以及新出的 mod。包名 Symbiote vs Spore（共生体 vs 孢子），当前 209 mod。
+# 项目背景我正在制作一个【1.20.1 Forge】的整合包，方向是**线性流程、偏 ARPG 和类魂**，目标是摆脱目前整合包同质化的情况，因此加入了大量冷门以及新出的 mod。包名 Symbiote vs Spore（共生体 vs 孢子），当前 212 mod（以副本 mods/ jar 数为准；test4 实例少 souls_like_bosses-1.0.3.jar，待对账）。
 
 ## 整合包设计理念（动态，随时更改）
 1. 流程设计：四阶段（前期/中期/后期/末期）。核心节奏：
@@ -31,22 +31,24 @@
 
 # 任务清单
 ## 任务一：开源协议审查（已完成，见 docs/开源协议审查.md）
-## 任务二：查看以下四个参考整合包，学习借鉴（DOTE/IF/CTI 已拆完，远梦之棺已拆完见 docs）：
+## 任务二：查看以下四个参考整合包，学习借鉴（已完成：DOTE/IF/CTI/远梦之棺均已拆完，见 docs 下对应分析文档）：
   - C:\PCL 正式版 2.8.13\.minecraft\versions\远梦之棺
   - C:\PCL 正式版 2.8.13\.minecraft\versions\DUEL OF THE END
   - C:\PCL 正式版 2.8.13\.minecraft\versions\Immersive Fight 4.2.9
   - C:\PCL 正式版 2.8.13\.minecraft\versions\Construct Technological Innovation
-## 任务三：更新表格与 mod 清单
+## 任务三：更新表格与 mod 清单（已完成：桌面 5 张表已按新包体重采；docs/模组清单.md 已更新，魔改类 mod 归入"任务与魔改工具"分类）
 1. 更新桌面的 5 张表格。
 2. 更新 mod 清单，并新增一个分类："魔改类型的 mod"（即需要魔改的 mod 单独归类）。
-## 任务四：查询所有 mod 的 mc百科和 CurseForge，查看这些 mod 有什么 bug、槽点等问题，做成清单（内容型 mod 逐个查评论区，工具/库/性能类只查已知恶名）。
+## 任务四：查询所有 mod 的 mc百科和 CurseForge，查看这些 mod 有什么 bug、槽点等问题，做成清单（已完成，见 docs/mod_bug清单.md，2026-09-24 纯网络调研版；内容型 mod 逐个查评论区，工具/库/性能类只查已知恶名）。
 ## 任务五（新增，随魔改推进）：落地上述设计——配置/数据包/KubeJS/自研 tweak mod 各按分工实现；已知问题修复见下。
+  - 进度与交接以 docs/HANDOVER.md 为准（每次会话更新）；魔改设计定稿见 docs/魔改设计决议.md。
+  - 一期已落地：LootBeams 静音、InControl 难度规则、FTB 序章难度三选、KubeJS 五脚本（真菌币/个人难度/共生体克制真菌/火种绑定）、血源 6 武器 EF 适配、POTB 粒子崩溃资源包修复、d&c 等 28 命名空间补译 1048 条。
 
 # 已知问题（请在整合包中落实解决方案）
-1. 战利品光束 mod：默认设定稀有物品落地会播放尖锐的磨刀音效，物品卡进方块会反复判定导致一直响，且右下角字幕不显示。解决：在该 mod 配置的 Sounds 里关闭 Play Sounds。
-2. 崩档：真菌 mod 某个飞行怪的 AI 注入导致空白值崩溃。解决：用 badmobs mod 等魔改 ban 掉那两个飞行怪的生成；可先分析崩溃报告确认要禁的怪（崩溃报告来源待实测复现，初版整合包出来后测试）。
+1. 战利品光束 mod：默认设定稀有物品落地会播放尖锐的磨刀音效，物品卡进方块会反复判定导致一直响，且右下角字幕不显示。解决：在该 mod 配置的 Sounds 里关闭 Play Sounds。**（已落实：config/lootbeams-client.toml `sounds=false`）**
+2. 崩档：真菌 mod 某个飞行怪的 AI 注入导致空白值崩溃。解决：用 badmobs mod 等魔改 ban 掉那两个飞行怪的生成；可先分析崩溃报告确认要禁的怪（崩溃报告来源待实测复现，初版整合包出来后测试）。**（待初版实测复现）**
 3. 顺带检查：文礼 mod 是否对真菌 mod 等 mod 的怪物有作用（已初步确认文礼有文明强度评分与城镇中心等级系统，需实测）。
-4. 村民美化：加 Human Era 材质包 + Entity Texture Features + Entity Model Features（拟人化外观，不动机制），加 Guard Villagers（村庄卫兵）+ 其史诗战斗附属（卫兵有 EF 招式）。不用 MCA Reborn（会冲掉村民交易经济）。
+4. 村民美化：加 Human Era 材质包 + Entity Texture Features + Entity Model Features（拟人化外观，不动机制），加 Guard Villagers（村庄卫兵）+ 其史诗战斗附属（卫兵有 EF 招式）。不用 MCA Reborn（会冲掉村民交易经济）。**（已落实：美化 4 件已加进包）**
 
 # 工作原则（全程必须遵守）
 ## 原则一：三思而后行不许妄下结论，不许掩饰困惑，权衡要摆到明面上：
