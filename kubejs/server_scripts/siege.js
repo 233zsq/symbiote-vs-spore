@@ -3,6 +3,8 @@
 //   ① 7 天一周期，真菌怪潮冲村庄；② 倒计时只在玩家位于村庄区域（128 格）时走动，
 //   离村/跨维度冻结（HUD 显示"围城暂缓"）；③ 回村时倒计时不足 5 分钟 → 回拨 5:00 红色预警；
 //   ④ 怪在玩家附近自然加载区块生成，不强加载；⑤ HUD "第 X 天 / 距围城 N 天"，围城日红色。
+//   ⑥ 失守惩罚（决议一-5）：波次窗口内村庄村民数较开波腰斩 → 判失守：
+//      文明 -15（civillis BaseScoreApi，与 fireseed.js 同通道）+ 在场玩家均摊扣真菌币（单人全额）
 // 落地选择：
 //   - "村庄区域"判定：128 格内村民（minecraft:villager）≥ 3，且维度为主世界
 //   - 倒计时：存玩家 persistentData（svs_siege_timer，tick），每玩家独立（多人各算各的）
@@ -10,9 +12,23 @@
 //   - 波次：基础池为主，世界第 14 天起掺 20% 精英（决议四 Ⅲ"围城加压"）；只生成不指路，
 //     真菌怪敌对 AI 自然会扑向村庄/玩家
 // TODO(K3-实测): Painter 文本属性（alignX/scale/color）以实测为准微调；波次构成待数值评审
-// TODO(K3-二期后半): 失守判定与文明降级惩罚（决议一-5）未在本文件，另起脚本
+// TODO(K3-调参): 失守线=村民腰斩、罚款总额 40、文明 -15 均为初版默认
+// TODO(K3-知悉): 失守判定只在触发者仍在村时评估（玩家跑图 → 区块卸载数不到村民，防误判）
 
 const SIEGE_Villager = Java.loadClass('net.minecraft.world.entity.npc.Villager')
+
+// civillis 文明强度通道（与 fireseed.js 同一 API；此处独立 loadClass 避免依赖脚本加载顺序）
+let SIEGE_BaseScoreApi = null
+let SIEGE_BlockPos = null
+try {
+  SIEGE_BaseScoreApi = Java.loadClass('civil.civilization.BaseScoreApi')
+  SIEGE_BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+} catch (e) {
+  console.warn('[SVS-围城] civillis BaseScoreApi 不可用，失守文明处罚关闭: ' + e)
+}
+const SIEGE_DEF_FINE_TOTAL = 40       // 失守罚款真菌币总额（在场玩家均摊，单人全额）
+const SIEGE_DEF_SCORE = -15           // 失守文明分
+const SIEGE_DEF_RANGE = 64
 
 const SIEGE_PERIOD = 7 * 24000          // 7 个游戏日（tick）
 const SIEGE_WARN = 5 * 60 * 20          // 5 分钟红色预警线（tick）
@@ -30,14 +46,15 @@ const SIEGE_ELITE_RATIO = 0.2
 
 function siegePd(player) { return player.getPersistentData() }
 
-function siegeInVillage(player) {
-  if (String(player.level.dimension) !== 'minecraft:overworld') return false
-  let n = 0
+function siegeCountVillagers(player) {
+  if (String(player.level.dimension) !== 'minecraft:overworld') return 0
   try {
-    const list = player.level.getEntitiesOfClass(SIEGE_Villager, player.getBoundingBox().inflate(SIEGE_RADIUS))
-    n = list.size()
-  } catch (e) { return false }
-  return n >= SIEGE_MIN_VILLAGERS
+    return player.level.getEntitiesOfClass(SIEGE_Villager, player.getBoundingBox().inflate(SIEGE_RADIUS)).size()
+  } catch (e) { return 0 }
+}
+
+function siegeInVillage(player) {
+  return siegeCountVillagers(player) >= SIEGE_MIN_VILLAGERS
 }
 
 function siegeFmt(ticks) {
@@ -66,6 +83,39 @@ function siegeSpawnWave(player, worldDay, cycle) {
   console.info('[SVS-围城] ' + name + ' 触发第 ' + (cycle + 1) + ' 波围城：' + count + ' 只（世界第 ' + worldDay + ' 天）')
 }
 
+// 失守：文明扣分 + 在场玩家（128 格内同维度）均摊罚款，单人时全额
+function siegeApplyDefeat(player, worldDay) {
+  const server = player.server
+  if (SIEGE_BaseScoreApi) {
+    try {
+      const x = player.x, y = player.y, z = player.z
+      const min = new SIEGE_BlockPos(x - SIEGE_DEF_RANGE, y - 32, z - SIEGE_DEF_RANGE)
+      const max = new SIEGE_BlockPos(x + SIEGE_DEF_RANGE, y + 32, z + SIEGE_DEF_RANGE)
+      SIEGE_BaseScoreApi.add(player.level, min, max, SIEGE_DEF_SCORE, 'svs_siege_defeat_' + worldDay + '_' + Math.floor(x) + '_' + Math.floor(z))
+    } catch (e) {
+      console.warn('[SVS-围城] 失守文明扣分失败: ' + e)
+    }
+  }
+  const present = []
+  const players = server.getPlayers()
+  let p2 = null, dx = 0, dz = 0
+  for (let i = 0; i < players.size(); i++) {
+    p2 = players.get(i)
+    if (String(p2.level.dimension) !== 'minecraft:overworld') continue
+    dx = p2.x - player.x
+    dz = p2.z - player.z
+    if (dx * dx + dz * dz <= SIEGE_RADIUS * SIEGE_RADIUS) present.push(p2)
+  }
+  const share = Math.max(1, Math.floor(SIEGE_DEF_FINE_TOTAL / Math.max(1, present.length)))
+  for (let i = 0; i < present.length; i++) {
+    p2 = present[i]
+    server.runCommandSilent('clear ' + p2.username + ' kubejs:spore_coin ' + share)
+    p2.tell(Text.darkRed('【围城失守】村庄生灵涂炭…… -' + share + ' 真菌币（在场均摊）'))
+  }
+  server.runCommandSilent('execute at ' + player.username + ' run title @a[distance=..128] title {"text":"村庄失守……","color":"dark_red","bold":true}')
+  console.info('[SVS-围城] ' + player.username + ' 的村庄失守：文明 ' + SIEGE_DEF_SCORE + '，' + present.length + ' 人均摊 -' + share + ' 真菌币')
+}
+
 function siegeHud(player, text, color) {
   try {
     player.paint({ svs_siege: { type: 'text', text: text, x: 10, y: 10, alignX: 'left', alignY: 'top', scale: 1.0, color: color, shadow: true } })
@@ -84,7 +134,7 @@ function siegeWarnOnce(tag, e) {
 let siegeTick = 0
 // 循环体外声明（Rhino 循环体 const/let 重声明血泪教训，见 symbiote_counter.js 同款处理）
 let siegePlayer = null, siegePd2 = null, siegeNow = 0, siegeTimer = 0
-let siegeIn = false, siegeWas = false, siegeCycle = 0
+let siegeIn = false, siegeWas = false, siegeCycle = 0, siegeStartN = 0
 ServerEvents.tick(event => {
   siegeTick++
   if (siegeTick % 20 !== 0) return          // 每秒 1 次
@@ -125,13 +175,26 @@ ServerEvents.tick(event => {
         siegeSpawnWave(siegePlayer, worldDay, siegeCycle)
         siegePd2.putInt('svs_siege_cycle', siegeCycle + 1)
         siegePd2.putInt('svs_siege_active_until', siegeNow + SIEGE_ACTIVE_TICKS)
+        siegePd2.putInt('svs_siege_start_villagers', siegeCountVillagers(siegePlayer))
+        siegePd2.putInt('svs_siege_defeat_done', 0)
         siegeTimer = SIEGE_PERIOD
       }
     }
     siegePd2.putInt('svs_siege_timer', siegeTimer)
 
+    // 失守判定：波次窗口内、触发者仍在村（跑图卸载防误判）、村民数较开波腰斩
+    if (siegePd2.getInt('svs_siege_active_until') > siegeNow && siegePd2.getInt('svs_siege_defeat_done') === 0 && siegeIn) {
+      siegeStartN = siegePd2.getInt('svs_siege_start_villagers')
+      if (siegeStartN > 0 && siegeCountVillagers(siegePlayer) * 2 < siegeStartN) {
+        siegePd2.putInt('svs_siege_defeat_done', 1)
+        siegeApplyDefeat(siegePlayer, worldDay)
+      }
+    }
+
     // HUD
-    if (siegePd2.getInt('svs_siege_active_until') > siegeNow) {
+    if (siegePd2.getInt('svs_siege_active_until') > siegeNow && siegePd2.getInt('svs_siege_defeat_done') === 1) {
+      siegeHud(siegePlayer, '村庄失守……', 0xAA0000)
+    } else if (siegePd2.getInt('svs_siege_active_until') > siegeNow) {
       siegeHud(siegePlayer, '真菌围城中！', 0xFF5555)
     } else if (!siegeIn) {
       siegeHud(siegePlayer, '第 ' + worldDay + ' 天 · 围城暂缓（离村冻结）', 0xAAAAAA)
