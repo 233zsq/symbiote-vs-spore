@@ -85,11 +85,12 @@ EntityEvents.drops(event => {
 
   let farmer = null, toolsmith = null
   const it = trades.keySet().iterator()
+  let prof = null
   while (it.hasNext()) {
-    const p = it.next()
-    const id = professionId(p)
-    if (id === 'farmer') farmer = p
-    else if (id === 'toolsmith') toolsmith = p
+    prof = it.next()
+    const id = professionId(prof)
+    if (id === 'farmer') farmer = prof
+    else if (id === 'toolsmith') toolsmith = prof
   }
   if (!farmer || !toolsmith) {
     console.error('[SVS-真菌币] 未定位到农民/工具匠职业，村民交易跳过')

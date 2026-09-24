@@ -225,14 +225,15 @@ ServerEvents.tick(event => {
   if (tickCounter % 20 !== 0) return          // 每秒 1 次
   if (!event.server) return
   const players = event.server.getPlayers()
+  let aggroTarget = null
   for (let i = 0; i < players.size(); i++) {
-    const p = players.get(i)
-    const stage = getBondStage(p)
+    aggroTarget = players.get(i)
+    const stage = getBondStage(aggroTarget)
     if (!stage || stage === 'UNBONDED') continue
     let monsters
     try {
       // 24 格扫描：以玩家包围盒 inflate 24 取 spore Monster（与"怪物 24 格内找玩家"等价，范围对称）
-      monsters = p.level.getEntitiesOfClass(MonsterClass, p.getBoundingBox().inflate(24))
+      monsters = aggroTarget.level.getEntitiesOfClass(MonsterClass, aggroTarget.getBoundingBox().inflate(24))
     } catch (e) {
       continue
     }
@@ -242,7 +243,7 @@ ServerEvents.tick(event => {
       const target = mob.getTarget()
       if (target && target.player) continue   // 已锁定玩家 → 不抢
       if (Math.random() < 0.10) {
-        mob.setTarget(p)                      // 天敌仇恨（setTarget auto-remap → SRG m_20202_）
+        mob.setTarget(aggroTarget)                      // 天敌仇恨（setTarget auto-remap → SRG m_20202_）
       }
     }
   }
