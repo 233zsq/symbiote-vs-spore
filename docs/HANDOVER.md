@@ -62,7 +62,7 @@
 
 1. ~~合并 d&c 补译~~ **已完成**（见四-#6）；注意：副本里还有约 60 个 ns 的汉化目录未进 git 仓库（仓库只收了本次改的 28 个），下次大同步时一并 commit
 2. 通知用户复测（**重点**：`Loaded 5/5 0 errors`、真菌币掉落、**村民交易（农民12币→8grout/工具匠20币→火种工具，本次新修）**、/svs difficulty、FTB 任务、索敌、d&c 汉化、POTB 是否还崩）
-3. **二期**：~~围城事件 + HUD 天数计时器~~ **初版已落地**（`siege.js`，commit e7937ba：7日倒计时/在村才走（村民≥3+主世界）/回村回拨5分钟/Painter HUD/波次 8+2递增+14天起掺精英；待实测）→ 失守惩罚（文明降级+均摊扣款，决议一-5）→ 铁魔法禁用清单（**草案已出** `docs/铁魔法禁用清单_草案.md`，114 法术分 A~F 六区，待用户裁决后生成数据包；机制已验证：法术 config `enabled:false` 走 svs 数据包）→ Gateways 连战+武器解锁。共生体侧可读的围城态：persistentData `svs_siege_active_until`（决议五-3 压力联动备用）
+3. **二期**：~~围城事件 + HUD 天数计时器~~ **初版已落地**（`siege.js`，commit e7937ba：7日倒计时/在村才走（村民≥3+主世界）/回村回拨5分钟/Painter HUD/波次 8+2递增+14天起掺精英；待实测）→ 失守惩罚（文明降级+均摊扣款，决议一-5；**civillis API 已打通**：`BaseScoreApi.add/remove`，火种侧已挂钩 commit 66eb43f，围攻城失败判定未做）→ 铁魔法禁用清单（**草案已出** `docs/铁魔法禁用清单_草案.md`，114 法术分 A~F 六区，待用户裁决后生成数据包；机制已验证：法术 config `enabled:false` 走 svs 数据包）→ Gateways 连战+武器解锁。共生体侧可读的围城态：persistentData `svs_siege_active_until`（决议五-3 压力联动备用）
 4. ~~打 test6.zip~~ **已完成**：`dist/test6.zip`（2132 文件 / 1425.8 MB）。旧打包脚本丢失，新写 `E:/mcmp_test/pack_mcbbs.py`（从副本出包，结构对齐 test5 逆向：manifest.json + mcbbs.packmeta(SHA-1) + overrides/，包含清单=test5 的 16 项 + scripts/）。**含全部最新修复**（补译/POTB 标签置空/spore_coin 事件版/siege.js）。注意：test6 以副本为准，**含 souls_like_bosses-1.0.3.jar**（test4 没有，对账问题仍待用户裁决）
 5. 自研 tweak mod 待办清单：结构距出生点生成限制、ASTages 坏文件容错、mixin 冲突合规化、POTB jar 层根治（判空 mixin，恢复怪物武器粒子）
 6. `scripts/stages.zs`（GameStages 门控框架，目前全注释零效果）**只在仓库、未双写**（副本/test4 的 scripts/ 是空目录）；等有实质内容再同步，届时 test 包要确认 scripts/ 进 overrides
