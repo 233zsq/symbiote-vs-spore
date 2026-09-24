@@ -48,12 +48,19 @@
 | 7 | monsterexpansion.test_sword 紫黑贴图 | mod 自带调试物品缺贴图（mod bug），后续可 JEI 隐藏，不紧急 |
 | 8 | 怪物索敌有问题 | **根因已修**：symbiote_counter tick 每次循环 `const p` 重声明报错刷屏（同时是卡顿元凶之一）→ 已改变量提升；待复测 |
 
-**Rhino 血泪教训（写 KubeJS 必记）**：循环体内禁用 `const`/`let` 声明（重声明报错）→ 循环外声明循环内赋值；跨脚本共享作用域，全局 `const` 必须加脚本前缀防撞；`Java.loadClass('java.lang.Class').forName` 不可用 → NativeJavaClass 直接读静态字段 `VillagerTrades.f_35627_`。
+**Rhino 血泪教训（写 KubeJS 必记）**：循环体内禁用 `const`/`let` 声明（重声明报错）→ 循环外声明循环内赋值；跨脚本共享作用域，全局 `const` 必须加脚本前缀防撞；`java.lang.Class`（含 forName/getClass 扫描）和 `java.lang.reflect` 被类过滤器拦截 → 静态字段用 NativeJavaClass 直读（如 `VillagerTrades.f_35627_`），职业/物品等用 `ForgeRegistries` 按 id 取，数组扩容用 `java.util.Arrays.copyOf`。
+
+## 四点五、9-24 22:08 错误报告分析（已处理）
+
+- **POTB 又崩（22:07:05 FATAL）**：`WeaponryParticleRender.onRenderParticleEvent:48` NPE，`ParticleEvent.getEntityPatch()` 返回 null。与上次"空粒子映射"不是同一处，资源包覆盖治不了 → 坐实只能 **POTB jar 层根治**（待办 #5）。崩在退出世界前约 8 秒，疑似退出时实体 patch 已卸载仍发粒子事件
+- **KubeJS 1 error**：spore_coin 村民交易反射被 Rhino 类过滤器拦（`java.lang.Class` not allowed）——三处文件都还是旧代码（上次"已修"实际没落盘）→ **已真修**（直读静态字段+ForgeRegistries，commit 3d1ae69），待复测村民交易
+- **SimplySwords 配置损坏**：test4 的 `simplyswords_main` 里 gem_effects/general/status_effects 三个 json5 被刷成全空白（mod 回退默认值）→ 已从副本完好文件覆盖修复
+- 无害噪音（不修）：fancymenu 枚举 6 个 ns 资源失败、epic_fight_avalon 1 个空 JSON、l2weaponry 3 个 cloggrum 武器 JSON 解析失败、EF 一批 "Skill xxx doesn't exist"（mod 自带引用缺失技能）、woc_remastered refmap 警告
 
 ## 五、待办（按优先级）
 
 1. ~~合并 d&c 补译~~ **已完成**（见四-#6）；注意：副本里还有约 60 个 ns 的汉化目录未进 git 仓库（仓库只收了本次改的 28 个），下次大同步时一并 commit
-2. 通知用户复测 8 项修复（**重点**：重进世界看 `Loaded 5/5 0 errors`、真菌币掉落、/svs difficulty、FTB 任务、索敌、d&c 汉化）
+2. 通知用户复测（**重点**：`Loaded 5/5 0 errors`、真菌币掉落、**村民交易（农民12币→8grout/工具匠20币→火种工具，本次新修）**、/svs difficulty、FTB 任务、索敌、d&c 汉化、POTB 是否还崩）
 3. **二期**：围城事件 + HUD 天数计时器（7日周期/回村5分钟预警/不强加载，规格在决议）→ 铁魔法禁用清单 → Gateways 连战+武器解锁
 4. 打 test6.zip（打包脚本同 test5 版，版本号改 test6）
 5. 自研 tweak mod 待办清单：结构距出生点生成限制、ASTages 坏文件容错、mixin 冲突合规化、POTB jar 层根治
