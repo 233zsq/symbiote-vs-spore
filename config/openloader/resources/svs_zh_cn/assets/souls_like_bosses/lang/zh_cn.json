@@ -1,0 +1,9 @@
+{
+ "entity.souls_like_bosses.nightlord": "夜王",
+ "item.souls_like_bosses.dark_moon_greatsword": "暗月大剑",
+ "item.souls_like_bosses.dark_moon_greatsword.ability": "右键：召唤元素光波",
+ "item.souls_like_bosses.dark_moon_greatsword.charges": "充能：%s/%s——用完后进入 %s 秒冷却",
+ "item.souls_like_bosses.mod_logo": "魂系Boss",
+ "item.souls_like_bosses.nightlord_spawn_egg": "夜王刷怪蛋",
+ "itemGroup.souls_like_bosses": "魂系Boss"
+}
