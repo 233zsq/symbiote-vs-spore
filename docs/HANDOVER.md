@@ -44,7 +44,7 @@
 | 3 | /svs difficulty 意外错误 | **已修**（重写为 applyDifficultyOne，去掉 getPlayers/singletonList） |
 | 4 | "控制台"是不是聊天界面 | **已答**：debug 日志在 latest.log/console.log（非聊天）；饥饿回复正常=狩猎红利已生效 |
 | 5 | FTB 难度任务点完无效 | 同 #3 根因，**已修** |
-| 6 | d&c 装备没汉化 | **进行中**：IMF-Trans 的 zh 文件 913/1177 值是英文原文，GLM 补译 1048 条（dac_1~4+others）**已完成在 `i18n_work/translated/en_vals/`，但尚未合并进 zh 文件、未部署** ← 交接后第一件事 |
+| 6 | d&c 装备没汉化 | **已合并部署**：1048 条补译（d&c 913 + boss_checklist 62 + saintsdragons 15 + 25 ns 零星）已合入 `svs_zh_cn`（只覆盖英文值），副本/test4/仓库三处同步，commit e0d7c5d；合并脚本 `mcmp_test/merge_translations.py`（可复用）。待用户进游戏复测确认 |
 | 7 | monsterexpansion.test_sword 紫黑贴图 | mod 自带调试物品缺贴图（mod bug），后续可 JEI 隐藏，不紧急 |
 | 8 | 怪物索敌有问题 | **根因已修**：symbiote_counter tick 每次循环 `const p` 重声明报错刷屏（同时是卡顿元凶之一）→ 已改变量提升；待复测 |
 
@@ -52,8 +52,8 @@
 
 ## 五、待办（按优先级）
 
-1. **合并 d&c 补译**：`i18n_work/translated/en_vals/*.json` → 按 ns 合并进 `svs_zh_cn/assets/<ns>/lang/zh_cn.json`（只覆盖英文值，保留已有中文）→ 双写 → 交用户复测 #6
-2. 通知用户复测 8 项修复（**重点**：重进世界看 `Loaded 5/5 0 errors`、真菌币掉落、/svs difficulty、FTB 任务、索敌）
+1. ~~合并 d&c 补译~~ **已完成**（见四-#6）；注意：副本里还有约 60 个 ns 的汉化目录未进 git 仓库（仓库只收了本次改的 28 个），下次大同步时一并 commit
+2. 通知用户复测 8 项修复（**重点**：重进世界看 `Loaded 5/5 0 errors`、真菌币掉落、/svs difficulty、FTB 任务、索敌、d&c 汉化）
 3. **二期**：围城事件 + HUD 天数计时器（7日周期/回村5分钟预警/不强加载，规格在决议）→ 铁魔法禁用清单 → Gateways 连战+武器解锁
 4. 打 test6.zip（打包脚本同 test5 版，版本号改 test6）
 5. 自研 tweak mod 待办清单：结构距出生点生成限制、ASTages 坏文件容错、mixin 冲突合规化、POTB jar 层根治
