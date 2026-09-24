@@ -1,0 +1,172 @@
+// fireseed.js · 火种绑定系统（任务文档第 3 条 / 魔改设计决议）
+// 机制：
+//   右键村民（手持 kubejs:fireseed_token）→ 绑定为火种（改名"火种"），消耗 1 工具，
+//   立刻获得该村民当前最贵可交易物品 ×1（职业等级越高奖励越肥的落地件）
+//   每人最多绑定 5 个火种；绑定记录存玩家 persistentData（uuid|毫秒 时间戳）
+//   火种村民死亡 → 扣绑定者真菌币（连续死亡递减 100%/50%/25%…）；绑定者不在线 → TODO 文明度处罚
+//   绑定者超过 7 天未上线 → 登录时自动解绑（文明不降级）
+// 多人/经济逻辑，K3 亲写（分工规则）。数值为初版默认，实测可调。
+// 已知简化（TODO）：绑定者离线时的文明度处罚待 civillis API 接入；绑定期奖励只发一次。
+
+const FS_TOKEN = 'kubejs:fireseed_token'
+const FS_COIN = 'kubejs:spore_coin'
+const FS_MAX = 5
+const FS_PENALTY_BASE = 20          // 首次死亡扣 20 真菌币，之后 50%/25% 递减
+const FS_OFFLINE_DAYS = 7
+const FS_VILLAGER = 'minecraft:villager'
+
+function fsLog(msg) { console.info('[SVS-火种] ' + msg) }
+function fsTell(player, msg) {
+  try { player.statusMessage = Text.of(msg) } catch (e) { }
+}
+
+// 绑定记录：persistentData.svs_fireseeds = "uuid|ms;uuid|ms;..."
+function fsLoad(player) {
+  let raw = ''
+  try { raw = player.getPersistentData().getString('svs_fireseeds') } catch (e) { return [] }
+  if (!raw) return []
+  return raw.split(';').filter(s => s.indexOf('|') > 0)
+}
+function fsSave(player, list) {
+  try { player.getPersistentData().putString('svs_fireseeds', list.join(';')) } catch (e) { }
+}
+function fsNowMs() {
+  return String(Java.loadClass('java.lang.System').currentTimeMillis())
+}
+
+// 取村民当前最贵可交易物品（按买价总数量估价），返回结果物品或 null
+function fsPriciestWare(villager) {
+  try {
+    const offers = villager.getOffers()
+    let best = null, bestCost = -1
+    for (let i = 0; i < offers.size(); i++) {
+      const o = offers.get(i)
+      const a = o.getCostA()
+      const b = o.getCostB()
+      const cost = (a ? a.getCount() : 0) + (b ? b.getCount() : 0)
+      if (cost > bestCost) { bestCost = cost; best = o.getResult() }
+    }
+    return best
+  } catch (e) {
+    fsLog('读取村民交易失败: ' + e)
+    return null
+  }
+}
+
+// ── 绑定（右键实体）─────────────────────────────────────────────────────────
+ItemEvents.entityInteracted(event => {
+  const player = event.player
+  const target = event.target ? event.target : event.entity
+  if (!player || !player.player || !target) return
+  if (String(target.type) !== FS_VILLAGER) return
+  const item = event.item
+  if (!item || String(item.id) !== FS_TOKEN) return
+
+  // 已绑定判定（村民侧标记）
+  try {
+    if (target.getPersistentData().getString('svs_fireseed_owner')) {
+      fsTell(player, '§e该村民已是火种，无需重复绑定。')
+      return
+    }
+  } catch (e) { }
+
+  // 数量上限（含 7 天过期清理）
+  let list = fsLoad(player).filter(function (e2) {
+    const ms = parseInt(e2.split('|')[1], 10) || 0
+    return (Date.now() - ms) < FS_OFFLINE_DAYS * 86400000
+  })
+  if (list.length >= FS_MAX) {
+    fsTell(player, '§c火种已达上限（' + FS_MAX + '）。老火种死亡或 7 天未上线才会腾出名额。')
+    return
+  }
+
+  // 消耗工具
+  try { item.shrink(1) } catch (e) {
+    try { player.mainHandItem.count = player.mainHandItem.count - 1 } catch (e2) { }
+  }
+
+  // 标记村民 + 改名
+  const uuid = String(target.getUUID())
+  try {
+    target.getPersistentData().putString('svs_fireseed_owner', String(player.getUUID()))
+  } catch (e) { }
+  try { player.getPersistentData().putString('svs_fireseed_streak', '0') } catch (e) { }   // 新绑定=好消息，递减重置
+  try {
+    target.setCustomName(Text.of('火种'))
+    target.setCustomNameVisible(true)
+  } catch (e) { }
+
+  list.push(uuid + '|' + fsNowMs())
+  fsSave(player, list)
+
+  // 奖励：该村民当前最贵可交易物品 ×1
+  const ware = fsPriciestWare(target)
+  if (ware && !ware.isEmpty()) {
+    try { player.give(ware.copy()) } catch (e) { player.give(Item.of(ware)) }
+    fsTell(player, '§a火种已绑定！献上村民压箱底的宝贝：§6' + String(ware.id))
+  } else {
+    fsTell(player, '§a火种已绑定！（该村民暂无可交易物品，奖励跳过）')
+  }
+  fsLog('绑定: ' + player.name + ' <- 村民 ' + uuid + '（当前 ' + list.length + '/' + FS_MAX + '）')
+})
+
+// ── 死亡惩罚（真菌币递减）───────────────────────────────────────────────────
+EntityEvents.death(event => {
+  const mob = event.entity
+  if (!mob || String(mob.type) !== FS_VILLAGER) return
+  let ownerUuid = ''
+  try { ownerUuid = mob.getPersistentData().getString('svs_fireseed_owner') } catch (e) { return }
+  if (!ownerUuid) return
+
+  // 连续死亡递减（绑定者侧 streak，跨火种累计；0=首死全额 / 1=50% / >=2=25%）
+
+  // 找绑定者（在线才扣钱；离线 → TODO 文明度处罚）
+  const players = event.server.getPlayers()
+  let owner = null
+  for (let i = 0; i < players.size(); i++) {
+    if (String(players.get(i).getUUID()) === ownerUuid) { owner = players.get(i); break }
+  }
+  if (!owner) {
+    // TODO(civillis): 绑定者离线 → 村庄文明等级小幅下降，待文明 API 接入
+    fsLog('火种死亡（绑定者离线，文明度处罚待接入）: ' + ownerUuid)
+    return
+  }
+
+  let streak = 0
+  try { streak = parseInt(owner.getPersistentData().getString('svs_fireseed_streak'), 10) || 0 } catch (e) { }
+  let mult = 1.0
+  if (streak === 1) mult = 0.5
+  else if (streak >= 2) mult = 0.25
+  const penalty = Math.max(1, Math.round(FS_PENALTY_BASE * mult))
+
+  // 扣真菌币（/clear 上限语义：最多清 penalty 枚，不足全扣）
+  try {
+    event.server.runCommandSilent('clear ' + owner.name + ' ' + FS_COIN + ' ' + penalty)
+    try { owner.getPersistentData().putString('svs_fireseed_streak', String(streak + 1)) } catch (e) { }
+    fsTell(owner, '§c你的火种阵亡了！§4-' + penalty + ' 真菌币§c（连续第 ' + (streak + 1) + ' 次，惩罚递减）')
+  } catch (e) {
+    fsLog('扣款失败: ' + e)
+  }
+
+  // 名额释放 + streak 递进（用玩家记录留存 streak 以支持跨村民递减？初版按村民独立计）
+  try {
+    const list = fsLoad(owner).filter(function (e2) { return e2.split('|')[0] !== String(mob.getUUID()) })
+    fsSave(owner, list)
+  } catch (e) { }
+  fsLog('火种阵亡: ' + owner.name + ' <- 村民 ' + mob.getUUID() + ' 扣 ' + penalty)
+})
+
+// ── 7 天未上线自动解绑（登录时清理）──────────────────────────────────────────
+PlayerEvents.loggedIn(event => {
+  const player = event.player
+  if (!player) return
+  const list = fsLoad(player)
+  const kept = list.filter(function (e2) {
+    const ms = parseInt(e2.split('|')[1], 10) || 0
+    return (Date.now() - ms) < FS_OFFLINE_DAYS * 86400000
+  })
+  if (kept.length !== list.length) {
+    fsSave(player, kept)
+    fsTell(player, '§7久违了……§8有 ' + (list.length - kept.length) + ' 个火种因你 ' + FS_OFFLINE_DAYS + ' 天未归而熄灭。')
+  }
+})

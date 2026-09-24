@@ -35,7 +35,7 @@ try { FeedingHunt = Java.loadClass('com.scout.symbiote.ability.SymbioteFeedingHu
 // TODO(K3-实测): symbiote 后续更新若改包名/类名，只需调整上面三条类路径
 
 const MonsterClass = Java.loadClass('net.minecraft.world.entity.monster.Monster')
-const ServerPlayerClass = Java.loadClass('net.minecraft.server.level.ServerPlayer')
+const SC_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
 const SPORE_NS = 'spore:'
 
 const DMG_MULT = { ATTACHED: 1.1, INTEGRATED: 1.2, COOPERATIVE: 1.35, DOMINANT: 1.5 }
@@ -175,7 +175,7 @@ EntityEvents.death(event => {
   const ent = event.entity
   if (!ent || !ent.monster || String(ent.type).indexOf(SPORE_NS) !== 0) return
   const killer = event.source ? event.source.entity : null
-  if (!killer || !killer.player || !(killer instanceof ServerPlayerClass)) return
+  if (!killer || !killer.player || !(killer instanceof SC_ServerPlayer)) return
   const stage = getBondStage(killer)
   if (!stage || stage === 'UNBONDED') return
   if (!isHunting(killer)) return

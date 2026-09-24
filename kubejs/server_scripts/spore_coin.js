@@ -10,7 +10,7 @@
 //   （SRG 字段名 f_35627_，javap 实证），职业与 SAM 均按签名/函数适配定位，不猜 SRG 名。
 
 
-const ServerPlayerClass = Java.loadClass('net.minecraft.server.level.ServerPlayer')
+const SP_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
 
 // 血量分档：[最小, 最大]；普通 <50 / 精英 50~200（含）/ Boss >200
 function coinTier(maxHp) {
@@ -28,7 +28,7 @@ EntityEvents.drops(event => {
   if (!ent || !ent.type || String(ent.type).indexOf('spore:') !== 0) return
   if (!ent.monster) return                                  // 只掉敌对生物（kjs$isMonster）
   const killer = event.source ? event.source.entity : null
-  if (!killer || !killer.player || !(killer instanceof ServerPlayerClass)) return   // 只认玩家击杀
+  if (!killer || !killer.player || !(killer instanceof SP_ServerPlayer)) return   // 只认玩家击杀
   const tier = coinTier(ent.maxHealth)
   const n = tier[0] + Math.floor(Math.random() * (tier[1] - tier[0] + 1))
   const drop = event.addDrop(Item.of('kubejs:spore_coin', n))
@@ -58,7 +58,8 @@ EntityEvents.drops(event => {
 
   let trades
   try {
-    const f = VillagerTrades.class.getDeclaredField('f_35627_')   // VillagerTrades.TRADES（javap 实证）
+    const VTClass = Java.loadClass('java.lang.Class').forName('net.minecraft.world.entity.npc.VillagerTrades')
+    const f = VTClass.getDeclaredField('f_35627_')   // VillagerTrades.TRADES（javap 实证）
     f.setAccessible(true)
     trades = f.get(null)
   } catch (e) {
