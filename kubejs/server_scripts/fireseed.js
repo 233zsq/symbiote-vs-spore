@@ -3,10 +3,11 @@
 //   右键村民（手持 kubejs:fireseed_token）→ 绑定为火种（改名"火种"），消耗 1 工具，
 //   立刻获得该村民当前最贵可交易物品 ×1（职业等级越高奖励越肥的落地件）
 //   每人最多绑定 5 个火种；绑定记录存玩家 persistentData（uuid|毫秒 时间戳）
-//   火种村民死亡 → 扣绑定者真菌币（连续死亡递减 100%/50%/25%…）；绑定者不在线 → TODO 文明度处罚
+//   火种村民死亡 → 扣绑定者真菌币（连续死亡递减 100%/50%/25%…）；绑定者不在线 → 文明度 -10（civillis BaseScoreApi）
 //   绑定者超过 7 天未上线 → 登录时自动解绑（文明不降级）
+//   文明强度（决议一-2）：绑定 → 村民周边 ±64 格 +5 分；死亡/解绑 → 撤分
 // 多人/经济逻辑，K3 亲写（分工规则）。数值为初版默认，实测可调。
-// 已知简化（TODO）：绑定者离线时的文明度处罚待 civillis API 接入；绑定期奖励只发一次。
+// 已知简化（TODO）：绑定期奖励只发一次；文明分区域为村民位置 ±64 近似，未对齐城镇中心实际边界。
 
 const FS_TOKEN = 'kubejs:fireseed_token'
 const FS_COIN = 'kubejs:spore_coin'
@@ -32,6 +33,39 @@ function fsSave(player, list) {
 }
 function fsNowMs() {
   return String(Java.loadClass('java.lang.System').currentTimeMillis())
+}
+
+// ── civillis 文明强度挂钩（BaseScoreApi 公开静态方法，反编译实证）──
+// 绑定 → 村民周边 ±64 格区域 +5 分（sourceKey=svs_fireseed_<村民uuid>）；
+// 死亡/解绑 → remove(sourceKey) 撤分；绑定者离线死亡 → 另加 -10 分区（决议一-5 文明小幅下降）
+const FS_SCORE_BIND = 5
+const FS_SCORE_DEAD = -10
+const FS_SCORE_RANGE = 64
+let FS_BaseScoreApi = null
+let FS_BlockPos = null
+try {
+  FS_BaseScoreApi = Java.loadClass('civil.civilization.BaseScoreApi')
+  FS_BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+} catch (e) {
+  console.warn('[SVS-火种] civillis BaseScoreApi 不可用，文明强度挂钩关闭: ' + e)
+}
+function fsScoreKey(uuid) { return 'svs_fireseed_' + uuid }
+function fsScoreAdd(entity, value, key) {
+  if (!FS_BaseScoreApi) return
+  try {
+    const x = entity.x, y = entity.y, z = entity.z
+    const min = new FS_BlockPos(x - FS_SCORE_RANGE, y - 32, z - FS_SCORE_RANGE)
+    const max = new FS_BlockPos(x + FS_SCORE_RANGE, y + 32, z + FS_SCORE_RANGE)
+    FS_BaseScoreApi.add(entity.level, min, max, value, key)
+  } catch (e) {
+    fsLog('文明强度写入失败(' + key + '): ' + e)
+  }
+}
+function fsScoreRemove(key) {
+  if (!FS_BaseScoreApi) return
+  try { FS_BaseScoreApi.remove(key) } catch (e) {
+    fsLog('文明强度移除失败(' + key + '): ' + e)
+  }
 }
 
 // 取村民当前最贵可交易物品（按买价总数量估价），返回结果物品或 null
@@ -99,6 +133,9 @@ ItemEvents.entityInteracted(event => {
   list.push(uuid + '|' + fsNowMs())
   fsSave(player, list)
 
+  // 文明强度 +N（绑定即加分，区域 = 村民周边）
+  fsScoreAdd(target, FS_SCORE_BIND, fsScoreKey(uuid))
+
   // 奖励：该村民当前最贵可交易物品 ×1
   const ware = fsPriciestWare(target)
   if (ware && !ware.isEmpty()) {
@@ -118,17 +155,22 @@ EntityEvents.death(event => {
   try { ownerUuid = mob.getPersistentData().getString('svs_fireseed_owner') } catch (e) { return }
   if (!ownerUuid) return
 
+  // 火种熄灭：绑定带来的文明加分先撤掉（在线离线都撤）
+  const mobUuid = String(mob.getUUID())
+  fsScoreRemove(fsScoreKey(mobUuid))
+
   // 连续死亡递减（绑定者侧 streak，跨火种累计；0=首死全额 / 1=50% / >=2=25%）
 
-  // 找绑定者（在线才扣钱；离线 → TODO 文明度处罚）
+  // 找绑定者（在线才扣钱；离线 → 文明度处罚）
   const players = event.server.getPlayers()
   let owner = null
   for (let i = 0; i < players.size(); i++) {
     if (String(players.get(i).getUUID()) === ownerUuid) { owner = players.get(i); break }
   }
   if (!owner) {
-    // TODO(civillis): 绑定者离线 → 村庄文明等级小幅下降，待文明 API 接入
-    fsLog('火种死亡（绑定者离线，文明度处罚待接入）: ' + ownerUuid)
+    // 绑定者离线 → 村庄文明等级小幅下降（决议一-5）：死亡点区域追加负分区
+    fsScoreAdd(mob, FS_SCORE_DEAD, 'svs_fireseed_dead_' + mobUuid)
+    fsLog('火种死亡（绑定者离线，文明度 ' + FS_SCORE_DEAD + '）: ' + ownerUuid)
     return
   }
 
@@ -166,6 +208,12 @@ PlayerEvents.loggedIn(event => {
     return (Date.now() - ms) < FS_OFFLINE_DAYS * 86400000
   })
   if (kept.length !== list.length) {
+    // 解绑的同时撤掉文明加分（remove 只需 key，无需村民坐标）
+    let dropped = null
+    for (let i = 0; i < list.length; i++) {
+      dropped = list[i]
+      if (kept.indexOf(dropped) < 0) fsScoreRemove(fsScoreKey(dropped.split('|')[0]))
+    }
     fsSave(player, kept)
     fsTell(player, '§7久违了……§8有 ' + (list.length - kept.length) + ' 个火种因你 ' + FS_OFFLINE_DAYS + ' 天未归而熄灭。')
   }
