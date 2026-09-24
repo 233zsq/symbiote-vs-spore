@@ -11,6 +11,7 @@
 
 
 const SP_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
+const SP_Monster = Java.loadClass('net.minecraft.world.entity.monster.Monster')
 
 // 血量分档：[最小, 最大]；普通 <50 / 精英 50~200（含）/ Boss >200
 function coinTier(maxHp) {
@@ -26,7 +27,7 @@ function coinTier(maxHp) {
 EntityEvents.drops(event => {
   const ent = event.entity
   if (!ent || !ent.type || String(ent.type).indexOf('spore:') !== 0) return
-  if (!ent.monster) return                                  // 只掉敌对生物（kjs$isMonster）
+  if (!(ent instanceof SP_Monster)) return                  // 只掉敌对生物（instanceof Monster，属性存在性实踩过）
   const killer = event.source ? event.source.entity : null
   if (!killer || !killer.player || !(killer instanceof SP_ServerPlayer)) return   // 只认玩家击杀
   const tier = coinTier(ent.maxHealth)
