@@ -6,9 +6,11 @@
 //   ③ 村民交易：农民加 12 币→8 匠魂 grout，工具匠加 20 币→1 火种绑定工具（kubejs:fireseed_token）
 // 环境（开包实证）：KubeJS 2001.6.5(Rhino) + Forge 47.4.23（1.20.1，运行时 SRG 名）；
 //   TConstruct 3.12（tconstruct:grout ✓）、spore 2.2.0j、spore_inquisition 3.1、symbiote 1.1.3。
-//   包内无 MoreJS、KubeJS 无原生村民交易事件 → 交易改原版 VillagerTrades.TRADES
-//   （public static final，SRG 字段名 f_35627_，NativeJavaClass 直接读；java.lang.Class 反射
-//   会被 Rhino 类过滤器拦截），职业从 ForgeRegistries.VILLAGER_PROFESSIONS 按 id 取，不猜 SRG 名。
+//   包内无 MoreJS，但 Forge 有原生 VillagerTradesEvent（KubeJS ForgeEvents.onEvent 可监听），
+//   每村民生成交易时向 1 级列表追加即可，完全不碰原版 TRADES 内部表。
+//   成员名一律写 mojmap——KubeJS Rhino 生产环境自动 remap 到 SRG；直写 SRG 名（f_35627_）
+//   反而查不到成员（2026-09-24 22:39 实踩 no public instance field），java.lang.Class/reflect
+//   反射则被类过滤器拦截，两条路都不要走。
 
 
 const SP_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
@@ -43,52 +45,24 @@ EntityEvents.drops(event => {
 })
 
 // ── 村民交易 ─────────────────────────────────────────────────────────────────
-// 方案：NativeJavaClass 直读 VillagerTrades.TRADES（SRG f_35627_）。外层 Map 不可变、内层
-// Int2ObjectMap 可变（原版数据包 trades.json 重载即走此路径），故只对目标职业 put 追加，不动其他行。
-// 职业定位走 ForgeRegistries.VILLAGER_PROFESSIONS 按 id 取；java.lang.Class / reflect 路径会被
-// Rhino 类过滤器拦截（2026-09-24 22:05 实踩），一律绕开。
+// 方案：Forge 原生 VillagerTradesEvent（每个村民生成交易时触发），向 1 级交易列表追加。
+// 职业判别：ForgeRegistries.VILLAGER_PROFESSIONS.getKey(职业) 按 id 比对。
+// 全部成员访问写 mojmap 名，交给 KubeJS Rhino 自动 remap（见文件头注释）。
 ;(function registerVillagerTrades() {
-  let VillagerTrades, ItemListing, MerchantOffer
+  let ItemListing, MerchantOffer, ForgeRegistries, JInteger
   try {
-    VillagerTrades = Java.loadClass('net.minecraft.world.entity.npc.VillagerTrades')
     ItemListing = Java.loadClass('net.minecraft.world.entity.npc.VillagerTrades$ItemListing')
     MerchantOffer = Java.loadClass('net.minecraft.world.item.trading.MerchantOffer')
+    ForgeRegistries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')
+    JInteger = Java.loadClass('java.lang.Integer')
   } catch (e) {
     console.error('[SVS-真菌币] 原版交易类加载失败，村民交易跳过: ' + e)
     return
   }
 
-  let trades
-  try {
-    // TRADES 是 public static final，NativeJavaClass 可直接读静态字段。
-    // 不要走 java.lang.Class.forName 反射——Rhino 类过滤器拦截 java.lang.Class（22:05 实踩报错）。
-    // 生产运行时是 SRG 名 f_35627_，开发环境回退 mojmap 名 TRADES。
-    trades = VillagerTrades.f_35627_ || VillagerTrades.TRADES
-    if (!trades) throw new Error('TRADES 字段读取为空')
-  } catch (e) {
-    console.error('[SVS-真菌币] TRADES(f_35627_) 读取失败，村民交易跳过: ' + e)
-    return
-  }
-
-  // 职业定位走 Forge 注册表按 id 取，避免 getClass()/方法反射扫描（同属被过滤的 java.lang.Class 路径）
-  let farmer = null, toolsmith = null
-  try {
-    const ForgeRegistries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')
-    const ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
-    const profReg = ForgeRegistries.VILLAGER_PROFESSIONS
-    farmer = profReg.getValue(new ResourceLocation('minecraft:farmer'))
-    toolsmith = profReg.getValue(new ResourceLocation('minecraft:toolsmith'))
-  } catch (e) {
-    console.error('[SVS-真菌币] 职业注册表读取失败，村民交易跳过: ' + e)
-    return
-  }
-  if (!farmer || !toolsmith) {
-    console.error('[SVS-真菌币] 未定位到农民/工具匠职业，村民交易跳过')
-    return
-  }
-
-  // ItemListing 是 SAM 接口（运行时方法名 m_213663_ = 源码 getOffer(Entity, RandomSource)）。
+  // ItemListing 是 SAM 接口（getOffer(Entity, RandomSource)）。
   // 用"函数→SAM"适配避免在代码里写死 SRG 方法名；new 不可用则退 JavaAdapter，都失败只报错不崩。
+  // 注意：factory 每次调用 new MerchantOffer——同一个 offer 实例不能复用给多个村民。
   function makeListing(factory) {
     try {
       return new ItemListing(function (trader, random) { return factory() })
@@ -102,48 +76,34 @@ EntityEvents.drops(event => {
     }
   }
 
-  // 数组扩容用 java.util.Arrays.copyOf（沿用原数组的 ItemListing[] 类型），
-  // 避开 java.lang.reflect.Array.newInstance——reflect 包与 java.lang.Class 同属 Rhino 类过滤器高危区。
-  const JArrays = Java.loadClass('java.util.Arrays')
+  // TODO(K3-调参): maxUses=9999、villagerXp=2、priceMult=0.05 为初版数值
+  // 第二价用空气堆（isEmpty）等效单件收购，避开 ItemStack.EMPTY 的字段名。
+  const farmerListing = makeListing(function () {
+    return new MerchantOffer(Item.of('kubejs:spore_coin', 12), Item.of('minecraft:air'), Item.of('tconstruct:grout', 8), 9999, 2, 0.05)
+  })
+  const toolsmithListing = makeListing(function () {
+    return new MerchantOffer(Item.of('kubejs:spore_coin', 20), Item.of('minecraft:air'), Item.of('kubejs:fireseed_token', 1), 9999, 2, 0.05)
+  })
+  if (!farmerListing || !toolsmithListing) return
 
-  function addTrade(profession, level, listing) {
-    if (!listing) return
+  ForgeEvents.onEvent('net.minecraftforge.event.village.VillagerTradesEvent', event => {
     try {
-      const intMap = trades.get(profession)
-      if (!intMap) {
-        console.error('[SVS-真菌币] 职业无交易表，跳过: ' + profession)
+      const key = String(ForgeRegistries.VILLAGER_PROFESSIONS.getKey(event.type))
+      let listing = null
+      if (key === 'minecraft:farmer') listing = farmerListing
+      else if (key === 'minecraft:toolsmith') listing = toolsmithListing
+      if (!listing) return
+      // getTrades() 是 Int2ObjectMap<List<ItemListing>>；用 Integer 装箱明确走 get(Object)，
+      // 避免 Rhino 在 get(int)/get(Object) 重载间选错
+      const list = event.trades.get(JInteger.valueOf(1))
+      if (!list) {
+        console.warn('[SVS-真菌币] ' + key + ' 无 1 级交易列表，本村民跳过')
         return
       }
-      const old = intMap.get(level)
-      let out
-      if (old) {
-        out = JArrays.copyOf(old, old.length + 1)
-        out[old.length] = listing
-      } else {
-        // 该等级原本无交易（农民/工具匠 1 级不会出现，仅兜底）：
-        // 从相邻等级借数组类型做 copyOf 长度 0 基底
-        let anyArr = null
-        const lvIt = intMap.keySet().iterator()
-        while (lvIt.hasNext() && !anyArr) { anyArr = intMap.get(lvIt.next()) }
-        if (!anyArr) throw new Error('该职业交易表为空，无法构造数组')
-        out = JArrays.copyOf(anyArr, 1)
-        out[0] = listing
-      }
-      intMap.put(level, out)
+      list.add(listing)
     } catch (e) {
-      console.error('[SVS-真菌币] 追加交易失败: ' + e)
+      console.error('[SVS-真菌币] 村民交易追加失败: ' + e)
     }
-  }
-
-  // TODO(K3-审改): 规格写"农民/工具匠各加 1 条"，按"农民一条 grout、工具匠一条火种工具"理解；
-  // 若要求两条都挂两个职业，把下面两行各自再 addTrade 一次即可。
-  // TODO(K3-调参): maxUses=9999、villagerXp=2、priceMult=0.05 为初版数值
-  // 第二价用空气堆（isEmpty）等效单件收购，避开 ItemStack.EMPTY 的 SRG 字段名。
-  addTrade(farmer, 1, makeListing(function () {
-    return new MerchantOffer(Item.of('kubejs:spore_coin', 12), Item.of('minecraft:air'), Item.of('tconstruct:grout', 8), 9999, 2, 0.05)
-  }))
-  addTrade(toolsmith, 1, makeListing(function () {
-    return new MerchantOffer(Item.of('kubejs:spore_coin', 20), Item.of('minecraft:air'), Item.of('kubejs:fireseed_token', 1), 9999, 2, 0.05)
-  }))
-  console.info('[SVS-真菌币] 村民交易已追加：农民 12币→8grout，工具匠 20币→1火种绑定工具')
+  })
+  console.info('[SVS-真菌币] 村民交易监听已挂：农民 12币→8grout，工具匠 20币→1火种绑定工具')
 })()
