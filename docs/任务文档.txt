@@ -42,7 +42,7 @@
 ## 任务四：查询所有 mod 的 mc百科和 CurseForge，查看这些 mod 有什么 bug、槽点等问题，做成清单（已完成，见 docs/mod_bug清单.md，2026-09-24 纯网络调研版；内容型 mod 逐个查评论区，工具/库/性能类只查已知恶名）。
 ## 任务五（新增，随魔改推进）：落地上述设计——配置/数据包/KubeJS/自研 tweak mod 各按分工实现；已知问题修复见下。
   - 进度与交接以 docs/HANDOVER.md 为准（每次会话更新）；魔改设计定稿见 docs/魔改设计决议.md。
-  - 一期已落地：LootBeams 静音、InControl 难度规则、FTB 序章难度三选、KubeJS 五脚本（真菌币/个人难度/共生体克制真菌/火种绑定）、血源 6 武器 EF 适配、POTB 粒子崩溃资源包修复、d&c 等 28 命名空间补译 1048 条。
+  - 一期已落地：LootBeams 静音、InControl 难度规则、FTB 序章难度三选、KubeJS 五脚本（真菌币/个人难度/共生体克制真菌/火种绑定）、血源 6 武器 EF 适配、POTB 崩溃根治（置空 blade_config_tag 实体标签）、d&c 等 28 命名空间补译 1048 条。
 
 # 已知问题（请在整合包中落实解决方案）
 1. 战利品光束 mod：默认设定稀有物品落地会播放尖锐的磨刀音效，物品卡进方块会反复判定导致一直响，且右下角字幕不显示。解决：在该 mod 配置的 Sounds 里关闭 Play Sounds。**（已落实：config/lootbeams-client.toml `sounds=false`）**
