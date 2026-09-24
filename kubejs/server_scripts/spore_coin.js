@@ -9,7 +9,6 @@
 //   包内无 MoreJS、KubeJS 无原生村民交易事件 → 交易走反射改原版 VillagerTrades.TRADES
 //   （SRG 字段名 f_35627_，javap 实证），职业与 SAM 均按签名/函数适配定位，不猜 SRG 名。
 
- ─────────────────────────────────────────────────────────────────────────────
 
 const ServerPlayerClass = Java.loadClass('net.minecraft.server.level.ServerPlayer')
 
