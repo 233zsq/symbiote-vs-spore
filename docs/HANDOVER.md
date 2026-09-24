@@ -62,7 +62,7 @@
 
 1. ~~合并 d&c 补译~~ **已完成**（见四-#6）；注意：副本里还有约 60 个 ns 的汉化目录未进 git 仓库（仓库只收了本次改的 28 个），下次大同步时一并 commit
 2. 通知用户复测（**重点**：`Loaded 5/5 0 errors`、真菌币掉落、**村民交易（农民12币→8grout/工具匠20币→火种工具，本次新修）**、/svs difficulty、FTB 任务、索敌、d&c 汉化、POTB 是否还崩）
-3. **二期**：围城事件 + HUD 天数计时器（7日周期/回村5分钟预警/不强加载，规格在决议）→ 铁魔法禁用清单 → Gateways 连战+武器解锁
+3. **二期**：~~围城事件 + HUD 天数计时器~~ **初版已落地**（`siege.js`，commit e7937ba：7日倒计时/在村才走（村民≥3+主世界）/回村回拨5分钟/Painter HUD/波次 8+2递增+14天起掺精英；待实测）→ 失守惩罚（文明降级+均摊扣款，决议一-5）→ 铁魔法禁用清单 → Gateways 连战+武器解锁。共生体侧可读的围城态：persistentData `svs_siege_active_until`（决议五-3 压力联动备用）
 4. 打 test6.zip（打包脚本同 test5 版，版本号改 test6）
 5. 自研 tweak mod 待办清单：结构距出生点生成限制、ASTages 坏文件容错、mixin 冲突合规化、POTB jar 层根治
 6. bug 清单遗留：Blood And Madness TPS 性能+2武器EF适配、BOMD 虚空之花崩档、Relics×真菌 CME、真菌飞行怪崩档（等初版实测复现后 BadMobs 禁）
