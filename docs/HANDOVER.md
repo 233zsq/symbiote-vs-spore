@@ -60,6 +60,7 @@
 
 ## 五、待办（按优先级）
 
+0. **难度体系·单次受伤上限已落地**（决议一-4，commit a935fce）：灾变 Boss 用原生 config（DOTE 值 22/22/20，新 Boss 同档 22）；其余 HP≥200 精英/Boss KubeJS cap 10%；母巢模板 8%+爬升 90%+停手衰减（名单 6 只 spore 天灾级，TODO 确认）。`damage_caps.js` 进包后脚本总数 7。注意：仓库 config/ 缺 cataclysm.toml（配置只在副本/test4，大同步时补）
 0. **结构密度提纯已落地**（决议一-6 远梦方案，commit 见日志）：svs_tweak 新增 StructureCheckDensityMixin——75 格（≈5 区块半径）最多 1 结构，记录存维度 SavedData 只进不出；白名单=陨石+灾变 8 座+竞技场 3 座（通行且不占坑），忽略=roadweaver 全线/原版村庄/小型点缀/匠魂浮空岛；**黑名单留空待用户裁决**（候选：shipwreck、mineshaft）
 
 1. ~~合并 d&c 补译~~ **已完成**（见四-#6）；注意：副本里还有约 60 个 ns 的汉化目录未进 git 仓库（仓库只收了本次改的 28 个），下次大同步时一并 commit
