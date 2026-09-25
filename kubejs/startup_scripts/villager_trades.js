@@ -1,24 +1,29 @@
 // villager_trades.js — 村民交易注册（魔改第一期 · 规格 1③）
 //   农民加 12 币→8 匠魂 grout，工具匠加 20 币→1 火种绑定工具（kubejs:fireseed_token），
 //   制图师加 15 币→共生体陨石线索成书（理念 1"交易获得结构线索"，交易时实时寻址）。
-// ⚠️ 必须在 startup 脚本：ForgeEvents 绑定只在 ScriptType.isStartup() 注入
-//   （BuiltinKubeJSForgePlugin.registerBindings 字节码实证），server 脚本里 ForgeEvents
-//   是 not defined——本段此前放 spore_coin.js(server) 导致 8/9 加载中断，交易全灭。
-// 方案：Forge 原生 VillagerTradesEvent（每个村民生成交易时触发），向 1 级交易列表追加。
-// 职业判别：ForgeRegistries.VILLAGER_PROFESSIONS.getKey(职业) 按 id 比对。
-// 成员名一律写 mojmap——KubeJS Rhino 生产环境自动 remap 到 SRG；直写 SRG 名反而查不到
-// （2026-09-24 实踩），java.lang.Class/reflect 反射则被类过滤器拦截。
-// TODO(K3-调参): maxUses=16（评审修正：9999 无限兑会削掉匠魂保底线靠打 Boss 补材料的定位）、villagerXp=2、priceMult=0.05
+//
+// ⚠️ 两条实踩（2026-09-25，crash-2026-09-25_22.17.08-server.txt）：
+//   ① 别碰 VillagerTradesEvent 的 trades：它是 fastutil Int2ObjectMap，KubeJS Rhino 会把它
+//      包成 NativeJavaMap，**任何属性访问都会走 map.containsKey(String)** →
+//      ClassCastException（NativeJavaMap.java:55 → Int2ObjectFunction.containsKey）。
+//      该异常产生于 Rhino 内部而非反射调用，**JS try/catch 兜不住**，Forge 总线记录后重抛 → 崩服。
+//   ② 故改走 architectury 的 TradeRegistry（本包已装 architectury-9.2.14-forge）：
+//      纯静态方法登记，由 architectury 自己在 VillagerTradesEvent 里合并进各职业表，JS 侧零 Map 访问。
+//      登记必须在世界加载（ServerAboutToStart → VillagerTradingManager.loadTrades）之前完成，
+//      所以本文件留在 startup_scripts（server 脚本加载太晚）。
+// TODO(K3-调参): maxUses=16（评审修正：9999 无限兑会削掉"匠魂保底线靠打 Boss 补材料"的定位）、
+//   villagerXp=2、priceMult=0.05
 
 ;(function registerVillagerTrades() {
-  let ItemListing, MerchantOffer, ForgeRegistries, JInteger
+  let ItemListing, MerchantOffer, ForgeRegistries, TradeRegistry, ResourceLocation
   try {
     ItemListing = Java.loadClass('net.minecraft.world.entity.npc.VillagerTrades$ItemListing')
     MerchantOffer = Java.loadClass('net.minecraft.world.item.trading.MerchantOffer')
     ForgeRegistries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')
-    JInteger = Java.loadClass('java.lang.Integer')
+    TradeRegistry = Java.loadClass('dev.architectury.registry.level.entity.trade.TradeRegistry')
+    ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
   } catch (e) {
-    console.error('[SVS-真菌币] 原版交易类加载失败，村民交易跳过: ' + e)
+    console.error('[SVS-真菌币] 交易依赖类加载失败，村民交易跳过: ' + e)
     return
   }
 
@@ -37,32 +42,7 @@
       }
     }
   }
-
-  // 第二价用空气堆（isEmpty）等效单件收购，避开 ItemStack.EMPTY 的字段名。
-  const farmerListing = makeListing(function () {
-    return new MerchantOffer(Item.of('kubejs:spore_coin', 12), Item.of('minecraft:air'), Item.of('tconstruct:grout', 8), 16, 2, 0.05)
-  })
-  const toolsmithListing = makeListing(function () {
-    return new MerchantOffer(Item.of('kubejs:spore_coin', 20), Item.of('minecraft:air'), Item.of('kubejs:fireseed_token', 1), 16, 2, 0.05)
-  })
-  if (!farmerListing || !toolsmithListing) return
-
-  // 共生体陨石线索（理念 1：交易获得结构线索）：制图师 15 币 → 成书，
-  // 交易瞬间按制图师位置计算最近陨石坐标写入书页。
-  // 初版用成书不用探索地图（vanilla TreasureMapForEmeralds 强绑绿宝石+指南针计价链，
-  // 自绘地图链路长；成书承载同等信息，TODO 升级真地图）。
-  let ResourceKey, ResourceLocation, Registries, HolderSet
-  try {
-    ResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
-    ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
-    Registries = Java.loadClass('net.minecraft.core.registries.Registries')
-    HolderSet = Java.loadClass('net.minecraft.core.HolderSet')
-  } catch (e) {
-    console.error('[SVS-真菌币] 线索书依赖类加载失败，制图师交易跳过: ' + e)
-    ResourceKey = null
-  }
-
-  // 带 trader 上下文的 SAM 适配（与 makeListing 同构，多传 trader 用于定位）
+  // 带 trader 上下文的变体（制图师要用交易者位置实时寻址陨石）
   function makeListingCtx(factory) {
     try {
       return new ItemListing(function (trader, random) { return factory(trader) })
@@ -76,8 +56,31 @@
     }
   }
 
+  // 第二价用空气堆（isEmpty）等效单件收购，避开 ItemStack.EMPTY 的字段名。
+  const farmerListing = makeListing(function () {
+    return new MerchantOffer(Item.of('kubejs:spore_coin', 12), Item.of('minecraft:air'), Item.of('tconstruct:grout', 8), 16, 2, 0.05)
+  })
+  const toolsmithListing = makeListing(function () {
+    return new MerchantOffer(Item.of('kubejs:spore_coin', 20), Item.of('minecraft:air'), Item.of('kubejs:fireseed_token', 1), 16, 2, 0.05)
+  })
+  if (!farmerListing || !toolsmithListing) return
+
+  // 共生体陨石线索（理念 1：交易获得结构线索）：制图师 15 币 → 成书，
+  // 交易瞬间按交易者位置计算最近陨石坐标写入书页。
+  // 初版用成书不用探索地图（vanilla TreasureMapForEmeralds 强绑绿宝石+指南针计价链，
+  // 自绘地图链路长；成书承载同等信息，TODO 升级真地图）。
+  let ResourceKey, Registries, HolderSet
+  try {
+    ResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
+    Registries = Java.loadClass('net.minecraft.core.registries.Registries')
+    HolderSet = Java.loadClass('net.minecraft.core.HolderSet')
+  } catch (e) {
+    console.error('[SVS-真菌币] 线索书依赖类加载失败，制图师交易跳过: ' + e)
+    ResourceKey = null
+  }
+
   const cartographerListing = ResourceKey ? makeListingCtx(function (trader) {
-    // Rhino 守则：块内不声明 const/let（本工厂每个村民调用一次，第二次即抛 redeclaration）
+    // Rhino 守则：块（try）内不声明 const/let（第二次执行抛 redeclaration）→ 声明提到函数最外层
     let lv = null, sReg = null, sHolder = null, found = null, bp = null
     let text = '', page = '', book = null
     try {
@@ -101,27 +104,25 @@
     }
   }) : null
 
-  ForgeEvents.onEvent('net.minecraftforge.event.village.VillagerTradesEvent', event => {
-    // Rhino 守则：块内不声明 const/let——本事件每村民触发一次，
-    // 第二次执行即抛 redeclaration（曾实测 ×41 次「村民交易追加失败」= 交易全灭）
-    let key = '', listing = null, list = null
-    try {
-      key = String(ForgeRegistries.VILLAGER_PROFESSIONS.getKey(event.type))
-      if (key === 'minecraft:farmer') listing = farmerListing
-      else if (key === 'minecraft:toolsmith') listing = toolsmithListing
-      else if (key === 'minecraft:cartographer') listing = cartographerListing
-      if (!listing) return
-      // getTrades() 是 Int2ObjectMap<List<ItemListing>>；用 Integer 装箱明确走 get(Object)，
-      // 避免 Rhino 在 get(int)/get(Object) 重载间选错
-      list = event.trades.get(JInteger.valueOf(1))
-      if (!list) {
-        console.warn('[SVS-真菌币] ' + key + ' 无 1 级交易列表，本村民跳过')
-        return
-      }
-      list.add(listing)
-    } catch (e) {
-      console.error('[SVS-真菌币] 村民交易追加失败: ' + e)
+  // ── 登记（architectury 静态 API；见文件头 ②）────────────────────────────────
+  const VILLAGER_PROFESSIONS = ForgeRegistries.VILLAGER_PROFESSIONS
+  function registerTrade(profId, listing) {
+    const prof = VILLAGER_PROFESSIONS.getValue(new ResourceLocation('minecraft', profId))
+    if (!prof) {
+      console.error('[SVS-真菌币] 职业 id 不存在，交易跳过: ' + profId)
+      return false
     }
-  })
-  console.info('[SVS-真菌币] 村民交易监听已挂：农民 12币→8grout，工具匠 20币→1火种绑定工具，制图师 15币→陨石线索书')
+    try {
+      TradeRegistry.registerVillagerTrade(prof, 1, listing)
+      return true
+    } catch (e) {
+      console.error('[SVS-真菌币] 交易登记失败(' + profId + '): ' + e)
+      return false
+    }
+  }
+  const okFarmer = registerTrade('farmer', farmerListing)
+  const okToolsmith = registerTrade('toolsmith', toolsmithListing)
+  const okCartographer = cartographerListing ? registerTrade('cartographer', cartographerListing) : false
+  console.info('[SVS-真菌币] 村民交易登记：农民 ' + okFarmer + ' / 工具匠 ' + okToolsmith + ' / 制图师 ' + okCartographer +
+    '（12币→8grout、20币→1火种工具、15币→陨石线索书；maxUses=16）')
 })()
