@@ -58,6 +58,18 @@
 - **symbiote_counter 确认修好**：22:42 日志无 tick 刷屏错误（#8 索敌/卡顿复测通过一半，剩游戏内体感确认）
 - 无害噪音（不修）：fancymenu 枚举 6 个 ns 资源失败、epic_fight_avalon 1 个空 JSON、l2weaponry 3 个 cloggrum 武器 JSON 解析失败、EF 一批 "Skill xxx doesn't exist"（mod 自带引用缺失技能）、woc_remastered refmap 警告
 
+## 四点六、外部评审 P0 修复（2026-09-25，commit 9c3d3fe）
+
+评审实证此前"已交付"的 5 项实际全部静默失效，根因与修复：
+- **ForgeEvents 只注入 startup 脚本**（字节码实证）→ 村民交易迁至 `startup/villager_trades.js`（此前 8/9 + not defined）
+- **Rhino 循环体 const/let 重声明**：symbiote_counter#236 ×649、symbiote_stages#82 ×616 → 全部提升出循环
+- **getUUID 在非玩家实体解析失败** ×199 → 队列改数组；fireseed 村民改自发 `svs_fireseed_id`
+- **difficulty.js 用 event.commands**（loadClass Commands 触发 'java()' LegacyError ×18，FTB 难度三选此前无效）
+- **items.js 未部署**（任务线 4 物品引用 + stages.zs BEP 报错的根因）→ 已双写
+- 顺手修 symbiote_counter 方向B `ServerPlayerClass` 未定义引用
+- **血泪教训追加**：KubeJS 注入成员（.type/.player/.monster/.persistentData）可靠；原版继承方法（getUUID）对非玩家实体不可靠——实体标识一律用自发 pd id
+- 评审 P1 待办：cataclysm-common.toml 的 damage_cap 才是活配置（cataclysm.toml 死配置）、围城压力 3/s 爆表改 ≤1/s、远程加压被无敌帧吃掉（补刀 0.5P<P 无效）、增伤×限伤互相抵消（应统一 EF 原生钩子重构）、母巢名单应为 mound→proto 线、badmobs 6080 项全 true 空禁、可撤 blade_config_tag 置空（判空 mixin 已跑）
+
 ## 五、待办（按优先级）
 
 0. **共生体分期 1 数值加成已落地**（决议一-10，commit 0269960）：`symbiote_stages.js` 按 BondStage 挂穿甲（EF armor_negation +2~10%）/韧性（+1~6）/回复（每 5s 0.5~2 HP），并镜像 GameStage `svs_bond_*` 供门控。脚本总数 9。复测：9/9 0 errors + 融合后看属性栏
