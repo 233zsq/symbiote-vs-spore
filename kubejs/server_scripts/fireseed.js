@@ -104,13 +104,11 @@ ItemEvents.entityInteracted(event => {
     }
   } catch (e) { }
 
-  // 数量上限（含 7 天过期清理）
-  let list = fsLoad(player).filter(function (e2) {
-    const ms = parseInt(e2.split('|')[1], 10) || 0
-    return (Date.now() - ms) < FS_OFFLINE_DAYS * 86400000
-  })
+  // 数量上限（评审修正：不再按绑定时间戳过滤——7 天判定的是"绑定者离线时长"，
+  // 见 loggedIn/loggedOut 钩子；天天上线的玩家不应被解绑）
+  let list = fsLoad(player)
   if (list.length >= FS_MAX) {
-    fsTell(player, '§c火种已达上限（' + FS_MAX + '）。老火种死亡或 7 天未上线才会腾出名额。')
+    fsTell(player, '§c火种已达上限（' + FS_MAX + '）。老火种死亡或你连续 ' + FS_OFFLINE_DAYS + ' 天未上线才会腾出名额。')
     return
   }
 
@@ -204,22 +202,27 @@ EntityEvents.death(event => {
 })
 
 // ── 7 天未上线自动解绑（登录时清理）──────────────────────────────────────────
+// ── 7 天未上线自动解绑（决议一-5："绑定者 7 天未上线"——按离线时长，不按绑定时长）──
+// loggedOut 记下线时刻；loggedIn 算离线时长，超 7 天 → 全部火种熄灭（撤文明加分）
+PlayerEvents.loggedOut(event => {
+  try { event.player.getPersistentData().putString('svs_fs_last_logout', fsNowMs()) } catch (e) { }
+})
 PlayerEvents.loggedIn(event => {
   const player = event.player
   if (!player) return
   const list = fsLoad(player)
-  const kept = list.filter(function (e2) {
-    const ms = parseInt(e2.split('|')[1], 10) || 0
-    return (Date.now() - ms) < FS_OFFLINE_DAYS * 86400000
-  })
-  if (kept.length !== list.length) {
-    // 解绑的同时撤掉文明加分（remove 只需 key，无需村民坐标）
-    let dropped = null
-    for (let i = 0; i < list.length; i++) {
-      dropped = list[i]
-      if (kept.indexOf(dropped) < 0) fsScoreRemove(fsScoreKey(dropped.split('|')[0]))
-    }
-    fsSave(player, kept)
-    fsTell(player, '§7久违了……§8有 ' + (list.length - kept.length) + ' 个火种因你 ' + FS_OFFLINE_DAYS + ' 天未归而熄灭。')
+  if (list.length === 0) return
+  let lastMs = 0
+  try { lastMs = parseInt(player.getPersistentData().getString('svs_fs_last_logout'), 10) || 0 } catch (e) { }
+  if (lastMs <= 0) return                       // 首次登录/无记录，不清
+  const offlineMs = Date.now() - lastMs
+  if (offlineMs < FS_OFFLINE_DAYS * 86400000) return
+  // 解绑全部 + 撤文明加分（remove 只需 key，无需村民坐标）
+  let dropped = null
+  for (let i = 0; i < list.length; i++) {
+    dropped = list[i]
+    fsScoreRemove(fsScoreKey(dropped.split('|')[0]))
   }
+  fsSave(player, [])
+  fsTell(player, '§7久违了……§8有 ' + list.length + ' 个火种因你连续 ' + FS_OFFLINE_DAYS + ' 天未归而熄灭。')
 })

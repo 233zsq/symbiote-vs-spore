@@ -8,7 +8,7 @@
 // 职业判别：ForgeRegistries.VILLAGER_PROFESSIONS.getKey(职业) 按 id 比对。
 // 成员名一律写 mojmap——KubeJS Rhino 生产环境自动 remap 到 SRG；直写 SRG 名反而查不到
 // （2026-09-24 实踩），java.lang.Class/reflect 反射则被类过滤器拦截。
-// TODO(K3-调参): maxUses=9999、villagerXp=2、priceMult=0.05 为初版数值（限量/阶梯价见评审 P2）
+// TODO(K3-调参): maxUses=16（评审修正：9999 无限兑会削掉匠魂保底线靠打 Boss 补材料的定位）、villagerXp=2、priceMult=0.05
 
 ;(function registerVillagerTrades() {
   let ItemListing, MerchantOffer, ForgeRegistries, JInteger
@@ -40,10 +40,10 @@
 
   // 第二价用空气堆（isEmpty）等效单件收购，避开 ItemStack.EMPTY 的字段名。
   const farmerListing = makeListing(function () {
-    return new MerchantOffer(Item.of('kubejs:spore_coin', 12), Item.of('minecraft:air'), Item.of('tconstruct:grout', 8), 9999, 2, 0.05)
+    return new MerchantOffer(Item.of('kubejs:spore_coin', 12), Item.of('minecraft:air'), Item.of('tconstruct:grout', 8), 16, 2, 0.05)
   })
   const toolsmithListing = makeListing(function () {
-    return new MerchantOffer(Item.of('kubejs:spore_coin', 20), Item.of('minecraft:air'), Item.of('kubejs:fireseed_token', 1), 9999, 2, 0.05)
+    return new MerchantOffer(Item.of('kubejs:spore_coin', 20), Item.of('minecraft:air'), Item.of('kubejs:fireseed_token', 1), 16, 2, 0.05)
   })
   if (!farmerListing || !toolsmithListing) return
 
@@ -92,7 +92,7 @@
       }
       const page = '{"text":"' + text + '"}'
       const book = Item.of('minecraft:written_book', '{title:"共生体线索",author:"制图师",pages:[' + page + ']}')
-      return new MerchantOffer(Item.of('kubejs:spore_coin', 15), Item.of('minecraft:air'), book, 9999, 2, 0.05)
+      return new MerchantOffer(Item.of('kubejs:spore_coin', 15), Item.of('minecraft:air'), book, 16, 2, 0.05)
     } catch (e) {
       console.error('[SVS-真菌币] 线索书生成失败（本笔交易不生成）: ' + e)
       return null      // SAM 返回 null = 该交易位空缺，不崩

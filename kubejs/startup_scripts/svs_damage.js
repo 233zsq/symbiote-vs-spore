@@ -78,10 +78,11 @@
     }
 
     // ④ 限伤：精英/Boss 通用 10% cap + 母巢 8%+爬升（cataclysm 走原生 cap，跳过）
+    // 评审修正：只认敌对生物（Monster），中立/召唤物/坐骑不误伤；母巢名单例外（proto 是 organoid）
     if (!ent.player && type.indexOf(SKIP_NS) !== 0) {
       const maxHp = ent.maxHealth
       const isHive = HIVEMIND.indexOf(type) >= 0
-      if (maxHp >= ELITE_MIN_HP || isHive) {
+      if ((isHive || ent instanceof Monster) && (maxHp >= ELITE_MIN_HP || isHive)) {
         let cap = ELITE_CAP
         let rate = 0
         if (isHive) {

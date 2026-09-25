@@ -11,7 +11,15 @@ try {
   console.error('[SVS-难度] GameStageHelper 加载失败，仅 persistentData 兜底: ' + e)
 }
 
-function applyDifficultyOne(player, tier) {
+function applyDifficultyOne(player, tier, force) {
+  // 评审修正：序章三选"选一锁二"——已选定后本人不可再改（force=控制台覆盖不受限）
+  try {
+    const cur = String(player.getPersistentData().getString('svs_difficulty'))
+    if (!force && cur && cur !== tier) {
+      player.tell(Text.red('难度已锁定为 ' + cur + '（序章选择不可更改）'))
+      return
+    }
+  } catch (e) { }
   const stage = STAGE_PREFIX + tier
   try { player.getPersistentData().putString('svs_difficulty', tier) } catch (e) { }
   if (GameStageHelper) {
@@ -41,7 +49,7 @@ ServerEvents.commandRegistry(event => {
         // 控制台执行 → 全服在线玩家
         try {
           const players = ctx.source.getServer().getPlayerList().getPlayers()
-          for (let i = 0; i < players.size(); i++) applyDifficultyOne(players.get(i), t)
+          for (let i = 0; i < players.size(); i++) applyDifficultyOne(players.get(i), t, true)
         } catch (e) {
           console.error('[SVS-难度] 全服应用失败: ' + e)
         }
