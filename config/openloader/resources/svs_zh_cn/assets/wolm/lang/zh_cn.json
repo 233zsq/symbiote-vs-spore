@@ -1,0 +1,21 @@
+{
+  "skill.wolm.toxicus_obliteration.tooltip12": "§a§l狂怒充能坠落：§f传送至目标上方5.5格处，撞击地面并生成螺旋等离子球 §b（冷却：10秒 / 消耗1层）[向左/右闪避 + KEY3] ",
+  "skill.wolm.toxicus_obliteration.tooltip13": "§a§l幽灵之焰天降：§b[KEY4 + KEY4]，<仅首次攻击触发>（冷却：15秒 / 消耗1层）",
+  "skill.wolm.toxicus_obliteration_sword": "剧毒湮灭 ",
+  "skill.wolm.toxicus_obliteration.tooltip14": "§a-> 武装护卫 -§f 召唤湮灭者的分身掩护你，§o准备好闪避吧！§b[KEY4 + KEY4]",
+  "skill.wolm.toxicus_obliteration.tooltip15": "§a§l湮灭末日：§f终极攻击，立于原地以“X”形缓慢创造湮灭传送门，随后将其一次性激活，并释放大片毒云 §b（冷却：25秒 / 消耗3层）[KEY1_2]",
+  "skill.wolm.toxicus_obliteration.tooltip10": "§a§l熔融掷球：§f射出更大的绿球，命中时在落点周围生成较小的绿球 §b（无冷却 / 消耗1层）[向后闪避 + KEY3]",
+  "skill.wolm.toxicus_obliteration.tooltip11": "§a§l湮灭者围笼：§f在目标周围召唤8门湮灭者大炮，同时射出湮灭之球 §b（无冷却 / 消耗1层）[向前闪避 + KEY3] ",
+  "skill.wolm.toxicus_obliteration.tooltip5": "§a-> 快速斩击 -§f 稳定且命中良好 §b[KEY1] ",
+  "skill.wolm.toxicus_obliteration.tooltip6": "§a-> 燃起烈焰 -§f 踏地猛击，生成一小圈湮灭之火 §b[KEY3]",
+  "skill.wolm.toxicus_obliteration.tooltip3": "§a近战连击：§f连续挥斩后接火焰猛击 §b[KEY1 + KEY1 + KEY1 + KEY1]",
+  "skill.wolm.toxicus_obliteration.tooltip4": "§a冲刺上挑：§b[冲刺攻击]",
+  "skill.wolm.toxicus_obliteration.tooltip9": "§a§l湮灭火浪：§f踏地猛击，在玩家前方掀起绿色火焰波浪 §b（无冷却 / 消耗1层）[向后闪避 + KEY4]",
+  "skill.wolm.toxicus_obliteration.tooltip7": "§a-> 坠落猛击 -§f 传送至你的上方位置后猛击落地，生成中等范围的湮灭之火环 §b[KEY4]",
+  "skill.wolm.toxicus_obliteration.tooltip8": "§a掷球手：§f投掷单个湮灭之球，连续投掷次数取决于你拥有的技能层数 §e（最多连续投掷3次）§b（无冷却 / 至少需1层）[KEY3（+ KEY3）（+ KEY3）] ",
+  "skill.wolm.toxicus_obliteration_swordshield": "剧毒湮灭 ",
+  "skill.wolm.toxicus_obliteration.tooltip1": "§a超立方体§f是一把轻量级大剑，每次攻击都锋利无比，并能令对手燃烧。§o必须牢记的重点是：它的部分攻击可谓难以捉摸！",
+  "skill.wolm.toxicus_obliteration.tooltip16": "此外还有单手流派（超立方体 + 配盾），但仍处于早期开发阶段，你可以试试——只是部分攻击有所变化，大部分技能保留，但没有“湮灭末日”",
+  "skill.wolm.toxicus_obliteration.tooltip2": "§a湮灭者闪避 §e（被动）§f：你当前的闪避技能似乎与湮灭者闪避相融合，使闪避更加高效 §b(KEY_DODGE)",
+  "skill.wolm.toxicus_obliteration.tooltip13_2": "§a-> 爆发冲击 -§f 上挑并向前迸发能量球 §b[KEY1]"
+}

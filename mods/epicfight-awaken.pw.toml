@@ -1,8 +1,8 @@
 name = "EpicFight Awaken"
-filename = "epicfight_awaken-1.2.7.2-forge-1.20.1.jar"
+filename = "epicfight_awaken-1.2.7.3-forge-1.20.1.jar"
 side = "both"
 
 [download]
 url = "https://www.curseforge.com/minecraft/mc-mods/epicfight-awaken"
 hash-format = "sha512"
-hash = "7377682d2b10540214991c035d706663f7522890fb012982db37a07820c38c969df5e3866e93d27e59d0fb723b33615e1e4a485aa0df0fa169aa2f63075cc46e"
+hash = "6fbe403ba8eec1cab6a4737587a0117717b5e55625b0447411328bb6fa718014a64b1a127afb0e9e3fff7c3594caa6be2255c00322b624c0aaee0ceac5ed956f"

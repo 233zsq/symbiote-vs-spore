@@ -1,0 +1,189 @@
+{
+  "tooltip.slm_elements.attribute.space": " 命中时：",
+  "tooltip.slm_elements.attribute.type": " 伤害类型： ",
+  "tooltip.slm_elements.attribute.type.space": " 特性： ",
+  "tooltip.slm_elements.attribute.type.buff": " 优势： ",
+  "tooltip.slm_elements.attribute.type.debuff": " 劣势： ",
+
+
+  "tooltip.slm_elements.attribute.type.physical": "基础伤害会被目标的抗性削减。",
+  "tooltip.slm_elements.attribute.type.physical.desc_buff": "",
+  "tooltip.slm_elements.attribute.type.physical.desc_debuff": "",
+
+  "tooltip.slm_elements.attribute.type.ignis": "对护甲较薄的敌人造成更高伤害，对重甲敌人则更低。",
+  "tooltip.slm_elements.attribute.type.ignis.desc_buff": "目标护甲越低伤害提升越多，最高+25%（护甲0–20）。",
+  "tooltip.slm_elements.attribute.type.ignis.desc_debuff": "目标护甲超过20时，伤害降低10%。",
+
+  "tooltip.slm_elements.attribute.type.aqua": "对最大生命值较低的目标造成额外伤害。",
+  "tooltip.slm_elements.attribute.type.aqua.desc_buff": "目标最大生命值较低时伤害提升，最高+20%（60点至0点生命值）。",
+  "tooltip.slm_elements.attribute.type.aqua.desc_debuff": "目标最大生命值极高（60点以上）时，伤害降低10%。",
+
+  "tooltip.slm_elements.attribute.type.frost": "目标最大生命值越高，造成的伤害越高。",
+  "tooltip.slm_elements.attribute.type.frost.desc_buff": "根据目标最大生命值提升伤害，最高+25%（上限60点生命值）。",
+  "tooltip.slm_elements.attribute.type.frost.desc_debuff": "目标最大生命值极低时，伤害降低10%。",
+
+  "tooltip.slm_elements.attribute.type.volt": "伤害随目标护甲提升，对防护严密的敌人更为有效。",
+  "tooltip.slm_elements.attribute.type.volt.desc_buff": "目标护甲较高时伤害提升，最高+25%（上限20点护甲）。",
+  "tooltip.slm_elements.attribute.type.volt.desc_debuff": "目标几乎没有护甲时，伤害降低10%。",
+
+  "tooltip.slm_elements.attribute.type.terra": "目标身处地面时造成更高伤害，对空中的目标效果较弱。",
+  "tooltip.slm_elements.attribute.type.terra.desc_buff": "目标接触地面时，伤害提升15%。",
+  "tooltip.slm_elements.attribute.type.terra.desc_debuff": "目标悬于空中时，伤害降低10%。",
+
+  "tooltip.slm_elements.attribute.type.aero": "对空中的目标造成更高伤害，对地面的目标效果较弱。",
+  "tooltip.slm_elements.attribute.type.aero.desc_buff": "目标身处空中时，伤害提升15%。",
+  "tooltip.slm_elements.attribute.type.aero.desc_debuff": "目标身处地面时，伤害降低10%。",
+
+  "tooltip.slm_elements.attribute.type.lumen": "对状态完好的目标造成更高伤害，目标越虚弱伤害越低。",
+  "tooltip.slm_elements.attribute.type.lumen.desc_buff": "目标生命值全满时，伤害最高提升+20%。",
+  "tooltip.slm_elements.attribute.type.lumen.desc_debuff": "随目标生命值降低，伤害加成逐渐衰减至-10%。",
+
+  "tooltip.slm_elements.attribute.type.umbra": "对虚弱的目标造成更高伤害，对状态完好的敌人效果较弱。",
+  "tooltip.slm_elements.attribute.type.umbra.desc_buff": "目标生命值越接近零，伤害提升越多，最高+25%。",
+  "tooltip.slm_elements.attribute.type.umbra.desc_debuff": "目标生命值全满时，伤害降低10%。",
+
+
+
+  "death.attack.ignis_damage": "%1$s被烧成了灰烬",
+  "death.attack.ignis_damage.player": "%1$s被%2$s焚为灰烬",
+  "death.attack.ignis_damage.escape": "%1$s试图逃离%2$s，却还是葬身火海",
+  "death.attack.ignis_damage_tick": "%1$s被烧成了灰烬",
+  "death.attack.ignis_damage_tick.player": "%1$s被%2$s焚为灰烬",
+  "death.attack.ignis_damage_tick.escape": "%1$s试图逃离%2$s，却还是葬身火海",
+
+  "death.attack.frost_damage": "%1$s被彻底冻住了",
+  "death.attack.frost_damage.player": "%1$s屈服于%2$s刺骨的寒冷",
+  "death.attack.frost_damage.escape": "%1$s想要逃跑，却被%2$s冻成了冰雕",
+  "death.attack.frost_damage_tick": "%1$s被彻底冻住了",
+  "death.attack.frost_damage_tick.player": "%1$s屈服于%2$s刺骨的寒冷",
+  "death.attack.frost_damage_tick.escape": "%1$s想要逃跑，却被%2$s冻成了冰雕",
+
+  "death.attack.volt_damage": "%1$s没能扛住电压的冲击",
+  "death.attack.volt_damage.player": "%1$s被%2$s电死了",
+  "death.attack.volt_damage.escape": "%1$s试图逃离%2$s，却扛不住高压电流",
+  "death.attack.volt_damage_tick": "%1$s没能扛住电压的冲击",
+  "death.attack.volt_damage_tick.player": "%1$s被%2$s电死了",
+  "death.attack.volt_damage_tick.escape": "%1$s试图逃离%2$s，却扛不住高压电流",
+
+  "death.attack.terra_damage": "%1$s被碾成了碎块",
+  "death.attack.terra_damage.player": "%1$s被%2$s铺成了路面",
+  "death.attack.terra_damage.escape": "%1$s试图阻止%2$s把他们扔进水泥搅拌机",
+  "death.attack.terra_damage_tick": "%1$s被碾成了碎块",
+  "death.attack.terra_damage_tick.player": "%1$s被%2$s铺成了路面",
+  "death.attack.terra_damage_tick.escape": "%1$s试图阻止%2$s把他们扔进水泥搅拌机",
+
+  "death.attack.aqua_damage": "%1$s流尽了生命之水",
+  "death.attack.aqua_damage.player": "%1$s的生命被%2$s一滴一滴地抽干",
+  "death.attack.aqua_damage.escape": "%1$s试图抵抗被%2$s拖入深处",
+  "death.attack.aqua_damage_tick": "%1$s流尽了生命之水",
+  "death.attack.aqua_damage_tick.player": "%1$s的生命被%2$s一滴一滴地抽干",
+  "death.attack.aqua_damage_tick.escape": "%1$s试图抵抗被%2$s拖入深处",
+
+  "death.attack.aero_damage": "%1$s被大风吹散了",
+  "death.attack.aero_damage.player": "%1$s被%2$s的狂风撕成了碎片",
+  "death.attack.aero_damage.escape": "%1$s试图躲藏，却被%2$s的风暴卷走了",
+  "death.attack.aero_damage_tick": "%1$s被大风吹散了",
+  "death.attack.aero_damage_tick.player": "%1$s被%2$s的狂风撕成了碎片",
+  "death.attack.aero_damage_tick.escape": "%1$s试图躲藏，却被%2$s的风暴卷走了",
+
+  "death.attack.lumen_damage": "%1$s被光芒刺瞎了双眼",
+  "death.attack.lumen_damage.player": "%1$s被%2$s净化了",
+  "death.attack.lumen_damage.escape": "%1$s想找一处阴凉，但%2$s的光辉太过耀眼",
+  "death.attack.lumen_damage_tick": "%1$s被光芒刺瞎了双眼",
+  "death.attack.lumen_damage_tick.player": "%1$s被%2$s净化了",
+  "death.attack.lumen_damage_tick.escape": "%1$s想找一处阴凉，但%2$s的光辉太过耀眼",
+
+  "death.attack.umbra_damage": "%1$s被暗影吞没了",
+  "death.attack.umbra_damage.player": "%1$s被%2$s的黑暗吞噬了",
+  "death.attack.umbra_damage.escape": "%1$s试图逃离%2$s，但影子更快一步",
+  "death.attack.umbra_damage_tick": "%1$s被暗影吞没了",
+  "death.attack.umbra_damage_tick.player": "%1$s被%2$s的黑暗吞噬了",
+  "death.attack.umbra_damage_tick.escape": "%1$s试图逃离%2$s，但影子更快一步",
+
+
+  "effect.slm_elements.frost": "冰霜亲和",
+  "effect.slm_elements.volt": "雷电亲和",
+  "effect.slm_elements.terra": "大地亲和",
+  "effect.slm_elements.aqua": "流水亲和",
+  "effect.slm_elements.ignis": "烈焰亲和",
+  "effect.slm_elements.aero": "疾风亲和",
+  "effect.slm_elements.lumen": "光芒亲和",
+  "effect.slm_elements.umbra": "暗影亲和",
+
+  "effect.slm_elements.melted": "融化",
+  "effect.slm_elements.overload": "超载",
+  "effect.slm_elements.vaporized": "蒸发",
+  "effect.slm_elements.frozen": "冻结",
+  "effect.slm_elements.electrocharged": "感电",
+  "effect.slm_elements.cold": "寒冷",
+  "effect.slm_elements.burning": "燃烧",
+  "effect.slm_elements.conductor": "导电",
+  "effect.slm_elements.rooted": "扎根",
+  "effect.slm_elements.superconductor": "超导",
+
+  "effect.slm_elements.firestorm": "火焰风暴",
+  "effect.slm_elements.whirlpool": "漩涡",
+  "effect.slm_elements.duststorm": "沙尘暴",
+  "effect.slm_elements.blizzard": "暴风雪",
+  "effect.slm_elements.stormcall": "唤雷",
+  "effect.slm_elements.resplendence": "辉光",
+  "effect.slm_elements.obscurity": "晦暗",
+
+  "effect.slm_elements.flare": "耀闪",
+  "effect.slm_elements.purify": "净化",
+  "effect.slm_elements.crystallize": "结晶",
+  "effect.slm_elements.hyperconductor": "强导",
+  "effect.slm_elements.lumishock": "光震",
+  "effect.slm_elements.eclipse": "黯蚀",
+
+  "effect.slm_elements.shrivelled": "枯萎",
+  "effect.slm_elements.drowning": "溺水",
+  "effect.slm_elements.decay": "衰败",
+  "effect.slm_elements.shadowfrost": "影霜",
+  "effect.slm_elements.corruption": "腐化",
+
+  "effect.slm_elements.reactions_shield": "元素护甲",
+
+
+
+  "effect.text.aero": "扩散",
+  "effect.text.aqua": "潮湿",
+  "effect.text.frost": "冰霜",
+  "effect.text.ignis": "灼烧",
+  "effect.text.lumen": "明亮",
+  "effect.text.umbra": "阴郁",
+  "effect.text.volt": "带电",
+  "effect.text.terra": "坚实",
+
+  "effect.text.frozen": "冻结",
+  "effect.text.melted": "融化",
+  "effect.text.overload": "超载",
+  "effect.text.vaporized": "蒸发",
+  "effect.text.conductor": "导电",
+  "effect.text.electrocharged": "感电",
+  "effect.text.rooted": "扎根",
+  "effect.text.cold": "寒冷",
+  "effect.text.burning": "炽燃",
+  "effect.text.superconductor": "超导",
+
+  "effect.text.firestorm": "火焰风暴",
+  "effect.text.whirlpool": "漩涡",
+  "effect.text.duststorm": "沙尘暴",
+  "effect.text.blizzard": "暴风雪",
+  "effect.text.stormcall": "唤雷",
+  "effect.text.resplendence": "辉光",
+  "effect.text.obscurity": "暮色",
+
+  "effect.text.flare": "耀闪",
+  "effect.text.purify": "净化",
+  "effect.text.crystallized": "结晶",
+  "effect.text.hyperconductor": "强导",
+  "effect.text.lumishock": "光荷",
+  "effect.text.eclipse": "黯蚀",
+
+  "effect.text.shrivelled": "枯萎",
+  "effect.text.drowning": "溺水",
+  "effect.text.decay": "衰败",
+  "effect.text.shadowfrost": "影霜",
+  "effect.text.corrupted": "腐化"
+}

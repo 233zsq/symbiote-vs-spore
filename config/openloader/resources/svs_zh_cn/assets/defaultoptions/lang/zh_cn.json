@@ -1,0 +1,9 @@
+{
+  "config.defaultoptions.title": "默认选项",
+  "config.defaultoptions.defaultDifficulty": "默认难度",
+  "config.defaultoptions.defaultDifficulty.tooltip": "新建世界时默认选择的难度。",
+  "config.defaultoptions.lockDifficulty": "锁定难度",
+  "config.defaultoptions.lockDifficulty.tooltip": "若设为 true，新世界的难度将被锁定为指定的默认难度。没有外部工具的玩家将无法解锁！这可能不是个好主意，我不推荐。我为什么要加这个选项来着？",
+  "config.defaultoptions.defaultResourcePacks": "默认资源包",
+  "config.defaultoptions.defaultResourcePacks.tooltip": "首次运行时默认启用的资源包 ID。"
+}

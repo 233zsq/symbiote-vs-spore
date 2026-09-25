@@ -1,0 +1,18 @@
+{
+  "item.wukong.dasheng_h": "凤翅紫金冠",
+  "item.wukong.dasheng_c": "锁子黄金甲",
+  "item.wukong.dasheng_l": "点翠飞龙釬",
+  "item.wukong.dasheng_f": "藕丝步云履",
+  "item.wukong.kang_jin": "鳞棍·亢金",
+  "item.wukong.red_tide": "赤潮",
+  "item.wukong.jingubang": "如意金箍棒",
+  "key.wukong.magicarts_cfda": "聚形散气",
+  "key.wukong.magicarts_ihca": "铜头铁臂",
+  "key.wukong.magicarts_ebm": "安身法",
+  "key.wukong.magicarts_bft": "定身法",
+  "skill.wukong.magicarts_cfda": "聚形散气",
+  "skill.wukong.thrust_style.tooltip": "戳棍式：轻攻击后按技能键消耗1层棍势向前突刺，攻击距离更远。",
+  "skill.wukong.pillar_style.tooltip": "立棍式：立于棍上规避地面攻击，蓄力后跃起下劈，棍势层数越高下劈越猛。",
+  "skill.wukong.dodge.tooltip": "无需学习的棍棒固有身法。完美闪避可积攒棍势。",
+  "skill.wukong.staff_flower.tooltip": "舞动棍花格挡飞行物并持续压制身前敌人。"
+}

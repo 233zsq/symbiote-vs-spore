@@ -1,0 +1,10 @@
+{
+ "gui.config.reset": "重",
+ "gui.day": "天",
+ "gui.hour": "时",
+ "gui.minute": "分",
+ "gui.second": "秒",
+ "gui.ingredient.latest": "最近的物品：",
+ "minecraft.blocks": "方块",
+ "minecraft.blocks.counting": "%s 个方块"
+}

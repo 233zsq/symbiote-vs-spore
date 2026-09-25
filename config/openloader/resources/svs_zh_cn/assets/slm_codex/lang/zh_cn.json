@@ -1,0 +1,31 @@
+{
+  "slm_codex.key.config_name": "SLM: 图鉴",
+  "slm_codex.core.key.render_details_screen": "物品详情",
+  "slm_codex.tab.combat": "战斗查看器",
+
+  "lazy_utilities.core.tab.curios": "饰品",
+  "lazy_utilities.core.tab.weapon": "武器属性",
+  "lazy_utilities.core.tab.armor": "盔甲属性",
+  "lazy_utilities.core.tab.item": "物品",
+  "lazy_utilities.core.tab.description": "描述",
+  "lazy_utilities.core.tab.skills": "技能",
+  "lazy_utilities.core.tab.passives": "被动",
+  "lazy_utilities.core.tab.innate_skill": "先天技能",
+
+  "lazy_utilities.core.tooltip": "按 [%s] 查看%s",
+  "lazy_utilities.core.tooltip.description": "、描述",
+  "lazy_utilities.core.tooltip.description.final": "和描述",
+  "lazy_utilities.core.tooltip.skills": "、技能",
+  "lazy_utilities.core.tooltip.skills.final": "和技能",
+  "lazy_utilities.core.tooltip.passives": "、被动",
+  "lazy_utilities.core.tooltip.passives.final": "和被动",
+  "lazy_utilities.core.tooltip.innate_skill": "按 [%s] 查看先天技能",
+  "lazy_utilities.core.tooltip.innate_skill.final": "和先天技能",
+  "lazy_utilities.core.tooltip.ultimate_skill": "按 [%s] 查看终极技能",
+  "lazy_utilities.core.tooltip.ultimate_skill.final": "和终极技能",
+
+  "lazy_utilities.core.tooltip.armor": "盔甲属性",
+  "lazy_utilities.core.tooltip.weapon": "武器属性",
+  "lazy_utilities.core.tooltip.curios": "饰品属性",
+  "lazy_utilities.core.tooltip.item": "物品属性"
+}

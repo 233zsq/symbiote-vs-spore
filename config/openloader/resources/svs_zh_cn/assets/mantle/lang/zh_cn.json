@@ -1,0 +1,16 @@
+{
+ "config.mantle.enableFluidFogFix": "启用流体雾修复",
+ "config.mantle.fluidFallbackUseTextShader": "流体回退使用文本着色器",
+ "command.mantle.book.export.html.success": "已将书本图片导出至“%s”，HTML 导出至“%s”",
+ "command.mantle.hunger.set.single": "已将 %s 的饥饿值设为 %d",
+ "command.mantle.hunger.set.multiple": "已将 %d 名玩家的饥饿值设为 %d",
+ "command.mantle.hunger.add.single": "已给予 %s +%d 饥饿值",
+ "command.mantle.hunger.add.multiple": "已给予 %d 名玩家 +%d 饥饿值",
+ "command.mantle.hunger.subtract.single": "已给予 %s -%d 饥饿值",
+ "command.mantle.hunger.subtract.multiple": "已给予 %d 名玩家 -%d 饥饿值",
+ "command.mantle.remove.failed_save": "将 JSON 保存至“%s”时失败。",
+ "command.mantle.key.wrong_registry": "预期资源键“%s”属于注册表“%s”。",
+ "command.mantle.remove_data.structure.success": "成功清空结构集“%s”，耗时 %s 秒。运行 /reload 以激活位于 %s 的数据包",
+ "command.mantle.remove_data.biome_modifier.success": "成功移除生物群系修改器“%s”，耗时 %s 秒。运行 /reload 以激活位于 %s 的数据包",
+ "block.mantle.retextured.id": "纹理 ID：%s"
+}

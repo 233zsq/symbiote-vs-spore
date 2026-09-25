@@ -1,1166 +1,1349 @@
 {
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
 	filename: "souls_codex"
 	group: "0B00AA11CC22DD11"
 	icon: "minecraft:wither_skeleton_skull"
-	id: "A3F1C0E500000077"
+	id: "41AC1431D21EDDFC"
 	order_index: 3
-	title: "Ⅲ·魂界列传"
+	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["A3F1C0E610000016"]
-			
-			invisible: true
-			id: "A3F1C0E510000001"
-			title: "狭间诸王"
-			subtitle: "《艾尔登法环》一系——狭间之地的王与半神"
 			description: [
 				"黄金律法破碎，碎片战争落幕，诸王仍在雾中等待挑战者。"
 				"此分区记载《艾尔登法环》出身的十四位王者，链式解锁。"
 				"每场讨伐完成后自动点亮下一目标。"
 			]
-			x: 0.0d
-			y: 0.0d
-			shape: "diamond"
-			tasks: [{
-				id: "A3F1C0E520000001"
-				type: "checkmark"
-				title: "点亮「狭间诸王」分区"
-			}]
+			id: "2AD5F7CC512F64D3"
+			invisible: true
 			rewards: [{
-				id: "A3F1C0E530000001"
+				id: "1861985CCFB1A6CC"
 				type: "xp"
 				xp: 2
 			}]
+			shape: "diamond"
+			subtitle: "《艾尔登法环》一系——狭间之地的王与半神"
+			tasks: [{
+				id: "3227368CBEA095E3"
+				title: "点亮「狭间诸王」分区"
+				type: "checkmark"
+			}]
+			title: "狭间诸王"
+			x: 0.0d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000101"
-			title: "噩兆妖鬼·玛尔基特"
-			subtitle: "《艾尔登法环》·史东薇尔城门，褪色者的第一道铁闸"
 			description: [
 				"史东薇尔城门前的守门噩兆，王城伸向新手之地的一记重锤。"
 				"金杖横扫、光刃突刺，招式大开大合却极少留白，贪刀即是死。"
 				"推荐 Stage3 装备后再战；召唤方式需人工核实。"
 			]
-			x: 1.5d
-			y: 0.0d
+			id: "60E237766C3F1C01"
+			invisible: true
+			rewards: [
+				{
+					id: "4600309F87FE2B49"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "54578F289DBAB525"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000001"]
+			subtitle: "《艾尔登法环》·史东薇尔城门，褪色者的第一道铁闸"
 			tasks: [{
-				id: "A3F1C0E520000101"
-				type: "kill"
 				entity: "slu:boss_margit"
+				id: "03A34FC8745F7799"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF118937060604", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000101"
-				type: "xp"
-				xp: 5
-			}]
+			title: "噩兆妖鬼·玛尔基特"
+			x: 1.5d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000102"
-			title: "恶兆王·蒙葛特"
-			subtitle: "《艾尔登法环》·王城罗德尔，赐福之王的垂死之舞"
 			description: [
 				"王城罗德尔的末代之主，玛尔基特的真身，黄金树的忠犬。"
 				"圣剑与咒刃交错，快慢刀变化多端，压制力远胜其城门之影。"
 				"推荐 Stage3 中期挑战；召唤方式需人工核实。"
 			]
-			x: 3.0d
-			y: 0.0d
+			id: "7936EB01941644EF"
+			invisible: true
+			rewards: [
+				{
+					id: "509F9BC6FE45E0E5"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "277426ED3F42202C"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000101"]
+			subtitle: "《艾尔登法环》·王城罗德尔，赐福之王的垂死之舞"
 			tasks: [{
-				id: "A3F1C0E520000102"
-				type: "kill"
 				entity: "slu:boss_morgott"
+				id: "633571F51E84EF53"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF338255645326", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000102"
-				type: "xp"
-				xp: 5
-			}]
+			title: "恶兆王·蒙葛特"
+			x: 3.0d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000103"
-			title: "初代艾尔登之王·葛孚雷"
-			subtitle: "《艾尔登法环》·初代艾尔登之王，蛮荒时代的征服者"
 			description: [
 				"以蛮力踏平狭间的初代王，被放逐又归来的狮子。"
 				"巨斧撼地、践踏连击，纯力量流的极致，站桩硬拼绝非上策。"
 				"推荐 Stage3 后期挑战；召唤方式需人工核实。"
 			]
-			x: 4.5d
-			y: 0.0d
+			id: "596141B32FEE43C3"
+			invisible: true
+			rewards: [
+				{
+					id: "25479E64E5FE28A7"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "1446DD961721D6FB"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000102"]
+			subtitle: "《艾尔登法环》·初代艾尔登之王，蛮荒时代的征服者"
 			tasks: [{
-				id: "A3F1C0E520000103"
-				type: "kill"
 				entity: "slu:boss_godfrey"
+				id: "79323C8D4662E225"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF238275627408", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000103"
-				type: "xp"
-				xp: 5
-			}]
+			title: "初代艾尔登之王·葛孚雷"
+			x: 4.5d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000104"
-			title: "战王·荷莱·露"
-			subtitle: "《艾尔登法环》·褪去王冠，以战王之名撕裂战场"
 			description: [
 				"葛孚雷褪去王冕后的真姿，纯粹以武艺与肉体称王的狂战士。"
 				"投技与跳跃践踏层出不穷，被抓住即是重伤，务必保持距离。"
 				"推荐 Stage4 装备再战；召唤方式需人工核实。"
 			]
-			x: 6.0d
-			y: 0.0d
+			id: "393B5B854F3525EE"
+			invisible: true
+			rewards: [
+				{
+					id: "2D18C0AC362D152D"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "60E16DCACE888CBB"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000103"]
+			subtitle: "《艾尔登法环》·褪去王冠，以战王之名撕裂战场"
 			tasks: [{
-				id: "A3F1C0E520000104"
-				type: "kill"
 				entity: "slu:boss_hoarah_loux"
+				id: "22538067E31F79C0"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF350273948392", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000104"
-				type: "xp"
-				xp: 5
-			}]
+			title: "战王·荷莱·露"
+			x: 6.0d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000105"
-			title: "碎星·拉塔恩"
-			subtitle: "《艾尔登法环》·红狮子将军，以重力锁住群星之人"
 			description: [
 				"卡利亚战争中的红狮子，封印群星的碎星将军，传奇中的传奇。"
 				"巨弓与双刀远近皆精，重力魔法撕裂大地，是一场堂堂正正的会战。"
 				"推荐 Stage4 组队挑战；召唤方式需人工核实。"
 			]
-			x: 7.5d
-			y: 0.0d
+			id: "05A89AA4FC157D1C"
+			invisible: true
+			rewards: [
+				{
+					id: "211E636F236C3599"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "09FBD58E70EE51E2"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000104"]
+			subtitle: "《艾尔登法环》·红狮子将军，以重力锁住群星之人"
 			tasks: [{
-				id: "A3F1C0E520000105"
-				type: "kill"
 				entity: "slu:boss_radahn"
+				id: "3AD1E7832DEDFF3B"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF887808088367", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000105"
-				type: "xp"
-				xp: 5
-			}]
+			title: "碎星·拉塔恩"
+			x: 7.5d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000106"
-			title: "约定之王·拉塔恩"
-			subtitle: "《艾尔登法环》·黄金树之影，履行约定的王"
 			description: [
 				"黄金树之影中的约定之王，碎星将军的另一种姿态。"
 				"圣光与重力交织的最终形态，速度与压迫感全面凌驾于前。"
 				"推荐 Stage5 再行挑战；召唤方式需人工核实。"
 			]
-			x: 9.0d
-			y: 0.0d
+			id: "0E738B0DD0F02A75"
+			invisible: true
+			rewards: [
+				{
+					id: "361FAA944D6857FC"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "6A2A4A2D5CD686E4"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000105"]
+			subtitle: "《艾尔登法环》·黄金树之影，履行约定的王"
 			tasks: [{
-				id: "A3F1C0E520000106"
-				type: "kill"
 				entity: "slu:boss_radahn_2"
+				id: "585E9B5EE5576A60"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF286468640736", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000106"
-				type: "xp"
-				xp: 5
-			}]
+			title: "约定之王·拉塔恩"
+			x: 9.0d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000107"
-			title: "米凯拉的锋刃·玛莲妮亚"
-			subtitle: "《艾尔登法环》·米凯拉的锋刃，不败的猩红剑姬"
 			description: [
 				"自猩红腐败中诞生的女武神，据传从未尝过败绩。"
 				"太刀如流水，水鸟乱舞起手极快，贪刀者会被瞬间反噬。"
 				"推荐 Stage4 后期挑战；召唤方式需人工核实。"
 			]
-			x: 10.5d
-			y: 0.0d
+			id: "311C7C032B2BA2BA"
+			invisible: true
+			rewards: [
+				{
+					id: "29D98B3CB7E65133"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "7A8422D7446E9759"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000106"]
+			subtitle: "《艾尔登法环》·米凯拉的锋刃，不败的猩红剑姬"
 			tasks: [{
-				id: "A3F1C0E520000107"
-				type: "kill"
 				entity: "slu:boss_malenia"
+				id: "58AA353F59A12A3C"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF332957942359", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000107"
-				type: "xp"
-				xp: 5
-			}]
+			title: "米凯拉的锋刃·玛莲妮亚"
+			x: 10.5d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000108"
-			title: "腐败女神·玛莲妮亚"
-			subtitle: "《艾尔登法环》·猩红艾奥尼亚，腐败女神的绽放"
 			description: [
 				"二度绽放的腐败女神，艾奥尼亚之花的本体降临。"
 				"猩红腐败弥漫全场，空中突进愈发致命，容错极低。"
 				"推荐 Stage5 极限挑战；召唤方式需人工核实。"
 			]
-			x: 12.0d
-			y: 0.0d
+			id: "7121952BD9DD5541"
+			invisible: true
+			rewards: [
+				{
+					id: "22D38128517C79EB"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "27AD5509599519D3"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000107"]
+			subtitle: "《艾尔登法环》·猩红艾奥尼亚，腐败女神的绽放"
 			tasks: [{
-				id: "A3F1C0E520000108"
-				type: "kill"
 				entity: "slu:boss_malenia_2"
+				id: "37E7BB52E9AF42B7"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF548024549250", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000108"
-				type: "xp"
-				xp: 5
-			}]
+			title: "腐败女神·玛莲妮亚"
+			x: 12.0d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000109"
-			title: "鲜血君王·蒙格"
-			subtitle: "《艾尔登法环》·鲜血王朝之主，无形之母的眷属"
 			description: [
 				"盘踞地下的鲜血君王，觊觎神人之躯的阴谋家。"
 				"血焰三叉戟与鲜血诅咒齐发，倒计时般的血液沸腾令人窒息。"
 				"推荐 Stage4 挑战；召唤方式需人工核实。"
 			]
-			x: 13.5d
-			y: 0.0d
+			id: "3C6C00E8DB51158C"
+			invisible: true
+			rewards: [
+				{
+					id: "3B4C00F20CDB9AB8"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "57ACE79923E9B836"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000108"]
+			subtitle: "《艾尔登法环》·鲜血王朝之主，无形之母的眷属"
 			tasks: [{
-				id: "A3F1C0E520000109"
-				type: "kill"
 				entity: "slu:boss_mohg"
+				id: "1F3DB7ACF938189B"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF453306013530", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000109"
-				type: "xp"
-				xp: 5
-			}]
+			title: "鲜血君王·蒙格"
+			x: 13.5d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E51000010A"
-			title: "神皮使徒"
-			subtitle: "《艾尔登法环》·神皮双人组之一，剥皮者的使徒"
 			description: [
 				"以神皮缝衣的异端使徒，身形修长、动作诡谲。"
 				"黑焰环绕，身躯如蛇般延展突袭，贴身战极为凶险。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 15.0d
-			y: 0.0d
+			id: "4BF99BB199BCD250"
+			invisible: true
+			rewards: [
+				{
+					id: "018E6F0D835EE093"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "428D531810027172"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000109"]
+			subtitle: "《艾尔登法环》·神皮双人组之一，剥皮者的使徒"
 			tasks: [{
-				id: "A3F1C0E52000010A"
-				type: "kill"
 				entity: "slu:boss_godskin_apostle"
+				id: "4F7D1703956F1075"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF006915120431", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E53000010A"
-				type: "xp"
-				xp: 5
-			}]
+			title: "神皮使徒"
+			x: 15.0d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E51000010B"
-			title: "神皮贵族"
-			subtitle: "《艾尔登法环》·神皮双人组之一，臃肿的贵族"
 			description: [
 				"神皮使徒的同袍，臃肿的身躯里藏着惊人的敏捷。"
 				"滚动冲撞势不可挡，刺剑快如蜂刺，与使徒联手更为棘手。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 16.5d
-			y: 0.0d
+			id: "6E82B12D15B7DD19"
+			invisible: true
+			rewards: [
+				{
+					id: "73FE8A1F69B78995"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "0A9A7D51CBC4AF02"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E51000010A"]
+			subtitle: "《艾尔登法环》·神皮双人组之一，臃肿的贵族"
 			tasks: [{
-				id: "A3F1C0E52000010B"
-				type: "kill"
 				entity: "slu:boss_godskin_noble"
+				id: "5AB3588FFEB518A4"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF444752192877", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E53000010B"
-				type: "xp"
-				xp: 5
-			}]
+			title: "神皮贵族"
+			x: 16.5d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E51000010C"
-			title: "黑剑·玛利喀斯"
-			subtitle: "《艾尔登法环》·命定之死，黑剑的看门犬"
 			description: [
 				"看守命定之死的黑剑，兽性与神性交织的恐怖存在。"
 				"黑焰斩击削减生命上限，空中翻腾难以锁定，速战为上。"
 				"推荐 Stage4 挑战；召唤方式需人工核实。"
 			]
-			x: 18.0d
-			y: 0.0d
+			id: "51AFD6B07F55C6DE"
+			invisible: true
+			rewards: [
+				{
+					id: "11ABE211D25D6490"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "4AEC5B30E2447594"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E51000010B"]
+			subtitle: "《艾尔登法环》·命定之死，黑剑的看门犬"
 			tasks: [{
-				id: "A3F1C0E52000010C"
-				type: "kill"
 				entity: "slu:boss_maliketh"
+				id: "12ABCD5479FF18E0"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF600524922324", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E53000010C"
-				type: "xp"
-				xp: 5
-			}]
+			title: "黑剑·玛利喀斯"
+			x: 18.0d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E51000010D"
-			title: "艾尔登之王·拉达冈"
-			subtitle: "《艾尔登法环》·黄金律法的红发之王"
 			description: [
 				"黄金树的守门人，以凡躯承载律法的红发之王。"
 				"锤击如审判降临，圣光破碎地面，节奏沉稳却步步紧逼。"
 				"推荐 Stage5 决战装备；召唤方式需人工核实。"
 			]
-			x: 19.5d
-			y: 0.0d
+			id: "3C5B3466B894FBF0"
+			invisible: true
+			rewards: [
+				{
+					id: "1E029B8ADE652C11"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "43DF3C55C7E142C6"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E51000010C"]
+			subtitle: "《艾尔登法环》·黄金律法的红发之王"
 			tasks: [{
-				id: "A3F1C0E52000010D"
-				type: "kill"
 				entity: "slu:boss_radagon"
+				id: "075DD5109DD481A0"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF996693821609", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E53000010D"
-				type: "xp"
-				xp: 5
-			}]
+			title: "艾尔登之王·拉达冈"
+			x: 19.5d
+			y: 0.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E51000010E"
-			title: "艾尔登之兽"
-			subtitle: "《艾尔登法环》·黄金树的具现，狭间终局"
 			description: [
 				"律法的具现、黄金树意志的化身，狭间之战的终点。"
 				"星光剑雨与飞空游弋，追击战漫长而华美，耐心胜过蛮勇。"
 				"推荐 Stage5 最终决战；召唤方式需人工核实。"
 			]
-			x: 21.0d
-			y: 0.0d
+			id: "122AA477F9272169"
+			invisible: true
+			rewards: [
+				{
+					id: "44BAC6E9DC1B82A0"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "0B714998A0EE1DD3"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E51000010D"]
+			subtitle: "《艾尔登法环》·黄金树的具现，狭间终局"
 			tasks: [{
-				id: "A3F1C0E52000010E"
-				type: "kill"
 				entity: "slu:boss_elden_beast"
+				id: "4A11BE6C4DC58E04"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF420344131258", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E53000010E"
-				type: "xp"
-				xp: 5
-			}]
+			title: "艾尔登之兽"
+			x: 21.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["A3F1C0E610000016"]
-			
-			invisible: true
-			id: "A3F1C0E510000201"
-			title: "初火余烬"
-			subtitle: "《黑暗之魂》一系——传火时代的英雄与枭雄"
 			description: [
 				"初火将熄，不死人踏上巡礼之路，余烬中仍存旧王身影。"
 				"此分区记载《黑暗之魂》系列出身的十一位王者，链式解锁。"
 				"每场讨伐完成后自动点亮下一目标。"
 			]
-			x: 0.0d
-			y: 1.5d
-			shape: "diamond"
-			tasks: [{
-				id: "A3F1C0E520000201"
-				type: "checkmark"
-				title: "点亮「初火余烬」分区"
-			}]
+			id: "56292744BF22D6AB"
+			invisible: true
 			rewards: [{
-				id: "A3F1C0E530000201"
+				id: "4ACA12B6364DB819"
 				type: "xp"
 				xp: 2
 			}]
+			shape: "diamond"
+			subtitle: "《黑暗之魂》一系——传火时代的英雄与枭雄"
+			tasks: [{
+				id: "280FDAD14631E6C3"
+				title: "点亮「初火余烬」分区"
+				type: "checkmark"
+			}]
+			title: "初火余烬"
+			x: 0.0d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000211"
-			title: "灰烬审判者·古达"
-			subtitle: "《黑暗之魂3》·灰烬墓地，审判者的枪"
 			description: [
 				"灰烬墓地的守门人，一柄长戟拦住无数初火新人的去路。"
 				"二阶段黑泥爆体，动作陡然加速，初见杀名不虚传。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 1.5d
-			y: 1.5d
+			id: "5B3FBF414EE2ECB3"
+			invisible: true
+			rewards: [
+				{
+					id: "45AD20CB25A4F69D"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "4D7C13E5D6D55FD4"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000201"]
+			subtitle: "《黑暗之魂3》·灰烬墓地，审判者的枪"
 			tasks: [{
-				id: "A3F1C0E520000211"
-				type: "kill"
 				entity: "slu:boss_gundyr"
+				id: "0058999903EC69AD"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF205608713049", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000211"
-				type: "xp"
-				xp: 5
-			}]
+			title: "灰烬审判者·古达"
+			x: 1.5d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000212"
-			title: "深渊监视者"
-			subtitle: "《黑暗之魂3》·法兰不死队，深渊监视者"
 			description: [
 				"以狼血立誓的法兰不死队，监视深渊却自身被深渊侵蚀。"
 				"刀光如舞蹈，同袍相残的战场混战，最后一人格外凌厉。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 3.0d
-			y: 1.5d
+			id: "0FAC6FD65C2D26DF"
+			invisible: true
+			rewards: [
+				{
+					id: "65AAC77F5E06A661"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "0A6D2F6338F7B8DB"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000211"]
+			subtitle: "《黑暗之魂3》·法兰不死队，深渊监视者"
 			tasks: [{
-				id: "A3F1C0E520000212"
-				type: "kill"
 				entity: "slu:boss_abyss_watcher"
+				id: "65E35D1E0CBD9576"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF452399142421", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000212"
-				type: "xp"
-				xp: 5
-			}]
+			title: "深渊监视者"
+			x: 3.0d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000213"
-			title: "深渊漫步者·亚尔特留斯"
-			subtitle: "《黑暗之魂》·乌拉席露，深渊漫步者的末路"
 			description: [
 				"为拯救乌拉席露踏入深渊的狼骑士，右臂已折仍傲立不倒。"
 				"单手巨剑大开大合，翻滚突进如狼扑食，纯粹的剑术之美。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 4.5d
-			y: 1.5d
+			id: "046DDA609AF94924"
+			invisible: true
+			rewards: [
+				{
+					id: "3E0F8FF023DD98DA"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "6C5A977CED2B5F02"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000212"]
+			subtitle: "《黑暗之魂》·乌拉席露，深渊漫步者的末路"
 			tasks: [{
-				id: "A3F1C0E520000213"
-				type: "kill"
 				entity: "slu:boss_artorias"
+				id: "26556F1B5C096F59"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF665804953386", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000213"
-				type: "xp"
-				xp: 5
-			}]
+			title: "深渊漫步者·亚尔特留斯"
+			x: 4.5d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000214"
-			title: "猎龙者·翁斯坦"
-			subtitle: "《黑暗之魂》·亚诺尔隆德，猎龙四骑士之首"
 			description: [
 				"亚诺尔隆德的龙枪骑士，葛温麾下四骑士之首。"
 				"枪出如龙、闪电随行，与处刑者斯摩并立时最为难缠。"
 				"推荐 Stage4 挑战；召唤方式需人工核实。"
 			]
-			x: 6.0d
-			y: 1.5d
+			id: "27AF5B2DFE071893"
+			invisible: true
+			rewards: [
+				{
+					id: "5E6716E26344902D"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "18F85C6F72F9213E"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000213"]
+			subtitle: "《黑暗之魂》·亚诺尔隆德，猎龙四骑士之首"
 			tasks: [{
-				id: "A3F1C0E520000214"
-				type: "kill"
 				entity: "slu:boss_ornstein"
+				id: "5E32D9E26D126BEF"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF075141200197", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000214"
-				type: "xp"
-				xp: 5
-			}]
+			title: "猎龙者·翁斯坦"
+			x: 6.0d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000215"
-			title: "处刑者·斯摩"
-			subtitle: "《黑暗之魂》·亚诺尔隆德，食人的处刑者"
 			description: [
 				"亚诺尔隆德的巨锤处刑者，以处刑为乐的暴君。"
 				"重锤砸地、冲撞碾人，若与翁斯坦同场，先破其一为上。"
 				"推荐 Stage4 挑战；召唤方式需人工核实。"
 			]
-			x: 7.5d
-			y: 1.5d
+			id: "3437FCD4FA8E4594"
+			invisible: true
+			rewards: [
+				{
+					id: "5F83E242D9DB2A99"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "4264CD46F187F626"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000214"]
+			subtitle: "《黑暗之魂》·亚诺尔隆德，食人的处刑者"
 			tasks: [{
-				id: "A3F1C0E520000215"
-				type: "kill"
 				entity: "slu:boss_smough"
+				id: "2031BB6DA658C094"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF307959058973", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000215"
-				type: "xp"
-				xp: 5
-			}]
+			title: "处刑者·斯摩"
+			x: 7.5d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000216"
-			title: "猎龙铠甲"
-			subtitle: "《黑暗之魂3》·洛斯里克，无人穿着的猎龙甲"
 			description: [
 				"洛斯里克王城的猎龙铠甲，甲胄之内空无一物。"
 				"巨盾硬如城墙，斧与雷光交替轰落，绕背才是正解。"
 				"推荐 Stage4 挑战；召唤方式需人工核实。"
 			]
-			x: 9.0d
-			y: 1.5d
+			id: "10187B2BCE21BC7E"
+			invisible: true
+			rewards: [
+				{
+					id: "331A8F95EB6FD275"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "3179A3829ACFCF7C"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000215"]
+			subtitle: "《黑暗之魂3》·洛斯里克，无人穿着的猎龙甲"
 			tasks: [{
-				id: "A3F1C0E520000216"
-				type: "kill"
 				entity: "slu:boss_dragon_slayer_armour"
+				id: "573D7FC434A6AEF1"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF921501349060", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000216"
-				type: "xp"
-				xp: 5
-			}]
+			title: "猎龙铠甲"
+			x: 9.0d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000217"
-			title: "镜之骑士"
-			subtitle: "《黑暗之魂2》·多兰古雷格，暴雨中的镜骑士"
 			description: [
 				"多兰古雷格王城的镜之骑士，巨镜可唤来帮手。"
 				"雷雨交加的城头死斗，镜面召援令战局再生变数。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 10.5d
-			y: 1.5d
+			id: "0641508E0E34AD56"
+			invisible: true
+			rewards: [
+				{
+					id: "54B53D2A031140B2"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "588235C630156DEE"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000216"]
+			subtitle: "《黑暗之魂2》·多兰古雷格，暴雨中的镜骑士"
 			tasks: [{
-				id: "A3F1C0E520000217"
-				type: "kill"
 				entity: "slu:boss_looking_glass_knight"
+				id: "679E4F7BB916D30E"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF077867492451", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000217"
-				type: "xp"
-				xp: 5
-			}]
+			title: "镜之骑士"
+			x: 10.5d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000218"
-			title: "无名王者"
-			subtitle: "《黑暗之魂3》·古龙之顶，与龙为伍的王者"
 			description: [
 				"古龙之顶的骑龙王者，身份成谜的神族末裔。"
 				"骑龙战与步战两段，枪雷之速冠绝群王，延迟出手最是杀招。"
 				"推荐 Stage4 后期挑战；召唤方式需人工核实。"
 			]
-			x: 12.0d
-			y: 1.5d
+			id: "4D340B1173499B8A"
+			invisible: true
+			rewards: [
+				{
+					id: "69302D73307E159D"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "408CF5B87B7FF5F7"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000217"]
+			subtitle: "《黑暗之魂3》·古龙之顶，与龙为伍的王者"
 			tasks: [{
-				id: "A3F1C0E520000218"
-				type: "kill"
 				entity: "slu:boss_nameless_king"
+				id: "6365E0CDC7DD5B67"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF531184019881", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000218"
-				type: "xp"
-				xp: 5
-			}]
+			title: "无名王者"
+			x: 12.0d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000219"
-			title: "暗影太阳·葛温德林"
-			subtitle: "《黑暗之魂》·亚诺尔隆德的暗影太阳"
 			description: [
 				"藏身亚诺尔隆德幻象之后的神子，月光与暗影的操纵者。"
 				"魔法箭雨连绵不绝，长廊追击宛如与月光赛跑。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 13.5d
-			y: 1.5d
+			id: "49E182B255FDACD2"
+			invisible: true
+			rewards: [
+				{
+					id: "44FB464BD1420DEB"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "27EF57A1EA0203E6"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000218"]
+			subtitle: "《黑暗之魂》·亚诺尔隆德的暗影太阳"
 			tasks: [{
-				id: "A3F1C0E520000219"
-				type: "kill"
 				entity: "slu:boss_gwyndolin"
+				id: "0489824967EA1D83"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF055325177436", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000219"
-				type: "xp"
-				xp: 5
-			}]
+			title: "暗影太阳·葛温德林"
+			x: 13.5d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E51000021A"
-			title: "奴隶骑士·盖尔"
-			subtitle: "《黑暗之魂3》·环印城，末世中最后的骑士"
 			description: [
 				"自绘画世界跋涉至世界尽头的奴隶骑士，以人之身追寻黑暗之魂。"
 				"十字弩与巨剑轮番上阵，三阶段愈战愈狂，堪称魂系最终试炼。"
 				"推荐 Stage5 极限挑战；召唤方式需人工核实。"
 			]
-			x: 15.0d
-			y: 1.5d
+			id: "6D65917E2E03BF51"
+			invisible: true
+			rewards: [
+				{
+					id: "093A016BBE4B1077"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "037E02F241D9525F"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000219"]
+			subtitle: "《黑暗之魂3》·环印城，末世中最后的骑士"
 			tasks: [{
-				id: "A3F1C0E52000021A"
-				type: "kill"
 				entity: "slu:boss_gael"
+				id: "606886DF6BF05446"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF544978850969", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E53000021A"
-				type: "xp"
-				xp: 5
-			}]
+			title: "奴隶骑士·盖尔"
+			x: 15.0d
+			y: 1.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E51000021B"
-			title: "薪王们的化身"
-			subtitle: "《黑暗之魂3》·初始火炉，薪火的化身"
 			description: [
 				"初火前最后的守护者，历届薪王意志的集合体。"
 				"百般武艺信手拈来，二阶段化身葛温，令人梦回初代。"
 				"推荐 Stage5 最终决战；召唤方式需人工核实。"
 			]
-			x: 16.5d
-			y: 1.5d
+			id: "0EE71ABED7408D52"
+			invisible: true
+			rewards: [
+				{
+					id: "3FCACD104036F481"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "0F6A92BB01ECB0D9"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E51000021A"]
+			subtitle: "《黑暗之魂3》·初始火炉，薪火的化身"
 			tasks: [{
-				id: "A3F1C0E52000021B"
-				type: "kill"
 				entity: "slu:boss_soul_of_cinder"
+				id: "4F7EB6D9C98D9732"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF261367739658", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E53000021B"
-				type: "xp"
-				xp: 5
-			}]
+			title: "薪王们的化身"
+			x: 16.5d
+			y: 1.5d
 		}
 		{
-			dependencies: ["A3F1C0E610000016"]
-			
-			invisible: true
-			id: "A3F1C0E510000301"
-			title: "符文之地"
-			subtitle: "《英雄联盟》一系——瓦罗兰大陆的传奇战士"
 			description: [
 				"自瓦罗兰大陆穿越而来的传奇战士，每一位都身经百战。"
 				"此分区记载《英雄联盟》出身的四位强者，链式解锁。"
 				"每场讨伐完成后自动点亮下一目标。"
 			]
-			x: 0.0d
-			y: 3.0d
-			shape: "diamond"
-			tasks: [{
-				id: "A3F1C0E520000301"
-				type: "checkmark"
-				title: "点亮「符文之地」分区"
-			}]
+			id: "4BE691DBB42A24DC"
+			invisible: true
 			rewards: [{
-				id: "A3F1C0E530000301"
+				id: "7B86ECA8669775B5"
 				type: "xp"
 				xp: 2
 			}]
+			shape: "diamond"
+			subtitle: "《英雄联盟》一系——瓦罗兰大陆的传奇战士"
+			tasks: [{
+				id: "5B726C4416D1A96D"
+				title: "点亮「符文之地」分区"
+				type: "checkmark"
+			}]
+			title: "符文之地"
+			x: 0.0d
+			y: 3.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000311"
-			title: "暗裔剑魔·亚托克斯"
-			subtitle: "《英雄联盟》·暗裔剑魔，被囚于剑中的古神"
 			description: [
 				"囚于巨剑中的暗裔古神，以杀戮填满永恒的饥渴。"
 				"巨剑劈斩带起血浪，冲锋与跃击凶悍绝伦，正面硬撼者先亡。"
 				"推荐 Stage4 挑战；召唤方式需人工核实。"
 			]
-			x: 1.5d
-			y: 3.0d
+			id: "771719CDD67DB5E0"
+			invisible: true
+			rewards: [
+				{
+					id: "69F67A02554385B1"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "2F59E7E219718895"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000301"]
+			subtitle: "《英雄联盟》·暗裔剑魔，被囚于剑中的古神"
 			tasks: [{
-				id: "A3F1C0E520000311"
-				type: "kill"
 				entity: "slu:boss_aatrox"
+				id: "40C7361F36132A8C"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF811133476894", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000311"
-				type: "xp"
-				xp: 5
-			}]
+			title: "暗裔剑魔·亚托克斯"
+			x: 1.5d
+			y: 3.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000312"
-			title: "不屈之枪·潘森"
-			subtitle: "《英雄联盟》·不屈之枪，以凡躯战神的凡人"
 			description: [
 				"执枪与盾的战争星灵宿主，以凡人之躯行神之事。"
 				"盾击枪刺攻防一体，跳劈如流星坠地，气势碾压一切。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 3.0d
-			y: 3.0d
+			id: "6BFE0131DD083AD4"
+			invisible: true
+			rewards: [
+				{
+					id: "2B1340FA54F6A55F"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "684517388E903A3C"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000311"]
+			subtitle: "《英雄联盟》·不屈之枪，以凡躯战神的凡人"
 			tasks: [{
-				id: "A3F1C0E520000312"
-				type: "kill"
 				entity: "slu:boss_pantheon"
+				id: "15718C67CC9C7543"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF038172808637", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000312"
-				type: "xp"
-				xp: 5
-			}]
+			title: "不屈之枪·潘森"
+			x: 3.0d
+			y: 3.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000313"
-			title: "武器大师·贾克斯"
-			subtitle: "《英雄联盟》·武器大师，艾卡西亚的幸存者"
 			description: [
 				"自称仅用灯柱便无敌于世的武器大师，艾卡西亚灾变的幸存者。"
 				"攻速越战越快，反击风暴弹开一切近战，绵里藏针的狠角色。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 4.5d
-			y: 3.0d
+			id: "5B1A7CB979E977E9"
+			invisible: true
+			rewards: [
+				{
+					id: "3D87448DF9E2FBB0"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "4153A563A23DFB98"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000312"]
+			subtitle: "《英雄联盟》·武器大师，艾卡西亚的幸存者"
 			tasks: [{
-				id: "A3F1C0E520000313"
-				type: "kill"
 				entity: "slu:boss_jax"
+				id: "460D1E79B5BDB776"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF879952392719", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000313"
-				type: "xp"
-				xp: 5
-			}]
+			title: "武器大师·贾克斯"
+			x: 4.5d
+			y: 3.0d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000314"
-			title: "诺克萨斯之手·德莱厄斯"
-			subtitle: "《英雄联盟》·诺克萨斯之手，帝国的利斧"
 			description: [
 				"诺克萨斯帝国的行刑官，以巨斧丈量国土的将军。"
 				"巨斧划出圆弧，流血不止的伤口与处决斩首，压迫感十足。"
 				"推荐 Stage4 挑战；召唤方式需人工核实。"
 			]
-			x: 6.0d
-			y: 3.0d
+			id: "2862876930A90526"
+			invisible: true
+			rewards: [
+				{
+					id: "7EACB808E6F96BC5"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "2CDC5C4AAA0EB09D"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000313"]
+			subtitle: "《英雄联盟》·诺克萨斯之手，帝国的利斧"
 			tasks: [{
-				id: "A3F1C0E520000314"
-				type: "kill"
 				entity: "slu:boss_darius"
+				id: "17709DEB434AB5BC"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF421156217085", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000314"
-				type: "xp"
-				xp: 5
-			}]
+			title: "诺克萨斯之手·德莱厄斯"
+			x: 6.0d
+			y: 3.0d
 		}
 		{
-			dependencies: ["A3F1C0E610000016"]
-			
-			invisible: true
-			id: "A3F1C0E510000401"
-			title: "异界来宾"
-			subtitle: "其他世界的来客与深藏的彩蛋"
 			description: [
 				"不属于三大系谱的异界强者与模组彩蛋，尽汇于此。"
 				"此分区记载九位异界来宾，链式解锁。"
 				"每场讨伐完成后自动点亮下一目标。"
 			]
-			x: 0.0d
-			y: 4.5d
-			shape: "diamond"
-			tasks: [{
-				id: "A3F1C0E520000401"
-				type: "checkmark"
-				title: "点亮「异界来宾」分区"
-			}]
+			id: "2D3A89F7D642845A"
+			invisible: true
 			rewards: [{
-				id: "A3F1C0E530000401"
+				id: "28F6DDC7B25CC6F2"
 				type: "xp"
 				xp: 2
 			}]
+			shape: "diamond"
+			subtitle: "其他世界的来客与深藏的彩蛋"
+			tasks: [{
+				id: "00C226460D00F1BC"
+				title: "点亮「异界来宾」分区"
+				type: "checkmark"
+			}]
+			title: "异界来宾"
+			x: 0.0d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000411"
-			title: "齐天大圣·孙悟空"
-			subtitle: "《黑神话：悟空》·齐天大圣，大闹天宫的顽主"
 			description: [
 				"自花果山踏云而来的齐天大圣，金箍棒下无生魂。"
 				"棒法千变万化，身外化身与筋斗云防不胜防，猴王之名不虚。"
 				"推荐 Stage5 极限挑战；召唤方式需人工核实。"
 			]
-			x: 1.5d
-			y: 4.5d
+			id: "0ECAE10F3A5E760F"
+			invisible: true
+			rewards: [
+				{
+					id: "4EF169324EEA65FC"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "645E609A8C6BD623"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000401"]
+			subtitle: "《黑神话：悟空》·齐天大圣，大闹天宫的顽主"
 			tasks: [{
-				id: "A3F1C0E520000411"
-				type: "kill"
 				entity: "slu:boss_wukong"
+				id: "2B46E3FF8EE6E059"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF586480656765", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000411"
-				type: "xp"
-				xp: 5
-			}]
+			title: "齐天大圣·孙悟空"
+			x: 1.5d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000412"
-			title: "熔炉骑士·奥多维斯"
-			subtitle: "《艾尔登法环》·熔炉百相，黄金树时代的余晖"
 			description: [
 				"黄金树时代遗留的熔炉骑士，奥多维斯之名仍在传说中回响。"
 				"盾枪合一，尾部横扫与圣翼突进连绵不绝，攻守兼备的苦战。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 3.0d
-			y: 4.5d
+			id: "73D947348A20F59D"
+			invisible: true
+			rewards: [
+				{
+					id: "7A4045F807FAFF95"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "28EEC62D89AAC2CD"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000411"]
+			subtitle: "《艾尔登法环》·熔炉百相，黄金树时代的余晖"
 			tasks: [{
-				id: "A3F1C0E520000412"
-				type: "kill"
 				entity: "slu:boss_crucible_knight"
+				id: "3EE49C207007357C"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF956234276797", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000412"
-				type: "xp"
-				xp: 5
-			}]
+			title: "熔炉骑士·奥多维斯"
+			x: 3.0d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000413"
-			title: "铃珠猎人·艾尔默"
-			subtitle: "《艾尔登法环》·掳掠铃珠的猎人"
 			description: [
 				"以猎杀商旅为生的铃珠猎人，掳人铃珠如探囊取物。"
 				"长剑如钩、出手迅疾，压迫式的连击不给人喘息之机。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 4.5d
-			y: 4.5d
+			id: "6E14469BF2B44BBE"
+			invisible: true
+			rewards: [
+				{
+					id: "72BCB00A39247380"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "4749F0A0E44AE215"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000412"]
+			subtitle: "《艾尔登法环》·掳掠铃珠的猎人"
 			tasks: [{
-				id: "A3F1C0E520000413"
-				type: "kill"
 				entity: "slu:boss_elemer"
+				id: "257ABFD89F52DA3D"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF264792184980", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000413"
-				type: "xp"
-				xp: 5
-			}]
+			title: "铃珠猎人·艾尔默"
+			x: 4.5d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000414"
-			title: "罗贝尔伯爵"
-			subtitle: "出处待考·异界的优雅伯爵"
 			description: [
 				"身世成谜的异界伯爵，优雅外表下藏着冰冷杀意。"
 				"出处与召唤方式均需人工核实，交手时切勿被礼数迷惑。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 6.0d
-			y: 4.5d
+			id: "5A16F7DD94930584"
+			invisible: true
+			rewards: [
+				{
+					id: "4C3A123380E75960"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "790A0D5FE32764B1"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000413"]
+			subtitle: "出处待考·异界的优雅伯爵"
 			tasks: [{
-				id: "A3F1C0E520000414"
-				type: "kill"
 				entity: "slu:boss_count_robert"
+				id: "1249CA40AF817EF0"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF601742774426", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000414"
-				type: "xp"
-				xp: 5
-			}]
+			title: "罗贝尔伯爵"
+			x: 6.0d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000415"
-			title: "野兽祭司·古兰格"
-			subtitle: "《艾尔登法环》·贪食死根的野兽祭司"
 			description: [
 				"以死根为食的野兽祭司，温驯的外皮下潜伏着野兽之怒。"
 				"爪击如风暴，跃扑快若闪电，兽性觉醒后判若两人。"
 				"推荐 Stage4 挑战；召唤方式需人工核实。"
 			]
-			x: 7.5d
-			y: 4.5d
+			id: "5C251DFC539EB455"
+			invisible: true
+			rewards: [
+				{
+					id: "2A8A6923E2510D24"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "6F9E7C4B11F22E7A"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000414"]
+			subtitle: "《艾尔登法环》·贪食死根的野兽祭司"
 			tasks: [{
-				id: "A3F1C0E520000415"
-				type: "kill"
 				entity: "slu:boss_beast_clergyman"
+				id: "7F0241ECCF3EF223"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF483838316835", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000415"
-				type: "xp"
-				xp: 5
-			}]
+			title: "野兽祭司·古兰格"
+			x: 7.5d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000416"
-			title: "远古战士"
-			subtitle: "出处待考·自远古苏醒的武人"
 			description: [
 				"自远古遗迹中苏醒的无名武人，招式古朴而致命。"
 				"出处与召唤方式均需人工核实，其剑术颇有古风。"
 				"推荐 Stage3 挑战；召唤方式需人工核实。"
 			]
-			x: 9.0d
-			y: 4.5d
+			id: "0D638397699EB473"
+			invisible: true
+			rewards: [
+				{
+					id: "41BFF05087014F28"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "1E56118255529EC4"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000415"]
+			subtitle: "出处待考·自远古苏醒的武人"
 			tasks: [{
-				id: "A3F1C0E520000416"
-				type: "kill"
 				entity: "slu:boss_ancient_warrior"
+				id: "495B2F6DEA5D2897"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF058875324622", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000416"
-				type: "xp"
-				xp: 5
-			}]
+			title: "远古战士"
+			x: 9.0d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000417"
-			title: "陨落之王"
-			subtitle: "出处待考·自王座坠落的败者"
 			description: [
 				"失去王座的陨落之主，怨念支撑着他再度站起。"
 				"出处与召唤方式均需人工核实，败者的执念最为灼人。"
 				"推荐 Stage4 挑战；召唤方式需人工核实。"
 			]
-			x: 10.5d
-			y: 4.5d
+			id: "4278AF7E82DD101A"
+			invisible: true
+			rewards: [
+				{
+					id: "6BB97B4B167D0C7E"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "15AC860AA306CB6D"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000416"]
+			subtitle: "出处待考·自王座坠落的败者"
 			tasks: [{
-				id: "A3F1C0E520000417"
-				type: "kill"
 				entity: "slu:boss_fallen_lord"
+				id: "71F28C1191267386"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF643596397417", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000417"
-				type: "xp"
-				xp: 5
-			}]
+			title: "陨落之王"
+			x: 10.5d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000418"
-			title: "创世者·Notch"
-			subtitle: "《Minecraft》·创世者降临的彩蛋"
 			description: [
 				"本作最大彩蛋——世界创始者的化身，亲自下场试炼勇者。"
 				"彩蛋 Boss，难度成谜，建议满配 Stage5 再来一探究竟。"
 				"推荐 Stage5 挑战；召唤方式需人工核实。"
 			]
-			x: 12.0d
-			y: 4.5d
+			id: "0EBEFFF6F0F0BB7B"
+			invisible: true
+			rewards: [
+				{
+					id: "69CDB69B2C0BB649"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "161469F4C1C2A1B3"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000417"]
+			subtitle: "《Minecraft》·创世者降临的彩蛋"
 			tasks: [{
-				id: "A3F1C0E520000418"
-				type: "kill"
 				entity: "slu:boss_notch"
+				id: "0983D419D687639A"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF442442289830", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000418"
-				type: "xp"
-				xp: 5
-			}]
+			title: "创世者·Notch"
+			x: 12.0d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000419"
-			title: "方块之王"
-			subtitle: "《Minecraft》·方块世界的王者彩蛋"
 			description: [
 				"方块世界的王者，与 Notch 并列的隐藏彩蛋 Boss。"
 				"彩蛋 Boss，机制成谜，击败他即是通关隐藏试炼的证明。"
 				"推荐 Stage5 挑战；召唤方式需人工核实。"
 			]
-			x: 13.5d
-			y: 4.5d
+			id: "2F6CD478DA01B170"
+			invisible: true
+			rewards: [
+				{
+					id: "344411873622DA62"
+					item: "tconstruct:slimesteel_ingot"
+					type: "item"
+				}
+				{
+					id: "5DE1F16EFA49F5B3"
+					type: "xp"
+					xp: 5
+				}
+			]
 			shape: "circle"
-			dependencies: ["A3F1C0E510000418"]
+			subtitle: "《Minecraft》·方块世界的王者彩蛋"
 			tasks: [{
-				id: "A3F1C0E520000419"
-				type: "kill"
 				entity: "slu:boss_minecraft_lord"
+				id: "6A75F173D88AB0C6"
+				type: "kill"
 				value: 1L
 			}]
-			rewards: [
-				{id: "BEEF172797351698", type: "item", item: {id: "tconstruct:slimesteel_ingot", Count: 1b}}{
-				id: "A3F1C0E530000419"
-				type: "xp"
-				xp: 5
-			}]
+			title: "方块之王"
+			x: 13.5d
+			y: 4.5d
 		}
 		{
-			invisible: true
-			id: "A3F1C0E510000501"
-			title: "诸王之王"
-			subtitle: "四系魂之王的讨伐证明，封王之路的终点"
 			description: [
 				"狭间、余烬、符文之地、异界——四大系谱的王者皆已俯首。"
 				"手持此证者，方有资格自称「诸王之王」。"
 				"此志完成，魂界志全书收官。"
 			]
-			x: 22.5d
-			y: 2.25d
-			shape: "pentagon"
-			dependencies: ["A3F1C0E51000010E", "A3F1C0E51000021B", "A3F1C0E510000314", "A3F1C0E510000419"]
-			tasks: [{
-				id: "A3F1C0E520000501"
-				type: "checkmark"
-				title: "集齐四系王者讨伐证明"
-			}]
+			id: "4271C56757BF4B6B"
+			invisible: true
 			rewards: [{
-				id: "A3F1C0E530000501"
+				id: "5C49FA477F137A99"
 				type: "xp_levels"
 				xp_levels: 10
 			}]
+			shape: "pentagon"
+			subtitle: "四系魂之王的讨伐证明，封王之路的终点"
+			tasks: [{
+				id: "775B859539FC3B76"
+				title: "集齐四系王者讨伐证明"
+				type: "checkmark"
+			}]
+			title: "诸王之王"
+			x: 22.5d
+			y: 2.25d
 		}
 	]
+	title: "Ⅲ·魂界列传"
 }

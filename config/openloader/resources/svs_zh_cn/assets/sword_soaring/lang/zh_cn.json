@@ -1,0 +1,7 @@
+{
+ "key.sword_soaring.sword_skill.description": "在可用时发动你所持武器的特殊剑技。",
+ "key.sword_soaring.sword_back.description": "将你的 Vatansever 剑收回至背后。",
+ "key.sword_soaring.take_off.description": "若你拥有所需的 Epic Fight 技能，即可开始御剑飞行。",
+ "key.sword_soaring.acceleration.description": "在飞行途中暂时提升你的飞行速度。",
+ "key.sword_soaring.switch_mode.description": "在不同的御剑飞行模式之间切换。"
+}

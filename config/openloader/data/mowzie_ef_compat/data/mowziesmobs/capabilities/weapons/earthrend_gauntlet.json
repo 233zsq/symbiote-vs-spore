@@ -1,0 +1,30 @@
+{
+  "attributes": {
+    "common": {
+      "armor_negation": 8.0,
+      "impact": 3.0,
+      "speed_bonus": 0.8,
+      "max_strikes": 4
+    },
+    "one_hand": {
+      "armor_negation": 8.0,
+      "impact": 3.0,
+      "speed_bonus": 0.5,
+      "max_strikes": 4
+    }
+  },
+  "collider": {
+    "center": [
+      0.0,
+      0.0,
+      -0.1
+    ],
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.6
+    ]
+  },
+  "type": "epicfight:slipper"
+}

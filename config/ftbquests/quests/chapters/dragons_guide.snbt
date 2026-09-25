@@ -1,143 +1,234 @@
 {
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
 	filename: "dragons_guide"
 	group: "0B00AA11CC22DDAA"
 	icon: "saintsdragons:dragonheart_alloy"
-	id: "A3F1C0F700000077"
+	id: "3F6C7C26AD4DD529"
 	order_index: 2
-	title: "圣龙驯养"
+	quest_links: [ ]
 	quests: [
 		{
-			id: "A3F1C0F710000001"
-			title: "八龙传说"
+			description: [
+				"圣龙传说：可驯服、可骑乘的伙伴龙，定位为赶路坐骑。"
+				"群系标签已注入 Terralith，按高山、雪原、熔岩等地貌寻龙。"
+				"模组尚处 Alpha 阶段，异常行为请备份存档后反馈。"
+			]
+			id: "27E1C973045F9163"
+			shape: "diamond"
 			subtitle: "天空的传说"
-			description: ["圣龙传说：可驯服、可骑乘的伙伴龙，定位为赶路坐骑。", "群系标签已注入 Terralith，按高山、雪原、熔岩等地貌寻龙。", "模组尚处 Alpha 阶段，异常行为请备份存档后反馈。"]
+			tasks: [{
+				id: "0270998F745DC8E1"
+				title: "阅读八龙传说"
+				type: "checkmark"
+			}]
+			title: "八龙传说"
 			x: 0.0d
 			y: 0.0d
-			shape: "diamond"
-			tasks: [{id: "A3F1C0F720000001", type: "checkmark", title: "阅读八龙传说"}]
 		}
 		{
-			id: "A3F1C0F710000002"
-			title: "驯龙要诀"
+			description: [
+				"驯服流程：压低血线将龙打晕，趁其倒地时喂食。"
+				"鞍具是骑乘的前置；骑乘仅限赶路，正面战斗请下马。"
+				"打晕不是打死——血线压过头，就只能捡龙鳞了。"
+			]
+			id: "5B020D7027F915B6"
+			shape: "circle"
 			subtitle: "先打晕，再喂食"
-			description: ["驯服流程：压低血线将龙打晕，趁其倒地时喂食。", "鞍具是骑乘的前置；骑乘仅限赶路，正面战斗请下马。", "打晕不是打死——血线压过头，就只能捡龙鳞了。"]
+			tasks: [{
+				id: "090643F979E9915E"
+				title: "研读驯龙要诀"
+				type: "checkmark"
+			}]
+			title: "驯龙要诀"
 			x: 1.5d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0F710000001"]
-			tasks: [{id: "A3F1C0F720000002", type: "checkmark", title: "研读驯龙要诀"}]
 		}
 		{
-			id: "A3F1C0F710000003"
-			title: "雷翼 Raevyx"
+			description: [
+				"栖息于山地与陡峭高原，常伴雷雨现身。"
+				"驯服：山地形压血线打晕后喂食；个性高傲，认主后极忠。"
+				"※ 刷新条件等细节需人工核实。"
+			]
+			id: "5A478749C8F44F1A"
+			shape: "circle"
 			subtitle: "雷翼·山地形"
-			description: ["栖息于山地与陡峭高原，常伴雷雨现身。", "驯服：山地形压血线打晕后喂食；个性高傲，认主后极忠。", "※ 刷新条件等细节需人工核实。"]
+			tasks: [{
+				id: "4FCD715C5A37E56E"
+				title: "记录雷翼"
+				type: "checkmark"
+			}]
+			title: "雷翼 Raevyx"
 			x: 3.0d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0F710000002"]
-			tasks: [{id: "A3F1C0F720000003", type: "checkmark", title: "记录雷翼"}]
 		}
 		{
-			id: "A3F1C0F710000004"
-			title: "烬羽 Cindervane"
+			description: [
+				"火山与焦土地带的赤翼飞龙，飞行平稳。"
+				"独有亮点：多乘客位，可载队友同游天际。"
+				"※ 驯服细节需人工核实。"
+			]
+			id: "6C06BCD4D81E52F1"
+			shape: "circle"
 			subtitle: "烬羽·多乘客位"
-			description: ["火山与焦土地带的赤翼飞龙，飞行平稳。", "独有亮点：多乘客位，可载队友同游天际。", "※ 驯服细节需人工核实。"]
+			tasks: [{
+				id: "355D1597CDFF544B"
+				title: "记录烬羽"
+				type: "checkmark"
+			}]
+			title: "烬羽 Cindervane"
 			x: 4.5d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0F710000003"]
-			tasks: [{id: "A3F1C0F720000004", type: "checkmark", title: "记录烬羽"}]
 		}
 		{
-			id: "A3F1C0F710000005"
-			title: "堕影 Atroxiia"
+			description: [
+				"盘踞于幽暗密林与洞穴穹顶，行踪诡秘的暗色龙。"
+				"低血线时会凶狠反扑，打晕阶段务必留足余量。"
+				"※ 群系与行为细节需人工核实。"
+			]
+			id: "2DCF9C0FC1DE14E1"
+			shape: "circle"
 			subtitle: "堕影"
-			description: ["盘踞于幽暗密林与洞穴穹顶，行踪诡秘的暗色龙。", "低血线时会凶狠反扑，打晕阶段务必留足余量。", "※ 群系与行为细节需人工核实。"]
+			tasks: [{
+				id: "3A8F9542EF5F7486"
+				title: "记录堕影"
+				type: "checkmark"
+			}]
+			title: "堕影 Atroxiia"
 			x: 6.0d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0F710000004"]
-			tasks: [{id: "A3F1C0F720000005", type: "checkmark", title: "记录堕影"}]
 		}
 		{
-			id: "A3F1C0F710000006"
-			title: "虚颚 Nulljaw"
+			description: [
+				"出没于荒芜恶地与幽谷，咬合力惊人。"
+				"个性凶悍，驯服时的血线控制是关键。"
+				"※ 刷新群系与喂食材料需人工核实。"
+			]
+			id: "5762D4037F608C1A"
+			shape: "circle"
 			subtitle: "虚颚"
-			description: ["出没于荒芜恶地与幽谷，咬合力惊人。", "个性凶悍，驯服时的血线控制是关键。", "※ 刷新群系与喂食材料需人工核实。"]
+			tasks: [{
+				id: "6039ED79C2849305"
+				title: "记录虚颚"
+				type: "checkmark"
+			}]
+			title: "虚颚 Nulljaw"
 			x: 7.5d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0F710000005"]
-			tasks: [{id: "A3F1C0F720000006", type: "checkmark", title: "记录虚颚"}]
 		}
 		{
-			id: "A3F1C0F710000007"
-			title: "剑背 Stegonaut"
+			description: [
+				"沼泽湿地的重甲龙，浑身披甲。"
+				"装死行家：被打残时会倒地装死——别停手，继续喂到驯服。"
+				"※ 装死触发机制需人工核实。"
+			]
+			id: "38DE3A9FEFBACF93"
+			shape: "circle"
 			subtitle: "剑背·装死行家"
-			description: ["沼泽湿地的重甲龙，浑身披甲。", "装死行家：被打残时会倒地装死——别停手，继续喂到驯服。", "※ 装死触发机制需人工核实。"]
+			tasks: [{
+				id: "31030761529EDA25"
+				title: "记录剑背"
+				type: "checkmark"
+			}]
+			title: "剑背 Stegonaut"
 			x: 7.5d
 			y: -1.5d
-			shape: "circle"
-			dependencies: ["A3F1C0F710000006"]
-			tasks: [{id: "A3F1C0F720000007", type: "checkmark", title: "记录剑背"}]
 		}
 		{
-			id: "A3F1C0F710000008"
-			title: "钩鳄 Varasuchus"
+			description: [
+				"潜伏于河流三角洲的鳄形龙，半水栖。"
+				"水性极佳；先打晕再喂食，追进水里时注意呼吸。"
+				"※ 具体习性需人工核实。"
+			]
+			id: "557F0BCB795E5AF0"
+			shape: "circle"
 			subtitle: "钩鳄"
-			description: ["潜伏于河流三角洲的鳄形龙，半水栖。", "水性极佳；先打晕再喂食，追进水里时注意呼吸。", "※ 具体习性需人工核实。"]
+			tasks: [{
+				id: "7E8F757BB9F629B8"
+				title: "记录钩鳄"
+				type: "checkmark"
+			}]
+			title: "钩鳄 Varasuchus"
 			x: 9.0d
 			y: -1.5d
-			shape: "circle"
-			dependencies: ["A3F1C0F710000007"]
-			tasks: [{id: "A3F1C0F720000008", type: "checkmark", title: "记录钩鳄"}]
 		}
 		{
-			id: "A3F1C0F710000009"
-			title: "熔喉 Ignivorus"
+			description: [
+				"熔岩湖畔的霸主，常盘踞于熔岩柱旁。"
+				"火焰亲和；驯服它务必备好防火手段，控血更要精准。"
+				"※ 喂食材料以游戏内为准，需人工核实。"
+			]
+			id: "76CA0AC40F2677C7"
+			shape: "circle"
 			subtitle: "熔喉·熔岩柱"
-			description: ["熔岩湖畔的霸主，常盘踞于熔岩柱旁。", "火焰亲和；驯服它务必备好防火手段，控血更要精准。", "※ 喂食材料以游戏内为准，需人工核实。"]
+			tasks: [{
+				id: "01D3348E71FFE176"
+				title: "记录熔喉"
+				type: "checkmark"
+			}]
+			title: "熔喉 Ignivorus"
 			x: 10.5d
 			y: -1.5d
-			shape: "circle"
-			dependencies: ["A3F1C0F710000008"]
-			tasks: [{id: "A3F1C0F720000009", type: "checkmark", title: "记录熔喉"}]
 		}
 		{
-			id: "A3F1C0F71000000A"
-			title: "浮羽 Volitans"
+			description: [
+				"云海高空的游弋者，现身于天域般的高空地貌。"
+				"长途耐力最佳，公认最理想的赶路伙伴。"
+				"※ 刷新条件与驯服细节需人工核实。"
+			]
+			id: "555750E1C6BFC352"
+			shape: "circle"
 			subtitle: "浮羽"
-			description: ["云海高空的游弋者，现身于天域般的高空地貌。", "长途耐力最佳，公认最理想的赶路伙伴。", "※ 刷新条件与驯服细节需人工核实。"]
+			tasks: [{
+				id: "6BFFE9BED664995D"
+				title: "记录浮羽"
+				type: "checkmark"
+			}]
+			title: "浮羽 Volitans"
 			x: 12.0d
 			y: -1.5d
-			shape: "circle"
-			dependencies: ["A3F1C0F710000009"]
-			tasks: [{id: "A3F1C0F72000000A", type: "checkmark", title: "记录浮羽"}]
 		}
 		{
-			id: "A3F1C0F71000000B"
-			title: "龙心合金"
+			description: [
+				"龙心合金：龙匠锻炉的产物，圣龙装备的起点。"
+				"集齐龙鳞等材料，交由龙匠锻炉熔炼成锭。"
+				"※ 具体配方与材料需人工核实。"
+			]
+			id: "4AFF9D94B4E5AE54"
+			shape: "circle"
 			subtitle: "龙匠锻炉产物"
-			description: ["龙心合金：龙匠锻炉的产物，圣龙装备的起点。", "集齐龙鳞等材料，交由龙匠锻炉熔炼成锭。", "※ 具体配方与材料需人工核实。"]
+			tasks: [{
+				id: "66F967413F4B1370"
+				item: "saintsdragons:dragonheart_alloy"
+				type: "item"
+			}]
+			title: "龙心合金"
 			x: 13.5d
 			y: -1.5d
-			shape: "circle"
-			dependencies: ["A3F1C0F71000000A"]
-			tasks: [{id: "A3F1C0F72000000B", type: "item", item: {id: "saintsdragons:dragonheart_alloy", Count: 1b}}]
 		}
 		{
-			id: "A3F1C0F71000000C"
-			title: "龙骑士"
+			description: [
+				"八龙图鉴已全，龙心合金在手——龙骑士的资格，你已具备。"
+				"挑一匹心仪的伙伴，驰骋天际吧。"
+				"祝旅途顺风。"
+			]
+			id: "52774581AC21AA52"
+			rewards: [{
+				id: "60547A6731F7D39F"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			shape: "pentagon"
 			subtitle: "飞吧，骑士"
-			description: ["八龙图鉴已全，龙心合金在手——龙骑士的资格，你已具备。", "挑一匹心仪的伙伴，驰骋天际吧。", "祝旅途顺风。"]
+			tasks: [{
+				id: "3870555CB201F2FA"
+				title: "达成龙骑士"
+				type: "checkmark"
+			}]
+			title: "龙骑士"
 			x: 15.0d
 			y: -1.5d
-			shape: "pentagon"
-			dependencies: ["A3F1C0F710000001", "A3F1C0F710000002", "A3F1C0F710000003", "A3F1C0F710000004", "A3F1C0F710000005", "A3F1C0F710000006", "A3F1C0F710000007", "A3F1C0F710000008", "A3F1C0F710000009", "A3F1C0F71000000A", "A3F1C0F71000000B"]
-			tasks: [{id: "A3F1C0F72000000C", type: "checkmark", title: "达成龙骑士"}]
-			rewards: [{id: "A3F1C0F73000000C", type: "xp_levels", xp_levels: 5}]
 		}
 	]
+	title: "圣龙驯养"
 }

@@ -1,0 +1,10 @@
+{
+ "item.irons_spellbooks.ominous_bottle": "不祥之瓶",
+ "block.irons_spellbooks.trial_spawner": "魔法刷怪笼",
+ "block.irons_spellbooks.vault": "魔法密库",
+ "effect.irons_spellbooks.trial_omen": "试炼之兆",
+ "effect.irons_spellbooks.trial_omen.description": "将附近的试炼刷怪笼转化为不祥试炼刷怪笼",
+ "item.irons_spellbooks.music_disc_whispers_of_ice.desc": "Caner Crebes - 冰之低语",
+ "item.irons_spellbooks.music_disc_dead_king_lullaby.desc": "Caner Crebes - 王者摇篮曲",
+ "item.irons_spellbooks.music_disc_flame_still_burns.desc": "Caner Crebes - 烈焰仍在燃烧"
+}

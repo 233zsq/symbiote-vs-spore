@@ -1,167 +1,291 @@
 {
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
 	filename: "symbiote_bond"
 	group: "0B00AA11CC22DD44"
 	icon: "minecraft:spider_eye"
 	id: "7C0F5E7A10000001"
 	order_index: 0
-	title: "共生体养成·羁绊线"
+	quest_links: [ ]
 	quests: [
 		{
-			invisible: true
-			dependencies: ["A3F1C0DE10000009"]
+			description: [
+				"夜里留意天边的火光，白天循着焦土找到那枚陨石坑。"
+				"人工核实：取得坑底的休眠样本。"
+			]
 			id: "7C0F5E7A20000001"
-			title: "坠星之夜"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A40000001"
+				type: "xp"
+				xp: 25
+			}]
+			shape: "circle"
 			subtitle: "Attached 缔结期"
-			description: ["夜里留意天边的火光，白天循着焦土找到那枚陨石坑。", "人工核实：取得坑底的休眠样本。"]
+			tasks: [{
+				id: "7C0F5E7A30000001"
+				title: "寻找地表 Symbiote 陨石坑（休眠样本）"
+				type: "checkmark"
+			}]
+			title: "坠星之夜"
 			x: 0.0d
 			y: 0.0d
-			shape: "circle"
-			tasks: [{id: "7C0F5E7A30000001", type: "checkmark", title: "寻找地表 Symbiote 陨石坑（休眠样本）"}]
-			rewards: [{id: "7C0F5E7A40000001", type: "xp", xp: 25}]
 		}
 		{
-			invisible: true
+			dependencies: ["7C0F5E7A20000001"]
+			description: [
+				"伸手接纳它——从此你们共用同一具身体；按 X 打开径向菜单查看它的状态。"
+				"缔结瞬间有 10% 概率被反杀，动手前先存档。"
+			]
 			id: "7C0F5E7A20000002"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A40000002"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "7C0F5E7A30000002"
+				title: "与共生体完成缔结（Attached）"
+				type: "checkmark"
+			}]
 			title: "缔结羁绊"
-			subtitle: ""
-			description: ["伸手接纳它——从此你们共用同一具身体；按 X 打开径向菜单查看它的状态。", "缔结瞬间有 10% 概率被反杀，动手前先存档。"]
 			x: 1.5d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["7C0F5E7A20000001"]
-			tasks: [{id: "7C0F5E7A30000002", type: "checkmark", title: "与共生体完成缔结（Attached）"}]
-			rewards: [{id: "7C0F5E7A40000002", type: "xp", xp: 50}]
 		}
 		{
-			invisible: true
-			id: "7C0F5E7A20000003"
-			title: "第一顿饭"
-			subtitle: ""
+			dependencies: ["7C0F5E7A20000002"]
 			description: ["按 B 喂食——吃饱的共生体才不会惦记你。"]
+			id: "7C0F5E7A20000003"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A40000003"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "square"
+			tasks: [{
+				id: "7C0F5E7A30000003"
+				item: { Count: 4, id: "minecraft:beef" }
+				type: "item"
+			}]
+			title: "第一顿饭"
 			x: 3.0d
 			y: 0.0d
-			shape: "square"
-			dependencies: ["7C0F5E7A20000002"]
-			tasks: [{id: "7C0F5E7A30000003", type: "item", item: {id: "minecraft:beef", Count: 4b}}]
-			rewards: [{id: "7C0F5E7A40000003", type: "xp", xp: 50}]
 		}
 		{
-			invisible: true
-			id: "7C0F5E7A20000004"
-			title: "Bond 120：磨合期"
-			subtitle: "Integrated 磨合期"
-			description: ["羁绊值涨到 120，它开始懂你——正式进入磨合期（Integrated）。"]
-			x: 4.5d
-			y: 0.0d
-			shape: "circle"
 			dependencies: ["7C0F5E7A20000003"]
-			tasks: [{id: "7C0F5E7A30000004", type: "checkmark", title: "Bond 达到 120"}]
-			rewards: [{id: "7C0F5E7A40000004", type: "item", item: {id: "kubejs:refined_iron_ingot", Count: 4b}}]
+			description: ["羁绊值涨到 120，它开始懂你——正式进入磨合期（Integrated）。"]
+			id: "7C0F5E7A20000004"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A40000004"
+				item: {
+					Count: 4b
+					id: "kubejs:refined_iron_ingot"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "Integrated 磨合期"
+			tasks: [{
+				id: "7C0F5E7A30000004"
+				title: "Bond 达到 120"
+				type: "checkmark"
+			}]
+			title: "Bond 120：磨合期"
+			x: 4.5d
+			y: 0.0d
 		}
 		{
-			invisible: true
+			dependencies: ["7C0F5E7A20000004"]
+			description: [
+				"它饿了、闷了都会发信号，看到提示就回应。"
+				"人工核实：累计响应数次需求；每忽略一次，Stress +8。"
+			]
 			id: "7C0F5E7A20000005"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A40000005"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "7C0F5E7A30000005"
+				title: "累计响应共生体需求"
+				type: "checkmark"
+			}]
 			title: "有求必应"
-			subtitle: ""
-			description: ["它饿了、闷了都会发信号，看到提示就回应。", "人工核实：累计响应数次需求；每忽略一次，Stress +8。"]
 			x: 4.5d
 			y: -1.5d
-			shape: "circle"
-			dependencies: ["7C0F5E7A20000004"]
-			tasks: [{id: "7C0F5E7A30000005", type: "checkmark", title: "累计响应共生体需求"}]
-			rewards: [{id: "7C0F5E7A40000005", type: "xp", xp: 50}]
 		}
 		{
-			invisible: true
+			dependencies: ["7C0F5E7A20000005"]
+			description: [
+				"Stress 是它的脾气表：高压线在 70，越线就喂食安抚。"
+				"着火时 Stress 每秒 +4，最危险——离岩浆与火场远点。"
+			]
 			id: "7C0F5E7A20000006"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A40000006"
+				type: "xp"
+				xp: 75
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "7C0F5E7A30000006"
+				title: "学会观察并压低 Stress"
+				type: "checkmark"
+			}]
 			title: "压力管理课"
-			subtitle: ""
-			description: ["Stress 是它的脾气表：高压线在 70，越线就喂食安抚。", "着火时 Stress 每秒 +4，最危险——离岩浆与火场远点。"]
 			x: 6.0d
 			y: -1.5d
-			shape: "circle"
-			dependencies: ["7C0F5E7A20000005"]
-			tasks: [{id: "7C0F5E7A30000006", type: "checkmark", title: "学会观察并压低 Stress"}]
-			rewards: [{id: "7C0F5E7A40000006", type: "xp", xp: 75}]
 		}
 		{
-			invisible: true
-			id: "7C0F5E7A20000007"
-			title: "Bond 240：协作期"
-			subtitle: "Cooperative 协作期"
+			dependencies: [
+				"7C0F5E7A20000004"
+				"7C0F5E7A20000006"
+			]
 			description: ["Bond 240，它不再只是室友——协作期（Cooperative）解锁更多配合。"]
+			id: "7C0F5E7A20000007"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A40000007"
+				type: "xp"
+				xp: 75
+			}]
+			shape: "circle"
+			subtitle: "Cooperative 协作期"
+			tasks: [{
+				id: "7C0F5E7A30000007"
+				title: "Bond 达到 240"
+				type: "checkmark"
+			}]
+			title: "Bond 240：协作期"
 			x: 6.0d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["7C0F5E7A20000004", "7C0F5E7A20000006"]
-			tasks: [{id: "7C0F5E7A30000007", type: "checkmark", title: "Bond 达到 240"}]
-			rewards: [{id: "7C0F5E7A40000007", type: "xp", xp: 75}]
 		}
 		{
-			invisible: true
+			dependencies: ["7C0F5E7A20000007"]
+			description: [
+				"Y 触须猛拉、C 贴墙攀附、I 召唤 Living Armor、M 切换顶端形态。"
+				"人工核实：四项能力各实际用一次。"
+			]
 			id: "7C0F5E7A20000008"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A40000008"
+				type: "xp"
+				xp: 75
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "7C0F5E7A30000008"
+				title: "学会 Y/C/I/M 四项能力"
+				type: "checkmark"
+			}]
 			title: "四式在手"
-			subtitle: ""
-			description: ["Y 触须猛拉、C 贴墙攀附、I 召唤 Living Armor、M 切换顶端形态。", "人工核实：四项能力各实际用一次。"]
 			x: 7.5d
 			y: 1.5d
-			shape: "circle"
-			dependencies: ["7C0F5E7A20000007"]
-			tasks: [{id: "7C0F5E7A30000008", type: "checkmark", title: "学会 Y/C/I/M 四项能力"}]
-			rewards: [{id: "7C0F5E7A40000008", type: "xp", xp: 75}]
 		}
 		{
-			invisible: true
+			dependencies: ["7C0F5E7A20000008"]
+			description: [
+				"上床前先把 Stress 压回安全线以下再入睡。"
+				"带着高压入睡有 20% 概率被夺体——别拿存档赌运气。"
+			]
 			id: "7C0F5E7A20000009"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A40000009"
+				type: "xp"
+				xp: 75
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "7C0F5E7A30000009"
+				title: "低压力状态下安全入睡一次"
+				type: "checkmark"
+			}]
 			title: "睡前安神"
-			subtitle: ""
-			description: ["上床前先把 Stress 压回安全线以下再入睡。", "带着高压入睡有 20% 概率被夺体——别拿存档赌运气。"]
 			x: 9.0d
 			y: 1.5d
-			shape: "circle"
-			dependencies: ["7C0F5E7A20000008"]
-			tasks: [{id: "7C0F5E7A30000009", type: "checkmark", title: "低压力状态下安全入睡一次"}]
-			rewards: [{id: "7C0F5E7A40000009", type: "xp", xp: 75}]
 		}
 		{
-			invisible: true
-			id: "7C0F5E7A2000000A"
-			title: "Bond 400：支配期"
-			subtitle: "Dominant 支配期"
+			dependencies: [
+				"7C0F5E7A20000007"
+				"7C0F5E7A20000009"
+			]
 			description: ["Bond 400，支配期（Dominant）——现在轮到你说了算。"]
+			id: "7C0F5E7A2000000A"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A4000000A"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "pentagon"
+			subtitle: "Dominant 支配期"
+			tasks: [{
+				id: "7C0F5E7A3000000A"
+				title: "Bond 达到 400"
+				type: "checkmark"
+			}]
+			title: "Bond 400：支配期"
 			x: 9.0d
 			y: 0.0d
-			shape: "pentagon"
-			dependencies: ["7C0F5E7A20000007", "7C0F5E7A20000009"]
-			tasks: [{id: "7C0F5E7A3000000A", type: "checkmark", title: "Bond 达到 400"}]
-			rewards: [{id: "7C0F5E7A4000000A", type: "xp", xp: 100}]
 		}
 		{
-			invisible: true
-			id: "7C0F5E7A2000000B"
-			title: "掠食者夜猎"
-			subtitle: ""
+			dependencies: ["7C0F5E7A2000000A"]
 			description: ["夜里带它出门猎 10 只蜘蛛——实战是最好的默契课（占位任务，后续可换专属夜行敌）。"]
+			id: "7C0F5E7A2000000B"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A4000000B"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "circle"
+			tasks: [{
+				entity: "minecraft:spider"
+				id: "7C0F5E7A3000000B"
+				title: "夜间猎杀蜘蛛"
+				type: "kill"
+				value: 10L
+			}]
+			title: "掠食者夜猎"
 			x: 9.0d
 			y: -1.5d
-			shape: "circle"
-			dependencies: ["7C0F5E7A2000000A"]
-			tasks: [{id: "7C0F5E7A3000000B", type: "kill", entity: "minecraft:spider", value: 10L, title: "夜间猎杀蜘蛛"}]
-			rewards: [{id: "7C0F5E7A4000000B", type: "xp", xp: 100}]
 		}
 		{
-			invisible: true
+			dependencies: [
+				"7C0F5E7A2000000A"
+				"7C0F5E7A2000000B"
+			]
+			description: [
+				"从坠星到支配，你们已是彼此的铠甲。"
+				"终局硬条件之一：本任务完成计入终局判定。"
+			]
 			id: "7C0F5E7A2000000C"
+			invisible: true
+			rewards: [{
+				id: "7C0F5E7A4000000C"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "7C0F5E7A3000000C"
+				title: "走完全部羁绊阶段，完成毕业"
+				type: "checkmark"
+			}]
 			title: "羁绊毕业"
-			subtitle: ""
-			description: ["从坠星到支配，你们已是彼此的铠甲。", "终局硬条件之一：本任务完成计入终局判定。"]
 			x: 10.5d
 			y: 0.0d
-			shape: "hexagon"
-			dependencies: ["7C0F5E7A2000000A", "7C0F5E7A2000000B"]
-			tasks: [{id: "7C0F5E7A3000000C", type: "checkmark", title: "走完全部羁绊阶段，完成毕业"}]
-			rewards: [{id: "7C0F5E7A4000000C", type: "xp_levels", xp_levels: 10}]
 		}
 	]
+	title: "共生体养成·羁绊线"
 }

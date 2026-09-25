@@ -1,772 +1,908 @@
 {
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
 	filename: "boss_guide"
 	group: "0B00AA11CC22DD77"
 	icon: "minecraft:wither_skeleton_skull"
-	id: "A3F1C0E100000077"
+	id: "78F7079569BAF1DE"
 	order_index: 0
-	title: "Boss 全攻略"
+	quest_links: [ ]
 	quests: [
 		{
-			id: "A3F1C0E110000001"
-			title: "T1·精英级"
-			subtitle: "初露锋芒的强敌"
 			description: [
 				"主世界与浅层洞穴中的试刃之敌。"
 				"讨伐之路，从这里开始。"
 			]
+			id: "2EB00AEE3A73146F"
+			shape: "diamond"
+			subtitle: "初露锋芒的强敌"
+			tasks: [{
+				id: "69D28E2678BD3946"
+				title: "T1·精英级"
+				type: "checkmark"
+			}]
+			title: "T1·精英级"
 			x: 0.0d
 			y: 0.0d
-			shape: "diamond"
-			tasks: [{id: "A3F1C0E120000001", type: "checkmark", title: "T1·精英级"}]
-		}
+		},
 		{
-			id: "A3F1C0E110000002"
-			title: "铁傀儡"
-			subtitle: "村庄的铁拳试金石"
 			description: [
 				"主世界村庄的忠实守卫，随手可寻。"
 				"也可用铁块与南瓜亲手搭建召唤——它是友军，讨伐全凭你一念。"
 				"攻击附带击飞，正面硬拼非上策。"
 				"推荐挑战阶段：Ⅰ·启程中期。"
 			]
+			id: "2CD4C5CAF1F4C09F"
+			rewards: [{
+				id: "3598F8A14B7997D9"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			shape: "circle"
+			subtitle: "村庄的铁拳试金石"
+			tasks: [{
+				entity: "minecraft:iron_golem"
+				id: "2BFD347AA78673EC"
+				title: "击杀铁傀儡"
+				type: "kill"
+				value: 1L
+			}]
+			title: "铁傀儡"
 			x: 1.5d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000001"]
-			tasks: [{id: "A3F1C0E120000002", type: "kill", entity: "minecraft:iron_golem", value: 1L, title: "击杀铁傀儡"}]
-			rewards: [{id: "A3F1C0E130000001", type: "xp_levels", xp_levels: 1}]
-		}
+		},
 		{
-			id: "A3F1C0E110000003"
-			title: "远古守卫者"
-			subtitle: "深海神殿的诅咒之眼"
 			description: [
 				"盘踞在主世界海底神殿中央，共三尊。"
 				"靠近即中「挖掘疲劳」，破拆近乎停滞。"
 				"水肺与迅捷药水常备，或牛奶解咒强拆。"
 				"推荐挑战阶段：Ⅱ·下界前后。"
 			]
+			id: "3280A327017E19FC"
+			rewards: [{
+				id: "426A5FDBE854A0B1"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			shape: "circle"
+			subtitle: "深海神殿的诅咒之眼"
+			tasks: [{
+				entity: "minecraft:elder_guardian"
+				id: "2CF5CCBF14CB0C16"
+				title: "击杀远古守卫者"
+				type: "kill"
+				value: 1L
+			}]
+			title: "远古守卫者"
 			x: 1.5d
 			y: 1.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000001"]
-			tasks: [{id: "A3F1C0E120000003", type: "kill", entity: "minecraft:elder_guardian", value: 1L, title: "击杀远古守卫者"}]
-			rewards: [{id: "A3F1C0E130000002", type: "xp_levels", xp_levels: 1}]
-		}
+		},
 		{
-			id: "A3F1C0E110000004"
-			title: "卢克斯特罗龙"
-			subtitle: "深穴中的幽光霸主"
-			description: [
-				"栖身于 Alex 洞穴的原始洞穴群系（发光巨蜥）。"
-				"战斗机制与掉落未核实——人工核实。"
-				"幽暗洞穴作战，备足光源与弩箭。"
-				"推荐挑战阶段：Ⅲ·暮色前后。"
-			]
-			x: 1.5d
-			y: 2.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000001"]
-			tasks: [{id: "A3F1C0E120000004", type: "kill", entity: "alexscaves:luxtructosaurus", value: 1L, title: "击杀卢克斯特罗龙"}]
-			rewards: [{id: "A3F1C0E130000003", type: "xp_levels", xp_levels: 2}]
-		}
-		{
-			id: "A3F1C0E110000005"
-			title: "震颤兽"
-			subtitle: "大地震颤之源"
-			description: [
-				"Alex 洞穴深处的地震巨兽，具体群系人工核实。"
-				"据传它会引发剧烈震动，近战留意地形。"
-				"重甲与远程拉扯或为稳妥之策。"
-				"推荐挑战阶段：Ⅲ·暮色中后期。"
-			]
-			x: 1.5d
-			y: 3.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000001"]
-			tasks: [{id: "A3F1C0E120000005", type: "kill", entity: "alexscaves:tremorzilla", value: 1L, title: "击杀震颤兽"}]
-			rewards: [
-				{id: "A3F1C0E130000004", type: "xp_levels", xp_levels: 3}
-				{id: "A3F1C0E130000005", type: "xp_levels", xp_levels: 5}
-			]
-		}
-		{
-			id: "A3F1C0E110000006"
-			title: "T2·领主级"
-			subtitle: "一方领主的威严"
 			description: [
 				"下界、深暗与异界的领主们。"
 				"真正的讨伐，自此刻展开。"
 			]
+			id: "23108DE7E2AD65AB"
+			shape: "diamond"
+			subtitle: "一方领主的威严"
+			tasks: [{
+				id: "71B4ECF094D45917"
+				title: "T2·领主级"
+				type: "checkmark"
+			}]
+			title: "T2·领主级"
 			x: 0.0d
 			y: 5.0d
-			shape: "diamond"
-			tasks: [{id: "A3F1C0E120000006", type: "checkmark", title: "T2·领主级"}]
-		}
+		},
 		{
-			id: "A3F1C0E110000007"
-			title: "凋灵"
-			subtitle: "三颅之灾，自取灭亡"
 			description: [
 				"以 4 块灵魂沙摆 T 形，顶端三颗凋灵骷髅头颅召唤。"
 				"半血后进入「凋灵护甲」，远程免疫，需近身破局。"
 				"击杀掉落下界之星——信标与暮色大门的钥匙。"
 				"推荐挑战阶段：Ⅱ·下界后期，暮色之门前。"
 			]
+			id: "7CD0711990F8F07A"
+			rewards: [{
+				id: "6E5F6F04011D5F57"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "三颅之灾，自取灭亡"
+			tasks: [{
+				entity: "minecraft:wither"
+				id: "36C29CFCB43095BA"
+				title: "击杀凋灵"
+				type: "kill"
+				value: 1L
+			}]
+			title: "凋灵"
 			x: 1.5d
 			y: 5.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000006"]
-			tasks: [{id: "A3F1C0E120000007", type: "kill", entity: "minecraft:wither", value: 1L, title: "击杀凋灵"}]
-			rewards: [{id: "A3F1C0E130000006", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000008"
-			title: "监守者"
-			subtitle: "深暗中的无形死神"
 			description: [
 				"深暗之域中，幽匿尖啸体连响四次，它便循声而来。"
 				"目盲猎手，靠震动与嗅觉索敌——潜行与羊毛是保命符。"
 				"硬拼非上策，遁走或设伏方为智者所为。"
 				"推荐挑战阶段：Ⅳ·灾变前后。"
 			]
+			id: "2060F7AE7E442DFA"
+			rewards: [{
+				id: "427FF13D4B7D9FD3"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "深暗中的无形死神"
+			tasks: [{
+				entity: "minecraft:warden"
+				id: "3241FCD08CE51AAA"
+				title: "击杀监守者"
+				type: "kill"
+				value: 1L
+			}]
+			title: "监守者"
 			x: 1.5d
 			y: 6.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000006"]
-			tasks: [{id: "A3F1C0E120000008", type: "kill", entity: "minecraft:warden", value: 1L, title: "击杀监守者"}]
-			rewards: [{id: "A3F1C0E130000007", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000009"
-			title: "无名守卫"
-			subtitle: "无名者，亦无怜悯"
 			description: [
 				"EEEAB 模组 Boss，生成位置与召唤方式未核实——人工核实。"
 				"据名推断，是某处遗迹的看守者。"
 				"三尊讨伐链第一站。"
 				"推荐挑战阶段：Ⅲ·暮色中期以后。"
 			]
+			id: "0C30CEF72A42A36C"
+			rewards: [{
+				id: "62F572E171FF075B"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "无名者，亦无怜悯"
+			tasks: [{
+				entity: "eeeabsmobs:nameless_guardian"
+				id: "666A83006DD5FA93"
+				title: "击杀无名守卫"
+				type: "kill"
+				value: 1L
+			}]
+			title: "无名守卫"
 			x: 3.0d
 			y: 5.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000006"]
-			tasks: [{id: "A3F1C0E120000009", type: "kill", entity: "eeeabsmobs:nameless_guardian", value: 1L, title: "击杀无名守卫"}]
-			rewards: [{id: "A3F1C0E130000008", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E11000000A"
-			title: "不朽魔像"
-			subtitle: "不朽者终将锈蚀"
 			description: [
 				"EEEAB 模组 Boss，生成方式未核实——人工核实。"
 				"传闻它无惧常规刀剑，需特殊手段破防。"
 				"三尊讨伐链第二站。"
 				"推荐挑战阶段：Ⅲ·暮色中期以后。"
 			]
+			id: "1669B0D32973A277"
+			rewards: [{
+				id: "67ADD3097AF46442"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "不朽者终将锈蚀"
+			tasks: [{
+				entity: "eeeabsmobs:immortal_golem"
+				id: "6DB964772E08B741"
+				title: "击杀不朽魔像"
+				type: "kill"
+				value: 1L
+			}]
+			title: "不朽魔像"
 			x: 4.5d
 			y: 5.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000009"]
-			tasks: [{id: "A3F1C0E12000000A", type: "kill", entity: "eeeabsmobs:immortal_golem", value: 1L, title: "击杀不朽魔像"}]
-			rewards: [{id: "A3F1C0E130000009", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E11000000B"
-			title: "尸巫领主"
-			subtitle: "尸潮背后的术士"
 			description: [
 				"EEEAB 模组 Boss，生成方式未核实——人工核实。"
 				"亡灵召唤流，注意清场与控制距离。"
 				"三尊讨伐链收官——EEEAB 领主线告一段落。"
 				"推荐挑战阶段：Ⅲ·暮色后期。"
 			]
+			id: "4AAAC7E50962DB9B"
+			rewards: [{
+				id: "4A9687F7B1B57032"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			shape: "circle"
+			subtitle: "尸潮背后的术士"
+			tasks: [{
+				entity: "eeeabsmobs:corpse_warlock"
+				id: "411A3A715CFCAB61"
+				title: "击杀尸巫领主"
+				type: "kill"
+				value: 1L
+			}]
+			title: "尸巫领主"
 			x: 6.0d
 			y: 5.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000000A"]
-			tasks: [{id: "A3F1C0E12000000B", type: "kill", entity: "eeeabsmobs:corpse_warlock", value: 1L, title: "击杀尸巫领主"}]
-			rewards: [{id: "A3F1C0E13000000A", type: "xp_levels", xp_levels: 3}]
-		}
+		},
 		{
-			id: "A3F1C0E11000000C"
-			title: "阿伯瑞克斯"
-			subtitle: "树海中的幽影"
 			description: [
 				"怪物扩展（Monster Expansion）Boss，群系与召唤未核实——人工核实。"
 				"木系巨兽，火焰武器或为破绽。"
 				"六神讨伐第一站。"
 				"推荐挑战阶段：Ⅲ·暮色中期。"
 			]
+			id: "6F8ED00189494984"
+			rewards: [{
+				id: "189BC6A9F3956664"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			shape: "circle"
+			subtitle: "树海中的幽影"
+			tasks: [{
+				entity: "monsterexpansion:arborix"
+				id: "1C1E8EF2C5FA12BC"
+				title: "击杀阿伯瑞克斯"
+				type: "kill"
+				value: 1L
+			}]
+			title: "阿伯瑞克斯"
 			x: 3.0d
 			y: 6.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000006"]
-			tasks: [{id: "A3F1C0E12000000C", type: "kill", entity: "monsterexpansion:arborix", value: 1L, title: "击杀阿伯瑞克斯"}]
-			rewards: [{id: "A3F1C0E13000000B", type: "xp_levels", xp_levels: 1}]
-		}
+		},
 		{
-			id: "A3F1C0E11000000D"
-			title: "伊格纳索斯"
-			subtitle: "炎狱咆哮"
 			description: [
 				"怪物扩展 Boss，群系与召唤未核实——人工核实。"
 				"火系巨兽，抗火药水与寒冰武器备好。"
 				"六神讨伐第二站。"
 				"推荐挑战阶段：Ⅲ·暮色中期。"
 			]
+			id: "2B31F457AEEC7C25"
+			rewards: [{
+				id: "1E90E6AA16B8E03D"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			shape: "circle"
+			subtitle: "炎狱咆哮"
+			tasks: [{
+				entity: "monsterexpansion:ignathos"
+				id: "761E326A781D5098"
+				title: "击杀伊格纳索斯"
+				type: "kill"
+				value: 1L
+			}]
+			title: "伊格纳索斯"
 			x: 4.5d
 			y: 6.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000000C"]
-			tasks: [{id: "A3F1C0E12000000D", type: "kill", entity: "monsterexpansion:ignathos", value: 1L, title: "击杀伊格纳索斯"}]
-			rewards: [{id: "A3F1C0E13000000C", type: "xp_levels", xp_levels: 1}]
-		}
+		},
 		{
-			id: "A3F1C0E11000000E"
-			title: "莱维基尔斯"
-			subtitle: "冰原猎杀者"
 			description: [
 				"怪物扩展 Boss，群系与召唤未核实——人工核实。"
 				"传闻与寒冰相关，御寒与破冰并重。"
 				"六神讨伐第三站。"
 				"推荐挑战阶段：Ⅲ·暮色后期。"
 			]
+			id: "3AAC407520B34BE6"
+			rewards: [{
+				id: "6153DA2B7FCA8424"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "冰原猎杀者"
+			tasks: [{
+				entity: "monsterexpansion:leivekilth"
+				id: "1A480E51E9E53977"
+				title: "击杀莱维基尔斯"
+				type: "kill"
+				value: 1L
+			}]
+			title: "莱维基尔斯"
 			x: 6.0d
 			y: 6.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000000D"]
-			tasks: [{id: "A3F1C0E12000000E", type: "kill", entity: "monsterexpansion:leivekilth", value: 1L, title: "击杀莱维基尔斯"}]
-			rewards: [{id: "A3F1C0E13000000D", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E11000000F"
-			title: "拉科斯"
-			subtitle: "腐沼巨口"
 			description: [
 				"怪物扩展 Boss，群系与召唤未核实——人工核实。"
 				"沼泽系巨兽，提防迟缓与毒素。"
 				"六神讨伐第四站。"
 				"推荐挑战阶段：Ⅲ·暮色后期。"
 			]
+			id: "18F9DED73A22FC76"
+			rewards: [{
+				id: "30267F7C8DBDC381"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "腐沼巨口"
+			tasks: [{
+				entity: "monsterexpansion:rakoth"
+				id: "0373ADB001521F60"
+				title: "击杀拉科斯"
+				type: "kill"
+				value: 1L
+			}]
+			title: "拉科斯"
 			x: 7.5d
 			y: 6.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000000E"]
-			tasks: [{id: "A3F1C0E12000000F", type: "kill", entity: "monsterexpansion:rakoth", value: 1L, title: "击杀拉科斯"}]
-			rewards: [{id: "A3F1C0E13000000E", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000010"
-			title: "瑞扎"
-			subtitle: "风暴化身"
 			description: [
 				"怪物扩展 Boss，群系与召唤未核实——人工核实。"
 				"风雷系对手，机动战为主。"
 				"六神讨伐第五站。"
 				"推荐挑战阶段：Ⅳ·灾变前后。"
 			]
+			id: "3BAE16C645082DDB"
+			rewards: [{
+				id: "3F90D86484BD4221"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "风暴化身"
+			tasks: [{
+				entity: "monsterexpansion:rhyza"
+				id: "2D59737B0C19902B"
+				title: "击杀瑞扎"
+				type: "kill"
+				value: 1L
+			}]
+			title: "瑞扎"
 			x: 9.0d
 			y: 6.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000000F"]
-			tasks: [{id: "A3F1C0E120000010", type: "kill", entity: "monsterexpansion:rhyza", value: 1L, title: "击杀瑞扎"}]
-			rewards: [{id: "A3F1C0E13000000F", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000011"
-			title: "斯克莱斯"
-			subtitle: "虚空低语者"
 			description: [
 				"怪物扩展 Boss，群系与召唤未核实——人工核实。"
 				"六神之末，或涉虚空之力，谨慎应对。"
 				"怪物扩展六神讨伐至此收官。"
 				"推荐挑战阶段：Ⅳ·灾变前后。"
 			]
+			id: "236E7D62A84C10DE"
+			rewards: [{
+				id: "4A3E5303408D553F"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			shape: "circle"
+			subtitle: "虚空低语者"
+			tasks: [{
+				entity: "monsterexpansion:skrythe"
+				id: "35910C18CDF72A4E"
+				title: "击杀斯克莱斯"
+				type: "kill"
+				value: 1L
+			}]
+			title: "斯克莱斯"
 			x: 10.5d
 			y: 6.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000010"]
-			tasks: [{id: "A3F1C0E120000011", type: "kill", entity: "monsterexpansion:skrythe", value: 1L, title: "击杀斯克莱斯"}]
-			rewards: [{id: "A3F1C0E130000010", type: "xp_levels", xp_levels: 3}]
-		}
+		},
 		{
-			id: "A3F1C0E110000012"
-			title: "下界合金巨兽"
-			subtitle: "下界合金的愤怒"
 			description: [
 				"灾变（Cataclysm）Boss，栖于下界——具体结构人工核实。"
 				"身披下界合金之躯，寻常刀剑难伤分毫。"
 				"灾变四凶讨伐第一站。"
 				"推荐挑战阶段：Ⅳ·灾变主线。"
 			]
+			id: "646D9CA6AEEAC37A"
+			rewards: [{
+				id: "05D8168994720F9A"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "下界合金的愤怒"
+			tasks: [{
+				entity: "cataclysm:netherite_monstrosity"
+				id: "1174629F48BFC14F"
+				title: "击杀下界合金巨兽"
+				type: "kill"
+				value: 1L
+			}]
+			title: "下界合金巨兽"
 			x: 3.0d
 			y: 8.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000006"]
-			tasks: [{id: "A3F1C0E120000012", type: "kill", entity: "cataclysm:netherite_monstrosity", value: 1L, title: "击杀下界合金巨兽"}]
-			rewards: [{id: "A3F1C0E130000011", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000013"
-			title: "伊格尼斯"
-			subtitle: "焚天之焰"
 			description: [
 				"灾变 Boss，栖于下界——具体位置人工核实。"
 				"烈焰系强敌，抗火与破盾缺一不可。"
 				"灾变四凶讨伐第二站。"
 				"推荐挑战阶段：Ⅳ·灾变主线。"
 			]
+			id: "5C459C6BFB9A2E9F"
+			rewards: [{
+				id: "5354856DAA052449"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "焚天之焰"
+			tasks: [{
+				entity: "cataclysm:ignis"
+				id: "071E358CFB47A8F6"
+				title: "击杀伊格尼斯"
+				type: "kill"
+				value: 1L
+			}]
+			title: "伊格尼斯"
 			x: 4.5d
 			y: 8.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000012"]
-			tasks: [{id: "A3F1C0E120000013", type: "kill", entity: "cataclysm:ignis", value: 1L, title: "击杀伊格尼斯"}]
-			rewards: [{id: "A3F1C0E130000012", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000014"
-			title: "末影守卫"
-			subtitle: "末地的守门人"
 			description: [
 				"灾变 Boss，位于末地——具体生成点人工核实。"
 				"瞬移与末影之力需提防。"
 				"灾变四凶讨伐第三站。"
 				"推荐挑战阶段：Ⅳ·灾变中后期。"
 			]
+			id: "6536CFD330A17FB2"
+			rewards: [{
+				id: "470723538C282E34"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			shape: "circle"
+			subtitle: "末地的守门人"
+			tasks: [{
+				entity: "cataclysm:ender_guardian"
+				id: "039BBD6E336D6D41"
+				title: "击杀末影守卫"
+				type: "kill"
+				value: 1L
+			}]
+			title: "末影守卫"
 			x: 6.0d
 			y: 8.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000013"]
-			tasks: [{id: "A3F1C0E120000014", type: "kill", entity: "cataclysm:ender_guardian", value: 1L, title: "击杀末影守卫"}]
-			rewards: [{id: "A3F1C0E130000013", type: "xp_levels", xp_levels: 3}]
-		}
+		},
 		{
-			id: "A3F1C0E110000015"
-			title: "先驱者"
-			subtitle: "灾厄的先驱"
 			description: [
 				"灾变 Boss，末地深处——生成方式人工核实。"
 				"四凶之末，携灾厄而来。"
 				"灾变四凶讨伐至此收官，T2 领主级全员伏诛。"
 				"推荐挑战阶段：Ⅳ·灾变后期。"
 			]
+			id: "2DC34F72ADB6C51E"
+			rewards: [
+				{
+					id: "2CF90DFF218905A9"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					id: "11A2C9CD2CC65663"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "circle"
+			subtitle: "灾厄的先驱"
+			tasks: [{
+				entity: "cataclysm:the_harbinger"
+				id: "22F9740AA3340358"
+				title: "击杀先驱者"
+				type: "kill"
+				value: 1L
+			}]
+			title: "先驱者"
 			x: 7.5d
 			y: 8.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000014"]
-			tasks: [{id: "A3F1C0E120000015", type: "kill", entity: "cataclysm:the_harbinger", value: 1L, title: "击杀先驱者"}]
-			rewards: [
-				{id: "A3F1C0E130000014", type: "xp_levels", xp_levels: 3}
-				{id: "A3F1C0E130000015", type: "xp_levels", xp_levels: 5}
-			]
-		}
+		},
 		{
-			id: "A3F1C0E110000016"
-			title: "T3·灾厄级"
-			subtitle: "天灾之前的终试"
 			description: [
 				"暮色八连、灾变后四凶与末影龙。"
 				"灾厄级的试炼，为真正的勇士准备。"
 			]
+			id: "53D8F70E97672128"
+			shape: "diamond"
+			subtitle: "天灾之前的终试"
+			tasks: [{
+				id: "1E32552E85B96C0F"
+				title: "T3·灾厄级"
+				type: "checkmark"
+			}]
+			title: "T3·灾厄级"
 			x: 0.0d
 			y: 10.0d
-			shape: "diamond"
-			tasks: [{id: "A3F1C0E120000016", type: "checkmark", title: "T3·灾厄级"}]
-		}
+		},
 		{
-			id: "A3F1C0E110000017"
-			title: "娜迦"
-			subtitle: "蛇庭之主"
-			description: [
-				"暮色森林·娜迦庭院，循魔法地图的蛇形标记可寻。"
-				"绕柱躲避冲撞，破甲后痛击其首。"
-				"暮色八连第一战，掉落娜迦鳞片。"
-				"推荐挑战阶段：Ⅲ·暮色主线。"
-			]
-			x: 1.5d
-			y: 10.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000016"]
-			tasks: [{id: "A3F1C0E120000017", type: "kill", entity: "twilightforest:naga", value: 1L, title: "击杀娜迦"}]
-			rewards: [{id: "A3F1C0E130000016", type: "xp_levels", xp_levels: 1}]
-		}
-		{
-			id: "A3F1C0E110000018"
-			title: "巫妖"
-			subtitle: "高塔中的不死王者"
-			description: [
-				"暮色森林·巫妖高塔，塔顶王座等你。"
-				"分身三连，真身持杖——先破护盾再近身。"
-				"暮色八连第二战，掉落巫妖法杖等宝物。"
-				"推荐挑战阶段：Ⅲ·暮色主线。"
-			]
-			x: 3.0d
-			y: 10.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000017"]
-			tasks: [{id: "A3F1C0E120000018", type: "kill", entity: "twilightforest:lich", value: 1L, title: "击杀巫妖"}]
-			rewards: [{id: "A3F1C0E130000017", type: "xp_levels", xp_levels: 1}]
-		}
-		{
-			id: "A3F1C0E110000019"
-			title: "米诺菇"
-			subtitle: "迷宫尽头的牛头怪"
-			description: [
-				"暮色森林·米诺陶迷宫深处，凭迷宫地图可寻。"
-				"冲撞凶悍，地形狭窄，注意走位。"
-				"暮色八连第三战，掉落米诺陶战斧。"
-				"推荐挑战阶段：Ⅲ·暮色主线。"
-			]
-			x: 4.5d
-			y: 10.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000018"]
-			tasks: [{id: "A3F1C0E120000019", type: "kill", entity: "twilightforest:minoshroom", value: 1L, title: "击杀米诺菇"}]
-			rewards: [{id: "A3F1C0E130000018", type: "xp_levels", xp_levels: 2}]
-		}
-		{
-			id: "A3F1C0E11000001A"
-			title: "九头蛇"
-			subtitle: "九首不灭之蛇"
-			description: [
-				"暮色森林·火焰沼泽，天然祭坛即是巢穴。"
-				"斩首方能伤其根本，头会再生——速战速决。"
-				"暮色八连第四战，掉落炽焰之血。"
-				"推荐挑战阶段：Ⅲ·暮色主线。"
-			]
-			x: 6.0d
-			y: 10.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000019"]
-			tasks: [{id: "A3F1C0E12000001A", type: "kill", entity: "twilightforest:hydra", value: 1L, title: "击杀九头蛇"}]
-			rewards: [{id: "A3F1C0E130000019", type: "xp_levels", xp_levels: 2}]
-		}
-		{
-			id: "A3F1C0E11000001B"
-			title: "幻影骑士"
-			subtitle: "无头骑士的军团"
-			description: [
-				"暮色森林·哥布林骑士要塞下层墓室。"
-				"六名幻影骑士群战，先集火落单者。"
-				"暮色八连第五战，掉落幻影铠甲。"
-				"推荐挑战阶段：Ⅲ·暮色主线。"
-			]
-			x: 7.5d
-			y: 10.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000001A"]
-			tasks: [{id: "A3F1C0E12000001B", type: "kill", entity: "twilightforest:knight_phantom", value: 1L, title: "击杀幻影骑士"}]
-			rewards: [{id: "A3F1C0E13000001A", type: "xp_levels", xp_levels: 2}]
-		}
-		{
-			id: "A3F1C0E11000001C"
-			title: "乌尔恶魂"
-			subtitle: "高塔中的巨恶魂"
-			description: [
-				"暮色森林·黑暗森林高塔之巅。"
-				"巨型恶魂，火球如雨——先灭其泪，再攻本体。"
-				"暮色八连第六战，掉落恶魂之泪。"
-				"推荐挑战阶段：Ⅲ·暮色主线。"
-			]
-			x: 9.0d
-			y: 10.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000001B"]
-			tasks: [{id: "A3F1C0E12000001C", type: "kill", entity: "twilightforest:ur_ghast", value: 1L, title: "击杀乌尔恶魂"}]
-			rewards: [{id: "A3F1C0E13000001B", type: "xp_levels", xp_levels: 2}]
-		}
-		{
-			id: "A3F1C0E11000001D"
-			title: "阿尔法雪怪"
-			subtitle: "雪原咆哮"
-			description: [
-				"暮色森林·雪原雪怪巢穴。"
-				"冰霜吐息与厚重毛皮，火系武器破局。"
-				"暮色八连第七战，掉落雪怪毛皮。"
-				"推荐挑战阶段：Ⅲ·暮色主线。"
-			]
-			x: 10.5d
-			y: 10.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000001C"]
-			tasks: [{id: "A3F1C0E12000001D", type: "kill", entity: "twilightforest:alpha_yeti", value: 1L, title: "击杀阿尔法雪怪"}]
-			rewards: [{id: "A3F1C0E13000001C", type: "xp_levels", xp_levels: 3}]
-		}
-		{
-			id: "A3F1C0E11000001E"
-			title: "冰雪女王"
-			subtitle: "极光下的冰封王座"
-			description: [
-				"暮色森林·极光宫殿，王座之上静候。"
-				"冰锥如雨，贴身游走反制。"
-				"暮色八连收官之战，掉落后宫至宝。"
-				"推荐挑战阶段：Ⅲ·暮色主线末章。"
-			]
-			x: 12.0d
-			y: 10.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000001D"]
-			tasks: [{id: "A3F1C0E12000001E", type: "kill", entity: "twilightforest:snow_queen", value: 1L, title: "击杀冰雪女王"}]
-			rewards: [{id: "A3F1C0E13000001D", type: "xp_levels", xp_levels: 3}]
-		}
-		{
-			id: "A3F1C0E11000001F"
-			title: "利维坦"
-			subtitle: "深海巨兽"
 			description: [
 				"灾变 Boss，栖于深海——具体生成人工核实。"
 				"水中巨兽，战斗场地与呼吸管理并重。"
 				"灾变后四凶讨伐第一站。"
 				"推荐挑战阶段：Ⅳ·灾变后期。"
 			]
+			id: "1BD6A7E29655CCDE"
+			rewards: [{
+				id: "42412CF5B98C4433"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "深海巨兽"
+			tasks: [{
+				entity: "cataclysm:the_leviathan"
+				id: "5C0D370E9576B53F"
+				title: "击杀利维坦"
+				type: "kill"
+				value: 1L
+			}]
+			title: "利维坦"
 			x: 1.5d
 			y: 11.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000016"]
-			tasks: [{id: "A3F1C0E12000001F", type: "kill", entity: "cataclysm:the_leviathan", value: 1L, title: "击杀利维坦"}]
-			rewards: [{id: "A3F1C0E13000001E", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000020"
-			title: "远古残骸"
-			subtitle: "远古的残响"
 			description: [
 				"灾变 Boss，生成方式人工核实。"
 				"沉睡的远古造物，苏醒即灾。"
 				"灾变后四凶讨伐第二站。"
 				"推荐挑战阶段：Ⅳ·灾变后期。"
 			]
+			id: "66CF67ABD9F5FD4F"
+			rewards: [{
+				id: "3509709399975EE6"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "远古的残响"
+			tasks: [{
+				entity: "cataclysm:ancient_remnant"
+				id: "66F942B0B9331CD4"
+				title: "击杀远古残骸"
+				type: "kill"
+				value: 1L
+			}]
+			title: "远古残骸"
 			x: 3.0d
 			y: 11.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000001F"]
-			tasks: [{id: "A3F1C0E120000020", type: "kill", entity: "cataclysm:ancient_remnant", value: 1L, title: "击杀远古残骸"}]
-			rewards: [{id: "A3F1C0E13000001F", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000021"
-			title: "玛勒迪克图斯"
-			subtitle: "诅咒缠身者"
 			description: [
 				"灾变 Boss，生成方式人工核实。"
 				"咒术缠身，注意解咒与走位。"
 				"灾变后四凶讨伐第三站。"
 				"推荐挑战阶段：Ⅳ·灾变后期。"
 			]
+			id: "67076197548AE356"
+			rewards: [{
+				id: "3E43158398FBFBF9"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			shape: "circle"
+			subtitle: "诅咒缠身者"
+			tasks: [{
+				entity: "cataclysm:maledictus"
+				id: "0F11AA35A39BB0D1"
+				title: "击杀玛勒迪克图斯"
+				type: "kill"
+				value: 1L
+			}]
+			title: "玛勒迪克图斯"
 			x: 4.5d
 			y: 11.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000020"]
-			tasks: [{id: "A3F1C0E120000021", type: "kill", entity: "cataclysm:maledictus", value: 1L, title: "击杀玛勒迪克图斯"}]
-			rewards: [{id: "A3F1C0E130000020", type: "xp_levels", xp_levels: 3}]
-		}
+		},
 		{
-			id: "A3F1C0E110000022"
-			title: "斯库拉"
-			subtitle: "漩涡中的六首魔"
 			description: [
 				"灾变 Boss，生成方式人工核实。"
 				"六首齐攻，近远程兼顾的恶战。"
 				"灾变八凶至此全部伏诛。"
 				"推荐挑战阶段：Ⅳ·灾变后期。"
 			]
+			id: "12538CC5FAE56EC8"
+			rewards: [{
+				id: "02A1AB0BBD18791A"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			shape: "circle"
+			subtitle: "漩涡中的六首魔"
+			tasks: [{
+				entity: "cataclysm:scylla"
+				id: "3F1A7BA4E2D9C1BC"
+				title: "击杀斯库拉"
+				type: "kill"
+				value: 1L
+			}]
+			title: "斯库拉"
 			x: 6.0d
 			y: 11.5d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000021"]
-			tasks: [{id: "A3F1C0E120000022", type: "kill", entity: "cataclysm:scylla", value: 1L, title: "击杀斯库拉"}]
-			rewards: [{id: "A3F1C0E130000021", type: "xp_levels", xp_levels: 3}]
-		}
+		},
 		{
-			id: "A3F1C0E110000023"
-			title: "末影龙"
-			subtitle: "终结，或新的开始"
 			description: [
 				"末地中央，龙巢之巅——远古的霸主。"
 				"先毁末影水晶，再射其首，龙息需防。"
 				"讨伐它，末地折跃门与龙蛋向你敞开。"
 				"推荐挑战阶段：Ⅴ·终局前。"
 			]
+			id: "2B4D7649B58CFF36"
+			rewards: [
+				{
+					id: "714C8579453F71D3"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					id: "65D7240DB393C170"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "circle"
+			subtitle: "终结，或新的开始"
+			tasks: [{
+				entity: "minecraft:ender_dragon"
+				id: "62C4BBAA7BB0EC12"
+				title: "击杀末影龙"
+				type: "kill"
+				value: 1L
+			}]
+			title: "末影龙"
 			x: 1.5d
 			y: 13.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000016"]
-			tasks: [{id: "A3F1C0E120000023", type: "kill", entity: "minecraft:ender_dragon", value: 1L, title: "击杀末影龙"}]
-			rewards: [
-				{id: "A3F1C0E130000022", type: "xp_levels", xp_levels: 3}
-				{id: "A3F1C0E130000023", type: "xp_levels", xp_levels: 5}
-			]
-		}
+		},
 		{
-			id: "A3F1C0E110000024"
-			title: "论外·天灾级"
-			subtitle: "灭世者名录"
 			description: [
 				"真菌天灾的九大灾厄，远超常规的灭世之物。"
 				"若无万全准备，勿入此间。"
 			]
+			id: "6F7E85A3B3AC74E8"
+			shape: "diamond"
+			subtitle: "灭世者名录"
+			tasks: [{
+				id: "7CD1EE3597283946"
+				title: "论外·天灾级"
+				type: "checkmark"
+			}]
+			title: "论外·天灾级"
 			x: 0.0d
 			y: 15.0d
-			shape: "diamond"
-			tasks: [{id: "A3F1C0E120000024", type: "checkmark", title: "论外·天灾级"}]
-		}
+		},
 		{
-			id: "A3F1C0E110000025"
-			title: "围攻者"
-			subtitle: "天灾序曲"
 			description: [
 				"真菌天灾 Calamity 之一，阶段与生成见天灾防线章——人工核实。"
 				"天灾升级阶段放开，详见天灾防线章。"
 				"论外讨伐第一站。"
 				"推荐挑战阶段：Ⅳ·天灾进行时。"
 			]
+			id: "138960E3FBA44772"
+			rewards: [{
+				id: "56960C4F53EC9131"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			shape: "circle"
+			subtitle: "天灾序曲"
+			tasks: [{
+				entity: "spore:sieger"
+				id: "398195743D98411C"
+				title: "击杀围攻者"
+				type: "kill"
+				value: 1L
+			}]
+			title: "围攻者"
 			x: 1.5d
 			y: 15.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000024"]
-			tasks: [{id: "A3F1C0E120000025", type: "kill", entity: "spore:sieger", value: 1L, title: "击杀围攻者"}]
-			rewards: [{id: "A3F1C0E130000024", type: "xp_levels", xp_levels: 1}]
-		}
+		},
 		{
-			id: "A3F1C0E110000026"
-			title: "榴弹炮"
-			subtitle: "炮火轰鸣"
 			description: [
 				"真菌天灾 Calamity 之一，阶段与生成见天灾防线章——人工核实。"
 				"天灾升级阶段放开，详见天灾防线章。"
 				"论外讨伐第二站。"
 				"推荐挑战阶段：Ⅳ·天灾进行时。"
 			]
+			id: "06732217D3B7F6E2"
+			rewards: [{
+				id: "38BBEA177CB77102"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			shape: "circle"
+			subtitle: "炮火轰鸣"
+			tasks: [{
+				entity: "spore:howitzer"
+				id: "0355783DC954CC2A"
+				title: "击杀榴弹炮"
+				type: "kill"
+				value: 1L
+			}]
+			title: "榴弹炮"
 			x: 3.0d
 			y: 15.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000025"]
-			tasks: [{id: "A3F1C0E120000026", type: "kill", entity: "spore:howitzer", value: 1L, title: "击杀榴弹炮"}]
-			rewards: [{id: "A3F1C0E130000025", type: "xp_levels", xp_levels: 1}]
-		}
+		},
 		{
-			id: "A3F1C0E110000027"
-			title: "史塔尔"
-			subtitle: "钢铁洪流"
 			description: [
 				"真菌天灾 Calamity 之一，阶段与生成见天灾防线章——人工核实。"
 				"天灾升级阶段放开，详见天灾防线章。"
 				"论外讨伐第三站。"
 				"推荐挑战阶段：Ⅳ·天灾进行时。"
 			]
+			id: "596BE233ED1614D1"
+			rewards: [{
+				id: "4E9321E81252EEA0"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "钢铁洪流"
+			tasks: [{
+				entity: "spore:stahl"
+				id: "1132F52FB1B6B229"
+				title: "击杀史塔尔"
+				type: "kill"
+				value: 1L
+			}]
+			title: "史塔尔"
 			x: 4.5d
 			y: 15.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000026"]
-			tasks: [{id: "A3F1C0E120000027", type: "kill", entity: "spore:stahl", value: 1L, title: "击杀史塔尔"}]
-			rewards: [{id: "A3F1C0E130000026", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000028"
-			title: "噬洞者"
-			subtitle: "噬洞之口"
 			description: [
 				"真菌天灾 Calamity 之一，阶段与生成见天灾防线章——人工核实。"
 				"天灾升级阶段放开，详见天灾防线章。"
 				"论外讨伐第四站。"
 				"推荐挑战阶段：Ⅳ·天灾进行时。"
 			]
+			id: "657C3BAB25BF5C99"
+			rewards: [{
+				id: "30EDD74A9EB11F99"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "噬洞之口"
+			tasks: [{
+				entity: "spore:hohlfresser"
+				id: "31A757286926A571"
+				title: "击杀噬洞者"
+				type: "kill"
+				value: 1L
+			}]
+			title: "噬洞者"
 			x: 6.0d
 			y: 15.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000027"]
-			tasks: [{id: "A3F1C0E120000028", type: "kill", entity: "spore:hohlfresser", value: 1L, title: "击杀噬洞者"}]
-			rewards: [{id: "A3F1C0E130000027", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E110000029"
-			title: "破气者"
-			subtitle: "撕裂天幕"
 			description: [
 				"真菌天灾 Calamity 之一，阶段与生成见天灾防线章——人工核实。"
 				"天灾升级阶段放开，详见天灾防线章。"
 				"论外讨伐第五站。"
 				"推荐挑战阶段：Ⅳ·天灾中后期。"
 			]
+			id: "0A34EC3755FF43D2"
+			rewards: [{
+				id: "018ADD15451D02F9"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			shape: "circle"
+			subtitle: "撕裂天幕"
+			tasks: [{
+				entity: "spore:gazenbreacher"
+				id: "1361700469C8C99A"
+				title: "击杀破气者"
+				type: "kill"
+				value: 1L
+			}]
+			title: "破气者"
 			x: 7.5d
 			y: 15.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000028"]
-			tasks: [{id: "A3F1C0E120000029", type: "kill", entity: "spore:gazenbreacher", value: 1L, title: "击杀破气者"}]
-			rewards: [{id: "A3F1C0E130000028", type: "xp_levels", xp_levels: 2}]
-		}
+		},
 		{
-			id: "A3F1C0E11000002A"
-			title: "克拉肯"
-			subtitle: "深海噩梦"
 			description: [
 				"真菌天灾 Calamity 之一，阶段与生成见天灾防线章——人工核实。"
 				"天灾升级阶段放开，详见天灾防线章。"
 				"论外讨伐第六站。"
 				"推荐挑战阶段：Ⅳ·天灾中后期。"
 			]
+			id: "0AB7AFBC23889928"
+			rewards: [{
+				id: "5C09E9D4FFA1CA98"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			shape: "circle"
+			subtitle: "深海噩梦"
+			tasks: [{
+				entity: "spore:kraken"
+				id: "0113AF01AA8445F4"
+				title: "击杀克拉肯"
+				type: "kill"
+				value: 1L
+			}]
+			title: "克拉肯"
 			x: 9.0d
 			y: 15.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E110000029"]
-			tasks: [{id: "A3F1C0E12000002A", type: "kill", entity: "spore:kraken", value: 1L, title: "击杀克拉肯"}]
-			rewards: [{id: "A3F1C0E130000029", type: "xp_levels", xp_levels: 3}]
-		}
+		},
 		{
-			id: "A3F1C0E11000002B"
-			title: "利维坦·天灾"
-			subtitle: "海渊之主"
 			description: [
 				"真菌天灾 Calamity 之一，阶段与生成见天灾防线章——人工核实。"
 				"天灾升级阶段放开，详见天灾防线章。"
 				"论外讨伐第七站。"
 				"推荐挑战阶段：Ⅴ·终局前后。"
 			]
+			id: "20C7DC4526379424"
+			rewards: [{
+				id: "1474B82967F246EB"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			shape: "circle"
+			subtitle: "海渊之主"
+			tasks: [{
+				entity: "spore:leviathan"
+				id: "35F2378D1D9A62C7"
+				title: "击杀利维坦·天灾"
+				type: "kill"
+				value: 1L
+			}]
+			title: "利维坦·天灾"
 			x: 10.5d
 			y: 15.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000002A"]
-			tasks: [{id: "A3F1C0E12000002B", type: "kill", entity: "spore:leviathan", value: 1L, title: "击杀利维坦·天灾"}]
-			rewards: [{id: "A3F1C0E13000002A", type: "xp_levels", xp_levels: 3}]
-		}
+		},
 		{
-			id: "A3F1C0E11000002C"
-			title: "兴登堡"
-			subtitle: "天空巨影"
 			description: [
 				"真菌天灾 Calamity 之一，阶段与生成见天灾防线章——人工核实。"
 				"天灾升级阶段放开，详见天灾防线章。"
 				"论外讨伐第八站。"
 				"推荐挑战阶段：Ⅴ·终局前后。"
 			]
+			id: "536661290514F377"
+			rewards: [{
+				id: "7931FA83B9288FE5"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			shape: "circle"
+			subtitle: "天空巨影"
+			tasks: [{
+				entity: "spore:hindenburg"
+				id: "3740F0B7E40C215C"
+				title: "击杀兴登堡"
+				type: "kill"
+				value: 1L
+			}]
+			title: "兴登堡"
 			x: 12.0d
 			y: 15.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000002B"]
-			tasks: [{id: "A3F1C0E12000002C", type: "kill", entity: "spore:hindenburg", value: 1L, title: "击杀兴登堡"}]
-			rewards: [{id: "A3F1C0E13000002B", type: "xp_levels", xp_levels: 3}]
-		}
+		},
 		{
-			id: "A3F1C0E11000002D"
-			title: "腐灭"
-			subtitle: "腐坏的终焉"
 			description: [
 				"真菌九灾之末，天灾的最终形态——阶段与生成见天灾防线章，人工核实。"
 				"天灾升级阶段放开，详见天灾防线章。"
 				"论外讨伐收官——自此，天灾由你终结。"
 				"推荐挑战阶段：Ⅴ·终局。"
 			]
+			id: "0E86F7F4E108CD2D"
+			rewards: [
+				{
+					id: "4E570770216FF19D"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					id: "7B0D8C7EB6B66D87"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "circle"
+			subtitle: "腐坏的终焉"
+			tasks: [{
+				entity: "spore:verfall"
+				id: "49979BF2F699AE43"
+				title: "击杀腐灭"
+				type: "kill"
+				value: 1L
+			}]
+			title: "腐灭"
 			x: 13.5d
 			y: 15.0d
-			shape: "circle"
-			dependencies: ["A3F1C0E11000002C"]
-			tasks: [{id: "A3F1C0E12000002D", type: "kill", entity: "spore:verfall", value: 1L, title: "击杀腐灭"}]
-			rewards: [
-				{id: "A3F1C0E13000002C", type: "xp_levels", xp_levels: 3}
-				{id: "A3F1C0E13000002D", type: "xp_levels", xp_levels: 5}
-			]
 		}
 	]
+	title: "Boss 全攻略"
 }

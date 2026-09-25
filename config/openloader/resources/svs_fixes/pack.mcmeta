@@ -1,0 +1,1 @@
+{"pack": {"pack_format": 15, "description": "SVS 修复包：禁用 POTB 武器粒子（NPE 崩溃与粒子泛滥的根因，空映射表覆盖）"}}

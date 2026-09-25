@@ -1,0 +1,104 @@
+{
+  "tooltip.lzm_elements.attribute.space": "命中时：",
+  "tooltip.lzm_elements.attribute.type": " 伤害类型：",
+  "tooltip.lzm_elements.attribute.type.space": " 特性：",
+  "tooltip.lzm_elements.attribute.type.buff": " 优势：",
+  "tooltip.lzm_elements.attribute.type.debuff": " 劣势：",
+
+  "tooltip.lzm_elements.attribute.type.physical": "基础伤害会被目标的抗性削减。",
+  "tooltip.lzm_elements.attribute.type.physical.desc_buff": "",
+  "tooltip.lzm_elements.attribute.type.physical.desc_debuff": "",
+
+  "tooltip.lzm_elements.attribute.type.pyro": "对轻甲敌人造成更高伤害，对重甲敌人伤害较低。",
+  "tooltip.lzm_elements.attribute.type.pyro.desc_buff": "根据目标护甲值提升伤害，幅度为 +30% 至 0%（0–20 点护甲值）。",
+  "tooltip.lzm_elements.attribute.type.pyro.desc_debuff": "目标护甲较高时降低伤害，幅度为 0% 至 -10%（20–30 点护甲值）。",
+
+  "tooltip.lzm_elements.attribute.type.hydro": "对最大生命值较低的目标造成额外伤害，目标在空中时尤甚；对虚弱的敌人效果较差。",
+  "tooltip.lzm_elements.attribute.type.hydro.desc_buff": "根据目标最大生命值最高提升 +25% 伤害（10–80 点生命值）；目标在空中时额外 +25%。",
+  "tooltip.lzm_elements.attribute.type.hydro.desc_debuff": "目标当前生命值越低，伤害加成越少。",
+
+  "tooltip.lzm_elements.attribute.type.cryo": "目标的最大生命值越高，造成的伤害越高。",
+  "tooltip.lzm_elements.attribute.type.cryo.desc_buff": "根据目标最大生命值最高提升 +30% 伤害（0–200 点生命值）。",
+  "tooltip.lzm_elements.attribute.type.cryo.desc_debuff": "实际效果会随目标当前生命值变化。",
+
+  "tooltip.lzm_elements.attribute.type.electro": "伤害随目标护甲值提升。目标带电（导体）时更为强力。",
+  "tooltip.lzm_elements.attribute.type.electro.desc_buff": "根据护甲值最高提升 +33% 伤害（8–30 点护甲值）；若目标处于「导体」状态，额外 +20%。",
+  "tooltip.lzm_elements.attribute.type.electro.desc_debuff": "目标护甲较低时降低伤害，幅度为 0% 至 -10%（0–8 点护甲值）。",
+
+  "tooltip.lzm_elements.attribute.type.geo": "目标处于地面时造成更高伤害，被扎根时伤害更高；对空中目标较弱。",
+  "tooltip.lzm_elements.attribute.type.geo.desc_buff": "目标在地面时伤害 +20%；若目标处于「扎根」状态，再 +20%。",
+  "tooltip.lzm_elements.attribute.type.geo.desc_debuff": "目标在空中时伤害 -10%。",
+
+  "death.attack.pyro_damage_tick": "%1$s被烧成了灰烬",
+  "death.attack.pyro_damage_tick.player": "%1$s被%2$s烧成了灰烬",
+  "death.attack.pyro_damage_tick.escape": "%1$s试图逃离%2$s，却葬身于烈焰之中",
+
+  "death.attack.cryo_damage_tick": "%1$s的生命被冻结了",
+  "death.attack.cryo_damage_tick.player": "%1$s倒在了%2$s的严寒之中",
+  "death.attack.cryo_damage_tick.escape": "%1$s试图阻止%2$es把自己变成冰淇淋，但失败了",
+
+  "death.attack.electro_damage_tick": "%1$s没能承受住那股电压",
+  "death.attack.electro_damage_tick.player": "%1$s被%2$s电死了",
+  "death.attack.electro_damage_tick.escape": "%1$s试图逃离%2$s，却败给了彼此间的电流",
+
+  "death.attack.geo_damage_tick": "%1$s化为了碎屑",
+  "death.attack.geo_damage_tick.player": "%1$s被%2$s碾进了地里",
+  "death.attack.geo_damage_tick.escape": "%1$s试图阻止%2$s把自己扔进水泥搅拌机，但没能成功",
+
+  "death.attack.hydro_damage_tick": "%1$s的生命之水枯竭了",
+  "death.attack.hydro_damage_tick.player": "%1$s的生命被%2$s一口一口饮尽",
+  "death.attack.hydro_damage_tick.escape": "%1$s试图阻止%2$s将自己拖入深渊，但失败了",
+
+  "death.attack.pyro_damage": "%1$s被烧成了灰烬",
+  "death.attack.pyro_damage.player": "%1$s被%2$s烧成了灰烬",
+  "death.attack.pyro_damage.escape": "%1$s试图逃离%2$s，却葬身于烈焰之中",
+
+  "death.attack.cryo_damage": "%1$s的生命被冻结了",
+  "death.attack.cryo_damage.player": "%1$s倒在了%2$s的严寒之中",
+  "death.attack.cryo_damage.escape": "%1$s试图阻止%2$es把自己变成冰淇淋，但失败了",
+
+  "death.attack.electro_damage": "%1$s没能承受住那股电压",
+  "death.attack.electro_damage.player": "%1$s被%2$s电死了",
+  "death.attack.electro_damage.escape": "%1$s试图逃离%2$s，却败给了彼此间的电流",
+
+  "death.attack.geo_damage": "%1$s化为了碎屑",
+  "death.attack.geo_damage.player": "%1$s被%2$s碾进了地里",
+  "death.attack.geo_damage.escape": "%1$s试图阻止%2$s把自己扔进水泥搅拌机，但没能成功",
+
+  "death.attack.hydro_damage": "%1$s的生命之水枯竭了",
+  "death.attack.hydro_damage.player": "%1$s的生命被%2$s一口一口饮尽",
+  "death.attack.hydro_damage.escape": "%1$s试图阻止%2$s将自己拖入深渊，但失败了",
+
+  "effect.lzm_elements.conductor": "导体",
+  "effect.lzm_elements.frozen": "冻结",
+  "effect.lzm_elements.cryo": "冰元素",
+  "effect.lzm_elements.melted": "融化",
+  "effect.lzm_elements.electro": "雷元素",
+  "effect.lzm_elements.electrocharged": "感电",
+  "effect.lzm_elements.rooted": "扎根",
+  "effect.lzm_elements.cold": "冷却",
+  "effect.lzm_elements.geo": "岩元素",
+  "effect.lzm_elements.hydro": "水元素",
+  "effect.lzm_elements.pyro": "火元素",
+  "effect.lzm_elements.burning": "燃烧",
+  "effect.lzm_elements.overload": "超载",
+  "effect.lzm_elements.superconductor": "超导",
+  "effect.lzm_elements.vaporized": "蒸发",
+  "effect.lzm_elements.reactions_shield": "元素装甲",
+
+  "effect.text.cryo": "寒冷",
+  "effect.text.electro": "带电",
+  "effect.text.geo": "坚固",
+  "effect.text.hydro": "潮湿",
+  "effect.text.pyro": "灼烧",
+  "effect.text.frozen": "冻结",
+  "effect.text.melted": "融化",
+  "effect.text.overload": "超载",
+  "effect.text.vaporized": "蒸发",
+  "effect.text.conductor": "导体",
+  "effect.text.electrocharged": "感电",
+  "effect.text.rooted": "扎根",
+  "effect.text.cold": "冷却",
+  "effect.text.burning": "着火",
+  "effect.text.superconductor": "超导"
+}

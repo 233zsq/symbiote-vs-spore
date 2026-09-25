@@ -1,0 +1,23 @@
+{
+ "skill.womplus.evil_beam": "邪能光束",
+ "epicfight.weapon_category.evil_tachi": "恶魔太刀",
+ "epicfight.weapon_category.hollow_longsword": "空洞长剑",
+ "epicfight.weapon_category.wom_greataxe": "巨斧",
+ "skill.womplus.evil_beam.tooltip": "向攻击者释放一道恶魔能量光束！",
+ "skill.womplus.annihilate": "湮灭",
+ "skill.womplus.annihilate.tooltip": " ... 直接湮灭你的敌人吧！",
+ "creativetab.womplus": "奇迹武器·扩展",
+ "effect.womplus.impregnability": "战吼",
+ "skill.womplus.rahhh": "战吼",
+ "skill.womplus.comet": "彗星",
+ "skill.womplus.comet.tooltip": "腾空而起，以毁灭性的一击砸向你的对手。",
+ "skill.womplus.rahhh.tooltip": "\n\n赋予以下增益效果：\n  - 防御力提升\n  - 攻击速度提升10%\n  - 耐力恢复提升\n  - 冲击力提升",
+ "pack.wom_override.title": "WOM 能力覆盖包",
+ "epicfight.weapon_category.nova": "新星",
+ "epicfight.weapon_category.blackstar": "黑星",
+ "skill.womplus.astral_acceleration": "星界加速",
+ "skill.womplus.astral_acceleration.tooltip": "你会获得魔法加速效果。你还会获得生命恢复。急迫和速度的等级会因横扫之刃而提升",
+ "skill.womplus.evil_punishment": "邪恶惩罚",
+ "skill.womplus.evil_punishment.tooltip": "每次攻击后，都会施展一次特殊攻击，以彰显你邪恶的力量",
+ "pack.womplus_trailpack.title": "WomPlus 武器拖尾包"
+}

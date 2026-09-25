@@ -1,0 +1,82 @@
+{
+  "innate_skills": {
+    "one_hand": "epicfight:steel_whirlwind",
+    "two_hand": "giveme_a_efdg:earthquake"
+  },
+  "styles": {
+    "default": "one_hand",
+    "cases": [
+      {
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "not_weapon"
+          }
+        ],
+        "style": "one_hand"
+      },
+      {
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "efu_dual_greatsword"
+          }
+        ],
+        "style": "two_hand"
+      }
+    ]
+  },
+  "collider": {
+    "center": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "number": 3,
+    "size": [
+      0.5,
+      0.8,
+      1.0
+    ]
+  },
+  "hit_particle": "epicfight:hit_blade",
+  "offhand_item_compatible_predicate": [
+    {
+      "predicate": "epicfight:offhand_item_category",
+      "category": "efu_dual_greatsword"
+    }
+  ],
+  "category": "efu_dual_greatsword",
+  "swing_sound": "epicfight:entity.weapon.whoosh_hard",
+  "combos": {
+    "one_hand": [
+      "efdg:biped/combat/greatsword_twohand_auto_1",
+      "efdg:biped/combat/greatsword_twohand_auto_2",
+      "efdg:biped/combat/greatsword_twohand_auto_3",
+      "redirected_epicfight:biped/combat/greatsword_dash",
+      "redirected_epicfight:biped/combat/greatsword_airslash"
+    ],
+    "two_hand": [
+      "efdg:biped/combat/greatsword_dual_auto_1",
+      "efdg:biped/combat/greatsword_dual_auto_2",
+      "efdg:biped/combat/greatsword_dual_auto_3",
+      "efdg:biped/combat/greatsword_dual_auto_4",
+      "efdg:biped/combat/greatsword_dual_dash",
+      "efdg:biped/combat/greatsword_dual_airslash"
+    ]
+  },
+  "hit_sound": "epicfight:entity.hit.blade",
+  "livingmotion_modifier": {
+    "one_hand": {
+      "idle": "epicfight:biped/living/hold_greatsword",
+      "run": "epicfight:biped/living/run_greatsword",
+      "walk": "epicfight:biped/living/walk_greatsword"
+    },
+    "two_hand": {
+      "idle": "giveme_a_efdg:biped/efdg/greatsword_dual_idle",
+      "run": "giveme_a_efdg:biped/efdg/greatsword_dual_run",
+      "walk": "giveme_a_efdg:biped/efdg/greatsword_dual_walk"
+    }
+  },
+  "usable_in_offhand": true
+}

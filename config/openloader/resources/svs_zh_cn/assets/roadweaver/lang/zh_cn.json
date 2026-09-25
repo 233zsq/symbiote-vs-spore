@@ -1,0 +1,10 @@
+{
+ "config.roadweaver.planning_algorithm_mst": "使用最小生成树",
+ "config.roadweaver.planning_algorithm_mst.tooltip": "使用最小生成树（总边长最小的树）规划主边。",
+ "config.roadweaver.planning_algorithm_delaunay": "使用德劳内三角剖分",
+ "config.roadweaver.planning_algorithm_delaunay.tooltip": "启用后使用德劳内三角剖分规划主边；否则使用 K 近邻算法。",
+ "config.roadweaver.planning_algorithm_knn": "使用 K 近邻算法",
+ "config.roadweaver.planning_algorithm_knn.tooltip": "使用 KNN（稀疏的局部连接）规划主边。",
+ "config.roadweaver.planning_algorithm_rng": "使用相对邻域图",
+ "config.roadweaver.planning_algorithm_rng.tooltip": "使用相对邻域图（RNG，骨架更稀疏）规划主边。"
+}

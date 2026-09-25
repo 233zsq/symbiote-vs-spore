@@ -1,225 +1,488 @@
 {
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
 	filename: "stage5_endgame"
 	group: "0B00AA11CC22DD11"
 	icon: "kubejs:abyss_ingot"
-	id: "A3F1C0DE00000006"
+	id: "4A1B0B0311097429"
 	order_index: 5
-	title: "Ⅴ·终局"
+	quest_links: [ ]
 	quests: [
 		{
+			description: [
+				"共生体等级达到 Dominant，且完成首个 Calamity 天灾讨伐后，手动勾选此项。"
+				"（双重硬条件，请勿提前勾选）"
+			]
+			id: "15C315312C53AFD9"
 			invisible: true
-			dependencies: ["A3F1C0DE00000005"]
-			id: "A3F1C0DE10000030"
-			title: "双重毕业"
+			rewards: [{
+				command: "/gamestage add @p stage5_endgame"
+				id: "1B770B5550E76D3B"
+				type: "command"
+			}]
+			shape: "hexagon"
 			subtitle: "Ⅴ·入口"
-			description: ["共生体等级达到 Dominant，且完成首个 Calamity 天灾讨伐后，手动勾选此项。", "（双重硬条件，请勿提前勾选）"]
+			tasks: [{
+				id: "2651A3B8EBFB49FF"
+				title: "确认共生体 Dominant 与首个 Calamity 讨伐均已完成"
+				type: "checkmark"
+			}]
+			title: "双重毕业"
 			x: 0.0d
 			y: 0.0d
-			shape: "hexagon"
-			tasks: [{id: "A3F1C0DE20000036", type: "checkmark", title: "确认共生体 Dominant 与首个 Calamity 讨伐均已完成"}]
-			rewards: [{id: "A3F1C0DE30000040", type: "command", command: "/gamestage add @p stage5_endgame"}]
 		}
 		{
+			description: [
+				"下界合金巨兽在要塞深处苏醒，"
+				"击碎它的装甲。"
+			]
+			id: "393B15F465BDD11C"
 			invisible: true
-			id: "A3F1C0DE10000031"
-			title: "讨伐链·下界合金巨兽 Netherite Monstrosity"
+			rewards: [
+				{
+					count: 2
+					id: "5748782ADE0CD5D9"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "5BDED150BFEBF443"
+					type: "xp"
+					xp: 300
+				}
+			]
+			shape: "square"
 			subtitle: "灾变讨伐链 1/8"
-			description: ["下界合金巨兽在要塞深处苏醒，", "击碎它的装甲。"]
+			tasks: [{
+				entity: "cataclysm:netherite_monstrosity"
+				id: "5BF0BA7BFBA7D874"
+				title: "击杀下界合金巨兽"
+				type: "kill"
+				value: 1L
+			}]
+			title: "讨伐链·下界合金巨兽 Netherite Monstrosity"
 			x: 1.5d
 			y: 0.0d
-			shape: "square"
-			dependencies: ["A3F1C0DE10000030"]
-			tasks: [{id: "A3F1C0DE20000037", type: "kill", entity: "cataclysm:netherite_monstrosity", value: 1L, title: "击杀下界合金巨兽"}]
-			rewards: [
-				{id: "BEEF500022364224", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000041", type: "xp", xp: 300}]
 		}
 		{
+			description: [
+				"烈焰核心燃尽一切，"
+				"在灰烬中找出它的破绽。"
+			]
+			id: "07005B5EF57B7A2D"
 			invisible: true
-			id: "A3F1C0DE10000032"
-			title: "讨伐链·伊格尼斯 Ignis"
+			rewards: [
+				{
+					count: 2
+					id: "45EF112BCF6B757A"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "3BE0BEF883B3D91B"
+					type: "xp"
+					xp: 350
+				}
+			]
+			shape: "circle"
 			subtitle: "灾变讨伐链 2/8"
-			description: ["烈焰核心燃尽一切，", "在灰烬中找出它的破绽。"]
+			tasks: [{
+				entity: "cataclysm:ignis"
+				id: "3A4B6E4942B4D8B7"
+				title: "击杀伊格尼斯"
+				type: "kill"
+				value: 1L
+			}]
+			title: "讨伐链·伊格尼斯 Ignis"
 			x: 3.0d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0DE10000031"]
-			tasks: [{id: "A3F1C0DE20000038", type: "kill", entity: "cataclysm:ignis", value: 1L, title: "击杀伊格尼斯"}]
-			rewards: [
-				{id: "BEEF647353548663", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000042", type: "xp", xp: 350}]
 		}
 		{
+			description: [
+				"末影守卫把守着维度裂隙，"
+				"它的凝视让空间扭曲。"
+			]
+			id: "7C4528B5238ECF3F"
 			invisible: true
-			id: "A3F1C0DE10000033"
-			title: "讨伐链·末影守卫 Ender Guardian"
+			rewards: [
+				{
+					count: 2
+					id: "0340E9A1BC4B4E54"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "05085A8DAE8A10CB"
+					type: "xp"
+					xp: 350
+				}
+			]
+			shape: "square"
 			subtitle: "灾变讨伐链 3/8"
-			description: ["末影守卫把守着维度裂隙，", "它的凝视让空间扭曲。"]
+			tasks: [{
+				entity: "cataclysm:ender_guardian"
+				id: "09EE29716036B152"
+				title: "击杀末影守卫"
+				type: "kill"
+				value: 1L
+			}]
+			title: "讨伐链·末影守卫 Ender Guardian"
 			x: 4.5d
 			y: 0.0d
-			shape: "square"
-			dependencies: ["A3F1C0DE10000032"]
-			tasks: [{id: "A3F1C0DE20000039", type: "kill", entity: "cataclysm:ender_guardian", value: 1L, title: "击杀末影守卫"}]
-			rewards: [
-				{id: "BEEF931151139669", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000043", type: "xp", xp: 350}]
 		}
 		{
+			description: [
+				"先驱者的降临宣告终局的开始，"
+				"迎战它。"
+			]
+			id: "7565E24D7A9C2843"
 			invisible: true
-			id: "A3F1C0DE10000034"
-			title: "讨伐链·先驱者 The Harbinger"
+			rewards: [
+				{
+					count: 2
+					id: "50D37587CB65488A"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "0CBB61683018BF89"
+					type: "xp"
+					xp: 400
+				}
+			]
+			shape: "circle"
 			subtitle: "灾变讨伐链 4/8"
-			description: ["先驱者的降临宣告终局的开始，", "迎战它。"]
+			tasks: [{
+				entity: "cataclysm:the_harbinger"
+				id: "19D3921AD7A99303"
+				title: "击杀先驱者"
+				type: "kill"
+				value: 1L
+			}]
+			title: "讨伐链·先驱者 The Harbinger"
 			x: 6.0d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0DE10000033"]
-			tasks: [{id: "A3F1C0DE2000003A", type: "kill", entity: "cataclysm:the_harbinger", value: 1L, title: "击杀先驱者"}]
-			rewards: [
-				{id: "BEEF630121771010", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000044", type: "xp", xp: 400}]
 		}
 		{
+			description: [
+				"深渊巨兽利维坦从深海升起，"
+				"吞噬一切光明。"
+			]
+			id: "520CF59F9E110C24"
 			invisible: true
-			id: "A3F1C0DE10000035"
-			title: "讨伐链·利维坦 The Leviathan"
+			rewards: [
+				{
+					count: 2
+					id: "202A7CEDDCFCFBFD"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "69441A5BC41762A9"
+					type: "xp"
+					xp: 400
+				}
+			]
+			shape: "square"
 			subtitle: "灾变讨伐链 5/8"
-			description: ["深渊巨兽利维坦从深海升起，", "吞噬一切光明。"]
+			tasks: [{
+				entity: "cataclysm:the_leviathan"
+				id: "2147D8E24AF5C1E3"
+				title: "击杀利维坦"
+				type: "kill"
+				value: 1L
+			}]
+			title: "讨伐链·利维坦 The Leviathan"
 			x: 7.5d
 			y: 0.0d
-			shape: "square"
-			dependencies: ["A3F1C0DE10000034"]
-			tasks: [{id: "A3F1C0DE2000003B", type: "kill", entity: "cataclysm:the_leviathan", value: 1L, title: "击杀利维坦"}]
-			rewards: [
-				{id: "BEEF013556495823", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000045", type: "xp", xp: 400}]
 		}
 		{
+			description: [
+				"远古遗骸中封存着灾变时代的意志，"
+				"将它彻底唤醒并击溃。"
+			]
+			id: "6BFF6BA8DC91F8E6"
 			invisible: true
-			id: "A3F1C0DE10000036"
-			title: "讨伐链·远古遗骸 Ancient Remnant"
+			rewards: [
+				{
+					count: 2
+					id: "453DAA8BB43AE05A"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "28F9D00A55CFE9D9"
+					type: "xp"
+					xp: 450
+				}
+			]
+			shape: "circle"
 			subtitle: "灾变讨伐链 6/8"
-			description: ["远古遗骸中封存着灾变时代的意志，", "将它彻底唤醒并击溃。"]
+			tasks: [{
+				entity: "cataclysm:ancient_remnant"
+				id: "364B8D9E1D38A8D2"
+				title: "击杀远古遗骸"
+				type: "kill"
+				value: 1L
+			}]
+			title: "讨伐链·远古遗骸 Ancient Remnant"
 			x: 9.0d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0DE10000035"]
-			tasks: [{id: "A3F1C0DE2000003C", type: "kill", entity: "cataclysm:ancient_remnant", value: 1L, title: "击杀远古遗骸"}]
-			rewards: [
-				{id: "BEEF119665013832", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000046", type: "xp", xp: 450}]
 		}
 		{
+			description: [
+				"被诅咒者的哀嚎响彻大地，"
+				"斩断缠绕它的诅咒。"
+			]
+			id: "4B0A5C222999C049"
 			invisible: true
-			id: "A3F1C0DE10000037"
-			title: "讨伐链·被诅咒者 Maledictus"
+			rewards: [
+				{
+					count: 2
+					id: "27C9AF27052D82A8"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "6B3D58FC4E6A830D"
+					type: "xp"
+					xp: 450
+				}
+			]
+			shape: "square"
 			subtitle: "灾变讨伐链 7/8"
-			description: ["被诅咒者的哀嚎响彻大地，", "斩断缠绕它的诅咒。"]
+			tasks: [{
+				entity: "cataclysm:maledictus"
+				id: "0016FFC8E866C30F"
+				title: "击杀被诅咒者"
+				type: "kill"
+				value: 1L
+			}]
+			title: "讨伐链·被诅咒者 Maledictus"
 			x: 10.5d
 			y: 0.0d
-			shape: "square"
-			dependencies: ["A3F1C0DE10000036"]
-			tasks: [{id: "A3F1C0DE2000003D", type: "kill", entity: "cataclysm:maledictus", value: 1L, title: "击杀被诅咒者"}]
-			rewards: [
-				{id: "BEEF208668493639", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000047", type: "xp", xp: 450}]
 		}
 		{
+			description: [
+				"多头海妖斯库拉是灾变的终点，"
+				"终结它的传说。"
+			]
+			id: "405CC332904A0343"
 			invisible: true
-			id: "A3F1C0DE10000038"
-			title: "讨伐链·斯库拉 Scylla"
+			rewards: [
+				{
+					count: 2
+					id: "3A4A7C3A2F63FF59"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "0DD89CE5FCD6D48E"
+					type: "xp"
+					xp: 500
+				}
+			]
+			shape: "circle"
 			subtitle: "灾变讨伐链 8/8"
-			description: ["多头海妖斯库拉是灾变的终点，", "终结它的传说。"]
+			tasks: [{
+				entity: "cataclysm:scylla"
+				id: "3ACC20B27D58E466"
+				title: "击杀斯库拉"
+				type: "kill"
+				value: 1L
+			}]
+			title: "讨伐链·斯库拉 Scylla"
 			x: 12.0d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0DE10000037"]
-			tasks: [{id: "A3F1C0DE2000003E", type: "kill", entity: "cataclysm:scylla", value: 1L, title: "击杀斯库拉"}]
-			rewards: [
-				{id: "BEEF092392558281", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000048", type: "xp", xp: 500}]
 		}
 		{
+			description: [
+				"提交 8 个回火钢坯与 2 个下界合金锭，"
+				"铸成 2 个深渊铸锭。"
+			]
+			id: "5116E04004CB0F0E"
 			invisible: true
-			id: "A3F1C0DE10000039"
-			title: "深渊铸锭"
+			rewards: [
+				{
+					id: "7A1ABB0EF114E1FE"
+					type: "xp"
+					xp: 200
+				}
+				{
+					id: "4DD1FF7E05B7424E"
+					item: {
+						Count: 2b
+						id: "kubejs:abyss_ingot"
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
 			subtitle: "终局锻造·其一"
-			description: ["提交 8 个回火钢坯与 2 个下界合金锭，", "铸成 2 个深渊铸锭。"]
-			x: 1.5d
-			y: -1.5d
-			shape: "square"
-			dependencies: ["A3F1C0DE10000030"]
 			tasks: [
-				{id: "A3F1C0DE2000003F", type: "item", item: {id: "kubejs:tempered_steel_billet", Count: 8b}}
-				{id: "A3F1C0DE20000040", type: "item", item: {id: "minecraft:netherite_ingot", Count: 2b}}
+				{
+					id: "39556086F319F6DC"
+					item: {
+						Count: 8b
+						id: "kubejs:tempered_steel_billet"
+					}
+					type: "item"
+				}
+				{
+					id: "32D47A4192D90F55"
+					item: { Count: 2, id: "minecraft:netherite_ingot" }
+					type: "item"
+				}
 			]
-			rewards: [
-				{id: "A3F1C0DE30000049", type: "xp", xp: 200}
-				{id: "A3F1C0DE3000004A", type: "item", item: {id: "kubejs:abyss_ingot", Count: 2b}}
-			]
+			title: "深渊铸锭"
+			x: 1.5d
+			y: -1.5d
 		}
 		{
+			description: [
+				"提交 2 个深渊铸锭，"
+				"打造你的毕业之作——破碎的英雄之刃。"
+			]
+			id: "5CAC9D0C7DB3F7FA"
 			invisible: true
-			id: "A3F1C0DE1000003A"
-			title: "毕业之作"
+			rewards: [
+				{
+					id: "4E351D7DD9609761"
+					type: "xp"
+					xp: 300
+				}
+				{
+					id: "53DA6F284118B8A3"
+					item: "kubejs:broken_hero_blade"
+					type: "item"
+				}
+			]
+			shape: "circle"
 			subtitle: "终局锻造·其二"
-			description: ["提交 2 个深渊铸锭，", "打造你的毕业之作——破碎的英雄之刃。"]
+			tasks: [{
+				id: "1855B8D32931DD32"
+				item: {
+					Count: 2b
+					id: "kubejs:abyss_ingot"
+				}
+				type: "item"
+			}]
+			title: "毕业之作"
 			x: 3.0d
 			y: -1.5d
-			shape: "circle"
-			dependencies: ["A3F1C0DE10000039"]
-			tasks: [{id: "A3F1C0DE20000041", type: "item", item: {id: "kubejs:abyss_ingot", Count: 2b}}]
-			rewards: [
-				{id: "A3F1C0DE3000004B", type: "xp", xp: 300}
-				{id: "A3F1C0DE3000004C", type: "item", item: {id: "kubejs:broken_hero_blade", Count: 1b}}
-			]
 		}
 		{
+			description: [
+				"手持毕业之刃，再次讨伐被诅咒者，"
+				"完成你的终极试炼。"
+			]
+			id: "79EDFE0ABF1DF1E9"
 			invisible: true
-			id: "A3F1C0DE1000003B"
-			title: "终极试炼"
+			rewards: [
+				{
+					count: 2
+					id: "3AE53ABA6FB0ACA2"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "28D26E06592E6050"
+					type: "xp"
+					xp: 500
+				}
+			]
+			shape: "square"
 			subtitle: "终局锻造·其三"
-			description: ["手持毕业之刃，再次讨伐被诅咒者，", "完成你的终极试炼。"]
+			tasks: [{
+				entity: "cataclysm:maledictus"
+				id: "08B003C73E0311A9"
+				title: "击杀 Maledictus"
+				type: "kill"
+				value: 1L
+			}]
+			title: "终极试炼"
 			x: 4.5d
 			y: -1.5d
-			shape: "square"
-			dependencies: ["A3F1C0DE1000003A"]
-			tasks: [{id: "A3F1C0DE20000042", type: "kill", entity: "cataclysm:maledictus", value: 1L, title: "击杀 Maledictus"}]
-			rewards: [
-				{id: "BEEF946602086320", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE3000004D", type: "xp", xp: 500}]
 		}
 		{
+			description: [
+				"集齐灾变 Boss 掉落的动作武器。"
+				"人工核实：具体武器 ID 待核实，请对照 JEI 确认。"
+			]
+			id: "7A13B9336F2763D6"
 			invisible: true
-			id: "A3F1C0DE1000003C"
-			title: "灾变武器收藏"
+			rewards: [{
+				id: "21A77E0AD68CD928"
+				type: "xp"
+				xp: 200
+			}]
+			shape: "circle"
 			subtitle: "武器收藏·其一"
-			description: ["集齐灾变 Boss 掉落的动作武器。", "人工核实：具体武器 ID 待核实，请对照 JEI 确认。"]
+			tasks: [{
+				id: "6BBF40D85F16F6D4"
+				title: "集齐灾变系动作武器"
+				type: "checkmark"
+			}]
+			title: "灾变武器收藏"
 			x: 1.5d
 			y: 1.5d
-			shape: "circle"
-			dependencies: ["A3F1C0DE10000030"]
-			tasks: [{id: "A3F1C0DE20000043", type: "checkmark", title: "集齐灾变系动作武器"}]
-			rewards: [{id: "A3F1C0DE3000004E", type: "xp", xp: 200}]
 		}
 		{
+			description: [
+				"集齐共生体与真菌系动作武器。"
+				"人工核实：具体武器 ID 待核实，请对照 JEI 确认。"
+			]
+			id: "39FB7D34B96D2761"
 			invisible: true
-			id: "A3F1C0DE1000003D"
-			title: "共生体武器收藏"
+			rewards: [{
+				id: "2357DDC833B636C7"
+				type: "xp"
+				xp: 200
+			}]
+			shape: "circle"
 			subtitle: "武器收藏·其二"
-			description: ["集齐共生体与真菌系动作武器。", "人工核实：具体武器 ID 待核实，请对照 JEI 确认。"]
+			tasks: [{
+				id: "6DCEA2C505EBB462"
+				title: "集齐共生体系动作武器"
+				type: "checkmark"
+			}]
+			title: "共生体武器收藏"
 			x: 3.0d
 			y: 1.5d
-			shape: "circle"
-			dependencies: ["A3F1C0DE1000003C"]
-			tasks: [{id: "A3F1C0DE20000044", type: "checkmark", title: "集齐共生体系动作武器"}]
-			rewards: [{id: "A3F1C0DE3000004F", type: "xp", xp: 200}]
 		}
 		{
+			description: [
+				"击败凋灵，"
+				"为你的武器收藏画上句号。"
+			]
+			id: "451E78B2167621E9"
 			invisible: true
-			id: "A3F1C0DE1000003E"
-			title: "凋灵再临"
+			rewards: [
+				{
+					count: 2
+					id: "218391A47A1D37AB"
+					item: "tconstruct:manyullyn_ingot"
+					type: "item"
+				}
+				{
+					id: "4CEBE8F6B47D2195"
+					type: "xp"
+					xp: 300
+				}
+			]
+			shape: "square"
 			subtitle: "武器收藏·其三"
-			description: ["击败凋灵，", "为你的武器收藏画上句号。"]
+			tasks: [{
+				entity: "minecraft:wither"
+				id: "42BB2B8EDEC29B86"
+				title: "击杀凋灵"
+				type: "kill"
+				value: 1L
+			}]
+			title: "凋灵再临"
 			x: 4.5d
 			y: 1.5d
-			shape: "square"
-			dependencies: ["A3F1C0DE1000003D"]
-			tasks: [{id: "A3F1C0DE20000045", type: "kill", entity: "minecraft:wither", value: 1L, title: "击杀凋灵"}]
-			rewards: [
-				{id: "BEEF959119474452", type: "item", item: {id: "tconstruct:manyullyn_ingot", Count: 2b}}{id: "A3F1C0DE30000050", type: "xp", xp: 300}]
 		}
 	]
+	title: "Ⅴ·终局"
 }

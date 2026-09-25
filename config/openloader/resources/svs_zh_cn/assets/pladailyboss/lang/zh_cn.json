@@ -1,0 +1,13 @@
+{
+  "block.pladailyboss.spinning_block": "钥匙实体用旋转方块",
+  "block.pladailyboss.unbreakable_stone": "不可破坏的石头",
+  "block.pladailyboss.unbreakable_glowstone": "不可破坏的萤石",
+  "block.pladailyboss.unbreakable_stone_brick_stairs": "不可破坏的石砖楼梯",
+  "block.pladailyboss.unbreakable_andesite": "不可破坏的安山岩",
+  "block.pladailyboss.unbreakable_polished_andesite": "不可破坏的磨制安山岩",
+  "block.pladailyboss.unbreakable_stone_brick_slab": "不可破坏的石砖台阶",
+  "block.pladailyboss.unbreakable_stone_slab": "不可破坏的石头台阶",
+  "gui.pladailyboss.boss_screen": "每日 Boss 列表",
+  "key.pladailyboss.open_entity_gui": "打开 Boss 菜单",
+  "entity.pladailyboss.key_entity": "钥匙实体"
+}

@@ -1,0 +1,194 @@
+{
+  "subtitles.inner_flame": "内在之焰",
+  "subtitles.incinerate": "焚烬之环",
+  "subtitles.soul_fields_ambiente": "隐约的嘈杂声",
+  "subtitles.inner_flame_morningstar_impact": "内在之焰撞击燃烧",
+  "subtitles.base_flame_morningstar_impact": "火焰撞击燃烧",
+  "subtitles.wraithfury": "灵魂之泣",
+  "subtitles.wraithfury_count_sound": "灵魂被吞噬的嚎叫",
+  "subtitles.super_lightning_impact_cas": "超级闪电冲击",
+  "subtitles.eikon_skill": "闪电长矛",
+  "subtitles.five_tick_electricity_1": "（双叉雷霆）双生闪电",
+  "subtitles.five_tick_electricity_2": "（双叉雷霆）双生闪电",
+  "subtitles.five_tick_electricity_3": "（双叉雷霆）双生闪电",
+  "subtitles.five_tick_electricity_4": "（双叉雷霆）双生闪电",
+  "subtitles.five_tick_electricity_5": "（双叉雷霆）双生闪电",
+  "subtitles.ionized_ambiente_post_electrichelix": "离子化环境",
+  "subtitles.electric_helix": "电能螺旋",
+  "skill.cataclysmic_arsenal.seconds": "%s秒",
+  "skill.cataclysmic_arsenal.max_life": "其最大生命值的%s",
+  "effect.cataclysmic_arsenal.inner_flame": "内在之焰",
+
+  "epicfight.weapon_category.efu_the_incinerator": "焚烬者",
+  "skill.cataclysmic_arsenal.the_incinerator": "内在之焰",
+  "skill.cataclysmic_arsenal.the_incinerator.desc": "",
+
+  "skill.cataclysmic_arsenal.the_incinerator_active": "烈焰勇者：焚烬",
+  "skill.cataclysmic_arsenal.the_incinerator_active.desc": "若你的余烬之心中储存了100%%或更多的热量，同时按下%s与%s，武器会被炽烈的烈焰附魔并猛砸向地面，引发爆炸——在你脚下召唤一圈火焰，并在附近所有实体周围召唤较小的火环，先将其灼烧、随后爆炸。该技能会与你的内在之焰共鸣，效果会随你的状态而改变。效果结束后，武器仍会附有火元素一段时间。",
+  "skill.cataclysmic_arsenal.the_incinerator_active.desc_ext": "每命中一个实体，余烬之心中的热量便会被抽取10%%。作用范围为10格。施放焚烬技能将会有%s。\n\n若在内在之焰状态下施放，伤害范围与颜色都会改变，且不再爆炸。\n\n此外，若已消耗至少60%%的热量（命中6个及以上实体），武器将被赋予火焰类型伤害，共计%s",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.one": "余烬之心",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.one.desc": "这把武器的剑刃被烈焰吞噬；这些火焰会与受害者的生命力产生共鸣。造成伤害或消灭实体会增加余烬之心所容纳的热量。",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.one.desc_ext": "最初，所造成伤害的10%会转化为热量；若目标正在燃烧，则提升至20%。\n\n火焰附加每提升一级，该基础热量获取便增加+15%，每件炽焰合金盔甲再额外增加+5%。\n\n环境条件会按如下方式削减基础热量获取：\n\n接触水（被浸湿、游泳或处于水中）：−25%\n\n冰冻生物群系：−10%\n\n降雨：−15%\n\n若使用者处于内在之焰状态，这些环境惩罚会减少65%。所有环境修正值在满足条件时相互叠加。\n\n若最终基础乘数低于0，则不会产生热量。\n\n在应用所有基础修正后，内在之焰会将所得热量获取再削减35%。\n\n最后，所有获取的热量会再减少60%，得出最终热量值。",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.one.skill_bonus": "你的内火，你的意志；那些火焰已显现于外，包裹着武器，赋予其前所未有的更强力量——作为获得更强力量的代价，最终热量获取降低了35%……",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.one.armor.heat_buff": "每件盔甲增加的热量获取：%s%%",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.one.environment.heat_debuff": "因环境而降低的热量获取：-%s%%",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.two": "灼芒",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.two.desc": "根据余烬之心中储存的热量提高伤害，最高可达20%。在内在之焰状态下，该上限可被突破并提升至35%。此外，每件炽焰合金盔甲可使伤害提高1.25%。",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.two.armor.damage_buff": "每件炽焰合金盔甲提升的伤害：%s%%",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.helmet.active": "烈焰勇者：号令",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.helmet.active.desc": "按下%s，消耗余烬之心中储存热量的15%%。随后你会预施放一个等待目标的技能。一旦找到目标，焰魔宝珠便会升上天空并轰击目标。宝珠数量会随火焰附加附魔的等级而增加。\n该技能还会标记附近的敌人，为其赋予「灼焰标记」状态（若存在），但这会使冷却时间增加25%%。",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.helmet.active.desc_info": "将生成的宝珠数量：%s。\n\n宝珠发射后呈虚体状态，也就是说它们会直接穿透一切，直到进入「冲击状态」。当宝珠接近目标实体时便会进入冲击模式，也就是说宝珠会穿过并非目标的实体，只有接近目标者才会命中；宝珠的移动速度是动态的，取决于与目标的距离以及虚体与冲击阶段的时长。\n\n根据宝珠数量，每颗宝珠会以微小延迟依次扑出，并在使用者上方占据不同的位置。若目标实体死亡，所有宝珠都会消失。若施放者死亡，宝珠不会消失，而是会继续飞向目标，直到全部耗尽或目标被击杀。",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.helmet.passive": "焰魔之眼",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.helmet.passive.desc": "无论在外部观察还是潜入其中，都能透过熔岩获得清晰视野。",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate.passive": "飞掠",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate.passive.desc": "允许它与鞘翅合成，在保留盔甲防护的同时实现滑翔。",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate_elytra.active.one": "烈焰勇者：天爆",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate_elytra.active.one.desc": "滑翔时按下%s，消耗余烬之心中储存热量的5%%。这会赋予你向前的推进力，延长你的滑翔距离。落地后推进次数会恢复。在飞行中冷却较短，而从地面重新充能时冷却较长。",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate_elytra.active.one.desc_ext": "脉冲的冷却时间取决于已消耗的脉冲次数：\n\n已消耗3次脉冲：%s\n已消耗2次脉冲：%s\n已消耗1次脉冲：%s",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate_elytra.active.two": "烈焰勇者：陨击",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate_elytra.active.two.desc": "一旦余烬之心储存了足够的动能，且这颗心中至少含有50%%的热量，当你按下%s并俯视下方时，便能强力向下俯冲。",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate_elytra.active.two.desc_ext": "效果触发后，使用者在技能持续期间的飞行或加速阶段处于无敌状态，并在撞击后1秒内保持无敌。",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate_elytra.passive": "流星坠",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate_elytra.passive.desc": "使用者可以在向下飞行时储存动能。当坠落超过150格、储存了充足的动能，并且发动了「烈焰勇者：陨击」后，使用者在撞击地面之前处于无敌状态。撞击时会激活炽焰冲击波，灼烧15格半径内的敌人，造成26.5点伤害。若使用者处于「内在之焰」状态，范围伤害提高25%。",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.chestplate_elytra.passive.desc_ext": "每次坠落所储存的能量是相对的，也就是说即使需要150格，从负高度层开始下落时，负高度层的数值会直接折算为总坠落距离的一部分——即如果你从Y = -60开始下落，技能会视为从Y = 60开始，而不是Y = 0，这使该技能在洞穴中也能派上用场。撞击时会触发一段冲击帧，影响所有目睹了此次坠落的实体以及坠落者本人。",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.leggings.passive.one": "燃焰荆棘",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.leggings.passive.one.desc": "灼烧攻击者，并在其试图点燃你时将火焰反弹回去。",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.leggings.passive.two": "熔火报应",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.leggings.passive.two.desc": "对燃烧中的实体造成的伤害提高5%%。若该实体同时受「灼焰烙印」影响，则会额外受到2.5%%伤害。两种效果可叠加。",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.boots.passive": "熔岩行者",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.boots.passive.desc": "使使用者可以在熔岩上行走。",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.blazing_grips.passive.one": "焰魔导管",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.blazing_grips.passive.one.desc": "将热量上限提高10%",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.blazing_grips.passive.one.desc_ext": "每只手上的每只手套都会提供该效果，因此该效果可以叠加。",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.blazing_grips.passive.two": "焰魔催化剂",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.blazing_grips.passive.two.desc": "改变「灼芒」被动的运作方式，让你能通过双手更有效地催化每次攻击的光芒，从而更好地利用它。这会修改伤害加成，每持有一件催化剂都会使其提高。",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.blazing_grips.passive.two.desc_ext": "伤害加成的修改并非线性，而是遵循以下逻辑：\n\n一件圣物：最大伤害加成从20%提升至22%；内在之焰模式下，从35%提升至38.5%。\n\n两件圣物：最大伤害加成从20%提升至24%；内在之焰模式下，从35%提升至42%。\n\n基于「灼芒」转化而来的当前热量生效。",
+
+  "skill.cataclysmic_arsenal.the_incinerator_passive.blazing_grips.passive.three": "焰魔灌注者",
+  "skill.cataclysmic_arsenal.the_incinerator_passive.blazing_grips.passive.three.desc": "命中时，你有一定概率使目标染上「灼焰烙印」状态。",
+
+  "skill.cataclysmic_arsenal.the_incinerator.tooltip": "将烈焰驾驭于你的左手之中，让你的意志塑造它们的本质。随着掌控的加深，火焰会转为炽烈的蓝色。\n\n熔炉：每击杀一名敌人都会延长内在之焰状态的持续时间。然而这份力量伴随代价：随着时间的推移，火焰会愈发贪婪。最终，它的饥渴将无法满足，进一步的击杀将无法再延长该状态。\n\n白炽：处于该状态时，使用者会根据武器储存的热量造成更高的额外伤害。但每次攻击产生的热量会低于寻常——这是强大破坏力的代价。\n\n勇者：发动烈焰勇者类技能时，会改变其火焰类型、增强其效果，并使其冷却时间缩短25%。",
+
+
+
+  "skill.cataclysmic_arsenal.ancient_spear.desc": "",
+  "skill.cataclysmic_arsenal.ancient_spear_passive": "流沙涌动",
+  "skill.cataclysmic_arsenal.ancient_spear_passive.desc": "使用者发动攻击时，武器会消耗耐久度，召唤小型沙暴朝使用者面朝的方向涌去。",
+
+
+
+  "epicfight.weapon_category.efu_astrape": "阿斯特拉珀",
+  "skill.cataclysmic_arsenal.astrape.desc": "",
+  "skill.cataclysmic_arsenal.astrape_passive.one": "相位",
+  "skill.cataclysmic_arsenal.astrape_passive.one.desc": "命中时，武器造成的伤害会以正电荷的形式储存在持有者体内。电荷的积蓄量取决于环境与目标的状态。",
+  "skill.cataclysmic_arsenal.astrape_passive.one.desc_ext": "电荷获取量为所造成伤害的30%。若你处于水下或游泳中，电荷获取量额外提高20%。此外，处于雨中会额外提高10%。这些效果可以相互叠加。",
+
+  "skill.cataclysmic_arsenal.astrape_passive.two": "引擎",
+  "skill.cataclysmic_arsenal.astrape_passive.two.desc": "持有者体内储存的正电荷会被转化为攻击速度加成，随电荷趋于最大值，加成从0%%提升至35%%。",
+
+  "skill.cataclysmic_arsenal.astrape_passive.three": "过载",
+  "skill.cataclysmic_arsenal.astrape_passive.three.desc": "对敌人成功命中3次后，持有者会在目标身上产生负电荷。当该负电荷与持有者的正电荷相互作用时，命中便会触发闪电。若敌人处于水下或雨中，闪电会扩散但威力减弱，造成的伤害更低。",
+  "skill.cataclysmic_arsenal.astrape_passive.three.desc_ext": "只有普通攻击才会将电荷沉积到目标身上；空中斩、冲刺攻击或天生技能不会附加负电荷。虽然这些攻击不会为目标附加电荷，但它们仍可触发该效果。\n\n过载造成的伤害为%s + %s。\n\n若目标处于雨中或水下，该效果会向周围区域扩散，对目标造成%s + %s伤害，对周围实体造成%s + %s伤害。\n\n过载的扩散半径为5",
+
+  "skill.cataclysmic_arsenal.astrape_passive.four": "雷电冲击",
+  "skill.cataclysmic_arsenal.astrape_passive.four.desc": "在雨天或雷暴期间，若持有者充能充足并从高处坠落，便能以电流包裹自身，抵消摔落伤害，并在着陆时使附近的敌人触电。这会消耗武器50%%的电荷。",
+  "skill.cataclysmic_arsenal.astrape_passive.four.desc_ext": "该技能仅在使用者以绝对距离累计下落30格后才能激活。绝对下落是指负坐标被视为正值（例如，从Y = -10开始下落算作10格）。虽然该规则会将其他机制所需距离缩短至20格，但不适用于此技能。\n\n若在下落过程中的任意时刻不再下雨，该技能会立即取消。效果一旦触发，使用者在下落期间及着陆后1秒内处于无敌状态。",
+
+  "skill.cataclysmic_arsenal.astrape_active": "天赐神光",
+  "skill.cataclysmic_arsenal.astrape_active.desc": "按下%s + %s，即可在武器的内在技能之间切换。",
+  "skill.cataclysmic_arsenal.astrape_active.desc_ext": "各技能效果可以相互叠加；但同一种效果在同一状态下只能存在一份。\n\n在不切换武器的情况下施放其他技能并不会覆盖当前生效的技能，新施放的技能会进入队列。\n\n当前技能结束后，队列中下一个同类型技能会自动激活。\n\n此机制不适用于神像（Eikón），因为它是攻击型技能，而非其他技能那样的附魔型技能。",
+
+  "skill.cataclysmic_arsenal.astrape_subactive.zero": "空无",
+  "skill.cataclysmic_arsenal.astrape_subactive.zero.desc": "尚未链接任何技能。\n\n永恒之眼正注视着你，只因你拒绝了上天的馈赠……",
+
+  "skill.cataclysmic_arsenal.astrape_subactive.one": "神像",
+  "skill.cataclysmic_arsenal.astrape_subactive.one.desc": "按下%s，消耗15%%的电荷。持有者将闪电汇聚于左手，准备朝面向的方向释放一道光束。",
+  "skill.cataclysmic_arsenal.astrape_subactive.one.desc_ext": "神像（Eikón）施放后，阿斯特拉珀进入%s冷却",
+
+  "skill.cataclysmic_arsenal.astrape_subactive.two": "迅疾",
+  "skill.cataclysmic_arsenal.astrape_subactive.two.desc": "按下%s，消耗30%%的电荷，在持有武器期间移动速度提高+18%%。",
+  "skill.cataclysmic_arsenal.astrape_subactive.two.desc_ext": "施放后获得移动速度加成，总计持续%s秒。该技能生效期间无法重复施放；加成的持续时间仅在持有武器时减少，若不再持有阿斯特拉珀，则会进入待机状态。",
+
+  "skill.cataclysmic_arsenal.astrape_subactive.three": "神力",
+  "skill.cataclysmic_arsenal.astrape_subactive.three.desc": "按下%s，消耗60%%的电荷，以闪电包裹武器，将其伤害类型从物理伤害转变为雷电伤害。",
+  "skill.cataclysmic_arsenal.astrape_subactive.three.desc_ext": "效果的持续时间为%s。\n\n该伤害改动并非只作用于阿斯特拉珀。它不仅影响武器的直接伤害，还影响持有者在持有阿斯特拉珀且武器附带雷电伤害期间造成的所有伤害。所有此类伤害实际上都会转化为雷电伤害，并继承其所有相关特性。\n\n这包括来自过载被动、神像、双叉雷霆的伤害——总而言之，包括使用者造成的所有伤害。\n\n效果生效期间无法重复施放，其剩余持续时间仅在持有阿斯特拉珀时减少。当阿斯特拉珀不在手中时，效果会进入暂停状态。\n\n该附魔仅在持有阿斯特拉珀时生效；松开武器会暂时移除附魔，再次持有时会自动恢复。",
+
+  "skill.cataclysmic_arsenal.astrape": "双叉雷霆",
+  "skill.cataclysmic_arsenal.astrape.tooltip": "风暴的本质蕴藏于这件武器之中，渴望被释放——如同它的主人曾经那般自由……\n\n将储存的闪电能量汇聚于左手。根据能量在释放上天之前的充能时长，技能效果会发生变化：低充能释放雷云（Neféli），高充能则触发雷暴（Katáigis）。\n\n雷云（Neféli）：\n在持有者头顶召唤一朵雷云。雷云存在期间，会在命中时向目标实体发射闪电长矛。\n\n即使持有者切换武器类别，雷云也不会消失；它会随时间持续存在。长矛由命中触发，不一定要由激活此天生技能的武器触发。\n\n只有当施放者死亡，或持有者离开该维度导致雷云被卸载时，它才会消失。\n\n雷暴（Katáigis）：\n向天空发射一道电能螺旋。达到一定高度后便会爆炸，在空气中留下离子化火花并使环境带电。这会产生火花与电弧，并为附近的实体施加「导体」状态。\n\n所有敌对实体都可能受到闪电影响。被爆炸释放的闪电击中的实体将受到总计%s点伤害。\n\n此外，站在电气残留物上时，这些电荷的范围伤害将为%s + %s。\n\n随后，在受到离子化冲击时，所有目标实体将受到%s + %s伤害。\n\n若持有者施放时锁定的是中立或和平生物，闪电与状态将以该实体所在的群体以及附近的敌对实体为目标。\n\n「导体」状态会使受到的所有雷电伤害提高20%%。拥有该状态的实体可能会被闪电击中；被击中后便会失去该状态。\n\n雷电伤害的来源包括使用「神力」（Dýna）内在子技能时的武器本身——该子技能会使武器附带闪电。\n\n雷电云与离子化环境均可叠加，施放者可以同时拥有数份相同效果；但每个效果都有各自的判定、持续时间、冷却与计算方式等，这能防止技能自我覆盖。",
+
+
+
+  "epicfight.weapon_category.efu_shredder": "撕碎者",
+  "skill.cataclysmic_arsenal.shredder.desc": "",
+  "skill.cataclysmic_arsenal.shredder_passive": "锯裂斩",
+  "skill.cataclysmic_arsenal.shredder_passive.desc": "命中时，锯齿会嵌入目标体内，严重削弱其攻击速度与武器操控。命中之际，它会释放自内撕裂的斩击，造成%s点无视无敌帧的伤害。",
+  "skill.cataclysmic_arsenal.shredder_passive.desc_ex": "穿透实体期间的攻击速度会被随机削减并锁定在0.15至0.3之间。\n\n在此期间，武器伤害会无视目标的无敌帧。\n\n无视无敌帧的伤害会随基础伤害缩放，其比例因攻击类型而异。",
+
+  "skill.cataclysmic_arsenal.shredder": "雷电剔骨者",
+  "skill.cataclysmic_arsenal.shredder.tooltip": "旋转锯片发出的微弱金属嗡鸣搅动着嗜血的渴望，它急欲再度染污自己的锯齿……\n\n施放时，它会散发出一道微妙的冲击波，轻柔地击退附近的实体（主要目标除外），并赋予短暂的控制免疫。\n\n命中时，锯片会将目标钉在原地，并在加速逼近时将其固定。根据目标的重量，会触发以下效果之一：\n\n纵斩（轻型敌人）：将目标挑向空中，使锯片超速运转，并在动画的每个游戏刻造成持续伤害。该伤害无视无敌帧。\n\n若目标被击杀，会恢复天生技能的部分能量与资源。\n\n横斩（重型敌人）：将锯片深深贯入目标体内，造成降低后的伤害。目标死亡时不会恢复能量或资源。\n\n被钉住期间，目标始终处于控制之下——纵斩或横斩都会将其束缚在锯片上。",
+  "damage_source.cataclysmic_arsenal.shredder_damage": "+ %s 无视无敌帧伤害",
+
+
+
+  "epicfight.weapon_category.efu_soul_render": "裂魂者",
+  "skill.cataclysmic_arsenal.soul_render.desc": "",
+  "skill.cataclysmic_arsenal.soul_render_passive": "海拉之握",
+  "skill.cataclysmic_arsenal.soul_render_passive.desc": "这把武器的剑刃缠绕着火焰与幽魂般的辉光。当它击中活物时，有一定概率撕裂出灵魂碎片，并从地面召唤幽魂长矛造成伤害。召唤长矛的概率会随「横扫之刃」附魔提高。",
+  "skill.cataclysmic_arsenal.soul_render_passive.desc_ext": "默认概率为25%%。得益于「横扫之刃」，它会以基础数值提升。\n\n提升如下：%s。若该附魔突破附魔等级上限、达到IV或IV+，概率将提升至%s。\n\n 此外，每件诅咒合金盔甲可使概率提高2.5%%。",
+  "skill.cataclysmic_arsenal.soul_render_passive.skill_bonus": "诅咒合金盔甲所产生的、环绕你周身的幽魂之力扩展了「灵魂场」攻击，使其命中范围更广、分叉更多。",
+
+  "skill.cataclysmic_arsenal.soul_render_passive.helmet.active": "幽魂凝视",
+  "skill.cataclysmic_arsenal.soul_render_passive.helmet.active.desc": "按下%s，显现附近所有活着的实体，将其标记并使其带上发光效果。",
+  "skill.cataclysmic_arsenal.soul_render_passive.helmet.active.desc_ext": "施放时将进入%s",
+  "skill.cataclysmic_arsenal.soul_render_passive.helmet.passive": "灵魂收割者",
+  "skill.cataclysmic_arsenal.soul_render_passive.helmet.passive.desc": "被标记的敌人会受到8%的额外伤害。",
+  "skill.cataclysmic_arsenal.soul_render_passive.helmet.passive.desc_ext": "该伤害加成适用于任何被标记的实体，包括并非由使用者和该技能标记的实体；同样适用于任何处于发光效果影响下的生物。",
+
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.active.one": "怨灵之怒",
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.active.one.desc": "按下%s，献祭3颗心的生命值，换取持续20秒的25.0%%临时伤害提升。",
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.active.one.desc_ext.one": "施放时将进入%s并执行献祭。使用者不会死亡——无论当前生命值为多少，最终都会剩下半颗心；献祭造成的伤害在任何情况下都无法减免，除非受使用者当前生命值所限。",
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.active.one.desc_ext.two": "技能时间仅会在手持裂魂者时减少；未持有该武器时，计时不会减少，因此切换为其他任何物品都不会使加成消散。",
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.passive.one": "残魂",
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.passive.one.desc": "死亡后，使用者会以5颗心的生命值复活，并循环经历各个灵魂阶段。\n\n不朽之径：使用者变为虚体，但其攻击同样为虚体。他们将无法攻击，并在5秒内获得移动速度加成。\n\n游荡之径：使用者拥有25%至10%的攻击速度加成，该数值会随时间递减。此阶段需要6分钟完成，期间使用者无法复活。\n\n可灭之径：使用者可以通过这件盔甲再次复活。",
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.passive.one.desc_ext": "即使使用者未手持裂魂者或已不再装备盔甲，灵魂阶段仍会继续推进。这些条件只会限制效果本身；无论何种情况，阶段计数都会持续减少。",
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.passive.two": "灵魂轮回",
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.passive.two.desc": "当使用者死亡并通过这件胸甲复活、正处于灵魂阶段「游荡之径」时，其后所有通过不死图腾进行的复活都会提高「游荡之径」的攻击速度加成。该乘数最多可提升3次，分别为x1.3、x1.6、x2.0。达到轮回加成的最大次数后，会赋予「海拉之握」额外5%的触发概率",
+  "skill.cataclysmic_arsenal.soul_render_passive.chestplate.passive.two.desc_ext": "「游荡之径」所提供加成的乘数效果在该阶段期间并非永久。每个轮回点总共持续2分钟，并随每次复活而刷新。2分钟后仅减少一个点数，也就是说时限过后并不会失去所有充能。然而，在「游荡之径」完成时，所有充能都会失去。\n\n轮回点无法在此路径之外获得，通过图腾进行的复活也不会被计入。",
+
+  "skill.cataclysmic_arsenal.soul_render_passive.leggings.passive": "虚灵之躯",
+  "skill.cataclysmic_arsenal.soul_render_passive.leggings.passive.desc": "使用者获得虚灵之躯，能以较低的概率无视攻击；若攻击为弹射物，该概率还会提高。",
+
+  "skill.cataclysmic_arsenal.soul_render_passive.boots.active": "幻影翻滚",
+  "skill.cataclysmic_arsenal.soul_render_passive.boots.active.desc": "按下%s，向后翻滚并附带额外的推进力，使你能移动得更远。",
+  "skill.cataclysmic_arsenal.soul_render_passive.boots.active.desc_ext": "此动作不消耗体力，拥有独立的冷却时间（为%s），且即使未学习翻滚技能也能使用。\n\n该技能还能取消当前动画，而无需学习「紧急脱离」技能。此外，它有两种施放方式：其一在施放时保留起跳动量以增加位移距离；其二在施放时不保留动量，用于重置当前动画。",
+  "skill.cataclysmic_arsenal.soul_render_passive.boots.passive": "失重",
+  "skill.cataclysmic_arsenal.soul_render_passive.boots.passive.desc": "减少摔落伤害。",
+
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.ring_of_grudged.passive.one": "怨恨回响",
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.ring_of_grudged.passive.one.desc": "使所有来源的暴击伤害提高10%",
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.ring_of_grudged.passive.one.desc_ext": "该伤害加成会根据你所拥有的戒指数量进行累积",
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.ring_of_grudged.passive.two": "愤怒之径",
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.ring_of_grudged.passive.two.desc": "将被动「海拉之握」的最大概率限制为50%；超出的概率会转化为伤害加成。此外，使天生子技能「灵魂之怒」所创造的幽魂长矛分叉提高20%。",
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.ring_of_grudged.passive.two.desc_ext": "该伤害转化为：每1%撕裂目标灵魂并召唤幽魂长矛的概率，可提供0.8%的攻击加成。此外，佩戴该戒指时，来自诅咒合金盔甲的概率加成遵循1%对1%的转化率，转化为伤害加成时保持全额效率；「灵魂轮回」达到3层充能时获得的概率加成也遵循相同逻辑。",
+
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.berserk_soul_amulet.passive.one": "灵魂祭献",
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.berserk_soul_amulet.passive.one.desc": "使来自所有来源的护甲降低25%，并使基础攻击伤害提高10%。",
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.berserk_soul_amulet.passive.two": "重生之径",
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.berserk_soul_amulet.passive.two.desc": "使攻击速度提高5%。此外，复活后以及处于「游荡之径」状态、经历灵魂阶段期间，攻击速度加成会额外再提高5%。\n\n它还会赋予被动「灵魂轮回」一层充能，将其初始乘数从x1提升至x1.3。这会为「游荡之径」所提供的攻击速度加成带来30%的乘数。",
+  "skill.cataclysmic_arsenal.soul_render_passive.artifacts.berserk_soul_amulet.passive.two.desc_ext": "「重生之径」的攻击速度乘数作用于基础攻击速度，而30%加成仅作用于「游荡之径」提供的攻击速度加成。该加成会乘算其灵魂阶段的转化值，进而作用于其基础攻击速度。",
+
+  "skill.cataclysmic_arsenal.soul_render": "灵魂封印",
+  "skill.cataclysmic_arsenal.soul_render.tooltip": "封存于这件武器中的灵魂喧嚣不止，自灵魂封印的缝隙中隐约逸出，哭喊着渴求自由。你会是解放它们的人吗？以灵魂之形态，释放它们的力量……\n\n灵魂之怒：施放此技能，并在施放结束时下蹲，即可释放灵魂的怒火。这将使你挥起武器猛砸地面，瞬间召唤出幽魂长矛的爆发。命中时，你将造成%s点伤害。\n\n灵魂奔涌：以浪潮之势释放灵魂并高速移动。你需要在施放结束时奔跑来达成。这将使你产生一段远距离冲刺，对被冲撞的实体造成%s点伤害，并留下一道幽魂长矛的轨迹。\n\n灵魂场：以幽魂长矛之场的形式释放封存的灵魂。此场规模巨大，但其伤害仅来自所生成的长矛。\n\n灵魂之怒与灵魂奔涌能以与普通攻击相同的概率生成幽魂长矛，而灵魂场则不能。\n"
+}

@@ -1,0 +1,15 @@
+{
+ "crafttweaker.command.description.dump.biomes": "输出所有已注册生物群系的名称",
+ "crafttweaker.command.description.dump.damage_sources": "输出所有已注册伤害类型的名称",
+ "crafttweaker.command.description.dump.fake_players": "输出所有假玩家的信息",
+ "crafttweaker.command.description.dump.tool_tiers": "输出所有工具等级的信息",
+ "crafttweaker.command.description.inventory.registryNames": "输出你物品栏中物品的注册名称",
+ "crafttweaker.command.description.recipes.inventory": "输出玩家物品栏中物品的所有配方信息",
+ "crafttweaker.command.description.recipes.manager": "输出作为参数给定的配方管理器所对应的配方信息",
+ "crafttweaker.command.misc.fluid": "流体",
+ "crafttweaker.command.misc.fake_players": "假玩家",
+ "crafttweaker.command.misc.tool_tiers": "工具等级",
+ "crafttweaker.command.misc.biomes": "生物群系",
+ "crafttweaker.script.load.end.error": "加载脚本时发生错误：请检查日志",
+ "crafttweaker.script.load.end.noerror": "加载完成，未出现错误"
+}

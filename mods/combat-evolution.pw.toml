@@ -1,8 +1,8 @@
 name = "Combat Evolution"
-filename = "CombatEvolution-2.2.2.jar"
+filename = "CombatEvolution-2.2.8.jar"
 side = "both"
 
 [download]
 url = "https://www.curseforge.com/minecraft/mc-mods/combat-evolution"
 hash-format = "sha512"
-hash = "7f8ef4bf97198ba7ddb8b26f7bb4cc2481f0f9117803b275ea0f6aa2a0f51ff16fb9a454adeab48aeaff329d770c00d28d2f914cacd230780cc392a3e43c8bb8"
+hash = "ae576973a3d504333505407c8581b499e2dd6628ad0ba601567dd091e7a01998de427204bd75f5d9ff35f291cb7074837209d43dc4778133bde8101f48a527a8"

@@ -1,0 +1,6 @@
+{
+ "commands.bookshelf.loot_tables": "为 %2$s 找到了 %1$d 个缺失的战利品表。",
+ "commands.bookshelf.loot_tables.wildcard": "为所有模组找到了 %d 个缺失的战利品表。",
+ "argument.bookshelf.unknown_value": "值“%s”未知。",
+ "text.bookshelf.ticks": "游戏刻：%s"
+}

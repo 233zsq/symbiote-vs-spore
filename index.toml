@@ -22,87 +22,87 @@ hash = "04179e7444dd784e26c1965152ff0faae785baaab8bed9f46a7a35af4344e124"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "c717edbbef41808c368b192f44bd732f5bcbb5c9cf8daf714d563bc14b88b788"
+hash = "9c5f6f1be1efed6b0b30ba91874d3dc482ae668f8b5eaf4ad636ed4b5acc37e9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/arcane_guide.snbt"
-hash = "fd9ae57888631f03e104a90cccb19d30d49476dfe8fa52d0050ac8b8e0a8390d"
+hash = "d5d209b077a952cf914e77ac778f81d0306380fdd24f0d505708ab91feca76ff"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/awakening.snbt"
-hash = "3cf4e727ed89b9ade1cee228d71cd7a47e2c2c9dc7d4612066d72d2cfc5ed4e8"
+hash = "b108db121fcc9f369ea1aa9cb0e3d0b29520018542ebaab74291954d62ac8872"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/boss_guide.snbt"
-hash = "d017742398fcb6110ab248cf8a5905494d6b0b26a7c21589c691d87f51d006be"
+hash = "630440e61df1772b8d00861119899dc352ff77c597af240703db0b2aa269e7a7"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/calamity_front.snbt"
-hash = "efe0006f6e581afcded940eb9171c81a4542fbd56f5cca4c258adc02b5d6fb9d"
+hash = "9753987b12bea1982e4fb81978d4e4c136ce079123630873ea16ddd5da91e065"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dragons_guide.snbt"
-hash = "bf2540b91647c046624eb1403eaac818597e050046d3bce8d6241baeb0a27c60"
+hash = "81adac42d33c9bd276056452c499f7d03c2c6ea71b883fe437d87837f358040d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/exploration.snbt"
-hash = "c91f6e7eeafcb9608e4829bd17e4705a2b309fd83321a4880b3150b5a487da2a"
+hash = "cf88df6a82b817aa82895fcb1cdfc5200ee52d4e43d80ae543da3e0dd5bd9a24"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/kitchen_guide.snbt"
-hash = "68f9bdc1ecd965c55d078dcaebcd3ab7bc8dfff3dccea67f8a6090e390c1e5be"
+hash = "8700e6ea160761d535b28c600e6375cb621444c21bc5b929f827c040821c5937"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/preface.snbt"
-hash = "9eb32263fedb5c90abc86f60371dc42c7507bd9191bb40711352da8dbac85e1e"
+hash = "fe3669d21710c3d4c738576e924c9d9bd79deebe001c9ff1ff70c6da7d27d776"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/souls_codex.snbt"
-hash = "d9761e35751e4b30c0dfc3fe687538d02f50e2296c0e476efda21202357e33c2"
+hash = "13fb118a58aafa56a31ca8519def56e291ef3455ab61015e27ef3c2a66195d8f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/souls_guide.snbt"
-hash = "fd1efa2073d3550410886badaa9a8f8a9ffe912708c52d783cb659ba05b173df"
+hash = "5420b00d028dec2154e360146549235d7e5ad79e0d8a8941c9e2dc5675df3d18"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/souls_structures.snbt"
-hash = "5628b86f2a47f979cbfc10f6ffc832d4514fa1c1c9632f8778e05d9b0aba4623"
+hash = "c208e258f9426e9019c0ce09449ad42d60b3057b7f692010b5a45e19405df1f4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage1_departure.snbt"
-hash = "04182f40d5280ed2a6113bc47dc3dd061f7cffc7a3f19d4124fec921e80b31a0"
+hash = "1817711d48a5ed6474fdf27628f3b4523b72bbf82f6fcb03872a4771c5d55039"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage4_calamity.snbt"
-hash = "7eff6a3c750004eb87199532942eb9d64cc641bbae4d4eb22024fd29ce7be077"
+hash = "f2caf38ab79a146c1e08831f77994be109bb5bc0a6d020b96dac78a79374e471"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage5_endgame.snbt"
-hash = "1963f847f303fbe5add88b525b7a14db5ad6027442bcc44c4ee6f50e753f7ef8"
+hash = "67b9fb10e8cae03580ce43dc28f68847aecc1134e4c6e301c96970953e1a94d4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/structure_guide.snbt"
-hash = "b2968707609376b8d5d86ad498dbe77e3fc492bfd06dc3f513d241fa1fd12f4e"
+hash = "0f600b9669e0233bf9e4164ab936da31a46a85bf00a71b39adde643cd2b8ad5d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/sword_soaring.snbt"
-hash = "bf4f76dd260433496ba17da12fa391e348b01ad7d3b6774cadc6b8c7034ed1ef"
+hash = "b3545f4ae038b0d131791e0397212eb765cd8df548f1f9c7b448b9d2e97858d2"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/symbiote_bond.snbt"
-hash = "9cf16ec2e8354f97ee690b1ff48cd78fce3e479fc1cc31f1d34d76504dd01bd4"
+hash = "671d6691440c43467547d667a386ed6c0791494f63c6c6cb05afbbcaefb15368"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/tinkers_workshop.snbt"
-hash = "256931e6d02a9b8a01eb17ddec9ba89265ef27048910c223d87bf4de9d024040"
+hash = "81269e3d5f7891f9e0ba8280c92117e0b94ef0fe32dbd3e21f24b1bbc2c18252"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/weapon_guide.snbt"
-hash = "6adf17c070f9b23e27b0b3ee3c74c6abe7dac334eb866ec3269aa5b262c8bc6c"
+hash = "86e63bff2fd4ed8885266f3f2f798c862149585fdf213312e463b422dcc942d0"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
-hash = "4780deb99c162dc24c642b38e2bc4a9dd368d56a7e39d77d95ead9c5280c4a1b"
+hash = "c66d3cbdee6463dfe67d6175e14ebb2d8c350feecb877ef6cd1ef89bc2cb46eb"
 
 [[files]]
 file = "config/if_borrowed/EpicFight-MobsPlus-Common.toml"
@@ -3838,11 +3838,11 @@ hash = "7da4d6430f42b794af80edad24335aeaf84abca21fadaf133ffdda997a507da9"
 
 [[files]]
 file = "config/openloader/resources/svs_zh_cn/assets/brewinandchewin/lang/zh_cn.json"
-hash = "0f0ebd45220406f7c609380be9c98fb9565df97b3fdd953cccd234bbe7e8c7d2"
+hash = "9d88c4f9380d4d723cb123f7e2baf28501d26bbc231afa2934a78bcf86094507"
 
 [[files]]
 file = "config/openloader/resources/svs_zh_cn/assets/epicfighttinkercompat/lang/zh_cn.json"
-hash = "100e89e683d70d6b466e92333a43146b54663f1dee0ddfea14f67eefcb483527"
+hash = "83edbb4afcf650fc16e9a0519c695b06a1273bd06e376b2caecfd27b510b3292"
 
 [[files]]
 file = "config/openloader/resources/svs_zh_cn/assets/kubejs/lang/zh_cn.json"
@@ -4126,7 +4126,7 @@ metafile = true
 
 [[files]]
 file = "mods/combat-evolution.pw.toml"
-hash = "ef758f68f59bcc92e7f6ae4ae496a65c0898f1a4e4aa354e2461ccc2f965e391"
+hash = "11ab56efb4b040e874a2c62db209383c3ce4cee71a24304d57f5311f009e47b7"
 metafile = true
 
 [[files]]
@@ -4306,7 +4306,7 @@ metafile = true
 
 [[files]]
 file = "mods/epicfight-awaken.pw.toml"
-hash = "836685cb7cca1a3915b4a16d5de46b943882b27cfe0db1c363805f3547144c0f"
+hash = "b1d00c92d4cafece00293bb439834366c7016f803ea441966870171a1b682bc2"
 metafile = true
 
 [[files]]
@@ -4913,7 +4913,7 @@ metafile = true
 
 [[files]]
 file = "mods/womplus.pw.toml"
-hash = "eb106826d1501b0db4cf097dce3926ae889a6428612a592917b0844726b64032"
+hash = "5c45d216c735ae26c711e3d8cfdfe8a5b5f429b9054fc261d5329e098577bbf2"
 metafile = true
 
 [[files]]
@@ -4972,3 +4972,2044 @@ hash = "8b308cfeb03194ca5ebf06f124bedc6ffb41b1540124776e6e4b8b1848b905a0"
 [[files]]
 file = "skin_shinigami_preview.png"
 hash = "cbdfa8b7aee183c303664901c6943c118e9be444afdb67d16749f608cf388890"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/beastcutter.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/beastcutter_close.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/threaded_cane.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/threaded_cane_trick.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/burial_blade.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/burial_blade_extended.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/chikage.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/chikage_extended.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/church_scythe.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/cutlass.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/hunter_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/hunter_axe_extended.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/hunting_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/lit_torch.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/pitchfork.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/saw_cleaver.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/saw_cleaver_extended.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/shadow_blade.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/threaded_cane_cane.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/threaded_cane_whip.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/weapons/torch.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/whirligig_saw.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/bloodandmadness/capabilities/weapons/whirligig_saw_trick.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/acid_molten_blazing_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/bleesed_gold_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/blessed_gold_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/blessed_gold_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/blessed_gold_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/bronze_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/bronze_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/cobalt_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/cobalt_greataxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/cobalt_long_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/copper_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/copper_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/copper_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/corroding_flame.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crimson_axe.json"
+hash = "0ad927d6506813645d26b640c199409a6fe3f697fbe976f628331a7f58514ad7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crimson_bloodweave_sword.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crimson_hoe.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crimson_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crimson_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crimson_sickle_sword.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crimson_sovereign_sword.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/cryolite_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crystal_fists.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crystal_greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/crystal_lance.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/curse_molten_blazing_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dawn_breaker_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/delta_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragon_sword_bone.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragon_sword_fire.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragon_sword_ice.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragon_sword_lightning.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragonsteel_fire_sickle.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragonsteel_fire_sword.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragonsteel_ice_sickle.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragonsteel_ice_sword.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragonsteel_lightning_sickle.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/dragonsteel_lightning_sword.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/ebony_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/ebony_hoe.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/ebony_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/ebony_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/ebony_sickle.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/fairy_scepter.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/gold_lance.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/golden_lance.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/golden_lance_light.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/golden_sickle.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/horde_torch_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/iron_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/long_sickle.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/molten_blazing_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/molten_bone_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/molten_cryolite_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/molten_dark_steel_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/molten_dark_steel_axe_ii.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/molten_dark_steel_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/molten_dark_steel_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/neptunium_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/neptunium_greathammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/neptunium_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/neptunium_trident.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/netherite_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/pitchfork_lance.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/pyromancer_scepter.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/rotten_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/sandstone_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/sandstone_hoe.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/sandstone_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/sandstone_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/sandstone_sickle.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/sandstorm_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/sanguine_scepter.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/scepter_of_compensation.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/silver_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/silver_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/silver_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/steel_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/steel_axe_ii.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/steel_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/steel_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/steel_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/steel_tomahawk_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/steel_wolf_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/sunrise_sickle.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/the_gravedigger_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/tin_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/tin_greathammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/tin_mace.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/titanium_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/titanium_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/titanium_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/true_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/wooden_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/wooden_mace.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/wulfrum_greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/wulfrum_katana.json"
+hash = "53a50bd85d1109518832f2080309d111170fd4427dd95f7af460fec183da5ef3"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/dungeons_and_combat/capabilities/weapons/wulfrum_rapier.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/anesthetic_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/bone_throwing_spear_of_javelin.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/bone_throwing_spear_of_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_pike.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/copper_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/diamond_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/diamond_greatsword.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/diamond_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/diamond_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/diamond_pike.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/diamond_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/golden_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/golden_greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/golden_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/golden_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/golden_pike.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/iron_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/iron_greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/iron_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/iron_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/iron_pike.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/iron_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/netherite_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/netherite_greatsword.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/netherite_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/netherite_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/netherite_pike.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/netherite_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/simple_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/simple_greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/simple_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/simple_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/simple_pike.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/stone_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/stone_greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/stone_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/stone_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/stone_pike.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/stone_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/transport_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/wooden_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/wooden_greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/wooden_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/wooden_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotes/capabilities/weapons/wooden_pike.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_battleaxe.json"
+hash = "0ad927d6506813645d26b640c199409a6fe3f697fbe976f628331a7f58514ad7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_greatsword.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_mace.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_pike.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_pincer.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_war_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_warhammer.json"
+hash = "0ad927d6506813645d26b640c199409a6fe3f697fbe976f628331a7f58514ad7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ancient_second_rounder_warspear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/bitter_cold_hammer.json"
+hash = "0ad927d6506813645d26b640c199409a6fe3f697fbe976f628331a7f58514ad7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/bright_golden_melon_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/bright_land_beast_horn.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/continuous_cut_leaf.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/corrosiver_claw.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/crazy_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/executioners_axe.json"
+hash = "0ad927d6506813645d26b640c199409a6fe3f697fbe976f628331a7f58514ad7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/executioners_halberd.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/executioners_hammer.json"
+hash = "0ad927d6506813645d26b640c199409a6fe3f697fbe976f628331a7f58514ad7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/fire_apostle_sword.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/firepower_pourer_chainsaw.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/flamoar_scimitar.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/gemstone_throwing_knives.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/glaive_of_serpent_dominater.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/hags_brush.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/lucky_club.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/malignasaur_bait_fishgig.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/malignasaur_fishgig.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_chainsaw.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_drill.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_fire_spear.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_long_knife.json"
+hash = "0240587f9f2536579afc8c38c9540e376ee1e092eaf0c7ecdc0d840818c715f3"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_axe.json"
+hash = "0ad927d6506813645d26b640c199409a6fe3f697fbe976f628331a7f58514ad7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_greatsword.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_hoe.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_javelin.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_mace.json"
+hash = "0ad927d6506813645d26b640c199409a6fe3f697fbe976f628331a7f58514ad7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_pike.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_metal_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_oathguard_mech_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_oathguard_mech_sword_close.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_pilum.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_rapier.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_roller.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/meror_scythe.json"
+hash = "fb5fb31692b43ab4757686652ded3df74bf91c698b9e6be57ecee970f77c5ecd"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/mountain_realm_flag_spear_of_javelin.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/mountain_realm_flag_spear_of_spear.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/mountain_realm_nine_ringed_dao.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ominous_adventurer_rapier.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ominous_cutlass.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ominous_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ominous_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/ominous_mace.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_fishing_rod.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_gavel.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_hoe.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_knife.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_pike.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_spike.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/qoaiku_trident.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/rambler_leather_stick.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/seawave_trident.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_blowpipe.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_glaive.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_hoe.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_mace.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_pike.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/serpon_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/slavery_supervisor_hammer_whip.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_broken_bottle.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_broom.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_chopper.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_duster.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_dustpan.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_firestick.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_flail.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_fork.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_frame_saw.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_gourd_ladle.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_hook.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_horsewhip.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_insect_net.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_kitchen_knife.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_ladle.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_lid.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_mop.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_morning_star.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_pan.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_pincer.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_razor.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_ruler.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_saw.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_scissors.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_sickle.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_spatula.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_stub.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_wooden_back_scratcher.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/spirve_wrench.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_dagger.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_hammer.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_hoe.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_horsewhip.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_javelin.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_pike.json"
+hash = "0b139694689e3f856727746cb2175bb2a29eaa71df8d4cc7214a34e30469d2ba"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/villager_metal_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/virtual_cave_insect_net.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/virtual_cave_spider_setae.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/wilderness_boomerang.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/wilderness_machete.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/wilderness_pike.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/wilderness_stick.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/wilderness_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/wilderness_throwing_spear_of_javelin.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/wilderness_throwing_spear_of_spear.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/wonderland_dagger_axe.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/jerotesvillage/capabilities/weapons/wonderland_halberd.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/anchor_handle.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/enderitium_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/enderitium_hoe.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/enderitium_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/enderitium_shovel.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/enderitium_sickle.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/enderitium_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/sharp_battle_axe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/sharp_sai.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/somber_key.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/legendary_monsters/capabilities/weapons/void_sword.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/armads.json"
+hash = "c85e18080aa1266901b987cd6bf8ab984a5d4da5978c42bc6e4f21c8b8bccc98"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/boomerang.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/combat_pickaxe.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/combat_shovel.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/greatsword.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/halberd.json"
+hash = "191a187206b09717b1ae97e3ba167c99ce76b58a6d57f1f07758b7a2efb5fee5"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/knife.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/maul.json"
+hash = "45e8c98d6b4577b29bfc6802edb083123de686a1f8ddad100720349fcbda0400"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/pci.json"
+hash = "b215b78434a715c98b92d72ec623ed13219a1b07d2d465a3e9ff83eca46be532"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/rapier.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/reaver.json"
+hash = "73909e406708109e9da90cffbe352d1f0ede55699764a219ccdd970339233c4d"
+
+[[files]]
+file = "config/openloader/data/imfdata/data/spore/capabilities/weapons/sickle.json"
+hash = "868b0eac6a6756d1a52c99d61a356f99c416aaadf8fefc1823984f3cf36c35a7"
+
+[[files]]
+file = "config/openloader/data/mowzie_ef_compat/data/epicfight/capabilities/weapons/types/dagger.json"
+hash = "3391121e2f49889ffd7563d1306399e848edd6dd47b2226e4ba93109d27d6d6e"
+
+[[files]]
+file = "config/openloader/data/mowzie_ef_compat/data/epicfight/capabilities/weapons/types/dual_greatsword.json"
+hash = "a018df447ff9125e12609b0adbf025e9a521b124d2acab7aa866654339ea6e8e"
+
+[[files]]
+file = "config/openloader/data/mowzie_ef_compat/data/epicfight/capabilities/weapons/types/slipper.json"
+hash = "24d653441a32b496d29f0f914a5c232c414d9519cc633ab8375aa1e17f2049f8"
+
+[[files]]
+file = "config/openloader/data/mowzie_ef_compat/data/mowziesmobs/capabilities/weapons/earthrend_gauntlet.json"
+hash = "b06ef02ef33d1525443ab1e65c72636ba823f939a199a1c9fd34722a07f9df1c"
+
+[[files]]
+file = "config/openloader/data/mowzie_ef_compat/data/mowziesmobs/capabilities/weapons/naga_fang_dagger.json"
+hash = "de2c112e33628ab68c43db797f798df9fb6917d54e9b072fe43cef2d023e2081"
+
+[[files]]
+file = "config/openloader/data/mowzie_ef_compat/data/mowziesmobs/capabilities/weapons/sculptor_staff.json"
+hash = "96fbcc832e0f6defe91275e9f32132f27f979a39cb552304090cf83aa80848a2"
+
+[[files]]
+file = "config/openloader/data/mowzie_ef_compat/data/mowziesmobs/capabilities/weapons/spear.json"
+hash = "f2fde2ec68b930d9144c159af72f9b59a2154baf0315889bc60fffa1891da8ce"
+
+[[files]]
+file = "config/openloader/data/mowzie_ef_compat/data/mowziesmobs/capabilities/weapons/wrought_axe.json"
+hash = "1e9b512c24dc6cd6436e158669ed51d19bd5d3d681dd3f0486491bc2bc46e43a"
+
+[[files]]
+file = "config/openloader/data/mowzie_ef_compat/pack.mcmeta"
+hash = "f88d18229a9e105120c5e876c4cfd1b3d59c7a061a62f543748d630237ef38b4"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/acid_orb.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/acupuncture.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/arcane_shackle.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/arrow_volley.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/ball_lightning.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/black_hole.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/blaze_storm.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/blessing_of_life.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/blight.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/blizzard.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/blood_needles.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/chain_creeper.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/chain_lightning.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/cleanse.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/cloud_of_regeneration.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/cone_of_cold.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/counterspell.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/creeper_revenge.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/devour.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/divine_smite.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/dragon_breath.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/earthquake.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/eldritch_blast.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/electrocute.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/fang_strike.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/fang_swirl.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/fang_ward.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/fire_breath.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/fireball.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/firebolt.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/firecracker.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/firefly_swarm.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/flaming_barrage.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/frostbite.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/frostwave.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/gravity_fissure.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/greater_heal.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/guiding_bolt.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/heal.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/healing_circle.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/heartstop.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/ice_spikes.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/ice_tomb.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/icicle.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/lightning_bolt.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/lightning_lance.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/lob_creeper.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/magic_arrow.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/magic_missile.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/magma_bomb.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/poison_arrow.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/poison_breath.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/poison_splash.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/raise_dead.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/raise_hell.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/ray_of_frost.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/ray_of_siphoning.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/root.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/scapegoat.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/scorch.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/sculk_tentacles.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/shockwave.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/slow.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/snowball.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/sonic_boom.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/spectral_hammer.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/starfall.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/stomp.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/summon_polar_bear.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/summon_swords.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/summon_vex.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/sunbeam.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/telekinesis.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/thunderstorm.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/void_tentacles.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/wall_of_fire.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/wither_skull.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/data/svs/data/irons_spellbooks/irons_spellbooks_spell_config/wololo.json"
+hash = "e463e7f082e2fc8bab9e97e7574dca72dcd27a6e301f64effc99ed67df0182e9"
+
+[[files]]
+file = "config/openloader/resources/svs_fixes/assets/epic_fight_potb/enchantment_particle_maps/particle_enchantment_sleys_mapping.json"
+hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+
+[[files]]
+file = "config/openloader/resources/svs_fixes/assets/epic_fight_potb/fire_particle_maps/fire_aspect_particles_sleys_mapping.json"
+hash = "a3ec81fc012ea8fb75e5d392ac505e63de9c5a1b1c44f0c94c04752e25cc7932"
+
+[[files]]
+file = "config/openloader/resources/svs_fixes/pack.mcmeta"
+hash = "6a1d355fe9bfe4f1c0c8fe1f9201484cbbdef6c634096507908ce0fe0d760af1"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/alexsmobs/lang/zh_cn.json"
+hash = "c6a14f005f465fdb28caeaa0b1c031799391384252ae3be2c3f2e464d2d2a3f4"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/astages/lang/zh_cn.json"
+hash = "446b93a64b85cd89e66eda0d50c5012e2577b79c6f44e0541ec889006272d8a2"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/balm/lang/zh_cn.json"
+hash = "adfd1980448fbc9b4560983dc9a73ec2a9512994bc580d992e7dab2b7e40d709"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/betterdungeons/lang/zh_cn.json"
+hash = "dcd18db0c1dc71b4947cd0218918962d90f9fdc233f57ab2971f2a3ed51ed300"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/block_factorys_bosses/lang/zh_cn.json"
+hash = "645aba109c17e0794346538895a9a540c5a3be15a98f53c67d7d05183ad22c6d"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/bloodandmadness/lang/zh_cn.json"
+hash = "69113caa10c6388ee1f4f9cbda30f974d8c3ae9fe1ed40f26cfabdea5915bb10"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/bonfires/lang/zh_cn.json"
+hash = "ae255e77e771f9b92f71c4922786aad6116742c6b610cd60ab7c308bd014e08e"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/bookshelf/lang/zh_cn.json"
+hash = "9d1dd37fae34baf66803870bebd8a4d5c854ef62191dcc4c91ead4abf55f73cd"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/boss_checklist/lang/zh_cn.json"
+hash = "ca40860e6d61257b1bbce32dbf3b8dcf9121b18919e1a98f250db0ec915013af"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/cataclysm/lang/zh_cn.json"
+hash = "af6ebbdd0c135b373360192bc22f0dedeefc6957e54bc9ccc03c36f2276c1b27"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/cataclysmic_arsenal/lang/zh_cn.json"
+hash = "2f9c7bb7c618d0c640d92a42d3fe7f82b281c624f3da149cb5bd093a8bcf0b6a"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/citadel/lang/zh_cn.json"
+hash = "6e376abc3d9ce8ba6e043bc00463ab8e30c6acfa93c26724a794488806cdcef3"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/cloth-config2/lang/zh_cn.json"
+hash = "b35e89c72994ca2ca5946b0690aa974ba4f0eecc5a78517b501f86fc1cb81a45"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/crafttweaker/lang/zh_cn.json"
+hash = "ed1515343d09b4765c0a90d53b934c3b4d3addee0b1f847824fd9b5a4d0e5d2f"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/creativecore/lang/zh_cn.json"
+hash = "8347737f35238b7a1b9ff48e04759c659faf35693b9d6fa987f4a7244fe4fdcc"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/curios/lang/zh_cn.json"
+hash = "b7064d6a44433be648aa70a7243d95bead618699043157eb76b6b160f604d41b"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/damage_number/lang/zh_cn.json"
+hash = "e40a41d016f9a988c0a6ecaaf5aa0865fa2b454ef9b80b0cf837e484904ff269"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/defaultoptions/lang/zh_cn.json"
+hash = "155fa6d1de2ce01cd8e8f90a330a1d16c88634faa57cff0a80f30a0df4ccd3e0"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/distanthorizons/lang/zh_cn.json"
+hash = "757d7f206e89f1e4600fbc1abade74a75ea9973fd2f038ba4e20d3e2bfdb839e"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/dungeons_and_combat/lang/zh_cn.json"
+hash = "ab8c191fb632d452f1300d54020542dc4411a20c77d8f10580bbf521813b4b5f"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/dynamic_fps/lang/zh_cn.json"
+hash = "285cb3ad4fbaf10634134476741841d8373f971131b8f0672cd6ec5d9305bf99"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/embeddium/lang/zh_cn.json"
+hash = "808442f14b5df247cad51d86a49333461a2d659723423495ea95a1bb65a9eaff"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/entityrespawner/lang/zh_cn.json"
+hash = "af48c562b36ae43ea7385e44823453ac721a73203f574ea130a90ee1fc3b132f"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/epicfight/lang/zh_cn.json"
+hash = "ee4f73960e3b82ded5a3c6b4f229e4fa3ce9c039b71112534394e335f3cb543a"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/epicfight_dd/lang/zh_cn.json"
+hash = "cdc449bf37440cadc511d369a45c28eaf8dab96479dc02645b4a888b58aaf906"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/farmersdelight/lang/zh_cn.json"
+hash = "08a62c21fcfd541648afd131ba3d4331de93e0e3d3df1a59d8d46e6d0f89d05f"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/ftblibrary/lang/zh_cn.json"
+hash = "7be7486aa8beafea6999523f0bfaea6409a07ee516ea5277ac1a28c0dd2ef8bb"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/ftbquests/lang/zh_cn.json"
+hash = "082bf1e0b22ad0abe3c5cfdd15195eb184dc8a8410a0f995174e3c86cb1e0694"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/ftbteams/lang/zh_cn.json"
+hash = "25c0e0540fdc4daf5a058d7926ef2af5b0b54faf0bb8999fa9deb30e21583cbc"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/ftbultimine/lang/zh_cn.json"
+hash = "06bdfbf01b336dc48a2d092b3af5ba5b8d143354d38f89f2a1628b4cc8b3cd3a"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/geckolib/lang/zh_cn.json"
+hash = "14afbe2d7106a03f8516368b9a09b4230b5e5556f4bc2534dff043cf87161061"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/hugestructureblocks/lang/zh_cn.json"
+hash = "e535f059b3edafbb09b5e7fc3369b8409d6cad6abb1eb5428f0d1305da3c977a"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/irons_lib/lang/zh_cn.json"
+hash = "5f99ae9de0696b604bfb71c0c68828ce19156d85eeeea5b7d2a175b21599f0e0"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/irons_patreon_lib/lang/zh_cn.json"
+hash = "1d9fb314d9309cdc314700b545f84a2cf2bba8fbff8ef8e0217b926bcea6f487"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/irons_spellbooks/lang/zh_cn.json"
+hash = "dbf0fa291dbf013c7540e4e5df9a47026fb4f64d0153587b4ec490080e1c3be7"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/jei/lang/zh_cn.json"
+hash = "0dcca5a3b6c246f211b1e59b1a72e73e7305eae91e3311b92363136d548f2a3e"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/jeiintegration/lang/zh_cn.json"
+hash = "4c3198505dff883bdf9f71fdb6e7380468a85cd713c55bf38aad36fc2e8b3f15"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/lazy_utilities/lang/zh_cn.json"
+hash = "40e001210c5efd31f352a771de433c0a55f16161e4f577256ed7bb0878a44b6b"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/legendary_monsters/lang/zh_cn.json"
+hash = "c6f85dbfe720927be62559dcb227d16e4250576c4701f46182cd744790eaf629"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/lionfishapi/lang/zh_cn.json"
+hash = "6b4a017116221f1c8b2594eed3db9d5d992356f44c87650f030487cc46600e25"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/lootbeams/lang/zh_cn.json"
+hash = "94f540611d4879aadd4ae49519c3c263f1f6ece4b4f9c58c1f803f2d9869b0da"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/lzm_bettercombat/lang/zh_cn.json"
+hash = "737ca547b27a8c869a502fcfa7772fc0ebdc386debc66ee974336b729e0a5d7b"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/lzm_elements/lang/zh_cn.json"
+hash = "61d6756039b62182439b2565c87c2909035c18caec7256b02cfff45eaf10fbdb"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/lzm_epicfight/lang/zh_cn.json"
+hash = "bc3ca3a3376137ad11c5998df6a89e51101d91ee3f7891610a02feb33e33a94f"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/magistuarmory/lang/zh_cn.json"
+hash = "51c5d7a3769f5199306d86d393d5fee30ac0cbf6a1690dc65fb34c4abaeed5bd"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/mantle/lang/zh_cn.json"
+hash = "50b3bc1140d03b7aebb728621b96b4c183780cb815e43f424f588e2f9b850db8"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/midnightlib/lang/zh_cn.json"
+hash = "074a22b143d51c9e1bcb761e72aec7540d39c0e80e65c0647238657f5d324f62"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/minecraft/lang/zh_cn.json"
+hash = "d7c5ff63abee545d866acdec15467a2666c80b4c444e718adbb3b250d4ea7065"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/modernfix/lang/zh_cn.json"
+hash = "b723221ef6e101801b1b8478fccc8ebbc28fe65aa10a8b810ae4f81d32efe5fd"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/monsterexpansion/lang/zh_cn.json"
+hash = "ca39d9a0ceea62b83c40d8af209466f3fffa378aa055337736aea73af988f432"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/moonlight/lang/zh_cn.json"
+hash = "6dfffb8ae46a48c39ae28753f3f0a1e327247315a3d2871bbc5a08bf1828be63"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/mowziesmobs/lang/zh_cn.json"
+hash = "5d90b55227265d9ce255152b25fd74fbea2656a1e7089f64f880b9e9bb3315f8"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/notenoughanimations/lang/zh_cn.json"
+hash = "1154de19bfca57a49cae2a816a61edce97f055e4eebaf884a2caea82418a33eb"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/openloader/lang/zh_cn.json"
+hash = "9f6a0bfebac1f0215c93e610ec47bffea12d86eb0f09eeeaaf2f56643beda54b"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/patchouli/lang/zh_cn.json"
+hash = "e9f1baaddc0d68194dbb44bf3de78f7cf32675372e219e5aefb24398e44122fd"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/pladailyboss/lang/zh_cn.json"
+hash = "187ef33e892087f2bc190c565b8c3215ba70999e5a8035594da66cf11c1bbd8b"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/propertymodifier/lang/zh_cn.json"
+hash = "df20cf5dd0696db613a57abbb8606d527fce822f82eff360490793156ac675f5"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/qualitysounds/lang/zh_cn.json"
+hash = "9f6185c025a0f9ad9cfd7940801c9fdb2ade5959c0115f24b23e73018f9ea1d7"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/refm/lang/zh_cn.json"
+hash = "e5fa42b05548fbac37a149c10d90d0b1e9b5355559db51230377dd8b8041e714"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/roadweaver/lang/zh_cn.json"
+hash = "677094447be49a84f345c373a18e3f2c9c20323640f9ccf2acb5dbf046651acf"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/saintsdragons/lang/zh_cn.json"
+hash = "0c709c4d9886bb34f7c0584e6d4fbcde4759790cc011672f498f9b2eae5167d5"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/simplyswords/lang/zh_cn.json"
+hash = "c9c9795d5694afd7a74b337b19e8bd7bc798b1becc7967246ff2aeec261a6c23"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/skyarena/lang/zh_cn.json"
+hash = "3cd7c02c4cbdfd83178072fa2ea44f35ab2a438dfadeb121c1def260c2b93682"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/sl_library/lang/zh_cn.json"
+hash = "c716b2deb8dd3552f3f72b52963d6350831ff26dbc610fd8a99eda833b05fc5d"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/slm_codex/lang/zh_cn.json"
+hash = "1492217df1f85dec8966177c98fef650a788e8ed2219f618325aa2f72a34113e"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/slm_elements/lang/zh_cn.json"
+hash = "c604a53065bcd19415796f50a716de74ef11062fe20e9c646dc17c63b32f26f4"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/slm_epicfight/lang/zh_cn.json"
+hash = "7a783db307e5a93de3aaf219e1fcb7a182bba76d257503f459542ae26e0c3a47"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/slu/lang/zh_cn.json"
+hash = "9003ee820fb06645f641d0a90bf03114a37d6550726aa72d7a048a98c860007e"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/sodium/lang/zh_cn.json"
+hash = "f0821713c57b290027924f84d06b538d9dd599e92ba0f1b9dbb086a39ec14685"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/spore/lang/zh_cn.json"
+hash = "688e6c9991f1aa76e17fd5c190293a08606fe155834585bba95a1ed1c95e07e6"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/sword_soaring/lang/zh_cn.json"
+hash = "c31e3a543ee2f31d3d70b214c9eca16d4b607eda16840de43ad9f6f504ae9d52"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/tconstruct/lang/zh_cn.json"
+hash = "79c7475b197d55d46788e9b975797fd75e650fd6cdcd0bb5ca27894ae519f4ee"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/terrablender/lang/zh_cn.json"
+hash = "760c65a7d78dfa136fd0318d1b7809c628740438ebb85156d35654d98c221d87"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/tinkers_reforged/lang/zh_cn.json"
+hash = "3b86d5cc9a3e39ce44790efbd3a199c0819b650e859f38938528a282191ec62e"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/w_o_w_armors_and_weapons/lang/zh_cn.json"
+hash = "0ed93562e6e20b3a80e72aa85a3553108037941f8ec9557d2791a11182d17337"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/waystones/lang/zh_cn.json"
+hash = "4d6efe0f0dd27a4e2c6c6bd8501ddd066b2404832dab3ff749fdf5f7c69afd97"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/woc_remastered/lang/zh_cn.json"
+hash = "2eb7edad7d8e63c0ca9e8908bf9fb639774b976c542ffdd594097c46b5950963"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/wolm/lang/zh_cn.json"
+hash = "7a33c957ac96bf154335ccb091e22dbd30926a4fb1a048f7fa11d16f033d7896"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/womplus/lang/zh_cn.json"
+hash = "a8727583a29a1dcec230b78ac704c6d52c404b2001cdaa7918381e202625cbff"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/wukong/lang/zh_cn.json"
+hash = "64ea1e32b1c0ec8a6ac68bd74f6a67ff123e9842b1b76eab6996c63a8affc33a"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/xaerobetterpvp/lang/zh_cn.json"
+hash = "92431122db062ff2b5b34fb2596131ad96238ae6c74359826992bb6ad3eeab18"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/xaerominimap/lang/zh_cn.json"
+hash = "739c852cdf124771cc3dba4f03723d372c6bafa8e3df064d0c061074d54efe6a"
+
+[[files]]
+file = "config/openloader/resources/svs_zh_cn/assets/xaeroworldmap/lang/zh_cn.json"
+hash = "8e4cf706fe6d9c03b6ac356d056cba97e7cb0870bef04f7d83154f31b9531f86"
+
+[[files]]
+file = "mods/.gitkeep"
+hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+[[files]]
+file = "mods/svs-tweak.pw.toml"
+hash = "f3d31e231daf937c144176a783eeca08be28263676c56651f2eb44784a2d21d0"
+

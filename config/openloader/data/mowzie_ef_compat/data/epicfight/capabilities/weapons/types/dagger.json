@@ -1,0 +1,104 @@
+{
+  "livingmotion_modifier": {
+    "one_hand": {
+      "swim": "epicfight:biped/living/swim",
+      "fly": "epicfight:biped/living/fly",
+      "creative_fly": "epicfight:biped/living/creative_fly",
+      "kneel": "epicfight:biped/living/kneel",
+      "creative_idle": "epicfight:biped/living/creative_idle",
+      "sit": "epicfight:biped/living/sit",
+      "float": "epicfight:biped/living/float",
+      "sneak": "epicfight:biped/living/sneak",
+      "idle": "epicfight:biped/living/idle",
+      "fall": "epicfight:biped/living/fall",
+      "run": "epicfight:biped/living/run",
+      "walk": "epicfight:biped/living/walk"
+    },
+    "two_hand": {
+      "swim": "epicfight:biped/living/swim",
+      "fly": "epicfight:biped/living/fly",
+      "creative_fly": "epicfight:biped/living/creative_fly",
+      "kneel": "epicfight:biped/living/kneel",
+      "creative_idle": "epicfight:biped/living/creative_idle",
+      "sit": "epicfight:biped/living/sit",
+      "float": "epicfight:biped/living/float",
+      "sneak": "epicfight:biped/living/sneak",
+      "idle": "epicfight:biped/living/idle",
+      "fall": "epicfight:biped/living/fall",
+      "run": "epicfight:biped/living/run_dual",
+      "walk": "epicfight:biped/living/walk"
+    }
+  },
+  "styles": {
+    "default": "one_hand",
+    "cases": [
+      {
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "shield"
+          },
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "not_weapon"
+          }
+        ],
+        "style": "one_hand"
+      },
+      {
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "dagger"
+          }
+        ],
+        "style": "two_hand"
+      }
+    ]
+  },
+  "collider": {
+    "center": [
+      0.0,
+      0.0,
+      -0.1
+    ],
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.6
+    ]
+  },
+  "hit_particle": "epicfight:hit_blade",
+  "offhand_item_compatible_predicate": [
+    {
+      "predicate": "epicfight:offhand_item_category",
+      "category": "dagger"
+    }
+  ],
+  "category": "dagger",
+  "swing_sound": "epicfight:entity.weapon.whoosh_small",
+  "combos": {
+    "one_hand": [
+      "redirected_epicfight:biped/combat/dagger_auto1",
+      "redirected_epicfight:biped/combat/dagger_auto2",
+      "redirected_epicfight:biped/combat/dagger_auto3",
+      "epicfight:biped/combat/dagger_dash",
+      "redirected_epicfight:biped/combat/dagger_airslash"
+    ],
+    "two_hand": [
+      "redirected_epicfight:biped/combat/dagger_dual_auto1",
+      "redirected_epicfight:biped/combat/dagger_dual_auto2",
+      "redirected_epicfight:biped/combat/dagger_dual_auto3",
+      "redirected_epicfight:biped/combat/dagger_dual_auto4",
+      "epicfight:biped/combat/dagger_dual_dash",
+      "epicfight:biped/combat/dagger_dual_airslash"
+    ]
+  },
+  "hit_sound": "epicfight:entity.hit.blade",
+  "innate_skills": {
+    "one_hand": "giveme_more_efnt:blade_runner",
+    "two_hand": "giveme_more_efnt:assault"
+  },
+  "usable_in_offhand": true
+}

@@ -1,0 +1,24 @@
+{
+  "attributes": {
+    "common": {
+      "impact": 0.7,
+      "speed_bonus": 0.6,
+      "max_strikes": 4,
+      "damage_bonus": 2
+    }
+  },
+  "collider": {
+    "center": [
+      0.0,
+      0.0,
+      -0.4
+    ],
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ]
+  },
+  "type": "efn:shortsword"
+}

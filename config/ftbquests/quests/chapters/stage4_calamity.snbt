@@ -1,69 +1,100 @@
 {
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
 	filename: "stage4_calamity"
 	group: "0B00AA11CC22DD11"
 	icon: "minecraft:mycelium"
-	id: "A3F1C0DE00000005"
+	id: "7537096B33127004"
 	order_index: 4
-	title: "Ⅳ·真菌天灾升级"
+	quest_links: [ ]
 	quests: [
 		{
+			description: [
+				"清理 10 只被感染的村民与 5 只被感染的人类。"
+				"人工核实：实体 ID 待核实（spore:inf_villager / spore:inf_human），"
+				"若目标不存在，以实际的感染村民/人类为准。"
+			]
+			id: "5FA7D65A8BC6A951"
 			invisible: true
-			dependencies: ["A3F1C0E510000501"]
-			id: "A3F1C0DE1000002C"
-			title: "暮色主线收束"
-			subtitle: "Ⅳ·入口"
-			description: ["击败冰雪女王，为暮色之旅收官，", "真菌天灾的阴影已开始蔓延。"]
-			x: 0.0d
-			y: 0.0d
-			shape: "pentagon"
-			tasks: [{id: "A3F1C0DE20000031", type: "kill", entity: "twilightforest:snow_queen", value: 1L, title: "击杀冰雪女王"}]
-			rewards: [{id: "A3F1C0DE3000003B", type: "command", command: "/gamestage add @p stage4_calamity"}]
-		}
-		{
-			invisible: true
-			id: "A3F1C0DE1000002D"
-			title: "清理感染区"
+			rewards: [{
+				id: "158DF91A9491B99F"
+				type: "xp"
+				xp: 150
+			}]
+			shape: "square"
 			subtitle: "感染装备线·入门"
-			description: ["清理 10 只被感染的村民与 5 只被感染的人类。", "人工核实：实体 ID 待核实（spore:inf_villager / spore:inf_human），", "若目标不存在，以实际的感染村民/人类为准。"]
+			tasks: [
+				{
+					id: "259998FE651BF33B"
+					title: "清理被感染的村民×10"
+					type: "checkmark"
+				}
+				{
+					id: "4A4EA159E87024DC"
+					title: "清理被感染的人类×5"
+					type: "checkmark"
+				}
+			]
+			title: "清理感染区"
 			x: 1.5d
 			y: 0.0d
-			shape: "square"
-			dependencies: ["A3F1C0DE1000002C"]
-			tasks: [
-				{id: "A3F1C0DE20000032", type: "checkmark", title: "清理被感染的村民×10"}
-				{id: "A3F1C0DE20000033", type: "checkmark", title: "清理被感染的人类×5"}
-			]
-			rewards: [{id: "A3F1C0DE3000003C", type: "xp", xp: 150}]
-		}
+		},
 		{
+			description: [
+				"提交 32 个腐肉，作为生物质样本的占位素材。"
+				"人工核实：Spore 生物质素材 ID 待核实，确认后替换。"
+			]
+			id: "0180F144F476B97F"
 			invisible: true
-			id: "A3F1C0DE1000002E"
-			title: "生物质样本"
+			rewards: [{
+				id: "2C9D1195477ABF0C"
+				type: "xp"
+				xp: 200
+			}]
+			shape: "circle"
 			subtitle: "感染装备线·进阶"
-			description: ["提交 32 个腐肉，作为生物质样本的占位素材。", "人工核实：Spore 生物质素材 ID 待核实，确认后替换。"]
+			tasks: [{
+				id: "4D9D35ABAFC87E2B"
+				item: { Count: 32, id: "minecraft:rotten_flesh" }
+				type: "item"
+			}]
+			title: "生物质样本"
 			x: 3.0d
 			y: 0.0d
-			shape: "circle"
-			dependencies: ["A3F1C0DE1000002D"]
-			tasks: [{id: "A3F1C0DE20000034", type: "item", item: {id: "minecraft:rotten_flesh", Count: 32b}}]
-			rewards: [{id: "A3F1C0DE3000003D", type: "xp", xp: 200}]
-		}
+		},
 		{
+			description: [
+				"击败裂地者 Gazenbreacher，"
+				"斩断感染区的源头，完成天灾装备的试炼。"
+			]
+			id: "432FFFD5698B590C"
 			invisible: true
-			id: "A3F1C0DE1000002F"
-			title: "猎杀裂地者"
+			rewards: [
+				{
+					id: "7DF6A1D75E48F7FB"
+					type: "xp"
+					xp: 300
+				}
+				{
+					count: 2
+					id: "63AF7C9C6BE4193D"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+			]
+			shape: "square"
 			subtitle: "感染装备线·大成"
-			description: ["击败裂地者 Gazenbreacher，", "斩断感染区的源头，完成天灾装备的试炼。"]
+			tasks: [{
+				entity: "spore:gazenbreacher"
+				id: "4B63BDB6EB104407"
+				title: "击杀 Gazenbreacher"
+				type: "kill"
+				value: 1L
+			}]
+			title: "猎杀裂地者"
 			x: 4.5d
 			y: 0.0d
-			shape: "square"
-			dependencies: ["A3F1C0DE1000002E"]
-			tasks: [{id: "A3F1C0DE20000035", type: "kill", entity: "spore:gazenbreacher", value: 1L, title: "击杀 Gazenbreacher"}]
-			rewards: [
-				{id: "A3F1C0DE3000003E", type: "xp", xp: 300}
-				{id: "A3F1C0DE3000003F", type: "item", item: {id: "minecraft:golden_apple", Count: 2b}}
-			]
 		}
 	]
+	title: "Ⅳ·真菌天灾升级"
 }
