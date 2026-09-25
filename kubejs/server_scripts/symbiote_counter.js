@@ -1,21 +1,11 @@
 // symbiote_counter.js — 共生体克制真菌 · 分期 1（魔改第一期 · 规格 3）
-// 能力四件套（只对 spore 命名空间实体生效）：
-//   ① 伤害克制：已结合玩家对真菌伤害 ×1.1 / ×1.2 / ×1.35 / ×1.5
-//      （ATTACHED / INTEGRATED / COOPERATIVE / DOMINANT）
-//   ② 受真菌减伤：玩家被 spore 实体伤害减免 10% / 15% / 22% / 30%
+// 能力清单（只对 spore 命名空间实体生效）：
+//   ① 伤害克制 / ② 受真菌减伤 —— 【已迁至 startup_scripts/svs_damage.js】
+//      （LivingHurtEvent.setAmount 直改，取代下一 tick 补刀/回补；数值表在那边，改动请同步）
 //   ③ 狩猎红利：狩猎状态下击杀真菌按档位回 饥饿/耐力/信赖（Boss 全满），写失败不崩只打日志
 //   ④ 天敌仇恨：每秒 1 次、10% 概率，让 24 格内目标为空/非玩家的 spore Monster 改仇恨为已结合玩家
 //   ⑤ 围城压力联动（决议五-3）：围城窗口内（siege.js 写 persistentData svs_siege_active_until）
-//      已结合玩家压力每秒 +3（初版默认，实测调）
-// 事件名与规格差异（javap 实证：KubeJS 2001.6.5 的 EntityEvents 仅有 death/hurt/checkSpawn/spawned）：
-//   规格写的 EntityEvents.damaged → 实际为 EntityEvents.hurt
-//   规格写的 EntityEvents.tick  → 不存在，用 ServerEvents.tick 等价实现（每 tick 清队列 + 每秒扫描）
-//   TODO(K3-知悉): 两处事件名差异已按可加载实现，规格侧请同步修订
-// 伤害系数落地方式：KubeJS 6.5 的 hurt 事件 damage 只读（LivingEntityHurtEventJS 无 setter，javap 实证），
-//   不碰 mixin/字节码、不反射私有字段的方案：
-//   增伤 → 下一 tick 对目标补 hurt(原伤×倍率)：原版无敌帧"差值结算"分支只吃 (倍率-1)×原伤，等效乘区
-//   减伤 → 下一 tick 原地 heal(原伤×减免)，延迟 1 tick 生效
-//   TODO(K3-实测): 该方案对"同 tick 致命伤"不提供保护；若要求即时/致命保护，规格需另给事件前拦截手段
+//      已结合玩家压力每秒 +2（净 +1/s，约 70 秒到 70 高压线）
 
 // 反射点（开包 javap 实证 symbiote-1.1.3 真实 API，全部带兜底，失败不崩只打日志）：
 //   com.scout.symbiote.tracker.SymbioteTracker.get(ServerLevel) / peek(UUID)
@@ -40,8 +30,6 @@ const MonsterClass = Java.loadClass('net.minecraft.world.entity.monster.Monster'
 const SC_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
 const SPORE_NS = 'spore:'
 
-const DMG_MULT = { ATTACHED: 1.1, INTEGRATED: 1.2, COOPERATIVE: 1.35, DOMINANT: 1.5 }
-const DMG_REDUCE = { ATTACHED: 0.10, INTEGRATED: 0.15, COOPERATIVE: 0.22, DOMINANT: 0.30 }
 // 狩猎红利 [饥饿, 耐力, 信赖]；-1 表示"全满"（饥饿→20，耐力→staminaMax）
 const HUNT_BONUS = {
   minor: [3, 8, 3],      // 真菌小怪（血量 <50）
@@ -132,51 +120,6 @@ function addTrust(player, n) {
 
 // ── ①② 伤害两向（EntityEvents.hurt）──
 // 队列用数组不用 uuid 键表：原版继承方法 getUUID 在非玩家实体上 Rhino 解析失败
-// （实测 Cannot find function getUUID，damage_caps/fireseed 同款已一并改）
-const pendingHeal = []      // [{ ent, amount }] 待回血
-const pendingExtra = []     // [{ ent, source, amount }] 待补刀
-let applyingExtra = false   // 补刀重入闸：补刀自身触发的 hurt 事件不得再排队
-
-EntityEvents.hurt(event => {
-  const ent = event.entity
-  if (!ent || !ent.type) return
-  const srcEnt = event.source ? event.source.entity : null
-  const fromSpore = !!(srcEnt && srcEnt.type && String(srcEnt.type).indexOf(SPORE_NS) === 0)
-
-  // 方向 A：玩家被 spore 实体伤害 → 按档位减伤（下一 tick 回血）
-  if (ent.player && fromSpore) {
-    const stage = getBondStage(ent)
-    const red = DMG_REDUCE[stage]
-    if (red) {
-      let merged = false
-      for (let i = 0; i < pendingHeal.length; i++) {
-        if (pendingHeal[i].ent === ent) { pendingHeal[i].amount += event.amount * red; merged = true; break }
-      }
-      if (!merged) pendingHeal.push({ ent: ent, amount: event.amount * red })
-      console.info('[SVS-共生体][debug] 受真菌减伤生效: 档位 ' + stage + ' 减免 ' + Math.round(red * 100) + '%（下一 tick 回复）')
-      // TODO(K3-上线前): 验收 4 需要此 debug 行，转正式时删除或降频
-    }
-    return
-  }
-
-  // 方向 B：已结合玩家打 spore Monster → 按档位增伤（下一 tick 补刀，无敌帧差值结算）
-  if (applyingExtra) return
-  if (ent.monster && String(ent.type).indexOf(SPORE_NS) === 0
-    && srcEnt && srcEnt.player && srcEnt instanceof SC_ServerPlayer) {
-    const stage = getBondStage(srcEnt)
-    const mult = DMG_MULT[stage]
-    if (mult) {
-      let dup = false
-      for (let i = 0; i < pendingExtra.length; i++) {
-        if (pendingExtra[i].ent === ent) { dup = true; break }
-      }
-      if (!dup) pendingExtra.push({ ent: ent, source: event.source, amount: event.amount * mult })
-      console.info('[SVS-共生体][debug] 伤害克制生效: 档位 ' + stage + ' ×' + mult)
-      // TODO(K3-上线前): 同上，转正式时删除或降频
-    }
-  }
-})
-
 // ── ③ 狩猎红利（EntityEvents.death）──
 EntityEvents.death(event => {
   const ent = event.entity
@@ -204,30 +147,6 @@ const SC_SIEGE_STRESS = 2     // 围城窗口内每秒压力增量（决议五-3
 
 ServerEvents.tick(event => {
   tickCounter++
-
-  // 增伤补刀：无敌帧差值分支只结算 amount - lastHurt = (倍率-1)×原伤
-  while (pendingExtra.length > 0) {
-    const rec = pendingExtra.shift()
-    try {
-      if (rec.ent && rec.ent.isAlive()) {
-        applyingExtra = true
-        rec.ent.hurt(rec.source, rec.amount)
-        applyingExtra = false
-      }
-    } catch (e) {
-      applyingExtra = false
-      warnOnce('补刀', e)
-    }
-  }
-  // 减伤回血
-  while (pendingHeal.length > 0) {
-    const rec = pendingHeal.shift()
-    try {
-      if (rec.ent && rec.ent.isAlive()) rec.ent.heal(rec.amount)
-    } catch (e) {
-      warnOnce('回血', e)
-    }
-  }
 
   if (tickCounter % 20 !== 0) return          // 每秒 1 次
   if (!event.server) return
