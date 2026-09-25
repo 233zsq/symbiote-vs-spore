@@ -1,0 +1,8 @@
+name = "MixinSquared"
+filename = "mixinsquared-forge-0.2.0.jar"
+side = "both"
+
+[download]
+url = "https://maven.bawnorton.com/releases/com/bawnorton/mixinsquared/mixinsquared-forge/0.2.0/mixinsquared-forge-0.2.0.jar"
+hash-format = "sha512"
+hash = "bdd3fcc990403cc660ec581890d3fe30c9ebc7391b0f2e60836baa3374a3140571596a318c39f6980d6f52f8f44f5cd48c276bf66817f347c8b8583884d32387"

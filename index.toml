@@ -4065,7 +4065,7 @@ metafile = true
 
 [[files]]
 file = "mods/cataclysmic-arsenal.pw.toml"
-hash = "7c46c05d9a888aa6ff9ba3f95b3f28a93f12125afd3ee9fcadd41f57463125ff"
+hash = "81ccfd1f20296a6778c62f72a4ca28eb49f40ad39ffdb5391755c68256175458"
 metafile = true
 
 [[files]]
@@ -4561,6 +4561,10 @@ metafile = true
 file = "mods/midnightlib.pw.toml"
 hash = "ff3e8c24b856793dea18726883722d8274d7b292448ecc4beecec9df008d44cd"
 metafile = true
+
+[[files]]
+file = "mods/mixinsquared.pw.toml"
+hash = "be7b9473b1eba310af435c854904fbe3c06ab636a9c64444376e8d6736935e54"
 
 [[files]]
 file = "mods/mmmmmmmmmmmm.pw.toml"

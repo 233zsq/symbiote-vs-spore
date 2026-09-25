@@ -132,6 +132,8 @@ dependencies {
 
     // POTB：mixin 目标的编译期签名依赖（只编译不打包；mod 类名未被混淆，无需 deobf）
     compileOnly files('libs/potb-2.3.1.jar', 'libs/epicfight-20.14.17.jar')
+    // MixinSquared：MixinCanceller 接口的编译期依赖（运行时用 mods/ 里的 mixinsquared mod jar）
+    compileOnly files('libs/mixinsquared-0.2.0.jar')
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
