@@ -71,7 +71,8 @@
 - 评审 P1 已修（commit a074105）：活配置 cap_config 10 只 Boss=22（ignis=20，golem dps_cap→53）、围城压力 3→2（净 +1/s，70s 到线）、母巢名单改 `spore:proto`（mound→proto 线，原 6 只天灾级回归通用 cap）、已撤 blade_config_tag 置空（粒子恢复，靠判空 mixin 兜底——若 POTB NPE 复发立即回报回滚）
 - 评审 P1 全清（commit c60b471）：伤害统一迁 `startup/svs_damage.js` 的 Forge LivingHurtEvent.setAmount（javap 实证可直改，弃用 EF 钩子路线）；damage_caps.js/ranged_pressure.js 删除，symbiote_counter 瘦身。**复测重点**：`Loaded 5/5 startup + 8/8 server 0 errors`、日志首行应有 [SVS-伤害] 统一伤害层已注册、共生增/减伤、远程加压（ blaze 火球×1.5 实测）、精英限伤、母巢爬升全部即时生效（不再有 1 tick 延迟）
 - 评审 P3 已对齐（commit f334d10）：副本/test4/仓库三方同步（125 配置回填、quests 21 章、汉化 58 ns、imfdata 335、svs_fixes/mowzie 入仓）、pw 3 条目回正+svs_tweak 建条目、index 510 补登、孤儿/重复/空目录清扫
-- 评审遗留：badmobs 6080 项全 true 空禁（禁飞怪 id 待实测复现后填）；P2 数值类 13~21 条待逐条裁决（火种 7 天判定按绑定时间戳/grout 无限兑/通用限伤误伤中立怪/围城改村庄级共享/难度三选互斥/stage provider 固定/剑术耗蓝+冷却×2）
+- 评审 P2 已修 5 件（commit a9483ae，默认值用户可否决）：火种 7 天=离线时长、交易限量 16、限伤只认 Monster、难度选一锁二、stage provider 固定 gamestages
+- 评审遗留：badmobs 空禁（等实测飞怪 id）；围城改村庄级共享计时+村外生成（下轮做）；剑术耗蓝+冷却×2（'剑术'指向待确认——ISS 无此机制，疑似 efs_iss 类 EF×ISS 桥接）；共生分期 1 数值上调（待实测）；缺章文本（游戏内编辑器，工单在迁移清单）
 
 ## 五、待办（按优先级）
 
