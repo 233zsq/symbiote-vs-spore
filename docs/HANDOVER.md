@@ -68,7 +68,8 @@
 - **items.js 未部署**（任务线 4 物品引用 + stages.zs BEP 报错的根因）→ 已双写
 - 顺手修 symbiote_counter 方向B `ServerPlayerClass` 未定义引用
 - **血泪教训追加**：KubeJS 注入成员（.type/.player/.monster/.persistentData）可靠；原版继承方法（getUUID）对非玩家实体不可靠——实体标识一律用自发 pd id
-- 评审 P1 待办：cataclysm-common.toml 的 damage_cap 才是活配置（cataclysm.toml 死配置）、围城压力 3/s 爆表改 ≤1/s、远程加压被无敌帧吃掉（补刀 0.5P<P 无效）、增伤×限伤互相抵消（应统一 EF 原生钩子重构）、母巢名单应为 mound→proto 线、badmobs 6080 项全 true 空禁、可撤 blade_config_tag 置空（判空 mixin 已跑）
+- 评审 P1 已修（commit a074105）：活配置 cap_config 10 只 Boss=22（ignis=20，golem dps_cap→53）、围城压力 3→2（净 +1/s，70s 到线）、母巢名单改 `spore:proto`（mound→proto 线，原 6 只天灾级回归通用 cap）、已撤 blade_config_tag 置空（粒子恢复，靠判空 mixin 兜底——若 POTB NPE 复发立即回报回滚）
+- 评审 P1 待办：远程加压被无敌帧吃掉（补刀 0.5P<P 无效）、增伤×限伤互相抵消——两件需统一 EF 原生钩子（ExtraDamageInstance/DealDamageEvent，startup 脚本注册）一起重构，单独一轮做；badmobs 6080 项全 true 空禁（禁飞怪 id 待实测复现后填）
 
 ## 五、待办（按优先级）
 
