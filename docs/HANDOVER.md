@@ -19,7 +19,7 @@
 
 - **162 件 mod**（副本/test4 一致）+ Modern Mizuno 材质包 + Bliss 光影（DH 兼容）
 - 打包：MCBBS 格式脚本（manifest+mcbbs.packmeta+overrides），最新产物 `dist/test5.zip`（**已过期**：之后又加了村民美化4件、魔改脚本、POTB修复包——下次打包用同一脚本从副本重打，版本号 test6）
-- 游戏实测可进世界；FTB 九章任务线骨架在（暮色章已删待重排）；桌面表已按新包体重采
+- 游戏实测可进世界；FTB 任务线骨架在（暮色章已删；**重排迁移清单已出** `docs/任务线重排迁移清单.md`：仓库已同步删 stage3_twilight.snbt，游戏内编辑器照单改 8 处文本/任务，另发现 stage2_nether 章缺失；阶段Ⅲ承接方案待用户裁决）；桌面表已按新包体重采
 
 ## 三、魔改一期已完成（全部双写+commit）
 
