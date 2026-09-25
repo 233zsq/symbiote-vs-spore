@@ -199,7 +199,8 @@ EntityEvents.death(event => {
 
 // ── 队列消费（每 tick）+ ④ 天敌仇恨（每秒）+ ⑤ 围城压力（每秒）──
 let tickCounter = 0
-const SC_SIEGE_STRESS = 3     // 围城窗口内每秒压力增量（决议五-3 初版默认，实测调）
+const SC_SIEGE_STRESS = 2     // 围城窗口内每秒压力增量（决议五-3）。自然衰减 1/s → 净 +1/s，约 70 秒压到 70 高压线
+                               // （评审实证：+3/s 时净 +2/s，35 秒必爆表，围城一开共生体必失控）
 
 ServerEvents.tick(event => {
   tickCounter++

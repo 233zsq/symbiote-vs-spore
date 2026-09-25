@@ -13,11 +13,10 @@ const DC_ELITE_MIN_HP = 200            // 精英/Boss 门槛（等级带 B2）
 const DC_ELITE_CAP = 0.10              // 通用单次受伤上限（最大生命比例）
 const DC_SKIP_NS = 'cataclysm:'        // 有原生 cap 的命名空间，跳过防双重结算
 
-// 母巢模板名单（TODO(K3-确认): "母巢"确切实体 id 待实测确认，先按天灾级主实体收录）
-const DC_HIVEMIND = [
-  'spore:gazenbreacher', 'spore:hindenburg', 'spore:hohlfresser',
-  'spore:howitzer', 'spore:kraken', 'spore:leviathan'
-]
+// 母巢模板名单（评审实证修正）：spore 的真"母巢"线是 mound → proto（Proto Hivemind）。
+// proto 仅 100 血 < 精英门槛 200，正是需要专属模板的对象；mound(20 血) 太小不套。
+// 原名单 6 只天灾级回归通用 10% cap（HP≥200 自动生效）。TODO(K3-实测): proto 进化后形态是否需并入
+const DC_HIVEMIND = ['spore:proto']
 const DC_HIVE_CAP = 0.08               // 母巢单次受伤上限 8%
 const DC_HIVE_RATE_MAX = 0.90          // 爬升减伤封顶 90%
 const DC_HIVE_DECAY_DELAY = 100        // 停手 5 秒（tick）后开始衰减
