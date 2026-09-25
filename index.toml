@@ -4519,6 +4519,10 @@ hash = "55dcf51c4990fd9cfc47b93cf6499665529a65bff39552a7881244f52680f991"
 metafile = true
 
 [[files]]
+file = "mods/leawind-third-person.pw.toml"
+hash = "7f1745fa13576dac9260c75e305b307923feb48ddf9eb87bce6ccac496d86d2f"
+
+[[files]]
 file = "mods/legendary-monsters.pw.toml"
 hash = "53e5814c098cb6af168808fd3c0185ad4bfe73559bc1478d8f102505eecf46c7"
 metafile = true
@@ -4733,9 +4737,6 @@ file = "mods/searchables.pw.toml"
 hash = "b453964c97825e80e139bcbac6c61f6b2bbddd1a2a898b807499e12b55e19c98"
 metafile = true
 
-[[files]]
-file = "mods/shoulder-surfing-reloaded.pw.toml"
-hash = "d46f676ac36c8c415829f9f5f0777ae11b9034780db0e645c46631518f9e4987"
 metafile = true
 
 [[files]]
@@ -4788,9 +4789,6 @@ file = "mods/sophisticated-storage.pw.toml"
 hash = "a59d27eba58d24698ea2a3d0a41d5486f834ce8c9fa4c124633e829ee401ae71"
 metafile = true
 
-[[files]]
-file = "mods/souls-like-bosses.pw.toml"
-hash = "516b0c6e15851ca9205f40026ed7cd369eabb0eb4bdeec0c9e17904bae8f1fe1"
 metafile = true
 
 [[files]]

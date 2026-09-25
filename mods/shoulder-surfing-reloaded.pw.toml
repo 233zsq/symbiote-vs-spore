@@ -1,8 +1,0 @@
-name = "Shoulder Surfing Reloaded"
-filename = "ShoulderSurfing-Forge-1.20.1-5.0.11.jar"
-side = "both"
-
-[download]
-url = ""
-hash-format = "sha512"
-hash = "f23d406466737156f3f7ebed6823b80d067014b61f8aff0db1a5624d930e3a804c0ad202dc49deb83ac3f9d469da08a27e2537f5b1fc9aadf5a7a5ca87c11ee1"
