@@ -2,9 +2,10 @@
   "required": true,
   "package": "com.svs.tweak.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "svs_tweak.refmap.json",
   "mixins": [
-    "PotbWeaponryParticleRenderMixin"
+    "PotbWeaponryParticleRenderMixin",
+    "PrimaryLevelDataSpawnMixin",
+    "StructureCheckSpawnLimitMixin"
   ],
   "injectors": {
     "defaultRequire": 1
