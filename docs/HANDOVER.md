@@ -69,7 +69,7 @@
 - 顺手修 symbiote_counter 方向B `ServerPlayerClass` 未定义引用
 - **血泪教训追加**：KubeJS 注入成员（.type/.player/.monster/.persistentData）可靠；原版继承方法（getUUID）对非玩家实体不可靠——实体标识一律用自发 pd id
 - **血泪教训·Rhino 声明规则（最终版，见四点八）**：控制流块（if/else/for/while/try/catch）**内部**不得出现 const/let——第二次执行到同一行必抛 redeclaration；声明一律提到所属函数/回调**最外层**。只把"循环体"当禁区是不够的（四点八 崩服即此）
-- 评审 P1 已修（commit a074105）：活配置 cap_config 10 只 Boss=22（ignis=20，golem dps_cap→53）、围城压力 3→2（净 +1/s，70s 到线）、母巢名单改 `spore:proto`（mound→proto 线，原 6 只天灾级回归通用 cap）、已撤 blade_config_tag 置空（粒子恢复，靠判空 mixin 兜底——若 POTB NPE 复发立即回报回滚）
+- 评审 P1 已修（commit a074105）：活配置 cap_config 10 只 Boss=22（ignis=20，golem dps_cap→53）、围城压力 3→2（净 +1/s，70s 到线）、母巢名单改 `spore:proto`（mound→proto 线，原 6 只天灾级回归通用 cap）、已撤 blade_config_tag 置空（粒子恢复，靠判空 mixin 兜底——若 POTB NPE 复发立即回报回滚）→ **9-25 23:59 确实复发，但根因是 mixin 从未注册（见四点九），已根治，不回滚**
 - 评审 P1 全清（commit c60b471）：伤害统一迁 `startup/svs_damage.js` 的 Forge LivingHurtEvent.setAmount（javap 实证可直改，弃用 EF 钩子路线）；damage_caps.js/ranged_pressure.js 删除，symbiote_counter 瘦身。**复测重点**：`Loaded 5/5 startup + 7/7 server 0 errors`（server 侧从 9 减到 7：damage_caps/ranged_pressure 已合并删除，**不是掉脚本**）、日志首行应有 [SVS-伤害] 统一伤害层已注册、共生增/减伤、远程加压（ blaze 火球×1.5 实测）、精英限伤、母巢爬升全部即时生效（不再有 1 tick 延迟）→ **该复测已做，结果见四点八（首次即崩服，已修）**
 - 评审 P3 已对齐（commit f334d10）：副本/test4/仓库三方同步（125 配置回填、quests 21 章、汉化 58 ns、imfdata 335、svs_fixes/mowzie 入仓）、pw 3 条目回正+svs_tweak 建条目、index 510 补登、孤儿/重复/空目录清扫
 - 评审 P2 已修 5 件（commit a9483ae，默认值用户可否决）：火种 7 天=离线时长、交易限量 16、限伤只认 Monster、难度选一锁二、stage provider 固定 gamestages
@@ -140,6 +140,58 @@
 4. `/svs difficulty hard` 执行 **2 次**（验证写 pd 与"选一锁二"提示）
 5. 遇一次 spore 怪（验证天敌仇恨、档位判定不再恒 null）
 
+## 四点九、9-25 23:59 错误报告分析 —— POTB NPE 复发：svs_tweak 的 5 个 mixin 从未生效（已根治，svs_tweak 1.0.2）
+
+**报告**：`错误报告-2026-9-25_23.59.49.zip` → `test4\crash-reports\crash-2026-09-25_23.59.45-client.txt`（`Unexpected error`，客户端崩）
+
+- 异常 `NullPointerException: Cannot invoke LivingEntityPatch.isOffhandItemValid() because the return value of ...getEntityPatch() is null`
+- 位置 `sleys.potb.system.engine.WeaponryParticleRender.onRenderParticleEvent:48`，由 `RenderParticleEvent.onClientTick:75` → Forge 总线 → ASM 监听器触发（**POTB NPE 第 3 次复发**）
+- 现场：玩家 `Ultraman_0` 在 `test` 世界 (-2105.5, 82.5, 401.5)
+
+### 根因：不是 POTB 的问题，是自研 mod 的 mixin 全都没挂上
+
+`svs_tweak-1.0.0.jar` 的 **MANIFEST 里没有 `MixinConfigs` 属性**，`build.gradle` 的 jar 任务里也没写这一行——而 Forge 1.20.1 正靠该属性注册 mixin 配置。**结论：svs_tweak 的 5 个 mixin 一个都没被应用过**：
+
+- POTB 判空守卫 → 失效 → NPE 复发（本次崩服）
+- 陨石距出生点限制 / 结构密度提纯 / ASTages 坏文件容错 / 出生点记录 → **从未运行过**（文档里"已落地"的说法需要按此更正）
+
+**长期被误判为"已生效"的原因**：MixinSquared 的取消器走 **ServiceLoader** 通道，不读 `MixinConfigs`——日志里 `[svs_tweak] 已按冲突清单取消 mixin ×2` 一直正常打印，看起来"mixin 在工作"，实际自家 5 个一个没上。
+
+### 修复（svs_tweak 1.0.2，jar md5 `648ea0d17cf069929ed9dd9a22f39a7d`）
+
+1. `build.gradle` 的 jar 任务 manifest 补 `'MixinConfigs': 'svs_tweak.mixins.json'`（源码处已留注释说明该坑）
+2. `PotbWeaponryParticleRenderMixin` 加探针（`svs$seen` / `svs$guardHits`），**用 SLF4J 而非 System.out**——本包 AsyncLogger `wrapSysOutSysErr=false`，`System.out` 只进 `logs/console.log`、**不进 `latest.log`**
+3. 版本 1.0.0 → 1.0.2（1.0.1 为中间构建）；`libs/` 用 mods/ 现成 jar 重建：`potb-2.3.1.jar`、`epicfight-20.14.17.jar`、`astages-2.5.3.jar`、**`mixinsquared-0.2.0.jar` 必须用 forge jar 内嵌的 `META-INF/jars/MixinSquared-0.2.0.jar`**（平台 jar 里没有 `com.bawnerton.mixinsquared.api` 包，直接用会编译失败）
+4. 构建命令：`JAVA_HOME=<JDK17> E:/mcmp_test/gradle-8.8/bin/gradle.bat --offline jar`（依赖已缓存，可离线）
+
+**结论：`blade_config_tag` 不回滚**——根治成立，标签保持恢复态（怪物武器粒子回来了），判空守卫实测挡下了崩溃。
+
+### 启用前的目标核实（5 个 mixin 逐一 javap 验证，避免"启用了却打不中"）
+
+| mixin | 目标 | 核实 |
+|---|---|---|
+| PotbWeaponryParticleRenderMixin | `WeaponryParticleRender.onRenderParticleEvent(ParticleEvent)`（static） | ✓ |
+| PrimaryLevelDataSpawnMixin | `PrimaryLevelData.m_7250_(BlockPos,float)` | ✓ SRG jar |
+| StructureCheckDensityMixin / StructureCheckSpawnLimitMixin | `StructureCheck.m_226729_(ChunkPos,Structure,boolean)` + `@Shadow f_197241_ / f_204945_` | ✓ SRG jar |
+| AStagesBadFileMixin | `ASimpleRestrictionManager.lambda$readFromFile$6(Map$Entry)` | ✓ astages 2.5.3 |
+| （常量）陨石结构类名 | `com.scout.symbiote.worldgen.MeteorCrashStructure` | ✓ 与 symbiote-1.1.3.jar 内类名一致 |
+
+### 验证（实机两次加载，10G）
+
+- 中间版 1.0.1：`[mixin/]: Mixin config svs_tweak.mixins.json ...` 出现（配置终于被 Mixin 注册）；日志出现 `WeaponryParticleRender:handler$gcb000$svs$nullPatchGuard` 帧 → **处理器已合并进目标类体内**（字节码级实证）
+- 最终版 1.0.2：两条探针都进 `latest.log`，且**无新崩溃报告**（登录坐标就是崩服点 -2105.5/82.5/401.5）：
+```
+[svs_tweak/]: [svs_tweak] POTB 判空 mixin 已注入 WeaponryParticleRender.onRenderParticleEvent（首次调用）
+[svs_tweak/]: [svs_tweak] POTB 判空生效：已拦截 entityPatch=null 的粒子渲染（该实体会崩，改为跳过；同类不再刷屏）
+```
+  同期 KubeJS：`Loaded 5/5 startup` + `7/7 server`（0 errors）、`[SVS-伤害] 统一伤害层已注册`、`[SVS-真菌币] 村民交易登记：农民 true / 工具匠 true / 制图师 true`
+
+### 复测要点 / 遗留
+
+- 自检一行：`grep svs_tweak logs/latest.log` → 正常应有：`[mixin/] Mixin config svs_tweak.mixins.json does not specify "minVersion" property`（无害告警，说明配置已注册）+ 取消器 ×2 + POTB 探针 ×2
+- **其余 4 个 mixin 本次才首次上线**，需玩家体感确认：① 陨石只在出生点 3000 格内生成（数值待用户拍板）② 结构密度（75 格半径最多 1 个结构；黑名单仍留空待裁决）③ AStages 坏文件是否静默跳过
+- 若 POTB NPE 再次复发：立即把 `config/openloader/data/svs/data/blade_config_tag/tags/entity_types/valid_entity.json` 改回 `{"replace":true,"values":[]}` 回滚，并把新崩溃报告发出来
+
 ## 四点七、分工重申（2026-09-25 用户指令）
 
 **K3 不写代码**。回到决议三原始分工：K3 出规格书+审查+验证，GLM 写码。
@@ -158,7 +210,7 @@
 2. 通知用户复测（**重点**：`Loaded 5/5 startup + 7/7 server 0 errors`、**连打 3 下同一只怪不崩**、真菌币掉落、**村民交易（农民12币→8grout/工具匠20币→火种工具/制图师线索书，需验第 2 个村民起也生效）**、/svs difficulty 连执行 2 次、连绑 2 个火种、共生两向与精英限伤、FTB 任务、索敌、d&c 汉化、POTB 是否还崩）—— 完整清单见四点八"最小验收清单"
 3. **二期**：~~围城事件 + HUD 天数计时器~~ **初版已落地**（`siege.js`，commit e7937ba：7日倒计时/在村才走（村民≥3+主世界）/回村回拨5分钟/Painter HUD/波次 8+2递增+14天起掺精英；待实测）→ 失守惩罚（文明降级+均摊扣款，决议一-5；**civillis API 已打通**：`BaseScoreApi.add/remove`，火种侧已挂钩 commit 66eb43f）**失守判定+惩罚已落地**（commit 2f47193：村民腰斩判失守、文明 -15、在场均摊 40 币单人全额、失守 HUD/标题；待实测）→ ~~铁魔法禁用清单~~ **已定稿落地**（commit 见日志：`docs/铁魔法禁用清单.md`，禁 78/留 36，数据包已三处同步；用户裁决：机动/隐身作逃课保留、召唤流禁、直伤全禁）→ ~~Gateways 连战+武器解锁~~ **用户裁决否决**（9-25）：不加 Gateways/Placebo、不锁武器。草案文档留档备查。末期武器毕业改由任务线直接发放（待细化）。共生体围城压力联动**已接**（commit cd11c7c：围城内已结合玩家 stress +3/s，SymbioteTracker.adjustStress javap 实证）
 4. **最新包 = `dist/test8.zip`**（213 jar / 1403.7 MB：含 mixinsquared、svs_tweak 全 5 项、damage_caps.js + ranged_pressure.js、灾变限伤 config、原版恢复的 CA/monsterexpansion jar）。test6 说明存档： **已完成**：`dist/test6.zip`（2132 文件 / 1425.8 MB）。旧打包脚本丢失，新写 `E:/mcmp_test/pack_mcbbs.py`（从副本出包，结构对齐 test5 逆向：manifest.json + mcbbs.packmeta(SHA-1) + overrides/，包含清单=test5 的 16 项 + scripts/）。**含全部最新修复**（补译/POTB 标签置空/spore_coin 事件版/siege.js）。注意：test6 以副本为准，**含 souls_like_bosses-1.0.3.jar**（test4 没有，对账问题仍待用户裁决）
-5. 自研 tweak mod 待办清单：~~结构距出生点生成限制~~（**已落地** commit cfbfc5c：陨石限出生点 3000 格内，方向/数值待用户确认）、~~ASTages 坏文件容错~~（**已落地** commit dd06e12：readList 换安全版，坏 JSON 跳过打日志不崩，require=0 防版本漂移）、~~mixin 冲突合规化~~（**已落地** commit 1748317：MixinSquared 取消器运行时禁 2 个冲突 mixin，两 jar 已恢复官方原版+hash 回正；MixinSquared 0.2.0 作库 mod 进包；**复测要点：日志找 [svs_tweak] 已按冲突清单取消 mixin ×2，且这两个 mixin 原本治的冲突不复发**）、~~POTB jar 层根治~~（**已构建部署** commit 772f6f3：`svs_tweak-1.0.0.jar` 已进副本+test4 mods/，源码收在仓库 `svs_tweak/`；POTB 判空 mixin 已生效待实测。**验证无 POTB 崩溃后**：删 `svs/data/blade_config_tag` 置空覆盖即可恢复怪物武器粒子。构建：本地 Gradle 8.8（E:/mcmp_test/gradle-8.8，services.gradle.org 超时改用腾讯镜像）+ JDK 17，libs/ 放 potb/epicfight jar 作编译期签名依赖）
+5. 自研 tweak mod 待办清单：~~结构距出生点生成限制~~（**已落地** commit cfbfc5c：陨石限出生点 3000 格内，方向/数值待用户确认）、~~ASTages 坏文件容错~~（**已落地** commit dd06e12：readList 换安全版，坏 JSON 跳过打日志不崩，require=0 防版本漂移）、~~mixin 冲突合规化~~（**已落地** commit 1748317：MixinSquared 取消器运行时禁 2 个冲突 mixin，两 jar 已恢复官方原版+hash 回正；MixinSquared 0.2.0 作库 mod 进包；**复测要点：日志找 [svs_tweak] 已按冲突清单取消 mixin ×2，且这两个 mixin 原本治的冲突不复发**）、~~POTB jar 层根治~~（**1.0.2 已生效并实测挡崩，见四点九**：`svs_tweak-1.0.2.jar` 在副本+test4 mods/，源码收在仓库 `svs_tweak/`；日志出现 `handler$gcb000$svs$nullPatchGuard` 帧 = 处理器已注入目标类，并实测 `POTB 判空生效：已拦截 entityPatch=null 的粒子渲染`；`blade_config_tag` 置空覆盖**已撤且不回滚**，怪物武器粒子恢复。⚠️ 踩坑记录：jar manifest 必须带 `MixinConfigs: svs_tweak.mixins.json`（build.gradle 已补），否则 5 个 mixin 全部静默失效；构建：本地 Gradle 8.8（E:/mcmp_test/gradle-8.8）+ JDK 17 + `--offline`，libs/ 放 potb/epicfight/astages jar，**mixinsquared 要用 forge jar 内嵌的 META-INF/jars 版本**）
 6. `scripts/stages.zs`（GameStages 门控框架，目前全注释零效果）**只在仓库、未双写**（副本/test4 的 scripts/ 是空目录）；等有实质内容再同步，届时 test 包要确认 scripts/ 进 overrides
 7. bug 清单遗留：Blood And Madness TPS 性能+2武器EF适配、BOMD 虚空之花崩档、Relics×真菌 CME、真菌飞行怪崩档（等初版实测复现后 BadMobs 禁）
 
