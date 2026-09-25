@@ -56,10 +56,6 @@ function warnOnce(tag, e) {
   console.warn('[SVS-共生体] ' + tag + ' 写入失败（只提示一次，不影响运行）: ' + e)
 }
 
-function uuidOf(ent) {
-  return String(ent.getUUID())      // getUUID auto-remap → SRG m_20148_
-}
-
 // ── 判定共生体玩家：优先 SymbioteTracker（真实 API），兜底 persistentData ──
 function getProfile(player) {
   if (!SymbioteTracker) return null
@@ -135,8 +131,10 @@ function addTrust(player, n) {
 }
 
 // ── ①② 伤害两向（EntityEvents.hurt）──
-const pendingHeal = {}      // uuid → { ent, amount } 待回血
-const pendingExtra = {}     // uuid → { ent, source, amount } 待补刀
+// 队列用数组不用 uuid 键表：原版继承方法 getUUID 在非玩家实体上 Rhino 解析失败
+// （实测 Cannot find function getUUID，damage_caps/fireseed 同款已一并改）
+const pendingHeal = []      // [{ ent, amount }] 待回血
+const pendingExtra = []     // [{ ent, source, amount }] 待补刀
 let applyingExtra = false   // 补刀重入闸：补刀自身触发的 hurt 事件不得再排队
 
 EntityEvents.hurt(event => {
@@ -150,8 +148,11 @@ EntityEvents.hurt(event => {
     const stage = getBondStage(ent)
     const red = DMG_REDUCE[stage]
     if (red) {
-      const k = uuidOf(ent)
-      pendingHeal[k] = { ent: ent, amount: (pendingHeal[k] ? pendingHeal[k].amount : 0) + event.amount * red }
+      let merged = false
+      for (let i = 0; i < pendingHeal.length; i++) {
+        if (pendingHeal[i].ent === ent) { pendingHeal[i].amount += event.amount * red; merged = true; break }
+      }
+      if (!merged) pendingHeal.push({ ent: ent, amount: event.amount * red })
       console.info('[SVS-共生体][debug] 受真菌减伤生效: 档位 ' + stage + ' 减免 ' + Math.round(red * 100) + '%（下一 tick 回复）')
       // TODO(K3-上线前): 验收 4 需要此 debug 行，转正式时删除或降频
     }
@@ -161,11 +162,15 @@ EntityEvents.hurt(event => {
   // 方向 B：已结合玩家打 spore Monster → 按档位增伤（下一 tick 补刀，无敌帧差值结算）
   if (applyingExtra) return
   if (ent.monster && String(ent.type).indexOf(SPORE_NS) === 0
-    && srcEnt && srcEnt.player && srcEnt instanceof ServerPlayerClass) {
+    && srcEnt && srcEnt.player && srcEnt instanceof SC_ServerPlayer) {
     const stage = getBondStage(srcEnt)
     const mult = DMG_MULT[stage]
-    if (mult && !pendingExtra[uuidOf(ent)]) {
-      pendingExtra[uuidOf(ent)] = { ent: ent, source: event.source, amount: event.amount * mult }
+    if (mult) {
+      let dup = false
+      for (let i = 0; i < pendingExtra.length; i++) {
+        if (pendingExtra[i].ent === ent) { dup = true; break }
+      }
+      if (!dup) pendingExtra.push({ ent: ent, source: event.source, amount: event.amount * mult })
       console.info('[SVS-共生体][debug] 伤害克制生效: 档位 ' + stage + ' ×' + mult)
       // TODO(K3-上线前): 同上，转正式时删除或降频
     }
@@ -200,9 +205,8 @@ ServerEvents.tick(event => {
   tickCounter++
 
   // 增伤补刀：无敌帧差值分支只结算 amount - lastHurt = (倍率-1)×原伤
-  for (const k in pendingExtra) {
-    const rec = pendingExtra[k]
-    delete pendingExtra[k]
+  while (pendingExtra.length > 0) {
+    const rec = pendingExtra.shift()
     try {
       if (rec.ent && rec.ent.isAlive()) {
         applyingExtra = true
@@ -215,9 +219,8 @@ ServerEvents.tick(event => {
     }
   }
   // 减伤回血
-  for (const k in pendingHeal) {
-    const rec = pendingHeal[k]
-    delete pendingHeal[k]
+  while (pendingHeal.length > 0) {
+    const rec = pendingHeal.shift()
     try {
       if (rec.ent && rec.ent.isAlive()) rec.ent.heal(rec.amount)
     } catch (e) {
@@ -231,9 +234,11 @@ ServerEvents.tick(event => {
   try { gameTime = event.server.overworld().gameTime } catch (e) { }
   const players = event.server.getPlayers()
   let aggroTarget = null
+  let stage = null
+  let monsters = null
   for (let i = 0; i < players.size(); i++) {
     aggroTarget = players.get(i)
-    const stage = getBondStage(aggroTarget)
+    stage = getBondStage(aggroTarget)
     if (!stage || stage === 'UNBONDED') continue
     // ⑤ 围城压力联动：围城窗口内压力加速上涨
     if (gameTime >= 0 && SymbioteTracker) {
@@ -243,7 +248,6 @@ ServerEvents.tick(event => {
         }
       } catch (e) { warnOnce('围城压力', e) }
     }
-    let monsters
     try {
       // 24 格扫描：以玩家包围盒 inflate 24 取 spore Monster（与"怪物 24 格内找玩家"等价，范围对称）
       monsters = aggroTarget.level.getEntitiesOfClass(MonsterClass, aggroTarget.getBoundingBox().inflate(24))

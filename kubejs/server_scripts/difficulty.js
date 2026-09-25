@@ -27,9 +27,11 @@ function applyDifficultyOne(player, tier) {
 }
 
 ServerEvents.commandRegistry(event => {
-  const Commands = Java.loadClass('net.minecraft.commands.Commands')
+  // event.commands = getCommands()（CommandRegistryEventJS 自带 ClassWrapper）；
+  // 不要 Java.loadClass('net.minecraft.commands.Commands')——会触发 'java()' 弃用错误（实测 ×18）
+  const Commands = event.commands
   const diff = Commands.literal('difficulty')
-  for (const t of TIERS) {
+  TIERS.forEach(function (t) {
     diff.then(Commands.literal(t).executes(ctx => {
       let p = null
       try { p = ctx.source.player } catch (e) { p = null }
@@ -46,6 +48,6 @@ ServerEvents.commandRegistry(event => {
       }
       return 1
     }))
-  }
+  })
   event.register(Commands.literal('svs').then(diff))
 })

@@ -120,9 +120,12 @@ ItemEvents.entityInteracted(event => {
   }
 
   // 标记村民 + 改名
-  const uuid = String(target.getUUID())
+  // 火种 ID 用自发标识（玩家uuid+时间戳）：原版继承方法 getUUID 在非玩家实体上
+  // Rhino 解析失败（实测 Cannot find function getUUID，村民/怪物全中招），不能拿它当键
+  const uuid = String(player.getUUID()) + '_' + fsNowMs()
   try {
     target.getPersistentData().putString('svs_fireseed_owner', String(player.getUUID()))
+    target.getPersistentData().putString('svs_fireseed_id', uuid)
   } catch (e) { }
   try { player.getPersistentData().putString('svs_fireseed_streak', '0') } catch (e) { }   // 新绑定=好消息，递减重置
   try {
@@ -156,8 +159,10 @@ EntityEvents.death(event => {
   if (!ownerUuid) return
 
   // 火种熄灭：绑定带来的文明加分先撤掉（在线离线都撤）
-  const mobUuid = String(mob.getUUID())
-  fsScoreRemove(fsScoreKey(mobUuid))
+  // 村民标识读回绑定时写入的 svs_fireseed_id（不用 getUUID，见绑定处注释）
+  let mobUuid = ''
+  try { mobUuid = String(mob.getPersistentData().getString('svs_fireseed_id')) } catch (e) { }
+  if (mobUuid) fsScoreRemove(fsScoreKey(mobUuid))
 
   // 连续死亡递减（绑定者侧 streak，跨火种累计；0=首死全额 / 1=50% / >=2=25%）
 
@@ -192,10 +197,10 @@ EntityEvents.death(event => {
 
   // 名额释放 + streak 递进（用玩家记录留存 streak 以支持跨村民递减？初版按村民独立计）
   try {
-    const list = fsLoad(owner).filter(function (e2) { return e2.split('|')[0] !== String(mob.getUUID()) })
+    const list = fsLoad(owner).filter(function (e2) { return e2.split('|')[0] !== mobUuid })
     fsSave(owner, list)
   } catch (e) { }
-  fsLog('火种阵亡: ' + owner.name + ' <- 村民 ' + mob.getUUID() + ' 扣 ' + penalty)
+  fsLog('火种阵亡: ' + owner.name + ' <- 村民 ' + mobUuid + ' 扣 ' + penalty)
 })
 
 // ── 7 天未上线自动解绑（登录时清理）──────────────────────────────────────────

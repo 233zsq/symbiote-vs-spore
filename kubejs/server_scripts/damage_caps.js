@@ -30,7 +30,8 @@ function dcHiveRate(cum, maxHp) {
 }
 
 // 溢出差额回补队列（下一 tick 执行）
-const dcPendingHeal = {}   // uuid → { ent, amount }
+// 队列用数组不用 uuid 键表：getUUID 在非玩家实体上 Rhino 解析失败（实测 Cannot find function）
+const dcPendingHeal = []   // [{ ent, amount }]
 let dcApplying = false
 
 EntityEvents.hurt(event => {
@@ -63,16 +64,18 @@ EntityEvents.hurt(event => {
   const excess = event.amount - allowed
   if (excess <= 0.001) return
   if (dcApplying) return                        // 回补自身触发的 hurt 不再排队（防御）
-  const k = String(ent.getUUID())
-  dcPendingHeal[k] = { ent: ent, amount: (dcPendingHeal[k] ? dcPendingHeal[k].amount : 0) + excess }
+  let merged = false
+  for (let i = 0; i < dcPendingHeal.length; i++) {
+    if (dcPendingHeal[i].ent === ent) { dcPendingHeal[i].amount += excess; merged = true; break }
+  }
+  if (!merged) dcPendingHeal.push({ ent: ent, amount: excess })
   console.info('[SVS-限伤][debug] ' + type + ' 单次受伤 ' + event.amount + ' → 封顶 ' + allowed.toFixed(1) + '（回补 ' + excess.toFixed(1) + '）')
   // TODO(K3-上线前): debug 行转正式时删除或降频
 })
 
 ServerEvents.tick(event => {
-  for (const k in dcPendingHeal) {
-    const rec = dcPendingHeal[k]
-    delete dcPendingHeal[k]
+  while (dcPendingHeal.length > 0) {
+    const rec = dcPendingHeal.shift()
     try {
       if (rec.ent && rec.ent.isAlive()) {
         dcApplying = true

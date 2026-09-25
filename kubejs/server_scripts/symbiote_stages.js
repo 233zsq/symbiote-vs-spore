@@ -64,7 +64,7 @@ function ssApplyStage(player, stage) {
 }
 
 let ssTick = 0
-let ssPlayer = null, ssStage = null, ssBonus = null
+let ssPlayer = null, ssStage = null, ssBonus = null, ssLast = '', ssCur = ''
 ServerEvents.tick(event => {
   ssTick++
   if (ssTick % 20 !== 0) return
@@ -77,13 +77,13 @@ ServerEvents.tick(event => {
     if (ssStage === 'UNBONDED') ssStage = null
 
     // 变化才动（pd 缓存档位，避免每秒重复改属性）
-    let last = ''
-    try { last = String(ssPlayer.getPersistentData().getString('svs_bond_applied')) } catch (e) { }
-    const cur = ssStage || ''
-    if (last !== cur) {
+    ssLast = ''
+    try { ssLast = String(ssPlayer.getPersistentData().getString('svs_bond_applied')) } catch (e) { }
+    ssCur = ssStage || ''
+    if (ssLast !== ssCur) {
       ssApplyStage(ssPlayer, ssStage)
-      try { ssPlayer.getPersistentData().putString('svs_bond_applied', cur) } catch (e) { }
-      console.info('[SVS-共生加成] ' + ssPlayer.username + ' 档位 ' + (last || '无') + ' → ' + (cur || '无'))
+      try { ssPlayer.getPersistentData().putString('svs_bond_applied', ssCur) } catch (e) { }
+      console.info('[SVS-共生加成] ' + ssPlayer.username + ' 档位 ' + (ssLast || '无') + ' → ' + (ssCur || '无'))
     }
 
     // 回复：每 5 秒（挂在每秒循环里数 5 格）
