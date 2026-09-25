@@ -77,21 +77,23 @@
   }
 
   const cartographerListing = ResourceKey ? makeListingCtx(function (trader) {
+    // Rhino 守则：块内不声明 const/let（本工厂每个村民调用一次，第二次即抛 redeclaration）
+    let lv = null, sReg = null, sHolder = null, found = null, bp = null
+    let text = '', page = '', book = null
     try {
-      const level = trader.level()
-      const structReg = level.registryAccess().registryOrThrow(Registries.STRUCTURE)
-      const holder = structReg.getHolderOrThrow(ResourceKey.create(Registries.STRUCTURE, new ResourceLocation('symbiote', 'meteor_crash')))
-      const found = level.getChunkSource().getGenerator()
-        .findNearestMapStructure(level, HolderSet.direct(holder), trader.blockPosition(), 100, false)
-      let text
+      lv = trader.level()
+      sReg = lv.registryAccess().registryOrThrow(Registries.STRUCTURE)
+      sHolder = sReg.getHolderOrThrow(ResourceKey.create(Registries.STRUCTURE, new ResourceLocation('symbiote', 'meteor_crash')))
+      found = lv.getChunkSource().getGenerator()
+        .findNearestMapStructure(lv, HolderSet.direct(sHolder), trader.blockPosition(), 100, false)
       if (found) {
-        const bp = found.getFirst()
+        bp = found.getFirst()
         text = '最近共生体陨石坐标：X=' + bp.getX() + '，Z=' + bp.getZ() + '。愿真菌与你无缘。'
       } else {
         text = '方圆 1600 格内未发现共生体陨石……往更远的荒野去吧。'
       }
-      const page = '{"text":"' + text + '"}'
-      const book = Item.of('minecraft:written_book', '{title:"共生体线索",author:"制图师",pages:[' + page + ']}')
+      page = '{"text":"' + text + '"}'
+      book = Item.of('minecraft:written_book', '{title:"共生体线索",author:"制图师",pages:[' + page + ']}')
       return new MerchantOffer(Item.of('kubejs:spore_coin', 15), Item.of('minecraft:air'), book, 16, 2, 0.05)
     } catch (e) {
       console.error('[SVS-真菌币] 线索书生成失败（本笔交易不生成）: ' + e)
@@ -100,16 +102,18 @@
   }) : null
 
   ForgeEvents.onEvent('net.minecraftforge.event.village.VillagerTradesEvent', event => {
+    // Rhino 守则：块内不声明 const/let——本事件每村民触发一次，
+    // 第二次执行即抛 redeclaration（曾实测 ×41 次「村民交易追加失败」= 交易全灭）
+    let key = '', listing = null, list = null
     try {
-      const key = String(ForgeRegistries.VILLAGER_PROFESSIONS.getKey(event.type))
-      let listing = null
+      key = String(ForgeRegistries.VILLAGER_PROFESSIONS.getKey(event.type))
       if (key === 'minecraft:farmer') listing = farmerListing
       else if (key === 'minecraft:toolsmith') listing = toolsmithListing
       else if (key === 'minecraft:cartographer') listing = cartographerListing
       if (!listing) return
       // getTrades() 是 Int2ObjectMap<List<ItemListing>>；用 Integer 装箱明确走 get(Object)，
       // 避免 Rhino 在 get(int)/get(Object) 重载间选错
-      const list = event.trades.get(JInteger.valueOf(1))
+      list = event.trades.get(JInteger.valueOf(1))
       if (!list) {
         console.warn('[SVS-真菌币] ' + key + ' 无 1 级交易列表，本村民跳过')
         return

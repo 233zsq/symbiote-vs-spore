@@ -13,8 +13,9 @@ try {
 
 function applyDifficultyOne(player, tier, force) {
   // 评审修正：序章三选"选一锁二"——已选定后本人不可再改（force=控制台覆盖不受限）
+  let cur = ''          // Rhino 守则：try 内不声明 const/let（第二次执行抛 redeclaration）
   try {
-    const cur = String(player.getPersistentData().getString('svs_difficulty'))
+    cur = String(player.getPersistentData().getString('svs_difficulty'))
     if (!force && cur && cur !== tier) {
       player.tell(Text.red('难度已锁定为 ' + cur + '（序章选择不可更改）'))
       return
@@ -42,14 +43,15 @@ ServerEvents.commandRegistry(event => {
   TIERS.forEach(function (t) {
     diff.then(Commands.literal(t).executes(ctx => {
       let p = null
+      let cPlayers = null       // Rhino 守则：else/try 内不声明 → 提到回调最外层（控制台全服分支）
       try { p = ctx.source.player } catch (e) { p = null }
       if (p) {
         applyDifficultyOne(p, t)
       } else {
         // 控制台执行 → 全服在线玩家
         try {
-          const players = ctx.source.getServer().getPlayerList().getPlayers()
-          for (let i = 0; i < players.size(); i++) applyDifficultyOne(players.get(i), t, true)
+          cPlayers = ctx.source.getServer().getPlayerList().getPlayers()
+          for (let i = 0; i < cPlayers.size(); i++) applyDifficultyOne(cPlayers.get(i), t, true)
         } catch (e) {
           console.error('[SVS-难度] 全服应用失败: ' + e)
         }

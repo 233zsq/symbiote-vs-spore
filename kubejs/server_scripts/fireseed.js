@@ -52,11 +52,13 @@ try {
 function fsScoreKey(uuid) { return 'svs_fireseed_' + uuid }
 function fsScoreAdd(entity, value, key) {
   if (!FS_BaseScoreApi) return
+  // Rhino 守则：try/if 等块内不声明 const/let（第二次执行抛 redeclaration）→ 声明提前
+  let px = 0, py = 0, pz = 0, pMin = null, pMax = null
   try {
-    const x = entity.x, y = entity.y, z = entity.z
-    const min = new FS_BlockPos(x - FS_SCORE_RANGE, y - 32, z - FS_SCORE_RANGE)
-    const max = new FS_BlockPos(x + FS_SCORE_RANGE, y + 32, z + FS_SCORE_RANGE)
-    FS_BaseScoreApi.add(entity.level, min, max, value, key)
+    px = entity.x; py = entity.y; pz = entity.z
+    pMin = new FS_BlockPos(px - FS_SCORE_RANGE, py - 32, pz - FS_SCORE_RANGE)
+    pMax = new FS_BlockPos(px + FS_SCORE_RANGE, py + 32, pz + FS_SCORE_RANGE)
+    FS_BaseScoreApi.add(entity.level, pMin, pMax, value, key)
   } catch (e) {
     fsLog('文明强度写入失败(' + key + '): ' + e)
   }
@@ -70,14 +72,17 @@ function fsScoreRemove(key) {
 
 // 取村民当前最贵可交易物品（按买价总数量估价），返回结果物品或 null
 function fsPriciestWare(villager) {
+  // Rhino 守则：块内不声明——本函数每个村民调一次，第二次执行即抛 redeclaration
+  // （曾会让"绑定即送最贵交易物"从第 2 个火种起静默失效）
+  let offers = null, best = null, bestCost = -1
+  let o = null, a = null, b = null, cost = 0
   try {
-    const offers = villager.getOffers()
-    let best = null, bestCost = -1
+    offers = villager.getOffers()
     for (let i = 0; i < offers.size(); i++) {
-      const o = offers.get(i)
-      const a = o.getCostA()
-      const b = o.getCostB()
-      const cost = (a ? a.getCount() : 0) + (b ? b.getCount() : 0)
+      o = offers.get(i)
+      a = o.getCostA()
+      b = o.getCostB()
+      cost = (a ? a.getCount() : 0) + (b ? b.getCount() : 0)
       if (cost > bestCost) { bestCost = cost; best = o.getResult() }
     }
     return best
@@ -153,6 +158,7 @@ EntityEvents.death(event => {
   const mob = event.entity
   if (!mob || String(mob.type) !== FS_VILLAGER) return
   let ownerUuid = ''
+  let releaseList = null      // Rhino 守则：块（try）内不声明，提到回调最外层
   try { ownerUuid = mob.getPersistentData().getString('svs_fireseed_owner') } catch (e) { return }
   if (!ownerUuid) return
 
@@ -195,8 +201,8 @@ EntityEvents.death(event => {
 
   // 名额释放 + streak 递进（用玩家记录留存 streak 以支持跨村民递减？初版按村民独立计）
   try {
-    const list = fsLoad(owner).filter(function (e2) { return e2.split('|')[0] !== mobUuid })
-    fsSave(owner, list)
+    releaseList = fsLoad(owner).filter(function (e2) { return e2.split('|')[0] !== mobUuid })
+    fsSave(owner, releaseList)
   } catch (e) { }
   fsLog('火种阵亡: ' + owner.name + ' <- 村民 ' + mobUuid + ' 扣 ' + penalty)
 })

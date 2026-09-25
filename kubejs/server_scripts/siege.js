@@ -86,12 +86,14 @@ function siegeSpawnWave(player, worldDay, cycle) {
 // 失守：文明扣分 + 在场玩家（128 格内同维度）均摊罚款，单人时全额
 function siegeApplyDefeat(player, worldDay) {
   const server = player.server
+  // Rhino 守则：try/if 内不声明 const/let（第 2 次围城失守会静默失效）→ 声明提到函数最外层
+  let dfX = 0, dfY = 0, dfZ = 0, dfMin = null, dfMax = null
   if (SIEGE_BaseScoreApi) {
     try {
-      const x = player.x, y = player.y, z = player.z
-      const min = new SIEGE_BlockPos(x - SIEGE_DEF_RANGE, y - 32, z - SIEGE_DEF_RANGE)
-      const max = new SIEGE_BlockPos(x + SIEGE_DEF_RANGE, y + 32, z + SIEGE_DEF_RANGE)
-      SIEGE_BaseScoreApi.add(player.level, min, max, SIEGE_DEF_SCORE, 'svs_siege_defeat_' + worldDay + '_' + Math.floor(x) + '_' + Math.floor(z))
+      dfX = player.x; dfY = player.y; dfZ = player.z
+      dfMin = new SIEGE_BlockPos(dfX - SIEGE_DEF_RANGE, dfY - 32, dfZ - SIEGE_DEF_RANGE)
+      dfMax = new SIEGE_BlockPos(dfX + SIEGE_DEF_RANGE, dfY + 32, dfZ + SIEGE_DEF_RANGE)
+      SIEGE_BaseScoreApi.add(player.level, dfMin, dfMax, SIEGE_DEF_SCORE, 'svs_siege_defeat_' + worldDay + '_' + Math.floor(dfX) + '_' + Math.floor(dfZ))
     } catch (e) {
       console.warn('[SVS-围城] 失守文明扣分失败: ' + e)
     }

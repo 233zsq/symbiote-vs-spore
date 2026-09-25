@@ -47,15 +47,17 @@ function warnOnce(tag, e) {
 // ── 判定共生体玩家：优先 SymbioteTracker（真实 API），兜底 persistentData ──
 function getProfile(player) {
   if (!SymbioteTracker) return null
+  let gpTracker = null      // Rhino 守则：try 等块内不声明（第二次执行抛 redeclaration）
   try {
-    const tracker = SymbioteTracker.get(player.level)   // kjs$getLevel，服务端实例为 ServerLevel
-    return tracker ? tracker.peek(player.getUUID()) : null
+    gpTracker = SymbioteTracker.get(player.level)   // kjs$getLevel，服务端实例为 ServerLevel
+    return gpTracker ? gpTracker.peek(player.getUUID()) : null
   } catch (e) {
     return null
   }
 }
 
 function getBondStage(player) {
+  let pdStage = ''          // Rhino 守则：try 内不声明
   const prof = getProfile(player)
   if (prof && prof.stage) {
     try { return String(prof.stage.name()) } catch (e) { }   // Enum.name() 非 MC 成员，不受 SRG 影响
@@ -63,8 +65,8 @@ function getBondStage(player) {
   // 兜底：Forge IForgeEntity.getPersistentData（非 SRG）
   // TODO(K3-实测): 手动模拟档位可用 /kubejs persistent_data player <玩家> set svs_bond_stage INTEGRATED
   try {
-    const s = player.getPersistentData().getString('svs_bond_stage')
-    return s ? String(s) : null
+    pdStage = player.getPersistentData().getString('svs_bond_stage')
+    return pdStage ? String(pdStage) : null
   } catch (e) {
     return null
   }
@@ -104,6 +106,7 @@ function fillStamina(player) {
 }
 function addTrust(player, n) {
   // 优先 mod 自带 adjustTrust（带来源标记，内部含钳制），失败退 SymbioteProfile.addTrust
+  let atProf = null         // Rhino 守则：try 内不声明
   try {
     if (SymbioteTracker) {
       SymbioteTracker.adjustTrust(player.level, player, n, 'svs_symbiote_counter')
@@ -111,8 +114,8 @@ function addTrust(player, n) {
     }
   } catch (e) { }
   try {
-    const prof = getProfile(player)
-    if (prof) { prof.addTrust(n); return }
+    atProf = getProfile(player)
+    if (atProf) { atProf.addTrust(n); return }
   } catch (e) {
     warnOnce('信赖', e)
   }
@@ -156,6 +159,7 @@ ServerEvents.tick(event => {
   let aggroTarget = null
   let stage = null
   let monsters = null
+  let mob = null, mobTarget = null      // Rhino 守则：for 体内不声明
   for (let i = 0; i < players.size(); i++) {
     aggroTarget = players.get(i)
     stage = getBondStage(aggroTarget)
@@ -175,10 +179,10 @@ ServerEvents.tick(event => {
       continue
     }
     for (let j = 0; j < monsters.size(); j++) {
-      const mob = monsters.get(j)
+      mob = monsters.get(j)
       if (!mob || String(mob.type).indexOf(SPORE_NS) !== 0) continue
-      const target = mob.getTarget()
-      if (target && target.player) continue   // 已锁定玩家 → 不抢
+      mobTarget = mob.getTarget()
+      if (mobTarget && mobTarget.player) continue   // 已锁定玩家 → 不抢
       if (Math.random() < 0.10) {
         mob.setTarget(aggroTarget)                      // 天敌仇恨（setTarget auto-remap → SRG m_20202_）
       }

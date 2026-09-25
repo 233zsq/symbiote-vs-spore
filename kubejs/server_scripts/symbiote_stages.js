@@ -29,15 +29,18 @@ const SS_BONUS = {
 const SS_STAGES = ['svs_bond_attached', 'svs_bond_integrated', 'svs_bond_cooperative', 'svs_bond_dominant']
 
 function ssApplyAttr(player, attrId, uuid, name, value) {
+  // Rhino 守则：try/if 块内不声明 const/let（第二次执行抛 redeclaration，
+  // 曾导致分期 1 加成只有第一次属性写入生效）→ 声明提到函数最外层
+  let saAttr = null, saInst = null, saCur = null
   try {
-    const attr = SS_ForgeRegistries.ATTRIBUTES.getValue(new SS_ResourceLocation(attrId))
-    if (!attr) { console.warn('[SVS-共生加成] 属性不存在: ' + attrId); return }
-    const inst = player.getAttribute(attr)
-    if (!inst) return
-    const cur = inst.getModifier(uuid)
-    if (cur && Math.abs(cur.getAmount() - value) < 0.0001) return   // 已是目标值，不动
-    if (cur) inst.removeModifier(uuid)
-    if (value > 0) inst.addTransientModifier(new SS_AttributeModifier(uuid, name, value, SS_OP_ADD))
+    saAttr = SS_ForgeRegistries.ATTRIBUTES.getValue(new SS_ResourceLocation(attrId))
+    if (!saAttr) { console.warn('[SVS-共生加成] 属性不存在: ' + attrId); return }
+    saInst = player.getAttribute(saAttr)
+    if (!saInst) return
+    saCur = saInst.getModifier(uuid)
+    if (saCur && Math.abs(saCur.getAmount() - value) < 0.0001) return   // 已是目标值，不动
+    if (saCur) saInst.removeModifier(uuid)
+    if (value > 0) saInst.addTransientModifier(new SS_AttributeModifier(uuid, name, value, SS_OP_ADD))
   } catch (e) {
     console.warn('[SVS-共生加成] 属性写入失败(' + attrId + '): ' + e)
   }
