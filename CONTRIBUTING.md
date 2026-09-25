@@ -43,6 +43,13 @@ Epic Fight 本体及全部附属（Impactful / Battle Arts / Resurrection / Inde
   python tools/check_json.py
   ```
   默认校验 `config/openloader/data/` 与 `kubejs/data/` 下全部 JSON，全绿才允许 commit
+- **任何 KubeJS 脚本改动入库前必跑**：
+  ```
+  python tools/check_kubejs_rhino.py
+  ```
+  扫描「控制流块（if/else/for/while/try/catch）内声明的 const/let」——本包 Rhino 对这类声明
+  第二次执行到同一行必抛 `redeclaration`；KubeJS 自有事件里只是功能静默失效，`ForgeEvents.onEvent`
+  里会**直接崩档**（2026-09-25 已崩过：`svs_damage.js#83`）。声明一律提到所属函数/回调最外层
 - 物品 ID、配置键名一律以 `/kubejs hand`、`/ct hand`、F3+H 现场核实为准；未核实的 ID 视为占位符，不进版本库
 
 ## 6. 原版内容政策【待定】
