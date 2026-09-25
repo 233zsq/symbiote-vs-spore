@@ -69,7 +69,8 @@
 - 顺手修 symbiote_counter 方向B `ServerPlayerClass` 未定义引用
 - **血泪教训追加**：KubeJS 注入成员（.type/.player/.monster/.persistentData）可靠；原版继承方法（getUUID）对非玩家实体不可靠——实体标识一律用自发 pd id
 - 评审 P1 已修（commit a074105）：活配置 cap_config 10 只 Boss=22（ignis=20，golem dps_cap→53）、围城压力 3→2（净 +1/s，70s 到线）、母巢名单改 `spore:proto`（mound→proto 线，原 6 只天灾级回归通用 cap）、已撤 blade_config_tag 置空（粒子恢复，靠判空 mixin 兜底——若 POTB NPE 复发立即回报回滚）
-- 评审 P1 待办：远程加压被无敌帧吃掉（补刀 0.5P<P 无效）、增伤×限伤互相抵消——两件需统一 EF 原生钩子（ExtraDamageInstance/DealDamageEvent，startup 脚本注册）一起重构，单独一轮做；badmobs 6080 项全 true 空禁（禁飞怪 id 待实测复现后填）
+- 评审 P1 全清（commit c60b471）：伤害统一迁 `startup/svs_damage.js` 的 Forge LivingHurtEvent.setAmount（javap 实证可直改，弃用 EF 钩子路线）；damage_caps.js/ranged_pressure.js 删除，symbiote_counter 瘦身。**复测重点**：`Loaded 5/5 startup + 8/8 server 0 errors`、日志首行应有 [SVS-伤害] 统一伤害层已注册、共生增/减伤、远程加压（ blaze 火球×1.5 实测）、精英限伤、母巢爬升全部即时生效（不再有 1 tick 延迟）
+- 评审遗留：badmobs 6080 项全 true 空禁（禁飞怪 id 待实测复现后填）；P2/P3 条目见评审原文
 
 ## 五、待办（按优先级）
 
