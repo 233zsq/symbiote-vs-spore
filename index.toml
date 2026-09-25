@@ -73,10 +73,6 @@ file = "config/ftbquests/quests/chapters/stage1_departure.snbt"
 hash = "04182f40d5280ed2a6113bc47dc3dd061f7cffc7a3f19d4124fec921e80b31a0"
 
 [[files]]
-file = "config/ftbquests/quests/chapters/stage3_twilight.snbt"
-hash = "1122f983bcd92d360021ae0beb723b9e56ca92799e1b4e44ea515b8c06efe384"
-
-[[files]]
 file = "config/ftbquests/quests/chapters/stage4_calamity.snbt"
 hash = "7eff6a3c750004eb87199532942eb9d64cc641bbae4d4eb22024fd29ce7be077"
 
