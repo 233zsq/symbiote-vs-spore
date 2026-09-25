@@ -6,7 +6,8 @@
     "PotbWeaponryParticleRenderMixin",
     "PrimaryLevelDataSpawnMixin",
     "StructureCheckSpawnLimitMixin",
-    "AStagesBadFileMixin"
+    "AStagesBadFileMixin",
+    "StructureCheckDensityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
