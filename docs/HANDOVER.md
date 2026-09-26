@@ -208,7 +208,7 @@
 - 围城村庄级共享计时、剑术耗蓝等待办同样转规格书模式
 - Structurify 评估见当日汇报：可接管黑名单/间距，管不了跨结构互斥与陨石距离（svs_tweak 两件仍必要），不能创建新结构（新结构走数据包 worldgen）
 
-## 四点九、9-26 加 mod：双指南针（commit c2f92fe）
+## 四点九五、9-26 加 mod：双指南针（commit c2f92fe）
 
 - Nature's Compass 1.12.0 + Explorer's Compass 1.4.0（Modrinth CDN，hash 已核），副本/test4 双写
 - 协议均 CC BY-NC-SA 4.0（审查 doc 已登记）；用户用于测试 /locate 与陨石寻找
