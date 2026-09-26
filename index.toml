@@ -7013,3 +7013,11 @@ hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 file = "mods/svs-tweak.pw.toml"
 hash = "f3d31e231daf937c144176a783eeca08be28263676c56651f2eb44784a2d21d0"
 
+[[files]]
+file = "mods/explorers-compass.pw.toml"
+hash = "fb931acbeb9efe56ebdde9e74f0dc8eff0360966359af3865d0dd152e57d829e"
+
+[[files]]
+file = "mods/natures-compass.pw.toml"
+hash = "2c828a48e2648e0d334c5f883f79e85d82ff62a20347eacfdf11cfdd876025e3"
+
