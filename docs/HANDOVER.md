@@ -97,11 +97,12 @@
 
 ### 本次修复（commit 1f892f2）
 
-7 个脚本 48 处块内声明全部提到所属函数最外层（块内只做赋值）：
+7 个脚本 **49 处**块内声明全部提到所属函数最外层（块内只做赋值）。
+（初版扫描器报 48：它漏了多行条件头/块注释/解构三类，修正后的扫描器在 svs_damage.js 多抓到 `else if` 块内的 `const mult`——共生 ×1.5 增伤路径上的真雷。无论 48 还是 49，本次重写都已一并提升，修复后全树扫描干净。）
 
 | 文件 | 处数 | 其中会静默失效的高频路径 |
 |---|---|---|
-| `startup/svs_damage.js` | 14 | 崩服现场 #83；`bondStage` 三处（第二次起档位恒 null → 共生两向失效） |
+| `startup/svs_damage.js` | 15 | 崩服现场 #83；`bondStage` 三处（第二次起档位恒 null → 共生两向失效）；#67 `else if` 块内 `const mult`（×1.5 增伤路径） |
 | `startup/villager_trades.js` | 11 | `#104`（交易 41 次失败）；制图师工厂（线索书第 2 个村民起失败） |
 | `server/fireseed.js` | 10 | `fsPriciestWare`（第 2 个火种起无绑定奖励）、`fsScoreAdd` 文明分、死亡名额释放 |
 | `server/symbiote_counter.js` | 5 | `getProfile`/`getBondStage`（档位判定拒绝服务）、`addTrust`、天敌仇恨循环体 |
@@ -195,6 +196,7 @@
 
 ### 复测要点 / 遗留
 
+- 工具自检（对抗式审查产物）：`python tools/check_kubejs_rhino.py /tmp/scan_test_fixture.js` 夹具应恰好报 17 处；该夹具覆盖多行条件头、块注释、模板串、正则、`do-while`、解构、`for-of` 等构造——扫描器已按它修掉 3 处漏报 + 1 处假阳性，并据此把修复前真值从 48 修正为 49
 - 自检一行：`grep svs_tweak logs/latest.log` → 正常应有：`[mixin/] Mixin config svs_tweak.mixins.json does not specify "minVersion" property`（无害告警，说明配置已注册）+ 取消器 ×2 + POTB 探针 ×2
 - **其余 4 个 mixin 本次才首次上线**，需玩家体感确认：① 陨石只在出生点 3000 格内生成（数值待用户拍板）② 结构密度（75 格半径最多 1 个结构；黑名单仍留空待裁决）③ AStages 坏文件是否静默跳过
 - 若 POTB NPE 再次复发：立即把 `config/openloader/data/svs/data/blade_config_tag/tags/entity_types/valid_entity.json` 改回 `{"replace":true,"values":[]}` 回滚，并把新崩溃报告发出来
@@ -231,6 +233,7 @@
 
 - 启动：`python E:\mcmp_test\launch_test4.py --mem 10G`（quickPlay 世界 "test"；到主菜单约 200-350 秒，不是卡死）
 - 日志：`test4/logs/latest.log` GBK 编码（python `decode("gbk")`）；崩溃报告 `test4/crash-reports/`
+- 崩溃现场日志留档：`test4/logs/2026-09-25_22.17_crash_session.log`（该局没有对应错误报告 zip，其余各局的日志都在 错误报告/*.zip 内；latest.log 会被每次启动覆盖，故重命名留档）
 - 杀游戏：powershell `Get-CimInstance ... | Where CommandLine -match 'BootstrapLauncher' | Stop-Process`
 - CF 下载：edge.forgecdn.net 直链（文件名要 URL 编码），cfwidget.com 数字项目 id 可用（`api.cfwidget.com/<id>`）
 - qoder：`qoderclicn -m GLM-5.3-Flash -p --permission-mode bypass_permissions`，批量任务后台跑；复杂正则/中文**不要走 bash heredoc**（会转义炸，用 Write 工具写 .py）

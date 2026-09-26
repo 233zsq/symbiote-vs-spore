@@ -1,8 +1,8 @@
 """check_kubejs_rhino.py — KubeJS/Rhino 块内声明静态扫描
 
-背景（2026-09-25 实测结论，见 docs/HANDOVER.md 四点七）：
+背景（2026-09-26 实证结论，见 docs/HANDOVER.md 四点八/四点九）：
   本包所用 KubeJS 2001.6.5 + rhino-forge-2001.2.3 里，凡嵌在控制流块
-  （if / else / for / while / switch / try / catch / do）内部的 const / let，
+  （if / else / for / while / switch / do / try / catch）内部的 const / let，
   第一次执行会把名字写进持久作用域，**第二次执行同一行即抛
   `TypeError: redeclaration of var X`**。
   回调函数最外层的 const/let 安全（每次调用新建激活对象）。
@@ -17,18 +17,24 @@
     python tools/check_kubejs_rhino.py            # 扫 kubejs/ 下全部脚本
     python tools/check_kubejs_rhino.py <路径>...  # 扫指定文件/目录
 退出码 0 = 干净，1 = 有风险点（可用于提交前钩子）。
+
+实现说明（对抗性测试后的三处修正，见 docs/对抗式审查_2026-09-26.md）：
+  1. 同时剥离 `//` 与 `/* */` 注释——块注释里的花括号曾让后续所有行漏报
+  2. 控制流判定用「整个语句段」而不是「最后一行」——多行条件头 `if (a &&\n b) {` 曾漏报
+  3. 声明匹配支持解构 `const {a} = x` / `const [a] = x`
 """
 import os
 import re
 import sys
 
 CTRL = re.compile(r'\b(if|for|while|switch|catch|try|do|else)\b')
+DECL = re.compile(r'(?m)^[ \t]*(const|let)[ \t]*(\{|\[|[A-Za-z_$])')
 BACKSLASH = chr(92)
 QUOTES = ('"', "'", '`')
 
 
 def strip_noise(src):
-    """去掉 // 注释与字符串字面量，避免大括号计数被带偏"""
+    """去掉行注释、块注释与字符串字面量，避免大括号计数被带偏"""
     out = []
     i, n = 0, len(src)
     in_s = None
@@ -48,6 +54,13 @@ def strip_noise(src):
             j = src.find('\n', i)
             i = j if j >= 0 else n
             continue
+        if src.startswith('/*', i):
+            j = src.find('*/', i + 2)
+            # 块注释可能跨多行：保留换行以维持行号
+            seg = src[i:(j + 2) if j >= 0 else n]
+            out.append('\n' * seg.count('\n'))
+            i = (j + 2) if j >= 0 else n
+            continue
         if c in QUOTES:
             in_s = c
             out.append(' ')
@@ -61,14 +74,21 @@ def strip_noise(src):
 def block_kinds(text):
     """返回 top_at[]：每个字符位置上，所处块的最内层类型（'fn' / 'ctrl' / None）
 
-    关键点：语句段（seg）只在**括号深度为 0** 的 ; { } 处重置，
-    否则 for (let i = 0; i < n; i++) 会被头部的分号切断而误判成函数块。
+    语句段（seg）只在**括号深度为 0** 的 ; { } 处重置，
+    这样 for (let i = 0; i < n; i++) 不会被头部分号切断；
+    分类看**整段**而非最后一行，兼容多行条件头。
+    另外：`}` 之后若紧跟 `while (...)`，**且该 `}` 关掉的是 `do` 块**，才把这段当作
+    do-while 尾巴吃掉——否则会污染下一块的分段（假阳性），或反过来吃掉真正的 while 循环
+    （假阴性）。判别依据是块种类：只有 `do {` 开的块才有尾巴。
     """
     top_at = [None] * (len(text) + 1)
     stack = []
     seg = []
     paren = 0
-    for idx, c in enumerate(text):
+    idx = 0
+    n = len(text)
+    while idx < n:
+        c = text[idx]
         top_at[idx] = stack[-1] if stack else None
         if c == '(':
             paren += 1
@@ -76,18 +96,44 @@ def block_kinds(text):
             if paren > 0:
                 paren -= 1
         if c == '{':
-            last = ''.join(seg).strip().splitlines()
-            head = last[-1] if last else ''
-            stack.append('ctrl' if CTRL.search(head) else 'fn')
+            body = ''.join(seg).strip()
+            first = body.split()[0] if body.split() else ''
+            if first == 'do':
+                stack.append('do')
+            elif CTRL.search(body):
+                stack.append('ctrl')
+            else:
+                stack.append('fn')
             seg = []
         elif c == '}':
-            if stack:
-                stack.pop()
+            popped = stack.pop() if stack else None
             seg = []
+            if popped == 'do':
+                # 吃掉 do-while 尾巴：while + 平衡括号
+                j = idx + 1
+                while j < n and text[j] in ' \t\r\n':
+                    j += 1
+                if text.startswith('while', j) and not (j + 5 < n and (text[j + 5].isalnum() or text[j + 5] == '_')):
+                    k = j + 5
+                    depth = 0
+                    while k < n:
+                        if text[k] == '(':
+                            depth += 1
+                        elif text[k] == ')':
+                            depth -= 1
+                            if depth == 0:
+                                break
+                        k += 1
+                    for m in range(idx + 1, min(k + 1, n)):
+                        top_at[m] = stack[-1] if stack else None
+                    idx = k + 1
+                    seg = []
+                    continue
         elif c == ';' and paren == 0:
             seg = []
         else:
             seg.append(c)
+        idx += 1
     return top_at
 
 
@@ -97,11 +143,12 @@ def scan_file(path):
     top_at = block_kinds(text)
     raw_lines = src.splitlines()
     hits = []
-    for m in re.finditer(r'(?m)^[ \t]*(const|let)[ \t]+([A-Za-z_$][\w$]*)', text):
-        if top_at[m.start()] == 'ctrl':
+    for m in re.finditer(DECL, text):
+        if top_at[m.start()] in ('ctrl', 'do'):
             line = text.count('\n', 0, m.start()) + 1
             raw = raw_lines[line - 1].strip() if line <= len(raw_lines) else ''
-            hits.append((line, m.group(1), m.group(2), raw))
+            name = m.group(2) if m.group(2) not in ('{', '[') else m.group(2) + '…'
+            hits.append((line, m.group(1), name, raw))
     return hits
 
 
