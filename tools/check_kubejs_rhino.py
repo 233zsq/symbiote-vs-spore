@@ -158,7 +158,8 @@ def collect(targets):
         if os.path.isdir(t):
             for root, _dirs, names in os.walk(t):
                 for nm in names:
-                    if nm.endswith('.js') and nm != 'example.js':
+                    # 跳过故意留坑的回归夹具（*_fixture.js）：它含 17 处风险是可预期的
+                    if nm.endswith('.js') and nm != 'example.js' and not nm.endswith('_fixture.js'):
                         files.append(os.path.join(root, nm))
         elif os.path.isfile(t):
             files.append(t)

@@ -46,7 +46,7 @@ Epic Fight 本体及全部附属（Impactful / Battle Arts / Resurrection / Inde
 - **任何 KubeJS 脚本改动入库前必跑**：
   ```
   python tools/check_kubejs_rhino.py
-  ```
+  ```（回归夹具：`tools/fixtures/kubejs_rhino_fixture.js` 应恰好报 17 处；详见 `docs/对抗式审查_2026-09-26.md`）
   扫描「控制流块（if/else/for/while/try/catch）内声明的 const/let」——本包 Rhino 对这类声明
   第二次执行到同一行必抛 `redeclaration`；KubeJS 自有事件里只是功能静默失效，`ForgeEvents.onEvent`
   里会**直接崩档**（2026-09-25 已崩过：`svs_damage.js#83`）。声明一律提到所属函数/回调最外层
