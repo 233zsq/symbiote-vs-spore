@@ -140,6 +140,13 @@
 4. `/svs difficulty hard` 执行 **2 次**（验证写 pd 与"选一锁二"提示）
 5. 遇一次 spore 怪（验证天敌仇恨、档位判定不再恒 null）
 
+## 四点八五、9-26 K3 验证收口（读 00:27 会话日志 + 两处根因订正）
+
+- **00:27 会话验证通过**：5/5 startup + 7/7 server 0 errors；统一伤害层注册行在；村民交易三职业 true/true/true（architectury 通道实证生效）
+- **订正 1（P0 归因错误）**：stages.zs 报错根因**不是** items.js 未部署——00:27 会话 items.js 已加载但仍报 `Member not found: addRecipeStage`（:71/:103）。实证：RecipeStages 8.0.0.2 的 CrT API 是 `setRecipeStage`（javap 实证），`addRecipeStage` 是 1.16 时代旧名。→ **GLM 任务**：stages.zs 两处 addRecipeStage 改 setRecipeStage（另按该文件铁律，未核实 ID 的调用应保持注释——顺手核对这两行是否该先注释）
+- **订正 2（POTB 23:59 第三次崩溃）**：根因=svs_tweak 的 MANIFEST 缺 `MixinConfigs` 声明，5 个 mixin 全部静默未生效——GLM 已修（commit b531dc7，1.0.2 已部署，manifest 已实证含声明）
+- 僵尸进程：4 个 BootstrapLauncher 残留（00:33 后无写入），用户可安全结束
+
 ## 四点九、9-25 23:59 错误报告分析 —— POTB NPE 复发：svs_tweak 的 5 个 mixin 从未生效（已根治，svs_tweak 1.0.2）
 
 **报告**：`错误报告-2026-9-25_23.59.49.zip` → `test4\crash-reports\crash-2026-09-25_23.59.45-client.txt`（`Unexpected error`，客户端崩）
