@@ -17,7 +17,7 @@
 
 ## 二、当前状态
 
-- **162 件 mod**（副本/test4 一致）+ Modern Mizuno 材质包 + Bliss 光影（DH 兼容）
+- **213 件 mod**（副本/test4 一致，jar 实数；此前 162 为旧口径）+ Modern Mizuno 材质包 + Bliss 光影（DH 兼容）
 - 打包：MCBBS 格式脚本（manifest+mcbbs.packmeta+overrides），最新产物 `dist/test5.zip`（**已过期**：之后又加了村民美化4件、魔改脚本、POTB修复包——下次打包用同一脚本从副本重打，版本号 test6）
 - 游戏实测可进世界；FTB 任务线骨架在（暮色章已删；**重排迁移清单已出** `docs/任务线重排迁移清单.md`：仓库已同步删 stage3_twilight.snbt，游戏内编辑器照单改 8 处文本/任务，另发现 stage2_nether 章缺失；阶段Ⅲ承接方案待用户裁决）；桌面表已按新包体重采
 
@@ -217,7 +217,7 @@
 3. **二期**：~~围城事件 + HUD 天数计时器~~ **初版已落地**（`siege.js`，commit e7937ba：7日倒计时/在村才走（村民≥3+主世界）/回村回拨5分钟/Painter HUD/波次 8+2递增+14天起掺精英；待实测）→ 失守惩罚（文明降级+均摊扣款，决议一-5；**civillis API 已打通**：`BaseScoreApi.add/remove`，火种侧已挂钩 commit 66eb43f）**失守判定+惩罚已落地**（commit 2f47193：村民腰斩判失守、文明 -15、在场均摊 40 币单人全额、失守 HUD/标题；待实测）→ ~~铁魔法禁用清单~~ **已定稿落地**（commit 见日志：`docs/铁魔法禁用清单.md`，禁 78/留 36，数据包已三处同步；用户裁决：机动/隐身作逃课保留、召唤流禁、直伤全禁）→ ~~Gateways 连战+武器解锁~~ **用户裁决否决**（9-25）：不加 Gateways/Placebo、不锁武器。草案文档留档备查。末期武器毕业改由任务线直接发放（待细化）。共生体围城压力联动**已接**（commit cd11c7c：围城内已结合玩家 stress +3/s，SymbioteTracker.adjustStress javap 实证）
 4. **最新包 = `dist/test8.zip`**（213 jar / 1403.7 MB：含 mixinsquared、svs_tweak 全 5 项、damage_caps.js + ranged_pressure.js、灾变限伤 config、原版恢复的 CA/monsterexpansion jar）。test6 说明存档： **已完成**：`dist/test6.zip`（2132 文件 / 1425.8 MB）。旧打包脚本丢失，新写 `E:/mcmp_test/pack_mcbbs.py`（从副本出包，结构对齐 test5 逆向：manifest.json + mcbbs.packmeta(SHA-1) + overrides/，包含清单=test5 的 16 项 + scripts/）。**含全部最新修复**（补译/POTB 标签置空/spore_coin 事件版/siege.js）。注意：test6 以副本为准，**含 souls_like_bosses-1.0.3.jar**（test4 没有，对账问题仍待用户裁决）
 5. 自研 tweak mod 待办清单：~~结构距出生点生成限制~~（**已落地** commit cfbfc5c：陨石限出生点 3000 格内，方向/数值待用户确认）、~~ASTages 坏文件容错~~（**已落地** commit dd06e12：readList 换安全版，坏 JSON 跳过打日志不崩，require=0 防版本漂移）、~~mixin 冲突合规化~~（**已落地** commit 1748317：MixinSquared 取消器运行时禁 2 个冲突 mixin，两 jar 已恢复官方原版+hash 回正；MixinSquared 0.2.0 作库 mod 进包；**复测要点：日志找 [svs_tweak] 已按冲突清单取消 mixin ×2，且这两个 mixin 原本治的冲突不复发**）、~~POTB jar 层根治~~（**1.0.2 已生效并实测挡崩，见四点九**：`svs_tweak-1.0.2.jar` 在副本+test4 mods/，源码收在仓库 `svs_tweak/`；日志出现 `handler$gcb000$svs$nullPatchGuard` 帧 = 处理器已注入目标类，并实测 `POTB 判空生效：已拦截 entityPatch=null 的粒子渲染`；`blade_config_tag` 置空覆盖**已撤且不回滚**，怪物武器粒子恢复。⚠️ 踩坑记录：jar manifest 必须带 `MixinConfigs: svs_tweak.mixins.json`（build.gradle 已补），否则 5 个 mixin 全部静默失效；构建：本地 Gradle 8.8（E:/mcmp_test/gradle-8.8）+ JDK 17 + `--offline`，libs/ 放 potb/epicfight/astages jar，**mixinsquared 要用 forge jar 内嵌的 META-INF/jars 版本**）
-6. `scripts/stages.zs`（GameStages 门控框架，目前全注释零效果）**只在仓库、未双写**（副本/test4 的 scripts/ 是空目录）；等有实质内容再同步，届时 test 包要确认 scripts/ 进 overrides
+6. ~~stages.zs 未双写~~ 已补齐（commit 87c1ad9，三方一致；内容仍全注释零效果）。注意：BEP 报错两行根因是 items.js 未部署，已随 P0 修复
 7. bug 清单遗留：Blood And Madness TPS 性能+2武器EF适配、BOMD 虚空之花崩档、Relics×真菌 CME、真菌飞行怪崩档（等初版实测复现后 BadMobs 禁）
 
 ## 六、关键事实速查
