@@ -199,6 +199,12 @@
 - 围城村庄级共享计时、剑术耗蓝等待办同样转规格书模式
 - Structurify 评估见当日汇报：可接管黑名单/间距，管不了跨结构互斥与陨石距离（svs_tweak 两件仍必要），不能创建新结构（新结构走数据包 worldgen）
 
+## 四点九、9-26 加 mod：双指南针（commit c2f92fe）
+
+- Nature's Compass 1.12.0 + Explorer's Compass 1.4.0（Modrinth CDN，hash 已核），副本/test4 双写
+- 协议均 CC BY-NC-SA 4.0（审查 doc 已登记）；用户用于测试 /locate 与陨石寻找
+- 注意：`server_scripts/explorers_compass.js`（阶段⑤骨架，仓库/副本有、test4 没有）现在 mod 已入包，其【待核实】物品 id 与维度白名单（含已删除的暮色）需要按实况修订后再部署
+
 ## 五、待办（按优先级）
 
 0. **共生体分期 1 数值加成已落地**（决议一-10，commit 0269960）：`symbiote_stages.js` 按 BondStage 挂穿甲（EF armor_negation +2~10%）/韧性（+1~6）/回复（每 5s 0.5~2 HP），并镜像 GameStage `svs_bond_*` 供门控。脚本总数 9。复测：9/9 0 errors + 融合后看属性栏
