@@ -112,7 +112,7 @@
 
 另加两道防线：
 1. `svs_damage.js` 监听器体整体包 `try/catch` —— 以后任何 JS 失误只留一行日志、不再崩档。**注意 try 本身也是一层块**，所以回调体内更不能声明变量
-2. `tools/check_kubejs_rhino.py` 块级静态扫描器（括号深度感知，能正确识别 `for(;;)` 头部的分号）。**已用崩溃现场快照回归**：对编辑前的 svs_damage.js 精确报出 14 处（含 #83）；对副本/test4/仓库均报"干净"。提交前跑 `python tools/check_kubejs_rhino.py`
+2. `tools/check_kubejs_rhino.py` 块级静态扫描器（括号深度感知，能正确识别 `for(;;)` 头部的分号）。**已用崩溃现场快照回归**：对编辑前的 svs_damage.js 精确报出 **15 处**（含 #83 与 #67）；对副本/test4/仓库均报"干净"。提交前跑 `python tools/check_kubejs_rhino.py`
 
 ### 补记：22:17 第二次崩服（复测中暴露的第二颗雷，已修）
 
@@ -196,9 +196,10 @@
 
 ### 复测要点 / 遗留
 
-- 工具自检（对抗式审查产物）：`python tools/check_kubejs_rhino.py /tmp/scan_test_fixture.js` 夹具应恰好报 17 处；该夹具覆盖多行条件头、块注释、模板串、正则、`do-while`、解构、`for-of` 等构造——扫描器已按它修掉 3 处漏报 + 1 处假阳性，并据此把修复前真值从 48 修正为 49
+- 工具自检（对抗式审查产物）：`python tools/check_kubejs_rhino.py tools/fixtures/kubejs_rhino_fixture.js` 夹具应恰好报 17 处；该夹具覆盖多行条件头、块注释、模板串、正则、`do-while`、解构、`for-of` 等构造——扫描器已按它修掉 3 处漏报 + 1 处假阳性，并据此把修复前真值从 48 修正为 49
 - 自检一行：`grep svs_tweak logs/latest.log` → 正常应有：`[mixin/] Mixin config svs_tweak.mixins.json does not specify "minVersion" property`（无害告警，说明配置已注册）+ 取消器 ×2 + POTB 探针 ×2
 - **其余 4 个 mixin 本次才首次上线**，需玩家体感确认：① 陨石只在出生点 3000 格内生成（数值待用户拍板）② 结构密度（75 格半径最多 1 个结构；黑名单仍留空待裁决）③ AStages 坏文件是否静默跳过
+- **订正（9-26 用户实测实证）**：`getUUID()` 连**玩家实体**也解析失败（`fireseed.js#128: Cannot find function getUUID in object ServerPlayer[...]` ×8）→ 四点六"仅在非玩家实体失败"的表述作废，一律别用 getUUID；F3 的修法与同类隐患清单见 `docs/修复批补正_0926.md`
 - 若 POTB NPE 再次复发：立即把 `config/openloader/data/svs/data/blade_config_tag/tags/entity_types/valid_entity.json` 改回 `{"replace":true,"values":[]}` 回滚，并把新崩溃报告发出来
 
 ## 四点七、分工重申（2026-09-25 用户指令）
