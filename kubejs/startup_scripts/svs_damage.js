@@ -11,6 +11,17 @@
 
 ;(function registerSvsDamage() {
   const SD_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
+  // 伤害归因助手（svs_tweak ≥1.0.4）：DamageSource.getEntity()/is(TagKey)/实体 isInWater/onGround
+  // 在 KubeJS Rhino 里名称解析全部失败（mojmap/SRG 名都不通，9-30 五探针局实证）→
+  // 调用放进纯 Java 静态方法、JS 传原生对象（architectury TradeRegistry 同款已实证模式）。
+  // 2026-09-30 用户裁决"不接受一刀盲区"的落地：攻击者归因由此从 getLastHurtByMob
+  //（上一刀，新目标首刀盲区）升级为精确归因；助手缺失时退回旧通道（保留首刀盲区）。
+  let SvsDamageHelper = null
+  try {
+    SvsDamageHelper = Java.loadClass('com.svs.tweak.kubejs.SvsDamageHelper')
+  } catch (e) {
+    console.error('[SVS-伤害] SvsDamageHelper 加载失败（svs_tweak ≥1.0.4 缺失？），归因退化为 getLastHurtByMob: ' + e)
+  }
   let SymbioteTracker = null
   try {
     SymbioteTracker = Java.loadClass('com.scout.symbiote.tracker.SymbioteTracker')
@@ -67,13 +78,15 @@
       sdEnt = event.entity
       if (!sdEnt || !sdEnt.type) return
       sdSrc = event.source
-      // 攻击者归因（9-30 探针实证）：DamageSource 的 .entity / getEntity() / getDirectEntity() /
-      //   SRG 名直呼 在本环境 Rhino 一律解析失败 → 只能从受害者侧 LivingEntity.getLastHurtByMob() 取。
-      //   ⚠ 已知盲区：该值在 LivingHurtEvent 时刻是"上一刀"的攻击者（9999 一刀实测为 null）——
-      //   ①② 每个新目标的**第一刀**归因不到（第二刀起正确）；持续战斗（围城/Boss 连战）不受影响。
-      //   弹射物归因到射手；玩家受击侧=攻击的 spore 怪，怪受击侧=攻击的玩家。
+      // 攻击者（致害实体）：优先 svs_tweak 静态助手精确取（近战=攻击者本体、弹射物=射手）；
+      // 助手不可用时退回受害者侧 getLastHurtByMob（上一刀的攻击者，新目标首刀盲区）
       sdSrcEnt = null
-      try { sdSrcEnt = sdEnt.getLastHurtByMob() } catch (e) { sdSrcEnt = null }
+      if (SvsDamageHelper) {
+        try { sdSrcEnt = SvsDamageHelper.attackerOf(sdSrc) } catch (e) { sdSrcEnt = null }
+      }
+      if (!sdSrcEnt) {
+        try { sdSrcEnt = sdEnt.getLastHurtByMob() } catch (e) { sdSrcEnt = null }
+      }
       sdType = String(sdEnt.type)
       sdFromSpore = !!(sdSrcEnt && sdSrcEnt.type && String(sdSrcEnt.type).indexOf(SPORE_NS) === 0)
       sdAmount = event.amount
@@ -90,15 +103,16 @@
         if (sdMult) sdAmount = sdAmount * sdMult
       }
 
-      // ③ 远程加压：怪物的弹射物在飞行/水中命中 → ×1.5（玩家的不管）
-      // ⚠ 9-30 实证：DamageSource.isProjectile() 在 1.20.1 已不存在（1.19.4 伤害类型重构移除），
-      //   且 srcEntity（攻击者）只剩 getLastHurtByMob 通道——本分支当前恒不生效，修复方案
-      //   （改 DamageType msgId 白名单 / TagKey 判定 + 射手 isInWater）待用户裁决后实施。
+      // ③ 远程加压：飞行/水中的怪物以弹射物命中 → ×1.5（玩家的不管）
+      // 2026-09-30 裁决落地：原 isProjectile() 在 1.19.4 伤害类型重构中已被移除（本分支曾恒不生效）；
+      // 改走 svs_tweak 助手的官方 DamageTypeTags.IS_PROJECTILE 判定 + 射手 inWater/onGround（同助手通道）。
       sdIsProj = false
-      try { sdIsProj = !!sdSrc.isProjectile() } catch (e) { }
+      if (SvsDamageHelper) {
+        try { sdIsProj = SvsDamageHelper.isProjectile(sdSrc) } catch (e) { }
+      }
       if (sdIsProj && sdSrcEnt && !sdSrcEnt.player) {
         sdPress = false
-        try { sdPress = sdSrcEnt.isInWater() || !sdSrcEnt.onGround() } catch (e) { }
+        try { sdPress = SvsDamageHelper.inWater(sdSrcEnt) || !SvsDamageHelper.onGround(sdSrcEnt) } catch (e) { }
         if (sdPress) sdAmount = sdAmount * RP_MULT
       }
 
@@ -124,5 +138,5 @@
       console.error('[SVS-伤害] 监听器异常（已兜住，不崩游戏）: ' + e)
     }
   })
-  console.info('[SVS-伤害] 统一伤害层已注册：共生两向 + 远程加压 + 母巢爬升（LivingHurtEvent.setAmount 直改；通用 10% 限伤层已按 9-26 裁决移除）')
+  console.info('[SVS-伤害] 统一伤害层已注册：共生两向 + 远程加压 + 母巢爬升（LivingHurtEvent.setAmount 直改；通用 10% 限伤层已按 9-26 裁决移除；归因走 svs_tweak 1.0.4 助手）')
 })()

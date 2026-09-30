@@ -33,8 +33,8 @@ function coinTier(maxHp) {
 //   getDirectEntity() / SRG 名直呼 在本环境 Rhino 一律解析失败（连玩家归因源也取不出攻击者）；
 //   LivingEntity.getLastHurtByPlayer() 可用（玩家伤害后 100 tick 内死亡均归因成功）。
 //   注意：近战命中的 DoT（中毒/流血）在 5 秒内杀死也会计入——比 source 方案略宽松。
-// TODO(用户裁决): 原设计的"掉落只归击杀者拾取"（ItemEntity.setOwner）在本环境不可实现
-//   （mojmap / SRG 名都不解析，9-30 实测）——多人场景拾取权待裁决后再想 NBT/数据包方案。
+//   拾取归属限制已按 2026-09-30 用户裁决放弃（多人场景不做限制；
+//   ItemEntity.setOwner 的 mojmap / SRG 名在本环境都不解析，实现路径也不存在）。
 // TODO(K3-实测): spore 命名空间若有非 Monster 的敌对单位会被 isMonster 过滤漏掉，实测后按需放宽
 
 EntityEvents.drops(event => {
