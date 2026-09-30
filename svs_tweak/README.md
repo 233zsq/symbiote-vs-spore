@@ -3,7 +3,7 @@
 当前功能（5 个 mixin，配置见 `svs_tweak.mixins.json`）：
 - `PotbWeaponryParticleRenderMixin` — POTB 粒子渲染 NPE 判空（`WeaponryParticleRender.onRenderParticleEvent` HEAD 注入，`getEntityPatch()` 为 null 即跳过；带自检探针）
 - `PrimaryLevelDataSpawnMixin` — 记录世界出生点（供陨石距离限制）
-- `StructureCheckSpawnLimitMixin` — 陨石只在出生点 3000 格内生成
+- `StructureCheckSpawnLimitMixin` — 陨石只在出生点 400~800 格环带内生成（用户裁决 2026-09-26）
 - `StructureCheckDensityMixin` — 结构密度提纯（75 格半径最多 1 个结构，白名单/忽略/黑名单见 `StructureDensityRules`）
 - `AStagesBadFileMixin` — ASTages 坏文件容错（readList 安全版）
 - 另有 `SvsMixinCanceller`（MixinSquared ServiceLoader）运行时取消 2 个冲突 mixin

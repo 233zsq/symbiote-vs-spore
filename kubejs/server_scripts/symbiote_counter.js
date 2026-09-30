@@ -50,7 +50,8 @@ function getProfile(player) {
   let gpTracker = null      // Rhino 守则：try 等块内不声明（第二次执行抛 redeclaration）
   try {
     gpTracker = SymbioteTracker.get(player.level)   // kjs$getLevel，服务端实例为 ServerLevel
-    return gpTracker ? gpTracker.peek(player.getUUID()) : null
+    // player.uuid（KubeJS 注入属性）9-30 探针实证可用；getUUID() 连 ServerPlayer 都失败
+    return gpTracker ? gpTracker.peek(player.uuid) : null
   } catch (e) {
     return null
   }
@@ -76,8 +77,9 @@ function getBondStage(player) {
 function isHunting(player) {
   let asked = false
   try {
-    if (PredatorHunt) { asked = true; if (PredatorHunt.isHunting(player.getUUID())) return true }
-    if (FeedingHunt) { asked = true; if (FeedingHunt.isHunting(player.getUUID())) return true }
+    // player.uuid 探针实证可用（getUUID() 不可用，见 getProfile 注释）
+    if (PredatorHunt) { asked = true; if (PredatorHunt.isHunting(player.uuid)) return true }
+    if (FeedingHunt) { asked = true; if (FeedingHunt.isHunting(player.uuid)) return true }
   } catch (e) { }
   if (!asked) {
     // TODO(K3-实测): 狩猎 API 不可用 → 按规格退化为"已结合即视为狩猎"
@@ -121,13 +123,14 @@ function addTrust(player, n) {
   }
 }
 
-// ── ①② 伤害两向（EntityEvents.hurt）──
-// 队列用数组不用 uuid 键表：原版继承方法 getUUID 在非玩家实体上 Rhino 解析失败
 // ── ③ 狩猎红利（EntityEvents.death）──
+// 击杀归因（9-30 探针实证）：DamageSource.entity / getEntity() 不可解析 →
+// 走 LivingEntity.getLastHurtByPlayer()（与 spore_coin.js 掉币同一修法）
 EntityEvents.death(event => {
   const ent = event.entity
   if (!ent || !ent.monster || String(ent.type).indexOf(SPORE_NS) !== 0) return
-  const killer = event.source ? event.source.entity : null
+  let killer = null
+  try { killer = ent.getLastHurtByPlayer() } catch (e) { killer = null }
   if (!killer || !killer.player || !(killer instanceof SC_ServerPlayer)) return
   const stage = getBondStage(killer)
   if (!stage || stage === 'UNBONDED') return
@@ -153,8 +156,9 @@ ServerEvents.tick(event => {
 
   if (tickCounter % 20 !== 0) return          // 每秒 1 次
   if (!event.server) return
+  // gameTime 探针实证：Level.gameTime 字段=undefined → 改 getDayTime()（与 siege.js 同修法）
   let gameTime = -1
-  try { gameTime = event.server.overworld().gameTime } catch (e) { }
+  try { gameTime = event.server.overworld().getDayTime() } catch (e) { }
   const players = event.server.getPlayers()
   let aggroTarget = null
   let stage = null

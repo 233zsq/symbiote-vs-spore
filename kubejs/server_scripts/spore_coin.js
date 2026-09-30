@@ -2,7 +2,7 @@
 // 交付三件事：
 //   ① 物品 kubejs:spore_coin（真菌币），基础贴图用原版绿宝石兜底（TODO: 后续换自定义贴图）
 //   ② 击杀 spore 命名空间敌对生物掉真菌币，按血量分档（<50: 1~2 / 50~200: 3~5 / >200: 15~25），
-//      只认玩家击杀，且对掉落物 setOwner 只归击杀者本人拾取
+//      只认玩家击杀（归因走 getLastHurtByPlayer，见下方掉落段注释；拾取归属限制本环境不可实现）
 //   ③ 村民交易：农民加 12 币→8 匠魂 grout，工具匠加 20 币→1 火种绑定工具（kubejs:fireseed_token），
 //      制图师加 15 币→共生体陨石线索成书（理念 1"交易获得结构线索"，交易时实时寻址）
 //      【已迁至 startup_scripts/villager_trades.js——ForgeEvents 只在 startup 脚本注入
@@ -29,20 +29,22 @@ function coinTier(maxHp) {
 // 掉落：KubeJS 2001.6.5 的 LivingEntityDrops 事件脚本名为 EntityEvents.drops
 // （javap 实证 dev.latvian.mods.kubejs.entity.forge.LivingEntityDropsEventJS：
 //   entity / source / lootingLevel / recentlyHit，addDrop(ItemStack) → ItemEntity）
+// 击杀归因（9-30 探针 330 条样本实证）：DamageSource 的 .entity / getEntity() /
+//   getDirectEntity() / SRG 名直呼 在本环境 Rhino 一律解析失败（连玩家归因源也取不出攻击者）；
+//   LivingEntity.getLastHurtByPlayer() 可用（玩家伤害后 100 tick 内死亡均归因成功）。
+//   注意：近战命中的 DoT（中毒/流血）在 5 秒内杀死也会计入——比 source 方案略宽松。
+// TODO(用户裁决): 原设计的"掉落只归击杀者拾取"（ItemEntity.setOwner）在本环境不可实现
+//   （mojmap / SRG 名都不解析，9-30 实测）——多人场景拾取权待裁决后再想 NBT/数据包方案。
 // TODO(K3-实测): spore 命名空间若有非 Monster 的敌对单位会被 isMonster 过滤漏掉，实测后按需放宽
+
 EntityEvents.drops(event => {
   const ent = event.entity
   if (!ent || !ent.type || String(ent.type).indexOf('spore:') !== 0) return
   if (!(ent instanceof SP_Monster)) return                  // 只掉敌对生物（instanceof Monster，属性存在性实踩过）
-  const killer = event.source ? event.source.entity : null
+  let killer = null
+  try { killer = ent.getLastHurtByPlayer() } catch (e) { killer = null }
   if (!killer || !killer.player || !(killer instanceof SP_ServerPlayer)) return   // 只认玩家击杀
   const tier = coinTier(ent.maxHealth)
   const n = tier[0] + Math.floor(Math.random() * (tier[1] - tier[0] + 1))
-  const drop = event.addDrop(Item.of('kubejs:spore_coin', n))
-  try {
-    // 只给击杀者本人：ItemEntity.setOwner（auto-remap → SRG m_32058_）设置拾取归属
-    drop.setOwner(killer.getUUID())
-  } catch (e) {
-    console.warn('[SVS-真菌币] setOwner 不可用，本枚掉落未限归属: ' + e)
-  }
+  event.addDrop(Item.of('kubejs:spore_coin', n))
 })

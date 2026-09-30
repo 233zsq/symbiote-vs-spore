@@ -2,7 +2,7 @@
 // 机制：
 //   右键村民（手持 kubejs:fireseed_token）→ 绑定为火种（改名"火种"），消耗 1 工具，
 //   立刻获得该村民当前最贵可交易物品 ×1（职业等级越高奖励越肥的落地件）
-//   每人最多绑定 5 个火种；绑定记录存玩家 persistentData（uuid|毫秒 时间戳）
+//   每人最多绑定 5 个火种；绑定记录存玩家 persistentData（id|毫秒 时间戳，id=玩家name+时间戳）
 //   火种村民死亡 → 扣绑定者真菌币（连续死亡递减 100%/50%/25%…）；绑定者不在线 → 文明度 -10（civillis BaseScoreApi）
 //   绑定者超过 7 天未上线 → 登录时自动解绑（文明不降级）
 //   文明强度（决议一-2）：绑定 → 村民周边 ±64 格 +5 分；死亡/解绑 → 撤分
@@ -123,11 +123,12 @@ ItemEvents.entityInteracted(event => {
   }
 
   // 标记村民 + 改名
-  // 火种 ID 用自发标识（玩家uuid+时间戳）：原版继承方法 getUUID 在非玩家实体上
-  // Rhino 解析失败（实测 Cannot find function getUUID，村民/怪物全中招），不能拿它当键
-  const uuid = String(player.getUUID()) + '_' + fsNowMs()
+  // 火种 ID 用自发标识（玩家 name + 时间戳）：原版继承方法 getUUID 在本环境 Rhino 里
+  // 连 ServerPlayer 都解析失败（9-26 实测 'Cannot find function getUUID' ×8），不能拿它当键；
+  // player.name 已实证可用（日志打印 literal{Ultraman_0}）
+  const uuid = String(player.name) + '_' + fsNowMs()
   try {
-    target.getPersistentData().putString('svs_fireseed_owner', String(player.getUUID()))
+    target.getPersistentData().putString('svs_fireseed_owner', String(player.name))
     target.getPersistentData().putString('svs_fireseed_id', uuid)
   } catch (e) { }
   try { player.getPersistentData().putString('svs_fireseed_streak', '0') } catch (e) { }   // 新绑定=好消息，递减重置
@@ -171,10 +172,11 @@ EntityEvents.death(event => {
   // 连续死亡递减（绑定者侧 streak，跨火种累计；0=首死全额 / 1=50% / >=2=25%）
 
   // 找绑定者（在线才扣钱；离线 → 文明度处罚）
+  // ownerUuid 是绑定时写入的 String(player.name)（见绑定处注释，getUUID 不可用）
   const players = event.server.getPlayers()
   let owner = null
   for (let i = 0; i < players.size(); i++) {
-    if (String(players.get(i).getUUID()) === ownerUuid) { owner = players.get(i); break }
+    if (String(players.get(i).name) === ownerUuid) { owner = players.get(i); break }
   }
   if (!owner) {
     // 绑定者离线 → 村庄文明等级小幅下降（决议一-5）：死亡点区域追加负分区

@@ -21,7 +21,7 @@ public final class StructureDensityRules {
             // 原版村庄与微结构
             "minecraft:village_plains", "minecraft:village_desert", "minecraft:village_savanna",
             "minecraft:village_snowy", "minecraft:village_taiga",
-            "minecraft:ruined_portal", "minecraft:buried_treasure", "minecraft:mineshaft", "minecraft:mineshaft_mesa",
+            "minecraft:ruined_portal", "minecraft:buried_treasure",
             // 匠魂浮空岛（悬在天上，不参与地面密度）
             "tconstruct:blood_island", "tconstruct:clay_island", "tconstruct:earth_slime_island",
             "tconstruct:end_slime_island", "tconstruct:ocean_skyslime_island", "tconstruct:sky_slime_island",
@@ -45,8 +45,12 @@ public final class StructureDensityRules {
             "pladailyboss:colosseum_arena", "skyarena:sky_arena", "skyarena:ice_arena"
     );
 
-    /** 黑名单（永不生成）：待用户裁决后填入。候选：minecraft:shipwreck、minecraft:mineshaft（远梦同款） */
-    public static final Set<String> BLACKLIST = Set.of();
+    /** 黑名单（永不生成）。用户裁决 2026-09-26：禁 shipwreck + mineshaft（含变体 id；
+     *  四个 id 均经 1.20.1 原版 jar data/minecraft/worldgen/structure/ 实证存在） */
+    public static final Set<String> BLACKLIST = Set.of(
+            "minecraft:shipwreck", "minecraft:shipwreck_beached",
+            "minecraft:mineshaft", "minecraft:mineshaft_mesa"
+    );
 
     private StructureDensityRules() {
     }

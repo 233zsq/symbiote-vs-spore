@@ -20,7 +20,7 @@
 //   stage4_calamity    Ⅳ 真菌天灾升级  击败暮色主线 Boss
 //   stage5_endgame     Ⅴ 终局         共生体 Dominant（Bond≥400）+ 首个 Calamity 讨伐
 //
-// 语法说明：mods.recipestages.Recipes.addRecipeStage("阶段", <item:...>)
+// 语法说明：mods.recipestages.Recipes.setRecipeStage("阶段", <item:...>)
 //   语义为「把全部产出该物品的配方锁进指定阶段」；若该物品配方尚未编写
 //   （如 kubejs 自注册物品的锻造配方还在 server_scripts 待落地），调用为无害空操作，
 //   配方落地后自动生效。物品使用/持有的锁定走 Item Stages、维度锁定走 Re-Dimension
@@ -50,7 +50,7 @@
 //   - 下界向模组装备开放（下界主题武器等；配方锁待 ID 核实后补）
 //   - 真菌感染维持低调生成率（sporeconfig 压制，配置层职责，非本文件）
 // 示例占位（【待核实】，核实后逐条启用）：
-// mods.recipestages.Recipes.addRecipeStage("stage2_nether", <item:待核实:下界主题武器>);  // 【待核实】下界向模组装备配方
+// mods.recipestages.Recipes.setRecipeStage("stage2_nether", <item:待核实:下界主题武器>);  // 【待核实】下界向模组装备配方
 // ----------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------
@@ -63,12 +63,12 @@
 //   - 主线锻造线中间产物（淬魔钢坯）配方解锁（本包自注册物品，见下方已启用调用）
 //   - TiC 高阶武器材料解锁（玛玉灵等；冶炼炉/部件打造此前全开放，仅武器线门控，方案 3.9 ⑤）
 // 示例占位（【待核实】，核实后逐条启用）：
-// mods.recipestages.Recipes.addRecipeStage("stage3_twilight", <item:twilightforest:ironwood_sword>);      // 【待核实】
-// mods.recipestages.Recipes.addRecipeStage("stage3_twilight", <item:twilightforest:knightmetal_sword>);   // 【待核实】
-// mods.recipestages.Recipes.addRecipeStage("stage3_twilight", <item:twilightforest:fiery_sword>);         // 【待核实】
-// mods.recipestages.Recipes.addRecipeStage("stage3_twilight", <item:tconstruct:manyullyn_ingot>);         // 【待核实】TiC 高阶武器材料（锭/熔融形态 ID 待核实）
+// mods.recipestages.Recipes.setRecipeStage("stage3_twilight", <item:twilightforest:ironwood_sword>);      // 【待核实】
+// mods.recipestages.Recipes.setRecipeStage("stage3_twilight", <item:twilightforest:knightmetal_sword>);   // 【待核实】
+// mods.recipestages.Recipes.setRecipeStage("stage3_twilight", <item:twilightforest:fiery_sword>);         // 【待核实】
+// mods.recipestages.Recipes.setRecipeStage("stage3_twilight", <item:tconstruct:manyullyn_ingot>);         // 【待核实】TiC 高阶武器材料（锭/熔融形态 ID 待核实）
 // 已启用：本包自注册中间产物（kubejs/startup_scripts/items.js），配方落地后自动纳入本阶段
-mods.recipestages.Recipes.addRecipeStage("stage3_twilight", <item:kubejs:tempered_steel_billet>);
+mods.recipestages.Recipes.setRecipeStage("stage3_twilight", <item:kubejs:tempered_steel_billet>);
 // ----------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------
@@ -81,9 +81,9 @@ mods.recipestages.Recipes.addRecipeStage("stage3_twilight", <item:kubejs:tempere
 //   - CDU 与防线装备配方解锁（CDU=冷却驱散装置；Spore 未入包，ID 全部【待核实】）
 //   - 感染装备线（Living/Flesh 装备）随讨伐进度开放（ID【待核实】）
 // 示例占位（【待核实】，Spore 入包后经 /ct hand 核实再启用）：
-// mods.recipestages.Recipes.addRecipeStage("stage4_calamity", <item:待核实:CDU装置>);       // 【待核实】冷却驱散装置
-// mods.recipestages.Recipes.addRecipeStage("stage4_calamity", <item:待核实:Living装备>);    // 【待核实】Living 装备
-// mods.recipestages.Recipes.addRecipeStage("stage4_calamity", <item:待核实:Flesh装备>);     // 【待核实】Flesh 装备
+// mods.recipestages.Recipes.setRecipeStage("stage4_calamity", <item:待核实:CDU装置>);       // 【待核实】冷却驱散装置
+// mods.recipestages.Recipes.setRecipeStage("stage4_calamity", <item:待核实:Living装备>);    // 【待核实】Living 装备
+// mods.recipestages.Recipes.setRecipeStage("stage4_calamity", <item:待核实:Flesh装备>);     // 【待核实】Flesh 装备
 // ----------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------
@@ -98,9 +98,9 @@ mods.recipestages.Recipes.addRecipeStage("stage3_twilight", <item:kubejs:tempere
 //     不走配方锁；如需锁「使用」再评估 Item Stages，API【待核实】）
 //   - 灾变 Boss 讨伐最终挑战（Cataclysm Boss 生成/进度挂钩，非配方门控）
 // 示例占位（【待核实】）：
-// mods.recipestages.Recipes.addRecipeStage("stage5_endgame", <item:待核实:收藏线终局武器>);  // 【待核实】如个别终局件需配方锁
+// mods.recipestages.Recipes.setRecipeStage("stage5_endgame", <item:待核实:收藏线终局武器>);  // 【待核实】如个别终局件需配方锁
 // 已启用：本包自注册终局材料（kubejs/startup_scripts/items.js），配方落地后自动纳入本阶段
-mods.recipestages.Recipes.addRecipeStage("stage5_endgame", <item:kubejs:abyss_ingot>);
+mods.recipestages.Recipes.setRecipeStage("stage5_endgame", <item:kubejs:abyss_ingot>);
 // ----------------------------------------------------------------------------
 
 // ============================================================================

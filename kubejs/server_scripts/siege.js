@@ -144,8 +144,11 @@ ServerEvents.tick(event => {
   let worldDay = 1
   let gameTime = 0
   try {
-    worldDay = Math.floor(event.server.overworld().dayTime / 24000) + 1
-    gameTime = event.server.overworld().gameTime
+    // 9-30 探针实证：dayTime 属性解析成 Function（NaN 根因）、gameTime=undefined、
+    // getGameTime() 不可用；可用读法是 getDayTime()（074391 实测）。gameTime 一并改用
+    // dayTime——注意 /time set 会拨动它（围城窗口内拨时间会错位一次，自愈）
+    worldDay = Math.floor(event.server.overworld().getDayTime() / 24000) + 1
+    gameTime = event.server.overworld().getDayTime()
   } catch (e) {
     siegeWarnOnce('overworld 读取', e)
     return
