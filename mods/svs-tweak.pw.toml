@@ -1,8 +1,8 @@
 name = "SvS Tweaks (自研)"
-filename = "svs_tweak-1.0.4.jar"
+filename = "svs_tweak-1.0.5.jar"
 side = "both"
 
 [download]
 url = ""
 hash-format = "sha512"
-hash = "46152674dc21ff41f60def1b1c1ec80aeab8f5e00907105086ab7cdd7d9868b36a77a687fd2aed861b81fc7376ff835d243c375df7dc2e903887bed0dfadcbb7"
+hash = "41500b5a5fb15db53e005a4c38ae66653df2bd2ce3cbd98ca3c356d90cfba94769fdb484400b68ae58063806273f0f9897f780d6bc52f40a7be698fd01054a73"

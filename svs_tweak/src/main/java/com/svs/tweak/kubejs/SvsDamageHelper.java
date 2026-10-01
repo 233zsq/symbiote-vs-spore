@@ -3,6 +3,12 @@ package com.svs.tweak.kubejs;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+
+import java.util.Map;
 
 /**
  * 伤害结算辅助（2026-09-30 用户裁决"不接受一刀盲区"落地）：
@@ -39,5 +45,29 @@ public final class SvsDamageHelper {
     /** 实体是否在地面 */
     public static boolean onGround(Entity entity) {
         return entity != null && entity.onGround();
+    }
+
+    /**
+     * 村民交易表诊断（F2 排查用，2026-10-01）：dump VillagerTrades 静态表里各职业各等级的
+     * listing 类名（Java 侧遍历 fastutil，绕开 Rhino 的 Int2ObjectMap 禁区）。
+     * 传入职业名过滤（如 "farmer"，null=全部）。返回紧凑字符串供日志打印。
+     */
+    public static String villagerTradeDump(String profFilter) {
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<VillagerProfession, Int2ObjectMap<ItemListing[]>> e
+                : VillagerTrades.TRADES.entrySet()) {
+            String prof = String.valueOf(e.getKey());
+            if (profFilter != null && !prof.contains(profFilter)) continue;
+            sb.append('[').append(prof).append("] ");
+            for (Int2ObjectMap.Entry<ItemListing[]> level : e.getValue().int2ObjectEntrySet()) {
+                sb.append("L").append(level.getIntKey()).append('=');
+                ItemListing[] arr = level.getValue();
+                for (int i = 0; i < arr.length; i++) {
+                    sb.append(i == 0 ? "" : ",").append(arr[i].getClass().getSimpleName());
+                }
+                sb.append(' ');
+            }
+        }
+        return sb.length() == 0 ? "(无匹配职业)" : sb.toString();
     }
 }

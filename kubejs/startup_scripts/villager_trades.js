@@ -69,11 +69,12 @@
   // 交易瞬间按交易者位置计算最近陨石坐标写入书页。
   // 初版用成书不用探索地图（vanilla TreasureMapForEmeralds 强绑绿宝石+指南针计价链，
   // 自绘地图链路长；成书承载同等信息，TODO 升级真地图）。
-  let ResourceKey, Registries, HolderSet
+  let ResourceKey, Registries, TagKey, BlockPos
   try {
     ResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
     Registries = Java.loadClass('net.minecraft.core.registries.Registries')
-    HolderSet = Java.loadClass('net.minecraft.core.HolderSet')
+    TagKey = Java.loadClass('net.minecraft.tags.TagKey')
+    BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
   } catch (e) {
     console.error('[SVS-真菌币] 线索书依赖类加载失败，制图师交易跳过: ' + e)
     ResourceKey = null
@@ -81,14 +82,16 @@
 
   const cartographerListing = ResourceKey ? makeListingCtx(function (trader) {
     // Rhino 守则：块（try）内不声明 const/let（第二次执行抛 redeclaration）→ 声明提到函数最外层
-    let lv = null, sReg = null, sHolder = null, found = null, bp = null
+    let lv = null, sReg = null, sTagSet = null, found = null, bp = null, pos = null
     let text = '', page = '', book = null
     try {
-      lv = trader.level()
+      lv = trader.level    // level 是属性不是方法（C5 探针实证）
       sReg = lv.registryAccess().registryOrThrow(Registries.STRUCTURE)
-      sHolder = sReg.getHolderOrThrow(ResourceKey.create(Registries.STRUCTURE, new ResourceLocation('symbiote', 'meteor_crash')))
+      // HolderSet.direct 在 Rhino 里 NPE（10-01 实证）→ 走 vanilla 同款结构 TAG（svs:meteor_clue）
+      sTagSet = sReg.getOrCreateTag(TagKey.create(Registries.STRUCTURE, new ResourceLocation('svs', 'meteor_clue')))
+      pos = new BlockPos(Math.floor(trader.x), Math.floor(trader.y), Math.floor(trader.z))
       found = lv.getChunkSource().getGenerator()
-        .findNearestMapStructure(lv, HolderSet.direct(sHolder), trader.blockPosition(), 100, false)
+        .findNearestMapStructure(lv, sTagSet, pos, 100, false)
       if (found) {
         bp = found.getFirst()
         text = '最近共生体陨石坐标：X=' + bp.getX() + '，Z=' + bp.getZ() + '。愿真菌与你无缘。'

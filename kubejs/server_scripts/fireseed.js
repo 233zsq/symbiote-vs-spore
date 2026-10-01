@@ -32,7 +32,9 @@ function fsSave(player, list) {
   try { player.getPersistentData().putString('svs_fireseeds', list.join(';')) } catch (e) { }
 }
 function fsNowMs() {
-  return String(Java.loadClass('java.lang.System').currentTimeMillis())
+  // 2026-10-01 实证：Java.loadClass('java.lang.System') 被类过滤器拦截
+  // （'Class is not allowed by class filter!'——右键一次报一次，绑定整体失败）；Date.now() 可用
+  return String(Date.now())
 }
 
 // ── civillis 文明强度挂钩（BaseScoreApi 公开静态方法，反编译实证）──
@@ -194,7 +196,7 @@ EntityEvents.death(event => {
 
   // 扣真菌币（/clear 上限语义：最多清 penalty 枚，不足全扣）
   try {
-    event.server.runCommandSilent('clear ' + owner.name + ' ' + FS_COIN + ' ' + penalty)
+    event.server.runCommandSilent('clear ' + owner.username + ' ' + FS_COIN + ' ' + penalty)   // username=命令可用的纯名（name 是 literal{...}）
     try { owner.getPersistentData().putString('svs_fireseed_streak', String(streak + 1)) } catch (e) { }
     fsTell(owner, '§c你的火种阵亡了！§4-' + penalty + ' 真菌币§c（连续第 ' + (streak + 1) + ' 次，惩罚递减）')
   } catch (e) {

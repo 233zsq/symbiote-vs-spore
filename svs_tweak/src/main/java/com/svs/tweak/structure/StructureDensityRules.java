@@ -34,7 +34,8 @@ public final class StructureDensityRules {
             "roadweaver:roadside_village"
     );
 
-    /** 白名单（主线结构：永远生成，也不记录占坑——不影响其他结构） */
+    /** 白名单（主线结构：永远生成，也不记录占坑——不影响其他结构）
+     *  2026-10-01 用户裁决扩容 9 座：真菌线 spore 5 + SI 讨伐线 inqui 4（结构表拍板） */
     public static final Set<String> WHITELIST = Set.of(
             "symbiote:meteor_crash",                 // 共生体陨石（里程碑：共生）
             // 灾变主线 8 座（与远梦白名单一致）
@@ -42,14 +43,27 @@ public final class StructureDensityRules {
             "cataclysm:ancient_factory", "cataclysm:sunken_city", "cataclysm:cursed_pyramid",
             "cataclysm:frosted_prison", "cataclysm:acropolis",
             // 竞技场日课（中期主线）
-            "pladailyboss:colosseum_arena", "skyarena:sky_arena", "skyarena:ice_arena"
+            "pladailyboss:colosseum_arena", "skyarena:sky_arena", "skyarena:ice_arena",
+            // 真菌线主线（阶段Ⅲ：前线→监狱→医院→实验室→大本营）
+            "spore:military_camp", "spore:prison", "spore:hospital", "spore:lab", "spore:cathedral",
+            // SI 定点讨伐线（阶段Ⅱ教学→Ⅲ 审判场）
+            "inqui:tower", "inqui:underground", "inqui:entrance", "inqui:arena"
     );
 
-    /** 黑名单（永不生成）。用户裁决 2026-09-26：禁 shipwreck + mineshaft（含变体 id；
-     *  四个 id 均经 1.20.1 原版 jar data/minecraft/worldgen/structure/ 实证存在） */
+    /** 黑名单（永不生成）。用户裁决：2026-09-26 禁 shipwreck + mineshaft（含变体）；
+     *  2026-10-01 追加 bettermineshafts 全 13 变体（YUNG 矿井=原版矿井替代品语义重复，
+     *  且 spacing=1 会垄断默认分支的淡化配额；结构表拍板）。
+     *  spore:biomass_tower 维持默认档（实证只在蘑菇岛生成，淡化后即"被真菌吞噬的岛"） */
     public static final Set<String> BLACKLIST = Set.of(
             "minecraft:shipwreck", "minecraft:shipwreck_beached",
-            "minecraft:mineshaft", "minecraft:mineshaft_mesa"
+            "minecraft:mineshaft", "minecraft:mineshaft_mesa",
+            "bettermineshafts:mineshaft_acacia", "bettermineshafts:mineshaft_desert",
+            "bettermineshafts:mineshaft_ice", "bettermineshafts:mineshaft_jungle",
+            "bettermineshafts:mineshaft_lush", "bettermineshafts:mineshaft_mesa",
+            "bettermineshafts:mineshaft_mushroom", "bettermineshafts:mineshaft_oak",
+            "bettermineshafts:mineshaft_red_desert", "bettermineshafts:mineshaft_spruce",
+            "bettermineshafts:mineshaft_spruce_snowy", "bettermineshafts:mineshaft_overgrown",
+            "bettermineshafts:mineshaft_dripstone"
     );
 
     private StructureDensityRules() {

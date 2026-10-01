@@ -5,9 +5,10 @@
 // 方案：那条路的两大病灶——补刀被无敌帧差值分支整段吃掉（远程加压空转）、
 // 增伤补刀与限伤回补互相抵消（400 伤害打 Boss 实际只结一半）——在本层不复存在。
 // 评审建议的 EF 原生钩子不需要：EF 事件只覆盖 EF 玩家出手，盖不住怪物弹射物与 Boss 受击。
-// 结算顺序：乘区（①共生减伤 ②共生增伤 ③远程加压）→ 限伤（④母巢爬升模板）。
-// 用户裁决 2026-09-26：删除「HP≥200 的 Monster 通用 10% cap」层——重要 Boss/精英限伤
-// 只保留两处：cataclysm 原生 cap（config 层已对齐 DOTE）与下方母巢模板（8%+爬升）。
+// 结算顺序：乘区（①共生减伤 ②共生增伤 ③远程减压）。
+// 用户裁决 2026-10-01：③由"远程加压"反转为"远程减压"——本包主打近战（EF），
+// 敌我双方受到的弹射物伤害一律 ×0.5，主线 Boss 直接免疫远程；并取消全部脚本层限伤
+//（母巢 8% 爬升模板已删；灾变原生 cap 是 mod 配置层，是否同步取消待用户确认）。
 
 ;(function registerSvsDamage() {
   const SD_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
@@ -33,12 +34,13 @@
   // 共生体克制（决议五-1，与 symbiote_counter 共享数值源——改这里要同步改那边的注释）
   const DMG_MULT = { ATTACHED: 1.1, INTEGRATED: 1.2, COOPERATIVE: 1.35, DOMINANT: 1.5 }
   const DMG_REDUCE = { ATTACHED: 0.10, INTEGRATED: 0.15, COOPERATIVE: 0.22, DOMINANT: 0.30 }
-  // 远程加压（决议一-4）
-  const RP_MULT = 1.5
-  // 母巢模板（spore mound→proto 线；8% 上限 + 累计爬升减伤封顶 90% + 停手 5s 衰减）
-  // 通用 10% 限伤层已按用户裁决删除（见文件头），ELITE_* 常量与敌对判定不复存在
-  const HIVEMIND = ['spore:proto']
-  const HIVE_CAP = 0.08, HIVE_RATE_MAX = 0.90, HIVE_DECAY_DELAY = 100, HIVE_DECAY_PER_SEC = 0.20
+  // 远程减压（2026-10-01 裁决：EF 近战包，远程一律减压）——敌我双方弹射物伤害 ×0.5
+  const RP_MULT = 0.5
+  // 主线 Boss 远程免疫名单（裁决原文"boss直接免疫远程"，逼近战）：
+  // 灾变全命名空间（含 DailyBoss-Cataclysm 复用的灾变怪）+ BOMD 三 Boss + 母巢 proto。
+  // 名单待用户增删（SLU/血源/竞技场 Boss 未收，见汇报）
+  const RP_IMMUNE_PREFIX = ['cataclysm:', 'bosses_of_mass_destruction:']
+  const RP_IMMUNE_EXACT = ['spore:proto']
 
   // ── Rhino 守则（2026-09-25 崩服实证）──────────────────────────────────────
   // 控制流块（if / for / while / try / catch）**内部**不得声明 const/let：
@@ -48,9 +50,15 @@
   // 故：块内只做赋值，声明一律提到所属函数最外层；校验 tools/check_kubejs_rhino.py。
   let bsTracker = null, bsProf = null, bsPdStage = ''
   let sdEnt = null, sdSrc = null, sdSrcEnt = null, sdType = '', sdFromSpore = false, sdAmount = 0
-  let sdRed = 0, sdMult = 1, sdIsProj = false, sdPress = false
-  let sdMaxHp = 0, sdRate = 0
-  let sdPd = null, sdCum = 0, sdLast = 0, sdNow = 0, sdEffective = 0
+  let sdRed = 0, sdMult = 1, sdIsProj = false, sdImmune = false
+
+  // Boss 远程免疫判定（前缀 + 精确名单）
+  function remoteImmune(typeStr) {
+    for (let i = 0; i < RP_IMMUNE_PREFIX.length; i++) {
+      if (typeStr.indexOf(RP_IMMUNE_PREFIX[i]) === 0) return true
+    }
+    return RP_IMMUNE_EXACT.indexOf(typeStr) >= 0
+  }
 
   // 自包含档位判定（与 symbiote_counter.getBondStage 同逻辑，不跨脚本依赖）
   function bondStage(player) {
@@ -103,34 +111,20 @@
         if (sdMult) sdAmount = sdAmount * sdMult
       }
 
-      // ③ 远程加压：飞行/水中的怪物以弹射物命中 → ×1.5（玩家的不管）
-      // 2026-09-30 裁决落地：原 isProjectile() 在 1.19.4 伤害类型重构中已被移除（本分支曾恒不生效）；
-      // 改走 svs_tweak 助手的官方 DamageTypeTags.IS_PROJECTILE 判定 + 射手 inWater/onGround（同助手通道）。
+      // ③ 远程减压（2026-10-01 裁决反转：主打近战的 EF 包，远程是逃课手段要压）：
+      // 弹射物伤害敌我双方一律 ×0.5；Boss 免疫名单内直接归零（逼近战）。
+      // isProjectile 走 svs_tweak 助手官方 DamageTypeTags.IS_PROJECTILE 判定。
       sdIsProj = false
       if (SvsDamageHelper) {
         try { sdIsProj = SvsDamageHelper.isProjectile(sdSrc) } catch (e) { }
       }
-      if (sdIsProj && sdSrcEnt && !sdSrcEnt.player) {
-        sdPress = false
-        try { sdPress = SvsDamageHelper.inWater(sdSrcEnt) || !SvsDamageHelper.onGround(sdSrcEnt) } catch (e) { }
-        if (sdPress) sdAmount = sdAmount * RP_MULT
-      }
-
-      // ④ 限伤：母巢模板（proto 是 organoid 非 Monster，故不设敌对判定，仅按名单匹配）
-      if (!sdEnt.player && HIVEMIND.indexOf(sdType) >= 0) {
-        sdMaxHp = sdEnt.maxHealth
-        sdPd = sdEnt.getPersistentData()
-        sdCum = sdPd.getDouble('svs_dc_cum')
-        sdLast = sdPd.getLong('svs_dc_last')
-        sdNow = sdEnt.level.getDayTime()   // 探针实证：gameTime 字段 undefined，用 getDayTime()
-        if (sdLast > 0 && sdNow - sdLast > HIVE_DECAY_DELAY) {
-          sdCum = Math.max(0, sdCum - (sdNow - sdLast - HIVE_DECAY_DELAY) / 20 * HIVE_DECAY_PER_SEC * sdMaxHp)
+      if (sdIsProj) {
+        sdImmune = remoteImmune(sdType)
+        if (sdImmune) {
+          sdAmount = 0
+        } else {
+          sdAmount = sdAmount * RP_MULT
         }
-        sdRate = Math.min(HIVE_RATE_MAX, sdCum / sdMaxHp)
-        sdEffective = Math.min(sdAmount, HIVE_CAP * sdMaxHp) * (1 - sdRate)
-        sdPd.putDouble('svs_dc_cum', sdCum + sdEffective)
-        sdPd.putLong('svs_dc_last', sdNow)
-        sdAmount = Math.min(sdAmount, HIVE_CAP * sdMaxHp) * (1 - sdRate)
       }
 
       if (sdAmount !== event.amount) event.setAmount(sdAmount)
@@ -138,5 +132,5 @@
       console.error('[SVS-伤害] 监听器异常（已兜住，不崩游戏）: ' + e)
     }
   })
-  console.info('[SVS-伤害] 统一伤害层已注册：共生两向 + 远程加压 + 母巢爬升（LivingHurtEvent.setAmount 直改；通用 10% 限伤层已按 9-26 裁决移除；归因走 svs_tweak 1.0.4 助手）')
+  console.info('[SVS-伤害] 统一伤害层已注册：共生两向 + 远程减压×0.5 + Boss 免疫远程（LivingHurtEvent.setAmount 直改；全部脚本层限伤已按 10-01 裁决移除；归因走 svs_tweak 助手）')
 })()
