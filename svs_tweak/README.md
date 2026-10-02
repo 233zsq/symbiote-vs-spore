@@ -7,7 +7,7 @@
 - `StructureCheckDensityMixin` — 结构密度提纯（75 格半径最多 1 个结构，白名单/忽略/黑名单见 `StructureDensityRules`）
 - `AStagesBadFileMixin` — ASTages 坏文件容错（readList 安全版）
 - 另有 `SvsMixinCanceller`（MixinSquared ServiceLoader）运行时取消 2 个冲突 mixin
-- `SvsDamageHelper`（1.0.4，非 mixin）——KubeJS 伤害归因静态助手：`attackerOf/directOf`（DamageSource.getEntity 在 Rhino 里名称解析不通，走纯 Java 通道）、`isProjectile`（官方 IS_PROJECTILE 标签）、`inWater/onGround`
+- `SvsDamageHelper`（1.0.4/1.0.6，非 mixin）——KubeJS 伤害归因静态助手：`attackerOf/directOf`（DamageSource.getEntity 在 Rhino 里名称解析不通，走纯 Java 通道）、`isProjectile`（官方 IS_PROJECTILE 标签）、`inWater/onGround`；1.0.6 增 `locateStructure`（结构寻址纯 Java 通道，Rhino 里 HolderSet.direct 必 NPE）与 `villagerTradeDump`（交易表诊断）
 
 ## ⚠️ 构建红线：jar manifest 必须带 MixinConfigs
 

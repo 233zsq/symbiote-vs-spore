@@ -5,10 +5,10 @@
 // 方案：那条路的两大病灶——补刀被无敌帧差值分支整段吃掉（远程加压空转）、
 // 增伤补刀与限伤回补互相抵消（400 伤害打 Boss 实际只结一半）——在本层不复存在。
 // 评审建议的 EF 原生钩子不需要：EF 事件只覆盖 EF 玩家出手，盖不住怪物弹射物与 Boss 受击。
-// 结算顺序：乘区（①共生减伤 ②共生增伤 ③远程减压）。
-// 用户裁决 2026-10-01：③由"远程加压"反转为"远程减压"——本包主打近战（EF），
-// 敌我双方受到的弹射物伤害一律 ×0.5，主线 Boss 直接免疫远程；并取消全部脚本层限伤
-//（母巢 8% 爬升模板已删；灾变原生 cap 是 mod 配置层，是否同步取消待用户确认）。
+// 结算顺序：乘区（①共生减伤 ②共生增伤 ③远程方向结算）。
+// 用户裁决 2026-10-01（二次细化）：③远程规则方向化——玩家被弹射物打一律 ×0.5；
+// 玩家远程打怪：飞行/水中怪（含 Boss）×2 风筝奖励、地面 Boss 免疫归零、地面怪 ×0.5、
+// 怪内战不动。并取消全部脚本层限伤（灾变原生 cap 经核已是 1000000=无上限，无需动配置）。
 
 ;(function registerSvsDamage() {
   const SD_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
@@ -34,13 +34,19 @@
   // 共生体克制（决议五-1，与 symbiote_counter 共享数值源——改这里要同步改那边的注释）
   const DMG_MULT = { ATTACHED: 1.1, INTEGRATED: 1.2, COOPERATIVE: 1.35, DOMINANT: 1.5 }
   const DMG_REDUCE = { ATTACHED: 0.10, INTEGRATED: 0.15, COOPERATIVE: 0.22, DOMINANT: 0.30 }
-  // 远程减压（2026-10-01 裁决：EF 近战包，远程一律减压）——敌我双方弹射物伤害 ×0.5
+  // 远程结算（2026-10-01 二次裁决：EF 近战包，远程规则按"打谁/谁打"分方向）——
+  // 总则：玩家被弹射物打（无论射手是不是飞行怪）→ ×0.5；
+  // 玩家远程打怪：飞行/水中怪（含 Boss）×2 风筝奖励（它们不免疫）、
+  //              地面 Boss 免疫（归零）、地面普通怪 ×0.5；怪内战的弹射物不动。
   const RP_MULT = 0.5
-  // 主线 Boss 远程免疫名单（裁决原文"boss直接免疫远程"，逼近战）：
-  // 灾变全命名空间（含 DailyBoss-Cataclysm 复用的灾变怪）+ BOMD 三 Boss + 母巢 proto。
-  // 名单待用户增删（SLU/血源/竞技场 Boss 未收，见汇报）
-  const RP_IMMUNE_PREFIX = ['cataclysm:', 'bosses_of_mass_destruction:']
-  const RP_IMMUNE_EXACT = ['spore:proto']
+  const RP_AIRBORNE_MULT = 2.0
+  // Boss 免疫名单（仅对"地面"Boss 生效；飞行/水中 Boss 被上方 ×2 分支接管）：
+  // 灾变全前缀（含 DailyBoss-Cataclysm 复用怪）+ BOMD + SLU 全部 boss_ 前缀（42）+
+  // 血源四 Boss + 母巢 proto。skyarena 无自有实体（其 Boss 已被上述前缀覆盖）。
+  const RP_IMMUNE_PREFIX = ['cataclysm:', 'bosses_of_mass_destruction:', 'slu:boss_']
+  const RP_IMMUNE_EXACT = ['spore:proto',
+    'bloodandmadness:cleric_beast', 'bloodandmadness:father_gascoigne',
+    'bloodandmadness:gascoigne_beast', 'bloodandmadness:micolash']
 
   // ── Rhino 守则（2026-09-25 崩服实证）──────────────────────────────────────
   // 控制流块（if / for / while / try / catch）**内部**不得声明 const/let：
@@ -50,7 +56,7 @@
   // 故：块内只做赋值，声明一律提到所属函数最外层；校验 tools/check_kubejs_rhino.py。
   let bsTracker = null, bsProf = null, bsPdStage = ''
   let sdEnt = null, sdSrc = null, sdSrcEnt = null, sdType = '', sdFromSpore = false, sdAmount = 0
-  let sdRed = 0, sdMult = 1, sdIsProj = false, sdImmune = false
+  let sdRed = 0, sdMult = 1, sdIsProj = false, sdAirborne = false
 
   // Boss 远程免疫判定（前缀 + 精确名单）
   function remoteImmune(typeStr) {
@@ -111,20 +117,28 @@
         if (sdMult) sdAmount = sdAmount * sdMult
       }
 
-      // ③ 远程减压（2026-10-01 裁决反转：主打近战的 EF 包，远程是逃课手段要压）：
-      // 弹射物伤害敌我双方一律 ×0.5；Boss 免疫名单内直接归零（逼近战）。
-      // isProjectile 走 svs_tweak 助手官方 DamageTypeTags.IS_PROJECTILE 判定。
+      // ③ 远程结算（2026-10-01 二次裁决，方向化；见上方常量注释）：
       sdIsProj = false
       if (SvsDamageHelper) {
         try { sdIsProj = SvsDamageHelper.isProjectile(sdSrc) } catch (e) { }
       }
       if (sdIsProj) {
-        sdImmune = remoteImmune(sdType)
-        if (sdImmune) {
-          sdAmount = 0
-        } else {
+        if (sdEnt.player) {
+          // 玩家被弹射物打（含飞行/水中怪的攻击）：一律减压 ×0.5
           sdAmount = sdAmount * RP_MULT
+        } else if (sdSrcEnt && sdSrcEnt.player && sdSrcEnt instanceof SD_ServerPlayer) {
+          // 玩家的弹射物打怪：飞行/水中怪 ×2（不免疫）；地面 Boss 免疫；地面怪 ×0.5
+          sdAirborne = false
+          try { sdAirborne = SvsDamageHelper.inWater(sdEnt) || !SvsDamageHelper.onGround(sdEnt) } catch (e) { sdAirborne = false }
+          if (sdAirborne) {
+            sdAmount = sdAmount * RP_AIRBORNE_MULT
+          } else if (remoteImmune(sdType)) {
+            sdAmount = 0
+          } else {
+            sdAmount = sdAmount * RP_MULT
+          }
         }
+        // 怪内战的弹射物（射手非玩家）不动
       }
 
       if (sdAmount !== event.amount) event.setAmount(sdAmount)
@@ -132,5 +146,5 @@
       console.error('[SVS-伤害] 监听器异常（已兜住，不崩游戏）: ' + e)
     }
   })
-  console.info('[SVS-伤害] 统一伤害层已注册：共生两向 + 远程减压×0.5 + Boss 免疫远程（LivingHurtEvent.setAmount 直改；全部脚本层限伤已按 10-01 裁决移除；归因走 svs_tweak 助手）')
+  console.info('[SVS-伤害] 统一伤害层已注册：共生两向 + 远程方向结算（被弹射物打×0.5 / 打飞行水中怪×2 / 地面Boss免疫）+ 限伤已全部移除（归因走 svs_tweak 助手）')
 })()

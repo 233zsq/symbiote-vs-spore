@@ -6,8 +6,18 @@ import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderSet;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.levelgen.structure.Structure;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -69,5 +79,23 @@ public final class SvsDamageHelper {
             }
         }
         return sb.length() == 0 ? "(无匹配职业)" : sb.toString();
+    }
+
+    /**
+     * 结构寻址（2026-10-01 制图师线索书根治）：整条链（registry → HolderSet.direct →
+     * findNearestMapStructure）放进纯 Java——Rhino 里 HolderSet.direct 的 varargs/List
+     * 重载都 NPE，getOrCreateTag 走标签又难诊断空标签。返回 "X=..|Z=.." 或 null（未找到）。
+     */
+    public static String locateStructure(ServerLevel level, String ns, String path, BlockPos pos) {
+        Registry<Structure> reg = level.registryAccess().registryOrThrow(Registries.STRUCTURE);
+        ResourceKey<Structure> key = ResourceKey.create(Registries.STRUCTURE, new ResourceLocation(ns, path));
+        Holder<Structure> holder = reg.getHolderOrThrow(key);
+        var found = level.getChunkSource().getGenerator()
+                .findNearestMapStructure(level, HolderSet.direct(List.of(holder)), pos, 100, false);
+        if (found == null) {
+            return null;
+        }
+        BlockPos bp = found.getFirst();
+        return "X=" + bp.getX() + "|Z=" + bp.getZ();
     }
 }

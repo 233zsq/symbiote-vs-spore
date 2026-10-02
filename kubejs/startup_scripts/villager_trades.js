@@ -69,32 +69,26 @@
   // 交易瞬间按交易者位置计算最近陨石坐标写入书页。
   // 初版用成书不用探索地图（vanilla TreasureMapForEmeralds 强绑绿宝石+指南针计价链，
   // 自绘地图链路长；成书承载同等信息，TODO 升级真地图）。
-  let ResourceKey, Registries, TagKey, BlockPos
+  let BlockPos, SvsTweakHelper
   try {
-    ResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
-    Registries = Java.loadClass('net.minecraft.core.registries.Registries')
-    TagKey = Java.loadClass('net.minecraft.tags.TagKey')
     BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+    SvsTweakHelper = Java.loadClass('com.svs.tweak.kubejs.SvsDamageHelper')   // 1.0.6：locateStructure 纯 Java 寻址
   } catch (e) {
-    console.error('[SVS-真菌币] 线索书依赖类加载失败，制图师交易跳过: ' + e)
-    ResourceKey = null
+    console.error('[SVS-真菌币] 线索书依赖类加载失败（svs_tweak ≥1.0.6 缺失？），制图师交易跳过: ' + e)
+    SvsTweakHelper = null
   }
 
-  const cartographerListing = ResourceKey ? makeListingCtx(function (trader) {
+  const cartographerListing = SvsTweakHelper ? makeListingCtx(function (trader) {
     // Rhino 守则：块（try）内不声明 const/let（第二次执行抛 redeclaration）→ 声明提到函数最外层
-    let lv = null, sReg = null, sTagSet = null, found = null, bp = null, pos = null
+    let lv = null, pos = null, coords = ''
     let text = '', page = '', book = null
     try {
       lv = trader.level    // level 是属性不是方法（C5 探针实证）
-      sReg = lv.registryAccess().registryOrThrow(Registries.STRUCTURE)
-      // HolderSet.direct 在 Rhino 里 NPE（10-01 实证）→ 走 vanilla 同款结构 TAG（svs:meteor_clue）
-      sTagSet = sReg.getOrCreateTag(TagKey.create(Registries.STRUCTURE, new ResourceLocation('svs', 'meteor_clue')))
       pos = new BlockPos(Math.floor(trader.x), Math.floor(trader.y), Math.floor(trader.z))
-      found = lv.getChunkSource().getGenerator()
-        .findNearestMapStructure(lv, sTagSet, pos, 100, false)
-      if (found) {
-        bp = found.getFirst()
-        text = '最近共生体陨石坐标：X=' + bp.getX() + '，Z=' + bp.getZ() + '。愿真菌与你无缘。'
+      // 寻址链整体走 svs_tweak 1.0.6 locateStructure（Rhino 里 HolderSet.direct 必 NPE）
+      coords = SvsTweakHelper.locateStructure(lv, 'symbiote', 'meteor_crash', pos)
+      if (coords) {
+        text = '最近共生体陨石坐标：' + coords.replace('|', '，') + '。愿真菌与你无缘。'
       } else {
         text = '方圆 1600 格内未发现共生体陨石……往更远的荒野去吧。'
       }

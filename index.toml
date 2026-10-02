@@ -7011,7 +7011,7 @@ hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 [[files]]
 file = "mods/svs-tweak.pw.toml"
-hash = "839308a469a825ce0f0322b36589c229b7299802fb1a99888fa011ca878b1742"
+hash = "0a3f36040d54bad333fe036e601d06233dd204cf565fc358d18ae3d0195a1097"
 
 [[files]]
 file = "mods/explorers-compass.pw.toml"

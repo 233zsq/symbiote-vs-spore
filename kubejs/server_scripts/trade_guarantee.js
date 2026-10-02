@@ -11,15 +11,12 @@
 const TG_Villager = Java.loadClass('net.minecraft.world.entity.npc.Villager')
 let TG_MerchantOffer = null
 try { TG_MerchantOffer = Java.loadClass('net.minecraft.world.item.trading.MerchantOffer') } catch (e) { }
-let TG_ResourceKey = null, TG_Registries = null, TG_TagKey = null, TG_ResourceLocation = null, TG_BlockPos = null
+let TG_BlockPos = null, TG_Helper = null
 try {
-  TG_ResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
-  TG_Registries = Java.loadClass('net.minecraft.core.registries.Registries')
-  TG_TagKey = Java.loadClass('net.minecraft.tags.TagKey')
-  TG_ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
   TG_BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  TG_Helper = Java.loadClass('com.svs.tweak.kubejs.SvsDamageHelper')   // 1.0.6：locateStructure 纯 Java 寻址
 } catch (e) {
-  console.warn('[SVS-交易] 线索书依赖类加载失败，制图师补挂跳过: ' + e)
+  console.warn('[SVS-交易] 线索书依赖类加载失败（svs_tweak ≥1.0.6 缺失？），制图师补挂跳过: ' + e)
 }
 
 // 三笔交易定义（与 villager_trades.js 表注册保持同参数）
@@ -39,26 +36,23 @@ let TG_TICK = 0
 let TG_Players = null, TG_P = null, TG_VLIST = null
 let TG_V = null, TG_PD = null, TG_OFFERS = null, TG_OFFER = null, TG_BOOK = null
 let TG_PROFESSION = '', TG_HAS = false
-let TG_LV = null, TG_REG = null, TG_HOLDERSET = null, TG_FOUND = null, TG_BP = null, TG_POS = null
+let TG_LV = null, TG_POS = null, TG_COORDS = ''
 let TG_TEXT = '', TG_PAGE = ''
 
-// 造线索书（按村民位置寻址最近陨石；与 villager_trades.js cartographer 交易同逻辑）
+// 造线索书（寻址链整体走 svs_tweak 1.0.6 的 locateStructure 纯 Java 通道——
+// Rhino 里 HolderSet.direct 必 NPE、标签法又难诊断空标签，10-01 两轮实证后根治）
 function TGMakeBook(trader) {
-  if (!TG_TagKey) return null
+  if (!TG_Helper) return null
   try {
     TG_LV = trader.level    // level 是属性不是方法（探针 C5 实证：level() 调用报错）
-    TG_REG = TG_LV.registryAccess().registryOrThrow(TG_Registries.STRUCTURE)
-    // HolderSet.direct 在 Rhino 里调 varargs/List 重载都会 NPE（10-01 两轮实证）→
-    // 走 vanilla 同款结构 TAG（openloader svs 包 svs:meteor_clue = symbiote:meteor_crash）
-    TG_HOLDERSET = TG_REG.getOrCreateTag(TG_TagKey.create(TG_Registries.STRUCTURE, new TG_ResourceLocation('svs', 'meteor_clue')))
-    TG_POS = new TG_BlockPos(Math.floor(trader.x), Math.floor(trader.y), Math.floor(trader.z))   // blockPosition() 未实证，用实证过的 x/y/z
-    TG_FOUND = TG_LV.getChunkSource().getGenerator()
-      .findNearestMapStructure(TG_LV, TG_HOLDERSET, TG_POS, 100, false)
-    if (TG_FOUND) {
-      TG_BP = TG_FOUND.getFirst()
-      TG_TEXT = '最近共生体陨石坐标：X=' + TG_BP.getX() + '，Z=' + TG_BP.getZ() + '。愿真菌与你无缘。'
+    TG_POS = new TG_BlockPos(Math.floor(trader.x), Math.floor(trader.y), Math.floor(trader.z))
+    TG_COORDS = TG_Helper.locateStructure(TG_LV, 'symbiote', 'meteor_crash', TG_POS)
+    if (TG_COORDS) {
+      TG_TEXT = '最近共生体陨石坐标：' + TG_COORDS.replace('|', '，') + '。愿真菌与你无缘。'
+      console.info('[SVS-交易] 线索书寻址成功：' + TG_COORDS)
     } else {
       TG_TEXT = '方圆 1600 格内未发现共生体陨石……往更远的荒野去吧。'
+      console.info('[SVS-交易] 线索书寻址未命中（1600 格内无陨石位）')
     }
     TG_PAGE = '{"text":"' + TG_TEXT + '"}'
     return Item.of('minecraft:written_book', '{title:"共生体线索",author:"制图师",pages:[' + TG_PAGE + ']}')
