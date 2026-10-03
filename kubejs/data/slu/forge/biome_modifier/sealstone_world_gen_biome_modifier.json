@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": [],
+  "features": "slu:sealstone_world_gen",
+  "step": "surface_structures"
+}
