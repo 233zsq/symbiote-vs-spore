@@ -1,13 +1,13 @@
 name = "Spore inquisition"
-filename = "spore_inquisition_3.1.jar"
+filename = "spore_inquisition_3.2.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/GJBRv9tX/versions/jTBlVupd/spore_inquisition_3.1.jar"
+url = "https://cdn.modrinth.com/data/GJBRv9tX/versions/m0XDmnP2/spore_inquisition_3.2.jar"
 hash-format = "sha512"
-hash = "3ebd886445d320d17dbf1953108f05e3d6117929ab01749cf65c5e6da58be9b9264dd2e7c4b095e9c293c8d8a7a82852ae0ec0874dd109fd866333a35681fe7b"
+hash = "fa904de3268b364d6c16d41bae0819e2e5fd5d713fccaf6716c3e25e65dca7db1fca07d9fd6c1d7e0297376e6dba51a2393f2853e001349cb6be6d3afac04935"
 
 [update]
 [update.modrinth]
 mod-id = "GJBRv9tX"
-version = "jTBlVupd"
+version = "m0XDmnP2"
