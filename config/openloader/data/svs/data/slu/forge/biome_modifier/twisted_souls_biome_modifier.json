@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [],
+  "spawners": {
+    "type": "slu:twisted_souls",
+    "weight": 0,
+    "minCount": 0,
+    "maxCount": 0
+  }
+}

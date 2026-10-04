@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [],
+  "spawners": {
+    "type": "slu:monster_crucible_knight",
+    "weight": 0,
+    "minCount": 0,
+    "maxCount": 0
+  }
+}

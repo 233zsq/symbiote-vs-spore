@@ -4,7 +4,7 @@
 //   离村/跨维度冻结（HUD 显示"围城暂缓"）；③ 回村时倒计时不足 5 分钟 → 回拨 5:00 红色预警；
 //   ④ 怪在玩家附近自然加载区块生成，不强加载；⑤ HUD "第 X 天 / 距围城 N 天"，围城日红色。
 //   ⑥ 失守惩罚（决议一-5）：波次窗口内村庄村民数较开波腰斩 → 判失守：
-//      文明 -15（civillis BaseScoreApi，与 fireseed.js 同通道）+ 在场玩家均摊扣真菌币（单人全额）
+//      文明 -15（civillis BaseScoreApi，与 fireseed.js 同通道）+ 在场玩家均摊扣真菌残魂（单人全额）
 // 落地选择：
 //   - "村庄区域"判定：128 格内村民（minecraft:villager）≥ 3，且维度为主世界
 //   - 倒计时：存玩家 persistentData（svs_siege_timer，tick），每玩家独立（多人各算各的）
@@ -26,7 +26,7 @@ try {
 } catch (e) {
   console.warn('[SVS-围城] civillis BaseScoreApi 不可用，失守文明处罚关闭: ' + e)
 }
-const SIEGE_DEF_FINE_TOTAL = 40       // 失守罚款真菌币总额（在场玩家均摊，单人全额）
+const SIEGE_DEF_FINE_TOTAL = 40       // 失守罚款真菌残魂总额（在场玩家均摊，单人全额）
 const SIEGE_DEF_SCORE = -15           // 失守文明分
 const SIEGE_DEF_RANGE = 64
 
@@ -112,10 +112,10 @@ function siegeApplyDefeat(player, worldDay) {
   for (let i = 0; i < present.length; i++) {
     p2 = present[i]
     server.runCommandSilent('clear ' + p2.username + ' kubejs:spore_coin ' + share)
-    p2.tell(Text.darkRed('【围城失守】村庄生灵涂炭…… -' + share + ' 真菌币（在场均摊）'))
+    p2.tell(Text.darkRed('【围城失守】村庄生灵涂炭…… -' + share + ' 真菌残魂（在场均摊）'))
   }
   server.runCommandSilent('execute at ' + player.username + ' run title @a[distance=..128] title {"text":"村庄失守……","color":"dark_red","bold":true}')
-  console.info('[SVS-围城] ' + player.username + ' 的村庄失守：文明 ' + SIEGE_DEF_SCORE + '，' + present.length + ' 人均摊 -' + share + ' 真菌币')
+  console.info('[SVS-围城] ' + player.username + ' 的村庄失守：文明 ' + SIEGE_DEF_SCORE + '，' + present.length + ' 人均摊 -' + share + ' 真菌残魂')
 }
 
 function siegeHud(player, text, color) {

@@ -3,7 +3,7 @@
 //   右键村民（手持 kubejs:fireseed_token）→ 绑定为火种（改名"火种"），消耗 1 工具，
 //   立刻获得该村民当前最贵可交易物品 ×1（职业等级越高奖励越肥的落地件）
 //   每人最多绑定 5 个火种；绑定记录存玩家 persistentData（id|毫秒 时间戳，id=玩家name+时间戳）
-//   火种村民死亡 → 扣绑定者真菌币（连续死亡递减 100%/50%/25%…）；绑定者不在线 → 文明度 -10（civillis BaseScoreApi）
+//   火种村民死亡 → 扣绑定者真菌残魂（连续死亡递减 100%/50%/25%…）；绑定者不在线 → 文明度 -10（civillis BaseScoreApi）
 //   绑定者超过 7 天未上线 → 登录时自动解绑（文明不降级）
 //   文明强度（决议一-2）：绑定 → 村民周边 ±64 格 +5 分；死亡/解绑 → 撤分
 // 多人/经济逻辑，K3 亲写（分工规则）。数值为初版默认，实测可调。
@@ -12,7 +12,7 @@
 const FS_TOKEN = 'kubejs:fireseed_token'
 const FS_COIN = 'kubejs:spore_coin'
 const FS_MAX = 5
-const FS_PENALTY_BASE = 20          // 首次死亡扣 20 真菌币，之后 50%/25% 递减
+const FS_PENALTY_BASE = 20          // 首次死亡扣 20 真菌残魂，之后 50%/25% 递减
 const FS_OFFLINE_DAYS = 7
 const FS_VILLAGER = 'minecraft:villager'
 
@@ -156,7 +156,7 @@ ItemEvents.entityInteracted(event => {
   fsLog('绑定: ' + player.name + ' <- 村民 ' + uuid + '（当前 ' + list.length + '/' + FS_MAX + '）')
 })
 
-// ── 死亡惩罚（真菌币递减）───────────────────────────────────────────────────
+// ── 死亡惩罚（真菌残魂递减）───────────────────────────────────────────────────
 EntityEvents.death(event => {
   const mob = event.entity
   if (!mob || String(mob.type) !== FS_VILLAGER) return
@@ -194,11 +194,11 @@ EntityEvents.death(event => {
   else if (streak >= 2) mult = 0.25
   const penalty = Math.max(1, Math.round(FS_PENALTY_BASE * mult))
 
-  // 扣真菌币（/clear 上限语义：最多清 penalty 枚，不足全扣）
+  // 扣真菌残魂（/clear 上限语义：最多清 penalty 枚，不足全扣）
   try {
     event.server.runCommandSilent('clear ' + owner.username + ' ' + FS_COIN + ' ' + penalty)   // username=命令可用的纯名（name 是 literal{...}）
     try { owner.getPersistentData().putString('svs_fireseed_streak', String(streak + 1)) } catch (e) { }
-    fsTell(owner, '§c你的火种阵亡了！§4-' + penalty + ' 真菌币§c（连续第 ' + (streak + 1) + ' 次，惩罚递减）')
+    fsTell(owner, '§c你的火种阵亡了！§4-' + penalty + ' 真菌残魂§c（连续第 ' + (streak + 1) + ' 次，惩罚递减）')
   } catch (e) {
     fsLog('扣款失败: ' + e)
   }

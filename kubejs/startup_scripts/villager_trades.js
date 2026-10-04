@@ -24,7 +24,7 @@
     TradeRegistry = Java.loadClass('dev.architectury.registry.level.entity.trade.TradeRegistry')
     ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
   } catch (e) {
-    console.error('[SVS-真菌币] 交易依赖类加载失败，村民交易跳过: ' + e)
+    console.error('[SVS-真菌残魂] 交易依赖类加载失败，村民交易跳过: ' + e)
     return
   }
 
@@ -38,7 +38,7 @@
       try {
         return new JavaAdapter(ItemListing, function (trader, random) { return factory() })
       } catch (e2) {
-        console.error('[SVS-真菌币] ItemListing 适配失败，村民交易跳过: ' + e2)
+        console.error('[SVS-真菌残魂] ItemListing 适配失败，村民交易跳过: ' + e2)
         return null
       }
     }
@@ -63,20 +63,20 @@
   function registerTrade(profId, listing) {
     const prof = VILLAGER_PROFESSIONS.getValue(new ResourceLocation('minecraft', profId))
     if (!prof) {
-      console.error('[SVS-真菌币] 职业 id 不存在，交易跳过: ' + profId)
+      console.error('[SVS-真菌残魂] 职业 id 不存在，交易跳过: ' + profId)
       return false
     }
     try {
       TradeRegistry.registerVillagerTrade(prof, 1, listing)
       return true
     } catch (e) {
-      console.error('[SVS-真菌币] 交易登记失败(' + profId + '): ' + e)
+      console.error('[SVS-真菌残魂] 交易登记失败(' + profId + '): ' + e)
       return false
     }
   }
   const okFarmer = registerTrade('farmer', farmerListing)
   const okToolsmith = registerTrade('toolsmith', toolsmithListing)
   const okCartographer = cartographerListing ? registerTrade('cartographer', cartographerListing) : false
-  console.info('[SVS-真菌币] 村民交易登记：农民 ' + okFarmer + ' / 工具匠 ' + okToolsmith + ' / 制图师 ' + okCartographer +
+  console.info('[SVS-真菌残魂] 村民交易登记：农民 ' + okFarmer + ' / 工具匠 ' + okToolsmith + ' / 制图师 ' + okCartographer +
     '（12币→8grout、20币→1火种工具、15币→探险家指南针；maxUses=16）')
 })()
