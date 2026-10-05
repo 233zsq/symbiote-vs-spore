@@ -58,6 +58,18 @@
     return new MerchantOffer(Item.of('kubejs:spore_coin', 15), Item.of('minecraft:air'), Item.of('explorerscompass:explorerscompass', 1), 16, 2, 0.05)
   })
 
+  // ── SLU 三魂兑换（规格书_真菌之魂 B 节，2026-10-05）：单向不回兑，打通"前期刷真菌攒家底 → 末期换魂补短板"
+  //   工具匠 24 币→活尸之魂 / 盔甲匠 48 币→骑士之魂 / 武器匠 64 币→巨人之魂（比率初版默认，实测可微调）
+  const toolsHollowListing = makeListing(function () {
+    return new MerchantOffer(Item.of('kubejs:spore_coin', 24), Item.of('minecraft:air'), Item.of('slu:hollow_soul', 1), 16, 2, 0.05)
+  })
+  const armorerKnightListing = makeListing(function () {
+    return new MerchantOffer(Item.of('kubejs:spore_coin', 48), Item.of('minecraft:air'), Item.of('slu:knight_soul', 1), 16, 2, 0.05)
+  })
+  const weaponsmithGiantListing = makeListing(function () {
+    return new MerchantOffer(Item.of('kubejs:spore_coin', 64), Item.of('minecraft:air'), Item.of('slu:giant_soul', 1), 16, 2, 0.05)
+  })
+
   // ── 登记（architectury 静态 API；见文件头 ②）────────────────────────────────
   const VILLAGER_PROFESSIONS = ForgeRegistries.VILLAGER_PROFESSIONS
   function registerTrade(profId, listing) {
@@ -77,6 +89,10 @@
   const okFarmer = registerTrade('farmer', farmerListing)
   const okToolsmith = registerTrade('toolsmith', toolsmithListing)
   const okCartographer = cartographerListing ? registerTrade('cartographer', cartographerListing) : false
+  const okHollow = toolsHollowListing ? registerTrade('toolsmith', toolsHollowListing) : false
+  const okKnight = armorerKnightListing ? registerTrade('armorer', armorerKnightListing) : false
+  const okGiant = weaponsmithGiantListing ? registerTrade('weaponsmith', weaponsmithGiantListing) : false
   console.info('[SVS-真菌残魂] 村民交易登记：农民 ' + okFarmer + ' / 工具匠 ' + okToolsmith + ' / 制图师 ' + okCartographer +
-    '（12币→8grout、20币→1火种工具、15币→探险家指南针；maxUses=16）')
+    ' / 工具匠-活尸魂 ' + okHollow + ' / 盔甲匠-骑士魂 ' + okKnight + ' / 武器匠-巨人魂 ' + okGiant +
+    '（12币→8grout、20币→1火种工具、15币→探险家指南针、24/48/64币→三魂；maxUses=16）')
 })()
