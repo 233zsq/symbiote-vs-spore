@@ -1,115 +1,146 @@
 # Symbiote vs Spore 交接文档（写给下一个 AI）
 
-> 更新：2026-09-29。整合包开发移交给下一个 AI。本文件是唯一权威交接面。
-> 主规格：`docs/任务文档.txt`（设计理念 13 条+工作原则）；机制定稿：`docs/魔改设计决议.md`。
+> 更新：**2026-10-04**。本文件是唯一权威交接面。
+> 主规格：`docs/任务文档.txt`（设计理念 13 条 + 工作原则）；机制定稿：`docs/魔改设计决议.md`（变更记录节效力最高）。
+> 任务线权威：`docs/任务线框架规格书_v1.md`（2026-10-03 定稿）。
 
 ## 〇、30 秒版
 
-1. 你在维护一个 MC 1.20.1 Forge 整合包（213 mod），共生体 vs 真菌题材，类魂 ARPG。
-2. **先读第五节"血泪教训"再写任何一行脚本**——90% 的坑都趟过了，别再踩。
-3. 改动一律三处同步：副本 → test4 → git 仓库（见第二节）。
-4. 用户在 `docs/任务文档.txt` 写了四条工作原则（三思/简洁/手术式/目标驱动），那是圣旨。
-5. 待办队列在第七节，其中 4 份规格书可直接执行。
+1. 你在维护一个 MC 1.20.1 Forge 整合包（**214 mod**，副本 mods/ 实数），共生体 vs 真菌题材，类魂 ARPG，Epic Fight 战斗底座。
+2. **当前测试基线：`E:\mcmp_test\dist\test18.zip`**（用户以 dist/testN.zip 导入实例实测，不是 test4 开发实例）。
+3. **先读第五节"血泪教训"再写任何一行脚本**——本环境 KubeJS/Rhino 的坑全部实踩过。
+4. 改动三处同步：`E:\SvS_整合包_副本`（母本）→ `C:\PCL 正式版 2.8.13\.minecraft\versions\test4`（开发实例）→ git 仓库（GitHub 已推送）。
+5. 用户在 `docs/任务文档.txt` 写了四条工作原则（三思/简洁/手术式/目标驱动），那是圣旨。
 
 ## 一、项目与主文档索引
 
 | 文档 | 内容 |
 |---|---|
 | `docs/任务文档.txt` | 设计理念 + 工作原则（最高优先级） |
-| `docs/魔改设计决议.md` | 机制定稿（2026-09-23 逐条拍板） |
-| `docs/数值表_武器.md` 等、桌面 5 张 xlsx | 数值基准（重采口径见 9-19 实采记录） |
+| `docs/魔改设计决议.md` | 机制定稿（变更记录节效力最高，已更新至 2026-10-04） |
+| `docs/任务线框架规格书_v1.md` | 任务线重写权威（四职业支线 + 四段式写作规范 + 检测模式三选一，2026-10-03 定稿） |
+| `docs/整合包结构表.md` | 274 mod 结构 + 33 原版结构全量枚举、四档密度、线性主线设计 |
 | `docs/武器线与匠魂节奏_参考综合.md` | 四参考包拆包结论（任务线重写用） |
-| `docs/任务线重排迁移清单.md` | FTB 任务线重写工单（用户裁决：全部重写） |
-| `docs/铁魔法禁用清单.md` | ISS 禁 78/留 36（已定稿落地） |
-| `docs/规格书_*.md` ×4 | 可直接执行的开发规格书（见第七节） |
+| `docs/实例配置说明.md` | 配置生效方式速查（§8.1 sporeconfig 三档调参=P8' 待做） |
+| `docs/规格书_修复批_0926.md` | 修复批规格（**已全部完成**，留档） |
 | `docs/开源协议审查.md` | 协议合规；改动 mod 清单必须同步登记 |
-| `docs/HANDOVER.md` 历史段落（四点五~四点十一） | 历次事故与修复的完整档案（git 历史可溯） |
+| 5 张 xlsx（武器/Boss/敌对生物/中立生物/EF 适配） | 数值基准（9 月实采，EFS-ISS 入包后需重采） |
 
 ## 二、目录布局与同步铁律（勿乱）
 
 | 位置 | 角色 |
 |---|---|
 | `E:\SvS_整合包_副本` | 整合包母本，所有改动第一落点，打 zip 从这出 |
-| `C:\PCL 正式版 2.8.13\.minecraft\versions\test4` | 用户实测实例（PCL 管理） |
-| `E:\mcmp` | Git 仓库（GitHub 233zsq/symbiote-vs-spore） |
-| `E:\mcmp_test` | 工具区：launch_test4.py、pack_mcbbs.py、dist/testN.zip、i18n_work/、backup/、svs_tweak 构建环境 |
+| `C:\PCL 正式版 2.8.13\.minecraft\versions\test4` | 开发实例（launch_test4.py 启动） |
+| `E:\mcmp` | Git 仓库（GitHub 233zsq/symbiote-vs-spore，**2026-10-04 已全量推送**） |
+| `E:\mcmp_test` | 工具区：launch_test4.py（支持 `--world`）、pack_mcbbs.py、dist/testN.zip、i18n_work/、错误报告/、dl/ |
 
 **铁律**：
-1. 改 mod/配置/KubeJS → 副本+test4 双写 → 仓库 commit。三方漂移是历史重灾区（坑过两次）
-2. 用户在 PCL 侧加减的 mod（.disabled / 手动删 jar）以用户为准，对账后同步副本
-3. 打包：`python E:\mcmp_test\pack_mcbbs.py testN`（MCBBS 格式，manifest+mcbbs.packmeta(SHA-1)+overrides）
-4. kubejs 脚本双写注意：`explorers_compass.js`/`weapon_balance.js` 是阶段⑤骨架，只在仓库+副本，不进 test4（有意豁免）；`example.js` 只在副本（KubeJS 自动生成）
+1. 改 mod/配置/KubeJS → 副本 + test4 双写 → 仓库 commit。三方漂移是历史重灾区。
+2. **数据包类覆盖（结构 JSON/标签/biome_modifier）一律走 `config/openloader/data/svs/data/`**——`kubejs/data/` 在本环境**不是数据包**（实证见第五节教训 10）。
+3. 打包：`python E:\mcmp_test\pack_mcbbs.py testN`（MCBBS 格式），打完核对 overrides 内脚本与 jar 版本；**每个修复批收尾问用户是否打新包**（用户以 zip 导入实例测，旧包不会自动更新）。
+4. 并发会话共用仓库：commit 前 `git log --oneline -5`，**只 add 自己改过的文件路径**（曾误扫入他人文件）。
 
-## 三、当前状态（2026-09-29）
+## 三、当前状态（2026-10-04）
 
-- 213 mod（jar 实数）；最新包 `dist/test9.zip`（含全部修复）
-- KubeJS：startup 5 个（example/items/spore_coin/villager_trades/svs_damage）+ server 7 个+example
-- 自研 mod `svs_tweak-1.0.2.jar`：5 个功能（POTB 判空/陨石距出生点 400~800 待 GLM 改/密度提纯 75 格 1 结构/AStages 容错/MixinSquared 取消器），源码在仓库 `svs_tweak/`，构建用 `E:/mcmp_test/gradle-8.8` + JDK17
-- 用户首测（9-26）：稳定性全过；交易/火种/共生加成/真菌币掉落/HUD 有失败项 → 修复规格书已出待 GLM 执行
+- 214 mod（副本 mods/ jar 实数）；**测试基线 dist/test18.zip**；开发实例 test4
+- KubeJS：startup 5 + server 11 脚本（新增 svs_collect_tags.js 生成物、svs_spawn_control.js、trade_guarantee.js）
+- 自研 mod **svs_tweak-1.0.6.jar**：6 功能（POTB 判空+探针 / 陨石 400~800 环带 / 结构密度提纯 75 格 / AStages 容错 / MixinSquared 取消器 / **SvsDamageHelper 伤害归因助手** + villagerTradeDump 诊断），源码在仓库 `svs_tweak/`
+- Inquisition **3.2.0** + 官方配套 config 已装（sporeconfig/sporedata.toml，覆盖在副本+test4 的 config/，作者偏离默认清单在 `E:\mcmp_test\i18n_work\inquisition_author_delta.txt`）
+- 指南针三层已落地：配方（下界合金+淬魔钢坯）/维度白名单（主世界+暮色）/真菌币过路费 2 枚（右键钩子）/config structureBlacklist 34 条（主线 21+垃圾通配 13）
+- 收藏家标签 `#svs:collect_t1~t5`（1330 件武器 DPS 五分位）：**ServerEvents.tags 事件注册**（生成器 `tools/gen_collect_tags.py`，重跑可再生）
+- 文案：货币统一叫**真菌残魂**（id `kubejs:spore_coin` 不变）
+- SLU：36 个生成修饰器空覆盖=**全部生物禁野刷**（含友善 NPC 索拉尔/齐格迈尔/帕奇生成器），封印石禁用；清场命令 `/kill @e[type=#svs:slu_hostile]`
+- GitHub 已全量推送（2026-10-04，origin/main == local main）
 
 ## 四、已拍板裁决记录（不许推翻，不许重做调研）
 
-- 视角：Leawind's Third Person 2.2.0（IF 同款配置已在包内），ShoulderSurfing 已删
-- 不加 Gateways/Placebo，不锁武器；末期武器毕业走任务线直发（内容用户自定）
-- 铁魔法：禁 78 留 36（定稿 `docs/铁魔法禁用清单.md`）；机动/隐身作逃课保留
-- souls_like_bosses 已删（用户裁决；SLU souls-like-universe 是主线，别搞混）
-- EFS-ISS 入包（剑术耗蓝=它），砍 4 个过强技能（二次呼吸/连通根源/自动回复/备用魔力）
-- 真菌币改名"真菌之魂"（只改显示名不动 id），单向兑换 SLU 三魂
-- 删除通用 10% 限伤层（保留灾变原生 cap+母巢 proto 模板）；结构黑名单禁 shipwreck+mineshaft
-- 陨石限出生点 400~800 格环带；SI 开局 spreadplayers 撒人用数据包覆盖 start4 去除
-- FTB 任务线全部重写；stage2 下界章删除；阶段Ⅲ灾变 Boss 序列承接
-- Structurify 不加（密度互斥/陨石限制 svs_tweak 已覆盖，它只能当黑名单面板）
-- 难度三选取一锁二；交易限量 16；火种 7 天=离线时长；限伤只认敌对
+### 9-29 及以前
+见 `docs/魔改设计决议.md` 变更记录节（9-25 Gateways 否决/9-26 铁魔法定稿等/9-29 任务线全部重写）。
+
+### 2026-09-30（修复批复测批）
+- 伤害归因重构：DamageSource.getEntity 在本环境 Rhino 不可解析（mojmap/SRG 全不通）→ svs_tweak SvsDamageHelper 静态助手（JS 传原生对象给静态方法，TradeRegistry 同款模式）
+- 远程加压反转：被弹射物打一律 ×0.5（此后 10-01 细化为方向结算）
+- svs_tweak 1.0.3（黑名单 shipwreck+mineshaft / 陨石 400~800 环带）
+
+### 2026-10-01（复测回归 + 裁决 2/3/4/8）
+- 拾取归属限制：**放弃**（多人不做限制）
+- ③ 远程方向结算（10-01 二次裁决）：玩家被弹射物打 ×0.5；玩家远程打飞行/水中怪（inWater||!onGround）**×2 不免疫**；地面 Boss 免疫归零；地面怪 ×0.5；怪内战不动
+- Boss 免疫名单：cataclysm: 全前缀 + bosses_of_mass_destruction: + slu:boss_ 前缀（42）+ 血源四 Boss（cleric_beast/father_gascoigne/gascoigne_beast/micolash）+ spore:proto；**只对地面 Boss 生效**
+- 限伤：脚本层全部删除（proto 8% 模板删；灾变原生 cap 实证已=1000000 无上限）
+- "不接受一刀盲区"→ SvsDamageHelper 精确归因（svs_tweak 1.0.4）
+
+### 2026-10-03（结构 + Inquisition + 任务线）
+- 结构表拍板：bettermineshafts 13 变体黑名单；主线白名单扩容 9 座（spore 5 + inqui 4）；biomass_tower 维持默认（只在蘑菇岛生成）；探索线=淡化（默认分支配额制即设计意图）
+- SLU 定点化：**选 v2**（主线 Boss 竞技场结构+路网，随任务线Ⅳ章出；封印石右键是随机 Boss 池——反编译实证，定点化不能用原版方块）；随机 Boss 召唤券进**日课+悬赏两池**（待任务线实装）
+- 制图师交易：线索书废弃（Rhino NPE/空标签/空白页三连）→ 改**探险家指南针**（15 币，explorerscompass:explorerscompass）
+- Inquisition 3.1→3.2.0 + 官方配套 config（必装件，随版本重下；3.x config 只在 YouTube 视频简介）
+- 任务线规格书 v1 四批注裁决：分档 8/15/20+名品 5~8 接受；共生使奖励从现有饰品库挑；职业徽章=现成饰品改名展示；文案称呼="冒险者"
+
+### 2026-10-04（SLU 野刷 + 改名 + 检修）
+- SLU 全部生物**禁止野刷**（36 个 forge:add_spawns 空 biomes 覆盖，含友善 NPC 生成器），改召唤制：随机 Boss 召唤券（日课+悬赏两池）；存量清场 `/kill @e[type=#svs:slu_hostile]`
+- SLU 敌对击杀掉 1 真菌残魂（svs_spawn_control.js，悬赏/日课钩子）
+- 改名：真菌之魂/真菌币 → **真菌残魂**（id 不变）
+- FA（Final Adversaries）检修：树埋地下 30 格→0、start_jigsaw_name 不匹配任何池元素（全部池 name=None）→ 删除该字段、biomes 扩森林系；勘误：所谓"aether 引用"全 jar 搜索不存在
 
 ## 五、血泪教训（KubeJS/Rhino/Forge，全部实踩）
 
 **写 KubeJS 前必读，每条都崩过或静默失效过**：
 
-1. **声明规则（最终版）**：控制流块（if/else/for/while/**try**/catch）**内部**不得出现 const/let——第二次执行到同一行必抛 redeclaration。声明一律提到函数/回调最外层。函数最外层随便用
-2. **ForgeEvents 只在 startup 脚本注入**（BuiltinKubeJSForgePlugin 字节码实证）——server/client 脚本里 ForgeEvents 是 not defined
-3. **成员访问一律写 mojmap 名**：KubeJS Rhino 生产环境自动 remap mojmap→SRG；直写 SRG 名（f_35627_）反而报 no public instance field
-4. **getUUID 在非玩家实体上解析失败**（Cannot find function）——实体标识用自发 pd id（如 `svs_fireseed_id`）；玩家 getUUID 正常
-5. **java.lang.Class / java.lang.reflect 被类过滤器拦截**——forName/getClass 扫描/reflect.Array 全不可用；静态字段用 NativeJavaClass 直读（mojmap 名），数组扩容用 java.util.Arrays.copyOf
-6. **fastutil Int2ObjectMap 不可碰**（NativeJavaMap 包一层，任何属性访问都 CCE，JS try/catch 兜不住）——村民交易走 architectury `TradeRegistry.registerVillagerTrade`（静态方法零 Map 访问），别碰 VillagerTradesEvent.trades
-7. **KubeJS 自有事件吞异常**（功能静默失效只刷日志），**Forge 总线事件重抛异常**（=崩游戏）——ForgeEvents 监听器体必须整体 try/catch
-8. **入库前跑扫描器**：`python E:/mcmp/tools/check_kubejs_rhino.py`（块内声明检查，已写进 CONTRIBUTING）
-9. **svs_tweak 验证**：MANIFEST 必须有 `MixinConfigs: svs_tweak.mixins.json`（漏了=5 个 mixin 全静默失效，实崩过）；验收看日志 `Mixing ... from svs_tweak.mixins.json` 行，不能只看 mod 加载成功
-10. 启动到主菜单约 200~350 秒（DH+全量 mod，不是卡死）；日志 GBK 编码（python decode("gbk")）
+1. **声明规则**：控制流块（if/else/for/while/**try**/catch）内部不得 const/let（第二次执行抛 redeclaration）——扫描器 `python tools/check_kubejs_rhino.py`（夹具应报 17 处），入库前必跑。
+2. **ForgeEvents 只在 startup 脚本注入**；Forge 总线监听器体必须整体 try/catch（重抛=崩游戏）。
+3. **kubejs/data 不是数据包**（10-03 实证三条独立测试）：数据包类覆盖（结构 JSON/标签/biome_modifier）**一律走 `config/openloader/data/svs/data/`**；注册标签用 `ServerEvents.tags` 事件（实证 t1=257 非零）。
+4. **DamageSource 攻击者不可读**（.entity/getEntity/getDirectEntity/SRG 名全不通，330 条样本）→ 归因走 svs_tweak SvsDamageHelper（JS 传原生对象给静态方法，TradeRegistry 同款模式）；事件层 getLastHurtByMob 是"上一刀"（新目标首刀盲区，不可接受时用助手）。
+5. **类过滤器拦 java.lang.System**（不止 Class/reflect）——时间戳用 `Date.now()`。
+6. **成员解析**：mojmap 名写法 + 只信 KubeJS 注入成员（kjs$）/接收者自类方法；继承成员实测翻车清单：getUUID（所有实体含 ServerPlayer）、dayTime（解析成 Function→NaN）、getGameTime、getScoreboardName、isCreativeMode（旧名，**正名 isCreative()** 可用）、Item.getTags、DamageSource.getEntity。实测可用：player.uuid/username/x-y-z/level.dimension（属性非方法）/getVillagerData().getProfession()/getOffers()/inventory.count(id)、level.getDayTime()/getSharedSpawnPos()、mob.getTarget()/setTarget()、registry.getOrCreateTag(TagKey)。
+7. **HolderSet.direct 在 Rhino 必 NPE**（varargs/List 重载都炸）——结构寻址走 svs_tweak locateStructure（纯 Java）或 registry.getOrCreateTag。
+8. **fastutil Int2ObjectMap 不可碰**（NativeJavaMap 包装器 CCE 兜不住）——村民交易走 architectury TradeRegistry；遍历交易表走 SvsDamageHelper.villagerTradeDump（Java 侧）。
+9. **vanilla 村民 offers 构建=等级列表随机抽 2 笔**——注册进交易表只是候选，必现需求用 trade_guarantee.js 补挂模式（getOffers().add() + pd 标记防重）。
+10. **svs_tweak 验证**：jar manifest 必须 `MixinConfigs: svs_tweak.mixins.json`；验收看 **debug.log** 的 `Mixing <Mixin> from svs_tweak.mixins.json`（latest.log 没有）。
+11. **后台无头测试**：`pauseOnLostFocus:false`（否则实例失焦即冻结；当前= false，测试收敛后还原）；`--quickPlaySingleplayer` 对不存在的世界停在标题界面（造世界：拷 level.dat=同设置全新地形，**注意改 Difficulty 字节**，和平会清怪）；launch_test4.py 支持 `--world`。
+12. **日志跨天轮转**（2026-MM-DD-N.log.gz），跨零点调试翻 .gz；grep 本机对长行日志不可靠，用 python 逐行。
+13. **imfdata 适配包覆盖文件曾含缺 id 空对象**（`{"required":false}` 无 id）→ tag 整体加载失败——同类覆盖文件改完要逐字段核。
 
-## 六、已落地魔改清单（详表见各 commit 与历史段落）
+## 六、已落地魔改清单（详表见各 commit 与 docs）
 
-- 一期：LootBeams 静音、InControl 难度规则、FTB 序章难度三选（选一锁二）、真菌币经济（掉落+3 笔村民交易+陨石线索书）、个人难度 /svs、共生体克制真菌四件套、火种绑定+civillis 文明分、血源 6 武器 EF 适配、POTB 根治、d&c 等 92 ns 汉化
-- 二期：围城系统全套（倒计时/HUD/波次/失守惩罚/文明分/共生压力联动）、铁魔法禁用 78、灾变限伤对齐 DOTE（活配置 cataclysm-common.toml）、母巢限伤爬升（proto）、远程加压、统一伤害层（LivingHurtEvent.setAmount 直改）、共生体分期 1 数值加成+GameStage 镜像
-- tweak mod 五件套 + 双指南针入包+全量汉化
+- 一期：LootBeams 静音、InControl 难度规则、FTB 序章难度三选、真菌残魂经济（掉落+3 笔村民交易）、个人难度 /svs、共生体克制真菌四件套、火种绑定+civillis 文明分、血源 6 武器 EF 适配、POTB 根治、92 ns 汉化
+- 二期：围城系统全套、铁魔法禁用 78、灾变限伤对齐 DOTE、母巢限伤爬升（**已删**，10-01 裁决）、远程加压（**已反转**，10-01）、统一伤害层（LivingHurtEvent.setAmount）
+- 修复批 0926（10 月闭环）：击杀归因重构、火种绑定 name 基、HUD getDayTime、限伤全删、封印石/矿井黑名单、陨石环带、SI 撒人取消、stages.zs 正名、指南针交易、线索书废弃改指南针
+- 三批（10 月）：SvsDamageHelper 1.0.6、结构全量汉化 346 键、SLU 野刷禁令、封印石禁用、FA 结构修复、imfdata tag 修复、Inquisition 3.2+官方 config、收藏家标签（事件注册）、任务线规格书 v1
 
 ## 七、待办队列
 
-**可直接执行的规格书（喂给写码的 AI）**：
-1. `docs/规格书_修复批_0926.md`（F1~F10：币不掉落/交易缺失/火种奖励/HUD NaN/删通用限伤/黑名单/陨石 400~800+SI 撒人/stages.zs 改名/EFS-ISS/贴图已交付）**← 最高优先级**
-2. `docs/规格书_真菌之魂.md`（改名+SLU 三魂兑换）
-3. `docs/规格书_围城村庄级共享.md`（多人共享计时+村外环带生成）
-4. `docs/规格书_EFS_ISS.md`（入包+砍技能+耗蓝调参）
+**可直接执行**：
+1. 序章任务设计稿（四段式规范首秀，纯 Markdown 不碰 SNBT——三步走第一步，见任务线规格书）
+2. 规格书_围城村庄级共享.md（未执行）
+3. EFS-ISS 入包（规格书已有；入包后重跑 tools/gen_collect_tags.py 刷新收藏家标签）
+4. 真菌之魂规格书剩余部分（改名已提前完成，剩 SLU 三魂兑换）
+5. SLU v2 定点化（主线 Boss 竞技场结构+路网，随任务线Ⅳ章；Boss 召唤券已进日课+悬赏两池设计）
 
-**等用户**：首测失败项复测（修复后）；FTB 任务线重写（游戏内编辑器，用户/指导进行）；阶段Ⅲ承接细化；末期武器毕业内容（先更新武器表，需一次游戏内 dump）
+**等用户**：
+- simplyswords 两个空白 config（gem_effects/general.json5）处置裁决（删掉重生成 or 给值）
+- test18 验收回传
+- 任务编辑器开搭（FTB SNBT 只由编辑器生成，铁律）
+- pauseOnLostFocus 当前=false（后台测试需要），全部收敛后还原 true
 
-**实测触发才有下文**：真菌飞行怪崩档（复现后填 badmobs）、BOMD 虚空之花、Relics×真菌 CME、BaM TPS
+**实测触发才有下文**：真菌飞行怪崩档（复现后填 badmobs）、Relics×真菌 CME、BaM TPS、FA boss 函数 aether 引用（休眠代码无实际影响）
 
 ## 八、工作方式要求（用户定的，务必遵守）
 
-1. 任务文档四条工作原则是圣旨：三思而后行（不确定就问、呈现多种解读、必要时反驳、困惑就停）/ 简洁优先 / 手术式变更（不顺手改无关项、发现无关问题只上报）/ 目标驱动（每个任务有可验证的验收标准）
-2. **先修不删**：崩溃/冲突优先修复；修不了保留并报告
-3. 大型机械任务（批量翻译/批量 JSON）才派子代理；决策和验收自己把关
-4. 改动要有 commit 记录，信息写清"改了什么/为什么/验收点"
-5. 协议合规：mod 清单变动必须登记 `docs/开源协议审查.md`；ARR mod 不改 jar（用 MixinSquared 取消器或数据包）
-6. 历史档案：本文件四点五~四点十一节（git 历史）有全部事故记录——排查同类问题先查档案
+1. 任务文档四条工作原则是圣旨：三思而后行/简洁优先/手术式变更/目标驱动。
+2. **先修不删**；ARR mod 不改 jar（MixinSquared 取消器或数据包）。
+3. 大型机械任务（批量翻译/批量 JSON）才派子代理；决策和验收自己把关。
+4. 改动要有 commit；协议合规登记 `docs/开源协议审查.md`。
+5. **多交流**：用户明确要求设计问题多讨论、呈现多种解读、必要时反驳（2026-10-03 起生效）。
+6. 历史档案：本文件 git 历史可溯；2026-10-04 前的旧版教训已并入第五节。
 
 ## 九、关键事实速查
 
-- 启动测试：`python E:\mcmp_test\launch_test4.py --mem 10G`（quickPlay 进世界 "test"）
-- 日志：`test4/logs/latest.log`（GBK）；崩溃报告 `test4/crash-reports/`
-- 杀残留游戏进程：`E:\mcmp_test\kill_zombies.ps1`（powershell -ExecutionPolicy Bypass -File）
-- CF 下载：edge.forgecdn.net 直链（文件名 URL 编码）；cfwidget 数字 id 可用（api.cfwidget.com/<id>）；Modrinth API 正常
-- Gradle：services.gradle.org 被墙，用腾讯镜像本地包 `E:/mcmp_test/gradle-8.8`
+- 启动测试：`python E:\mcmp_test\launch_test4.py --mem 10G --world <世界名>`（quickPlay；世界必须已存在，新世界用 level.dat 拷贝造骨架**并改 Difficulty 字节**）；到主菜单 200~350 秒正常
+- 日志：`test4/logs/latest.log`（UTF-8，跨天轮转 .gz）；崩溃报告 `test4/crash-reports/`
+- 杀残留游戏进程：powershell `Stop-Process -Name java -Force`（先确认没有用户实例在跑）
+- Gradle：`JAVA_HOME=C:/Program Files/Java/jdk-17 E:/mcmp_test/gradle-8.8/bin/gradle.bat --offline jar`（svs_tweak 构建）
+- CFR 反编译器：/tmp/cfr.jar 或 E:/mcmp_test；javap 用 jdk-21
 - 共生体 API：`SymbioteTracker.get(level).peek(uuid)` → stage/trust/stamina；`adjustTrust/adjustStress(ServerLevel,ServerPlayer,int,String)`；`PredatorHunt.isHunting(uuid)`
 - 文礼 API：`civil.civilization.BaseScoreApi.add(ServerLevel, BlockPos min/max, double, sourceKey)` / `remove(sourceKey)`
-- CFR 反编译器：`E:/mcmp_test/` 或 /tmp 的 cfr.jar（0.152）；javap 用 `C:/Program Files/Java/jdk-21/bin/javap.exe`
+- CF 下载：edge.forgecdn.net 直链（文件名 URL 编码）；Modrinth API 正常；CFPA 汉化仓库走 jsDelivr 或稀疏克隆（已克隆在 i18n_work/cfpa_repo）
