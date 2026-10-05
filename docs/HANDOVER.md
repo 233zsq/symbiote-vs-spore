@@ -1,13 +1,13 @@
 # Symbiote vs Spore 交接文档（写给下一个 AI）
 
-> 更新：**2026-10-04**。本文件是唯一权威交接面。
+> 更新：**2026-10-05**。本文件是唯一权威交接面。
 > 主规格：`docs/任务文档.txt`（设计理念 13 条 + 工作原则）；机制定稿：`docs/魔改设计决议.md`（变更记录节效力最高）。
 > 任务线权威：`docs/任务线框架规格书_v1.md`（2026-10-03 定稿）。
 
 ## 〇、30 秒版
 
 1. 你在维护一个 MC 1.20.1 Forge 整合包（**214 mod**，副本 mods/ 实数），共生体 vs 真菌题材，类魂 ARPG，Epic Fight 战斗底座。
-2. **当前测试基线：`E:\mcmp_test\dist\test18.zip`**（用户以 dist/testN.zip 导入实例实测，不是 test4 开发实例）。
+2. **当前测试基线：`E:\mcmp_test\dist\test19.zip`**（用户以 dist/testN.zip 导入实例实测，不是 test4 开发实例）。
 3. **先读第五节"血泪教训"再写任何一行脚本**——本环境 KubeJS/Rhino 的坑全部实踩过。
 4. 改动三处同步：`E:\SvS_整合包_副本`（母本）→ `C:\PCL 正式版 2.8.13\.minecraft\versions\test4`（开发实例）→ git 仓库（GitHub 已推送）。
 5. 用户在 `docs/任务文档.txt` 写了四条工作原则（三思/简洁/手术式/目标驱动），那是圣旨。
@@ -43,13 +43,14 @@
 
 ## 三、当前状态（2026-10-04）
 
-- 214 mod（副本 mods/ jar 实数）；**测试基线 dist/test18.zip**；开发实例 test4
+- 214 mod（副本 mods/ jar 实数）；**测试基线 dist/test19.zip**；开发实例 test4
 - KubeJS：startup 5 + server 11 脚本（新增 svs_collect_tags.js 生成物、svs_spawn_control.js、trade_guarantee.js）
 - 自研 mod **svs_tweak-1.0.6.jar**：6 功能（POTB 判空+探针 / 陨石 400~800 环带 / 结构密度提纯 75 格 / AStages 容错 / MixinSquared 取消器 / **SvsDamageHelper 伤害归因助手** + villagerTradeDump 诊断），源码在仓库 `svs_tweak/`
 - Inquisition **3.2.0** + 官方配套 config 已装（sporeconfig/sporedata.toml，覆盖在副本+test4 的 config/，作者偏离默认清单在 `E:\mcmp_test\i18n_work\inquisition_author_delta.txt`）
 - 指南针三层已落地：配方（下界合金+淬魔钢坯）/维度白名单（主世界+暮色）/真菌币过路费 2 枚（右键钩子）/config structureBlacklist 34 条（主线 21+垃圾通配 13）
 - 收藏家标签 `#svs:collect_t1~t5`（1330 件武器 DPS 五分位）：**ServerEvents.tags 事件注册**（生成器 `tools/gen_collect_tags.py`，重跑可再生）
 - 文案：货币统一叫**真菌残魂**（id `kubejs:spore_coin` 不变）
+- SLU 三魂兑换已落地（2efc7db）：工具匠 24 币→活尸之魂 / 盔甲匠 48 币→骑士之魂 / 武器匠 64 币→巨人之魂（单向不回兑，maxUses=16）
 - SLU：36 个生成修饰器空覆盖=**全部生物禁野刷**（含友善 NPC 索拉尔/齐格迈尔/帕奇生成器），封印石禁用；清场命令 `/kill @e[type=#svs:slu_hostile]`
 - GitHub 已全量推送（2026-10-04，origin/main == local main）
 
@@ -114,12 +115,11 @@
 1. 序章任务设计稿（四段式规范首秀，纯 Markdown 不碰 SNBT——三步走第一步，见任务线规格书）
 2. 规格书_围城村庄级共享.md（未执行）
 3. EFS-ISS 入包（规格书已有；入包后重跑 tools/gen_collect_tags.py 刷新收藏家标签）
-4. 真菌之魂规格书剩余部分（改名已提前完成，剩 SLU 三魂兑换）
 5. SLU v2 定点化（主线 Boss 竞技场结构+路网，随任务线Ⅳ章；Boss 召唤券已进日课+悬赏两池设计）
 
 **等用户**：
 - simplyswords 两个空白 config（gem_effects/general.json5）处置裁决（删掉重生成 or 给值）
-- test18 验收回传
+- test19 验收回传
 - 任务编辑器开搭（FTB SNBT 只由编辑器生成，铁律）
 - pauseOnLostFocus 当前=false（后台测试需要），全部收敛后还原 true
 
