@@ -6,7 +6,7 @@
 
 ## 〇、30 秒版
 
-1. 你在维护一个 MC 1.20.1 Forge 整合包（**214 mod**，副本 mods/ 实数），共生体 vs 真菌题材，类魂 ARPG，Epic Fight 战斗底座。
+1. 你在维护一个 MC 1.20.1 Forge 整合包（**215 mod**，副本 mods/ 实数（EFS-ISS 入包）），共生体 vs 真菌题材，类魂 ARPG，Epic Fight 战斗底座。
 2. **当前测试基线：`E:\mcmp_test\dist\test19.zip`**（用户以 dist/testN.zip 导入实例实测，不是 test4 开发实例）。
 3. **先读第五节"血泪教训"再写任何一行脚本**——本环境 KubeJS/Rhino 的坑全部实踩过。
 4. 改动三处同步：`E:\SvS_整合包_副本`（母本）→ `C:\PCL 正式版 2.8.13\.minecraft\versions\test4`（开发实例）→ git 仓库（GitHub 已推送）。
@@ -43,7 +43,7 @@
 
 ## 三、当前状态（2026-10-04）
 
-- 214 mod（副本 mods/ jar 实数）；**测试基线 dist/test19.zip**；开发实例 test4
+- 215 mod（副本 mods/ jar 实数）；**测试基线 dist/test19.zip**；开发实例 test4
 - KubeJS：startup 5 + server 11 脚本（新增 svs_collect_tags.js 生成物、svs_spawn_control.js、trade_guarantee.js）
 - 自研 mod **svs_tweak-1.0.6.jar**：6 功能（POTB 判空+探针 / 陨石 400~800 环带 / 结构密度提纯 75 格 / AStages 容错 / MixinSquared 取消器 / **SvsDamageHelper 伤害归因助手** + villagerTradeDump 诊断），源码在仓库 `svs_tweak/`
 - Inquisition **3.2.0** + 官方配套 config 已装（sporeconfig/sporedata.toml，覆盖在副本+test4 的 config/，作者偏离默认清单在 `E:\mcmp_test\i18n_work\inquisition_author_delta.txt`）
