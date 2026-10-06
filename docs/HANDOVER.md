@@ -41,7 +41,7 @@
 3. 打包：`python E:\mcmp_test\pack_mcbbs.py testN`（MCBBS 格式），打完核对 overrides 内脚本与 jar 版本；**每个修复批收尾问用户是否打新包**（用户以 zip 导入实例测，旧包不会自动更新）。
 4. 并发会话共用仓库：commit 前 `git log --oneline -5`，**只 add 自己改过的文件路径**（曾误扫入他人文件）。
 
-## 三、当前状态（2026-10-04）
+## 三、当前状态（2026-10-06）
 
 - 215 mod（副本 mods/ jar 实数）；**测试基线 dist/test19.zip**；开发实例 test4
 - KubeJS：startup 5 + server 11 脚本（新增 svs_collect_tags.js 生成物、svs_spawn_control.js、trade_guarantee.js）
@@ -52,7 +52,9 @@
 - 文案：货币统一叫**真菌残魂**（id `kubejs:spore_coin` 不变）
 - SLU 三魂兑换已落地（2efc7db）：工具匠 24 币→活尸之魂 / 盔甲匠 48 币→骑士之魂 / 武器匠 64 币→巨人之魂（单向不回兑，maxUses=16）
 - SLU：36 个生成修饰器空覆盖=**全部生物禁野刷**（含友善 NPC 索拉尔/齐格迈尔/帕奇生成器），封印石禁用；清场命令 `/kill @e[type=#svs:slu_hostile]`
-- GitHub 已全量推送（2026-10-04，origin/main == local main）
+- 围城村庄级共享（9b3c1ec 重构 + **a3b4adb 根因修复**）：村庄级计时/村外环带已码完；根因两处=维度 ResourceKey 门卫恒真（村庄扫描 13 分钟从未执行，见第五节 14）+ 回拨条件把倒计时钉死 5:00。**待用户重载验证**（日志应见 `[SVS-围城][TRACE] ... key=svs_siege_v_3_115 rem=` 递减；TEMP-TRACE-VERIFY 行验证后删）
+- EFS-ISS 1.0.3 已入包（ba2e9ba）：4 过强技能切断 + 保留技能蓝耗参数（openloader）+ 协议登记；**游戏内验收待做**；收藏家标签**无需重跑**（jar 实证 0 个 item 类）
+- GitHub 已全量推送（2026-10-06，origin/main == local main）
 
 ## 四、已拍板裁决记录（不许推翻，不许重做调研）
 
@@ -101,25 +103,26 @@
 11. **后台无头测试**：`pauseOnLostFocus:false`（否则实例失焦即冻结；当前= false，测试收敛后还原）；`--quickPlaySingleplayer` 对不存在的世界停在标题界面（造世界：拷 level.dat=同设置全新地形，**注意改 Difficulty 字节**，和平会清怪）；launch_test4.py 支持 `--world`。
 12. **日志跨天轮转**（2026-MM-DD-N.log.gz），跨零点调试翻 .gz；grep 本机对长行日志不可靠，用 python 逐行。
 13. **imfdata 适配包覆盖文件曾含缺 id 空对象**（`{"required":false}` 无 id）→ tag 整体加载失败——同类覆盖文件改完要逐字段核。
+14. **`level.dimension` 的值是 ResourceKey**（10-06 围城复盘）：`String(level.dimension)` 可解析不报错，但 toString 是 `ResourceKey[minecraft:dimension / minecraft:overworld]`——与 `'minecraft:overworld'` 直比**恒真失败**（siege.js 维度门卫因此让村庄扫描 13 分钟从未执行，且全静默）。解包用 explorers_compass.js 已验收写法：`let dim = level.dimension; if (dim.location) return String(dim.location()); return String(dim)`。教训：探针表里"可用"只代表可解析不抛错，**参与比较的读取必须打印实际值**。
 
 ## 六、已落地魔改清单（详表见各 commit 与 docs）
 
 - 一期：LootBeams 静音、InControl 难度规则、FTB 序章难度三选、真菌残魂经济（掉落+3 笔村民交易）、个人难度 /svs、共生体克制真菌四件套、火种绑定+civillis 文明分、血源 6 武器 EF 适配、POTB 根治、92 ns 汉化
 - 二期：围城系统全套、铁魔法禁用 78、灾变限伤对齐 DOTE、母巢限伤爬升（**已删**，10-01 裁决）、远程加压（**已反转**，10-01）、统一伤害层（LivingHurtEvent.setAmount）
 - 修复批 0926（10 月闭环）：击杀归因重构、火种绑定 name 基、HUD getDayTime、限伤全删、封印石/矿井黑名单、陨石环带、SI 撒人取消、stages.zs 正名、指南针交易、线索书废弃改指南针
-- 三批（10 月）：SvsDamageHelper 1.0.6、结构全量汉化 346 键、SLU 野刷禁令、封印石禁用、FA 结构修复、imfdata tag 修复、Inquisition 3.2+官方 config、收藏家标签（事件注册）、任务线规格书 v1
+- 三批（10 月）：SvsDamageHelper 1.0.6、结构全量汉化 346 键、SLU 野刷禁令、封印石禁用、FA 结构修复、imfdata tag 修复、Inquisition 3.2+官方 config、收藏家标签（事件注册）、任务线规格书 v1、围城村庄级共享（9b3c1ec+a3b4adb）、EFS-ISS 入包（ba2e9ba）
 
 ## 七、待办队列
 
 **可直接执行**：
 1. 序章任务设计稿（四段式规范首秀，纯 Markdown 不碰 SNBT——三步走第一步，见任务线规格书）
-2. 规格书_围城村庄级共享.md（未执行）
-3. EFS-ISS 入包（规格书已有；入包后重跑 tools/gen_collect_tags.py 刷新收藏家标签）
+2. ~~规格书_围城村庄级共享.md~~ **已执行**（9b3c1ec + a3b4adb）——剩余：验证局读数 + 收敛后删 TEMP-TRACE-VERIFY
+3. ~~EFS-ISS 入包~~ **已落地**（ba2e9ba）——剩余：游戏内验收（技能界面 4 砍掉技能拿不到 / 保留技能可用 / 魔法战刃）；无需重跑 gen_collect_tags.py
 5. SLU v2 定点化（主线 Boss 竞技场结构+路网，随任务线Ⅳ章；Boss 召唤券已进日课+悬赏两池设计）
 
 **等用户**：
 - simplyswords 两个空白 config（gem_effects/general.json5）处置裁决（删掉重生成 or 给值）
-- test19 验收回传
+- 围城验证局：游戏内 `/kubejs reload server_scripts`（免重启，jar 实证命令存在）→ 看 `[SVS-围城][TRACE]` 行 rem 递减；快进开波 `/time add 200000`（约 11 秒后触发）；TEMP-TRACE-VERIFY 收敛后删
 - 任务编辑器开搭（FTB SNBT 只由编辑器生成，铁律）
 - pauseOnLostFocus 当前=false（后台测试需要），全部收敛后还原 true
 
