@@ -4235,6 +4235,10 @@ hash = "f097c3ab0f651fef79d04a17d6b6fa7a227e990592b47da90120d13069fb7b38"
 metafile = true
 
 [[files]]
+file = "mods/efs-iss.pw.toml"
+hash = "63e64d4b92a876e4b20fff8432168cf49d06cdbee8ba0ac12afcd725a33d1ec5"
+
+[[files]]
 file = "mods/embeddium-extra.pw.toml"
 hash = "d5b37000eeca63fabf2c9d261ebc0e9686b42ed8482526384afd37438f883ca5"
 metafile = true

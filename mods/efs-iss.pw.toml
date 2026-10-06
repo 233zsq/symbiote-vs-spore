@@ -1,0 +1,8 @@
+name = "EFS-ISS（Epic Fight Skills - Iron's Spells n Spellbooks）"
+filename = "efs_iss-1.0.3.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "36c64b60a73dfe0c54001f03d871daeff17bd0919fe66f4449d0a316148161063908145398dccbb5789c60a9f640432cf10bbb1da27f13fafc56bd6e3038ee3c"
