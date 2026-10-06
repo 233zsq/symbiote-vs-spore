@@ -4,6 +4,10 @@
 //   村庄身份 = 村民质心按 64 格网格量化）；多人同村共享同一倒计时（每秒只扣一次）；
 //   波次生成以村民质心为圆心 32~48 格环带（村外生成向村推进）；失守判定随村庄走。
 // 旧玩家 pd 键（svs_siege_*）废弃不迁移（规格书 C 节：村庄计时从零开始，旧键无害留存）。
+// 2026-10-06 修正两处（test4 复盘）：① 维度判定改走 siegeDimensionId——level.dimension 是
+//   ResourceKey，String() 带 "ResourceKey[...]" 包裹，旧的直比写法恒判"不在主世界"，
+//   村庄从未注册过；② 回拨条件改"村庄空置间隙 > 1 分钟"——旧条件在村连续推进时每秒恒真，
+//   把倒计时无限钉在 5:00，围城永不触发。
 // 规格（docs/魔改设计决议.md 一-1）：① 7 天一周期；② 只在玩家于村（128 格）时走动、
 //   离村/跨维度冻结；③ 回村回拨 5:00 预警；④ 不强加载；⑤ HUD 第 X 天/距围城 N 天；
 //   ⑥ 失守（腰斩线）：文明 -15 + 在村者均摊罚款（单人全额）。
@@ -56,16 +60,26 @@ function siegeFmt(ticks) {
   return m + ':' + ('0' + (s % 60)).slice(-2)
 }
 
+// 维度 id 读取（与 explorers_compass.js 同款已验收写法）：level.dimension 是 ResourceKey，
+// String() 带 "ResourceKey[minecraft:dimension / ...]" 包裹，不能直接与 'minecraft:overworld' 比。
+function siegeDimensionId(level) {
+  let dim = level.dimension
+  if (dim.location) {
+    return String(dim.location())
+  }
+  return String(dim)
+}
+
 // ── 村庄实体（量化 key + 质心 + 村民数）───────────────────────────────────
 // 村民质心按 64 格网格量化为村庄 key；玩家在村=128 格内村民 ≥3（沿旧判定）。
 // 玩家的村庄 key 用"其 128 格内村民质心"计算（而非玩家自身坐标）——保证同村的
 // 多个玩家算出同一 key（哪怕分立村庄两端）。
 function siegeVillageOf(player) {
   let list = null
-  if (String(player.level.dimension) !== 'minecraft:overworld') return null
+  if (siegeDimensionId(player.level) !== 'minecraft:overworld') return null
   try {
     list = player.level.getEntitiesOfClass(SIEGE_Villager, player.getBoundingBox().inflate(SIEGE_RADIUS))
-  } catch (e) { return null }
+  } catch (e) { siegeWarnOnce('村庄扫描', e); return null }
   const n = list ? list.size() : 0
   if (n < SIEGE_MIN_VILLAGERS) return null
   let sx = 0, sz = 0, v = null
@@ -75,12 +89,12 @@ function siegeVillageOf(player) {
     sz += v.z
   }
   const cx = sx / n, cz = sz / n
-  return { key: 'v_' + Math.floor(cx / SIEGE_GRID) + '_' + Math.floor(cz / SIEGE_GRID), cx: cx, cz: cz, n: n }
+  return { key: 'svs_siege_v_' + Math.floor(cx / SIEGE_GRID) + '_' + Math.floor(cz / SIEGE_GRID), cx: cx, cz: cz, n: n }
 }
 
 // ── 村庄状态存取（主世界 level persistentData）────────────────────────────
 // CompoundTag 键：remaining / lastTick / activeUntil / cycle / defeatDone / startVillagers
-//（规格书 A.2；整村一个 CompoundTag，键名 svs_siege_<村庄key>）
+//（规格书 A.2；整村一个 CompoundTag，键名 svs_siege_v_<gx>_<gz>）
 function siegeVillagePd(level) { return level.getPersistentData() }
 
 //（siegeLoadVillage 已并入主循环的"首见村庄注册"段——村庄状态直接读写主世界 persistentData）
@@ -132,7 +146,7 @@ function siegeApplyDefeat(server, cx, cz, worldDay, key) {
   let p2 = null, dx = 0, dz = 0
   for (let i = 0; i < players.size(); i++) {
     p2 = players.get(i)
-    if (String(p2.level.dimension) !== 'minecraft:overworld') continue
+    if (siegeDimensionId(p2.level) !== 'minecraft:overworld') continue
     dx = p2.x - cx
     dz = p2.z - cz
     if (dx * dx + dz * dz <= SIEGE_RADIUS * SIEGE_RADIUS) present.push(p2)
@@ -156,9 +170,8 @@ let siegeVillage = null, siegeKey = '', siegeTag = null
 let siegeRemaining = 0, siegeLast = 0, siegeCycle = 0, siegeDelta = 0
 let siegeWasIn = false
 let siegeStartN = 0
-let siegeCenter = null       // 本 tick 处理中的村庄质心（开波/失守用）
+let siegeTraceP = null, siegeTraceV = null, siegeTraceTag = null   // TEMP-TRACE-VERIFY（验证轮读数后删）
 const siegeProcessedKeys = {}   // 每秒内已处理的村庄 key（多人同村只扣一次）
-const siegeVillageCenters = {} // 每秒内 key → 质心（失守判定/HUD 用首个玩家算的质心）
 
 ServerEvents.tick(event => {
   siegeTick++
@@ -179,10 +192,19 @@ ServerEvents.tick(event => {
 
   // 每秒重置已处理标记
   for (let k in siegeProcessedKeys) delete siegeProcessedKeys[k]
-  for (let k in siegeVillageCenters) delete siegeVillageCenters[k]
 
   const players = server.getPlayers()
   const overworldPd = siegeVillagePd(server.overworld())
+
+  // TEMP-TRACE-VERIFY（验证轮读数后删）：维度原始串 + 主玩家村庄 key + 共享剩余
+  if (siegeTick % 200 === 0) {
+    try {
+      siegeTraceP = players.size() >= 1 ? players.get(0) : null
+      siegeTraceV = siegeTraceP ? siegeVillageOf(siegeTraceP) : null
+      siegeTraceTag = siegeTraceV ? overworldPd.get(siegeTraceV.key) : null
+      console.info('[SVS-围城][TRACE] tick=' + siegeTick + ' now=' + siegeNow + ' dimRaw=' + (siegeTraceP ? String(siegeTraceP.level.dimension) : 'n/a') + ' key=' + (siegeTraceV ? siegeTraceV.key : '无') + ' rem=' + (siegeTraceTag ? siegeTraceTag.getLong('remaining') : 'null'))
+    } catch (e) { console.info('[SVS-围城][TRACE] 诊断行异常: ' + e) }
+  }
 
   for (let i = 0; i < players.size(); i++) {
     siegePlayer = players.get(i)
@@ -194,7 +216,6 @@ ServerEvents.tick(event => {
     if (siegeVillage && !siegeProcessedKeys[siegeKey]) {
       // ── 每村每秒只处理一次 ──
       siegeProcessedKeys[siegeKey] = true
-      siegeVillageCenters[siegeKey] = siegeVillage
 
       siegeTag = overworldPd.get(siegeKey)
       if (!siegeTag) {
@@ -217,15 +238,17 @@ ServerEvents.tick(event => {
         siegeLast = siegeTag.getLong('lastTick')
         siegeCycle = siegeTag.getInt('cycle')
 
-        // 回村回拨（规格书 A.4）：不足 5 分钟 → 拉回 5:00；预警发村内全部玩家（由下方
-        // 每玩家 HUD/消息段处理——这里只调数值）
-        if (siegeLast >= 0 && siegeRemaining < SIEGE_WARN && siegeRemaining > 0 && (siegeNow - siegeLast) > 0 && (siegeNow - siegeLast) < SIEGE_PERIOD) {
-          // 曾离村后回村（lastTick 落后 gameTime 很多说明冻结过）
+        // 回村回拨（规格书 A.4）：村庄空置过（lastTick 落后 gameTime 超 1 分钟）+ 剩余不足
+        // 5 分钟 → 拉回 5:00 并向村内广播预警。在村连续推进时每秒间隙恒为 20 tick，
+        // 必须用"大间隙"判定（旧条件 (now-last)>0 每秒恒真，倒计时被钉死在 5:00——10-06 修正）。
+        if (siegeLast >= 0 && siegeRemaining < SIEGE_WARN && siegeRemaining > 0 && (siegeNow - siegeLast) > 20 * 60) {
           siegeRemaining = SIEGE_WARN
+          server.runCommandSilent('execute positioned ' + Math.floor(siegeVillage.cx) + ' 0 ' + Math.floor(siegeVillage.cz) + ' run title @a[distance=..128] title {"text":"围城迫近……村庄外的孢子正在聚集","color":"red"}')
+          console.info('[SVS-围城] ' + siegeKey + ' 回村回拨：剩余拉回 5:00（村庄空置 ' + (siegeNow - siegeLast) + ' tick）')
         }
 
         // 推进（规格书 A.3）：本 tick 该 key 未处理 → remaining -= (now - last)
-        siegeDelta = siegeLast < 0 ? 20 : Math.min(20 * 40, siegeNow - siegeLast)   // 首次=20；防异常大跳（>40 秒封顶）
+        siegeDelta = siegeLast < 0 ? 20 : Math.max(0, Math.min(20 * 40, siegeNow - siegeLast))   // 首次=20；反向拨（/time set 回拨）不动；异常大跳（>40 秒）封顶
         siegeRemaining -= siegeDelta
         siegeTag.putLong('lastTick', siegeNow)
 
