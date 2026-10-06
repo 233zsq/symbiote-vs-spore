@@ -52,7 +52,7 @@
 - 文案：货币统一叫**真菌残魂**（id `kubejs:spore_coin` 不变）
 - SLU 三魂兑换已落地（2efc7db）：工具匠 24 币→活尸之魂 / 盔甲匠 48 币→骑士之魂 / 武器匠 64 币→巨人之魂（单向不回兑，maxUses=16）
 - SLU：36 个生成修饰器空覆盖=**全部生物禁野刷**（含友善 NPC 索拉尔/齐格迈尔/帕奇生成器），封印石禁用；清场命令 `/kill @e[type=#svs:slu_hostile]`
-- 围城村庄级共享（9b3c1ec 重构 + **a3b4adb 根因修复**）：村庄级计时/村外环带已码完；根因两处=维度 ResourceKey 门卫恒真（村庄扫描 13 分钟从未执行，见第五节 14）+ 回拨条件把倒计时钉死 5:00。**待用户重载验证**（日志应见 `[SVS-围城][TRACE] ... key=svs_siege_v_3_115 rem=` 递减；TEMP-TRACE-VERIFY 行验证后删）
+- 围城村庄级共享（9b3c1ec 重构 + **a3b4adb 根因修复**）：村庄级计时/村外环带已码完；根因两处=维度 ResourceKey 门卫恒真（村庄扫描 13 分钟从未执行，见第五节 14）+ 回拨条件把倒计时钉死 5:00。**待用户重载验证**（日志应见 `[SVS-围城][TRACE] ... key=svs_siege_v_3_115 rem=` 递减；开波快进=聊天 `!siege`，TEMP 工具 _siege_fast.js）
 - EFS-ISS 1.0.3 已入包（ba2e9ba）：4 过强技能切断 + 保留技能蓝耗参数（openloader）+ 协议登记；**游戏内验收待做**；收藏家标签**无需重跑**（jar 实证 0 个 item 类）
 - GitHub 已全量推送（2026-10-06，origin/main == local main）
 
@@ -122,7 +122,7 @@
 
 **等用户**：
 - simplyswords 两个空白 config（gem_effects/general.json5）处置裁决（删掉重生成 or 给值）
-- 围城验证局：游戏内 `/kubejs reload server_scripts`（免重启，jar 实证命令存在）→ 看 `[SVS-围城][TRACE]` 行 rem 递减；快进开波 `/time add 200000`（约 11 秒后触发）；TEMP-TRACE-VERIFY 收敛后删
+- 围城验证局：游戏内 `/kubejs reload server_scripts`（免重启，jar 实证命令存在）→ 看 `[SVS-围城][TRACE]` 行 rem 递减；**开波快进=聊天发 `!siege` 或手持真菌残魂右键**（TEMP 工具 `_siege_fast.js`，只在副本+test4 不进仓库）；注：`/time add` **不能**快进（推进增量封顶 800，跳变只扣一次）；收敛后删 TEMP-TRACE-VERIFY + _siege_fast.js
 - 任务编辑器开搭（FTB SNBT 只由编辑器生成，铁律）
 - pauseOnLostFocus 当前=false（后台测试需要），全部收敛后还原 true
 
