@@ -50,7 +50,7 @@
 - 指南针三层已落地：配方（下界合金+淬魔钢坯）/维度白名单（主世界+暮色）/真菌币过路费 2 枚（右键钩子）/config structureBlacklist 34 条（主线 21+垃圾通配 13）
 - 收藏家标签 `#svs:collect_t1~t5`（1330 件武器 DPS 五分位）：**ServerEvents.tags 事件注册**（生成器 `tools/gen_collect_tags.py`，重跑可再生）
 - 文案：货币统一叫**真菌残魂**（id `kubejs:spore_coin` 不变）
-- SLU 三魂兑换已落地（2efc7db）：工具匠 24 币→活尸之魂 / 盔甲匠 48 币→骑士之魂 / 武器匠 64 币→巨人之魂（单向不回兑，maxUses=16）
+- SLU 三魂兑换已落地（2efc7db 表注册 + **10-06 补挂扩展**）：工具匠 24 币→活尸之魂 / 盔甲匠 48 币→骑士之魂 / 武器匠 64 币→巨人之魂（单向不回兑，maxUses=16）。**10-06 审查发现并修复**：DeepSeek 只注册了候选池没进必现补挂——vanilla 随机抽 2 笔机制下约 33~50% 村民永不显示魂交易（F2 同类）；trade_guarantee.js 已扩为六笔 per-trade flag（旧单标记会把工具匠第二笔锁死）。slu zh_cn 三魂九键同链异名瑕疵一并修正（规格书定名"活尸之魂/骑士之魂/巨人之魂"）
 - SLU：36 个生成修饰器空覆盖=**全部生物禁野刷**（含友善 NPC 索拉尔/齐格迈尔/帕奇生成器），封印石禁用；清场命令 `/kill @e[type=#svs:slu_hostile]`
 - 围城村庄级共享（9b3c1ec 重构 + **a3b4adb 根因修复**）：村庄级计时/村外环带已码完；根因两处=维度 ResourceKey 门卫恒真（村庄扫描 13 分钟从未执行，见第五节 14）+ 回拨条件把倒计时钉死 5:00。**待用户重载验证**（日志应见 `[SVS-围城][TRACE] ... key=svs_siege_v_3_115 rem=` 递减；开波快进=聊天 `!siege`，TEMP 工具 _siege_fast.js）
 - EFS-ISS 1.0.3 已入包（ba2e9ba）：4 过强技能切断 + 保留技能蓝耗参数（openloader）+ 协议登记；**游戏内验收待做**；收藏家标签**无需重跑**（jar 实证 0 个 item 类）
@@ -104,6 +104,7 @@
 12. **日志跨天轮转**（2026-MM-DD-N.log.gz），跨零点调试翻 .gz；grep 本机对长行日志不可靠，用 python 逐行。
 13. **imfdata 适配包覆盖文件曾含缺 id 空对象**（`{"required":false}` 无 id）→ tag 整体加载失败——同类覆盖文件改完要逐字段核。
 14. **`level.dimension` 的值是 ResourceKey**（10-06 围城复盘）：`String(level.dimension)` 可解析不报错，但 toString 是 `ResourceKey[minecraft:dimension / minecraft:overworld]`——与 `'minecraft:overworld'` 直比**恒真失败**（siege.js 维度门卫因此让村庄扫描 13 分钟从未执行，且全静默）。解包用 explorers_compass.js 已验收写法：`let dim = level.dimension; if (dim.location) return String(dim.location()); return String(dim)`。教训：探针表里"可用"只代表可解析不抛错，**参与比较的读取必须打印实际值**。
+15. **并发会话产出必须过"必现性"审查**（10-06 三魂审查）：往交易/掉落/生成里加内容时，表注册（TradeRegistry/loot table）只是**候选**——vanilla 随机抽取后未必出现。凡是"玩家必须见到"的内容，都要同时挂补挂/直发通道并打 pd 防重标记；同实体多笔交易用 per-trade flag（单一 done 标记会在第一笔补挂后锁死其余笔）。另：architectury TradeRegistry 是 append 语义（computeIfAbsent+addAll，javap 实证），同职业多笔注册安全。
 
 ## 六、已落地魔改清单（详表见各 commit 与 docs）
 
