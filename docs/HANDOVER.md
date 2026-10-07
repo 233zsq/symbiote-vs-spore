@@ -56,8 +56,11 @@
 - 围城村庄级共享（9b3c1ec 重构 + **a3b4adb 根因修复**）：村庄级计时/村外环带已码完；根因两处=维度 ResourceKey 门卫恒真（村庄扫描 13 分钟从未执行，见第五节 14）+ 回拨条件把倒计时钉死 5:00。**待用户重载验证**（日志应见 `[SVS-围城][TRACE] ... key=svs_siege_v_3_115 rem=` 递减；开波快进=聊天 `!siege`，TEMP 工具 _siege_fast.js）
 - EFS-ISS 1.0.3 已入包（ba2e9ba）：4 过强技能切断 + 保留技能蓝耗参数（openloader）+ 协议登记；**游戏内验收待做**；收藏家标签**无需重跑**（jar 实证 0 个 item 类）
 - **开发实例转制完成（10-06）**：新实例 test（PCL 导入 test20.zip，1418.6MB/2403 文件，overrides md5 全对）已建；同步规则=母本副本+test+仓库；test4 遗留
-- **今日两批修复待用户验收**：①围城根因（维度 ResourceKey 门卫+回拨钉死，a3b4adb）——验收=站村 20 秒 HUD 变"距围城 7 天"+聊天 `!siege` 开波；②三魂必现补挂（0beb570）——验收=工具匠/盔甲匠/武器匠对应魂交易必须出现+译名统一。③EFS-ISS 技能界面。清单已交用户
-- GitHub 已全量推送（2026-10-06，origin/main == local main）
+- **计划获批 + M1 大半收敛（10-07）**：开发计划 v1 获批（批注 §四 1~5 全案通过）；M1.1 围城（注册/递减/开波日志实证）、M1.2 三魂必现（两村补挂日志实证）、M1.3 EFS-ISS（用户视觉）**全部通过**——详见 `docs/开发计划_执行状态.md`（滚动登记）。未验证：失守/回拨子项、M1.4 两人同村；M1.5 TEMP 清理挂起等 M1.4
+- **E1 已执行（10-07 裁决=删除重生成）**：三处 `config/simplyswords_main/{gem_effects,general}.json5`（577/269 字节纯 NUL 损坏文件）已删；再生验证=下次启动核对 simplyswords 重建默认文件
+- M1.6 启动脚本已适配（launch_test4.py 默认 test，--version 可指定；实测验证待窗口）；M1.7 test4 保留至 M1.6 实测后
+- **下一交付：M2.1 唯一节点清单对账**（序章 16 节点定性+旧章 7 条处置+阶段Ⅰ B 系列统一口径）
+- GitHub 已全量推送（2026-10-07，origin/main == local main）
 
 ## 四、已拍板裁决记录（不许推翻，不许重做调研）
 
@@ -106,7 +109,7 @@
 11. **后台无头测试**：`pauseOnLostFocus:false`（否则实例失焦即冻结；当前= false，测试收敛后还原）；`--quickPlaySingleplayer` 对不存在的世界停在标题界面（造世界：拷 level.dat=同设置全新地形，**注意改 Difficulty 字节**，和平会清怪）；launch_test4.py 支持 `--world`。
 12. **日志跨天轮转**（2026-MM-DD-N.log.gz），跨零点调试翻 .gz；grep 本机对长行日志不可靠，用 python 逐行。
 13. **imfdata 适配包覆盖文件曾含缺 id 空对象**（`{"required":false}` 无 id）→ tag 整体加载失败——同类覆盖文件改完要逐字段核。
-14. **`level.dimension` 的值是 ResourceKey**（10-06 围城复盘）：`String(level.dimension)` 可解析不报错，但 toString 是 `ResourceKey[minecraft:dimension / minecraft:overworld]`——与 `'minecraft:overworld'` 直比**恒真失败**（siege.js 维度门卫因此让村庄扫描 13 分钟从未执行，且全静默）。解包用 explorers_compass.js 已验收写法：`let dim = level.dimension; if (dim.location) return String(dim.location()); return String(dim)`。教训：探针表里"可用"只代表可解析不抛错，**参与比较的读取必须打印实际值**。
+14. **`level.dimension` 的值形态跨会话不稳定**（10-06 复盘 + 10-07 修正）：10-06 会话 `String(level.dimension)` 返回 `ResourceKey[minecraft:dimension / minecraft:overworld]` 包裹串（与 `'minecraft:overworld'` 直比**恒真失败**，村庄扫描 13 分钟静默不执行）；10-07 会话同写法却返回纯串 `minecraft:overworld`——两种形态都实测出现过，成因未定位。**任何直比写法都不可靠**，一律用双形态兼容写法：`let dim = level.dimension; if (dim.location) return String(dim.location()); return String(dim)`（explorers_compass.js/siege.js 同款，两种形态都正确）。教训：探针表里"可用"只代表可解析不抛错，**参与比较的读取必须打印实际值**。
 15. **并发会话产出必须过"必现性"审查**（10-06 三魂审查）：往交易/掉落/生成里加内容时，表注册（TradeRegistry/loot table）只是**候选**——vanilla 随机抽取后未必出现。凡是"玩家必须见到"的内容，都要同时挂补挂/直发通道并打 pd 防重标记；同实体多笔交易用 per-trade flag（单一 done 标记会在第一笔补挂后锁死其余笔）。另：architectury TradeRegistry 是 append 语义（computeIfAbsent+addAll，javap 实证），同职业多笔注册安全。
 
 ## 六、已落地魔改清单（详表见各 commit 与 docs）
