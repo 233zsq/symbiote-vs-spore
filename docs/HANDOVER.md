@@ -31,14 +31,15 @@
 | 位置 | 角色 |
 |---|---|
 | `E:\SvS_整合包_副本` | 整合包母本，所有改动第一落点，打 zip 从这出 |
-| `C:\PCL 正式版 2.8.13\.minecraft\versions\test4` | 开发实例（launch_test4.py 启动） |
-| `E:\mcmp` | Git 仓库（GitHub 233zsq/symbiote-vs-spore，**2026-10-04 已全量推送**） |
-| `E:\mcmp_test` | 工具区：launch_test4.py（支持 `--world`）、pack_mcbbs.py、dist/testN.zip、i18n_work/、错误报告/、dl/ |
+| `C:\PCL 正式版 2.8.13\.minecraft\versions\test` | **开发实例（2026-10-06 起）**：用户以 PCL 导入 dist/test20.zip 建（1418.6MB/2403 文件已核对），替代 test4 的角色；launch 脚本待适配新名 |
+| `C:\PCL 正式版 2.8.13\.minecraft\versions\test4` | 旧开发实例（遗留，历史世界/验证记录，删留待用户定） |
+| `E:\mcmp` | Git 仓库（GitHub 233zsq/symbiote-vs-spore） |
+| `E:\mcmp_test` | 工具区：launch_test4.py（支持 `--world`，待适配 test）、pack_mcbbs.py、dist/testN.zip、i18n_work/、错误报告/、dl/ |
 
 **铁律**：
-1. 改 mod/配置/KubeJS → 副本 + test4 双写 → 仓库 commit。三方漂移是历史重灾区。
+1. 改 mod/配置/KubeJS → 副本 + **test** 双写 → 仓库 commit。三方漂移是历史重灾区。
 2. **数据包类覆盖（结构 JSON/标签/biome_modifier）一律走 `config/openloader/data/svs/data/`**——`kubejs/data/` 在本环境**不是数据包**（实证见第五节教训 10）。
-3. 打包：`python E:\mcmp_test\pack_mcbbs.py testN`（MCBBS 格式），打完核对 overrides 内脚本与 jar 版本；**每个修复批收尾问用户是否打新包**（用户以 zip 导入实例测，旧包不会自动更新）。
+3. 打包：`python E:\mcmp_test\pack_mcbbs.py testN`（MCBBS 格式），打完核对 overrides 内脚本与 jar 版本；**testN.zip 降级为里程碑/交付验证用途**（验证打包通道不漏文件），日常验证全走 test 实例（永远最新）。
 4. 并发会话共用仓库：commit 前 `git log --oneline -5`，**只 add 自己改过的文件路径**（曾误扫入他人文件）。
 
 ## 三、当前状态（2026-10-06）
@@ -54,6 +55,8 @@
 - SLU：36 个生成修饰器空覆盖=**全部生物禁野刷**（含友善 NPC 索拉尔/齐格迈尔/帕奇生成器），封印石禁用；清场命令 `/kill @e[type=#svs:slu_hostile]`
 - 围城村庄级共享（9b3c1ec 重构 + **a3b4adb 根因修复**）：村庄级计时/村外环带已码完；根因两处=维度 ResourceKey 门卫恒真（村庄扫描 13 分钟从未执行，见第五节 14）+ 回拨条件把倒计时钉死 5:00。**待用户重载验证**（日志应见 `[SVS-围城][TRACE] ... key=svs_siege_v_3_115 rem=` 递减；开波快进=聊天 `!siege`，TEMP 工具 _siege_fast.js）
 - EFS-ISS 1.0.3 已入包（ba2e9ba）：4 过强技能切断 + 保留技能蓝耗参数（openloader）+ 协议登记；**游戏内验收待做**；收藏家标签**无需重跑**（jar 实证 0 个 item 类）
+- **开发实例转制完成（10-06）**：新实例 test（PCL 导入 test20.zip，1418.6MB/2403 文件，overrides md5 全对）已建；同步规则=母本副本+test+仓库；test4 遗留
+- **今日两批修复待用户验收**：①围城根因（维度 ResourceKey 门卫+回拨钉死，a3b4adb）——验收=站村 20 秒 HUD 变"距围城 7 天"+聊天 `!siege` 开波；②三魂必现补挂（0beb570）——验收=工具匠/盔甲匠/武器匠对应魂交易必须出现+译名统一。③EFS-ISS 技能界面。清单已交用户
 - GitHub 已全量推送（2026-10-06，origin/main == local main）
 
 ## 四、已拍板裁决记录（不许推翻，不许重做调研）
