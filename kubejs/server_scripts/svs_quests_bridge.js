@@ -18,12 +18,14 @@ const QB_SymbioteTracker = Java.loadClass('com.scout.symbiote.tracker.SymbioteTr
 const QUEST_TASKS = {
   // 序章 A5.1 陨石的低语：共生体达成 ATTACHED（融合成功）即完成
   prologue_bond:      { questId: '__PLACEHOLDER_A5_1__', once: true, stage: 'ATTACHED' },
-  // 阶段Ⅰ B 系列桥检测任务（设计稿 阶段Ⅰ_启程_v1）
-  // B1.1 围城预兆：HUD 倒计时 < 2 天（siege.js persistentData svs_siege_timer < 2400*2 检测——桥轮询实现待任务 id 回填后接事件）
+  // 阶段Ⅰ B 系列桥检测任务（设计稿 阶段Ⅰ_启程_v1；检测口径 2026-10-07 用户已批）
+  // B1.1 围城预兆：所在村庄 remaining 首次跌破 5:00 预警线（SIEGE_WARN=6000 tick）——
+  //   数据在主世界 level persistentData 键 svs_siege_v_<gx>_<gz>（siege.js 村庄级共享，键由
+  //   siegeVillageOf 按村民质心 64 格量化），不是旧玩家键 svs_siege_timer（已废弃）
   siege_warn:         { questId: '__PLACEHOLDER_B1_1__', once: true },
-  // B1.2 守住第一波：围城波次触发且未失守（svs_siege_cycle > 0 检测）
+  // B1.2 守住第一波：开波后 2 分钟窗口（activeUntil）结束且 defeatDone=0——开波瞬间不完成
   siege_first_wave:   { questId: '__PLACEHOLDER_B1_2__', once: true },
-  // B2.2 绑定第一个火种：pd svs_fireseeds 非空
+  // B2.2 绑定第一个火种：玩家 pd svs_fireseeds 非空（键名 10-07 对 fireseed.js 核实一致）
   fireseed_first:     { questId: '__PLACEHOLDER_B2_2__', once: true },
   // 阶段Ⅰ-Ⅳ 例（占位）：共生使支线的阶段攀升任务们
   symbiote_integrated: { questId: '__PLACEHOLDER__', once: true, stage: 'INTEGRATED' },
