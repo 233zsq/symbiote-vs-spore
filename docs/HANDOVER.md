@@ -24,6 +24,9 @@
 | `docs/实例配置说明.md` | 配置生效方式速查（§8.1 sporeconfig 三档调参=P8' 待做） |
 | `docs/规格书_修复批_0926.md` | 修复批规格（**已全部完成**，留档） |
 | `docs/开源协议审查.md` | 协议合规；改动 mod 清单必须同步登记 |
+| `docs/开发计划_v1.md`＋`docs/开发计划_执行状态.md` | 开发计划（2026-10-07 获批）与滚动执行登记 |
+| `docs/M2.1_唯一节点清单.md`／`M2.2_阶段id映射表.md`／`M2.3_待核实证据.md` | M2 三件交付（待用户批注） |
+| `docs/EF适配现状与动画管线.md` | EF 适配三层数据驱动 + 自定义动画/视频动捕管线（2026-10-07 调查） |
 | 5 张 xlsx（武器/Boss/敌对生物/中立生物/EF 适配） | 数值基准（9 月实采，EFS-ISS 入包后需重采） |
 
 ## 二、目录布局与同步铁律（勿乱）
@@ -42,10 +45,10 @@
 3. 打包：`python E:\mcmp_test\pack_mcbbs.py testN`（MCBBS 格式），打完核对 overrides 内脚本与 jar 版本；**testN.zip 降级为里程碑/交付验证用途**（验证打包通道不漏文件），日常验证全走 test 实例（永远最新）。
 4. 并发会话共用仓库：commit 前 `git log --oneline -5`，**只 add 自己改过的文件路径**（曾误扫入他人文件）。
 
-## 三、当前状态（2026-10-06）
+## 三、当前状态（2026-10-07）
 
-- 215 mod（副本 mods/ jar 实数）；**测试基线 dist/test19.zip**；开发实例 test4
-- KubeJS：startup 5 + server 11 脚本（新增 svs_collect_tags.js 生成物、svs_spawn_control.js、trade_guarantee.js）
+- 215 mod（副本 mods/ jar 实数）；**最近全绿基线 dist/test19.zip**；test20.zip 已打（里程碑包：围城修复+三魂补挂+EFS-ISS，已导入为开发实例 **test**）；test4 遗留（M1.7 待删裁决）
+- KubeJS：startup 5 + server 13 脚本（另有 TEMP 件：`_siege_fast.js` 与 siege.js 的 TRACE 行，M1.5 收敛后删）
 - 自研 mod **svs_tweak-1.0.6.jar**：6 功能（POTB 判空+探针 / 陨石 400~800 环带 / 结构密度提纯 75 格 / AStages 容错 / MixinSquared 取消器 / **SvsDamageHelper 伤害归因助手** + villagerTradeDump 诊断），源码在仓库 `svs_tweak/`
 - Inquisition **3.2.0** + 官方配套 config 已装（sporeconfig/sporedata.toml，覆盖在副本+test4 的 config/，作者偏离默认清单在 `E:\mcmp_test\i18n_work\inquisition_author_delta.txt`）
 - 指南针三层已落地：配方（下界合金+淬魔钢坯）/维度白名单（主世界+暮色）/真菌币过路费 2 枚（右键钩子）/config structureBlacklist 34 条（主线 21+垃圾通配 13）
@@ -53,11 +56,11 @@
 - 文案：货币统一叫**真菌残魂**（id `kubejs:spore_coin` 不变）
 - SLU 三魂兑换已落地（2efc7db 表注册 + **10-06 补挂扩展**）：工具匠 24 币→活尸之魂 / 盔甲匠 48 币→骑士之魂 / 武器匠 64 币→巨人之魂（单向不回兑，maxUses=16）。**10-06 审查发现并修复**：DeepSeek 只注册了候选池没进必现补挂——vanilla 随机抽 2 笔机制下约 33~50% 村民永不显示魂交易（F2 同类）；trade_guarantee.js 已扩为六笔 per-trade flag（旧单标记会把工具匠第二笔锁死）。slu zh_cn 三魂九键同链异名瑕疵一并修正（规格书定名"活尸之魂/骑士之魂/巨人之魂"）
 - SLU：36 个生成修饰器空覆盖=**全部生物禁野刷**（含友善 NPC 索拉尔/齐格迈尔/帕奇生成器），封印石禁用；清场命令 `/kill @e[type=#svs:slu_hostile]`
-- 围城村庄级共享（9b3c1ec 重构 + **a3b4adb 根因修复**）：村庄级计时/村外环带已码完；根因两处=维度 ResourceKey 门卫恒真（村庄扫描 13 分钟从未执行，见第五节 14）+ 回拨条件把倒计时钉死 5:00。**待用户重载验证**（日志应见 `[SVS-围城][TRACE] ... key=svs_siege_v_3_115 rem=` 递减；开波快进=聊天 `!siege`，TEMP 工具 _siege_fast.js）
-- EFS-ISS 1.0.3 已入包（ba2e9ba）：4 过强技能切断 + 保留技能蓝耗参数（openloader）+ 协议登记；**游戏内验收待做**；收藏家标签**无需重跑**（jar 实证 0 个 item 类）
+- 围城村庄级共享（9b3c1ec 重构 + a3b4adb 根因修复）：**M1.1 已验证通过**（10-07 日志：新村庄注册 svs_siege_v_1_-60/-61、TRACE rem 每 10 秒 -200 递减、`!siege` 后两波开波 8→10 只）；根因两处见第五节 14；**未验证子项**=失守判定/回村回拨（等自然触发或专门测试）
+- EFS-ISS 1.0.3 已入包（ba2e9ba）：**M1.3 已验证通过**（10-07 用户视觉验收：4 砍掉技能拿不到 / 保留技能可用 / 魔法战刃联动法术；KubeJS 错误 0）；收藏家标签无需重跑（jar 实证 0 个 item 类）
 - **开发实例转制完成（10-06）**：新实例 test（PCL 导入 test20.zip，1418.6MB/2403 文件，overrides md5 全对）已建；同步规则=母本副本+test+仓库；test4 遗留
 - **计划获批 + M1 大半收敛（10-07）**：开发计划 v1 获批（批注 §四 1~5 全案通过）；M1.1 围城（注册/递减/开波日志实证）、M1.2 三魂必现（两村补挂日志实证）、M1.3 EFS-ISS（用户视觉）**全部通过**——详见 `docs/开发计划_执行状态.md`（滚动登记）。未验证：失守/回拨子项、M1.4 两人同村；M1.5 TEMP 清理挂起等 M1.4
-- **E1 已执行（10-07 裁决=删除重生成）**：三处 `config/simplyswords_main/{gem_effects,general}.json5`（577/269 字节纯 NUL 损坏文件）已删；再生验证=下次启动核对 simplyswords 重建默认文件
+- **E1 已收口（10-07）**：三处 `config/simplyswords_main/{gem_effects,general}.json5` 原为纯 NUL 损坏文件 → 已替换为最小合法 `{}`（三方 md5 `99914b93` 一致）；两轮启动实证：mod **不会**自动重建这两个文件，且 `ConfigWrapper Failed to load config` 错误在"NUL/已删除/合法空配置"三种状态下均出现 = **mod 侧既有现象**（始终走内置默认值，与处置无关）
 - M1.6 启动脚本已适配（launch_test4.py 默认 test，--version 可指定；实测验证待窗口）；M1.7 test4 保留至 M1.6 实测后
 - **M2 三件交付（10-07，待用户批注）**：M2.1 唯一节点清单（序章 22/阶段Ⅰ 16/preface 11，含 3 批注点）、M2.2 阶段 id 映射表（影响面普查+迁移方案）、M2.3 八项证据（**skillbook 技能存 NBT→职业卖指定书可行**；DailyBoss 0 advancement→桥方案；SkyArena 奖杯奖励/无钉鞋）。文件：docs/M2.1_唯一节点清单.md、M2.2_阶段id映射表.md、M2.3_待核实证据.md
 - **下一交付：等用户批注 M2 三件**（M2.1 三点/M2.2 两点/M2.3 三点，全部有推荐答案）→ 编辑器实装（M2.4）→ 桥激活（M2.5）
