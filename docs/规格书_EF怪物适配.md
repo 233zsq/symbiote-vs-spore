@@ -2,7 +2,7 @@
 
 > **状态：搁置 · 待用户裁决（2026-10-07 起草）**。用户指示：暂不拍板、搁置、先留档。**批准前不写任何数据包/JSON/配置**。
 > 批准后本文转为规格书并进入执行队列；五问未答期间本文仅作方案记录。
-> 依据：EF 官方 wiki（Custom Entity Datapack）+ 本机 215 jar 全量实证（2026-10-07）。证据附录见 §七。
+> 依据：EF 官方 wiki（Custom Entity Datapack）+ 本机 215 jar 全量实证（2026-10-07）。证据附录见§八。
 
 ## 一、目标
 
@@ -27,7 +27,7 @@
 |---|---|---|
 | EFMCompat 2.0 | 自定义召唤物一行补丁：`{"preset": "minecraft:skeleton"}` | `data/irons_spellbooks/epicfight_mobpatch/summoned_skeleton.json` |
 | SLU（74 个） | 全部 boss/精英：`renderer: minecraft:zombie` + `model: epicfight:entity/biped`——"人形怪一律借僵尸家族" | slu jar 内 74 个 mobpatch |
-| guardvillagers / w.o.w | 卫兵、武将各自 1/7 个补丁 | 对应 jar 内 |
+| guardvillagers / w.o.w | 原调查1/7为目录项口径；10-09精确.json重数：guardvillagers该目录0、w.o.w6；零JSON不能排除Java侧实现 | 对应 jar 内 |
 
 jerotes 的**部分怪模型本就继承原版家族**（`Modeladventurer extends Modelillager`——灾厄系；另有自研人形基类 `Modelhumanoid`）→ A 档同族直通候选。
 
@@ -79,3 +79,5 @@ jerotes 的**部分怪模型本就继承原版家族**（`Modeladventurer extend
 - 三个先例文件路径见 §三；真菌模型类清单见 spore jar `com/Harbinger/Spore/Client/Models/`（244 个）
 - 相关调查：`docs/EF适配现状与动画管线.md`（三层数据驱动与自定义动画管线）
 - 外部：Epic Fight Wiki（Custom Entity Datapack）、Werewolves #181（自定义骨架兼容性）
+
+> 10-09整理：旧EF差距/生物方案已归档，当前资源计数与证据边界合入EF适配现状与动画管线。本文五问未答状态不变，工作量估计仅原草案判断，不作为排期承诺。

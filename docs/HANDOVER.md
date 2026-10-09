@@ -1,15 +1,15 @@
 # Symbiote vs Spore 交接文档（写给下一个 AI）
 
-> 更新：**2026-10-05**。本文件是唯一权威交接面。
+> 更新：**2026-10-09（文档整理；游戏验收记录截至10-07）**。本文件是唯一权威交接面。
 > 主规格：`docs/任务文档.txt`（设计理念 13 条 + 工作原则）；机制定稿：`docs/魔改设计决议.md`（变更记录节效力最高）。
 > 任务线权威：`docs/任务线框架规格书_v1.md`（2026-10-03 定稿）。
 
 ## 〇、30 秒版
 
 1. 你在维护一个 MC 1.20.1 Forge 整合包（**215 mod**，副本 mods/ 实数（EFS-ISS 入包）），共生体 vs 真菌题材，类魂 ARPG，Epic Fight 战斗底座。
-2. **当前测试基线：`E:\mcmp_test\dist\test19.zip`**（用户以 dist/testN.zip 导入实例实测，不是 test4 开发实例）。
+2. **最近全绿基线：`E:\mcmp_test\dist\test19.zip`**；日常开发验证实例为 **test**（由test20.zip导入），testN.zip仅作里程碑/交付验证。
 3. **先读第五节"血泪教训"再写任何一行脚本**——本环境 KubeJS/Rhino 的坑全部实踩过。
-4. 改动三处同步：`E:\SvS_整合包_副本`（母本）→ `C:\PCL 正式版 2.8.13\.minecraft\versions\test4`（开发实例）→ git 仓库（GitHub 已推送）。
+4. 改动三处同步：`E:\SvS_整合包_副本`（母本）→ `C:\PCL 正式版 2.8.13\.minecraft\versions\test`（开发实例）→ git 仓库（推送状态须当次核对）。
 5. 用户在 `docs/任务文档.txt` 写了四条工作原则（三思/简洁/手术式/目标驱动），那是圣旨。
 
 ## 一、项目与主文档索引
@@ -17,27 +17,28 @@
 | 文档 | 内容 |
 |---|---|
 | `docs/任务文档.txt` | 设计理念 + 工作原则（最高优先级） |
-| `docs/魔改设计决议.md` | 机制定稿（变更记录节效力最高，已更新至 2026-10-04） |
+| `docs/魔改设计决议.md` | 机制定稿（变更记录节效力最高，变更记录已补10-07执行结果） |
 | `docs/任务线框架规格书_v1.md` | 任务线重写权威（四职业支线 + 四段式写作规范 + 检测模式三选一，2026-10-03 定稿） |
-| `docs/整合包结构表.md` | 274 mod 结构 + 33 原版结构全量枚举、四档密度、线性主线设计 |
+| `docs/整合包结构表.md` | 9-30采样274模组结构+33原版结构；10-03裁决已回填，仍冻结worldgen |
 | `docs/武器线与匠魂节奏_参考综合.md` | 四参考包拆包结论（任务线重写用） |
-| `docs/实例配置说明.md` | 配置生效方式速查（§8.1 sporeconfig 三档调参=P8' 待做） |
-| `docs/规格书_修复批_0926.md` | 修复批规格（**已全部完成**，留档） |
+| `docs/实例配置说明.md` | 当前落点与生效方式；P8′仍等spark数据和裁决 |
+| `docs/archive/2026-10-09_整理前/规格书_修复批_0926.md` | 历史修复规格，须连同同目录补正阅读 |
 | `docs/开源协议审查.md` | 协议合规；改动 mod 清单必须同步登记 |
 | `docs/开发计划_v1.md`＋`docs/开发计划_执行状态.md` | 开发计划（2026-10-07 获批）与滚动执行登记 |
-| `docs/M2.1_唯一节点清单.md`／`M2.2_阶段id映射表.md`／`M2.3_待核实证据.md` | M2 三件交付（待用户批注） |
+| `docs/任务线实装核对.md` | M2三件合并；8个批注点，仍待批；阶段Ⅰ16可见/hidden方案20物理节点 |
 | `docs/EF适配现状与动画管线.md` | EF 适配三层数据驱动 + 自定义动画/视频动捕管线（2026-10-07 调查） |
-| 5 张 xlsx（武器/Boss/敌对生物/中立生物/EF 适配） | 数值基准（9 月实采，EFS-ISS 入包后需重采） |
+| `docs/数据与采样说明.md` | 6份xlsx＋数值md的口径登记；EFS-ISS无item，不因其入包机械重采 |
+| `docs/README.md`／`验收与风险登记.md` | 制作导航、未决边界与历史资料去向 |
 
 ## 二、目录布局与同步铁律（勿乱）
 
 | 位置 | 角色 |
 |---|---|
 | `E:\SvS_整合包_副本` | 整合包母本，所有改动第一落点，打 zip 从这出 |
-| `C:\PCL 正式版 2.8.13\.minecraft\versions\test` | **开发实例（2026-10-06 起）**：用户以 PCL 导入 dist/test20.zip 建（1418.6MB/2403 文件已核对），替代 test4 的角色；launch 脚本待适配新名 |
+| `C:\PCL 正式版 2.8.13\.minecraft\versions\test` | **开发实例（2026-10-06 起）**：用户以 PCL 导入 dist/test20.zip 建（1418.6MB/2403 文件已核对），替代test4；launch_test4.py默认test，M1.6已验证 |
 | `C:\PCL 正式版 2.8.13\.minecraft\versions\test4` | 旧开发实例（遗留，历史世界/验证记录，删留待用户定） |
 | `E:\mcmp` | Git 仓库（GitHub 233zsq/symbiote-vs-spore） |
-| `E:\mcmp_test` | 工具区：launch_test4.py（支持 `--world`，待适配 test）、pack_mcbbs.py、dist/testN.zip、i18n_work/、错误报告/、dl/ |
+| `E:\mcmp_test` | 工具区：launch_test4.py（默认test，支持`--world`/`--version`）、pack_mcbbs.py、dist/testN.zip、i18n_work/、错误报告/、dl/ |
 
 **铁律**：
 1. 改 mod/配置/KubeJS → 副本 + **test** 双写 → 仓库 commit。三方漂移是历史重灾区。
@@ -50,7 +51,7 @@
 - 215 mod（副本 mods/ jar 实数）；**最近全绿基线 dist/test19.zip**；test20.zip 已打（里程碑包：围城修复+三魂补挂+EFS-ISS，已导入为开发实例 **test**）；test4 遗留（M1.7 待删裁决）
 - KubeJS：startup 5 + server 13 脚本（另有 TEMP 件：`_siege_fast.js` 与 siege.js 的 TRACE 行，M1.5 收敛后删）
 - 自研 mod **svs_tweak-1.0.6.jar**：6 功能（POTB 判空+探针 / 陨石 400~800 环带 / 结构密度提纯 75 格 / AStages 容错 / MixinSquared 取消器 / **SvsDamageHelper 伤害归因助手** + villagerTradeDump 诊断），源码在仓库 `svs_tweak/`
-- Inquisition **3.2.0** + 官方配套 config 已装（sporeconfig/sporedata.toml，覆盖在副本+test4 的 config/，作者偏离默认清单在 `E:\mcmp_test\i18n_work\inquisition_author_delta.txt`）
+- Inquisition **3.2.0** + 官方配套 config 已装（sporeconfig/sporedata.toml，历史安装记录为副本+test4；当前同步目标为副本+test，作者偏离默认清单在 `E:\mcmp_test\i18n_work\inquisition_author_delta.txt`）
 - 指南针三层已落地：配方（下界合金+淬魔钢坯）/维度白名单（主世界+暮色）/真菌币过路费 2 枚（右键钩子）/config structureBlacklist 34 条（主线 21+垃圾通配 13）
 - 收藏家标签 `#svs:collect_t1~t5`（1330 件武器 DPS 五分位）：**ServerEvents.tags 事件注册**（生成器 `tools/gen_collect_tags.py`，重跑可再生）
 - 文案：货币统一叫**真菌残魂**（id `kubejs:spore_coin` 不变）
@@ -61,10 +62,10 @@
 - **开发实例转制完成（10-06）**：新实例 test（PCL 导入 test20.zip，1418.6MB/2403 文件，overrides md5 全对）已建；同步规则=母本副本+test+仓库；test4 遗留
 - **计划获批 + M1 大半收敛（10-07）**：开发计划 v1 获批（批注 §四 1~5 全案通过）；M1.1 围城（注册/递减/开波日志实证）、M1.2 三魂必现（两村补挂日志实证）、M1.3 EFS-ISS（用户视觉）**全部通过**——详见 `docs/开发计划_执行状态.md`（滚动登记）。未验证：失守/回拨子项、M1.4 两人同村；M1.5 TEMP 清理挂起等 M1.4
 - **E1 已收口（10-07）**：三处 `config/simplyswords_main/{gem_effects,general}.json5` 原为纯 NUL 损坏文件 → 已替换为最小合法 `{}`（三方 md5 `99914b93` 一致）；两轮启动实证：mod **不会**自动重建这两个文件，且 `ConfigWrapper Failed to load config` 错误在"NUL/已删除/合法空配置"三种状态下均出现 = **mod 侧既有现象**（始终走内置默认值，与处置无关）
-- M1.6 启动脚本已适配（launch_test4.py 默认 test，--version 可指定；实测验证待窗口）；M1.7 test4 保留至 M1.6 实测后
-- **M2 三件交付（10-07，待用户批注）**：M2.1 唯一节点清单（序章 22/阶段Ⅰ 16/preface 11，含 3 批注点）、M2.2 阶段 id 映射表（影响面普查+迁移方案）、M2.3 八项证据（**skillbook 技能存 NBT→职业卖指定书可行**；DailyBoss 0 advancement→桥方案；SkyArena 奖杯奖励/无钉鞋）。文件：docs/M2.1_唯一节点清单.md、M2.2_阶段id映射表.md、M2.3_待核实证据.md
+- M1.6 启动脚本已适配且已验证进入test（执行状态§三）；M1.7 test4仍保留，等用户明确批准删除
+- **M2 三件交付（10-07，待用户批注）**：M2.1 唯一节点清单（序章 22/阶段Ⅰ 16/preface 11，含 3 批注点）、M2.2 阶段 id 映射表（影响面普查+迁移方案）、M2.3 八项证据（**skillbook 技能存 NBT→职业卖指定书可行**；DailyBoss 0 advancement→桥方案；SkyArena 奖杯奖励/无钉鞋）。合并文件：docs/任务线实装核对.md（§一/二/三分别为M2.1/2/3；静态证据不等于功能验收）
 - **下一交付：等用户批注 M2 三件**（M2.1 三点/M2.2 两点/M2.3 三点，全部有推荐答案）→ 编辑器实装（M2.4）→ 桥激活（M2.5）
-- GitHub 已全量推送（2026-10-07，origin/main == local main）
+- GitHub推送记录截至2026-10-07；本轮文档整理尚未提交，不能沿用历史记录断言当前remote一致
 
 ## 四、已拍板裁决记录（不许推翻，不许重做调研）
 
@@ -125,8 +126,8 @@
 
 ## 七、待办队列
 
-**可直接执行**：
-1. M2 编辑器实装（待批注后）：按 `docs/M2.1_唯一节点清单.md` 在 FTB 编辑器施工（awakening 22 条 + stage1_departure 16 条）→ 产出"稿编号→真实任务 id"对照表 → AI 桥激活（M2.5）
+**推进队列（各项须满足注明前置；待批项不自动获批）**：
+1. M2 编辑器实装（待批注后）：按 `docs/任务线实装核对.md` §一 在 FTB 编辑器施工（awakening22条＋阶段Ⅰ16可见节点（若批准迁4暂存hidden，物理总数20））→ 产出"稿编号→真实任务 id"对照表 → AI 桥激活（M2.5）
 2. ~~序章/阶段Ⅰ 设计稿~~ **已交付**；~~规格书_围城村庄级共享~~ **已执行**（9b3c1ec + a3b4adb，M1.1 已验证）——剩余：失守/回拨子项实测 + M1.5 TEMP 清理（依赖 M1.4）
 3. ~~EFS-ISS 入包~~ **已落地且 M1.3 已验证**（ba2e9ba）；无需重跑 gen_collect_tags.py
 4. SLU v2 定点化（主线 Boss 竞技场结构+路网，随任务线Ⅳ章；Boss 召唤券已进日课+悬赏两池设计）
@@ -152,7 +153,7 @@
 ## 九、关键事实速查
 
 - 启动测试：`python E:\mcmp_test\launch_test4.py --mem 10G --world <世界名>`（quickPlay；世界必须已存在，新世界用 level.dat 拷贝造骨架**并改 Difficulty 字节**）；到主菜单 200~350 秒正常
-- 日志：`test4/logs/latest.log`（UTF-8，跨天轮转 .gz）；崩溃报告 `test4/crash-reports/`
+- 日志：`test/logs/latest.log`（UTF-8，跨天轮转 .gz）；崩溃报告 `test/crash-reports/`
 - 杀残留游戏进程：powershell `Stop-Process -Name java -Force`（先确认没有用户实例在跑）
 - Gradle：`JAVA_HOME=C:/Program Files/Java/jdk-17 E:/mcmp_test/gradle-8.8/bin/gradle.bat --offline jar`（svs_tweak 构建）
 - CFR 反编译器：/tmp/cfr.jar 或 E:/mcmp_test；javap 用 jdk-21

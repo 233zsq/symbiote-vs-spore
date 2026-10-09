@@ -1,7 +1,7 @@
 # Symbiote 1.1.3 配置调频设计（阶段③批1 配套）
 
 > 2026-09-11 K3，全部证据来自 `symbiote-1.1.3.jar` 字节码（`com.scout.symbiote.config.SymbioteConfig`，javap -v 提取）。
-> 用途：阶段③批1 实测后的 config 落地依据；今晚实测只需确认实例首次启动生成的 `symbiote*.toml` 键名/分组与本文一致。
+> 用途：阶段③批1 实测后的 config 落地依据；后续9-13用户实测已过；当前母本可见symbiote-common.toml/client.toml。原设计数值只代表1.1.3默认。
 
 ## 0. 推翻原假设的关键发现
 
@@ -53,7 +53,7 @@ config 实际暴露的只有两类杠杆：
 设计目标（方案 3.9）：劫持应是"疏于养成的惩罚"与"救命兜底"，**不能在 EF Boss 战中随机夺走移动/输入**。硬编码数值动不了，就关掉所有**无预警移动劫持**的行为入口：
 
 ```toml
-# config/symbiote-common.toml（实际文件名/分组以首启动生成物为准，【待核实】）
+# config/symbiote-common.toml（实际文件名已确认，分组按现文件，不能把此展平示例直接覆盖完整toml）
 # —— 移动劫持四件套：全关 ——
 hunger_stalk_range = 0.0        # 饥饿强制行走找食：禁用（0=禁用是官方给的语义）
 curiosity_enabled = false       # 好奇拽人：关
@@ -82,17 +82,17 @@ defiance_shoves = false
 | LOW_HEALTH_OVERRIDE_HP_FRAC | 0.2 | 低血量自动 override（救命向） | 保留，属保命机制 |
 | DEFIANCE_BASE_CHANCE / INTERVAL | 0.25 / 600t | Cooperative 起 defiance 频率 | 移动类已随 defiance_shoves=false 关掉，言语类保留 |
 | STRESS_HIGH_THRESHOLD | 70 | 高压阈值 | 改不了；靠任务线教学 Stress 管理 |
-| 共生体 Stamina/DR/伤害全套 | 见附录 | 数值平衡 | 阶段⑤对齐武器线时引用附录表 |
+| 共生体 Stamina/DR/伤害全套 | 见附录 | 数值平衡 | 只作为1.1.3默认参考，不自动安排改硬编码 |
 
-## 4. 今晚实测配套动作
+## 4. 原实测步骤与当前结果（已执行，不作新队列）
 
 1. 首次启动实例后，把生成的 `config/symbiote-*.toml` 与 §1 键名对照（重点：分组名、hunger_stalk_range 是否为 Double 键）。
 2. 实测记录第 2 节"劫持"项按新认知观察：移动劫持只剩 救命类/desires 衍生 应触发不到"被拽走"（在 §2 配置落地后）。
-3. 配置文件下发方式【待定，实测后拍板】：defaultconfigs/ 随包下发（对新存档生效）或直接进 config/ 随包（强制所有玩家）。倾向 defaultconfigs/，与 Default Options 同一哲学。
+3. 当前母本配置实际位于config/symbiote-common.toml/client.toml。旧defaultconfigs偏好不作为当前待裁决；配置生效域仍须按mod声明核，不推断强制覆盖所有旧世界。
 
 ## 附录 · 硬编码数值全表（166 项，javap -v 提取自 lambda 供应器）
 
-> 用途：阶段⑤ 武器线数值对齐、共生体强度评估、任务线设计的唯一事实源。改不了，只能引用。
+> 用途：后续经批准的武器线数值评估、共生体强度评估、任务线设计的唯一事实源。改不了，只能引用。
 
 全表（166 项）：`docs/archive/symbiote_1.1.3_hardcoded_tuning.txt`。节选关键项：
 
@@ -106,3 +106,12 @@ defiance_shoves = false
 - 菌株：Predator 伤1.4/饥耗1.5/触手CD×0.6；Royal 伤1.5/defiance×1.6/减伤+0.1；Guardian 减伤+0.05；Shadow 夜速+0、白日Stress+1；Sculk 声波抗0.5、感知+8
 - Strain 技能（默认关 STRAIN_POWERS_ENABLED=0）：Aegis/Rupture/Nightstep/Screech/Onslaught 全套耗体与参数
 - 其他：Slam 10.0伤/5.0范围/600t；Bell 半径16 眩晕8s Stress+15；村民恐惧（阶段≥3，范围8）；铁傀儡敌视 Dominant
+
+
+## 5. 合并的实测与当前静态核对
+
+- 2026-09-13用户回报“全部通过”：结合/喂食/渲染/EF输入及改键过线；两项处决复测也通过。属于当时环境口头回传，不能补写不存在的逐项日志/截图。原记录：[阶段③批1实测](archive/2026-10-09_整理前/阶段③批1_Symbiote实测记录.md)§1～6。
+- 15个KeyMapping构造，但ALL只注册10个；未注册的tendril_lash/carapace/frenzy/strain_power/graft_ask不能因旧表全打勾就声称有可按键入口。有效改键Y/I/M/'，phantom的strain_power行已移除。（原记录§1、6）
+- 10-09只读母本：hunger_stalk_range=0、curiosity_enabled=false、predator_hunt_enabled=false、walk_door_rip=false、walk_terrain_bite=false、control_struggles=false、defiance_shoves=false，安全档存在；未重跑游戏验收。
+- 未注册五键的实际触发入口仍待专项核实；劫持触发条件细表未填，不把“整批过线”扩展成所有边缘条件已测。旧Xaero默认M冲突是历史风险，当前实际键位以玩家设置与Default Options为准。
+- STRESS等166项硬编码表保留archive/symbiote_1.1.3_hardcoded_tuning.txt，不从旧调频愿望构造不存在的TOML参数；本轮未改配置或附属实现。
