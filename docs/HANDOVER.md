@@ -126,16 +126,17 @@
 ## 七、待办队列
 
 **可直接执行**：
-1. 序章任务设计稿（四段式规范首秀，纯 Markdown 不碰 SNBT——三步走第一步，见任务线规格书）
-2. ~~规格书_围城村庄级共享.md~~ **已执行**（9b3c1ec + a3b4adb）——剩余：验证局读数 + 收敛后删 TEMP-TRACE-VERIFY
-3. ~~EFS-ISS 入包~~ **已落地**（ba2e9ba）——剩余：游戏内验收（技能界面 4 砍掉技能拿不到 / 保留技能可用 / 魔法战刃）；无需重跑 gen_collect_tags.py
-5. SLU v2 定点化（主线 Boss 竞技场结构+路网，随任务线Ⅳ章；Boss 召唤券已进日课+悬赏两池设计）
+1. M2 编辑器实装（待批注后）：按 `docs/M2.1_唯一节点清单.md` 在 FTB 编辑器施工（awakening 22 条 + stage1_departure 16 条）→ 产出"稿编号→真实任务 id"对照表 → AI 桥激活（M2.5）
+2. ~~序章/阶段Ⅰ 设计稿~~ **已交付**；~~规格书_围城村庄级共享~~ **已执行**（9b3c1ec + a3b4adb，M1.1 已验证）——剩余：失守/回拨子项实测 + M1.5 TEMP 清理（依赖 M1.4）
+3. ~~EFS-ISS 入包~~ **已落地且 M1.3 已验证**（ba2e9ba）；无需重跑 gen_collect_tags.py
+4. SLU v2 定点化（主线 Boss 竞技场结构+路网，随任务线Ⅳ章；Boss 召唤券已进日课+悬赏两池设计）
+5. （搁置）EF 怪物适配——见"等用户"区
 
 **等用户**：
-- simplyswords 两个空白 config（gem_effects/general.json5）处置裁决（删掉重生成 or 给值）
-- 围城验证局：游戏内 `/kubejs reload server_scripts`（免重启，jar 实证命令存在）→ 看 `[SVS-围城][TRACE]` 行 rem 递减；**开波快进=聊天发 `!siege` 或手持真菌残魂右键**（TEMP 工具 `_siege_fast.js`，只在副本+test4 不进仓库）；注：`/time add` **不能**快进（推进增量封顶 800，跳变只扣一次）；收敛后删 TEMP-TRACE-VERIFY + _siege_fast.js
+- **M2 三件批注**（M2.1 三点 / M2.2 两点 / M2.3 三点，全有推荐答案）→ 编辑器实装（M2.4）→ 桥激活（M2.5，含两缺陷修复）
+- **EF 怪物适配**（`docs/规格书_EF怪物适配.md`，**搁置待裁决**）：范围/外观底线/战斗接管/排期/验收人五问未答；实验批 3 只怪（约半小时）待批准后再动
 - 任务编辑器开搭（FTB SNBT 只由编辑器生成，铁律）
-- pauseOnLostFocus 当前=false（后台测试需要），全部收敛后还原 true
+- test4 删除待批准（M1.6 启动脚本已验证通过，删除条件齐）；pauseOnLostFocus 当前=false（后台测试需要），全部收敛后还原 true
 
 **实测触发才有下文**：真菌飞行怪崩档（复现后填 badmobs）、Relics×真菌 CME、BaM TPS、FA boss 函数 aether 引用（休眠代码无实际影响）
 
