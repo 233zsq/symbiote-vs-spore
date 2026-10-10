@@ -21,7 +21,9 @@
 
 `efn(nightfall) 875 / epicfightx(extra) 855 / wom 761 / epicfight_dd 607 / epicfight 本体 523 / cdmoveset 359 / epicfight_awaken 174 / womplus 171 / sword_soaring 141 / wukong 117 / refm 80 / woc_remastered 72 / p1nero_ec 68 / MobsPlus 60 / …`
 
-四类作用：①武器连段动画库（capability 的 type 指向谁的动画，决定手感）；②生物骨架与动作（super_warden 给监守者、MobsPlus-EFM、Resurrection 魂系 boss）；③技能/固有技体系（SLM 三件套=写被动/技能/固有技的框架）；④纯兼容数据（EFMCompat、mowzie_ef_compat、epicfighttinkercompat）。
+四类作用：①武器连段动画库（capability 的 type 指向谁的动画，决定手感）；②生物骨架与动作（super_warden 给监守者、MobsPlus-EFM）；③技能/固有技与闪避/处决表现（SLM三件套、Resurrection等）；④纯兼容数据（EFMCompat、mowzie_ef_compat、epicfighttinkercompat）。
+
+10-10订正：本轮重查Resurrection元数据、实体类与资源，未证它新增可独立游玩的魂系Boss，撤回旧句“Resurrection魂系boss”。CombatEvolution的ShelMarow明确标Test Mob，不能当正式Boss。动画量仅为历史资源统计，不能代表最终模型/动作质量或Boss数量；实际候选、Java行为与外部动作引用见[主线深化研究](主线深化研究_全模组与战斗筛选.md)§二E05～E09/四。
 
 ## 三、自定义动画的官方管线
 
