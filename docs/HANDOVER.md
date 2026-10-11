@@ -41,7 +41,7 @@
 |---|---|
 | `E:\SvS_整合包_副本` | 整合包母本，所有改动第一落点，打 zip 从这出 |
 | `C:\PCL 正式版 2.8.13\.minecraft\versions\test` | **开发实例（2026-10-06 起）**：用户以 PCL 导入 dist/test20.zip 建（1418.6MB/2403 文件已核对），替代test4；launch_test4.py默认test，M1.6已验证 |
-| `C:\PCL 正式版 2.8.13\.minecraft\versions\test4` | 旧开发实例（遗留，历史世界/验证记录，删留待用户定） |
+| ~~test4~~ | **已由用户删除**（2026-10-11 前清理；证据区核查无归档留痕，如需找回查回收站） |
 | `E:\mcmp` | Git 仓库（GitHub 233zsq/symbiote-vs-spore） |
 | `E:\mcmp_test` | 工具区：launch_test4.py（默认test，支持`--world`/`--version`）、pack_mcbbs.py、dist/testN.zip、i18n_work/、错误报告/、dl/ |
 
@@ -53,7 +53,7 @@
 
 ## 三、当前状态（2026-10-07）
 
-- 215 mod（副本 mods/ jar 实数）；**最近全绿基线 dist/test19.zip**；test20.zip 已打（里程碑包：围城修复+三魂补挂+EFS-ISS，已导入为开发实例 **test**）；test4 遗留（M1.7 待删裁决）
+- 215 mod（副本 mods/ jar 实数）；**最近全绿基线 dist/test19.zip**；test20.zip 已打（里程碑包：围城修复+三魂补挂+EFS-ISS，已导入为开发实例 **test**）；**test4 已删除**（2026-10-11 前，用户执行）
 - KubeJS：startup 5 + server 13 脚本（另有 TEMP 件：`_siege_fast.js` 与 siege.js 的 TRACE 行，M1.5 收敛后删）
 - 自研 mod **svs_tweak-1.0.6.jar**：6 功能（POTB 判空+探针 / 陨石 400~800 环带 / 结构密度提纯 75 格 / AStages 容错 / MixinSquared 取消器 / **SvsDamageHelper 伤害归因助手** + villagerTradeDump 诊断），源码在仓库 `svs_tweak/`
 - Inquisition **3.2.0** + 官方配套 config 已装（sporeconfig/sporedata.toml，历史安装记录为副本+test4；当前同步目标为副本+test，作者偏离默认清单在 `E:\mcmp_test\i18n_work\inquisition_author_delta.txt`）
@@ -64,10 +64,10 @@
 - SLU：36 个生成修饰器空覆盖=**全部生物禁野刷**（含友善 NPC 索拉尔/齐格迈尔/帕奇生成器），封印石禁用；清场命令 `/kill @e[type=#svs:slu_hostile]`
 - 围城村庄级共享（9b3c1ec 重构 + a3b4adb 根因修复）：**M1.1 已验证通过**（10-07 日志：新村庄注册 svs_siege_v_1_-60/-61、TRACE rem 每 10 秒 -200 递减、`!siege` 后两波开波 8→10 只）；根因两处见第五节 14；**未验证子项**=失守判定/回村回拨（等自然触发或专门测试）
 - EFS-ISS 1.0.3 已入包（ba2e9ba）：**M1.3 已验证通过**（10-07 用户视觉验收：4 砍掉技能拿不到 / 保留技能可用 / 魔法战刃联动法术；KubeJS 错误 0）；收藏家标签无需重跑（jar 实证 0 个 item 类）
-- **开发实例转制完成（10-06）**：新实例 test（PCL 导入 test20.zip，1418.6MB/2403 文件，overrides md5 全对）已建；同步规则=母本副本+test+仓库；test4 遗留
+- **开发实例转制完成（10-06）**：新实例 test（PCL 导入 test20.zip，1418.6MB/2403 文件，overrides md5 全对）已建；同步规则=母本副本+test+仓库；test4 后由用户删除（10-11 前）
 - **计划获批 + M1 大半收敛（10-07）**：开发计划 v1 获批（批注 §四 1~5 全案通过）；M1.1 围城（注册/递减/开波日志实证）、M1.2 三魂必现（两村补挂日志实证）、M1.3 EFS-ISS（用户视觉）**全部通过**——详见 `docs/开发计划_执行状态.md`（滚动登记）。未验证：失守/回拨子项、M1.4 两人同村；M1.5 TEMP 清理挂起等 M1.4
 - **E1 已收口（10-07）**：三处 `config/simplyswords_main/{gem_effects,general}.json5` 原为纯 NUL 损坏文件 → 已替换为最小合法 `{}`（三方 md5 `99914b93` 一致）；两轮启动实证：mod **不会**自动重建这两个文件，且 `ConfigWrapper Failed to load config` 错误在"NUL/已删除/合法空配置"三种状态下均出现 = **mod 侧既有现象**（始终走内置默认值，与处置无关）
-- M1.6 启动脚本已适配且已验证进入test（执行状态§三）；M1.7 test4仍保留，等用户明确批准删除
+- M1.6 启动脚本已适配且已验证进入test（执行状态§三）；M1.7 **闭环：test4 已由用户删除**（2026-10-11 前，核查无归档留痕）
 - **M2 三件交付（10-07，待用户批注）**：M2.1 唯一节点清单（序章 22/阶段Ⅰ 16/preface 11，含 3 批注点）、M2.2 阶段 id 映射表（影响面普查+迁移方案）、M2.3 八项证据（**skillbook 技能存 NBT→职业卖指定书可行**；DailyBoss 0 advancement→桥方案；SkyArena 奖杯奖励/无钉鞋）。合并文件：docs/任务线实装核对.md（§一/二/三分别为M2.1/2/3；静态证据不等于功能验收）
 - **任务深化批（10-10，待用户批注）**：《任务设计总稿 v1.1》交付（Ⅱ~Ⅳ 74 主线节点＋职业 79＋日课 8；撤回固定 SLU 名人三连，改两场差异化战位待批；序章/Ⅰ 5 处教学补正并入批注）＋《主线深化研究_全模组与战斗筛选》《任务参考研究_五整合包FTB》入库。提交 `8d1b664`；开发计划升 v1.2。
 - **合入审查批（10-11，待用户批注）**：刀光（现有三资源包未启用待核实）＋新模组6（15 jar；排除 NeoForge MobsPlus 与 Streams）＋Rapid（择项借用：首批 BadOptimizations/0Pack2Reload）；B0–B6 分批与 5 项裁决。提交 `f179690`；开发计划升 v1.3。
