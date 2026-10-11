@@ -17,6 +17,17 @@ ROOT = r'E:/mcmp'
 TABLE = os.path.join(ROOT, 'docs', '全量武器表.md')
 SCRIPT = os.path.join(ROOT, 'kubejs', 'server_scripts', 'svs_collect_tags.js')
 DEAD_PREFIXES = {'souls_like_bosses'}   # 已删除的 mod（决议：9-25 删），表中残留条目不进标签
+# 2026-10-11 E4 收紧（用户批注"先出差集清单与替换方案再改"，清单见 docs/E4_收藏家标签差集清单.md）
+REMOVED_MOD_PREFIXES = {'twilightforest', 'alexscaves'}   # 暮色森林 / Alex's Caves 已移除出包（模组清单 §10 现况），表中残留 28 条
+EXCLUDE_IDS = {
+    # nightfall 旧版 _e 死重复（正名已在表内，仅剔重复项）
+    'efn:exsiliumgladius_e', 'efn:fire_exsiliumgladius_e', 'efn:crimson_moon_e', 'efn:meen_spear_e',
+    'efn:nf_shortsword_e', 'efn:nf_shortsword_2_e', 'efn:air_tachi_e', 'efn:crescent_moon_e',
+    # 无存在证据（待游戏内复核；如确认存在则回补）
+    'efn:arc_tachi', 'efn:flag_bearer', 'efn:flag_bearer_e',
+}
+# 收紧时固定分位切点（= 2026-10-03 原切点），避免剔除条目后边界漂移导致其余武器换档；大改武器表时置 None 重算
+FIXED_CUTS = [5.41, 8.00, 10.20, 12.00]
 TIERS = 5
 
 # ── 解析表 ─────────────────────────────────────────────────────────────
@@ -34,12 +45,16 @@ for line in io.open(TABLE, encoding='utf-8'):
             continue
         rows.append((iid, cn, dps))
 
-# 剔除已删除 mod
+# 剔除已删除 mod 与旧 id（E4 收紧）
 rows = [r for r in rows if r[0].split(':')[0] not in DEAD_PREFIXES]
+rows = [r for r in rows if r[0].split(':')[0] not in REMOVED_MOD_PREFIXES and r[0] not in EXCLUDE_IDS]
 
 # ── 五分位分档 ─────────────────────────────────────────────────────────
 dps_list = sorted(r[2] for r in rows)
-cuts = [dps_list[int(len(dps_list) * i / TIERS)] for i in range(1, TIERS)]
+if FIXED_CUTS:
+    cuts = list(FIXED_CUTS)
+else:
+    cuts = [dps_list[int(len(dps_list) * i / TIERS)] for i in range(1, TIERS)]
 
 def tier_of(dps):
     for t in range(TIERS - 1):

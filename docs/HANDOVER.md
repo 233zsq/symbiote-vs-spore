@@ -58,7 +58,7 @@
 - 自研 mod **svs_tweak-1.0.6.jar**：6 功能（POTB 判空+探针 / 陨石 400~800 环带 / 结构密度提纯 75 格 / AStages 容错 / MixinSquared 取消器 / **SvsDamageHelper 伤害归因助手** + villagerTradeDump 诊断），源码在仓库 `svs_tweak/`
 - Inquisition **3.2.0** + 官方配套 config 已装（sporeconfig/sporedata.toml，历史安装记录为副本+test4；当前同步目标为副本+test，作者偏离默认清单在 `E:\mcmp_test\i18n_work\inquisition_author_delta.txt`）
 - 指南针三层已落地：配方（下界合金+淬魔钢坯）/维度白名单（主世界+暮色）/真菌币过路费 2 枚（右键钩子）/config structureBlacklist 34 条（主线 21+垃圾通配 13）
-- 收藏家标签 `#svs:collect_t1~t5`（1330 件武器 DPS 五分位）：**ServerEvents.tags 事件注册**（生成器 `tools/gen_collect_tags.py`，重跑可再生）
+- 收藏家标签 `#svs:collect_t1~t5`（**1291 件**武器 DPS 五分位；2026-10-11 E4 收紧剔除 39 条失效 id）：**ServerEvents.tags 事件注册**（生成器 `tools/gen_collect_tags.py`，含 REMOVED_MOD_PREFIXES/EXCLUDE_IDS/FIXED_CUTS）
 - 文案：货币统一叫**真菌残魂**（id `kubejs:spore_coin` 不变）
 - SLU 三魂兑换已落地（2efc7db 表注册 + **10-06 补挂扩展**）：工具匠 24 币→活尸之魂 / 盔甲匠 48 币→骑士之魂 / 武器匠 64 币→巨人之魂（单向不回兑，maxUses=16）。**10-06 审查发现并修复**：DeepSeek 只注册了候选池没进必现补挂——vanilla 随机抽 2 笔机制下约 33~50% 村民永不显示魂交易（F2 同类）；trade_guarantee.js 已扩为六笔 per-trade flag（旧单标记会把工具匠第二笔锁死）。slu zh_cn 三魂九键同链异名瑕疵一并修正（规格书定名"活尸之魂/骑士之魂/巨人之魂"）
 - SLU：36 个生成修饰器空覆盖=**全部生物禁野刷**（含友善 NPC 索拉尔/齐格迈尔/帕奇生成器），封印石禁用；清场命令 `/kill @e[type=#svs:slu_hostile]`
