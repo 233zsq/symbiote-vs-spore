@@ -41,6 +41,7 @@
 |---|---|
 | `E:\SvS_整合包_副本` | 整合包母本，所有改动第一落点，打 zip 从这出 |
 | `C:\PCL 正式版 2.8.13\.minecraft\versions\test` | **开发实例（2026-10-06 起）**：用户以 PCL 导入 dist/test20.zip 建（1418.6MB/2403 文件已核对），替代test4；launch_test4.py默认test，M1.6已验证 |
+| `C:\PCL 正式版 2.8.13\.minecraft\versions\svs_lab` | **合入线隔离实验实例（2026-10-11 建）**：test 全量副本＋B2 两项（217 mod）；B1/B3a/B4a/B5 试验专用，**绝不同步回母本**；见 `docs/合入_隔离实验实例_svs_lab.md` |
 | ~~test4~~ | **已由用户删除**（2026-10-11 前清理；证据区核查无归档留痕，如需找回查回收站） |
 | `E:\mcmp` | Git 仓库（GitHub 233zsq/symbiote-vs-spore） |
 | `E:\mcmp_test` | 工具区：launch_test4.py（默认test，支持`--world`/`--version`）、pack_mcbbs.py、dist/testN.zip、i18n_work/、错误报告/、dl/ |
