@@ -1,228 +1,111 @@
-# 全包 Boss/精英数值表（实采 · 血量排序）
+# Boss候选与表现评审入口
 
-> **10-09文档整理边界**：历史HP≥100筛选表，非主线Boss名单；B0～B3仅当时数据分组，不作当前玩家Tier榜，见数据与采样说明。原数据行保留。
-> 2026-09-19 KubeJS 运行时实采（全量 960 实体，本表收 HP≥100 共 219 个，全局按血量降序）。攻击为属性基础值（多数 Boss 实际伤害由技能/AI 决定，高于此值）。
-> 等级带：B0 天灾 ≥800 / B1 领主 ≥400 / B2 精英 ≥200 / B3 勇士 ≥100
-> 注意：`efn:doppelganger`/`efn:guardian` 约 10 亿血为机制锁血实体；`jerotes:test`/`jerotesvillage:smart` 疑似测试实体——魔改时均跳过。
+> 2026-10-12离线整理。原“血量≥100”表移为工作簿独立页，旧文留在 archive/2026-10-12_资料更新前。本页不把HP筛选当Boss判定。统一源：data/制作资料汇总.json；完整资源/进度证据：[Boss更新表](SvS_Boss表_更新版.xlsx)。旧Boss原表仍被WPS占用，本轮不覆盖。
 
-| 排名 | 实体 | 血量 | 攻击 | 护甲 | 等级带 |
-|---|---|---|---|---|---|
-| 1 | `efn:doppelganger` | 1e+09 | 10.0 | 0.0 | B0 天灾 |
-| 2 | `efn:guardian` | 1e+09 | 10.0 | 0.0 | B0 天灾 |
-| 3 | `bloodandmadness:micolash` | 1500 | 12.0 | 0.0 | B0 天灾 |
-| 4 | `jerotes:test` | 1024 | 0.0 | 0.0 | B0 天灾 |
-| 5 | `jerotesvillage:smart` | 1024 | 0.0 | 0.0 | B0 天灾 |
-| 6 | `bloodandmadness:father_gascoigne` | 1000 | 12.0 | 0.0 | B0 天灾 |
-| 7 | `bloodandmadness:gascoigne_beast` | 1000 | 12.0 | 0.0 | B0 天灾 |
-| 8 | `combat_evolution:shelmarow` | 1000 | 0.0 | 0.0 | B0 天灾 |
-| 9 | `irons_spellbooks:fire_boss` | 1000 | 10.0 | 15.0 | B0 天灾 |
-| 10 | `monsterexpansion:leivekilth` | 1000 | 20.0 | 5.0 | B0 天灾 |
-| 11 | `slu:boss_minecraft_lord` | 1000 | 32.0 | 0.0 | B0 天灾 |
-| 12 | `monsterexpansion:rakoth` | 750 | 15.0 | 5.0 | B1 领主 |
-| 13 | `monsterexpansion:skrythe` | 750 | 15.0 | 5.0 | B1 领主 |
-| 14 | `jerotesvillage:variant_zsiein` | 730 | 35.0 | 30.0 | B1 领主 |
-| 15 | `jerotesvillage:bright_land_beast` | 650 | 40.0 | 4.0 | B1 领主 |
-| 16 | `jerotesvillage:meror_monstrosity` | 640 | 30.0 | 12.0 | B1 领主 |
-| 17 | `alexscaves:luxtructosaurus` | 600 | 12.0 | 20.0 | B1 领主 |
-| 18 | `cataclysm:netherite_monstrosity` | 600 | 25.0 | 12.0 | B1 领主 |
-| 19 | `alexscaves:tremorzilla` | 500 | 30.0 | 10.0 | B1 领主 |
-| 20 | `block_factorys_bosses:kraken` | 500 | 10.0 | 20.0 | B1 领主 |
-| 21 | `irons_spellbooks:dead_king` | 500 | 10.0 | 15.0 | B1 领主 |
-| 22 | `irons_spellbooks:dead_king_corpse` | 500 | 10.0 | 15.0 | B1 领主 |
-| 23 | `minecraft:warden` | 500 | 30.0 | 0.0 | B1 领主 |
-| 24 | `monsterexpansion:ignathos` | 500 | 6.0 | 5.0 | B1 领主 |
-| 25 | `monsterexpansion:rhyza` | 500 | 10.0 | 5.0 | B1 领主 |
-| 26 | `spore:howitzer` | 500 | 15.0 | 10.0 | B1 领主 |
-| 27 | `souls_like_bosses:nightlord` | 500 | 8.0 | 10.0 | B1 领主 |
-| 28 | `cataclysm:ancient_remnant` | 450 | 25.0 | 12.0 | B1 领主 |
-| 29 | `cataclysm:ignis` | 450 | 14.0 | 10.0 | B1 领主 |
-| 30 | `legendary_monsters:the_obliterator` | 450 | 6.0 | 14.0 | B1 领主 |
-| 31 | `saintsdragons:ignivorus` | 450 | 50.0 | 4.0 | B1 领主 |
-| 32 | `spore:leviathan` | 450 | 30.0 | 25.0 | B1 领主 |
-| 33 | `spore:leviathan_seg` | 450 | 30.0 | 25.0 | B1 领主 |
-| 34 | `jerotesvillage:second_rounder_golem` | 436 | 36.0 | 20.0 | B1 领主 |
-| 35 | `jerotesvillage:second_rounder_golem_sword` | 436 | 36.0 | 20.0 | B1 领主 |
-| 36 | `cataclysm:maledictus` | 420 | 13.0 | 10.0 | B1 领主 |
-| 37 | `jerotesvillage:celestial_coilvine` | 420 | 18.0 | 15.0 | B1 领主 |
-| 38 | `jerotesvillage:gemstone_malignasaur` | 408 | 18.0 | 4.0 | B1 领主 |
-| 39 | `alexscaves:atlatitan` | 400 | 8.0 | 0.0 | B1 领主 |
-| 40 | `alexscaves:hullbreaker` | 400 | 16.0 | 0.0 | B1 领主 |
-| 41 | `cataclysm:the_leviathan` | 400 | 15.0 | 10.0 | B1 领主 |
-| 42 | `eeeabsmobs:immortal` | 400 | 12.0 | 10.0 | B1 领主 |
-| 43 | `eeeabsmobs:realm_warden` | 400 | 15.0 | 15.0 | B1 领主 |
-| 44 | `jerotes:big_beast` | 400 | 15.0 | 0.0 | B1 领主 |
-| 45 | `jerotesvillage:archnosed_hornbeast` | 400 | 28.0 | 2.0 | B1 领主 |
-| 46 | `legendary_monsters:posessed_paladin` | 400 | 15.0 | 12.0 | B1 领主 |
-| 47 | `nightfall_invade:arterius` | 400 | 4.0 | 30.0 | B1 领主 |
-| 48 | `spore:hindenburg` | 400 | 15.0 | 5.0 | B1 领主 |
-| 49 | `spore:kraken` | 400 | 15.0 | 15.0 | B1 领主 |
-| 50 | `spore:tumoroid_nuke` | 400 | 15.0 | 5.0 | B1 领主 |
-| 51 | `woc_remastered:zertar` | 400 | 3.0 | 15.0 | B1 领主 |
-| 52 | `cataclysm:scylla` | 390 | 18.0 | 12.0 | B2 精英 |
-| 53 | `cataclysm:the_harbinger` | 390 | 9.0 | 12.0 | B2 精英 |
-| 54 | `slu:boss_ancient_warrior` | 370 | 1.0 | 0.0 | B2 精英 |
-| 55 | `jerotesvillage:tyrant_of_the_mountain_realm` | 360 | 12.0 | 4.0 | B2 精英 |
-| 56 | `twilightforest:hydra` | 360 | 0.0 | 0.0 | B2 精英 |
-| 57 | `jerotesvillage:meror_champion` | 355 | 16.0 | 14.0 | B2 精英 |
-| 58 | `eeeabsmobs:nameless_guardian` | 350 | 15.0 | 10.0 | B2 精英 |
-| 59 | `legendary_monsters:cloud_golem` | 350 | 0.0 | 10.0 | B2 精英 |
-| 60 | `nightfall_invade:scarlet_hunter` | 350 | 1.0 | 10.0 | B2 精英 |
-| 61 | `slu:boss_elden_beast` | 350 | 7.0 | 0.0 | B2 精英 |
-| 62 | `spore:gazenbreacher` | 350 | 25.0 | 15.0 | B2 精英 |
-| 63 | `cataclysm:ender_guardian` | 333 | 16.0 | 20.0 | B2 精英 |
-| 64 | `slu:boss_aatrox` | 330 | 3.0 | 0.0 | B2 精英 |
-| 65 | `dungeons_and_combat:high_priest` | 320 | 0.0 | 12.0 | B2 精英 |
-| 66 | `dungeons_and_combat:kamath` | 320 | 16.0 | 12.0 | B2 精英 |
-| 67 | `dungeons_and_combat:sunleia` | 320 | 1.0 | 22.0 | B2 精英 |
-| 68 | `jerotesvillage:primordier` | 320 | 25.0 | 8.0 | B2 精英 |
-| 69 | `jerotesvillage:malignasaur` | 310 | 15.0 | 2.0 | B2 精英 |
-| 70 | `eeeabsmobs:relic_annihilator` | 300 | 12.0 | 10.0 | B2 精英 |
-| 71 | `minecraft:wither` | 300 | 2.0 | 4.0 | B2 精英 |
-| 72 | `slu:boss_notch` | 300 | 12.0 | 25.0 | B2 精英 |
-| 73 | `spore:sieger` | 300 | 30.0 | 25.0 | B2 精英 |
-| 74 | `spore:verfall` | 300 | 10.0 | 15.0 | B2 精英 |
-| 75 | `jerotesvillage:duneshockler` | 290 | 28.0 | 16.0 | B2 精英 |
-| 76 | `slu:boss_darius` | 290 | 6.0 | 0.0 | B2 精英 |
-| 77 | `slu:boss_mohg` | 290 | 3.0 | 0.0 | B2 精英 |
-| 78 | `slu:boss_soul_of_cinder` | 290 | 10.0 | 0.0 | B2 精英 |
-| 79 | `jerotesvillage:serpon_combat_executer` | 270 | 8.0 | 5.0 | B2 精英 |
-| 80 | `woc_remastered:mechx_12` | 270 | 4.0 | 0.0 | B2 精英 |
-| 81 | `alexscaves:forsaken` | 250 | 10.0 | 0.0 | B2 精英 |
-| 82 | `block_factorys_bosses:infernal_dragon` | 250 | 14.0 | 15.0 | B2 精英 |
-| 83 | `block_factorys_bosses:underworld_knight` | 250 | 15.0 | 0.0 | B2 精英 |
-| 84 | `block_factorys_bosses:yeti` | 250 | 18.0 | 2.0 | B2 精英 |
-| 85 | `dungeons_and_combat:mimy_chest` | 250 | 1.0 | 4.0 | B2 精英 |
-| 86 | `slu:boss_hoarah_loux` | 250 | 16.0 | 25.0 | B2 精英 |
-| 87 | `slu:boss_maliketh` | 250 | 7.0 | 0.0 | B2 精英 |
-| 88 | `slu:boss_pantheon` | 250 | 6.0 | 0.0 | B2 精英 |
-| 89 | `spore:hohlfresser` | 250 | 20.0 | 25.0 | B2 精英 |
-| 90 | `spore:hohlfresser_seg` | 250 | 20.0 | 25.0 | B2 精英 |
-| 91 | `twilightforest:ur_ghast` | 250 | 0.0 | 0.0 | B2 精英 |
-| 92 | `dungeons_and_combat:pyro_knight` | 240 | 1.0 | 0.0 | B2 精英 |
-| 93 | `jerotesvillage:darisorder` | 230 | 20.0 | 4.0 | B2 精英 |
-| 94 | `jerotesvillage:fury_darisorder` | 230 | 20.0 | 4.0 | B2 精英 |
-| 95 | `slu:boss_crucible_knight` | 230 | 3.0 | 0.0 | B2 精英 |
-| 96 | `slu:boss_gael` | 230 | 1.0 | 0.0 | B2 精英 |
-| 97 | `cataclysm:clawdian` | 225 | 16.0 | 12.0 | B2 精英 |
-| 98 | `jerotesvillage:corrosiver` | 225 | 12.0 | 5.0 | B2 精英 |
-| 99 | `jerotesvillage:prosperous_envoy` | 225 | 12.0 | 12.0 | B2 精英 |
-| 100 | `jerotesvillage:firepower_pourer` | 220 | 12.0 | 16.0 | B2 精英 |
-| 101 | `jerotesvillage:meror_golem` | 220 | 20.0 | 8.0 | B2 精英 |
-| 102 | `legendary_monsters:frostbitten_golem` | 220 | 16.0 | 10.0 | B2 精英 |
-| 103 | `legendary_monsters:annihilation_pursuer` | 210 | 10.0 | 13.0 | B2 精英 |
-| 104 | `slu:boss_fallen_lord` | 210 | 3.0 | 0.0 | B2 精英 |
-| 105 | `slu:boss_nameless_king` | 210 | 1.0 | 0.0 | B2 精英 |
-| 106 | `slu:boss_wukong` | 210 | 4.0 | 0.0 | B2 精英 |
-| 107 | `alexsmobs:sea_bear` | 200 | 8.0 | 0.0 | B2 精英 |
-| 108 | `bloodandmadness:silverbeast` | 200 | 5.0 | 0.0 | B2 精英 |
-| 109 | `cataclysm:amethyst_crab` | 200 | 13.0 | 10.0 | B2 精英 |
-| 110 | `cdmoveset:corrupt_dog` | 200 | 3.0 | 0.0 | B2 精英 |
-| 111 | `dummmmmmy:target_dummy` | 200 | 0.0 | 0.0 | B2 精英 |
-| 112 | `jerotesvillage:ominous_banner_projection` | 200 | 2.0 | 0.0 | B2 精英 |
-| 113 | `legendary_monsters:endersent` | 200 | 16.0 | 10.0 | B2 精英 |
-| 114 | `legendary_monsters:shulker_mimic` | 200 | 12.0 | 15.0 | B2 精英 |
-| 115 | `minecraft:ender_dragon` | 200 | 10.0 | 0.0 | B2 精英 |
-| 116 | `saintsdragons:atroxiia` | 200 | 10.0 | 10.0 | B2 精英 |
-| 117 | `saintsdragons:varasuchus` | 200 | 10.0 | 8.0 | B2 精英 |
-| 118 | `slu:boss_godfrey` | 200 | 1.0 | 0.0 | B2 精英 |
-| 119 | `slu:boss_radagon` | 200 | 7.0 | 25.0 | B2 精英 |
-| 120 | `spore:stahl` | 200 | 35.0 | 10.0 | B2 精英 |
-| 121 | `twilightforest:alpha_yeti` | 200 | 1.0 | 0.0 | B2 精英 |
-| 122 | `twilightforest:snow_queen` | 200 | 7.0 | 0.0 | B2 精英 |
-| 123 | `legendary_monsters:beheaded_knight` | 195 | 10.0 | 14.0 | B3 勇士 |
-| 124 | `legendary_monsters:resurrected_knight` | 190 | 10.0 | 12.0 | B3 勇士 |
-| 125 | `legendary_monsters:withered_abomination` | 190 | 15.0 | 12.0 | B3 勇士 |
-| 126 | `slu:boss_dragon_slayer_armour` | 190 | 1.0 | 0.0 | B3 勇士 |
-| 127 | `cataclysm:kobolediator` | 180 | 14.0 | 10.0 | B3 勇士 |
-| 128 | `saintsdragons:raevyx` | 180 | 0.0 | 8.0 | B3 勇士 |
-| 129 | `slu:boss_malenia` | 175 | 1.0 | 0.0 | B3 勇士 |
-| 130 | `slu:boss_malenia_2` | 175 | 3.0 | 25.0 | B3 勇士 |
-| 131 | `jerotesvillage:fluffmound` | 170 | 8.0 | 2.0 | B3 勇士 |
-| 132 | `jerotesvillage:sediment_lord` | 170 | 6.0 | 3.0 | B3 勇士 |
-| 133 | `legendary_monsters:ancient_guardian` | 170 | 20.0 | 13.0 | B3 勇士 |
-| 134 | `legendary_monsters:dune_sentinel` | 170 | 16.0 | 16.0 | B3 勇士 |
-| 135 | `legendary_monsters:lava_eater` | 170 | 11.0 | 15.0 | B3 勇士 |
-| 136 | `legendary_monsters:overgrown_colossus` | 170 | 14.0 | 10.0 | B3 勇士 |
-| 137 | `slu:boss_elemer` | 170 | 1.0 | 0.0 | B3 勇士 |
-| 138 | `slu:boss_jax` | 170 | 6.0 | 0.0 | B3 勇士 |
-| 139 | `slu:boss_looking_glass_knight` | 170 | 1.0 | 0.0 | B3 勇士 |
-| 140 | `jerotesvillage:purple_sand_hag` | 165 | 13.0 | 15.0 | B3 勇士 |
-| 141 | `alexsmobs:cachalot_whale` | 160 | 30.0 | 0.0 | B3 勇士 |
-| 142 | `alexsmobs:void_worm` | 160 | 5.0 | 4.0 | B3 勇士 |
-| 143 | `cataclysm:aptrgangr` | 160 | 18.0 | 10.0 | B3 勇士 |
-| 144 | `cataclysm:coralssus` | 160 | 10.0 | 5.0 | B3 勇士 |
-| 145 | `cataclysm:the_prowler` | 160 | 14.0 | 10.0 | B3 勇士 |
-| 146 | `saintsdragons:volitans` | 160 | 0.0 | 6.0 | B3 勇士 |
-| 147 | `alexscaves:gum_worm` | 150 | 9.0 | 10.0 | B3 勇士 |
-| 148 | `alexscaves:tremorsaurus` | 150 | 14.0 | 8.0 | B3 勇士 |
-| 149 | `block_factorys_bosses:sandworm` | 150 | 10.0 | 20.0 | B3 勇士 |
-| 150 | `cataclysm:ender_golem` | 150 | 10.0 | 12.0 | B3 勇士 |
-| 151 | `cataclysm:modern_remnant` | 150 | 6.0 | 5.0 | B3 勇士 |
-| 152 | `cataclysm:wadjet` | 150 | 11.0 | 5.0 | B3 勇士 |
-| 153 | `eeeabsmobs:corpse_warlock` | 150 | 5.0 | 0.0 | B3 勇士 |
-| 154 | `eeeabsmobs:relic_earthshaker` | 150 | 9.0 | 15.0 | B3 勇士 |
-| 155 | `legendary_monsters:skeletosaurus` | 150 | 13.0 | 15.0 | B3 勇士 |
-| 156 | `nightfall_invade:fallen_knight` | 150 | 1.0 | 10.0 | B3 勇士 |
-| 157 | `simplyswords:battlestandard` | 150 | 0.0 | 0.0 | B3 勇士 |
-| 158 | `simplyswords:battlestandarddark` | 150 | 0.0 | 0.0 | B3 勇士 |
-| 159 | `slu:boss_artorias` | 150 | 1.0 | 0.0 | B3 勇士 |
-| 160 | `slu:boss_radahn` | 150 | 1.0 | 0.0 | B3 勇士 |
-| 161 | `slu:boss_radahn_2` | 150 | 3.0 | 0.0 | B3 勇士 |
-| 162 | `jerotesvillage:adventurer` | 140 | 8.0 | 3.0 | B3 勇士 |
-| 163 | `legendary_monsters:guard` | 140 | 18.0 | 14.0 | B3 勇士 |
-| 164 | `slu:boss_gwyndolin` | 140 | 0.0 | 24.0 | B3 勇士 |
-| 165 | `jerotesvillage:lightning_worm` | 135 | 16.0 | 11.0 | B3 勇士 |
-| 166 | `jerotesvillage:woodland_heart_guardian` | 135 | 11.0 | 4.0 | B3 勇士 |
-| 167 | `jerotesvillage:giant_monster` | 130 | 12.0 | 4.0 | B3 勇士 |
-| 168 | `slu:boss_abyss_watcher` | 130 | 1.0 | 0.0 | B3 勇士 |
-| 169 | `slu:boss_count_robert` | 130 | 3.0 | 0.0 | B3 勇士 |
-| 170 | `jerotesvillage:frost_yeti` | 128 | 14.0 | 12.0 | B3 勇士 |
-| 171 | `slu:boss_godskin_apostle` | 125 | 2.0 | 0.0 | B3 勇士 |
-| 172 | `slu:boss_gundyr` | 125 | 1.0 | 0.0 | B3 勇士 |
-| 173 | `slu:boss_margit` | 125 | 1.0 | 0.0 | B3 勇士 |
-| 174 | `slu:boss_morgott` | 125 | 3.0 | 0.0 | B3 勇士 |
-| 175 | `spore:howit_arm` | 125 | 0.0 | 2.5 | B3 勇士 |
-| 176 | `jerotesvillage:cohort_hag` | 121 | 12.0 | 12.0 | B3 勇士 |
-| 177 | `jerotesvillage:coven_hag_one` | 121 | 12.0 | 12.0 | B3 勇士 |
-| 178 | `jerotesvillage:coven_hag_two` | 121 | 12.0 | 12.0 | B3 勇士 |
-| 179 | `alexscaves:relicheirus` | 120 | 12.0 | 0.0 | B3 勇士 |
-| 180 | `cataclysm:netherite_ministrosity` | 120 | 0.0 | 5.0 | B3 勇士 |
-| 181 | `cataclysm:the_baby_leviathan` | 120 | 4.0 | 5.0 | B3 勇士 |
-| 182 | `eeeabsmobs:immortal_executioner` | 120 | 8.0 | 6.0 | B3 勇士 |
-| 183 | `jerotesvillage:ax_crazy` | 120 | 12.0 | 12.0 | B3 勇士 |
-| 184 | `jerotesvillage:carved_iron_golem` | 120 | 17.0 | 17.0 | B3 勇士 |
-| 185 | `jerotesvillage:drought_wildfire` | 120 | 7.0 | 8.0 | B3 勇士 |
-| 186 | `jerotesvillage:fury_drought_wildfire` | 120 | 7.0 | 8.0 | B3 勇士 |
-| 187 | `jerotesvillage:vineheart_bomb` | 120 | 24.0 | 0.0 | B3 勇士 |
-| 188 | `legendary_monsters:knights_armor` | 120 | 18.0 | 14.0 | B3 勇士 |
-| 189 | `slu:boss_beast_clergyman` | 120 | 5.0 | 0.0 | B3 勇士 |
-| 190 | `slu:boss_ornstein` | 120 | 1.0 | 0.0 | B3 勇士 |
-| 191 | `slu:boss_smough` | 120 | 1.0 | 0.0 | B3 勇士 |
-| 192 | `slu:white_phantom` | 120 | 1.0 | 0.0 | B3 勇士 |
-| 193 | `twilightforest:minoshroom` | 120 | 2.0 | 0.0 | B3 勇士 |
-| 194 | `twilightforest:naga` | 120 | 5.0 | 0.0 | B3 勇士 |
-| 195 | `wom:saulomonk` | 120 | 8.0 | 0.0 | B3 勇士 |
-| 196 | `cataclysm:coral_golem` | 110 | 11.0 | 5.0 | B3 勇士 |
-| 197 | `dungeons_and_combat:torture` | 110 | 8.0 | 2.0 | B3 勇士 |
-| 198 | `slu:clone_abyss_watcher` | 110 | 1.0 | 0.0 | B3 勇士 |
-| 199 | `spore:vanguard` | 110 | 12.0 | 8.0 | B3 勇士 |
-| 200 | `jerotesvillage:fire_secretor` | 102 | 4.0 | 12.0 | B3 勇士 |
-| 201 | `alexsmobs:warped_mosco` | 100 | 10.0 | 10.0 | B3 勇士 |
-| 202 | `dungeons_and_combat:the_grave_watcher` | 100 | 1.0 | 0.0 | B3 勇士 |
-| 203 | `jerotes:jerotes_iron_golem` | 100 | 15.0 | 0.0 | B3 勇士 |
-| 204 | `jerotesvillage:cogon_sword` | 100 | 24.0 | 0.0 | B3 勇士 |
-| 205 | `jerotesvillage:serpon_combat_platform` | 100 | 5.0 | 16.0 | B3 勇士 |
-| 206 | `legendary_monsters:warped_fungussus` | 100 | 7.0 | 10.0 | B3 勇士 |
-| 207 | `minecraft:giant` | 100 | 50.0 | 0.0 | B3 勇士 |
-| 208 | `minecraft:iron_golem` | 100 | 15.0 | 0.0 | B3 勇士 |
-| 209 | `minecraft:ravager` | 100 | 12.0 | 0.0 | B3 勇士 |
-| 210 | `monsterexpansion:arborix` | 100 | 5.0 | 5.0 | B3 勇士 |
-| 211 | `saintsdragons:stegonaut` | 100 | 2.0 | 15.0 | B3 勇士 |
-| 212 | `slu:magma_giant` | 100 | 8.0 | 5.0 | B3 勇士 |
-| 213 | `slu:monster_crucible_knight` | 100 | 1.0 | 0.0 | B3 勇士 |
-| 214 | `slu:monster_crucible_knight_2` | 100 | 1.0 | 0.0 | B3 勇士 |
-| 215 | `slu:monster_tower_knight` | 100 | 1.0 | 0.0 | B3 勇士 |
-| 216 | `spore:ogre` | 100 | 20.0 | 12.0 | B3 勇士 |
-| 217 | `spore:proto` | 100 | 10.0 | 10.0 | B3 勇士 |
-| 218 | `twilightforest:lich` | 100 | 3.0 | 0.0 | B3 勇士 |
-| 219 | `wom:lupus_rex` | 100 | 2.0 | 30.0 | B3 勇士 |
+## 一、筛选与授权边界
+
+候选共 95 项（包括2项函数场次），来自“Boss Checklist支持ID∩历史实体”、SLU boss_命名池、《任务参考研究》E-二轮及《主线深化研究》§二/四的明确研究对象；这不是全Boss注册统计，也不证明每项已完整可玩。模型与动作优先→特效技能→入口重试/终段胜利→数值。所有表现结论仍待用户看样。被诅咒者与斯库拉仅比较候选；薪王化身已被用户否决作为终局；Nightfall/WOC只获准提替换方案。血源人形消失不代表胜利；FA两场不是普通实体。依据：《主线深化研究》§四、《任务设计总稿》终局候选部分、用户本次历次反馈。
+
+## 二、候选登记
+
+| 命名空间 | ID/场次 | 名称 | 设计用途 | 表现评审 | 判杀线索 | 风险 |
+|---|---|---|---|---|---|---|
+| alexsmobs | alexsmobs:void_worm | 虚空蠕虫 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| alexsmobs | alexsmobs:warped_mosco | 诡异蚊鬼 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | alexsmobs:alexsmobs/warped_mosco_kill | 入口/重试/多人待核 |
+| block_factorys_bosses | block_factorys_bosses:infernal_dragon | 阿什洛德，炼狱飞龙 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | block_factorys_bosses:kill_all_bosses、block_factorys_bosses:kill_dragon | 入口/重试/多人待核 |
+| block_factorys_bosses | block_factorys_bosses:kraken | 海妖内拉基斯 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | block_factorys_bosses:kill_all_bosses、block_factorys_bosses:kill_kraken | 入口/重试/多人待核 |
+| block_factorys_bosses | block_factorys_bosses:sandworm | 斯洛克，巨型沙虫 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | block_factorys_bosses:kill_all_bosses、block_factorys_bosses:kill_sandworm | 入口/重试/多人待核 |
+| block_factorys_bosses | block_factorys_bosses:underworld_knight | 赫尔瓦，冥界骑士 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | block_factorys_bosses:kill_all_bosses、block_factorys_bosses:kill_underworld_knight | 入口/重试/多人待核 |
+| block_factorys_bosses | block_factorys_bosses:yeti | 斯科尔，霜冻雪怪 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | block_factorys_bosses:kill_all_bosses、block_factorys_bosses:kill_yeti | 入口/重试/多人待核 |
+| bloodandmadness | bloodandmadness:father_gascoigne | 加斯科因神父 | Ⅲ完整变身战候选；仅判终段 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 人形移除不算完整胜利 |
+| bloodandmadness | bloodandmadness:gascoigne_beast | 加斯科因神父 | Ⅲ完整变身战候选；仅判终段 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 人形移除不算完整胜利 |
+| bloodandmadness | bloodandmadness:micolash | 噩梦之主密寇赖许 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| bosses_of_mass_destruction | bosses_of_mass_destruction:gauntlet | 下界铁掌 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | bosses_of_mass_destruction:nether/gauntlet_defeat | 入口/重试/多人待核 |
+| bosses_of_mass_destruction | bosses_of_mass_destruction:lich | 暗夜巫妖 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | bosses_of_mass_destruction:adventure/night_lich_defeat | 入口/重试/多人待核 |
+| bosses_of_mass_destruction | bosses_of_mass_destruction:obsidilith | 黑曜巨石柱 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | bosses_of_mass_destruction:end/obsidilith_defeat | 入口/重试/多人待核 |
+| bosses_of_mass_destruction | bosses_of_mass_destruction:void_blossom | 虚空之花 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | bosses_of_mass_destruction:adventure/void_blossom_defeat | 入口/重试/多人待核 |
+| cataclysm | cataclysm:ancient_remnant | 远古遗魂 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | cataclysm:kill_all_bosses、cataclysm:kill_remnant | 入口/重试/多人待核 |
+| cataclysm | cataclysm:ender_guardian | 末影守卫 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | cataclysm:kill_all_bosses、cataclysm:kill_ender_guardian | 入口/重试/多人待核 |
+| cataclysm | cataclysm:ignis | 焰魔 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | cataclysm:kill_all_bosses、cataclysm:kill_ignis | 入口/重试/多人待核 |
+| cataclysm | cataclysm:maledictus | 咒翼灵骸 | 终局比较候选；用户未定选 | 待用户看样；资源数量不评价品质 | cataclysm:kill_all_bosses、cataclysm:kill_maledictus | 入口/重试/多人待核 |
+| cataclysm | cataclysm:netherite_monstrosity | 下界合金巨兽 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | cataclysm:kill_all_bosses、cataclysm:kill_monstrosity | 入口/重试/多人待核 |
+| cataclysm | cataclysm:scylla | 斯库拉 | 终局比较候选；用户未定选 | 待用户看样；资源数量不评价品质 | cataclysm:kill_all_bosses、cataclysm:kill_scylla | 入口/重试/多人待核 |
+| cataclysm | cataclysm:the_harbinger | 先驱者 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | cataclysm:kill_all_bosses、cataclysm:kill_harbinger | 入口/重试/多人待核 |
+| cataclysm | cataclysm:the_leviathan | 利维坦 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | cataclysm:kill_all_bosses、cataclysm:kill_leviathan | 入口/重试/多人待核 |
+| dungeons_and_combat | dungeons_and_combat:kamath | 冥骸之主-卡玛斯 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| dungeons_and_combat | dungeons_and_combat:sunleia | 永昼之翼-苏蕾娅 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| eeeabsmobs | eeeabsmobs:corpse_warlock | 死尸术士 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | eeeabsmobs:eeeabsmobs/kill_corpse_warlock | 入口/重试/多人待核 |
+| eeeabsmobs | eeeabsmobs:nameless_guardian | 无名守卫者 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| irons_spellbooks | irons_spellbooks:dead_king | 死者之王 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| irons_spellbooks | irons_spellbooks:fire_boss | 提洛斯回响·原初受火者 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| jerotesvillage | jerotesvillage:sediment_lord | 沉降领主 | Ⅱ二轮代表战候选；原生入口/重试待核 | 待用户看样；资源数量不评价品质 | jerotesvillage:overlord | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:ancient_guardian | 荒古守卫者 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_the_ancient_guardian | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:cloud_golem | 云筑魔像 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_cloud_golem | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:dune_sentinel | 沙丘哨兵 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_dune_sentinel | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:endersent | 紫颂遣使 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_endersent | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:frostbitten_golem | 霜冻傀儡 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_frostbitten_golem | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:lava_eater | 噬焰蜥 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_lava_eater | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:overgrown_colossus | 蔓生巨像 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_overgrown_colossus | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:posessed_paladin | 堕落圣骑 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_posessed_paladin | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:shulker_mimic | 潜影拟态者 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_shulker_mimic | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:skeletosaurus | 骸骨巨龙 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_skeletosaurus | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:the_obliterator | 湮灭构造体 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_the_obliterator | 入口/重试/多人待核 |
+| legendary_monsters | legendary_monsters:withered_abomination | 凋零恶煞 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_withered_abomination | 入口/重试/多人待核 |
+| minecraft | minecraft:elder_guardian | minecraft:elder_guardian | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| minecraft | minecraft:ender_dragon | minecraft:ender_dragon | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| minecraft | minecraft:wither | minecraft:wither | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| monsterexpansion | monsterexpansion:leivekilth | 凛冰兽 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | monsterexpansion:hunt_large_monster、monsterexpansion:hunt_leivekilth | 入口/重试/多人待核 |
+| monsterexpansion | monsterexpansion:rhyza | 锐爪兽 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | monsterexpansion:hunt_large_monster、monsterexpansion:hunt_rhyza | 入口/重试/多人待核 |
+| monsterexpansion | monsterexpansion:skrythe | 肆空龙 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | monsterexpansion:hunt_large_monster、monsterexpansion:hunt_skrythe | 入口/重试/多人待核 |
+| mowziesmobs | mowziesmobs:ferrous_wroughtnaut | 钢铁守护者 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | mowziesmobs:kill_ferrous_wroughtnaut | 入口/重试/多人待核 |
+| mowziesmobs | mowziesmobs:frostmaw | 霜冻巨兽 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | mowziesmobs:kill_frostmaw | 入口/重试/多人待核 |
+| mowziesmobs | mowziesmobs:sculptor | 雕刻家-通臂大师 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | MISC不表示无战斗/非Boss |
+| mowziesmobs | mowziesmobs:umvuthi | 太阳鸟-乌姆武提 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | mowziesmobs:kill_umvuthi | 入口/重试/多人待核 |
+| nightfall_invade | nightfall_invade:arterius | <最后的守望者 - 亚尔特硫斯> | 已获准提替换；名单看样后定 | 待用户看样；资源数量不评价品质 | nightfall_invade:kill_arterius | 入口/重试/多人待核 |
+| nightfall_invade | nightfall_invade:scarlet_hunter | <赤色猎手-布莱德> | 已获准提替换；名单看样后定 | 待用户看样；资源数量不评价品质 | nightfall_invade:kill_scarlet_hunter | MISC不表示无战斗/非Boss |
+| slu | slu:boss_aatrox | 亚托克斯，暗裔剑魔 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_abyss_watcher | 深渊监视者 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_ancient_warrior | 远古战士 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_artorias | 深渊行者亚尔特留斯 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_beast_clergyman | 野兽祭司 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_count_robert | 罗伯特伯爵 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_crucible_knight | 熔炉骑士奥多维斯 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_darius | 德莱厄斯 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_dragon_slayer_armour | 猎龙铠甲 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_elden_beast | 艾尔登之兽 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_elemer | 荆棘的艾勒米尔 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_fallen_lord | 堕落之王 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_gael | 奴隶骑士盖尔 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_godfrey | 初始艾尔登之王葛孚雷 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_godskin_apostle | 神皮使徒 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_godskin_noble | 神皮贵族 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_gundyr | 审判者古达 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_gwyndolin | 暗影太阳葛温德林 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_hoarah_loux | 战士荷莱·露 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_jax | 贾克斯，武器宗师 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_looking_glass_knight | 镜之骑士 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_malenia | 玛莲妮亚，米凯拉之刃 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_malenia_2 | 腐败女神玛莲妮亚 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_maliketh | 黑剑玛利喀斯 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_margit | 恶兆妖鬼玛尔基特 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_minecraft_lord | 我的世界之主 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_mohg | 血之君王蒙格 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_morgott | 恶兆王蒙葛特 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_nameless_king | 无名王者 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_notch | 全能之神Notch | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_ornstein | 翁斯坦 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_pantheon | 潘森，不屈之矛 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_radagon | 黄金律法的拉达冈 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_radahn | 拉塔恩将军 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_radahn_2 | 碎星拉塔恩 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_smough | 斯摩 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_soul_of_cinder | 薪王们的化身 | 用户否决终局；可选/其余用途待定 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| slu | slu:boss_wukong | 悟空，美猴王 | Ⅳ章池候选；人选/数量待批 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
+| woc_remastered | woc_remastered:mechx_12 | §c机械X-12 | 已获准提替换；名单看样后定 | 待用户看样；资源数量不评价品质 | woc_remastered:kill_mechx12 | 入口/重试/多人待核 |
+| woc_remastered | woc_remastered:zertar | §5泽尔塔 | 已获准提替换；名单看样后定 | 待用户看样；资源数量不评价品质 | woc_remastered:kill_zertar | 入口/重试/多人待核 |
+| final_adversaries_lite | 函数场次：lothran | Lothran | 可选函数Boss；非普通实体 | 待用户看样 | 最终成功待核 | 没有普通Boss实体ID；不可直接套kill；胜利事件待核 |
+| final_adversaries_lite | 函数场次：sunflower_avatar | 向日葵化身 | 可选函数Boss；非普通实体 | 待用户看样 | 最终成功待核 | 没有普通Boss实体ID；不可直接套kill；胜利事件待核 |
+
+## 三、数值使用
+
+工作簿保留历史属性但不按血量排序选主线；“高血量实体非Boss判定”页 208 条含测试/部件/宠物。缺属性留空，不填0。本轮未生成战斗评分、Tier表或当前强度结论。（依据：《数据与采样说明》§二/三；《主线深化研究》§四。）

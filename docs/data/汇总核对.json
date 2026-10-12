@@ -1,0 +1,97 @@
+{
+  "counts": {
+    "jars": 215,
+    "declarations": 221,
+    "weapons_historical": 1354,
+    "entities_historical": 877,
+    "hostile_bucket": 489,
+    "other_category": 388,
+    "boss_candidate_entries": 95,
+    "high_hp_entries": 208,
+    "weapon_json_files": 3184,
+    "weapon_json_keys": 2746,
+    "mobpatch_files": 102,
+    "mobpatch_keys": 102
+  },
+  "workbooks": [
+    {
+      "file": "SvS_武器表.xlsx",
+      "sheets": [
+        [
+          "武器目录",
+          1354
+        ],
+        [
+          "仅资源候选",
+          32
+        ]
+      ]
+    },
+    {
+      "file": "SvS_敌对生物表.xlsx",
+      "sheets": [
+        [
+          "实体目录",
+          489
+        ]
+      ]
+    },
+    {
+      "file": "SvS_中立生物表.xlsx",
+      "sheets": [
+        [
+          "实体目录",
+          388
+        ]
+      ]
+    },
+    {
+      "file": "SvS_Boss表_更新版.xlsx",
+      "sheets": [
+        [
+          "Boss候选与看样",
+          95
+        ],
+        [
+          "高血量实体非Boss判定",
+          208
+        ],
+        [
+          "事件与排除说明",
+          5
+        ]
+      ]
+    },
+    {
+      "file": "SvS_EF适配统计表.xlsx",
+      "sheets": [
+        [
+          "EF证据分层",
+          81
+        ]
+      ]
+    },
+    {
+      "file": "Symbiote vs Spore 全模组清单.xlsx",
+      "sheets": [
+        [
+          "全模组清单",
+          215
+        ],
+        [
+          "用途统计",
+          12
+        ]
+      ]
+    }
+  ],
+  "legacy_weapon_delta": {
+    "current_history_only": 52,
+    "legacy_only": 29
+  },
+  "structure_files": 204,
+  "structure_keys": 201,
+  "structure_set_files": 144,
+  "structure_set_keys": 141,
+  "only_resource_weapon_candidates": 32
+}

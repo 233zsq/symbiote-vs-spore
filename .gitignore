@@ -10,6 +10,7 @@
 # --- packwiz 导出产物（导出件不上库；确需归档用 git add -f 强制） ---
 *.mrpack
 *.zip
+/backups/
 
 # --- 运行时产物（防御性排除：请勿在包根目录直接跑游戏） ---
 logs/
@@ -40,3 +41,6 @@ Desktop.ini
 /natives/
 /runtime/
 /screenshots/
+
+# --- Excel 临时锁文件 ---
+~$*
