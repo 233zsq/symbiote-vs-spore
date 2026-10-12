@@ -44,3 +44,4 @@ Desktop.ini
 
 # --- Excel 临时锁文件 ---
 ~$*
+__pycache__/
