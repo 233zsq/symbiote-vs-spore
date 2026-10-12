@@ -1,0 +1,489 @@
+{
+  "id": "000570064F5B214E",
+  "filename": "hunts",
+  "title": "可选·灾变与猎人",
+  "group": "000ACC9B9418BE4C",
+  "order_index": 11,
+  "icon": "minecraft:diamond_sword",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "000EC0EFFCA075AA",
+      "title": "下界合金巨兽",
+      "description": [
+        "【教学目标】体验一种独立的灾变战斗。",
+        "【作业】取得该Boss原生击杀进度。",
+        "【提示】自然场地：soul_black_smith；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
+        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000FE384DB0C57DD",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_monstrosity"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0006CEC9876E4BC6"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000754941EA9A2AF",
+      "title": "先驱者",
+      "description": [
+        "【教学目标】体验一种独立的灾变战斗。",
+        "【作业】取得该Boss原生击杀进度。",
+        "【提示】自然场地：ancient_factory；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
+        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "0000463D5B236672",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_harbinger"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0006115DD4B96988"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00044DE46E10FEA2",
+      "title": "末影守卫",
+      "description": [
+        "【教学目标】体验一种独立的灾变战斗。",
+        "【作业】取得该Boss原生击杀进度。",
+        "【提示】自然场地：ruined_citadel；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
+        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000874D20F6E17F9",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_ender_guardian"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000DDCB54334FF53"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BB5B89DF75835",
+      "title": "伊格尼斯",
+      "description": [
+        "【教学目标】体验一种独立的灾变战斗。",
+        "【作业】取得该Boss原生击杀进度。",
+        "【提示】自然场地：burning_arena；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
+        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "00008A0659792C9D",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_ignis"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0004611F7472B92E"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0001CA0A360F2269",
+      "title": "利维坦",
+      "description": [
+        "【教学目标】体验一种独立的灾变战斗。",
+        "【作业】取得该Boss原生击杀进度。",
+        "【提示】自然场地：sunken_city；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
+        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000CA756CFBDDFA7",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_leviathan"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000741A1E0A18B7D"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00046829A6C1C1E2",
+      "title": "远古遗骸",
+      "description": [
+        "【教学目标】体验一种独立的灾变战斗。",
+        "【作业】取得该Boss原生击杀进度。",
+        "【提示】自然场地：cursed_pyramid；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
+        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "00066BB5612FAF00",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_remnant"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00068F6CF483B999"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CA3AD2BA43571",
+      "title": "被诅咒者·看样候选",
+      "description": [
+        "【教学目标】体验一种独立的灾变战斗。",
+        "【作业】取得该Boss原生击杀进度。",
+        "【提示】自然场地：frosted_prison；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
+        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "0001C76A7111F6E3",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_maledictus"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000AEFA42F2BDBA2"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005DC9D92E77758",
+      "title": "斯库拉·看样候选",
+      "description": [
+        "【教学目标】体验一种独立的灾变战斗。",
+        "【作业】取得该Boss原生击杀进度。",
+        "【提示】自然场地：acropolis；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
+        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000DEFECA0EEDA7E",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_scylla"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000CC4595A2B05A6"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003F907486D4541",
+      "title": "加斯科因·人形",
+      "description": [
+        "【教学目标】认识血源路线的独立战斗。",
+        "【作业】有效击败该指定实体一次。",
+        "【提示】来源与激活按手册查证；加斯科因两种形态分别记录，不把杀死人形当完整变身战终结。主线战位仍待看样，不要求全图鉴毕业。",
+        "【讲评】冒险者，看清每一场战斗自己的规则。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000D2F28C223D83A",
+          "type": "kill",
+          "entity": "bloodandmadness:father_gascoigne",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，看清每一场战斗自己的规则。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0006E23605770804"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00077649E5D2EC63",
+      "title": "加斯科因·兽形",
+      "description": [
+        "【教学目标】认识血源路线的独立战斗。",
+        "【作业】有效击败该指定实体一次。",
+        "【提示】来源与激活按手册查证；加斯科因两种形态分别记录，不把杀死人形当完整变身战终结。主线战位仍待看样，不要求全图鉴毕业。",
+        "【讲评】冒险者，看清每一场战斗自己的规则。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000801430C3C2386",
+          "type": "kill",
+          "entity": "bloodandmadness:gascoigne_beast",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，看清每一场战斗自己的规则。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000607C14866633A"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CAF615AA515F1",
+      "title": "米科拉什",
+      "description": [
+        "【教学目标】认识血源路线的独立战斗。",
+        "【作业】有效击败该指定实体一次。",
+        "【提示】来源与激活按手册查证；加斯科因两种形态分别记录，不把杀死人形当完整变身战终结。主线战位仍待看样，不要求全图鉴毕业。",
+        "【讲评】冒险者，看清每一场战斗自己的规则。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000E42D82094BBCE",
+          "type": "kill",
+          "entity": "bloodandmadness:micolash",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，看清每一场战斗自己的规则。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F44CDD8C1A95A"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

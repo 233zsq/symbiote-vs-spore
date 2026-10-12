@@ -1,0 +1,601 @@
+{
+  "id": "000D4741731B3F3C",
+  "filename": "counterattack",
+  "title": "Ⅳ·反推",
+  "group": "0002FB0079E64484",
+  "order_index": 5,
+  "icon": "minecraft:nether_star",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "00087DF37D765454",
+      "title": "第一处试炼场",
+      "description": [
+        "【教学目标】到达已批SLU v2路线上的场地。",
+        "【作业】抵达第一场获批魂系试炼入口。",
+        "【提示】此目标尚未开放。v2竞技场＋直接召唤＋路网方向已批，实际入口尚未建设；不承诺野外SLU自然生成。",
+        "【讲评】冒险者，这一场先从看清场地开始。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "000D5510F9E4E9BD",
+          "type": "custom",
+          "title": "尚未开放·抵达第一场获批魂系试炼入口。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "0004F46937D027D6"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这一场先从看清场地开始。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00055C30805E6EB3"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00085DF24BB9E304",
+      "title": "魂系试炼一",
+      "description": [
+        "【教学目标】应对第一种合格魂系战斗风格。",
+        "【作业】在指定场次击败第一位获批Boss。",
+        "【提示】此目标尚未开放。人选看模型/动作再填；随机券同型目标不自动替代。",
+        "【讲评】冒险者，记住这场战斗真正要求你的是什么。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00087DF37D765454"
+      ],
+      "tasks": [
+        {
+          "id": "000F740BDB30746F",
+          "type": "custom",
+          "title": "尚未开放·在指定场次击败第一位获批Boss。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000E54509BFB8A67"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，记住这场战斗真正要求你的是什么。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0008F7E70D04A74A"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000B53BBEFD8CD54",
+      "title": "第二处试炼场",
+      "description": [
+        "【教学目标】走向打法不同的第二场试炼。",
+        "【作业】抵达第二场获批入口。",
+        "【提示】此目标尚未开放。可共用建筑模板，但不是让相同连段换名字再打一遍；尺寸由动作空间决定。",
+        "【讲评】冒险者，准备换一种应对方式。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00085DF24BB9E304"
+      ],
+      "tasks": [
+        {
+          "id": "000BCF0715E0E498",
+          "type": "custom",
+          "title": "尚未开放·抵达第二场获批入口。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "0000AB3A8FF5098B"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，准备换一种应对方式。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F39C1C10636D7"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00082D75F8F1EFEE",
+      "title": "魂系试炼二",
+      "description": [
+        "【教学目标】完成具有区别的第二场魂系战。",
+        "【作业】在指定场次击败第二位获批Boss。",
+        "【提示】此目标尚未开放。未找到合格差异样本则继续待选，显式请重裁SLU章纲，不靠HP拉长或擅加mod。",
+        "【讲评】冒险者，适应变化，才是这一段的收获。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000B53BBEFD8CD54"
+      ],
+      "tasks": [
+        {
+          "id": "0004B082929E2C09",
+          "type": "custom",
+          "title": "尚未开放·在指定场次击败第二位获批Boss。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000A004B430E2B25"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，适应变化，才是这一段的收获。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0007D4B2E0213C31"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005172C9E7E9F45",
+      "title": "主导",
+      "description": [
+        "【教学目标】达到母巢攻坚所需的共生成长。",
+        "【作业】本队至少一名成员达到DOMINANT。",
+        "【提示】复用J10事实，不复制队友档案，不要求故意失控或指定菌株。",
+        "【讲评】冒险者，力量在这里，决定仍在你手中。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00082D75F8F1EFEE"
+      ],
+      "tasks": [
+        {
+          "id": "000B3E533A4F2C4A",
+          "type": "custom",
+          "title": "本队至少一名成员达到DOMINANT。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000B0A1A57A2AADC"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，力量在这里，决定仍在你手中。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000A94184BDCAEED"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D731CF362EB9B",
+      "title": "母巢远征点",
+      "description": [
+        "【教学目标】抵达本包攻坚事件的入口。",
+        "【作业】抵达获批母巢事件地点。",
+        "【提示】此目标尚未开放。母巢是本包事件，不宣称大教堂必刷proto；地点/入口载体待批，不改普通worldgen。",
+        "【讲评】冒险者，这次要把战线推回去。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005172C9E7E9F45"
+      ],
+      "tasks": [
+        {
+          "id": "0005D4FD482EB0A3",
+          "type": "custom",
+          "title": "尚未开放·抵达获批母巢事件地点。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000EAA89ABFF4F95"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这次要把战线推回去。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00029A73F5EC747B"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00062BB63D0EE932",
+      "title": "开始反推",
+      "description": [
+        "【教学目标】主动开启一次有明确终点的攻坚。",
+        "【作业】成功启动本队母巢场次。",
+        "【提示】此目标尚未开放。有限波次，不是围城快进；已有场次不叠召，失败可重试。",
+        "【讲评】冒险者，保持退路，也保持目标。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D731CF362EB9B"
+      ],
+      "tasks": [
+        {
+          "id": "000A8809B258E2A5",
+          "type": "custom",
+          "title": "尚未开放·成功启动本队母巢场次。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "00075A18D12AA369"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，保持退路，也保持目标。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00058290FD841A39"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00064C9C478AC7D1",
+      "title": "母巢陷落",
+      "description": [
+        "【教学目标】完成有限波次的有效攻坚。",
+        "【作业】同一有效场次三波结束，最终proto死亡且未失败。",
+        "【提示】此目标尚未开放。逃散/卸载/变身移除不算清波；原生额外召唤规则随规格批准。",
+        "【讲评】冒险者，这一次，它们的前进被你们截住了。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00062BB63D0EE932"
+      ],
+      "tasks": [
+        {
+          "id": "000B3BE951040229",
+          "type": "custom",
+          "title": "尚未开放·同一有效场次三波结束，最终proto死亡且未失败。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000F450D22087108"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这一次，它们的前进被你们截住了。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000C97C4C7E2AAE6"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00011E01818D27C9",
+      "title": "终局路线",
+      "description": [
+        "【教学目标】抵达选定Boss的自然场地。",
+        "【作业】母巢成功后，本队一名参与者到达最终获批场地。",
+        "【提示】此目标尚未开放。优先被诅咒者/斯库拉原生场地；选择未定不预填实体，SLU v2不授权任意Boss新建结构。",
+        "【讲评】冒险者，这一程终于走到了这里。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00064C9C478AC7D1"
+      ],
+      "tasks": [
+        {
+          "id": "000200913BC35CDC",
+          "type": "custom",
+          "title": "尚未开放·母巢成功后，本队一名参与者到达最终获批场地。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000E1AA20BE62948"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这一程终于走到了这里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000BBAEBFE648FD6"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000A8DEF3715EED1",
+      "title": "最后一战",
+      "description": [
+        "【教学目标】用一场够格的战斗完成初版收束。",
+        "【作业】取得最终获批Boss的有效胜利。",
+        "【提示】此目标尚未开放。先比较被诅咒者与斯库拉；薪王化身排除。早先胜利追认或母巢后新战与再召资源同时批。",
+        "【讲评】冒险者，这是这一程的终点，也是你自己打出来的一战。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00011E01818D27C9"
+      ],
+      "tasks": [
+        {
+          "id": "000A0217586D4698",
+          "type": "custom",
+          "title": "尚未开放·取得最终获批Boss的有效胜利。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "0000F4D155AAC381"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这是这一程的终点，也是你自己打出来的一战。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00013AEEE07CFB67"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00088280280CEBF8",
+      "title": "反推之刃",
+      "description": [
+        "【教学目标】领取通关的标志性武器。",
+        "【作业】终局通过后从三件获批毕业武器中选1件领取。",
+        "【提示】此目标尚未开放。旧候选grand_trial_sword/legendary_gundyr_axespear/legendary_cinder_king_sword仍仅候选；逐件看模型/连段/能力后定，不因是SLU就默认够格。",
+        "【讲评】冒险者，这把武器是这一程的纪念。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000A8DEF3715EED1"
+      ],
+      "tasks": [
+        {
+          "id": "0005D8E2980F39EF",
+          "type": "custom",
+          "title": "尚未开放·终局通过后从三件获批毕业武器中选1件领取。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000E4700E1F05D69"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这把武器是这一程的纪念。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00060CF8043772BD"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005AE3ED4937726",
+      "title": "反推成功",
+      "description": [
+        "【教学目标】确认初版主线完成并继续开放世界。",
+        "【作业】完成母巢、终局并领取毕业选择。",
+        "【提示】此目标尚未开放。职业、日课、委托继续；不承诺NG+、触手分期2或全球真菌消失。",
+        "【讲评】冒险者，家还在，路也还在。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "尚未开放",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00088280280CEBF8"
+      ],
+      "tasks": [
+        {
+          "id": "000A41E75CED6FE1",
+          "type": "custom",
+          "title": "尚未开放·完成母巢、终局并领取毕业选择。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "00092DCD47973273"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，家还在，路也还在。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0001E3C4A9791377"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

@@ -1,0 +1,752 @@
+{
+  "id": "0004598EE3D81F4C",
+  "filename": "smith",
+  "title": "锻造师·炉火与刀",
+  "group": "000111B6DD2DC8BD",
+  "order_index": 7,
+  "icon": "tconstruct:smeltery_controller",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "0007C64A83E0FC27",
+      "title": "炉边入门",
+      "description": [
+        "【教学目标】认识匠魂保底路线",
+        "【作业】阅读建炉、浇铸、工具、材料的顺序",
+        "【提示】不要求用匠魂替换全部原生武器",
+        "【讲评】冒险者，慢慢攒出的刀，同样能陪你走远。"
+      ],
+      "icon": "tconstruct:smeltery_controller",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "00054583BC275BAC",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000387B3042FC7DB"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，慢慢攒出的刀，同样能陪你走远。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000D56D011C65BAB"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0001418B87607476",
+      "title": "炉子会工作",
+      "description": [
+        "【教学目标】区分有控制器与能熔铸",
+        "【作业】按JEI与手册准备控制器、燃料容器、排液与浇铸部件，完成一次实际熔铸后手动确认。",
+        "【提示】本项是教学自报，不冒称自动检测整炉。先用熔炉/小冶炼设备建立完整链；有32块砖不等于已有能用的炉。职业入门礼包在手册“炉边准备”中领取一次。",
+        "【讲评】冒险者，炉火亮了，还要让第一滴金属流出来。"
+      ],
+      "icon": "tconstruct:smeltery_controller",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007C64A83E0FC27"
+      ],
+      "tasks": [
+        {
+          "id": "00016CD0588FA630",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "0007DD9415A1BD43"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，炉火亮了，还要让第一滴金属流出来。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00072FC47EF6C0A5"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003CD2C53A5CC6D",
+      "title": "第一锭与部件",
+      "description": [
+        "【教学目标】练习排液、模具和部件准备",
+        "【作业】浇出一枚金属锭，并按JEI准备剑的所需部件后确认练习",
+        "【提示】教学自报；背包本来有锭不证明亲手浇铸。材料和部件表按本包JEI，不抄旧版",
+        "【讲评】冒险者，金属与部件备齐，下一步才是工具。"
+      ],
+      "icon": "tconstruct:smeltery_controller",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0001418B87607476"
+      ],
+      "tasks": [
+        {
+          "id": "00029C79B6A511A8",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "00024EDDC291FE85"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，金属与部件备齐，下一步才是工具。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0000451E7DAE1F02"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000608AF9010C214",
+      "title": "第一件成品",
+      "description": [
+        "【教学目标】认识部件与成品工具",
+        "【作业】持有tconstruct:sword×1",
+        "【提示】前一步已练部件；任意材料、无NBT匹配。本站只检测成品持有，不证明亲手组装",
+        "【讲评】冒险者，先用起来，再决定下一次怎样改。"
+      ],
+      "icon": "tconstruct:sword",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003CD2C53A5CC6D"
+      ],
+      "tasks": [
+        {
+          "id": "000144928ED9FBB0",
+          "type": "item",
+          "item": "tconstruct:sword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000B71E397504F4E"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先用起来，再决定下一次怎样改。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00046F28A2CA0898"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000EE75781816260",
+      "title": "钴的来路",
+      "description": [
+        "【教学目标】认识进阶金属",
+        "【作业】持有tconstruct:cobalt_ingot×4",
+        "【提示】查本包JEI；取材不由任务新增下界门禁",
+        "【讲评】冒险者，更远的路带来新的材料。"
+      ],
+      "icon": "tconstruct:cobalt_ingot",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000608AF9010C214",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000185A64D5B22BF",
+          "type": "item",
+          "item": "tconstruct:cobalt_ingot",
+          "count": 4L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "0003C6BED3002750"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，更远的路带来新的材料。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00021603562C2B36"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BB10F80481EE6",
+      "title": "合金初试",
+      "description": [
+        "【教学目标】认识合金准备",
+        "【作业】持有tconstruct:slimesteel_ingot×4",
+        "【提示】比例以当前JEI为准；持有不证明亲自合金",
+        "【讲评】冒险者，你已经不只盯着一种金属了。"
+      ],
+      "icon": "tconstruct:slimesteel_ingot",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000EE75781816260"
+      ],
+      "tasks": [
+        {
+          "id": "000EB375B8928757",
+          "type": "item",
+          "item": "tconstruct:slimesteel_ingot",
+          "count": 4L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000FCC94A0EDE403"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你已经不只盯着一种金属了。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0002A62BA599C13F"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00044C5860AF8BC3",
+      "title": "为用途强化",
+      "description": [
+        "【教学目标】认识强化的取舍",
+        "【作业】对惯用工具做一次可用强化并试用",
+        "【提示】可选自报；先看实际词条/槽位，不写未核实免费升级价",
+        "【讲评】冒险者，一次合适的改造，胜过盲目堆料。"
+      ],
+      "icon": "tconstruct:smeltery_controller",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000608AF9010C214"
+      ],
+      "tasks": [
+        {
+          "id": "0009DA4C96605A35",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000AD2E7BFD98B28"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一次合适的改造，胜过盲目堆料。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003A8C88B8BB1D0"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000EEBBC25CE7CB0",
+      "title": "更大的工位",
+      "description": [
+        "【教学目标】认识升级工位",
+        "【作业】持有tconstruct:tinkers_anvil×1",
+        "【提示】持有任务不能验证已放置；使用由教学确认",
+        "【讲评】冒险者，新的工位能接住更大的想法。"
+      ],
+      "icon": "tconstruct:tinkers_anvil",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000BB10F80481EE6",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000BC23056CACF22",
+          "type": "item",
+          "item": "tconstruct:tinkers_anvil",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000890344D9BC771"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，新的工位能接住更大的想法。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000D8B1255EBF476"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000539DD10844AC2",
+      "title": "高温准备",
+      "description": [
+        "【教学目标】认识燃料与熔点",
+        "【作业】持有tconstruct:blazing_blood_bucket×1",
+        "【提示】钴950、玛玉灵1200为本版本配方数据；实际燃料链先核JEI/实测",
+        "【讲评】冒险者，先有够用的火，再谈更难熔的金属。"
+      ],
+      "icon": "tconstruct:blazing_blood_bucket",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000EEBBC25CE7CB0"
+      ],
+      "tasks": [
+        {
+          "id": "0000FF8EEE8557D2",
+          "type": "item",
+          "item": "tconstruct:blazing_blood_bucket",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000DC992CCE40C8C"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先有够用的火，再谈更难熔的金属。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B3863D2C27A89"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003D98093E8515D",
+      "title": "玛玉灵",
+      "description": [
+        "【教学目标】认识后段合金",
+        "【作业】持有tconstruct:manyullyn_ingot×4",
+        "【提示】查当前合金比例；不安排更改原版矿物配方",
+        "【讲评】冒险者，材料成长也能成为战斗的底气。"
+      ],
+      "icon": "tconstruct:manyullyn_ingot",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000539DD10844AC2"
+      ],
+      "tasks": [
+        {
+          "id": "000E570B900761AA",
+          "type": "item",
+          "item": "tconstruct:manyullyn_ingot",
+          "count": 4L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000446C5566926CA"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，材料成长也能成为战斗的底气。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000196CE477FE28A"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00035880A184B9BE",
+      "title": "另一种工艺",
+      "description": [
+        "【教学目标】认识工具用途之外的选材",
+        "【作业】持有tconstruct:hepatizon_ingot×4",
+        "【提示】不把材料名称当DPS排名；按词条选用途",
+        "【讲评】冒险者，知道为何选择，比只知道名字更有用。"
+      ],
+      "icon": "tconstruct:hepatizon_ingot",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000539DD10844AC2"
+      ],
+      "tasks": [
+        {
+          "id": "000824F581B21116",
+          "type": "item",
+          "item": "tconstruct:hepatizon_ingot",
+          "count": 4L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000FEC465A790BA5"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道为何选择，比只知道名字更有用。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00069EBD850F9B3E"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005C2B679C081D4",
+      "title": "王后史莱姆",
+      "description": [
+        "【教学目标】完成第三种后段材料见闻",
+        "【作业】持有tconstruct:queens_slime_ingot×2",
+        "【提示】路线和实际译名用本包JEI；数量可批注缩减",
+        "【讲评】冒险者，炉边已经留下了你的经验。"
+      ],
+      "icon": "tconstruct:queens_slime_ingot",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000539DD10844AC2",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "0006557500248731",
+          "type": "item",
+          "item": "tconstruct:queens_slime_ingot",
+          "count": 2L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "0006A2A31FB4F49D"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，炉边已经留下了你的经验。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00018F8C24FA2F1A"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E54CC1078755C",
+      "title": "不只是一把剑",
+      "description": [
+        "【教学目标】尝试不同工具形态",
+        "【作业】持有tconstruct:cleaver和tconstruct:mattock各1件",
+        "【提示】任意材料，不推定都适配同一EF动作；可选",
+        "【讲评】冒险者，工匠的手也要照顾战场以外的事。"
+      ],
+      "icon": "tconstruct:cleaver",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000EEBBC25CE7CB0"
+      ],
+      "tasks": [
+        {
+          "id": "00018F835C56B8B5",
+          "type": "item",
+          "item": "tconstruct:cleaver",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "0004868BFB465C7A",
+          "type": "item",
+          "item": "tconstruct:mattock",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000E531164FE5EF5"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，工匠的手也要照顾战场以外的事。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0001BF06FC7F7AA9"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004C37253E734DE",
+      "title": "锻造师毕业",
+      "description": [
+        "【教学目标】汇总炉、工具与材料成果",
+        "【作业】完成F04、F06、F08～F12",
+        "【提示】不以“曾持有某材料”伪判成品等级；工具材料v2另议",
+        "【讲评】冒险者，下一次出征，你知道怎样准备自己的刀。"
+      ],
+      "icon": "tconstruct:smeltery_controller",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000608AF9010C214",
+        "000BB10F80481EE6",
+        "000EEBBC25CE7CB0",
+        "000539DD10844AC2",
+        "0003D98093E8515D",
+        "00035880A184B9BE",
+        "0005C2B679C081D4",
+        "00083052EF81988F"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000819BF08A75AD3"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "artifacts:obsidian_skull",
+            "Count": 1,
+            "tag": {
+              "display": {
+                "Name": "{\"text\": \"锻造师之记\", \"italic\": false}",
+                "Lore": [
+                  "{\"text\": \"职业纪念；沿用原物品属性与槽位\", \"italic\": false, \"color\": \"gray\"}"
+                ]
+              }
+            }
+          },
+          "count": 1,
+          "team_reward": false,
+          "id": "000EB95E4460A521"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，下一次出征，你知道怎样准备自己的刀。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003EFC0A2233358"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

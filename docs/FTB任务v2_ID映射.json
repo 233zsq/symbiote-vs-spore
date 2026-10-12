@@ -1,0 +1,2088 @@
+[
+  {
+    "key": "S00",
+    "chapter": "start",
+    "quest_id": "00018657DF0ADEE3",
+    "task_ids": [
+      "000F37C491319CB8"
+    ],
+    "availability": "wired",
+    "source": "待裁决清单.md §二补-2；任务设计稿_序章_觉醒_v1.md §A1.6；本次新世界实证"
+  },
+  {
+    "key": "S01",
+    "chapter": "start",
+    "quest_id": "0008236F713EB412",
+    "task_ids": [
+      "0009B12EBD306AE0"
+    ],
+    "availability": "wired",
+    "source": "魔改设计决议.md §个人难度；kubejs/server_scripts/difficulty.js applyDifficultyOne"
+  },
+  {
+    "key": "S02",
+    "chapter": "start",
+    "quest_id": "000780528C7C4AA8",
+    "task_ids": [
+      "000C67882DC304D5"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "S03",
+    "chapter": "start",
+    "quest_id": "000922B351137A7A",
+    "task_ids": [
+      "000D927167969A69"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "S04",
+    "chapter": "start",
+    "quest_id": "0009DD90C7A0C246",
+    "task_ids": [
+      "0005955901F898AC"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "A01",
+    "chapter": "prologue",
+    "quest_id": "000DDF502DB24C0D",
+    "task_ids": [
+      "000BA90E0762BE22"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "A02",
+    "chapter": "prologue",
+    "quest_id": "000F65CA758E9B56",
+    "task_ids": [
+      "00062251F6F6C0BA"
+    ],
+    "availability": "wired",
+    "source": "待裁决清单.md §一M2-1/§二补-2"
+  },
+  {
+    "key": "A03",
+    "chapter": "prologue",
+    "quest_id": "000786CC3015CC03",
+    "task_ids": [
+      "000CB084E31F8C5C"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "A04",
+    "chapter": "prologue",
+    "quest_id": "0006447FDE1C40C6",
+    "task_ids": [
+      "00091513F97E44ED"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "A05",
+    "chapter": "prologue",
+    "quest_id": "000E960C3E816082",
+    "task_ids": [
+      "000A78A4665102CA"
+    ],
+    "availability": "wired",
+    "source": "M2.4_施工记录_2026-10-11.md；本次playerdata epicfight:skill_cap；待裁决清单.md §二补-1"
+  },
+  {
+    "key": "A06",
+    "chapter": "prologue",
+    "quest_id": "000E64B3BA245308",
+    "task_ids": [
+      "000DB6172989A972"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "A07",
+    "chapter": "prologue",
+    "quest_id": "0004934589361179",
+    "task_ids": [
+      "000C25BF01E59745"
+    ],
+    "availability": "wired",
+    "source": "siege.js siegeVillageOf；任务设计稿_序章_觉醒_v1.md §A2"
+  },
+  {
+    "key": "A08",
+    "chapter": "prologue",
+    "quest_id": "0009544003FDB94E",
+    "task_ids": [
+      "0009DE712C0DB469"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "A09",
+    "chapter": "prologue",
+    "quest_id": "000A18CAA57977EA",
+    "task_ids": [
+      "0000A589F59E2E9F"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三；villager_trades.js；trade_guarantee.js"
+  },
+  {
+    "key": "A10",
+    "chapter": "prologue",
+    "quest_id": "000D9D099E4FB1BC",
+    "task_ids": [
+      "000DBD6C1DC7BDA0"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §3.4；symbiote_counter.js"
+  },
+  {
+    "key": "A11",
+    "chapter": "prologue",
+    "quest_id": "000593832314CFC0",
+    "task_ids": [
+      "000E583E858897A7"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "A12",
+    "chapter": "prologue",
+    "quest_id": "000D7BD903B53355",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "B01",
+    "chapter": "departure",
+    "quest_id": "000752A2CAEFDCA0",
+    "task_ids": [
+      "00036B448EAFB9AA"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "B02",
+    "chapter": "departure",
+    "quest_id": "00069FEB67BAFE21",
+    "task_ids": [
+      "000B51EE5A73E8CC"
+    ],
+    "availability": "wired",
+    "source": "fireseed.js；villager_trades.js"
+  },
+  {
+    "key": "B03",
+    "chapter": "departure",
+    "quest_id": "000C5A8BEF0C98DE",
+    "task_ids": [
+      "000B9788BB78ECC1"
+    ],
+    "availability": "wired",
+    "source": "fireseed.js svs_fireseeds"
+  },
+  {
+    "key": "B04",
+    "chapter": "departure",
+    "quest_id": "000D88915813FC3E",
+    "task_ids": [
+      "000E7FE794F93A21"
+    ],
+    "availability": "wired",
+    "source": "规格书_围城村庄级共享.md；siege.js"
+  },
+  {
+    "key": "B05",
+    "chapter": "departure",
+    "quest_id": "000E91D7EA2384AA",
+    "task_ids": [
+      "00016475C0BB6C1B"
+    ],
+    "availability": "wired",
+    "source": "任务线实装核对.md §三#1；本机DailyBoss结构资源"
+  },
+  {
+    "key": "B06",
+    "chapter": "departure",
+    "quest_id": "0008563095580C0F",
+    "task_ids": [
+      "00088CA0253CDC15"
+    ],
+    "availability": "pending",
+    "source": "待裁决清单.md Q04；任务设计总稿_v1.md §2.2/八K05"
+  },
+  {
+    "key": "B07",
+    "chapter": "departure",
+    "quest_id": "0006F407B71E2FD9",
+    "task_ids": [
+      "00019E90474B5A9C"
+    ],
+    "availability": "wired",
+    "source": "待裁决清单.md M2-8；skyarena advancements/common_arena"
+  },
+  {
+    "key": "B08",
+    "chapter": "departure",
+    "quest_id": "00005E22831735CA",
+    "task_ids": [
+      "00046E9C0CBFE265"
+    ],
+    "availability": "pending",
+    "source": "待裁决清单.md M2-7；任务线实装核对.md §三#5"
+  },
+  {
+    "key": "B09",
+    "chapter": "departure",
+    "quest_id": "000AED222B64F1D4",
+    "task_ids": [
+      "00012593A91A4FDE"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "B10",
+    "chapter": "departure",
+    "quest_id": "0003D74A5A94F2B3",
+    "task_ids": [
+      "0004855CBAE4266F"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §〇5；待裁决清单.md M2-6"
+  },
+  {
+    "key": "B11",
+    "chapter": "departure",
+    "quest_id": "0004A9329C27BC37",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "C02",
+    "chapter": "journey",
+    "quest_id": "0007A853D67CC304",
+    "task_ids": [
+      "000297A85382B3AF"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C02；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C03",
+    "chapter": "journey",
+    "quest_id": "000EC87436A45309",
+    "task_ids": [
+      "0005DE571C4A968A"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C03；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C04",
+    "chapter": "journey",
+    "quest_id": "000C3D103FEA9F5B",
+    "task_ids": [
+      "0001D32459A514BE"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C04；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C05",
+    "chapter": "journey",
+    "quest_id": "00025FEE52275306",
+    "task_ids": [
+      "0001604E945B8A72"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C05；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C06",
+    "chapter": "journey",
+    "quest_id": "00094D5414368567",
+    "task_ids": [
+      "000384214EB29883"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C06；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C07",
+    "chapter": "journey",
+    "quest_id": "000B08815E421A3F",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C07；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C09",
+    "chapter": "journey",
+    "quest_id": "00090C0C750FA246",
+    "task_ids": [
+      "000D350254A3239E"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C09；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C10",
+    "chapter": "journey",
+    "quest_id": "000BB89A895F594A",
+    "task_ids": [
+      "000DB40E3DB89511"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C10；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C11",
+    "chapter": "journey",
+    "quest_id": "00031FFB7FDEF6B7",
+    "task_ids": [
+      "000C7EE4AEBF223F"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C11；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C13",
+    "chapter": "journey",
+    "quest_id": "00071E32E6E9D8AD",
+    "task_ids": [
+      "000288F9DA1AA76B"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C13；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C14",
+    "chapter": "journey",
+    "quest_id": "000C022047852841",
+    "task_ids": [
+      "00061EB87EC95162"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C14；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C15",
+    "chapter": "journey",
+    "quest_id": "00083B804B6F4911",
+    "task_ids": [
+      "000F32578B85F122"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C15；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C16",
+    "chapter": "journey",
+    "quest_id": "00068E06F945707B",
+    "task_ids": [
+      "0004B04EF511E9B8"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C16；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C22",
+    "chapter": "journey",
+    "quest_id": "0005D8B2BE004BA4",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C22；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D02",
+    "chapter": "front",
+    "quest_id": "0009822CFFD8EE6B",
+    "task_ids": [
+      "000AB6630091F62F"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D02；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D03",
+    "chapter": "front",
+    "quest_id": "000538275921E5CB",
+    "task_ids": [
+      "000535699A01292B"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D03；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D04",
+    "chapter": "front",
+    "quest_id": "0003CE6BD9078AB5",
+    "task_ids": [
+      "0008E68532348EFD"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D04；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D05",
+    "chapter": "front",
+    "quest_id": "000AB435FC3F33F0",
+    "task_ids": [
+      "000D3B252B5204DB"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D05；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D07",
+    "chapter": "front",
+    "quest_id": "000CC6934EF0022F",
+    "task_ids": [
+      "000F52FEBC065E26"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D07；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D08",
+    "chapter": "front",
+    "quest_id": "0006E95A2E74B63C",
+    "task_ids": [
+      "000EE516980FD444"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D08；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D11",
+    "chapter": "front",
+    "quest_id": "0005FA094011A5B9",
+    "task_ids": [
+      "00092429596AE1B0"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D11；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D12",
+    "chapter": "front",
+    "quest_id": "0003D726265FAB91",
+    "task_ids": [
+      "0000E1E9E20724E5"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §D12；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D16",
+    "chapter": "front",
+    "quest_id": "000C11C78E5C50BC",
+    "task_ids": [
+      "000967BBD3B1998C"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §D16；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D18",
+    "chapter": "front",
+    "quest_id": "000FBAFF06B5C89F",
+    "task_ids": [
+      "00014D07237028C1"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D18；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D19",
+    "chapter": "front",
+    "quest_id": "000EFD528821B67D",
+    "task_ids": [
+      "000DC3BDAB3299B1"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §D19；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D21",
+    "chapter": "front",
+    "quest_id": "00000E5F3C730477",
+    "task_ids": [
+      "0009CF39DE047AC9"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D21；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D23",
+    "chapter": "front",
+    "quest_id": "0005CCDCA4845E1B",
+    "task_ids": [
+      "000885CB83AE12A6"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D23；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D25",
+    "chapter": "front",
+    "quest_id": "000402B476FC579B",
+    "task_ids": [
+      "000349B5779BF498"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D25；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D29",
+    "chapter": "front",
+    "quest_id": "00083052EF81988F",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D29；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E02",
+    "chapter": "counterattack",
+    "quest_id": "00087DF37D765454",
+    "task_ids": [
+      "000D5510F9E4E9BD"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E02；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E03",
+    "chapter": "counterattack",
+    "quest_id": "00085DF24BB9E304",
+    "task_ids": [
+      "000F740BDB30746F"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E03；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E04",
+    "chapter": "counterattack",
+    "quest_id": "000B53BBEFD8CD54",
+    "task_ids": [
+      "000BCF0715E0E498"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E04；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E05",
+    "chapter": "counterattack",
+    "quest_id": "00082D75F8F1EFEE",
+    "task_ids": [
+      "0004B082929E2C09"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E05；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E09",
+    "chapter": "counterattack",
+    "quest_id": "0005172C9E7E9F45",
+    "task_ids": [
+      "000B3E533A4F2C4A"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §E09；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E10",
+    "chapter": "counterattack",
+    "quest_id": "000D731CF362EB9B",
+    "task_ids": [
+      "0005D4FD482EB0A3"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E10；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E11",
+    "chapter": "counterattack",
+    "quest_id": "00062BB63D0EE932",
+    "task_ids": [
+      "000A8809B258E2A5"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E11；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E12",
+    "chapter": "counterattack",
+    "quest_id": "00064C9C478AC7D1",
+    "task_ids": [
+      "000B3BE951040229"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E12；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E14",
+    "chapter": "counterattack",
+    "quest_id": "00011E01818D27C9",
+    "task_ids": [
+      "000200913BC35CDC"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E14；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E16",
+    "chapter": "counterattack",
+    "quest_id": "000A8DEF3715EED1",
+    "task_ids": [
+      "000A0217586D4698"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E16；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E17",
+    "chapter": "counterattack",
+    "quest_id": "00088280280CEBF8",
+    "task_ids": [
+      "0005D8E2980F39EF"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E17；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E18",
+    "chapter": "counterattack",
+    "quest_id": "0005AE3ED4937726",
+    "task_ids": [
+      "000A41E75CED6FE1"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §E18；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "L01",
+    "chapter": "collector",
+    "quest_id": "00007C7E6B60D993",
+    "task_ids": [
+      "000A02351BEA0944"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 L01；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "L02",
+    "chapter": "collector",
+    "quest_id": "0008CF2733E0E512",
+    "task_ids": [
+      "00082678F99F04B0"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 L02；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "L03",
+    "chapter": "collector",
+    "quest_id": "000C0C19CACD3EC4",
+    "task_ids": [
+      "0006D90679A368B2"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 L03；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "L04",
+    "chapter": "collector",
+    "quest_id": "00084E28DC3F00C0",
+    "task_ids": [
+      "0001FB7B62055643"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 L04；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "L05",
+    "chapter": "collector",
+    "quest_id": "000860159E087781",
+    "task_ids": [
+      "0001C6238AFCF5C3"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 L05；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "L06",
+    "chapter": "collector",
+    "quest_id": "0006B3C51677A686",
+    "task_ids": [
+      "00032451A39F904C"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 L06；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "L07",
+    "chapter": "collector",
+    "quest_id": "0002CD32364A71CC",
+    "task_ids": [
+      "000359552D27E131"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 L07；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "L08",
+    "chapter": "collector",
+    "quest_id": "000C6F169CC351A0",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 L08；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "L09",
+    "chapter": "collector",
+    "quest_id": "0002E80C111847FD",
+    "task_ids": [
+      "0004CBED568129B8"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L09"
+  },
+  {
+    "key": "L10",
+    "chapter": "collector",
+    "quest_id": "000E5D81491D4E72",
+    "task_ids": [
+      "00083DC216322A62"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L10"
+  },
+  {
+    "key": "L11",
+    "chapter": "collector",
+    "quest_id": "000D73A25BAA11B8",
+    "task_ids": [
+      "0008CF6F2BD93FE3"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L11"
+  },
+  {
+    "key": "L12",
+    "chapter": "collector",
+    "quest_id": "0001993C2E7D29E0",
+    "task_ids": [
+      "00081434FA3D9929"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L12"
+  },
+  {
+    "key": "L13",
+    "chapter": "collector",
+    "quest_id": "000BC8FF640BBDAA",
+    "task_ids": [
+      "00088E54636D284E"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L13"
+  },
+  {
+    "key": "L14",
+    "chapter": "collector",
+    "quest_id": "000E5272BCFF6A7F",
+    "task_ids": [
+      "000D3B0C5B5EA764"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L14"
+  },
+  {
+    "key": "L15",
+    "chapter": "collector",
+    "quest_id": "000FC2F236CC36B5",
+    "task_ids": [
+      "000A1A5E4DCFECE2"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L15"
+  },
+  {
+    "key": "L16",
+    "chapter": "collector",
+    "quest_id": "0000BF6CA5E158C7",
+    "task_ids": [
+      "000541EEEAB8C7E9"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L16"
+  },
+  {
+    "key": "L17",
+    "chapter": "collector",
+    "quest_id": "000ECB13D43FEDF2",
+    "task_ids": [
+      "00040D486E783784"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L17"
+  },
+  {
+    "key": "L18",
+    "chapter": "collector",
+    "quest_id": "00055F82D29F0F6C",
+    "task_ids": [
+      "0009098C56EE8B16"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L18"
+  },
+  {
+    "key": "L19",
+    "chapter": "collector",
+    "quest_id": "000C305C0EEADC54",
+    "task_ids": [
+      "00010B5D8FBC0F29"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L19"
+  },
+  {
+    "key": "L20",
+    "chapter": "collector",
+    "quest_id": "000AB239E90F8907",
+    "task_ids": [
+      "000B4506E42576CA"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L20"
+  },
+  {
+    "key": "L21",
+    "chapter": "collector",
+    "quest_id": "000BFB4794520425",
+    "task_ids": [
+      "0000FB4DACF8A88D"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L21"
+  },
+  {
+    "key": "L22",
+    "chapter": "collector",
+    "quest_id": "000496EEB1EE8A7C",
+    "task_ids": [
+      "000E6BD88D253696"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L22"
+  },
+  {
+    "key": "L23",
+    "chapter": "collector",
+    "quest_id": "0007016EA6AFECCF",
+    "task_ids": [
+      "00024CE94D125260"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L23"
+  },
+  {
+    "key": "L24",
+    "chapter": "collector",
+    "quest_id": "0007FDB24D3189E3",
+    "task_ids": [
+      "000C5E362A57C72A"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L24"
+  },
+  {
+    "key": "L25",
+    "chapter": "collector",
+    "quest_id": "000837D6A3EC8DB0",
+    "task_ids": [
+      "0005D5C42E4DBB18"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L25"
+  },
+  {
+    "key": "L26",
+    "chapter": "collector",
+    "quest_id": "000A0937957C0390",
+    "task_ids": [
+      "000101B0D089E7FD"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L26"
+  },
+  {
+    "key": "L27",
+    "chapter": "collector",
+    "quest_id": "0009B2366C39ABD3",
+    "task_ids": [
+      "00020E18B0040953"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L27"
+  },
+  {
+    "key": "L28",
+    "chapter": "collector",
+    "quest_id": "00063DA1A2A8D2C9",
+    "task_ids": [
+      "0005F86E12C3E41E"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L28"
+  },
+  {
+    "key": "L29",
+    "chapter": "collector",
+    "quest_id": "000E5674610DAF6C",
+    "task_ids": [
+      "000B796592276DE8"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L29"
+  },
+  {
+    "key": "L30",
+    "chapter": "collector",
+    "quest_id": "0001E84653AA8251",
+    "task_ids": [
+      "000617A699E00377"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L30"
+  },
+  {
+    "key": "L31",
+    "chapter": "collector",
+    "quest_id": "0008B26F7B3955B9",
+    "task_ids": [
+      "00031CA219A6E9D2"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L31"
+  },
+  {
+    "key": "L32",
+    "chapter": "collector",
+    "quest_id": "000561B165109B1F",
+    "task_ids": [
+      "000D19D3EB7AA4CE"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.1 L32"
+  },
+  {
+    "key": "F01",
+    "chapter": "smith",
+    "quest_id": "0007C64A83E0FC27",
+    "task_ids": [
+      "00054583BC275BAC"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F01；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F02",
+    "chapter": "smith",
+    "quest_id": "0001418B87607476",
+    "task_ids": [
+      "00016CD0588FA630"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F02；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F03",
+    "chapter": "smith",
+    "quest_id": "0003CD2C53A5CC6D",
+    "task_ids": [
+      "00029C79B6A511A8"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F03；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F04",
+    "chapter": "smith",
+    "quest_id": "000608AF9010C214",
+    "task_ids": [
+      "000144928ED9FBB0"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F04；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F05",
+    "chapter": "smith",
+    "quest_id": "000EE75781816260",
+    "task_ids": [
+      "000185A64D5B22BF"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F05；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F06",
+    "chapter": "smith",
+    "quest_id": "000BB10F80481EE6",
+    "task_ids": [
+      "000EB375B8928757"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F06；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F07",
+    "chapter": "smith",
+    "quest_id": "00044C5860AF8BC3",
+    "task_ids": [
+      "0009DA4C96605A35"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F07；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F08",
+    "chapter": "smith",
+    "quest_id": "000EEBBC25CE7CB0",
+    "task_ids": [
+      "000BC23056CACF22"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F08；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F09",
+    "chapter": "smith",
+    "quest_id": "000539DD10844AC2",
+    "task_ids": [
+      "0000FF8EEE8557D2"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F09；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F10",
+    "chapter": "smith",
+    "quest_id": "0003D98093E8515D",
+    "task_ids": [
+      "000E570B900761AA"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F10；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F11",
+    "chapter": "smith",
+    "quest_id": "00035880A184B9BE",
+    "task_ids": [
+      "000824F581B21116"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F11；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F12",
+    "chapter": "smith",
+    "quest_id": "0005C2B679C081D4",
+    "task_ids": [
+      "0006557500248731"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F12；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F13",
+    "chapter": "smith",
+    "quest_id": "000E54CC1078755C",
+    "task_ids": [
+      "00018F835C56B8B5",
+      "0004868BFB465C7A"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F13；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "F14",
+    "chapter": "smith",
+    "quest_id": "0004C37253E734DE",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 F14；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H01",
+    "chapter": "dragon",
+    "quest_id": "0007BC914D26EADA",
+    "task_ids": [
+      "00022CF6A13EC2AB"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H01；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H02",
+    "chapter": "dragon",
+    "quest_id": "000E390A912FF12C",
+    "task_ids": [
+      "000435036AB3E5F5"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H02；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H03",
+    "chapter": "dragon",
+    "quest_id": "000CDA8E88F43885",
+    "task_ids": [
+      "000653AC904BDADA"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H03；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H04a",
+    "chapter": "dragon",
+    "quest_id": "000CA98EB7C01418",
+    "task_ids": [
+      "000BB1BAC3BD44E8"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.3；任务参考研究_五整合包FTB.md E-龙"
+  },
+  {
+    "key": "H04b",
+    "chapter": "dragon",
+    "quest_id": "000F237194E39C63",
+    "task_ids": [
+      "000007CE77F0DA5F"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.3；任务参考研究_五整合包FTB.md E-龙"
+  },
+  {
+    "key": "H04c",
+    "chapter": "dragon",
+    "quest_id": "000761B0771E5B8E",
+    "task_ids": [
+      "000F75ACDC9F3A6A"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.3；任务参考研究_五整合包FTB.md E-龙"
+  },
+  {
+    "key": "H04d",
+    "chapter": "dragon",
+    "quest_id": "0006DCC011678D85",
+    "task_ids": [
+      "000B15691E74F03D"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.3；任务参考研究_五整合包FTB.md E-龙"
+  },
+  {
+    "key": "H04e",
+    "chapter": "dragon",
+    "quest_id": "00036134B09B4841",
+    "task_ids": [
+      "000A3FEC3533875D"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.3；任务参考研究_五整合包FTB.md E-龙"
+  },
+  {
+    "key": "H04f",
+    "chapter": "dragon",
+    "quest_id": "0004B6A4F5C5BF58",
+    "task_ids": [
+      "000C966B48FF7D34"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.3；任务参考研究_五整合包FTB.md E-龙"
+  },
+  {
+    "key": "H04g",
+    "chapter": "dragon",
+    "quest_id": "0002EFAC716288C1",
+    "task_ids": [
+      "00035DC2F4DB434F"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.3；任务参考研究_五整合包FTB.md E-龙"
+  },
+  {
+    "key": "H04h",
+    "chapter": "dragon",
+    "quest_id": "00075FABED0E6191",
+    "task_ids": [
+      "000101D4476E75BA"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七.3；任务参考研究_五整合包FTB.md E-龙"
+  },
+  {
+    "key": "H05",
+    "chapter": "dragon",
+    "quest_id": "0005440F0C398B74",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H05；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H06",
+    "chapter": "dragon",
+    "quest_id": "000F91BD1E74A1DB",
+    "task_ids": [
+      "000B83C4EE0BB9E5"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H06；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H07",
+    "chapter": "dragon",
+    "quest_id": "000B9FBA5ECCAB1F",
+    "task_ids": [
+      "0005289A894DCF62"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H07；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H08",
+    "chapter": "dragon",
+    "quest_id": "000BED153D41618F",
+    "task_ids": [
+      "000E8C675D345E69"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H08；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H09",
+    "chapter": "dragon",
+    "quest_id": "000F6969F02216AE",
+    "task_ids": [
+      "000CD959FF765505"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H09；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H10",
+    "chapter": "dragon",
+    "quest_id": "00069736E8F76CB8",
+    "task_ids": [
+      "000CAA148A104DF6"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H10；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H11",
+    "chapter": "dragon",
+    "quest_id": "000FC17BDCD53EC5",
+    "task_ids": [
+      "00028A04D8484BCB"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H11；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H12",
+    "chapter": "dragon",
+    "quest_id": "000C39D017BFB5B5",
+    "task_ids": [
+      "00021F8F66230BE6"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H12；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H13",
+    "chapter": "dragon",
+    "quest_id": "00055504527440DC",
+    "task_ids": [
+      "0003C43408532037"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H13；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "H14",
+    "chapter": "dragon",
+    "quest_id": "0000F5E8ACAD42F6",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 H14；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J01",
+    "chapter": "symbiote",
+    "quest_id": "000F2F6E011F60B9",
+    "task_ids": [
+      "000B51D3B743607B"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J01；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J02",
+    "chapter": "symbiote",
+    "quest_id": "000DD5747F7015CC",
+    "task_ids": [
+      "000D3358012A5E5B"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J02；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J03",
+    "chapter": "symbiote",
+    "quest_id": "000E212DC631CA41",
+    "task_ids": [
+      "000F610985B33977"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J03；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J04",
+    "chapter": "symbiote",
+    "quest_id": "0004545872F5DC34",
+    "task_ids": [
+      "0007021197360F7E"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J04；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J05",
+    "chapter": "symbiote",
+    "quest_id": "000B63BC32BF1FBD",
+    "task_ids": [
+      "000B042684B11E08"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J05；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J06",
+    "chapter": "symbiote",
+    "quest_id": "000C41A34384CDF7",
+    "task_ids": [
+      "0003C2F3CAEB895F"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J06；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J07",
+    "chapter": "symbiote",
+    "quest_id": "0009E0D74D7A02DD",
+    "task_ids": [
+      "0004337C914473EF"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J07；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J08",
+    "chapter": "symbiote",
+    "quest_id": "00088195159835AB",
+    "task_ids": [
+      "000D84EF49293588"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J08；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J09",
+    "chapter": "symbiote",
+    "quest_id": "000E1E5C610A2F6E",
+    "task_ids": [
+      "000588DE760392D0"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J09；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J10",
+    "chapter": "symbiote",
+    "quest_id": "00023DBD5F666D76",
+    "task_ids": [
+      "000D9D0CB396C71B"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J10；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J11",
+    "chapter": "symbiote",
+    "quest_id": "000D23300644C211",
+    "task_ids": [
+      "00002510A08A0455"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J11；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "J12",
+    "chapter": "symbiote",
+    "quest_id": "000C9A1BA92490A2",
+    "task_ids": [],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §七 J12；任务线框架规格书_v1.md §三"
+  },
+  {
+    "key": "C08",
+    "chapter": "expedition",
+    "quest_id": "0003081C8C013EE9",
+    "task_ids": [
+      "000990AA9B1B9142"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C08；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C12",
+    "chapter": "expedition",
+    "quest_id": "000B9B0EC179A870",
+    "task_ids": [
+      "0007388E1D09A9C6"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §C12；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C17",
+    "chapter": "expedition",
+    "quest_id": "000F996CBA145DE6",
+    "task_ids": [
+      "00073CE1F293C11E"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C17；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C19",
+    "chapter": "expedition",
+    "quest_id": "000E66267D84C277",
+    "task_ids": [
+      "000A8AB76C1E7D76"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C19；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C20",
+    "chapter": "expedition",
+    "quest_id": "000AF17BDBC43161",
+    "task_ids": [
+      "00031800F5AD0239"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C20；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C21",
+    "chapter": "expedition",
+    "quest_id": "000FF9707C7B5EE1",
+    "task_ids": [
+      "0001CBF2A244FF46"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §C21；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "C23",
+    "chapter": "expedition",
+    "quest_id": "0004B0B8050452EC",
+    "task_ids": [
+      "000816AA4D3D8CD3"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §C23；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D06",
+    "chapter": "expedition",
+    "quest_id": "000426335FB393CB",
+    "task_ids": [
+      "0003746CFCF6835F"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D06；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D13",
+    "chapter": "expedition",
+    "quest_id": "0001565B4965E05B",
+    "task_ids": [
+      "00045DA59D6D6D58"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §D13；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D15",
+    "chapter": "expedition",
+    "quest_id": "000195D1A06C1D76",
+    "task_ids": [
+      "000370A96B4BE591"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D15；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D17",
+    "chapter": "expedition",
+    "quest_id": "000EB1E5FC070FD1",
+    "task_ids": [
+      "0001EC90C0319E5D"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D17；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D20",
+    "chapter": "expedition",
+    "quest_id": "000E84EDFE9A75B5",
+    "task_ids": [
+      "000CA332EC66F9B6"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D20；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "D24",
+    "chapter": "expedition",
+    "quest_id": "000BEBD173A18799",
+    "task_ids": [
+      "0004B9FD9D2DFCB7"
+    ],
+    "availability": "pending",
+    "source": "任务设计总稿_v1.md §D24；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E06",
+    "chapter": "expedition",
+    "quest_id": "0007DA880F35A08B",
+    "task_ids": [
+      "000A69558F200AA4"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §E06；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E13",
+    "chapter": "expedition",
+    "quest_id": "0008D800A1AD8E52",
+    "task_ids": [
+      "0004E7465F7C90E7"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §E13；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "E15",
+    "chapter": "expedition",
+    "quest_id": "00043E9404D6B1E2",
+    "task_ids": [
+      "00005B0BA53CCEEE"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §E15；任务参考研究_五整合包FTB.md §二/七"
+  },
+  {
+    "key": "HUNT_monstrosity",
+    "chapter": "hunts",
+    "quest_id": "000EC0EFFCA075AA",
+    "task_ids": [
+      "000FE384DB0C57DD"
+    ],
+    "availability": "wired",
+    "source": "任务参考研究_五整合包FTB.md E-灾变；主线深化研究_全模组与战斗筛选.md §四"
+  },
+  {
+    "key": "HUNT_harbinger",
+    "chapter": "hunts",
+    "quest_id": "000754941EA9A2AF",
+    "task_ids": [
+      "0000463D5B236672"
+    ],
+    "availability": "wired",
+    "source": "任务参考研究_五整合包FTB.md E-灾变；主线深化研究_全模组与战斗筛选.md §四"
+  },
+  {
+    "key": "HUNT_ender_guardian",
+    "chapter": "hunts",
+    "quest_id": "00044DE46E10FEA2",
+    "task_ids": [
+      "000874D20F6E17F9"
+    ],
+    "availability": "wired",
+    "source": "任务参考研究_五整合包FTB.md E-灾变；主线深化研究_全模组与战斗筛选.md §四"
+  },
+  {
+    "key": "HUNT_ignis",
+    "chapter": "hunts",
+    "quest_id": "000BB5B89DF75835",
+    "task_ids": [
+      "00008A0659792C9D"
+    ],
+    "availability": "wired",
+    "source": "任务参考研究_五整合包FTB.md E-灾变；主线深化研究_全模组与战斗筛选.md §四"
+  },
+  {
+    "key": "HUNT_leviathan",
+    "chapter": "hunts",
+    "quest_id": "0001CA0A360F2269",
+    "task_ids": [
+      "000CA756CFBDDFA7"
+    ],
+    "availability": "wired",
+    "source": "任务参考研究_五整合包FTB.md E-灾变；主线深化研究_全模组与战斗筛选.md §四"
+  },
+  {
+    "key": "HUNT_remnant",
+    "chapter": "hunts",
+    "quest_id": "00046829A6C1C1E2",
+    "task_ids": [
+      "00066BB5612FAF00"
+    ],
+    "availability": "wired",
+    "source": "任务参考研究_五整合包FTB.md E-灾变；主线深化研究_全模组与战斗筛选.md §四"
+  },
+  {
+    "key": "HUNT_maledictus",
+    "chapter": "hunts",
+    "quest_id": "000CA3AD2BA43571",
+    "task_ids": [
+      "0001C76A7111F6E3"
+    ],
+    "availability": "wired",
+    "source": "任务参考研究_五整合包FTB.md E-灾变；主线深化研究_全模组与战斗筛选.md §四"
+  },
+  {
+    "key": "HUNT_scylla",
+    "chapter": "hunts",
+    "quest_id": "0005DC9D92E77758",
+    "task_ids": [
+      "000DEFECA0EEDA7E"
+    ],
+    "availability": "wired",
+    "source": "任务参考研究_五整合包FTB.md E-灾变；主线深化研究_全模组与战斗筛选.md §四"
+  },
+  {
+    "key": "HUNT_BB_father_gascoigne",
+    "chapter": "hunts",
+    "quest_id": "0003F907486D4541",
+    "task_ids": [
+      "000D2F28C223D83A"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D14～17；HANDOVER.md §四10-01"
+  },
+  {
+    "key": "HUNT_BB_gascoigne_beast",
+    "chapter": "hunts",
+    "quest_id": "00077649E5D2EC63",
+    "task_ids": [
+      "000801430C3C2386"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D14～17；HANDOVER.md §四10-01"
+  },
+  {
+    "key": "HUNT_BB_micolash",
+    "chapter": "hunts",
+    "quest_id": "000CAF615AA515F1",
+    "task_ids": [
+      "000E42D82094BBCE"
+    ],
+    "availability": "wired",
+    "source": "任务设计总稿_v1.md §D14～17；HANDOVER.md §四10-01"
+  },
+  {
+    "key": "SOUL_boss_gundyr",
+    "chapter": "souls",
+    "quest_id": "00028684513FB985",
+    "task_ids": [
+      "00003600CC183ABD"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §四10-03/04；用户排除薪王化身；五包研究 E-魂"
+  },
+  {
+    "key": "SOUL_boss_artorias",
+    "chapter": "souls",
+    "quest_id": "000767DD84857907",
+    "task_ids": [
+      "000357DFE820A42D"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §四10-03/04；用户排除薪王化身；五包研究 E-魂"
+  },
+  {
+    "key": "SOUL_boss_gael",
+    "chapter": "souls",
+    "quest_id": "000ADF739A684DB5",
+    "task_ids": [
+      "000D841CA54D6783"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §四10-03/04；用户排除薪王化身；五包研究 E-魂"
+  },
+  {
+    "key": "SOUL_boss_soul_of_cinder",
+    "chapter": "souls",
+    "quest_id": "000DA688B3E03622",
+    "task_ids": [
+      "0007D6FF30F5DFDF"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §四10-03/04；用户排除薪王化身；五包研究 E-魂"
+  },
+  {
+    "key": "K02",
+    "chapter": "commissions",
+    "quest_id": "00012E9B49F8E63F",
+    "task_ids": [
+      "000CD7AA6C22B9B4",
+      "000D8B2CD57C7274"
+    ],
+    "availability": "pending",
+    "source": "待裁决清单.md Q09；任务设计总稿_v1.md §八"
+  },
+  {
+    "key": "K03",
+    "chapter": "commissions",
+    "quest_id": "00070AF7DCF735A4",
+    "task_ids": [
+      "00082F2F1DCB6A13",
+      "000F15456E576095"
+    ],
+    "availability": "pending",
+    "source": "待裁决清单.md Q09；任务设计总稿_v1.md §八"
+  },
+  {
+    "key": "K04",
+    "chapter": "commissions",
+    "quest_id": "0005E0FCE0F9DAF0",
+    "task_ids": [
+      "000E4A4DCBA8E355",
+      "0009A811A5832D17"
+    ],
+    "availability": "pending",
+    "source": "待裁决清单.md Q09；任务设计总稿_v1.md §八"
+  },
+  {
+    "key": "K05",
+    "chapter": "commissions",
+    "quest_id": "000E81449EDDC650",
+    "task_ids": [
+      "00038C66D1084E05",
+      "000A9C4EE1A518D0"
+    ],
+    "availability": "pending",
+    "source": "待裁决清单.md Q09；任务设计总稿_v1.md §八"
+  },
+  {
+    "key": "K06",
+    "chapter": "commissions",
+    "quest_id": "000F585D0E75CD05",
+    "task_ids": [
+      "0009EB632E534C86",
+      "000F03020A06387A"
+    ],
+    "availability": "pending",
+    "source": "待裁决清单.md Q09；任务设计总稿_v1.md §八"
+  },
+  {
+    "key": "K01",
+    "chapter": "commissions",
+    "quest_id": "0004C2F9D2F036F3",
+    "task_ids": [
+      "0001E4B12A9F84DC"
+    ],
+    "availability": "wired",
+    "source": "任务线框架规格书_v1.md §一～三；用户2026-10-11整体重建授权"
+  },
+  {
+    "key": "M01",
+    "chapter": "manual",
+    "quest_id": "00001868A37C851B",
+    "task_ids": [
+      "000F946288149D6F"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M02",
+    "chapter": "manual",
+    "quest_id": "000FCC4F0BD71734",
+    "task_ids": [
+      "0006105951467CCB"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M03",
+    "chapter": "manual",
+    "quest_id": "000A4757A325DF48",
+    "task_ids": [
+      "0002CD4D24CC04E7"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M04",
+    "chapter": "manual",
+    "quest_id": "000D7817BCCDF679",
+    "task_ids": [
+      "000A15B8A503D085"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M05",
+    "chapter": "manual",
+    "quest_id": "00058176F19A6097",
+    "task_ids": [
+      "0007D5F963FE9F35"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M06",
+    "chapter": "manual",
+    "quest_id": "0002167256049A79",
+    "task_ids": [
+      "000E132107142A5D"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M07",
+    "chapter": "manual",
+    "quest_id": "000491E78BDE5C7E",
+    "task_ids": [
+      "0003124687CBD6A1"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M08",
+    "chapter": "manual",
+    "quest_id": "00047B2AEDA80CFF",
+    "task_ids": [
+      "000DCFA76E4872A1"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M09",
+    "chapter": "manual",
+    "quest_id": "000599D404F4E873",
+    "task_ids": [
+      "0008C8FA29677519"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M10",
+    "chapter": "manual",
+    "quest_id": "000DCD3D763BD009",
+    "task_ids": [
+      "000E232E6DF315D2"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M11",
+    "chapter": "manual",
+    "quest_id": "000F148DBDBF1377",
+    "task_ids": [
+      "000C665DC9AE71A2"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M12",
+    "chapter": "manual",
+    "quest_id": "00012F5FAFD0C0FA",
+    "task_ids": [
+      "00080B77C7025548"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M13",
+    "chapter": "manual",
+    "quest_id": "000F8C57F731F335",
+    "task_ids": [
+      "00065F1CF63031BC"
+    ],
+    "availability": "wired",
+    "source": "HANDOVER.md §三～五；任务线框架规格书_v1.md；刀光与新增模组6_优化合入综合审查.md §刀光；五包研究 §二"
+  },
+  {
+    "key": "M14",
+    "chapter": "manual",
+    "quest_id": "000F61A6857E66C0",
+    "task_ids": [
+      "0003D8D150F005C9"
+    ],
+    "availability": "wired",
+    "source": "待裁决清单.md §M2；任务线实装核对.md；五包研究 E-匠"
+  },
+  {
+    "key": "T01",
+    "chapter": "atlas",
+    "quest_id": "000F9FC06D5892B0",
+    "task_ids": [
+      "000CC591DF865FE0"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T02",
+    "chapter": "atlas",
+    "quest_id": "000738688B176085",
+    "task_ids": [
+      "00061814CB2042B6"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T03",
+    "chapter": "atlas",
+    "quest_id": "0007596893F0F642",
+    "task_ids": [
+      "000F5D25C1D2C42E"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T04",
+    "chapter": "atlas",
+    "quest_id": "00024A5EECEEE628",
+    "task_ids": [
+      "0008EE989B689DE4"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T05",
+    "chapter": "atlas",
+    "quest_id": "000AD62846379002",
+    "task_ids": [
+      "000DBACCF3B814DC"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T06",
+    "chapter": "atlas",
+    "quest_id": "000266E31F264F3E",
+    "task_ids": [
+      "000EE061D8FF10DA"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T07",
+    "chapter": "atlas",
+    "quest_id": "0001C555658E5574",
+    "task_ids": [
+      "0006BBD2760E3A3B"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T08",
+    "chapter": "atlas",
+    "quest_id": "000F962E984CF685",
+    "task_ids": [
+      "0009ACBEB029DF29"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T09",
+    "chapter": "atlas",
+    "quest_id": "000E4FA17ABE4475",
+    "task_ids": [
+      "0007025455923C71"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T10",
+    "chapter": "atlas",
+    "quest_id": "000EA049DA44D1CB",
+    "task_ids": [
+      "00071CC59DB6852C"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  },
+  {
+    "key": "T11",
+    "chapter": "atlas",
+    "quest_id": "000164C5045D6300",
+    "task_ids": [
+      "000DDF8846D1F202"
+    ],
+    "availability": "wired",
+    "source": "整合包结构表.md §主线白名单；任务参考研究_五整合包FTB.md §四；任务设计总稿_v1.md §四～六"
+  }
+]

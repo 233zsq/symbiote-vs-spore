@@ -1,0 +1,613 @@
+{
+  "id": "000F7916F8F696BB",
+  "filename": "prologue",
+  "title": "序章·觉醒",
+  "group": "0002FB0079E64484",
+  "order_index": 1,
+  "icon": "minecraft:iron_sword",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "000DDF502DB24C0D",
+      "title": "换个姿势",
+      "description": [
+        "【教学目标】认识战斗模式。",
+        "【作业】切换战斗模式，再切回来，练完后手动确认。",
+        "【提示】默认鼠标侧键5；无侧键请在控制设置查看“切换模式”。技能键以自己的绑定为准。",
+        "【讲评】冒险者，每次拔剑都从这一键开始。"
+      ],
+      "icon": "minecraft:iron_sword",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00018657DF0ADEE3"
+      ],
+      "tasks": [
+        {
+          "id": "000BA90E0762BE22",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000BF27DBA3B92BF"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，每次拔剑都从这一键开始。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0008F6BCF7590E75"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F65CA758E9B56",
+      "title": "先有一把刀",
+      "description": [
+        "【教学目标】取得教学武器。",
+        "【作业】提交精制铁锭3枚，领取铁剑和盾。",
+        "【提示】先领启读页见面礼。本项会消耗3枚锭；奖励到账后再练连段。",
+        "【讲评】冒险者，剑与盾都拿好。"
+      ],
+      "icon": "kubejs:refined_iron_ingot",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000DDF502DB24C0D"
+      ],
+      "tasks": [
+        {
+          "id": "00062251F6F6C0BA",
+          "type": "item",
+          "item": "kubejs:refined_iron_ingot",
+          "count": 3L,
+          "consume_items": true,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "minecraft:iron_sword",
+          "count": 1,
+          "team_reward": false,
+          "id": "00093DFF48E986F9"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:shield",
+          "count": 1,
+          "team_reward": false,
+          "id": "000EF858AC77342F"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，剑与盾都拿好。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000EF92871DA3464"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000786CC3015CC03",
+      "title": "打完一套，再停一步",
+      "description": [
+        "【教学目标】体会连段与收招。",
+        "【作业】用当前武器完整攻击一次，再停下观察收招；练完手动确认。",
+        "【提示】不同武器动作不同，不把所有武器说成统一轻重键。先在安全处练，战斗中保留退路。",
+        "【讲评】冒险者，知道何时停手，才知道何时还能出手。"
+      ],
+      "icon": "minecraft:iron_sword",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F65CA758E9B56"
+      ],
+      "tasks": [
+        {
+          "id": "000CB084E31F8C5C",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 15,
+          "team_reward": false,
+          "id": "00063917C72AAD66"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道何时停手，才知道何时还能出手。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B5F935439AACE"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0006447FDE1C40C6",
+      "title": "目视目标",
+      "description": [
+        "【教学目标】练习锁定与解除。",
+        "【作业】对一个目标切换锁定，再解除，练完手动确认。",
+        "【提示】默认G，冲突或改键请查控制。大型敌人和群战可按情况解除，不必一直锁住。",
+        "【讲评】冒险者，看清敌人，也别丢掉周围。"
+      ],
+      "icon": "minecraft:bow",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000786CC3015CC03"
+      ],
+      "tasks": [
+        {
+          "id": "00091513F97E44ED",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000A1193968F9C5E"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，看清敌人，也别丢掉周围。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000E588AACF8CEDA"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E960C3E816082",
+      "title": "认识技能栏",
+      "description": [
+        "【教学目标】区分默认动作与需要习得的技能。",
+        "【作业】打开技能界面，查看自己已经装备的技能，读完手动确认。",
+        "【提示】默认K。新角色实测没有默认翻滚或格挡；不能空着技能槽硬练。合法技能书渠道为职业村民和DailyBoss，村民书交易仍待开放。",
+        "【讲评】冒险者，先知道自己会什么。"
+      ],
+      "icon": "minecraft:enchanted_book",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0006447FDE1C40C6"
+      ],
+      "tasks": [
+        {
+          "id": "000A78A4665102CA",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "0008CD26DE59ABE4"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先知道自己会什么。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000191B4642A47EB"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E64B3BA245308",
+      "title": "小试牛刀",
+      "description": [
+        "【教学目标】检验出刀与走位。",
+        "【作业】本项开放后，由你或队友有效击杀任意敌对Monster共5只。",
+        "【提示】僵尸、骷髅或真菌敌人均可；不要求特定夜晚，不计算过去击杀和自然死亡。",
+        "【讲评】冒险者，第一轮实战已有结果。"
+      ],
+      "icon": "minecraft:rotten_flesh",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000E960C3E816082"
+      ],
+      "tasks": [
+        {
+          "id": "000DB6172989A972",
+          "type": "custom",
+          "title": "本项开放后，由你或队友有效击杀任意敌对Monster共5只。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000D4EC4002458EC"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，第一轮实战已有结果。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0009894317315FC9"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004934589361179",
+      "title": "沿路找人家",
+      "description": [
+        "【教学目标】把村庄作为据点。",
+        "【作业】在主世界靠近至少3名村民，让村庄识别完成。",
+        "【提示】沿道路和地标探索，不保证第一条路一定通村。该检测与围城采用128格内至少3名村民的口径，不是凭持有钟判断。",
+        "【讲评】冒险者，有人烟的地方，才值得守。"
+      ],
+      "icon": "minecraft:bell",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000E64B3BA245308"
+      ],
+      "tasks": [
+        {
+          "id": "000C25BF01E59745",
+          "type": "custom",
+          "title": "在主世界靠近至少3名村民，让村庄识别完成。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0002B0E729F57A33"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，有人烟的地方，才值得守。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0000F620E1D70008"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0009544003FDB94E",
+      "title": "把残魂攒起来",
+      "description": [
+        "【教学目标】认识本包货币。",
+        "【作业】同时持有真菌残魂5枚，不消耗。",
+        "【提示】击败真菌敌人取得；物品注册名虽未改，显示名统一叫真菌残魂。",
+        "【讲评】冒险者，战斗也能换来下一次出征的准备。"
+      ],
+      "icon": "kubejs:spore_coin",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004934589361179"
+      ],
+      "tasks": [
+        {
+          "id": "0009DE712C0DB469",
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 5L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 15,
+          "team_reward": false,
+          "id": "0005F6367BF0CF3C"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，战斗也能换来下一次出征的准备。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000143272F98F06E"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000A18CAA57977EA",
+      "title": "先认识村民的货架",
+      "description": [
+        "【教学目标】区分已开放交易与未来书店。",
+        "【作业】查看村民交易并阅读已开放的六笔保底。",
+        "【提示】农民卖焦黑砖浆，工具匠卖火种与活尸之魂，制图师卖探险家指南针，盔甲匠卖骑士之魂，武器匠卖巨人之魂。查看是教学自报，任务不证明实际成交。基础EF书交易尚未开放。",
+        "【讲评】冒险者，先看货，再决定这笔钱花在哪里。"
+      ],
+      "icon": "minecraft:emerald",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0009544003FDB94E"
+      ],
+      "tasks": [
+        {
+          "id": "0000A589F59E2E9F",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "0009C694432CE803"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先看货，再决定这笔钱花在哪里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000EB724B6F7DC94"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D9D099E4FB1BC",
+      "title": "听见陨石的低语",
+      "description": [
+        "【教学目标】缔结本包的核心伙伴。",
+        "【作业】队内至少一名冒险者达到共生体ATTACHED或更高。",
+        "【提示】陨石与共生体按原生交互取得。不要把Bond与Trust混称；不指定菌株，不复制队友档案。高阶角色可追认当前状态。",
+        "【讲评】冒险者，从现在起，你不再独自成长。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000A18CAA57977EA"
+      ],
+      "tasks": [
+        {
+          "id": "000DBD6C1DC7BDA0",
+          "type": "custom",
+          "title": "队内至少一名冒险者达到共生体ATTACHED或更高。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000AC18795B17C6F"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，从现在起，你不再独自成长。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0009E9E4B68DB162"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000593832314CFC0",
+      "title": "先学会共处",
+      "description": [
+        "【教学目标】认识压力、信赖与能力。",
+        "【作业】读完共生使支线和状态查看说明。",
+        "【提示】查看当前实际能力与按键，不要求未注册的五个键；不靠故意失控完成教学。共生使页可继续练习。",
+        "【讲评】冒险者，伙伴的力量，也需要你的判断。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D9D099E4FB1BC"
+      ],
+      "tasks": [
+        {
+          "id": "000E583E858897A7",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000766B29D57B2EB"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，伙伴的力量，也需要你的判断。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003972BAFF1622B"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D7BD903B53355",
+      "title": "觉醒之后",
+      "description": [
+        "【教学目标】完成基础教学。",
+        "【作业】完成本章主路，并领取序章阶段奖励。",
+        "【提示】匠魂、翻滚、格挡的深入练习已放到并行支线，获得能力后再做，不用随机书卡住新角色。",
+        "【讲评】冒险者，村庄立足之后，开始学会守住它。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.15,
+      "shape": "diamond",
+      "dependencies": [
+        "000593832314CFC0"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 50,
+          "team_reward": false,
+          "id": "000621E7D0504F8C"
+        },
+        {
+          "type": "command",
+          "command": "gamestage add {p} svs_stage1_prologue",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "阶段授予",
+          "id": "0008F70E60A7795E"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，村庄立足之后，开始学会守住它。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003C6310218509F"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

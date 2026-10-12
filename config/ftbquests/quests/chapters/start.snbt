@@ -1,0 +1,237 @@
+{
+  "id": "0002DFAF1558F702",
+  "filename": "start",
+  "title": "启读·出发之前",
+  "group": "00070AC1B50E5203",
+  "order_index": 0,
+  "icon": "minecraft:book",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "00018657DF0ADEE3",
+      "title": "先活下来，再拔剑",
+      "description": [
+        "【教学目标】认识这本任务书的路线。",
+        "【作业】阅读后领取见面礼：精制铁锭3枚、熟牛肉8个。",
+        "【提示】新世界不保证出生在安全村庄。先找遮蔽；这3枚锭用于序章换取铁剑和盾。主线、职业、讨伐和手册分栏；后期尚未开放的目标有明确标记。",
+        "【讲评】冒险者，先把这一餐吃稳，再去认识这片世界。"
+      ],
+      "icon": "minecraft:chest",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000F37C491319CB8",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:refined_iron_ingot",
+          "count": 3,
+          "team_reward": false,
+          "id": "0006E625DC8196D8"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:cooked_beef",
+          "count": 8,
+          "team_reward": false,
+          "id": "00010E257F990F0D"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先把这一餐吃稳，再去认识这片世界。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F587DA378F896"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008236F713EB412",
+      "title": "选自己的难度",
+      "description": [
+        "【教学目标】认识个人难度与队伍进度的区别。",
+        "【作业】阅读说明，再点击本任务的选择奖励，为自己选定一种难度。",
+        "【提示】每位冒险者各选一次；队伍共用任务完成记录，但个人难度独立。已选档不能靠重做任务更换，管理员处理另议。",
+        "【讲评】冒险者，以自己的节奏起步。"
+      ],
+      "icon": "minecraft:iron_helmet",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00018657DF0ADEE3"
+      ],
+      "tasks": [
+        {
+          "id": "0009B12EBD306AE0",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "choice",
+          "table_id": 4197568550243881L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "id": "000C2600383233EC"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，以自己的节奏起步。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00041CB3BF91D436"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000780528C7C4AA8",
+      "title": "四段旅程，四条成长路",
+      "description": [
+        "【教学目标】读懂主线与职业。",
+        "【作业】阅读四阶段与四职业的位置。",
+        "【提示】Ⅰ启程→Ⅱ磨砺→Ⅲ天灾防线→Ⅳ反推。收藏家、锻造师、狩龙人、共生使可以一起做；职业毕业不是通关门槛。序章先教开局。",
+        "【讲评】冒险者，主线告诉你往哪走，职业让你选择怎样成长。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000C67882DC304D5",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，主线告诉你往哪走，职业让你选择怎样成长。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000C86EB06FCFD6D"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000922B351137A7A",
+      "title": "队伍与存档",
+      "description": [
+        "【教学目标】知道哪些经历由队伍分享。",
+        "【作业】阅读组队、个人养成和这次任务重建的说明。",
+        "【提示】FTB Teams共享任务进度，奖励默认各人领取。共生体、龙归属与难度仍属个人。旧世界与旧任务进度文件保留，新任务从新ID开始，不自动补毕业。",
+        "【讲评】冒险者，可以结伴赶路，也要照顾自己的状态。"
+      ],
+      "icon": "minecraft:name_tag",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000D927167969A69",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，可以结伴赶路，也要照顾自己的状态。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000C93542BD97441"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0009DD90C7A0C246",
+      "title": "哪些内容还在制作",
+      "description": [
+        "【教学目标】避免把未来目标误当现成玩法。",
+        "【作业】阅读后期开放状态。",
+        "【提示】日课完整胜利检测、SLU定点场地、母巢攻坚、随机召唤券及终局名单仍有未完成项。标“尚未开放”的任务暂时不能完成；手册与已开放内容仍可体验。",
+        "【讲评】冒险者，知道道路修到了哪里，才能安排这一程。"
+      ],
+      "icon": "minecraft:barrier",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0005955901F898AC",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道道路修到了哪里，才能安排这一程。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000C71711A58D717"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

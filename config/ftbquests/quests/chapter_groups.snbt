@@ -1,13 +1,28 @@
 {
-	chapter_groups: [
-		{ id: "0B00AA11CC22DD33", title: "序章·征途指南" }
-		{ id: "0B00AA11CC22DD11", title: "主线·成长之路" }
-		{ id: "0B00AA11CC22DD44", title: "共生体羁绊" }
-		{ id: "0B00AA11CC22DD55", title: "天灾防线" }
-		{ id: "0B00AA11CC22DD66", title: "探索图鉴" }
-		{ id: "0B00AA11CC22DD77", title: "Boss 全攻略" }
-		{ id: "0B00AA11CC22DD88", title: "武器图鉴" }
-		{ id: "0B00AA11CC22DD99", title: "匠魂工坊" }
-		{ id: "0B00AA11CC22DDAA", title: "模组指南" }
-	]
+  "chapter_groups": [
+    {
+      "id": "00070AC1B50E5203",
+      "title": "出发之前"
+    },
+    {
+      "id": "0002FB0079E64484",
+      "title": "主线·四段旅程"
+    },
+    {
+      "id": "000111B6DD2DC8BD",
+      "title": "职业·并行成长"
+    },
+    {
+      "id": "000ACC9B9418BE4C",
+      "title": "可选·讨伐与远征"
+    },
+    {
+      "id": "000C5CAFFA164027",
+      "title": "循环·日课与悬赏"
+    },
+    {
+      "id": "000CBEADF4B93EC7",
+      "title": "查阅·手册与地标"
+    }
+  ]
 }

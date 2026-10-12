@@ -1,0 +1,709 @@
+{
+  "id": "000A987A5CF17748",
+  "filename": "journey",
+  "title": "Ⅱ·磨砺",
+  "group": "0002FB0079E64484",
+  "order_index": 3,
+  "icon": "minecraft:map",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "0007A853D67CC304",
+      "title": "带得走的补给",
+      "description": [
+        "【教学目标】为第一次长途行动准备现有食物。",
+        "【作业】持有熟牛肉8个。",
+        "【提示】沿用现成取得方式；其他料理可自选，任务只检测这8个，不证明实际食用。",
+        "【讲评】冒险者，能打下一仗，也要能走回家。"
+      ],
+      "icon": "minecraft:cooked_beef",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000297A85382B3AF",
+          "type": "item",
+          "item": "minecraft:cooked_beef",
+          "count": 8L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000BB64DE2557479"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，能打下一仗，也要能走回家。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000A4446463C9D4B"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000EC87436A45309",
+      "title": "塔外的影子",
+      "description": [
+        "【教学目标】亲自确认村外威胁的据点。",
+        "【作业】到访一座Inquisition塔。",
+        "【提示】按核准的自然结构线索寻找；指南针不保证能搜到，路线未验通先不施工。",
+        "【讲评】冒险者，前线已经不只是传闻。"
+      ],
+      "icon": "minecraft:spyglass",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007A853D67CC304"
+      ],
+      "tasks": [
+        {
+          "id": "0005DE571C4A968A",
+          "type": "structure",
+          "structure": "inqui:tower"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0002CDB5F67ABD38"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，前线已经不只是传闻。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0005802319313277"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C3D103FEA9F5B",
+      "title": "第一次接敌",
+      "description": [
+        "【教学目标】练习在远征中处理真菌普通单位。",
+        "【作业】本节点开放后击败感染人类3只。",
+        "【提示】目标spore:inf_human；不要求塔内必刷，不把野外击杀说成塔内守军全灭。",
+        "【讲评】冒险者，你看清了它们，也带回了经验。"
+      ],
+      "icon": "minecraft:map",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000EC87436A45309"
+      ],
+      "tasks": [
+        {
+          "id": "0001D32459A514BE",
+          "type": "kill",
+          "entity": "spore:inf_human",
+          "value": 3L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00054E0EAFB13B13"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你看清了它们，也带回了经验。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0006B4674B7153DB"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00025FEE52275306",
+      "title": "向下探路",
+      "description": [
+        "【教学目标】认识地下战线的入口。",
+        "【作业】到访Inquisition地下据点。",
+        "【提示】与C06完成任一即可继续；无需两处都跑。",
+        "【讲评】冒险者，地下也有它们的足迹。"
+      ],
+      "icon": "minecraft:lantern",
+      "subtitle": "",
+      "x": 7.5,
+      "y": -1.75,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C3D103FEA9F5B"
+      ],
+      "tasks": [
+        {
+          "id": "0001604E945B8A72",
+          "type": "structure",
+          "structure": "inqui:underground"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0009D4A58BD63C6D"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，地下也有它们的足迹。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000866B385E82B23"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00094D5414368567",
+      "title": "寻找缺口",
+      "description": [
+        "【教学目标】从地表入口追踪战线。",
+        "【作业】到访Inquisition入口。",
+        "【提示】与C05二选一；没有地下路线时可走这条。",
+        "【讲评】冒险者，你找到了另一条通路。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 1.75,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C3D103FEA9F5B"
+      ],
+      "tasks": [
+        {
+          "id": "000384214EB29883",
+          "type": "structure",
+          "structure": "inqui:entrance"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00023A52B54F7E0E"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你找到了另一条通路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000D2F406FAE12A0"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000B08815E421A3F",
+      "title": "前线已确认",
+      "description": [
+        "【教学目标】汇总一次有效据点侦察。",
+        "【作业】完成C05或C06任一项。",
+        "【提示】原生依赖OR优先；本版编辑器语义需验，不能误设全部完成。",
+        "【讲评】冒险者，下一程可以去得更远。"
+      ],
+      "icon": "minecraft:map",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00025FEE52275306",
+        "00094D5414368567"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000D548088A8ADE5"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，下一程可以去得更远。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0005D7EEF10AB2D6"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false,
+      "dependency_requirement": "one_completed"
+    },
+    {
+      "id": "00090C0C750FA246",
+      "title": "二轮的钥匙",
+      "description": [
+        "【教学目标】取得原生二轮入口工具。",
+        "【作业】持有二轮世界钥匙。",
+        "【提示】配方以本包JEI为准；原生门框操作实测后写入提示，不改配方。",
+        "【讲评】冒险者，钥匙已经在你手里。"
+      ],
+      "icon": "jerotesvillage:second_round_world_key",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000B08815E421A3F"
+      ],
+      "tasks": [
+        {
+          "id": "000D350254A3239E",
+          "type": "item",
+          "item": "jerotesvillage:second_round_world_key",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000B8402AF72FA76"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，钥匙已经在你手里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000381E675B55ABE"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BB89A895F594A",
+      "title": "另一轮天空",
+      "description": [
+        "【教学目标】真正进入二轮维度。",
+        "【作业】进入二轮世界。",
+        "【提示】钥匙持有进度不等于入境；先验门框、激活和返回。",
+        "【讲评】冒险者，这一程从陌生的天空开始。"
+      ],
+      "icon": "minecraft:ender_eye",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00090C0C750FA246"
+      ],
+      "tasks": [
+        {
+          "id": "000DB40E3DB89511",
+          "type": "advancement",
+          "advancement": "jerotesvillage:second_round_world_come"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000584FB59EA36ED"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这一程从陌生的天空开始。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00048A01404B1D38"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00031FFB7FDEF6B7",
+      "title": "三圣并非三王",
+      "description": [
+        "【教学目标】适应二轮的基本敌人。",
+        "【作业】取得二轮三圣原生进度。",
+        "【提示】分别击败该进度指定的僵尸、骷髅、蜘蛛；不是再加三场Boss。",
+        "【讲评】冒险者，先学会在这里站稳。"
+      ],
+      "icon": "minecraft:map",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000BB89A895F594A"
+      ],
+      "tasks": [
+        {
+          "id": "000C7EE4AEBF223F",
+          "type": "advancement",
+          "advancement": "jerotesvillage:three_saints"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0007BD881AA02AED"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先学会在这里站稳。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00099DFB72BD800C"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00071E32E6E9D8AD",
+      "title": "墓穴的地图",
+      "description": [
+        "【教学目标】使用已证存在的原生定位途径。",
+        "【作业】持有沉降墓穴地图。",
+        "【提示】原生配方用腐肉＋second_rounder_map；基础地图商人取得路径须验通，不承诺任一村民必卖。",
+        "【讲评】冒险者，这次寻找有了方向。"
+      ],
+      "icon": "jerotesvillage:sediment_catacombs_map",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00031FFB7FDEF6B7"
+      ],
+      "tasks": [
+        {
+          "id": "000288F9DA1AA76B",
+          "type": "item",
+          "item": "jerotesvillage:sediment_catacombs_map",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000FD8EADA6FCEE1"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这次寻找有了方向。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000EC6D6DAE46BD1"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C022047852841",
+      "title": "沉降墓穴",
+      "description": [
+        "【教学目标】到达二轮代表战的自然场地。",
+        "【作业】到访沉降墓穴。",
+        "【提示】读原生地图；原生领主棺的激活与失败再战先验证。",
+        "【讲评】冒险者，别把最后的补给留在入口之外。"
+      ],
+      "icon": "minecraft:map",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00071E32E6E9D8AD"
+      ],
+      "tasks": [
+        {
+          "id": "00061EB87EC95162",
+          "type": "structure",
+          "structure": "jerotesvillage:sediment_catacombs"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0004F4C32ECA4E62"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，别把最后的补给留在入口之外。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000A1B8D95C001E6"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00083B804B6F4911",
+      "title": "沉降领主",
+      "description": [
+        "【教学目标】完成一场有准备的二轮代表战。",
+        "【作业】击败沉降领主。",
+        "【提示】目标sediment_lord；招式提示等本包看样后写，不按高血量证明优秀。",
+        "【讲评】冒险者，你带回了在二轮站稳的证明。"
+      ],
+      "icon": "minecraft:diamond_sword",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C022047852841"
+      ],
+      "tasks": [
+        {
+          "id": "000F32578B85F122",
+          "type": "advancement",
+          "advancement": "jerotesvillage:overlord"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000B843FAFAF14D1"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你带回了在二轮站稳的证明。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0007823949B55F04"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00068E06F945707B",
+      "title": "归乡",
+      "description": [
+        "【教学目标】完成远征后的实际回程。",
+        "【作业】击败沉降领主后，返回主世界；该返回需在本节点开放后被检测。",
+        "【提示】持有传送石不算往返；留在家里的队友不能代替这次回程。",
+        "【讲评】冒险者，家门口的路还记得你。"
+      ],
+      "icon": "minecraft:bell",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00083B804B6F4911"
+      ],
+      "tasks": [
+        {
+          "id": "0004B04EF511E9B8",
+          "type": "custom",
+          "title": "击败沉降领主后，返回主世界；该返回需在本节点开放后被检测。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00052E995045EA93"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，家门口的路还记得你。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B874B59523CC2"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005D8B2BE004BA4",
+      "title": "二轮制霸",
+      "description": [
+        "【教学目标】收束侦察与二轮完整远征。",
+        "【作业】完成前线侦察、三圣、领主与归乡。",
+        "【提示】四职业、随机日课、可选守城都不是收官前置。",
+        "【讲评】冒险者，你已经能带着目标出门，再带着成果回来。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 7.0,
+      "size": 1.15,
+      "shape": "diamond",
+      "dependencies": [
+        "00068E06F945707B"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000EC6A01B5F46F3"
+        },
+        {
+          "type": "command",
+          "command": "gamestage add {p} svs_stage3_calamity",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "阶段授予",
+          "id": "000FD6D680FB5A73"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你已经能带着目标出门，再带着成果回来。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0005F5CDEF585703"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

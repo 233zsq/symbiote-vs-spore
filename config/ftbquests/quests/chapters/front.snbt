@@ -1,0 +1,756 @@
+{
+  "id": "0007F330C696D0EA",
+  "filename": "front",
+  "title": "Ⅲ·天灾防线",
+  "group": "0002FB0079E64484",
+  "order_index": 4,
+  "icon": "minecraft:shield",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "0009822CFFD8EE6B",
+      "title": "军营前线",
+      "description": [
+        "【教学目标】亲自确认真菌的前线据点。",
+        "【作业】到访真菌军营。",
+        "【提示】按核准的自然结构线索出征，先留回程标记。",
+        "【讲评】冒险者，你们已经把目光移到村庄之外。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000AB6630091F62F",
+          "type": "structure",
+          "structure": "spore:military_camp"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000387245350A102"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你们已经把目光移到村庄之外。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000BDDCFDB64D4C3"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000538275921E5CB",
+      "title": "重型敌人",
+      "description": [
+        "【教学目标】处理一只真菌精英。",
+        "【作业】本节点开放后击败蛮兵1只。",
+        "【提示】目标spore:brute；可自然遇见或围城，不保证军营必刷，不硬等精英日。",
+        "【讲评】冒险者，更大的敌人也有可以利用的间隙。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0009822CFFD8EE6B"
+      ],
+      "tasks": [
+        {
+          "id": "000535699A01292B",
+          "type": "kill",
+          "entity": "spore:brute",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "00021C9B5ACAAD45"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，更大的敌人也有可以利用的间隙。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B6FE0F6579931"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003CE6BD9078AB5",
+      "title": "囚墙之后",
+      "description": [
+        "【教学目标】接触另一种感染设施。",
+        "【作业】到访真菌监狱。",
+        "【提示】与医院D05二选一，主线不要求两地清空。",
+        "【讲评】冒险者，这里的墙没能把威胁留在里面。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 5.0,
+      "y": -1.75,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000538275921E5CB"
+      ],
+      "tasks": [
+        {
+          "id": "0008E68532348EFD",
+          "type": "structure",
+          "structure": "spore:prison"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000B5EBEA9D19E6B"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这里的墙没能把威胁留在里面。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F9040365C2F73"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000AB435FC3F33F0",
+      "title": "病房之后",
+      "description": [
+        "【教学目标】从医院设施继续调查感染战线。",
+        "【作业】到访真菌医院。",
+        "【提示】与监狱D04二选一，不承诺箱子必有任务物品。",
+        "【讲评】冒险者，这里曾是避难处，如今也是前线。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 1.75,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000538275921E5CB"
+      ],
+      "tasks": [
+        {
+          "id": "000D3B252B5204DB",
+          "type": "structure",
+          "structure": "spore:hospital"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "00020821EFADA7C3"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这里曾是避难处，如今也是前线。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0009B84279990D81"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CC6934EF0022F",
+      "title": "实验室的门",
+      "description": [
+        "【教学目标】到达真菌设施调查的关键地点。",
+        "【作业】到访真菌实验室。",
+        "【提示】前线战斗与监狱/医院任一侦察完成后继续；没有虚构档案收集。",
+        "【讲评】冒险者，你已经走到了更深处。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003CE6BD9078AB5",
+        "000AB435FC3F33F0"
+      ],
+      "tasks": [
+        {
+          "id": "000F52FEBC065E26",
+          "type": "structure",
+          "structure": "spore:lab"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000B0C4E37A31EC8"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你已经走到了更深处。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00020ECA47808021"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false,
+      "dependency_requirement": "one_completed"
+    },
+    {
+      "id": "0006E95A2E74B63C",
+      "title": "扼住增殖点",
+      "description": [
+        "【教学目标】认识肉丘这一敌方单位。",
+        "【作业】本节点开放后击败肉丘1只。",
+        "【提示】目标spore:mound；不承诺实验室内必有，不把单只击杀称清空全球感染。",
+        "【讲评】冒险者，至少这一次，它不能继续向前。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CC6934EF0022F"
+      ],
+      "tasks": [
+        {
+          "id": "000EE516980FD444",
+          "type": "kill",
+          "entity": "spore:mound",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000E1807F23EDB6D"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，至少这一次，它不能继续向前。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000C4E84523DCDC5"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005FA094011A5B9",
+      "title": "工厂里的旧日战争",
+      "description": [
+        "【教学目标】进入第一场代表战的自然场地。",
+        "【作业】到访远古工厂。",
+        "【提示】先核激活材料、入口与失败重试；如该战位换人，此到访改为可选。",
+        "【讲评】冒险者，接下来先看清它怎样出手。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0006E95A2E74B63C"
+      ],
+      "tasks": [
+        {
+          "id": "00092429596AE1B0",
+          "type": "structure",
+          "structure": "cataclysm:ancient_factory"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000D8590D16E1F53"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，接下来先看清它怎样出手。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000C20DCC3E9FF9F"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003D726265FAB91",
+      "title": "先驱者",
+      "description": [
+        "【教学目标】用不同于精英战的应对完成代表战。",
+        "【作业】击败先驱者。",
+        "【提示】此目标尚未开放。暂以现有灾变目标占位；若Nightfall/WOC更适合，用户批后以替换方式移走本必打，不叠加。",
+        "【讲评】冒险者，准备是否有用，战斗会告诉你。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "尚未开放",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005FA094011A5B9"
+      ],
+      "tasks": [
+        {
+          "id": "0000E1E9E20724E5",
+          "type": "custom",
+          "title": "尚未开放·击败先驱者。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "00026275E37997B1"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，准备是否有用，战斗会告诉你。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00081300741CDEA7"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C11C78E5C50BC",
+      "title": "猎人与兽",
+      "description": [
+        "【教学目标】打完整一场改变形态的代表战。",
+        "【作业】完成从人形开始的有效加斯科因战斗；正常变身路线须判兽形最终死亡。",
+        "【提示】此目标尚未开放。人形变身移除不算死亡；若原生允许正常击杀跳过变身，实测后按正常终结认可，不强迫重打。单独召兽形/别处兽血不冒充此战。",
+        "【讲评】冒险者，你应对的不只是更强的数值，而是变化后的对手。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "尚未开放",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003D726265FAB91"
+      ],
+      "tasks": [
+        {
+          "id": "000967BBD3B1998C",
+          "type": "custom",
+          "title": "尚未开放·完成从人形开始的有效加斯科因战斗；正常变身路线须判兽形最终死亡。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "0005D5E902B25118"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你应对的不只是更强的数值，而是变化后的对手。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0004CD682E0E1764"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000FBAFF06B5C89F",
+      "title": "燃烧竞技场",
+      "description": [
+        "【教学目标】到达这一段的决斗场。",
+        "【作业】到访燃烧竞技场。",
+        "【提示】走原生自然场地；未核原生点火/再召材料前，不复制其他包攻略。",
+        "【讲评】冒险者，下一场靠你自己的准备。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C11C78E5C50BC"
+      ],
+      "tasks": [
+        {
+          "id": "00014D07237028C1",
+          "type": "structure",
+          "structure": "cataclysm:burning_arena"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "0008207BFEAFFA6F"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，下一场靠你自己的准备。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000AD57E5F46F637"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000EFD528821B67D",
+      "title": "伊格尼斯",
+      "description": [
+        "【教学目标】完成盾、连段与阶段变化的代表战。",
+        "【作业】击败伊格尼斯。",
+        "【提示】此目标尚未开放。格挡/闪避建议以本包看样为准，不照搬DOTE旧EF判定；如移为终局，本战位换人。",
+        "【讲评】冒险者，读懂一次出招，往往比多打一刀更有用。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "尚未开放",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000FBAFF06B5C89F"
+      ],
+      "tasks": [
+        {
+          "id": "000DC3BDAB3299B1",
+          "type": "custom",
+          "title": "尚未开放·击败伊格尼斯。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "00014BA00188A296"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，读懂一次出招，往往比多打一刀更有用。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0001C9FB945B1CE3"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00000E5F3C730477",
+      "title": "大教堂前",
+      "description": [
+        "【教学目标】把调查线推到真菌大型据点。",
+        "【作业】到访真菌大教堂。",
+        "【提示】不是天然母巢保证，也不要求清空结构内一切生物。",
+        "【讲评】冒险者，你已经知道反攻要往哪里去。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000EFD528821B67D"
+      ],
+      "tasks": [
+        {
+          "id": "0009CF39DE047AC9",
+          "type": "structure",
+          "structure": "spore:cathedral"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000B624C6F49EC0D"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你已经知道反攻要往哪里去。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000ABC9749F0C880"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005CCDCA4845E1B",
+      "title": "合作",
+      "description": [
+        "【教学目标】达到反攻前的共生成长。",
+        "【作业】本队至少一名成员达到COOPERATIVE或更高。",
+        "【提示】复用J07事实；不复制个人档案，不要求所有成员同时达标，不奖励故意失控。",
+        "【讲评】冒险者，你们的默契已经能支撑更远的路。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00000E5F3C730477"
+      ],
+      "tasks": [
+        {
+          "id": "000885CB83AE12A6",
+          "type": "custom",
+          "title": "本队至少一名成员达到COOPERATIVE或更高。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000D15694254B4CF"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你们的默契已经能支撑更远的路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0004CAFA8BBEAFF4"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000402B476FC579B",
+      "title": "带着路线返回",
+      "description": [
+        "【教学目标】让这一段远征真正收束到据点。",
+        "【作业】返回主世界一座至少有3名村民的村庄，在村庄识别范围内停留。",
+        "【提示】本次玩家回到有效村庄区域才算；不以一直在家的队友代交，不要求新建村庄。",
+        "【讲评】冒险者，反攻路线已经带回家了。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005CCDCA4845E1B"
+      ],
+      "tasks": [
+        {
+          "id": "000349B5779BF498",
+          "type": "custom",
+          "title": "返回主世界一座至少有3名村民的村庄，在村庄识别范围内停留。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "000851358349DBFC"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，反攻路线已经带回家了。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F0C412AB1CEAF"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00083052EF81988F",
+      "title": "天灾防线",
+      "description": [
+        "【教学目标】汇总据点调查、三场代表战与共生成长。",
+        "【作业】完成真菌调查主路、三场获批代表战、合作阶段并回到据点。",
+        "【提示】八座灾变不全必打；双终局候选留给Ⅳ，不在本章提前设必打领奖。",
+        "【讲评】冒险者，下一次远征将以反攻为目标。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 7.0,
+      "size": 1.15,
+      "shape": "diamond",
+      "dependencies": [
+        "000402B476FC579B"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "0008BA1124D24CB2"
+        },
+        {
+          "type": "command",
+          "command": "gamestage add {p} svs_stage4_endgame",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "阶段授予",
+          "id": "000678E2518656CC"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，下一次远征将以反攻为目标。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0002616F431B36BF"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

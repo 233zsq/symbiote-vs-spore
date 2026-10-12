@@ -1,0 +1,294 @@
+{
+  "id": "000072A745B28F22",
+  "filename": "commissions",
+  "title": "委托·日课与悬赏",
+  "group": "000C5CAFFA164027",
+  "order_index": 13,
+  "icon": "minecraft:paper",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "00012E9B49F8E63F",
+      "title": "感染清剿",
+      "description": [
+        "【教学目标】用一次明确的新作业补充出征资源。",
+        "【作业】本轮有效击杀真菌Monster15只。",
+        "【提示】本组循环尚未开放：复位、普通报酬和两池独立每队24小时首胜1券必须一起验通。这里暂不发券，也不以首次历史进度重复领奖。",
+        "【讲评】冒险者，有明确的作业，才有明确的报酬。"
+      ],
+      "icon": "minecraft:paper",
+      "subtitle": "尚未开放",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000CD7AA6C22B9B4",
+          "type": "custom",
+          "title": "尚未开放·本轮有效击杀真菌Monster15只。"
+        },
+        {
+          "id": "000D8B2CD57C7274",
+          "type": "custom",
+          "title": "本轮有效击杀真菌Monster15只。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，有明确的作业，才有明确的报酬。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00000618F62A8906"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00070AF7DCF735A4",
+      "title": "菌丘讨伐",
+      "description": [
+        "【教学目标】用一次明确的新作业补充出征资源。",
+        "【作业】本轮有效击败菌丘1次。",
+        "【提示】本组循环尚未开放：复位、普通报酬和两池独立每队24小时首胜1券必须一起验通。这里暂不发券，也不以首次历史进度重复领奖。",
+        "【讲评】冒险者，有明确的作业，才有明确的报酬。"
+      ],
+      "icon": "minecraft:paper",
+      "subtitle": "尚未开放",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "00082F2F1DCB6A13",
+          "type": "custom",
+          "title": "尚未开放·本轮有效击败菌丘1次。"
+        },
+        {
+          "id": "000F15456E576095",
+          "type": "kill",
+          "entity": "spore:mound",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，有明确的作业，才有明确的报酬。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0005FA4CF52A226C"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005E0FCE0F9DAF0",
+      "title": "精英委托",
+      "description": [
+        "【教学目标】用一次明确的新作业补充出征资源。",
+        "【作业】本轮有效击败真菌暴徒或骑士任一1只。",
+        "【提示】本组循环尚未开放：复位、普通报酬和两池独立每队24小时首胜1券必须一起验通。这里暂不发券，也不以首次历史进度重复领奖。",
+        "【讲评】冒险者，有明确的作业，才有明确的报酬。"
+      ],
+      "icon": "minecraft:paper",
+      "subtitle": "尚未开放",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000E4A4DCBA8E355",
+          "type": "custom",
+          "title": "尚未开放·本轮有效击败真菌暴徒或骑士任一1只。"
+        },
+        {
+          "id": "0009A811A5832D17",
+          "type": "custom",
+          "title": "本轮有效击败真菌暴徒或骑士任一1只。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，有明确的作业，才有明确的报酬。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F32FC04CCC37E"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E81449EDDC650",
+      "title": "地面日课",
+      "description": [
+        "【教学目标】用一次明确的新作业补充出征资源。",
+        "【作业】本轮取得DailyBoss有效胜利。",
+        "【提示】本组循环尚未开放：复位、普通报酬和两池独立每队24小时首胜1券必须一起验通。这里暂不发券，也不以首次历史进度重复领奖。",
+        "【讲评】冒险者，有明确的作业，才有明确的报酬。"
+      ],
+      "icon": "minecraft:paper",
+      "subtitle": "尚未开放",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "00038C66D1084E05",
+          "type": "custom",
+          "title": "尚未开放·本轮取得DailyBoss有效胜利。"
+        },
+        {
+          "id": "000A9C4EE1A518D0",
+          "type": "custom",
+          "title": "尚未开放·本轮取得DailyBoss有效胜利。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，有明确的作业，才有明确的报酬。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000BFDC1ADC2D92A"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F585D0E75CD05",
+      "title": "天空波次",
+      "description": [
+        "【教学目标】用一次明确的新作业补充出征资源。",
+        "【作业】本轮完整赢下SkyArena。",
+        "【提示】本组循环尚未开放：复位、普通报酬和两池独立每队24小时首胜1券必须一起验通。这里暂不发券，也不以首次历史进度重复领奖。",
+        "【讲评】冒险者，有明确的作业，才有明确的报酬。"
+      ],
+      "icon": "minecraft:paper",
+      "subtitle": "尚未开放",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "0009EB632E534C86",
+          "type": "custom",
+          "title": "尚未开放·本轮完整赢下SkyArena。"
+        },
+        {
+          "id": "000F03020A06387A",
+          "type": "custom",
+          "title": "尚未开放·本轮完整赢下SkyArena。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，有明确的作业，才有明确的报酬。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000E32A1A8D722FF"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004C2F9D2F036F3",
+      "title": "挑一件事再出门",
+      "description": [
+        "【教学目标】分清首次体验与可重复报酬。",
+        "【作业】阅读日课、天空波次、悬赏三个入口。",
+        "【提示】前三种体验在主线或可选页；循环报酬未开放前，请按原生挑战游玩。随机Boss券与指定主线Boss是两回事。",
+        "【讲评】冒险者，需要准备时，再来挑一件事。"
+      ],
+      "icon": "minecraft:paper",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0001E4B12A9F84DC",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，需要准备时，再来挑一件事。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000424668E5B7541"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

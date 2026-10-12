@@ -1,0 +1,613 @@
+{
+  "id": "000654EB5BE54A3A",
+  "filename": "symbiote",
+  "title": "共生使·共同生长",
+  "group": "000111B6DD2DC8BD",
+  "order_index": 9,
+  "icon": "minecraft:amethyst_shard",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "000F2F6E011F60B9",
+      "title": "附着之后",
+      "description": [
+        "【教学目标】认识第一阶个人共生档案",
+        "【作业】达到ATTACHED或以上，复用A5.1事实",
+        "【提示】团队推进不表示每个人都已融合；各自档案仍独立",
+        "【讲评】冒险者，先学会认识这位住在身体里的伙伴。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "000B51D3B743607B",
+          "type": "custom",
+          "title": "达到ATTACHED或以上，复用A5.1事实"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000586A6A1D7F09F"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先学会认识这位住在身体里的伙伴。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0007D1DE5BF41417"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000DD5747F7015CC",
+      "title": "喂食练习",
+      "description": [
+        "【教学目标】区分食物准备与实际交互",
+        "【作业】按本包可用交互完成一次喂食并确认",
+        "【提示】生牛肉4份只是准备建议；持有肉不算服务器已核喂食",
+        "【讲评】冒险者，关系也从一次及时回应开始。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F2F6E011F60B9"
+      ],
+      "tasks": [
+        {
+          "id": "000D3358012A5E5B",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 5,
+          "team_reward": false,
+          "id": "000CB707B165A8E0"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，关系也从一次及时回应开始。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000122A22B763025"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E212DC631CA41",
+      "title": "愿望与压力",
+      "description": [
+        "【教学目标】区分Bond、Trust、Stress",
+        "【作业】阅读原生愿望与压力说明",
+        "【提示】不把信赖加值直接当进化等级；读自己的实际界面",
+        "【讲评】冒险者，听懂需求，比催着它成长更有用。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F2F6E011F60B9"
+      ],
+      "tasks": [
+        {
+          "id": "000F610985B33977",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 5,
+          "team_reward": false,
+          "id": "0007466135B494D0"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，听懂需求，比催着它成长更有用。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F305E75215172"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004545872F5DC34",
+      "title": "整合",
+      "description": [
+        "【教学目标】确认进入第二阶",
+        "【作业】队内至少一人达到INTEGRATED或更高",
+        "【提示】已是COOPERATIVE/DOMINANT者追认，不要求退化再练",
+        "【讲评】冒险者，你们开始能听见彼此。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F2F6E011F60B9",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "0007021197360F7E",
+          "type": "custom",
+          "title": "队内至少一人达到INTEGRATED或更高"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0004290946703C76"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你们开始能听见彼此。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0001B1E1CCE26E14"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000B63BC32BF1FBD",
+      "title": "一次正确狩猎",
+      "description": [
+        "【教学目标】认识当前已实现的狩猎红利",
+        "【作业】在狩猎状态下有效击杀一只spore命名空间Monster",
+        "【提示】必须有玩家有效归因且确处狩猎；当前计数器能证明的范围见源码，不称所有inqui怪已计入",
+        "【讲评】冒险者，这一次，你们一起从战斗中获益。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004545872F5DC34"
+      ],
+      "tasks": [
+        {
+          "id": "000B042684B11E08",
+          "type": "custom",
+          "title": "在狩猎状态下有效击杀一只spore命名空间Monster"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000944A691BB7230"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这一次，你们一起从战斗中获益。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B0FD6AB8CFB48"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C41A34384CDF7",
+      "title": "压力自查",
+      "description": [
+        "【教学目标】学会安全查看与处理压力",
+        "【作业】查看一次自己的压力状态，按原生指引处理并确认练习",
+        "【提示】不强制挨打、失控或达到危险阈值；没有压力也可练习查看",
+        "【讲评】冒险者，能停下来检查，也是一种掌控。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004545872F5DC34"
+      ],
+      "tasks": [
+        {
+          "id": "0003C2F3CAEB895F",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000252FC1CD734B3"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，能停下来检查，也是一种掌控。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0008C400094F29A3"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0009E0D74D7A02DD",
+      "title": "合作",
+      "description": [
+        "【教学目标】认识中期成长已达标",
+        "【作业】达到COOPERATIVE或更高，复用D23事实",
+        "【提示】D23与此项允许任一先达；无互相依赖闭环",
+        "【讲评】冒险者，你们已经有了默契。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004545872F5DC34",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "0004337C914473EF",
+          "type": "custom",
+          "title": "达到COOPERATIVE或更高，复用D23事实"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000B19CB1F369B38"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你们已经有了默契。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0002194D015EA1E1"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00088195159835AB",
+      "title": "能力先核再练",
+      "description": [
+        "【教学目标】练习当前真正注册的能力",
+        "【作业】在按键设置中确认Y/I/M/引号对应的现有能力，任选一个安全试用后确认",
+        "【提示】玩家改键以自己的设置为准；未生效键不要求按，不能补写五个不存在的键",
+        "【讲评】冒险者，知道自己能用什么，胜过背下一串按键。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004545872F5DC34"
+      ],
+      "tasks": [
+        {
+          "id": "000D84EF49293588",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000EF990E958C3D2"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道自己能用什么，胜过背下一串按键。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000FB47249639472"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E1E5C610A2F6E",
+      "title": "天敌与围城",
+      "description": [
+        "【教学目标】认识收益伴随的仇恨与压力风险",
+        "【作业】阅读真菌优先仇恨、围城压力提醒",
+        "【提示】不要求在围城里故意失控；任务不新增Stress阈值或扣款",
+        "【讲评】冒险者，伙伴带来的力量，也需要你的判断。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0009E0D74D7A02DD"
+      ],
+      "tasks": [
+        {
+          "id": "000588DE760392D0",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 5,
+          "team_reward": false,
+          "id": "0000E237820F384E"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，伙伴带来的力量，也需要你的判断。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0009EB737A21FE9C"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00023DBD5F666D76",
+      "title": "主导",
+      "description": [
+        "【教学目标】确认最高阶已达标",
+        "【作业】达到DOMINANT，复用E09事实",
+        "【提示】主线阶段入口D29；不强制某菌株，不要求队友档案一起改变",
+        "【讲评】冒险者，力量在这里，决定仍在你手中。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0009E0D74D7A02DD",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "000D9D0CB396C71B",
+          "type": "custom",
+          "title": "达到DOMINANT，复用E09事实"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0003CA25CA8BD0A8"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，力量在这里，决定仍在你手中。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B5E474789E291"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D23300644C211",
+      "title": "同伴不是模板",
+      "description": [
+        "【教学目标】认识菌株随机与个人维护",
+        "【作业】阅读Strain随机、个人进化可退化、历史任务不撤回的说明",
+        "【提示】不指定皇家开局、不许任务复制队友菌株或档案",
+        "【讲评】冒险者，认清你自己的伙伴，就已经足够。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00023DBD5F666D76"
+      ],
+      "tasks": [
+        {
+          "id": "00002510A08A0455",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 5,
+          "team_reward": false,
+          "id": "00078DA0C4EC9564"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，认清你自己的伙伴，就已经足够。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003E25C03DBAAFB"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C9A1BA92490A2",
+      "title": "共生使毕业",
+      "description": [
+        "【教学目标】汇总四阶、红利与安全管理",
+        "【作业】完成J01、J04～J07、J09～J11",
+        "【提示】J08可选；无需故意失控。历史任务达成不会因正常退化撤销",
+        "【讲评】冒险者，你学会的，是怎样共同走下去。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000B63BC32BF1FBD",
+        "000C41A34384CDF7",
+        "000E1E5C610A2F6E",
+        "000D23300644C211"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 100,
+          "team_reward": false,
+          "id": "00023E0A7CC296BC"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "artifacts:cross_necklace",
+            "Count": 1,
+            "tag": {
+              "display": {
+                "Name": "{\"text\": \"共生使之记\", \"italic\": false}",
+                "Lore": [
+                  "{\"text\": \"职业纪念；沿用原物品属性与槽位\", \"italic\": false, \"color\": \"gray\"}"
+                ]
+              }
+            }
+          },
+          "count": 1,
+          "team_reward": false,
+          "id": "000DC45197050392"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你学会的，是怎样共同走下去。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000E22A60783E128"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

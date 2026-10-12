@@ -1,0 +1,1687 @@
+{
+  "id": "0005B218DCF06F10",
+  "filename": "collector",
+  "title": "收藏家·兵器见闻",
+  "group": "000111B6DD2DC8BD",
+  "order_index": 6,
+  "icon": "minecraft:item_frame",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "00007C7E6B60D993",
+      "title": "把见闻留下",
+      "description": [
+        "【教学目标】认识收藏与实战选择的区别",
+        "【作业】阅读五组聚合和四段名品说明",
+        "【提示】不是强度榜，也不用全收齐",
+        "【讲评】冒险者，兵器背后也有一段旅程。"
+      ],
+      "icon": "minecraft:item_frame",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "000A02351BEA0944",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，兵器背后也有一段旅程。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000D837FA9BD7007"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008CF2733E0E512",
+      "title": "初识",
+      "description": [
+        "【教学目标】尝试聚合收藏",
+        "【作业】同时持有#svs:collect_t1武器8件",
+        "【提示】件数不等于8种；持有后不扣物品",
+        "【讲评】冒险者，你的架子开始有东西了。"
+      ],
+      "icon": "minecraft:item_frame",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993"
+      ],
+      "tasks": [
+        {
+          "id": "00082678F99F04B0",
+          "type": "custom",
+          "title": "同时持有#svs:collect_t1武器8件"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0004081E7E90D71A"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你的架子开始有东西了。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00041F6C26874696"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C0C19CACD3EC4",
+      "title": "见闻",
+      "description": [
+        "【教学目标】扩大收藏来源",
+        "【作业】同时持有#svs:collect_t2武器15件",
+        "【提示】标签不是阶段锁；可保留惯用武器",
+        "【讲评】冒险者，认得的兵器越来越多。"
+      ],
+      "icon": "minecraft:item_frame",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0008CF2733E0E512",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "0006D90679A368B2",
+          "type": "custom",
+          "title": "同时持有#svs:collect_t2武器15件"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000FCB1F31C2AF94"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，认得的兵器越来越多。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00066B6B00A5903A"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00084E28DC3F00C0",
+      "title": "珍藏",
+      "description": [
+        "【教学目标】认识更多原生武器",
+        "【作业】同时持有#svs:collect_t3武器20件",
+        "【提示】不必逐件交上去再领回来",
+        "【讲评】冒险者，熟悉与珍惜，可以同时存在。"
+      ],
+      "icon": "minecraft:item_frame",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C0C19CACD3EC4",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "0001FB7B62055643",
+          "type": "custom",
+          "title": "同时持有#svs:collect_t3武器20件"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000CD3AB20D4DFC7"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，熟悉与珍惜，可以同时存在。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003E6BB34A5667A"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000860159E087781",
+      "title": "奇兵",
+      "description": [
+        "【教学目标】完成后段聚合目标",
+        "【作业】同时持有#svs:collect_t4武器15件",
+        "【提示】数量待批；取得来源以本包实际为准",
+        "【讲评】冒险者，这一排兵器已有自己的性格。"
+      ],
+      "icon": "minecraft:item_frame",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00084E28DC3F00C0",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "0001C6238AFCF5C3",
+          "type": "custom",
+          "title": "同时持有#svs:collect_t4武器15件"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000FAC14EFC56AE7"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这一排兵器已有自己的性格。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003E4E86427D875"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0006B3C51677A686",
+      "title": "传世",
+      "description": [
+        "【教学目标】完成最后一组聚合",
+        "【作业】同时持有#svs:collect_t5武器20件",
+        "【提示】不承诺本组全为毕业神兵；数量待批",
+        "【讲评】冒险者，收藏的意义由你来定。"
+      ],
+      "icon": "minecraft:item_frame",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000860159E087781"
+      ],
+      "tasks": [
+        {
+          "id": "00032451A39F904C",
+          "type": "custom",
+          "title": "同时持有#svs:collect_t5武器20件"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000C92C16BBDD0AC"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，收藏的意义由你来定。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000385115F150AC0"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0002CD32364A71CC",
+      "title": "行装架",
+      "description": [
+        "【教学目标】让护甲也进入收藏",
+        "【作业】同时持有白名单护甲15件",
+        "【提示】按护甲件，不是15套；允许重复，不扣除",
+        "【讲评】冒险者，穿过的行装同样值得留下。"
+      ],
+      "icon": "minecraft:item_frame",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000359552D27E131",
+          "type": "custom",
+          "title": "同时持有白名单护甲15件"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000AC036CCCEAEDD"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，穿过的行装同样值得留下。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000092F69329C78D"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C6F169CC351A0",
+      "title": "收藏家毕业",
+      "description": [
+        "【教学目标】汇总聚合成果",
+        "【作业】完成L02～L07",
+        "【提示】24名品节点不是毕业前置",
+        "【讲评】冒险者，你留下的不只是战利品。"
+      ],
+      "icon": "minecraft:item_frame",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0006B3C51677A686",
+        "0002CD32364A71CC",
+        "00083052EF81988F"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 100,
+          "team_reward": false,
+          "id": "0006119578E60C9D"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "artifacts:universal_attractor",
+            "Count": 1,
+            "tag": {
+              "display": {
+                "Name": "{\"text\": \"收藏家之记\", \"italic\": false}",
+                "Lore": [
+                  "{\"text\": \"职业纪念；沿用原物品属性与槽位\", \"italic\": false, \"color\": \"gray\"}"
+                ]
+              }
+            }
+          },
+          "count": 1,
+          "team_reward": false,
+          "id": "0003B7B2AF4CA2DC"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你留下的不只是战利品。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003B8B84A5CD93F"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0002E80C111847FD",
+      "title": "见闻·长剑这一武器形态",
+      "description": [
+        "【教学目标】认识长剑这一武器形态",
+        "【作业】持有铁长剑1把",
+        "【提示】JEI可查铁材配方；喜欢再练，不强迫换装",
+        "【讲评】冒险者，先挑一把愿意带出门的剑。"
+      ],
+      "icon": "simplyswords:iron_longsword",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "0004CBED568129B8",
+          "type": "item",
+          "item": "simplyswords:iron_longsword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0000A4C2925B489E"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先挑一把愿意带出门的剑。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000291A8554013AD"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E5D81491D4E72",
+      "title": "见闻·长柄选择",
+      "description": [
+        "【教学目标】认识长柄选择",
+        "【作业】持有铁矛1把",
+        "【提示】具体EF动作自己试，不按名称推断攻击距离",
+        "【讲评】冒险者，选择多了，准备就更从容。"
+      ],
+      "icon": "simplyswords:iron_spear",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "00083DC216322A62",
+          "type": "item",
+          "item": "simplyswords:iron_spear",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00010A70DA9E05FF"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，选择多了，准备就更从容。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000E5E48A0ABD683"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D73A25BAA11B8",
+      "title": "见闻·刺剑形态",
+      "description": [
+        "【教学目标】认识刺剑形态",
+        "【作业】持有铁刺剑1把",
+        "【提示】与长剑同属铁材起步，手感不靠纸面排名",
+        "【讲评】冒险者，轻巧的外形也值得一试。"
+      ],
+      "icon": "simplyswords:iron_rapier",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "0008CF6F2BD93FE3",
+          "type": "item",
+          "item": "simplyswords:iron_rapier",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00013A465E166C7F"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，轻巧的外形也值得一试。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0000BEE5B80B62BD"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0001993C2E7D29E0",
+      "title": "见闻·刀类形态",
+      "description": [
+        "【教学目标】认识刀类形态",
+        "【作业】持有铁武士刀1把",
+        "【提示】配方查本包JEI，动作按当前适配体验",
+        "【讲评】冒险者，拿到手再决定它是否合用。"
+      ],
+      "icon": "simplyswords:iron_katana",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "00081434FA3D9929",
+          "type": "item",
+          "item": "simplyswords:iron_katana",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000E279BE8B3AB60"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，拿到手再决定它是否合用。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00037731C2E72806"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BC8FF640BBDAA",
+      "title": "见闻·双头形态",
+      "description": [
+        "【教学目标】认识双头形态",
+        "【作业】持有铁双头刃1把",
+        "【提示】不因名字含“双”就承诺双倍伤害",
+        "【讲评】冒险者，新形态也是新的见闻。"
+      ],
+      "icon": "simplyswords:iron_twinblade",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "00088E54636D284E",
+          "type": "item",
+          "item": "simplyswords:iron_twinblade",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0006B336BF87BE24"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，新形态也是新的见闻。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B46941D1C2CC8"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E5272BCFF6A7F",
+      "title": "见闻·另一种长柄",
+      "description": [
+        "【教学目标】认识另一种长柄",
+        "【作业】持有铁战刃1把",
+        "【提示】区分外形、适配与自己的实战习惯",
+        "【讲评】冒险者，架子上又多了一种选择。"
+      ],
+      "icon": "simplyswords:iron_glaive",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "000D3B0C5B5EA764",
+          "type": "item",
+          "item": "simplyswords:iron_glaive",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0004CF5C562239C3"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，架子上又多了一种选择。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0002E4D729EA379D"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000FC2F236CC36B5",
+      "title": "见闻·符文派生",
+      "description": [
+        "【教学目标】认识符文派生",
+        "【作业】持有符文长剑1把",
+        "【提示】下界合金同型底材＋符文石板＋钻石；可选长线收藏",
+        "【讲评】冒险者，熟悉的轮廓，也能有新的来历。"
+      ],
+      "icon": "simplyswords:runic_longsword",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000A1A5E4DCFECE2",
+          "type": "item",
+          "item": "simplyswords:runic_longsword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00059D3C0489295F"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，熟悉的轮廓，也能有新的来历。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0004590551B64687"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0000BF6CA5E158C7",
+      "title": "见闻·符文长柄",
+      "description": [
+        "【教学目标】认识符文长柄",
+        "【作业】持有符文矛1把",
+        "【提示】对应底材查JEI，不作为Ⅱ章必须装备",
+        "【讲评】冒险者，这把矛来自更长的一段准备。"
+      ],
+      "icon": "simplyswords:runic_spear",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000541EEEAB8C7E9",
+          "type": "item",
+          "item": "simplyswords:runic_spear",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00026F59C50A7484"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这把矛来自更长的一段准备。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000D269831C68980"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000ECB13D43FEDF2",
+      "title": "见闻·刺剑派生",
+      "description": [
+        "【教学目标】认识刺剑派生",
+        "【作业】持有符文刺剑1把",
+        "【提示】凑材料不必暂停主线；随时回来补",
+        "【讲评】冒险者，收藏不需要赶路。"
+      ],
+      "icon": "simplyswords:runic_rapier",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "00040D486E783784",
+          "type": "item",
+          "item": "simplyswords:runic_rapier",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000F3D4BE74464D4"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，收藏不需要赶路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000C92C874A1E530"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00055F82D29F0F6C",
+      "title": "见闻·刀类派生",
+      "description": [
+        "【教学目标】认识刀类派生",
+        "【作业】持有符文武士刀1把",
+        "【提示】同型底材不可用任意铁刀替代",
+        "【讲评】冒险者，你已经会顺着配方找来路。"
+      ],
+      "icon": "simplyswords:runic_katana",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "0009098C56EE8B16",
+          "type": "item",
+          "item": "simplyswords:runic_katana",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0004430F6C3364D0"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你已经会顺着配方找来路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00012AD9D5D95D42"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C305C0EEADC54",
+      "title": "见闻·双头派生",
+      "description": [
+        "【教学目标】认识双头派生",
+        "【作业】持有符文双头刃1把",
+        "【提示】不承诺比所有匠魂刀更强；先试手感",
+        "【讲评】冒险者，好兵器也要遇到合用的人。"
+      ],
+      "icon": "simplyswords:runic_twinblade",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 10.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "00010B5D8FBC0F29",
+          "type": "item",
+          "item": "simplyswords:runic_twinblade",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000A7188B9F1FA22"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，好兵器也要遇到合用的人。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0001E6B0098E5F3F"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000AB239E90F8907",
+      "title": "见闻·符文重形态",
+      "description": [
+        "【教学目标】认识符文重形态",
+        "【作业】持有符文战刃1把",
+        "【提示】本节点只检测持有，不检测你是否亲手合成",
+        "【讲评】冒险者，又一种工艺被你留下了。"
+      ],
+      "icon": "simplyswords:runic_glaive",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 10.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000B4506E42576CA",
+          "type": "item",
+          "item": "simplyswords:runic_glaive",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000621FDC3918BF8"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，又一种工艺被你留下了。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00053F0DCAF4BE1D"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BFB4794520425",
+      "title": "见闻·Boss直接战利品",
+      "description": [
+        "【教学目标】认识Boss直接战利品",
+        "【作业】持有地狱熔炉1件",
+        "【提示】巨兽实体掉落表可核；物品名不是新建炉作业",
+        "【讲评】冒险者，这件东西记着巨兽的余温。"
+      ],
+      "icon": "cataclysm:infernal_forge",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 10.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "0000FB4DACF8A88D",
+          "type": "item",
+          "item": "cataclysm:infernal_forge",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000AC58C6915309B"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这件东西记着巨兽的余温。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0005484EDB6D557E"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000496EEB1EE8A7C",
+      "title": "见闻·遗迹战利品",
+      "description": [
+        "【教学目标】认识遗迹战利品",
+        "【作业】持有守卫拳套1件",
+        "【提示】末影守卫路线可选，不成为Ⅲ收官前置",
+        "【讲评】冒险者，另一条遗迹线也留下了印记。"
+      ],
+      "icon": "cataclysm:gauntlet_of_guard",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 10.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000E6BD88D253696",
+          "type": "item",
+          "item": "cataclysm:gauntlet_of_guard",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000FFEC805F8AF76"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，另一条遗迹线也留下了印记。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0005DE2DE23662A7"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0007016EA6AFECCF",
+      "title": "见闻·Boss材料合成",
+      "description": [
+        "【教学目标】认识Boss材料合成",
+        "【作业】持有凋灵肩炮1件",
+        "【提示】查witherite材料配方；不是Boss直接必掉整件",
+        "【讲评】冒险者，战利品也能成为工艺的起点。"
+      ],
+      "icon": "cataclysm:wither_assault_shoulder_weapon",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 10.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "00024CE94D125260",
+          "type": "item",
+          "item": "cataclysm:wither_assault_shoulder_weapon",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000B65659108F74F"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，战利品也能成为工艺的起点。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000881976337B4FF"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0007FDB24D3189E3",
+      "title": "见闻·同材不同用途",
+      "description": [
+        "【教学目标】认识同材不同用途",
+        "【作业】持有碎肉机1件",
+        "【提示】与肩炮各有配方；无需两件都做才继续",
+        "【讲评】冒险者，同一场战斗带来的选择不止一种。"
+      ],
+      "icon": "cataclysm:meat_shredder",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 10.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000C5E362A57C72A",
+          "type": "item",
+          "item": "cataclysm:meat_shredder",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000FD820C3EC50C2"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，同一场战斗带来的选择不止一种。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0005FDDE37A39AD7"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000837D6A3EC8DB0",
+      "title": "见闻·火焰材料成品",
+      "description": [
+        "【教学目标】认识火焰材料成品",
+        "【作业】持有焚化者1件",
+        "【提示】以当前ignitium配方为准，不复制原生稀有掉落奖励",
+        "【讲评】冒险者，火焰换了一种形态留在你手中。"
+      ],
+      "icon": "cataclysm:the_incinerator",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 14.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "0005D5C42E4DBB18",
+          "type": "item",
+          "item": "cataclysm:the_incinerator",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00072AAD5EF0D2CA"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，火焰换了一种形态留在你手中。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00084AEC18E9796C"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000A0937957C0390",
+      "title": "见闻·诅咒材料成品",
+      "description": [
+        "【教学目标】认识诅咒材料成品",
+        "【作业】持有灵魂撕裂者1件",
+        "【提示】被诅咒者若留终局，此项Ⅲ只可见、可延后；不为收藏强迫提前刷最终候选",
+        "【讲评】冒险者，晚些收下，也不算错过。"
+      ],
+      "icon": "cataclysm:soul_render",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 14.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000101B0D089E7FD",
+          "type": "item",
+          "item": "cataclysm:soul_render",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00069B5CAB212C05"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，晚些收下，也不算错过。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00094D942DED9143"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0009B2366C39ABD3",
+      "title": "见闻·魂系普通合成",
+      "description": [
+        "【教学目标】认识魂系普通合成",
+        "【作业】持有古达斧枪1件",
+        "【提示】实体击杀与取得武器是两项事实；按JEI筹魂",
+        "【讲评】冒险者，名字熟悉了，兵器也有了来路。"
+      ],
+      "icon": "slu:gundyr_axespear",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 14.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "00020E18B0040953",
+          "type": "item",
+          "item": "slu:gundyr_axespear",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000AF838D09C17BA"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，名字熟悉了，兵器也有了来路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B9FE49A117280"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00063DA1A2A8D2C9",
+      "title": "见闻·另一种魂武",
+      "description": [
+        "【教学目标】认识另一种魂武",
+        "【作业】持有玛尔基特法杖1件",
+        "【提示】不据“法杖”保证其绕过地面Boss远程规则",
+        "【讲评】冒险者，收藏与打法仍由你分别选择。"
+      ],
+      "icon": "slu:margit_wand",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 14.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "0005F86E12C3E41E",
+          "type": "item",
+          "item": "slu:margit_wand",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000907D1208F456E"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，收藏与打法仍由你分别选择。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000A3897B2F9FD1E"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E5674610DAF6C",
+      "title": "见闻·高阶魂材料",
+      "description": [
+        "【教学目标】认识高阶魂材料",
+        "【作业】持有月光剑1件",
+        "【提示】配方用骑士之魂Ⅲ；48币的基础魂不能直接当Ⅲ",
+        "【讲评】冒险者，你已经会分清材料的同名层次。"
+      ],
+      "icon": "slu:moonlight_sword",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 14.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "000B796592276DE8",
+          "type": "item",
+          "item": "slu:moonlight_sword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000DA98094F06F72"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你已经会分清材料的同名层次。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00082E1EA87397CE"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0001E84653AA8251",
+      "title": "区分武器收藏与最终战定位",
+      "description": [
+        "【教学目标】区分武器收藏与最终战定位",
+        "【作业】持有薪王化身之剑1件",
+        "【提示】此武器收藏不把薪王化身恢复为终局Boss",
+        "【讲评】冒险者，一件藏品，不必承担最后一战。"
+      ],
+      "icon": "slu:soul_of_cinder_sword",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 14.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "000617A699E00377",
+          "type": "item",
+          "item": "slu:soul_of_cinder_sword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0003D85C61F9315D"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一件藏品，不必承担最后一战。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0001A2A6DA63F3A5"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008B26F7B3955B9",
+      "title": "见闻·另一条末期配方",
+      "description": [
+        "【教学目标】认识另一条末期配方",
+        "【作业】持有薪王大剑1件",
+        "【提示】普通配方成品与传说奖励候选不要混淆",
+        "【讲评】冒险者，看清来路，才能安排自己的材料。"
+      ],
+      "icon": "slu:cinder_king_greatsword",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 17.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "00031CA219A6E9D2",
+          "type": "item",
+          "item": "slu:cinder_king_greatsword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000F5CB8421B44DC"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，看清来路，才能安排自己的材料。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0002930B8F7DF99A"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000561B165109B1F",
+      "title": "见闻·末期多魂合成",
+      "description": [
+        "【教学目标】认识末期多魂合成",
+        "【作业】持有大审判剑1件",
+        "【提示】巨人之魂Ⅲ＋骑士之魂Ⅲ＋minecraft_lord_soul；仍可选，不必为此清所有SLU",
+        "【讲评】冒险者，这一件，记着更远的试炼。"
+      ],
+      "icon": "slu:grand_trial_sword",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 17.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00007C7E6B60D993",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "000D19D3EB7AA4CE",
+          "type": "item",
+          "item": "slu:grand_trial_sword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0008F9476D5EC929"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这一件，记着更远的试炼。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000982DE93D46C45"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

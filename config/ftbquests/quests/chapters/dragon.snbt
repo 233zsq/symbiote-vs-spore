@@ -1,0 +1,1023 @@
+{
+  "id": "000F3F9A50F31BF5",
+  "filename": "dragon",
+  "title": "狩龙人·与龙同行",
+  "group": "000111B6DD2DC8BD",
+  "order_index": 8,
+  "icon": "minecraft:dragon_egg",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "0007BC914D26EADA",
+      "title": "先学相处",
+      "description": [
+        "【教学目标】认识伙伴与讨伐两条龙线",
+        "【作业】阅读驯服、补给、侦察、龙材的循环",
+        "【提示】不要求收齐八种；驯服条件查本包原生指南",
+        "【讲评】冒险者，先认清对方，再决定怎样接近。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "00022CF6A13EC2AB",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 5,
+          "team_reward": false,
+          "id": "0000B42ABF26832D"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先认清对方，再决定怎样接近。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000BFDA870295ED4"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E390A912FF12C",
+      "title": "地标不都是巢",
+      "description": [
+        "【教学目标】区分四种实际地标",
+        "【作业】阅读两座roost、ivy_house、draconian_nucleus索引",
+        "【提示】不承诺每处都有可驯龙；具体线索尚待测",
+        "【讲评】冒险者，看懂地标，少走无谓的路。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007BC914D26EADA"
+      ],
+      "tasks": [
+        {
+          "id": "000435036AB3E5F5",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 5,
+          "team_reward": false,
+          "id": "0007CE1966009157"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，看懂地标，少走无谓的路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000D77AEFC5E9EF2"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CDA8E88F43885",
+      "title": "驯服前清单",
+      "description": [
+        "【教学目标】根据龙种准备接近方式",
+        "【作业】选一种龙，查原生指南的食物/交互条件并确认准备",
+        "【提示】自报；不能把任意生肉当八种龙通用驯服物",
+        "【讲评】冒险者，准备是尊重，也是保护自己。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007BC914D26EADA"
+      ],
+      "tasks": [
+        {
+          "id": "000653AC904BDADA",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 5,
+          "team_reward": false,
+          "id": "000D962F57685560"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，准备是尊重，也是保护自己。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0000F97DE54AB352"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CA98EB7C01418",
+      "title": "伙伴·raevyx",
+      "description": [
+        "【教学目标】让原生驯服事实留下记录。",
+        "【作业】取得该龙种的原生驯服进度。",
+        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
+        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CDA8E88F43885",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000BB1BAC3BD44E8",
+          "type": "advancement",
+          "advancement": "saintsdragons:tame_raevyx"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00059846B4245DEC"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F237194E39C63",
+      "title": "伙伴·cindervane",
+      "description": [
+        "【教学目标】让原生驯服事实留下记录。",
+        "【作业】取得该龙种的原生驯服进度。",
+        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
+        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CDA8E88F43885",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000007CE77F0DA5F",
+          "type": "advancement",
+          "advancement": "saintsdragons:tame_cindervane"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0001BCDCF2733AB5"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000761B0771E5B8E",
+      "title": "伙伴·atroxiia",
+      "description": [
+        "【教学目标】让原生驯服事实留下记录。",
+        "【作业】取得该龙种的原生驯服进度。",
+        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
+        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CDA8E88F43885",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000F75ACDC9F3A6A",
+          "type": "advancement",
+          "advancement": "saintsdragons:tame_atroxiia"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00027568B55061BA"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0006DCC011678D85",
+      "title": "伙伴·stegonaut",
+      "description": [
+        "【教学目标】让原生驯服事实留下记录。",
+        "【作业】取得该龙种的原生驯服进度。",
+        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
+        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CDA8E88F43885",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000B15691E74F03D",
+          "type": "advancement",
+          "advancement": "saintsdragons:tame_stegonaut"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0000FA73316885B4"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00036134B09B4841",
+      "title": "伙伴·varasuchus",
+      "description": [
+        "【教学目标】让原生驯服事实留下记录。",
+        "【作业】取得该龙种的原生驯服进度。",
+        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
+        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CDA8E88F43885",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000A3FEC3533875D",
+          "type": "advancement",
+          "advancement": "saintsdragons:tame_varasuchus"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000D0155E213C5F1"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004B6A4F5C5BF58",
+      "title": "伙伴·ignivorus",
+      "description": [
+        "【教学目标】让原生驯服事实留下记录。",
+        "【作业】取得该龙种的原生驯服进度。",
+        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
+        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CDA8E88F43885",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000C966B48FF7D34",
+          "type": "advancement",
+          "advancement": "saintsdragons:tame_ignivorus"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000E6F925CAC9766"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0002EFAC716288C1",
+      "title": "伙伴·volitans",
+      "description": [
+        "【教学目标】让原生驯服事实留下记录。",
+        "【作业】取得该龙种的原生驯服进度。",
+        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
+        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CDA8E88F43885",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "00035DC2F4DB434F",
+          "type": "advancement",
+          "advancement": "saintsdragons:tame_volitans"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0009F97E097B6347"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00075FABED0E6191",
+      "title": "伙伴·nulljaw",
+      "description": [
+        "【教学目标】让原生驯服事实留下记录。",
+        "【作业】取得该龙种的原生驯服进度。",
+        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
+        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CDA8E88F43885",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000101D4476E75BA",
+          "type": "advancement",
+          "advancement": "saintsdragons:tame_nulljaw"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000EADD5F6CDBE0D"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005440F0C398B74",
+      "title": "第一位伙伴",
+      "description": [
+        "【教学目标】汇总任一真实驯服事实",
+        "【作业】完成H04a～h中任意一项",
+        "【提示】编辑器必须OR；有归属的只是驯服者的龙",
+        "【讲评】冒险者，你们开始了一段共同的旅程。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CA98EB7C01418",
+        "000F237194E39C63",
+        "000761B0771E5B8E",
+        "0006DCC011678D85",
+        "00036134B09B4841",
+        "0004B6A4F5C5BF58",
+        "0002EFAC716288C1",
+        "00075FABED0E6191"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0008EAD769B6BA16"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你们开始了一段共同的旅程。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000E1533A1D6731C"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false,
+      "dependency_requirement": "one_completed"
+    },
+    {
+      "id": "000F91BD1E74A1DB",
+      "title": "照顾伙伴",
+      "description": [
+        "【教学目标】认识原生喂食与恢复",
+        "【作业】用对应指南的食物照料自己的龙一次",
+        "【提示】自报；持有食物不能证明喂食发生",
+        "【讲评】冒险者，能照顾同伴，才能走得更远。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005440F0C398B74"
+      ],
+      "tasks": [
+        {
+          "id": "000B83C4EE0BB9E5",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00022222D560A2A1"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，能照顾同伴，才能走得更远。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000E246F352E1E95"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000B9FBA5ECCAB1F",
+      "title": "一枚蛋",
+      "description": [
+        "【教学目标】认识孵化这一可选路线",
+        "【作业】持有当前七种龙蛋中任意1枚",
+        "【提示】Nulljaw蛋未核到；不要求七枚齐全",
+        "【讲评】冒险者，还有另一种相遇的方式。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007BC914D26EADA",
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "0005289A894DCF62",
+          "type": "custom",
+          "title": "持有当前七种龙蛋中任意1枚"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000E5433865544C3"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，还有另一种相遇的方式。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000CC0906EC00BEA"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BED153D41618F",
+      "title": "等待破壳",
+      "description": [
+        "【教学目标】认识原生孵化条件",
+        "【作业】按原生指南孵化自己的龙蛋一次并确认练习",
+        "【提示】自报可选；impossible孵化进度需程序授予实测后才能改自动检测",
+        "【讲评】冒险者，耐心也能成为旅程的一部分。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000B9FBA5ECCAB1F"
+      ],
+      "tasks": [
+        {
+          "id": "000E8C675D345E69",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00029DBA3A25163D"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，耐心也能成为旅程的一部分。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0006133CE4977956"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F6969F02216AE",
+      "title": "龙鳞",
+      "description": [
+        "【教学目标】区分养成资源与杀戮资源",
+        "【作业】获得当前原生acquire_dragon_scale进度",
+        "【提示】七种鳞片任一原生条件；不声称必须杀死伙伴",
+        "【讲评】冒险者，材料的来路，也值得你看清。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F91BD1E74A1DB"
+      ],
+      "tasks": [
+        {
+          "id": "000CD959FF765505",
+          "type": "advancement",
+          "advancement": "saintsdragons:acquire_dragon_scale"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000914AF0CD27ADD"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，材料的来路，也值得你看清。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B1EA852128FD0"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00069736E8F76CB8",
+      "title": "骑乘侦察",
+      "description": [
+        "【教学目标】将伙伴用于远征准备",
+        "【作业】骑自己的龙完成一次侦察并确认练习",
+        "【提示】先核所选种类可骑；不要求飞到固定坐标。若该种不可骑，允许另选可骑伙伴或批注改地面伴行",
+        "【讲评】冒险者，换一个高度，熟悉的路也不同了。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F6969F02216AE"
+      ],
+      "tasks": [
+        {
+          "id": "000CAA148A104DF6",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000511813E51B718"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，换一个高度，熟悉的路也不同了。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000645C0F0E0AB5F"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000FC17BDCD53EC5",
+      "title": "讨伐对象",
+      "description": [
+        "【教学目标】为龙材选择独立讨伐",
+        "【作业】击败saintsdragons:ignivorus×1",
+        "【提示】建议另找敌对目标，保护自家伙伴；原生kill无法判断野生/宠物，不能谎称已做宠物免计。鳞片H09不是先开这场战斗的门槛",
+        "【讲评】冒险者，知道为何出剑，比只会出剑更重要。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005440F0C398B74",
+        "00069736E8F76CB8",
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "00028A04D8484BCB",
+          "type": "kill",
+          "entity": "saintsdragons:ignivorus",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00066631CAE47D7F"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道为何出剑，比只会出剑更重要。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00039FC84F5CBB00"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C39D017BFB5B5",
+      "title": "龙心合金",
+      "description": [
+        "【教学目标】把讨伐资源接到装备",
+        "【作业】同时持有龙心合金4枚，不消耗。",
+        "【提示】配方、材料和获取链用当前JEI核对",
+        "【讲评】冒险者，战斗留下的材料，有了新的用途。"
+      ],
+      "icon": "saintsdragons:dragonheart_alloy",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 10.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000FC17BDCD53EC5"
+      ],
+      "tasks": [
+        {
+          "id": "00021F8F66230BE6",
+          "type": "item",
+          "item": "saintsdragons:dragonheart_alloy",
+          "count": 4L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00064D67661F5182"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，战斗留下的材料，有了新的用途。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000FB717F7D3E096"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00055504527440DC",
+      "title": "龙主行装",
+      "description": [
+        "【教学目标】认识完整龙材装备",
+        "【作业】获得原生dragonlord_armor_set进度",
+        "【提示】四部位原生持有条件；可选，不用全套才毕业",
+        "【讲评】冒险者，留下这套行装，也留下这段经验。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 10.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C39D017BFB5B5",
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "0003C43408532037",
+          "type": "advancement",
+          "advancement": "saintsdragons:dragonlord_armor_set"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000AAC9895354CF0"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，留下这套行装，也留下这段经验。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0008B988049923A1"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0000F5E8ACAD42F6",
+      "title": "狩龙人毕业",
+      "description": [
+        "【教学目标】完成一轮伙伴、侦察、讨伐、材料循环",
+        "【作业】完成H05、H09、H10、H11、H12",
+        "【提示】不要求八龙齐收，蛋/全套装备均可选",
+        "【讲评】冒险者，愿你知道怎样并肩，也知道怎样归来。"
+      ],
+      "icon": "minecraft:dragon_egg",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 10.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005440F0C398B74",
+        "000F6969F02216AE",
+        "00069736E8F76CB8",
+        "000FC17BDCD53EC5",
+        "000C39D017BFB5B5",
+        "00083052EF81988F"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 100,
+          "team_reward": false,
+          "id": "0006FBCFCADCB079"
+        },
+        {
+          "type": "item",
+          "item": {
+            "id": "relics:hunter_belt",
+            "Count": 1,
+            "tag": {
+              "display": {
+                "Name": "{\"text\": \"狩龙人之记\", \"italic\": false}",
+                "Lore": [
+                  "{\"text\": \"职业纪念；沿用原物品属性与槽位\", \"italic\": false, \"color\": \"gray\"}"
+                ]
+              }
+            }
+          },
+          "count": 1,
+          "team_reward": false,
+          "id": "000A3534A410494B"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，愿你知道怎样并肩，也知道怎样归来。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00024908B52B8159"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

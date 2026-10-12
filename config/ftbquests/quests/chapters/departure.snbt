@@ -1,0 +1,571 @@
+{
+  "id": "0009A46E8C926EE7",
+  "filename": "departure",
+  "title": "Ⅰ·启程",
+  "group": "0002FB0079E64484",
+  "order_index": 2,
+  "icon": "minecraft:bell",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "000752A2CAEFDCA0",
+      "title": "把这里当作家",
+      "description": [
+        "【教学目标】认识防卫与远征的关系。",
+        "【作业】阅读火种、围城、双竞技场和委托的路线。",
+        "【提示】本章几条线路并行，先做手边能完成的。围城自然周期长，教学不要求等够七天。",
+        "【讲评】冒险者，能回来，远征才有意义。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "",
+      "x": 6.25,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "00036B448EAFB9AA",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，能回来，远征才有意义。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0004927CBC6DFD87"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00069FEB67BAFE21",
+      "title": "一枚火种",
+      "description": [
+        "【教学目标】准备村民绑定物。",
+        "【作业】持有火种1枚，不消耗。",
+        "【提示】工具匠20枚真菌残魂交易；先领先前奖励或主动清剿。",
+        "【讲评】冒险者，先把守护的工具拿在手里。"
+      ],
+      "icon": "kubejs:fireseed_token",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000752A2CAEFDCA0"
+      ],
+      "tasks": [
+        {
+          "id": "000B51EE5A73E8CC",
+          "type": "item",
+          "item": "kubejs:fireseed_token",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0004BFE4B815F0D7"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，先把守护的工具拿在手里。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B40C5528F10CF"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C5A8BEF0C98DE",
+      "title": "绑定第一个火种",
+      "description": [
+        "【教学目标】把火种交给实际村民。",
+        "【作业】完成一次火种绑定，使个人有效绑定记录非空。",
+        "【提示】按火种原有交互操作；持有火种不等于已绑定。",
+        "【讲评】冒险者，你已经开始为这座村庄留下自己的守护。"
+      ],
+      "icon": "kubejs:fireseed_token",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00069FEB67BAFE21"
+      ],
+      "tasks": [
+        {
+          "id": "000B9788BB78ECC1",
+          "type": "custom",
+          "title": "完成一次火种绑定，使个人有效绑定记录非空。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 25,
+          "team_reward": false,
+          "id": "000031FD3902C074"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，你已经开始为这座村庄留下自己的守护。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00083F6B1D849FE7"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D88915813FC3E",
+      "title": "预兆与红线",
+      "description": [
+        "【教学目标】理解村庄共享计时。",
+        "【作业】阅读围城规则，手动确认已理解。",
+        "【提示】在村才走表，离村冻结；回村预警回拨。实际预警和防守另列可选任务，不靠自然等待拖住主线。失守处罚仍按已有机制。",
+        "【讲评】冒险者，离开之前，先看一眼村庄的状态。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000752A2CAEFDCA0"
+      ],
+      "tasks": [
+        {
+          "id": "000E7FE794F93A21",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，离开之前，先看一眼村庄的状态。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003CA6987BCBAA5"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E91D7EA2384AA",
+      "title": "地面的邀请",
+      "description": [
+        "【教学目标】抵达单体挑战场。",
+        "【作业】到访DailyBoss斗兽场结构。",
+        "【提示】入口、冷却与失败重试以原生提示为准；本项只证明到访，不证明胜利。",
+        "【讲评】冒险者，场地到了，战斗还在后面。"
+      ],
+      "icon": "minecraft:stone_bricks",
+      "subtitle": "",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000752A2CAEFDCA0"
+      ],
+      "tasks": [
+        {
+          "id": "00016475C0BB6C1B",
+          "type": "structure",
+          "structure": "pladailyboss:colosseum_arena"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 25,
+          "team_reward": false,
+          "id": "000850A74CF227D0"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，场地到了，战斗还在后面。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00033B4F15A8ECE0"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008563095580C0F",
+      "title": "第一场有效胜利",
+      "description": [
+        "【教学目标】让挑战以真正胜利结束。",
+        "【作业】完成一次DailyBoss有效场次并获胜。",
+        "【提示】本目标尚未开放：场次胜利检测接通后才可完成。场外击杀同种Boss、启动祭坛或走进竞技场不算。",
+        "【讲评】冒险者，这份胜利来自完整的一战。"
+      ],
+      "icon": "minecraft:golden_sword",
+      "subtitle": "尚未开放",
+      "x": 5.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000E91D7EA2384AA"
+      ],
+      "tasks": [
+        {
+          "id": "00088CA0253CDC15",
+          "type": "custom",
+          "title": "尚未开放·完成一次DailyBoss有效场次并获胜。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 60,
+          "team_reward": false,
+          "id": "0007177BE5472A90"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:diamond",
+          "count": 2,
+          "team_reward": false,
+          "id": "000F3550FDF85D7D"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这份胜利来自完整的一战。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000BB34AFD946D38"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0006F407B71E2FD9",
+      "title": "抬头看另一片战场",
+      "description": [
+        "【教学目标】认识天空波次挑战。",
+        "【作业】取得天空竞技场首次抵达进度。",
+        "【提示】本项对应普通天空竞技场；冰场另有原生进度，本版不独立开主线任务。到访不等于获胜。",
+        "【讲评】冒险者，天空还有另一种练习。"
+      ],
+      "icon": "minecraft:feather",
+      "subtitle": "",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000752A2CAEFDCA0"
+      ],
+      "tasks": [
+        {
+          "id": "00019E90474B5A9C",
+          "type": "advancement",
+          "advancement": "skyarena:common_arena"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 25,
+          "team_reward": false,
+          "id": "0005460CA9E33712"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，天空还有另一种练习。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000DFEE6A4DCF96E"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00005E22831735CA",
+      "title": "留到最后一波",
+      "description": [
+        "【教学目标】把开场与胜利分清。",
+        "【作业】完整赢下一次天空竞技场战斗。",
+        "【提示】本目标尚未开放：胜利语义须实测。不会用“开启祭坛”替代获胜。任务侧钴锭是补贴，不是原生奖杯掉落。",
+        "【讲评】冒险者，从最后一波走出来，才是一场完整的胜利。"
+      ],
+      "icon": "minecraft:golden_helmet",
+      "subtitle": "尚未开放",
+      "x": 7.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0006F407B71E2FD9"
+      ],
+      "tasks": [
+        {
+          "id": "00046E9C0CBFE265",
+          "type": "custom",
+          "title": "尚未开放·完整赢下一次天空竞技场战斗。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 50,
+          "team_reward": false,
+          "id": "00087D8136EEC4E6"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:cobalt_ingot",
+          "count": 1,
+          "team_reward": false,
+          "id": "000C438A180FD50B"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，从最后一波走出来，才是一场完整的胜利。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F11094165EC5B"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000AED222B64F1D4",
+      "title": "第一份清剿作业",
+      "description": [
+        "【教学目标】主动清理真菌威胁。",
+        "【作业】本项开放后队内有效击杀spore命名空间Monster共15只。",
+        "【提示】不要求15种；不计算历史计数、非怪物或环境死亡。菌丘讨伐另列可选。",
+        "【讲评】冒险者，清出一段路，也是在帮村庄争取时间。"
+      ],
+      "icon": "kubejs:spore_coin",
+      "subtitle": "",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000752A2CAEFDCA0"
+      ],
+      "tasks": [
+        {
+          "id": "00012593A91A4FDE",
+          "type": "custom",
+          "title": "本项开放后队内有效击杀spore命名空间Monster共15只。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "0006778564586ACB"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 10,
+          "team_reward": false,
+          "id": "0000B6872E98AA93"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，清出一段路，也是在帮村庄争取时间。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0009131D6221125B"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003D74A5A94F2B3",
+      "title": "技能书有来路",
+      "description": [
+        "【教学目标】记住技能书的合法渠道。",
+        "【作业】阅读村民与DailyBoss两条渠道。",
+        "【提示】职业对应书店已获批但尚未开放；DailyBoss奖池也需核验。任务与四职业不直接送EF技能书。以后拿到技能，再回手册做翻滚与格挡练习。",
+        "【讲评】冒险者，找到渠道，比等一本随机书更有方向。"
+      ],
+      "icon": "minecraft:enchanted_book",
+      "subtitle": "",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000752A2CAEFDCA0"
+      ],
+      "tasks": [
+        {
+          "id": "0004855CBAE4266F",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，找到渠道，比等一本随机书更有方向。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0006B9F0A5EE5C2B"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004A9329C27BC37",
+      "title": "日课开课",
+      "description": [
+        "【教学目标】把据点、单体与群战串起来。",
+        "【作业】完成火种绑定、两场有效胜利及首次清剿。",
+        "【提示】若胜利目标标记尚未开放，本里程碑也暂时无法完成；这不代表你必须重复击杀场外Boss。",
+        "【讲评】冒险者，有了据点，也有了下一次出门的理由。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "",
+      "x": 6.25,
+      "y": 10.5,
+      "size": 1.15,
+      "shape": "diamond",
+      "dependencies": [
+        "000C5A8BEF0C98DE",
+        "000D88915813FC3E",
+        "0008563095580C0F",
+        "00005E22831735CA",
+        "000AED222B64F1D4",
+        "0003D74A5A94F2B3"
+      ],
+      "tasks": [],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 100,
+          "team_reward": false,
+          "id": "0007C8D2A4FF91C6"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 20,
+          "team_reward": false,
+          "id": "0005C08D23A88F2C"
+        },
+        {
+          "type": "command",
+          "command": "gamestage add {p} svs_stage2_arena",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "阶段授予",
+          "id": "000E4A2E85618E1C"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，有了据点，也有了下一次出门的理由。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000E5B1E823B212D"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

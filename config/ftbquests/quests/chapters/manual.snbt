@@ -1,0 +1,603 @@
+{
+  "id": "00056EF3E23579FA",
+  "filename": "manual",
+  "title": "手册·战斗与成长",
+  "group": "000CBEADF4B93EC7",
+  "order_index": 14,
+  "icon": "minecraft:writable_book",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "00001868A37C851B",
+      "title": "键位不是能力",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】按自己的控制设置检查战斗模式、锁定、技能编辑器与技能键。",
+        "【提示】鼠标5、G、K是当前默认参考；有冲突先改键。没有装备翻滚或格挡技能，就先去获取，按空键不会学会。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000F946288149D6F",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00052D902CE860E7"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000FCC4F0BD71734",
+      "title": "技能书的两条来路",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】阅读职业村民与DailyBoss的渠道和开放状态。",
+        "【提示】皮匠technician、石匠parrying、图书管理员翻滚、工具匠guard，批准价20残魂；交易尚未开放。职业支线和本任务不发技能书。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0006105951467CCB",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000933FF953F8F85"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000A4757A325DF48",
+      "title": "翻滚练习",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】已装备可用闪避后，安全躲开一次来袭，再手动确认。",
+        "【提示】这是可选自报练习。先核技能、键位和体力，未学会不必卡在这里。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0002CD4D24CC04E7",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000232ED86BB2F71"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D7817BCCDF679",
+      "title": "格挡练习",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】已装备可用格挡后，安全挡住一次攻击，再手动确认。",
+        "【提示】这是可选自报练习。并非所有武器、攻击都可照同一种方式挡；观察原生技能说明。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000A15B8A503D085",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0008BD57196E6025"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00058176F19A6097",
+      "title": "远程规则",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】阅读当前远程与Boss规则。",
+        "【提示】玩家受弹射物伤害减半；对飞行/水中目标远程增伤，地面Boss免疫，地面普通怪减伤。按实际接地与水中状态判，不按外形判断；不新增限伤。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0007D5F963FE9F35",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0006A1C058607656"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0002167256049A79",
+      "title": "法术是辅助选择",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】查JEI与现有允许法术，再决定是否学习。",
+        "【提示】铁魔法已有禁用清单，EFS-ISS四项已移除技能拿不到；不要按原版模组攻略许诺所有法术都可学。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000E132107142A5D",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000A1556BEBF5383"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000491E78BDE5C7E",
+      "title": "选一把愿意练的武器",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】从收藏家名品或原生配方挑一把，安全试连段。",
+        "【提示】匠魂保底、动作武器、感染武器和御剑可分别尝试；名称或面板不是数值Tier榜，不要求九条旧路线全部毕业。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0003124687CBD6A1",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000C203CA67C5D33"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00047B2AEDA80CFF",
+      "title": "口粮与收纳",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】出门前看食物、背包与备用工具。",
+        "【提示】料理和收纳是短准备路线，不以做满厨房或科技长链卡主线；不同恢复品效果看本包原生说明。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000DCFA76E4872A1",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000078F3C4AB84AB"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000599D404F4E873",
+      "title": "火种、围城与回家",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】看清火种绑定和村庄共享计时的区别。",
+        "【提示】火种是个人绑定记录；围城按村庄共享，在村走表，离村冻结。两人计时与失守细项仍需实测，不把现有围城说成母巢攻坚。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0008C8FA29677519",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0000A73F1D531ED5"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000DCD3D763BD009",
+      "title": "指南针也有边界",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】查看探险家指南针使用说明。",
+        "【提示】制图师15残魂，使用过路费2枚；配置维度白名单和结构黑名单限制寻址，主线结构不能保证能搜到。别把它当所有维度万能定位器。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000E232E6DF315D2",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00041176C0E61E18"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F148DBDBF1377",
+      "title": "四件职业之记",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】阅读四职业毕业奖励与槽位说明。",
+        "【提示】四职业分别给不同现有饰品，不加裸属性。它们可能原生随机取得、可能冲突槽位，不保证四件同时穿戴。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000C665DC9AE71A2",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00040DF0AC63EF38"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00012F5FAFD0C0FA",
+      "title": "死亡后怎样继续",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】记住失败不等于存档重置。",
+        "【提示】Boss入口、原生召唤材料和重试路径按各场说明；未验通处不承诺免费再战。不要用任务重置删除世界。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "00080B77C7025548",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0009A3DC4900E0D6"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F8C57F731F335",
+      "title": "刀光与战斗设置",
+      "description": [
+        "【教学目标】随时查阅本包当前规则。",
+        "【作业】先观察招式，再调整视觉效果。",
+        "【提示】刀光试验另在独立实验实例进行；不为刀光引入Better Combat，不在本任务里安装或切换资源包。",
+        "【讲评】冒险者，带着清楚的规则出门。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "00065F1CF63031BC",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带着清楚的规则出门。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000D8A37854AF5ED"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F61A6857E66C0",
+      "title": "炉边准备",
+      "description": [
+        "【教学目标】领一份建炉起步材料，并认识缺失的环节。",
+        "【作业】序章完成后，领取一次起步礼包，按JEI补全能用的熔铸系统。",
+        "【提示】焦黑砖块32、部件加工台1、工匠站1、浇铸台1。礼包不是完整冶炼炉；控制器、燃料容器、排液与模具仍须按当前配方准备。",
+        "【讲评】冒险者，砖会搭墙，金属能流出来才叫炉子。"
+      ],
+      "icon": "minecraft:writable_book",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "0003D8D150F005C9",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "tconstruct:seared_bricks",
+          "count": 32,
+          "team_reward": false,
+          "id": "0009D43AF2A13525"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:part_builder",
+          "count": 1,
+          "team_reward": false,
+          "id": "00007D3FCCB5984D"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:tinker_station",
+          "count": 1,
+          "team_reward": false,
+          "id": "000F73C955FB63AB"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:seared_table",
+          "count": 1,
+          "team_reward": false,
+          "id": "000B725F6203357C"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，砖会搭墙，金属能流出来才叫炉子。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F4220AA711424"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

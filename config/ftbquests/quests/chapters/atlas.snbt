@@ -1,0 +1,453 @@
+{
+  "id": "000BFFE04C1F4988",
+  "filename": "atlas",
+  "title": "手册·道路与地标",
+  "group": "000CBEADF4B93EC7",
+  "order_index": 15,
+  "icon": "minecraft:filled_map",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "000F9FC06D5892B0",
+      "title": "沿路走，别只盯图标",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】道路是探索线索，不保证已接到每座Boss场地；任务不改生成密度。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000CC591DF865FE0",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000D280B3DAEC3DB"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000738688B176085",
+      "title": "侦察不等于清场",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】塔、地下据点与入口是Ⅱ章侦察路；到访检测仅证明结构所在位置。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "00061814CB2042B6",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00099D86ECC817F7"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0007596893F0F642",
+      "title": "二轮世界的门",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】原生钥匙对村民金属块交互，再按模组门框方式激活。精确尺寸、自然材料来源与回程还需实测；不要在没备退路时贸然出发。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000F5D25C1D2C42E",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000B8C4950FEAF61"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00024A5EECEEE628",
+      "title": "一张墓穴地图",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】二轮基础地图加腐肉可合成沉降墓穴地图；基础地图商人必现与价目待测，不承诺任一村民售卖。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0008EE989B689DE4",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F5B6AEFC936A7"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000AD62846379002",
+      "title": "设施里的战线",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】军营→监狱或医院→实验室→大教堂。到访不是搜到档案、消灭守军或关停孢子源，不虚构这些物品与机关。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000DBACCF3B814DC",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0005D623ED880F54"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000266E31F264F3E",
+      "title": "两种竞技场",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】DailyBoss单体场次与天空竞技场群战互补；启动、进场和胜利分别判断。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000EE061D8FF10DA",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00023AC5B8A44280"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0001C555658E5574",
+      "title": "灾变八处地标",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】古代工厂、燃烧竞技场、冰牢、卫城等各有原生Boss；并非八连必打。终局候选留待比较。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0006BBD2760E3A3B",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0001B3926E2703E1"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F962E984CF685",
+      "title": "龙的四种地标",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】两座roost、ivy_house、draconian_nucleus是四种真实地标，不等于四种都天然刷龙的龙巢。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0009ACBEB029DF29",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003A756A08DFD7A"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E4FA17ABE4475",
+      "title": "魂系的定点与随机",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】SLU全生物禁止野刷；定点竞技场与路网尚未开放，随机券从日课、悬赏两池独立产出，不能拿封印石代替。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0007025455923C71",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F8F8722CB26C3"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000EA049DA44D1CB",
+      "title": "母巢不是村庄围城",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】母巢三波+proto是待实装远征事件；现有siege只负责守村。原生受击进度不是母巢胜利。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "00071CC59DB6852C",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0005D2B59C4EC2B4"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000164C5045D6300",
+      "title": "终局之后",
+      "description": [
+        "【教学目标】把资料用于下一次出行。",
+        "【作业】阅读线索，再到对应主线或可选页安排下一步。",
+        "【提示】主线结局不消灭全球真菌、不重置角色、不要求所有职业毕业；可选讨伐与委托继续保留。",
+        "【讲评】冒险者，知道入口与退路，再把这一程走完。"
+      ],
+      "icon": "minecraft:filled_map",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "000DDF8846D1F202",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，知道入口与退路，再把这一程走完。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0008E057B7DF36B4"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

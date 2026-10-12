@@ -1,0 +1,38 @@
+{
+  "id": "000EE9AA965B8E29",
+  "title": "个人难度·只选一次",
+  "loot_size": 1,
+  "order_index": 0,
+  "rewards": [
+    {
+      "type": "command",
+      "command": "svs difficulty easy",
+      "elevate_perms": true,
+      "silent": true,
+      "team_reward": false,
+      "auto": "disabled",
+      "title": "轻松",
+      "icon": "minecraft:leather_helmet"
+    },
+    {
+      "type": "command",
+      "command": "svs difficulty normal",
+      "elevate_perms": true,
+      "silent": true,
+      "team_reward": false,
+      "auto": "disabled",
+      "title": "标准",
+      "icon": "minecraft:iron_helmet"
+    },
+    {
+      "type": "command",
+      "command": "svs difficulty hard",
+      "elevate_perms": true,
+      "silent": true,
+      "team_reward": false,
+      "auto": "disabled",
+      "title": "硬核",
+      "icon": "minecraft:diamond_helmet"
+    }
+  ]
+}

@@ -1,0 +1,797 @@
+{
+  "id": "000BBDC9E3E79DE8",
+  "filename": "expedition",
+  "title": "可选·远征与备战",
+  "group": "000ACC9B9418BE4C",
+  "order_index": 10,
+  "icon": "minecraft:compass",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "0003081C8C013EE9",
+      "title": "收纳的分量",
+      "description": [
+        "【教学目标】减少远征途中反复搬运。",
+        "【作业】持有一个精妙背包。",
+        "【提示】不要求高阶背包或指定升级，不检测里面装了什么。",
+        "【讲评】冒险者，给战利品留点位置。"
+      ],
+      "icon": "sophisticatedbackpacks:backpack",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D7BD903B53355"
+      ],
+      "tasks": [
+        {
+          "id": "000990AA9B1B9142",
+          "type": "item",
+          "item": "sophisticatedbackpacks:backpack",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "0006C2F276A54907"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，给战利品留点位置。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00073F3EF87747AA"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000B9B0EC179A870",
+      "title": "莫厄的金属",
+      "description": [
+        "【教学目标】认识二轮材料的用途。",
+        "【作业】持有莫厄金属2个。",
+        "【提示】此目标尚未开放。看JEI用途选择装备；持有不证明开采或铸造来源。",
+        "【讲评】冒险者，带回去的材料要能派上用场。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "尚未开放",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000BB89A895F594A"
+      ],
+      "tasks": [
+        {
+          "id": "0007388E1D09A9C6",
+          "type": "custom",
+          "title": "尚未开放·持有莫厄金属2个。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "0007A015E509FC13"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，带回去的材料要能派上用场。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00006C7D154C5399"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F996CBA145DE6",
+      "title": "村防整备",
+      "description": [
+        "【教学目标】把远征所得用于守家。",
+        "【作业】按实际操作检查一次卫兵、火种和撤退路线后自报。",
+        "【提示】招募/文明升级语义先测；这里不自动判定村庄升级。",
+        "【讲评】冒险者，最值得守住的地方，也值得整备。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C5A8BEF0C98DE"
+      ],
+      "tasks": [
+        {
+          "id": "00073CE1F293C11E",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000BBA4B3E416E80"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，最值得守住的地方，也值得整备。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00007B98246A4972"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E66267D84C277",
+      "title": "把短板补上",
+      "description": [
+        "【教学目标】用保底材料改善下一次远征。",
+        "【作业】持有钴锭2个。",
+        "【提示】可走本包现有取得渠道；再自行选择工具升级，持有不证明刀已升级。",
+        "【讲评】冒险者，材料不必稀奇，能补短板就好。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000A8AB76C1E7D76",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "0003D413CFDE5067"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，材料不必稀奇，能补短板就好。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000AFF8599A34AA7"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000AF17BDBC43161",
+      "title": "再选一种本领",
+      "description": [
+        "【教学目标】明确技能与饰品的准备渠道。",
+        "【作业】阅读村民职业技能书与DailyBoss入口。",
+        "【提示】只链接已批准来源，不发书，不要求刷指定随机书才推进。",
+        "【讲评】冒险者，下一场准备，可以从自己的不足开始。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "00031800F5AD0239",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "0005F12A72D70101"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，下一场准备，可以从自己的不足开始。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0007120C5FDAF5C2"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000FF9707C7B5EE1",
+      "title": "从战利品到下一步",
+      "description": [
+        "【教学目标】让代表战收益有具体去处。",
+        "【作业】查看沉降领主实际战利品的本包用途后自报。",
+        "【提示】执行前核原生掉落与JEI；不伪造专用通关证，不要求消耗唯一掉落。",
+        "【讲评】冒险者，胜利带回的不只有一件纪念品。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "可选作业",
+      "x": 12.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00083B804B6F4911"
+      ],
+      "tasks": [
+        {
+          "id": "0001CBF2A244FF46",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000C4542950BBBD4"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，胜利带回的不只有一件纪念品。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003DEDBC7111A5A"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004B0B8050452EC",
+      "title": "特殊AI试炼",
+      "description": [
+        "【教学目标】比较人形决斗与二轮代表战的节奏。",
+        "【作业】在已核自然入口完成一场选定的特殊AI挑战。",
+        "【提示】此目标尚未开放。优先看Scarlet Hunter；Arterius/WOC作比较。不预填名单；当前可选，是否作为Ⅱ第二必打另批。",
+        "【讲评】冒险者，记住对手的动作，比记住它的血量更有用。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "尚未开放",
+      "x": 12.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0004A9329C27BC37"
+      ],
+      "tasks": [
+        {
+          "id": "000816AA4D3D8CD3",
+          "type": "custom",
+          "title": "尚未开放·在已核自然入口完成一场选定的特殊AI挑战。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "00025FCAAFA19881"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，记住对手的动作，比记住它的血量更有用。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000002341D05F267"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000426335FB393CB",
+      "title": "战地补给",
+      "description": [
+        "【教学目标】试用本包现有料理作为远征准备。",
+        "【作业】持有牛肉炖菜2份。",
+        "【提示】沿用农夫乐事配方；持有不证明吃下或固定增益，不要求酿酒等待。",
+        "【讲评】冒险者，一顿热饭也是准备的一部分。"
+      ],
+      "icon": "minecraft:cooked_beef",
+      "subtitle": "可选作业",
+      "x": 10.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "0003746CFCF6835F",
+          "type": "item",
+          "item": "minecraft:cooked_beef",
+          "count": 8L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000CCBAE5183EC93"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，一顿热饭也是准备的一部分。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0003F041B1EC4A11"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0001565B4965E05B",
+      "title": "战利品的去处",
+      "description": [
+        "【教学目标】把第一场代表战收益接到装备选择。",
+        "【作业】持有凋零合金块1个并查看用途。",
+        "【提示】此目标尚未开放。先驱者原生表含此物；持有不证明亲自掉落，不重复要求杀Boss，不消耗唯一物品。",
+        "【讲评】冒险者，下一场战斗的准备从这里开始。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "尚未开放",
+      "x": 7.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003D726265FAB91"
+      ],
+      "tasks": [
+        {
+          "id": "00045DA59D6D6D58",
+          "type": "custom",
+          "title": "尚未开放·持有凋零合金块1个并查看用途。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "00051EAE64FFDD13"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，下一场战斗的准备从这里开始。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000C9D2C3579D1E0"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000195D1A06C1D76",
+      "title": "猎人的准备",
+      "description": [
+        "【教学目标】给变身战留出观察与撤退机会。",
+        "【作业】阅读选定血源战的激活、回程和已测招式提示。",
+        "【提示】当前入口未验通，暂不能写最终操作说明；Blossomed Eye是米科拉什入口线索，不能冒充加斯科因召唤器。",
+        "【讲评】冒险者，看见变化时，先别急着多贪一刀。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "000370A96B4BE591",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "00016EFD8CF0BA21"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，看见变化时，先别急着多贪一刀。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000F2C1CE782330D"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000EB1E5FC070FD1",
+      "title": "战后整理",
+      "description": [
+        "【教学目标】为下一场战斗留出整备间隙。",
+        "【作业】检查一次实际损耗、食物、技能与回程点后自报。",
+        "【提示】不自动修理、不刷新技能或补满资源；弱化铁魔法按保留表选辅助。",
+        "【讲评】冒险者，停下来准备，也是推进的一部分。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C11C78E5C50BC"
+      ],
+      "tasks": [
+        {
+          "id": "0001EC90C0319E5D",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000A19ADF608ADB7"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，停下来准备，也是推进的一部分。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0004901F3EDC450F"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E84EDFE9A75B5",
+      "title": "焰铸的选择",
+      "description": [
+        "【教学目标】理解代表战掉落的后续用途。",
+        "【作业】持有焰魔锭1个并查看本包用途。",
+        "【提示】原生表含ignitium_ingot；不要求再杀一次或随机唱片，不把数值最高当唯一答案。",
+        "【讲评】冒险者，神兵与保底刀，仍然都是你的路。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 3.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000EFD528821B67D"
+      ],
+      "tasks": [
+        {
+          "id": "000CA332EC66F9B6",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000409185323FE53"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，神兵与保底刀，仍然都是你的路。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000EFB38EDA73F03"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BEBD173A18799",
+      "title": "审判场侦察",
+      "description": [
+        "【教学目标】认识另一个已白名单的战场。",
+        "【作业】到访Inquisition竞技场。",
+        "【提示】此目标尚未开放。具体Boss/激活未证，不编造唯一Boss或强制清场任务。",
+        "【讲评】冒险者，这里可以成为另一场挑战。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "尚未开放",
+      "x": 0.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005D8B2BE004BA4"
+      ],
+      "tasks": [
+        {
+          "id": "0004B9FD9D2DFCB7",
+          "type": "custom",
+          "title": "尚未开放·到访Inquisition竞技场。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000FB128944E1FAA"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，这里可以成为另一场挑战。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000772E82FBDEAFF"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0007DA880F35A08B",
+      "title": "三魂补短板",
+      "description": [
+        "【教学目标】认识现有交易能补哪些装备短板。",
+        "【作业】持有活尸之魂1枚；本项只检测持有，不检测交易发生。",
+        "【提示】工具匠/盔甲匠/武器匠24/48/64币是现有交易；不强迫刷三魂或花掉所有钱。",
+        "【讲评】冒险者，已有的渠道，也能为最后一战出力。"
+      ],
+      "icon": "slu:hollow_soul",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "000A69558F200AA4",
+          "type": "item",
+          "item": "slu:hollow_soul",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000EAE2C9C08C449"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，已有的渠道，也能为最后一战出力。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000435B52FD043E7"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008D800A1AD8E52",
+      "title": "最后一次整备",
+      "description": [
+        "【教学目标】在终局前检查自己的选择。",
+        "【作业】检查实际补给、装备、技能和再战路线后自报。",
+        "【提示】不自动补满、不特供新技能；匠魂保底和允许的逃课仍可用。",
+        "【讲评】冒险者，最后一战也从准备开始。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00064C9C478AC7D1"
+      ],
+      "tasks": [
+        {
+          "id": "0004E7465F7C90E7",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000BCA2B66330FFF"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，最后一战也从准备开始。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0000457377D470D3"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00043E9404D6B1E2",
+      "title": "最后一战的提示",
+      "description": [
+        "【教学目标】阅读本包亲测的动作与重试说明。",
+        "【作业】阅读选定终局的两类危险动作和再战入口。",
+        "【提示】未看样前不编红闪/完美格挡/秒杀阈值；只写实测能看到的提示。",
+        "【讲评】冒险者，看清了再出手。"
+      ],
+      "icon": "minecraft:compass",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 7.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00011E01818D27C9"
+      ],
+      "tasks": [
+        {
+          "id": "00005B0BA53CCEEE",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000CE85563AEAA94"
+        },
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，看清了再出手。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00037A4966158200"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

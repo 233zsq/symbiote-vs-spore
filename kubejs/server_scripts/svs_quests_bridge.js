@@ -1,91 +1,194 @@
-// svs_quests_bridge.js — FTB 任务 KubeJS 桥（任务线框架规格书 v1 §1.2 检测模式三）
-// 职责：系统状态类任务（FTB 原生做不了的）轮询 → /ftbquests change_progress 完成隐形任务
-// ⚠️ 框架期：QUEST_TASKS 的任务 id 是占位符——用户在编辑器实装序章设计稿后，
-//   把真实任务 id（章节文件里的 hex id）填进来才生效。占位期间本脚本零操作（只打一行装载日志）。
-//
-// 通道说明（HANDOVER 血泪教训）：
-//   - 共生体阶段：SymbioteTracker.get(level).peek(player.uuid).stage（实证可用）
-//   - 完成任务命令：/ftbquests change_progress <玩家> <任务id> <complete|progress> <数值>
-//     【待核实：本版 FTB Quests 的命令签名——编辑器实装后用 /ftbquests change_progress 无参
-//     触发命令补全确认】
-// 轮询频率：每 2 秒（%40），复用 symbiote_counter.js 的节流模式，零性能开销设计。
+// FTB v2 bridge. User authorized generated SNBT on 2026-10-11.
+// No command-based fake wins, once flags, per-session completion caches or old-stage migration.
+// Binding IDs are 52-bit: no Java-long -> JS-number rounding at the Rhino boundary.
+const QV2_TeamData = Java.loadClass('dev.ftb.mods.ftbquests.quest.TeamData')
+const QV2_ServerQuestFile = Java.loadClass('dev.ftb.mods.ftbquests.quest.ServerQuestFile')
+const QV2_Monster = Java.loadClass('net.minecraft.world.entity.monster.Monster')
+const QV2_ServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer')
+const QV2_Villager = Java.loadClass('net.minecraft.world.entity.npc.Villager')
+const QV2_Tracker = Java.loadClass('com.scout.symbiote.tracker.SymbioteTracker')
+const QV2_Helper = Java.loadClass('com.svs.tweak.kubejs.SvsDamageHelper')
+const QV2_Stages = Java.loadClass('net.darkhax.gamestages.GameStageHelper')
+const QV2_ForgeRegistries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')
+const QV2_ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+let QV2_Hunt = null
+let QV2_FeedingHunt = null
+try { QV2_Hunt = Java.loadClass('com.scout.symbiote.ability.PredatorHunt') } catch (e) { }
+try { QV2_FeedingHunt = Java.loadClass('com.scout.symbiote.ability.SymbioteFeedingHunt') } catch (e) { }
+const QV2_RANK = { UNBONDED: 0, ATTACHED: 1, INTEGRATED: 2, COOPERATIVE: 3, DOMINANT: 4 }
+const QV2_Armor = [
+  'minecraft:iron_helmet', 'minecraft:iron_chestplate', 'minecraft:iron_leggings', 'minecraft:iron_boots',
+  'minecraft:diamond_helmet', 'minecraft:diamond_chestplate', 'minecraft:diamond_leggings', 'minecraft:diamond_boots',
+  'minecraft:netherite_helmet', 'minecraft:netherite_chestplate', 'minecraft:netherite_leggings', 'minecraft:netherite_boots',
+  'saintsdragons:dragonlord_helmet', 'saintsdragons:dragonlord_chestplate',
+  'saintsdragons:dragonlord_leggings', 'saintsdragons:dragonlord_boots'
+]
+const QV2_Eggs = ['raevyx', 'cindervane', 'atroxiia', 'stegonaut', 'varasuchus', 'ignivorus', 'volitans']
+let QV2_Ticks = 0
+let QV2_Warned = {}
+let QV2_Audited = false
 
-const QB_SymbioteTracker = Java.loadClass('com.scout.symbiote.tracker.SymbioteTracker')
-
-// ── 任务 id 配置表（占位符=待编辑器实装后回填）──────────────────────────────
-// 键=桥检测 id；值={ questId: 'FTB 任务 hex id', once: true/false }
-// once=true 的任务完成后写玩家 pd 标记（svs_qb_done_<桥id>）防重复结算
-const QUEST_TASKS = {
-  // 序章 A5.1 陨石的低语：共生体达成 ATTACHED（融合成功）即完成
-  prologue_bond:      { questId: '__PLACEHOLDER_A5_1__', once: true, stage: 'ATTACHED' },
-  // 阶段Ⅰ B 系列桥检测任务（设计稿 阶段Ⅰ_启程_v1；检测口径 2026-10-07 用户已批）
-  // B1.1 围城预兆：所在村庄 remaining 首次跌破 5:00 预警线（SIEGE_WARN=6000 tick）——
-  //   数据在主世界 level persistentData 键 svs_siege_v_<gx>_<gz>（siege.js 村庄级共享，键由
-  //   siegeVillageOf 按村民质心 64 格量化），不是旧玩家键 svs_siege_timer（已废弃）
-  siege_warn:         { questId: '__PLACEHOLDER_B1_1__', once: true },
-  // B1.2 守住第一波：开波后 2 分钟窗口（activeUntil）结束且 defeatDone=0——开波瞬间不完成
-  siege_first_wave:   { questId: '__PLACEHOLDER_B1_2__', once: true },
-  // B2.2 绑定第一个火种：玩家 pd svs_fireseeds 非空（键名 10-07 对 fireseed.js 核实一致）
-  fireseed_first:     { questId: '__PLACEHOLDER_B2_2__', once: true },
-  // 阶段Ⅰ-Ⅳ 例（占位）：共生使支线的阶段攀升任务们
-  symbiote_integrated: { questId: '__PLACEHOLDER__', once: true, stage: 'INTEGRATED' },
-  symbiote_cooperative:{ questId: '__PLACEHOLDER__', once: true, stage: 'COOPERATIVE' },
-  symbiote_dominant:  { questId: '__PLACEHOLDER__', once: true, stage: 'DOMINANT' }
+function qv2Warn(key, err) {
+  if (QV2_Warned[key]) return
+  QV2_Warned[key] = true
+  console.warn('[SVS-QV2] ' + key + ': ' + err)
+}
+function qv2Dim(level) {
+  const dim = level.dimension
+  if (dim.location) return String(dim.location())
+  return String(dim)
+}
+function qv2Task(binding) {
+  const file = QV2_ServerQuestFile.INSTANCE
+  if (!file) return null
+  const task = file.getTask(file.getID(binding.task_id))
+  if (!task) return null
+  // CustomTask fields are NOT serialized in this installed version. Configure through real API.
+  task.setEnableButton(false)
+  task.setMaxProgress(binding.count || 1)
+  return task
+}
+function qv2Progress(player, binding, amount) {
+  let team = null, task = null
+  try {
+    team = QV2_TeamData.get(player)
+    task = qv2Task(binding)
+    if (!team || !task || !team.canStartTasks(task.getQuest()) || team.isCompleted(task)) return
+    team.addProgress(task, amount)
+  } catch (e) { qv2Warn('progress/' + binding.key, e) }
+}
+function qv2Rank(player) {
+  let tracker = null, profile = null
+  try {
+    tracker = QV2_Tracker.get(player.level)
+    profile = tracker ? tracker.peek(player.uuid) : null
+    return profile && profile.stage ? (QV2_RANK[String(profile.stage.name())] || 0) : 0
+  } catch (e) { qv2Warn('bond', e) }
+  return 0
+}
+function qv2Village(player) {
+  let villagers = null
+  if (qv2Dim(player.level) !== 'minecraft:overworld') return false
+  try {
+    villagers = player.level.getEntitiesOfClass(QV2_Villager, player.getBoundingBox().inflate(128))
+    return villagers && villagers.size() >= 3
+  } catch (e) { qv2Warn('village', e) }
+  return false
+}
+function qv2Count(player, items) {
+  let total = 0
+  for (let i = 0; i < items.length; i++) total += player.inventory.count(items[i])
+  return total
+}
+function qv2Hunting(player) {
+  try {
+    return (QV2_Hunt && QV2_Hunt.isHunting(player.uuid)) ||
+      (QV2_FeedingHunt && QV2_FeedingHunt.isHunting(player.uuid))
+  } catch (e) { qv2Warn('hunt', e) }
+  return false
 }
 
-let QB_TICK = 0
-let QB_P = null
-let QB_PLAYERS = null
-let QB_TRACKER = null
-let QB_PROF = null
-let QB_STAGE = ''
-let QB_TASK = null
-let QB_PD = null
-let QB_COMPLETED_CACHE = {}   // 任务 id → 已完成（本会话内不再发命令；跨会话靠 once 的 pd 标记）
-
-function qbLog(msg) { console.info('[SVS-任务桥] ' + msg) }
-
-// 共生体阶段读取（自包含，不依赖 symbiote_counter——桥脚本独立存活）
-function qbBondStage(player) {
+function qv2Stages(player) {
+  const milestones = global.svsQuestV2Stages || []
+  const file = QV2_ServerQuestFile.INSTANCE
+  let team = null, quest = null, entry = null
   try {
-    QB_TRACKER = QB_SymbioteTracker.get(player.level)
-    if (!QB_TRACKER) return null
-    QB_PROF = QB_TRACKER.peek(player.uuid)
-    if (QB_PROF && QB_PROF.stage) return String(QB_PROF.stage.name())
-  } catch (e) { }
-  return null
+    team = QV2_TeamData.get(player)
+    if (!team || !file) return
+    for (let i = 0; i < milestones.length; i++) {
+      entry = milestones[i]
+      quest = file.getQuest(file.getID(entry.quest_id))
+      // Only new v2 team progress qualifies. Old stage IDs never enter this path.
+      if (quest && team.isCompleted(quest) && !QV2_Stages.hasStage(player, entry.stage)) {
+        QV2_Stages.addStage(player, entry.stage)
+      }
+    }
+  } catch (e) { qv2Warn('stage-sync', e) }
+}
+function qv2Audit() {
+  const manifest = global.svsQuestV2Audit
+  const file = QV2_ServerQuestFile.INSTANCE
+  let missing = [], id = '', binding = null
+  if (!manifest || !file) return
+  try {
+    for (let i = 0; i < manifest.quests.length; i++) {
+      id = manifest.quests[i]
+      if (!file.getQuest(file.getID(id))) missing.push('quest:' + id)
+    }
+    for (let i = 0; i < manifest.items.length; i++) {
+      id = manifest.items[i]
+      if (!QV2_ForgeRegistries.ITEMS.containsKey(new QV2_ResourceLocation(id))) missing.push('item:' + id)
+    }
+    for (let i = 0; i < manifest.entities.length; i++) {
+      id = manifest.entities[i]
+      if (!QV2_ForgeRegistries.ENTITY_TYPES.containsKey(new QV2_ResourceLocation(id))) missing.push('entity:' + id)
+    }
+    for (let i = 0; i < global.svsQuestV2Bindings.length; i++) {
+      binding = global.svsQuestV2Bindings[i]
+      if (!qv2Task(binding)) missing.push('task:' + binding.task_id)
+    }
+    console.info('[SVS-QV2-AUDIT] quests=' + manifest.quests.length + ' missing=' + JSON.stringify(missing))
+    QV2_Audited = true
+  } catch (e) { qv2Warn('audit', e) }
 }
 
 ServerEvents.tick(event => {
-  QB_TICK++
-  if (QB_TICK % 40 !== 0) return          // 每 2 秒
-  const srv = event.server
-  if (!srv) return
-  QB_PLAYERS = srv.getPlayers()
-  for (let i = 0; i < QB_PLAYERS.size(); i++) {
-    QB_P = QB_PLAYERS.get(i)
-    if (!QB_P || !QB_P.level) continue
-    // 阶段类任务
-    QB_STAGE = qbBondStage(QB_P)
-    if (!QB_STAGE) continue
-    for (let key in QUEST_TASKS) {
-      QB_TASK = QUEST_TASKS[key]
-      if (QB_TASK.stage !== QB_STAGE) continue
-      if (!QB_TASK.questId || QB_TASK.questId.indexOf('PLACEHOLDER') >= 0) continue   // 占位符跳过
-      if (QB_COMPLETED_CACHE[QB_TASK.questId]) continue
-      QB_PD = QB_P.getPersistentData()
-      if (QB_TASK.once) {
-        try {
-          if (QB_PD.getBoolean('svs_qb_done_' + key)) continue
-          QB_PD.putBoolean('svs_qb_done_' + key, true)
-        } catch (e) { continue }
-      }
-      // 完成命令（【待核实】本版 FTB 签名；占位期间不会执行到这里）
-      srv.runCommandSilent('ftbquests change_progress ' + QB_P.username + ' ' + QB_TASK.questId + ' complete')
-      QB_COMPLETED_CACHE[QB_TASK.questId] = true
-      qbLog('阶段任务完成：' + QB_P.username + ' @ ' + key + '（' + QB_STAGE + '）→ 任务 ' + QB_TASK.questId)
+  QV2_Ticks++
+  if (QV2_Ticks % 40 !== 0) return
+  if (!QV2_Audited) qv2Audit()
+  const bindings = global.svsQuestV2Bindings || []
+  const players = event.server.getPlayers()
+  let player = null, binding = null, eligible = false, rank = 0, village = false
+  for (let pi = 0; pi < players.size(); pi++) {
+    player = players.get(pi)
+    if (!player || !player.level) continue
+    rank = qv2Rank(player)
+    qv2Stages(player)
+    village = false
+    for (let bi = 0; bi < bindings.length; bi++) {
+      binding = bindings[bi]
+      if (binding.kind !== 'bridge') continue // pending goals deliberately have no completion path
+      eligible = false
+      try {
+        if (binding.target === 'bond') eligible = rank >= QV2_RANK[binding.stage]
+        else if (binding.target === 'fireseed') eligible = String(player.getPersistentData().getString('svs_fireseeds')).length > 0
+        else if (binding.target === 'village') {
+          village = qv2Village(player)
+          eligible = village
+        } else if (binding.target === 'dimension') eligible = qv2Dim(player.level) === binding.dimension
+        else if (binding.target === 'armor_count') eligible = qv2Count(player, QV2_Armor) >= binding.count
+        else if (binding.target === 'tag_count') eligible = player.inventory.count(Ingredient.of('#' + binding.tag)) >= binding.count
+        else if (binding.target === 'dragon_egg') {
+          for (let ei = 0; ei < QV2_Eggs.length; ei++) {
+            if (player.inventory.count('saintsdragons:' + QV2_Eggs[ei] + '_egg') > 0) eligible = true
+          }
+        }
+        if (eligible) qv2Progress(player, binding, binding.count || 1)
+        else qv2Task(binding) // synchronize counters before GUI display / first death
+      } catch (e) { qv2Warn('poll/' + binding.key, e) }
     }
   }
 })
 
-qbLog('任务桥已装载（占位模式——QUEST_TASKS 待回填真实任务 id 后激活；当前 0 个生效）')
+EntityEvents.death(event => {
+  const entity = event.entity
+  let killer = null, binding = null, match = false
+  if (!entity || !(entity instanceof QV2_Monster)) return
+  try { killer = QV2_Helper.attackerOf(event.source) } catch (e) { qv2Warn('attacker', e) }
+  // Exact fatal-blow attribution; no stale last-hurt-player fallback for environmental deaths.
+  if (!killer || !(killer instanceof QV2_ServerPlayer)) return
+  const type = String(entity.type)
+  const spore = type.indexOf('spore:') === 0
+  const hunting = spore && qv2Hunting(killer)
+  const bindings = global.svsQuestV2Bindings || []
+  for (let bi = 0; bi < bindings.length; bi++) {
+    binding = bindings[bi]
+    if (binding.kind !== 'bridge') continue
+    match = binding.target === 'hostile_kills' || (binding.target === 'spore_kills' && spore) ||
+      (binding.target === 'spore_elite' && (type === 'spore:brute' || type === 'spore:knight')) ||
+      (binding.target === 'hunting_kill' && hunting)
+    if (match) qv2Progress(killer, binding, 1)
+  }
+})
+
+console.info('[SVS-QV2] bridge loaded; generated bindings configure custom goals; pending victories stay closed')

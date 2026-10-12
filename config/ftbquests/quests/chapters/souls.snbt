@@ -1,0 +1,189 @@
+{
+  "id": "000C730AD7CF73D2",
+  "filename": "souls",
+  "title": "可选·魂系讨伐",
+  "group": "000ACC9B9418BE4C",
+  "order_index": 12,
+  "icon": "slu:knight_soul",
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "00028684513FB985",
+      "title": "古达·自由讨伐",
+      "description": [
+        "【教学目标】把魂系收藏和主线战位分开。",
+        "【作业】有效击败该指定实体一次。",
+        "【提示】SLU禁止野刷，封印石不可用。当前尚无已验通的常规召唤渠道，待定点或有效随机券开放后挑战；本页可查，不要求管理命令游玩。薪王化身仅可选，不是终局。",
+        "【讲评】冒险者，名气不是这场战斗唯一的价值。"
+      ],
+      "icon": "slu:knight_soul",
+      "subtitle": "可选作业",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "00003600CC183ABD",
+          "type": "kill",
+          "entity": "slu:boss_gundyr",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，名气不是这场战斗唯一的价值。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "00068AC27CE44C3B"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000767DD84857907",
+      "title": "亚尔特留斯·自由讨伐",
+      "description": [
+        "【教学目标】把魂系收藏和主线战位分开。",
+        "【作业】有效击败该指定实体一次。",
+        "【提示】SLU禁止野刷，封印石不可用。当前尚无已验通的常规召唤渠道，待定点或有效随机券开放后挑战；本页可查，不要求管理命令游玩。薪王化身仅可选，不是终局。",
+        "【讲评】冒险者，名气不是这场战斗唯一的价值。"
+      ],
+      "icon": "slu:knight_soul",
+      "subtitle": "可选作业",
+      "x": 2.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "000357DFE820A42D",
+          "type": "kill",
+          "entity": "slu:boss_artorias",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，名气不是这场战斗唯一的价值。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000E94C42EFA1C29"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000ADF739A684DB5",
+      "title": "盖尔·自由讨伐",
+      "description": [
+        "【教学目标】把魂系收藏和主线战位分开。",
+        "【作业】有效击败该指定实体一次。",
+        "【提示】SLU禁止野刷，封印石不可用。当前尚无已验通的常规召唤渠道，待定点或有效随机券开放后挑战；本页可查，不要求管理命令游玩。薪王化身仅可选，不是终局。",
+        "【讲评】冒险者，名气不是这场战斗唯一的价值。"
+      ],
+      "icon": "slu:knight_soul",
+      "subtitle": "可选作业",
+      "x": 5.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "000D841CA54D6783",
+          "type": "kill",
+          "entity": "slu:boss_gael",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，名气不是这场战斗唯一的价值。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "000AAEA289AC26EC"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000DA688B3E03622",
+      "title": "薪王化身·自由讨伐",
+      "description": [
+        "【教学目标】把魂系收藏和主线战位分开。",
+        "【作业】有效击败该指定实体一次。",
+        "【提示】SLU禁止野刷，封印石不可用。当前尚无已验通的常规召唤渠道，待定点或有效随机券开放后挑战；本页可查，不要求管理命令游玩。薪王化身仅可选，不是终局。",
+        "【讲评】冒险者，名气不是这场战斗唯一的价值。"
+      ],
+      "icon": "slu:knight_soul",
+      "subtitle": "可选作业",
+      "x": 7.5,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00083052EF81988F"
+      ],
+      "tasks": [
+        {
+          "id": "0007D6FF30F5DFDF",
+          "type": "kill",
+          "entity": "slu:boss_soul_of_cinder",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "command",
+          "command": "tellraw {p} {\"text\": \"冒险者，名气不是这场战斗唯一的价值。\", \"color\": \"gray\"}",
+          "elevate_perms": true,
+          "silent": true,
+          "team_reward": false,
+          "auto": "enabled",
+          "title": "完成讲评",
+          "id": "0001B8BB903FEB79"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "ignore_reward_blocking": false
+    }
+  ]
+}
