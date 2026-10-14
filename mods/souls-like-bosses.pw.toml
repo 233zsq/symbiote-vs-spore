@@ -1,0 +1,8 @@
+name = "Souls Like Bosses"
+filename = "souls_like_bosses-1.20.1-1.0.4.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "c865b9446d6c6da2ca74bd25ed6f76b7e897154384521328f93dc0fe4148f454ab8a8d425133b611e6a0c8197353b74bc72b195592ea32e88a4a316cdb6aed52"

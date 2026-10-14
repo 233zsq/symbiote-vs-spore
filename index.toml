@@ -3793,6 +3793,18 @@ file = "config/openloader/data/imfdata/pack.mcmeta"
 hash = "4cebc384d1f92e61ec7d770bfe663b93630ec4315cd65293d39bac2f96c4fc8e"
 
 [[files]]
+file = "config/openloader/data/svs/data/aquamirae/tags/worldgen/biome/ice_maze.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "config/openloader/data/svs/data/souls_like_bosses/worldgen/structure_set/melkors_keep.json"
+hash = "0d3d0c0da24cf84d62810c1ad2e62c4c5c8f7da3ba102bb588b54c350b36e32b"
+
+[[files]]
+file = "config/openloader/data/svs/data/souls_like_bosses/worldgen/structure_set/tree_of_light.json"
+hash = "7fa2d33788b546f12d3874d5bd49e8b47ff1d6c5b86b1e622a4731999269ace7"
+
+[[files]]
 file = "config/openloader/data/svs/data/spore/capabilities/weapons/cleaver.json"
 hash = "2712dd7c3f4a0902884a9aa1a57ec2a776ef52196ffc3f0a42d44b92273b443a"
 
@@ -3937,6 +3949,11 @@ metafile = true
 [[files]]
 file = "mods/appleskin.pw.toml"
 hash = "f33810d5961a90de469504fbe8c2058f807bebffc663385347d419bde3a147ac"
+metafile = true
+
+[[files]]
+file = "mods/aquamirae.pw.toml"
+hash = "a7fd2f5b6c173e0a6fe5aa0e49dbd7cb39821b052cee6441898ad58b6a1170a0"
 metafile = true
 
 [[files]]
@@ -4135,6 +4152,11 @@ hash = "072608592f04adf833ed2c091ec398ea02715044df58af5ff9637b58117081e6"
 metafile = true
 
 [[files]]
+file = "mods/connector-extras.pw.toml"
+hash = "d8480ee1f6ae58fa389e502108bcde4936ca326d6dc2f1608b9af9ac141cb35a"
+metafile = true
+
+[[files]]
 file = "mods/controlling.pw.toml"
 hash = "ae0a3a2ada91088822989239b896b1ab0e4b870537bdcf46b2c7c0a5eea46e1f"
 metafile = true
@@ -4205,11 +4227,6 @@ hash = "e3f4f3cfdf82a3867d1096651c46138a94bfc118efb60016a31d9411f7747b51"
 metafile = true
 
 [[files]]
-file = "mods/distant-horizons.pw.toml"
-hash = "92cdb3642ecb5ce3047b1c74ef027ea55164b0a806a55d49b6f0da2a893350f2"
-metafile = true
-
-[[files]]
 file = "mods/drippy-loading-screen.pw.toml"
 hash = "784c2092dab6574056d64ded5fd13889ce336833a99c6bb067d3d201a938971a"
 metafile = true
@@ -4227,6 +4244,11 @@ metafile = true
 [[files]]
 file = "mods/eeeabs-mobs.pw.toml"
 hash = "da4fc8b24e5d8bfa6875a7d02ff876a5459bc3c11f860847cbb8054d931c9bfb"
+metafile = true
+
+[[files]]
+file = "mods/efiscompat.pw.toml"
+hash = "721876f32b7910d9ffc11e04accc39db149f4d93323760d87370e679c624ae83"
 metafile = true
 
 [[files]]
@@ -4334,6 +4356,11 @@ hash = "3de972a9ea638c1382a5df6e7c30bd32852fb8a109316e068ebc058de00f585f"
 metafile = true
 
 [[files]]
+file = "mods/epicfight-skill-tree.pw.toml"
+hash = "4da632ae859a2983e1c16a561de7edfe8ed4740c246f405f381e5e46a59e7497"
+metafile = true
+
+[[files]]
 file = "mods/expandability.pw.toml"
 hash = "f4913a2b535362732edf6b775bd2f62d3fcdd0dab61c356dcf0845929511605c"
 metafile = true
@@ -4376,6 +4403,16 @@ metafile = true
 [[files]]
 file = "mods/final-adversaries-lite-version.pw.toml"
 hash = "a02fb5bf5fa9aba32b995a9609a02d662a42af919f6ead4dd01f24bbd3059ac2"
+metafile = true
+
+[[files]]
+file = "mods/forgified-fabric-api.pw.toml"
+hash = "834dfc3eac7e8cbfe203578f1120ba298711f0426133950ce8972f5afc025a4d"
+metafile = true
+
+[[files]]
+file = "mods/fragmentum.pw.toml"
+hash = "df6cab25871465014d1330103ca838be68c874badad60d8f2143f991a9e255b0"
 metafile = true
 
 [[files]]
@@ -4749,6 +4786,11 @@ hash = "e7b4f5d39d49d95fc3b11d7e39b29dc7206ef38274200f745912aae332d496e7"
 metafile = true
 
 [[files]]
+file = "mods/sinytra-connector.pw.toml"
+hash = "28ec0fe825391261f68b2de4f7719f29dbc7b8c5a02876e6acfde975375cf3f4"
+metafile = true
+
+[[files]]
 file = "mods/skyarena.pw.toml"
 hash = "d73c9bfe5ba1662154a26433df07a80d9b47e79be241250d96a5f7b3cd037ab0"
 metafile = true
@@ -4793,6 +4835,11 @@ file = "mods/sophisticated-storage.pw.toml"
 hash = "a59d27eba58d24698ea2a3d0a41d5486f834ce8c9fa4c124633e829ee401ae71"
 metafile = true
 
+metafile = true
+
+[[files]]
+file = "mods/souls-like-bosses.pw.toml"
+hash = "c3845a4a9acf2d610359b49aa176c84243f89260b06b7e1531dd9ce03fc00bf3"
 metafile = true
 
 [[files]]
@@ -4888,6 +4935,11 @@ metafile = true
 [[files]]
 file = "mods/ultimine-line-render-fix.pw.toml"
 hash = "d1c23579adc4a1a45bc965ebe976f68c9f150c80541551e7b33c1f3a145179ef"
+metafile = true
+
+[[files]]
+file = "mods/voxy.pw.toml"
+hash = "1ac92e3f60d201d95426df64bed7eace8a27c5510c898c290cae775f016128ec"
 metafile = true
 
 [[files]]
@@ -7024,4 +7076,3 @@ hash = "fb931acbeb9efe56ebdde9e74f0dc8eff0360966359af3865d0dd152e57d829e"
 [[files]]
 file = "mods/natures-compass.pw.toml"
 hash = "2c828a48e2648e0d334c5f883f79e85d82ff62a20347eacfdf11cfdd876025e3"
-

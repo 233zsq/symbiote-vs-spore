@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "souls_like_bosses:tree_of_light",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 184946374,
+    "spacing": 100000,
+    "separation": 99999
+  }
+}

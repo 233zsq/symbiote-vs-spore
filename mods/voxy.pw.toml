@@ -1,0 +1,8 @@
+name = "Voxy"
+filename = "voxy-0.2.14-alpha-dw.jar"
+side = "both"
+
+[download]
+url = "https://github.com/MapleProjects/DistantWorld-1.20.1/releases/download/v1.0.0/voxy-0.2.14-alpha-51ea1a841fff1717b261d2fbd3b3f6dafd470663.jar"
+hash-format = "sha512"
+hash = "5a9cc40f2d4391cdf42b30ef48a06977a6792cb6c5c834cd1759151c37eb46b124c7732050c1052b242895fa632c4c295f2da89ec9cffc63430d7dabd43f6930"

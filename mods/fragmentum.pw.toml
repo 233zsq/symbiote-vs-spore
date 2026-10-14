@@ -1,0 +1,13 @@
+name = "Fragmentum"
+filename = "fragmentum-5.2.0+1.20.1-forge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/49C5QgTK/versions/bThKchPM/fragmentum-5.2.0%2B1.20.1-forge.jar"
+hash-format = "sha512"
+hash = "6ff2d828152ce9dc98a0b911e87a008ea91e84247fa718c84d8b76a788629e2ae6699a85495279a49a255cfa187ffaf1e4b4237ee17ccb5da05f7de19b84b5d4"
+
+[update]
+[update.modrinth]
+mod-id = "49C5QgTK"
+version = "bThKchPM"
