@@ -3797,6 +3797,10 @@ file = "config/openloader/data/svs/data/aquamirae/tags/worldgen/biome/ice_maze.j
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
+file = "config/openloader/data/svs/data/iss_elden_ring/forge/biome_modifier/add_glintstone_cave.json"
+hash = "a75d5d611e58e3c80bbf0244f82a8a8351c4e8c4aa0f3a1c56da5343aa6d5ae5"
+
+[[files]]
 file = "config/openloader/data/svs/data/souls_like_bosses/worldgen/structure/melkors_keep.json"
 hash = "3ecce269fc549c34922153cd67bbd2d4d96f0cd67b2dad75874cb263eefd110b"
 
@@ -4074,6 +4078,11 @@ metafile = true
 [[files]]
 file = "mods/canary.pw.toml"
 hash = "14481081a9e233f4ba57df8a77ce028184818143eae1c73b60749ea482c912e9"
+metafile = true
+
+[[files]]
+file = "mods/carianstyle.pw.toml"
+hash = "6fb4429e0a387b27a79336fe9fa84eabf8869bb89365b1264cafce1945ae5191"
 metafile = true
 
 [[files]]
@@ -4493,6 +4502,11 @@ metafile = true
 [[files]]
 file = "mods/irons-spells-n-spellbooks.pw.toml"
 hash = "e2337a3930d3dfb07c051ff0000b2ebd8d4638e17f091b7ad2c786bf0b25d095"
+metafile = true
+
+[[files]]
+file = "mods/iss-elden-ring.pw.toml"
+hash = "bebfd9cac9513bd5068517fef59347744ce076809b47a9c61e6e6c2bfbaf0172"
 metafile = true
 
 [[files]]

@@ -1,0 +1,8 @@
+name = "Iron's Spells 'n Spellbooks: Elden Ring"
+filename = "iss_elden_ring-1.0.3.jar"
+side = "both"
+
+[download]
+url = ""
+hash-format = "sha512"
+hash = "b74738f3dfc319e408f4e20f7b354ffb57bbf8957be05975223d561c5afa48c578cbcf557676023d81255b63798ca71b7b7456bee3a4f5d3579854806950eca4"
