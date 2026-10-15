@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": [],
+  "step": "underground_structures",
+  "spawn_overrides": {},
+  "start_height": {
+    "absolute": 80
+  },
+  "start_jigsaw_name": "souls_like_bosses:part_1",
+  "start_pool": "souls_like_bosses:melkors_keep/part_1",
+  "size": 7,
+  "max_distance_from_center": 128,
+  "use_expansion_hack": true
+}

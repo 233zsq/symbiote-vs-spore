@@ -3797,12 +3797,12 @@ file = "config/openloader/data/svs/data/aquamirae/tags/worldgen/biome/ice_maze.j
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
-file = "config/openloader/data/svs/data/souls_like_bosses/worldgen/structure_set/melkors_keep.json"
-hash = "0d3d0c0da24cf84d62810c1ad2e62c4c5c8f7da3ba102bb588b54c350b36e32b"
+file = "config/openloader/data/svs/data/souls_like_bosses/worldgen/structure/melkors_keep.json"
+hash = "3ecce269fc549c34922153cd67bbd2d4d96f0cd67b2dad75874cb263eefd110b"
 
 [[files]]
-file = "config/openloader/data/svs/data/souls_like_bosses/worldgen/structure_set/tree_of_light.json"
-hash = "7fa2d33788b546f12d3874d5bd49e8b47ff1d6c5b86b1e622a4731999269ace7"
+file = "config/openloader/data/svs/data/souls_like_bosses/worldgen/structure/tree_of_light.json"
+hash = "4a85295c32a83a31873c808116b76741d0fa01627bc2474f2114fa8246c160d9"
 
 [[files]]
 file = "config/openloader/data/svs/data/spore/capabilities/weapons/cleaver.json"
