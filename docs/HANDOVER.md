@@ -1,7 +1,7 @@
 # Symbiote vs Spore 交接文档（写给下一个 AI）
 
-> **当前指示（2026-10-12）：FTB重写暂停；本轮再次重写剧情供用户批注。不开Minecraft、不重载实例、不做游戏采样。** 任务v2保留施工中间态；用户明确恢复任务工作前不继续生成、替换或测试任务。数据入口见 [数据与采样说明](数据与采样说明.md)；最新剧情提案见 [剧情重写v3](剧情重写_v3_陨星之后.md)。
-> 更新：**2026-10-12（离线资料更新；当前任务暂停，游戏证据按各记录日期）**。本文件是唯一权威交接面。
+> **当前指示（2026-10-15 交接待续 AI）：** 用户正在实机游玩验收（开发实例 test）。近期节奏＝**改动直落 test（svs_lab 已退出工作流，仅留沙箱/旧世界快照）→ 无头加载验证 → 用户看样**；正式同步＝母本→test→仓库三腿一致。FTB 任务重写仍暂停（用户明确恢复前不生成/替换/测试任务；SNBT 程序生成/校验已授权）。**动 test/母本任何文件前必须先查 java 进程**——用户随时在玩，且 `tasklist` 单次检查有假阴性（10-15 两次竞态教训），须多方法、多次确认。数据入口见 [数据与采样说明](数据与采样说明.md)；叙事现状＝[剧情重写v3](剧情重写_v3_陨星之后.md)（待批注）；近三日批次报告（模组6-7、模组8、EF复查、Voxy）见 docs 根目录同日期文件。
+> 更新：**2026-10-15（交接收整；游戏证据按各记录日期）**。本文件是唯一权威交接面。
 > 主规格：`docs/任务文档.txt`（设计理念 13 条 + 工作原则）；机制定稿：`docs/魔改设计决议.md`（变更记录节效力最高）。
 > 任务线权威：`docs/任务线框架规格书_v1.md`（2026-10-03 定稿）。
 
@@ -13,8 +13,8 @@
 
 > **2026-10-11 任务重建新授权：** 用户要求整本FTB任务重置并重写仓库README，随后明确批准“允许程序生成和校验SNBT；保留已批机制，全面重做任务结构、内容与引导”。原编辑器唯一生成、旧ID保留和M2节点数约束在本次重建中失效；机制裁决继续有效。当前施工入口改为 [FTB任务重置_v2.md](FTB任务重置_v2.md)，具体节点/ID见其链接。下文旧M2施工排队及“等待总体批注”是历史状态，不得继续据此覆盖v2。
 
-1. 你在维护一个 MC 1.20.1 Forge 整合包（**215 mod**，副本 mods/ 实数（EFS-ISS 入包）），共生体 vs 真菌题材，类魂 ARPG，Epic Fight 战斗底座。
-2. **最近全绿基线：`E:\mcmp_test\dist\test19.zip`**；日常开发验证实例为 **test**（由test20.zip导入），testN.zip仅作里程碑/交付验证。
+1. 你在维护一个 MC 1.20.1 Forge 整合包（**母本 225／test 226 jar**（2026-10-15 计；test 另含用户所加 mobbattle、未同步母本）），共生体 vs 真菌题材，类魂 ARPG，Epic Fight 战斗底座。
+2. **历史全绿基线：`E:\mcmp_test\dist\test19.zip`（10-05）**；当前开发/游玩实例 **test**——**必须 JDK 21 启动**（voxy 换装硬要求：`launch_test4.py … --java "C:\Program Files\Java\jdk-21\bin\java.exe"`，PCL 同理选 jdk-21；svs_tweak 构建仍用 jdk-17）。testN.zip 仅作里程碑/交付验证。
 3. **先读第五节"血泪教训"再写任何一行脚本**——本环境 KubeJS/Rhino 的坑全部实踩过。
 4. 改动三处同步：`E:\SvS_整合包_副本`（母本）→ `C:\PCL 正式版 2.8.13\.minecraft\versions\test`（开发实例）→ git 仓库（推送状态须当次核对）。
 5. 用户在 `docs/任务文档.txt` 写了四条工作原则（三思/简洁/手术式/目标驱动），那是圣旨。
@@ -49,8 +49,8 @@
 | 位置 | 角色 |
 |---|---|
 | `E:\SvS_整合包_副本` | 整合包母本，所有改动第一落点，打 zip 从这出 |
-| `C:\PCL 正式版 2.8.13\.minecraft\versions\test` | **开发实例（2026-10-06 起）**：用户以 PCL 导入 dist/test20.zip 建（1418.6MB/2403 文件已核对），替代test4；launch_test4.py默认test，M1.6已验证 |
-| `C:\PCL 正式版 2.8.13\.minecraft\versions\svs_lab` | **合入线隔离实验实例（2026-10-11 建）**：test 全量副本＋B2 两项（217 mod）；B1/B3a/B4a/B5 试验专用，**绝不同步回母本**；见 `docs/合入_隔离实验实例_svs_lab.md` |
+| `C:\PCL 正式版 2.8.13\.minecraft\versions\test` | **开发/游玩实例**（2026-10-06 由 test20.zip 导入建立；2026-10-15 计 226 jar）：**须 JDK21 启动**（voxy 换装）；launch_test4.py 默认 test |
+| `C:\PCL 正式版 2.8.13\.minecraft\versions\svs_lab` | **实验沙箱**（2026-10-11 建；10-15 计 230 jar）：模组6/7/8 与原生 voxy 都曾在此先行试验；批八起工作流直落 test，lab 已退出工作流（保留作沙箱，**另存旧 test 世界 10-12 快照——误删恢复用**）；**绝不同步回母本** |
 | ~~test4~~ | **已由用户删除**（2026-10-11 前清理；证据区核查无归档留痕，如需找回查回收站） |
 | `E:\mcmp` | Git 仓库（GitHub 233zsq/symbiote-vs-spore） |
 | `E:\mcmp_test` | 工具区：launch_test4.py（默认test，支持`--world`/`--version`）、pack_mcbbs.py、dist/testN.zip、i18n_work/、错误报告/、dl/ |
@@ -60,8 +60,11 @@
 2. **数据包类覆盖（结构 JSON/标签/biome_modifier）一律走 `config/openloader/data/svs/data/`**——`kubejs/data/` 在本环境**不是数据包**（实证见第五节教训 10）。
 3. 打包：`python E:\mcmp_test\pack_mcbbs.py testN`（MCBBS 格式），打完核对 overrides 内脚本与 jar 版本；**testN.zip 降级为里程碑/交付验证用途**（验证打包通道不漏文件），日常验证全走 test 实例（永远最新）。
 4. 并发会话共用仓库：commit 前 `git log --oneline -5`，**只 add 自己改过的文件路径**（曾误扫入他人文件）。
+5. **动 test/母本前先查 java**：用户名 `Ultraman_0`＝用户实例（勿动）、`Tester`＝工具实例；`tasklist` 单次检查有假阴性（10-15 两次竞态），须 un-filtered+filtered 多方法、间隔多次确认后才能碰文件/启动实例。
 
-## 三、当前状态（2026-10-07）
+## 三、当前状态（2026-10-07 起滚动；10-15 交接口径见下首行）
+
+- **2026-10-15 计（交接口径）**：母本 225／test 226／svs_lab 230 jar；**母本与 test 须 JDK21 启动**；世界生成维持禁用（模组7＋iss 辉石洞，用户裁决）；模组7/模组8、Voxy 换装（DW 0.2.14 移植＋信雅互联）、EF 附属已在包——裁决与细节见 §四「2026-10-14/15」；近三日报告（模组6-7批次／模组8／EF复查／Voxy）在 docs 根目录。以下为历史快照。
 
 - 215 mod（副本 mods/ jar 实数）；**最近全绿基线 dist/test19.zip**；test20.zip 已打（里程碑包：围城修复+三魂补挂+EFS-ISS，已导入为开发实例 **test**）；**test4 已删除**（2026-10-11 前，用户执行）
 - KubeJS：startup 5 + server 13 脚本（另有 TEMP 件：`_siege_fast.js` 与 siege.js 的 TRACE 行，M1.5 收敛后删）
@@ -119,6 +122,12 @@
 - 其余"待看样/待名单/待数值/待实测"的条件继续有效；**任务 SNBT 仍只由用户在编辑器生成**
 - 生效要点：M2 八批注点（A1.6 改造、迁4 hidden、preface 改题、阶段 id 映射、炉礼包按修正版 id `tconstruct:seared_table` 等）、序章/Ⅰ 五处补正（含 A1.6 精制铁锭由见面礼发 3 枚）、合入审查 5 问（含**批准 EF 匠魂兼容 20.2.8→20.2.10 受控替换**、刀光先验现有资源、先试 Souls HUD 单项、镜头模组暂缓）均按清单推荐生效
 
+### 2026-10-14/15（模组7、Voxy 换装、EF 附属、模组8；细节见各批次报告）
+- **模组7 入包**（10-14 用户批示）：aquamirae／souls_like_bosses（重入，用户确认）／fragmentum（补硬依赖）入母本+test；**世界生成＝维持禁用**（10-15 用户明确裁决；aquamirae 用标签空覆盖、slb 用结构本体 `"biomes":[]`——后者为 10-15 修复的超限值 bug，教训见批次报告 §2.2）；汉化（aquamirae 66 缺键＋slb 13 键）已上 lab，**上生产待批**
+- **Voxy 换装**（10-14 用户批「换」）：DH 移出（备份 `backups/prod_migration_20261014/`），信雅互联四件＋DW voxy 0.2.14 移植入；`canary.properties` 加 `mixin.chunk.palette=false`（Canary 选项按**优化组名**开关）；**母本/test 自此须 JDK21 启动**。10-15 补实证：原生 voxy 0.2.15（KNaiFen）与 Oculus 1.8.0 硬冲突、VoxySeedGen 与光影互斥——**用户裁决＝选 A：保光影、弃 seedgen**（详见 Voxy 报告 §六/§七，勿重试此线）
+- **EF 附属**（10-15 用户批「装」）：efiscompat 2.6.0、epicfight-skilltree 20.2.9 入包（技能树替换技能书获取，与职业设计关系待实机观察）；**impactful 装后即撤**（mixin FATAL，与 EF 20.14.17 不兼容——EF 旧线附属的 versionRange 声明不可信，一律实跑验证）
+- **模组8 直并 test**（10-15 用户指示「不需要 lab、直接合并用 test」）：CarianStyle 2.2.0（法环附魔 113、自带全量中文）／iss_elden_ring 1.0.3（法环法术、自带全量中文、辉石洞维持禁用、上游 9+1 JSON 缺陷登记）入包；SPBR PBR 材质包＋Bliss 光影调参随包启用；**VoxySeedGen 未入**。**此后新批直接落 test，lab 工作流停用**
+
 ## 五、血泪教训（KubeJS/Rhino/Forge，全部实踩）
 
 2026-10-11任务专项补充：本机FTB2001.4.22 KillTask只支持单实体，ObservationTask不是AdvancementTask，CheckmarkTask不能作为防跳过桥；CustomTask上限/按钮须用API设置，不序列化到SNBT。详见任务v2说明；不据方法名猜胜利含义。
@@ -151,19 +160,20 @@
 ## 七、待办队列
 
 **推进队列（各项须满足注明前置；待批项不自动获批）**：
-1. M2 编辑器实装（待批注后）：按 `docs/任务线实装核对.md` §一 在 FTB 编辑器施工（awakening22条＋阶段Ⅰ16可见节点（若批准迁4暂存hidden，物理总数20））→ 产出"稿编号→真实任务 id"对照表 → AI 桥激活（M2.5）
-2. ~~序章/阶段Ⅰ 设计稿~~ **已交付**；~~规格书_围城村庄级共享~~ **已执行**（9b3c1ec + a3b4adb，M1.1 已验证）——剩余：失守/回拨子项实测 + M1.5 TEMP 清理（依赖 M1.4）
-3. ~~EFS-ISS 入包~~ **已落地且 M1.3 已验证**（ba2e9ba）；无需重跑 gen_collect_tags.py
+1. **模组6 三项并入正式包**（SoulsHUD／匠魂compat 20.2.10 受控替换／WM＋EFM 桥；lab 已装待批）——用户一句话后走 test+母本+仓库+pw 一条龙
+2. **模组7 汉化上生产**（aquamirae 66 缺键＋slb 13 键 overlay → svs_zh_cn，test+母本+仓库）——待批；lab 已有效果可看
+3. **资料欠账**：六份 xlsx 工作簿随模组7/8 批次更新（模组清单.md 与协议登记已更新，xlsx 未跟）
 4. SLU v2 定点化（主线 Boss 竞技场结构+路网，随任务线Ⅳ章；Boss 召唤券已进日课+悬赏两池设计）
-5. （搁置）EF 怪物适配——见"等用户"区
+5. （搁置）EF 怪物适配——见"等用户"区；FTB 线（M2.4 编辑器实装→M2.5 桥激活，八批注点与总稿批注已于 10-11 完成）待用户解除暂停
 
 **等用户**：
-- **M2 三件批注**（M2.1 三点 / M2.2 两点 / M2.3 三点，全有推荐答案）→ 编辑器实装（M2.4）→ 桥激活（M2.5，含两缺陷修复）
-- **批注《任务设计总稿_v1》（Q01–Q14）**＋夜临/WOC 替换名单看样＋SLU 两场人选；可与 M2 八批注点、序章/Ⅰ 5 处补正合并批
-- **裁决合入审查 5 问**（刀光目标 / UI与镜头 / 新增生成例外 / 新成长与全局干预 / EF 匠魂兼容更新；详见审查 §六）——B0/B1 只读核查可先行
+- **看样清单（test 226 直接开玩，JDK21）**：CarianStyle（K 键百科）／iss 法术观感／SPBR＋Bliss 画面（SPBR 要求关 Mipmap）／"新的世界 (1)"稳定性／Voxy 远景
+- **模组6 并包批**、**mod7 汉化上生产批**（各一句话即可）
+- 旧世界快照：test／M2_Editor_20261011／新的世界 若疑误删，lab 存有旧 test 世界 10-12 快照可恢复（用户未确认前不动）
+- 存量看样队列：夜临/WOC 替换名单、SLU 两场人选、B5 看样圈（WOH/Oddities/NotSoShrimple/英雄之证/Celestisynth/Anka）、大圣残躯 r8-test1 实测；**剧情 v3 批注**（V3-A～D）
 - **EF 怪物适配**（`docs/规格书_EF怪物适配.md`，**搁置待裁决**）：范围/外观底线/战斗接管/排期/验收人五问未答；实验批 3 只怪（约半小时）待批准后再动
 - 任务恢复施工待用户指示（2026-10-11 已授权程序生成/校验/替换 SNBT；旧"编辑器唯一生成"条目作废）
-- pauseOnLostFocus 当前实测=true（`test/options.txt`，10-12 核）；后台无头测试时临时改 false、测完还原（test4 已由用户删除：2026-10-11 前、无归档留痕）
+- pauseOnLostFocus：test 现值随用户游玩偏好；后台无头测试时临时改 false、测完还原（test4 已由用户删除：2026-10-11 前、无归档留痕）
 
 **实测触发才有下文**：真菌飞行怪崩档（复现后填 badmobs）、Relics×真菌 CME、BaM TPS、FA boss 函数 aether 引用（休眠代码无实际影响）
 
@@ -178,9 +188,10 @@
 
 ## 九、关键事实速查
 
-- 启动测试：`python E:\mcmp_test\launch_test4.py --mem 10G --world <世界名>`（quickPlay；世界必须已存在，新世界用 level.dat 拷贝造骨架**并改 Difficulty 字节**）；到主菜单 200~350 秒正常
-- 日志：`test/logs/latest.log`（UTF-8，跨天轮转 .gz）；崩溃报告 `test/crash-reports/`
-- 杀残留游戏进程：powershell `Stop-Process -Name java -Force`（先确认没有用户实例在跑）
+- 实例计数（2026-10-15）：母本 225／test 226／svs_lab 230 jar；**test/母本 须 JDK21**（`--java "C:\Program Files\Java\jdk-21\bin\java.exe"`）
+- 启动测试：`python E:\mcmp_test\launch_test4.py --version test --world <世界名> --java "C:\Program Files\Java\jdk-21\bin\java.exe"`（quickPlay；世界必须已存在；`--noworld` 仅到标题屏不进世界）；到主菜单约 110~200 秒正常
+- 日志：`test/logs/latest.log`（UTF-8，跨天轮转 .gz）；崩溃报告 `test/crash-reports/`；用户错误报告包在 `E:\mcmp_test\错误报告/`
+- 杀残留游戏进程：**先多方法确认**（`tasklist | grep -i java` 单次有假阴性；`Ultraman_0`=用户勿动、`Tester`=工具），确认后 powershell `Stop-Process -Name java -Force`
 - Gradle：`JAVA_HOME=C:/Program Files/Java/jdk-17 E:/mcmp_test/gradle-8.8/bin/gradle.bat --offline jar`（svs_tweak 构建）
 - CFR 反编译器：/tmp/cfr.jar 或 E:/mcmp_test；javap 用 jdk-21
 - 共生体 API：`SymbioteTracker.get(level).peek(uuid)` → stage/trust/stamina；`adjustTrust/adjustStress(ServerLevel,ServerPlayer,int,String)`；`PredatorHunt.isHunting(uuid)`
