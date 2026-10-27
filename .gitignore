@@ -46,6 +46,9 @@ Desktop.ini
 /artifacts/maps/
 /tools/__pycache__/
 
+# 皮肤生成线已撤回入库（2026-10-27 用户将移至他处），本地留存不跟踪
+/skin/
+
 # --- Excel 临时锁文件 ---
 ~$*
 __pycache__/
