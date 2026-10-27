@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "svs_first_light_v1",
+  "name": "借火者之路 · 初行地图 v1",
+  "minecraft": "1.20.1",
+  "forge": "47.4.23",
+  "seed": 23320261014,
+  "size": 2048,
+  "dimension": "minecraft:overworld",
+  "terrain": "Terralith_1.20.x_v2.5.4.jar",
+  "scope": "独立地图小样；不替换主包配置，不恢复FTB任务施工",
+  "mod_metadata": [
+    "terralith", "symbiote-a-bonding-experience", "fungal-infectionspore",
+    "l_enders-cataclysm", "geckolib", "citadel",
+    "lionfish-api", "curios", "chunky", "modernfix", "ferrite-core",
+    "spark", "epic-fight", "playeranimator", "roadweaver"
+  ],
+  "sites": [
+    {"id": "home", "name": "借火村", "x": 0, "z": 0, "kind": "camp", "role": "出生与整备据点"},
+    {"id": "meteor", "name": "坠星坡", "x": 512, "z": 0, "kind": "structure", "structure": "symbiote:meteor_crash", "role": "共生体融合地标；保持距出生点400–800格"},
+    {"id": "hospital", "name": "失联医院", "x": 640, "z": 512, "kind": "structure", "structure": "spore:hospital", "role": "感染场景与复杂结构验证；非定稿主线名单"},
+    {"id": "pyramid", "name": "砂谷遗迹", "x": -640, "z": 512, "kind": "structure", "structure": "cataclysm:cursed_pyramid", "role": "Boss竞技场验证；非定稿主线名单"}
+  ],
+  "routes": [
+    {"id": "east", "name": "坠星旧道", "from": "home", "to": "meteor"},
+    {"id": "front", "name": "失联支路", "from": "meteor", "to": "hospital"},
+    {"id": "west", "name": "砂谷远征路", "from": "home", "to": "pyramid"}
+  ]
+}

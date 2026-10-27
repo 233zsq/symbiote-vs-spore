@@ -33,3 +33,8 @@ tools/
 /logs/
 /saves/
 /crash-reports/
+
+# 独立制图源码/缓存由专用地图工具处理，不混入主整合包
+/.map-work/
+/maps/
+/artifacts/

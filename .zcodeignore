@@ -1,0 +1,74 @@
+# ============================================================
+# Symbiote vs Spore · packwiz + Git 源码化仓库
+# 铁律②：绝不提交 jar 本体——模组只以 mods/*.pw.toml 元数据入库
+# 铁律①：所有 TOML 元数据与 config/kubejs/scripts 覆盖层必须版本化（不得加入本文件）
+# ============================================================
+
+# --- jar 红线（全局禁止；任何模组 jar 都不进版本库）---
+*.jar
+
+# --- packwiz 导出产物（导出件不上库；确需归档用 git add -f 强制） ---
+*.mrpack
+*.zip
+
+# --- 运行时产物（防御性排除：请勿在包根目录直接跑游戏） ---
+logs/
+crash-reports/
+saves/
+*.log
+.cache/
+
+# --- 操作系统垃圾 ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# --- 编辑器目录 ---
+.vscode/
+.idea/
+
+# --- 启动器运行痕迹（游戏目录不得指向仓库根；发现混入即清理） ---
+/launcher_profiles.json
+/options.txt
+/PCL.ini
+/PCL/
+/.minecraft/
+# 游戏目录误指仓库根时会出现的目录（防御性排除）
+/assets/
+/versions/
+/libraries/
+/natives/
+/runtime/
+/screenshots/
+
+# ===== ↑ 以上同步自 .gitignore（「从 .gitignore 同步」只重写以上部分）=====
+.git/
+.hg/
+.svn/
+node_modules/
+bower_components/
+jspm_packages/
+__pycache__/
+site-packages/
+venv/
+coverage/
+htmlcov/
+lcov-report/
+cmakefiles/
+cmake-build-*/
+bazel-*/
+pods/
+deriveddata/
+storybook-static/
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+cdk.out/
+*.egg-info/
+*.dist-info/
+eggs/
+pip-wheel-metadata/
+wheels/
+# ----- ↑ 以上为 ZCode 默认排除规则（自定义规则请写在本行下方，不会被同步/恢复改动）-----
+# 自定义规则写在下方（本行提示可删除）

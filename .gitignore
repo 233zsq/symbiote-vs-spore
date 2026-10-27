@@ -41,6 +41,10 @@ Desktop.ini
 /natives/
 /runtime/
 /screenshots/
+# 独立制图运行环境与地图导出件（源码在 maps/ 和 tools/）
+/.map-work/
+/artifacts/maps/
+/tools/__pycache__/
 
 # --- Excel 临时锁文件 ---
 ~$*
