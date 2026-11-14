@@ -11,7 +11,7 @@ DOCS=ROOT/'docs'
 MOTHER=Path(r'E:\SvS_整合包_副本')
 TEST=Path(r'C:\PCL 正式版 2.8.13\.minecraft\versions\test')
 OUT=DOCS/'data'
-DATE='2026-10-12'
+DATE=None
 NS={'s':'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -61,6 +61,10 @@ def scan_static():
     for line in description_source.read_text(encoding='utf-8').splitlines():
         cells=[x.strip() for x in line.strip('|').split('|')]
         if len(cells)>=5 and cells[1].endswith('.jar`'):descriptions[cells[1].strip('`')]=cells[3]
+    for line in (DOCS/'模组清单.md').read_text(encoding='utf-8').splitlines():
+        cells=[x.strip() for x in line.strip('|').split('|')]
+        if len(cells)>=5 and cells[1].strip('`').endswith('.jar'):
+            roles[cells[1].strip('`')]=cells[3]
     for p in sorted((MOTHER/'mods').glob('*.jar'),key=lambda p:p.name.lower()):
         row={'file':p.name,'bytes':p.stat().st_size,'sha256':sha(p),'declarations':[], 'dependencies':[], 'license':'', 'resource_counts':{},'role':roles.get(p.name,''),'description':descriptions.get(p.name,'')}
         peer=TEST/'mods'/p.name
@@ -110,6 +114,7 @@ def scan_static():
                     else:record['data']=content
                     resources.append(record)
                     row['resource_counts'][kind]=row['resource_counts'].get(kind,0)+1
+        row['role']=row['role'].replace('Ⅳ固定试炼＋两池随机券','战位竞争候选＋两池随机券').replace('世界生成暂禁（openloader 覆盖），放开与否待用户一句话裁决','世界生成维持禁用（用户裁决；OpenLoader覆盖）')
         mods.append(row)
     # Data/resource overrides are applied after jar evidence, without claiming active resourcepack order.
     for pack in sorted((MOTHER/'config/openloader/data').rglob('*.zip')):
@@ -182,14 +187,20 @@ def document_inventory():
     return rows
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--runtime-log',type=Path);ap.add_argument('--static-only',action='store_true');args=ap.parse_args()
+    global DOCS,OUT,DATE
+    ap=argparse.ArgumentParser();ap.add_argument('--runtime-log',type=Path);ap.add_argument('--static-only',action='store_true')
+    ap.add_argument('--docs-root',type=Path,default=ROOT/'docs');ap.add_argument('--as-of',required=True)
+    args=ap.parse_args();DATE=datetime.date.fromisoformat(args.as_of).isoformat();DOCS=args.docs_root.resolve();OUT=DOCS/'data'
+    if not args.runtime_log and not args.static_only:ap.error('Specify --runtime-log or --static-only explicitly')
+    for instance in (MOTHER,TEST):
+        if not (instance/'mods').is_dir():raise FileNotFoundError(instance/'mods')
     OUT.mkdir(exist_ok=True)
-    data={'schema':1,'as_of':DATE,'instance':'test','mother':str(MOTHER),'scan_time':datetime.datetime.now().isoformat(timespec='seconds'),**scan_static(),'documents':document_inventory()}
+    snapshot=scan_static()
+    snapshot['test_only_jars']=[{'file':name,'sha256':sha(TEST/'mods'/name),'bytes':(TEST/'mods'/name).stat().st_size} for name in snapshot['jar_difference']['test_only']]
+    data={'schema':1,'as_of':DATE,'instance':'mother static resources; test jar comparison','mother':str(MOTHER),'test':str(TEST),'scan_time':datetime.datetime.now().astimezone().isoformat(timespec='seconds'),**snapshot,'documents':document_inventory()}
     if args.runtime_log:data['runtime']=parse_runtime(args.runtime_log)
     elif not args.static_only:raise ValueError('Specify --runtime-log or --static-only explicitly')
     (OUT/'现版资料索引.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    old=ROOT/'backups/docs_refresh_20261012/old_workbooks.json'
-    if not old.exists():old.write_text(json.dumps(old_workbooks(),ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({'jars':len(data['mods']),'hash_mismatches':sum(not m['same_test'] for m in data['mods']),'resources':len(data['resources']),'scan_issues':len(data['scan_issues']),'runtime':data.get('runtime',{}).get('end'),'documents_read':len(data['documents'])},ensure_ascii=False))
 
 if __name__=='__main__':main()

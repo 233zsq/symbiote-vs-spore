@@ -1,0 +1,29 @@
+{
+  "id": "00060D070B61C830",
+  "title": "T0鉴定赏 · 君王军资任选一",
+  "loot_size": 1,
+  "order_index": 12,
+  "rewards": [
+    {
+      "id": "0008B3E5D6FCDD5F",
+      "type": "item",
+      "item": "cataclysm:ignitium_ingot",
+      "count": 2,
+      "team_reward": false
+    },
+    {
+      "id": "000026BA6686BD93",
+      "type": "item",
+      "item": "tconstruct:manyullyn_ingot",
+      "count": 12,
+      "team_reward": false
+    },
+    {
+      "id": "0005F6FB9C137BCE",
+      "type": "item",
+      "item": "minecraft:netherite_ingot",
+      "count": 2,
+      "team_reward": false
+    }
+  ]
+}

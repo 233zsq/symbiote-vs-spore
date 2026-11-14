@@ -10,7 +10,8 @@
   "drop_loot_crates": false,
   "pause_game": false,
   "progression_mode": "linear",
-  "show_lock_icons": true,
-  "hide_excluded_quests": false,
-  "grid_scale": 0.5
+  "show_lock_icons": false,
+  "hide_excluded_quests": true,
+  "grid_scale": 0.5,
+  "title": "天外成王 · 征伐星图"
 }

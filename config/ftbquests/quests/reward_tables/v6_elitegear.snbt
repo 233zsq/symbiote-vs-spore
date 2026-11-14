@@ -1,0 +1,29 @@
+{
+  "id": "000D3AD6D74A3E1A",
+  "title": "精锐军需 · 三选一",
+  "loot_size": 1,
+  "order_index": 9,
+  "rewards": [
+    {
+      "id": "00065214CCAFA2CF",
+      "type": "item",
+      "item": "artifacts:feral_claws",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "0008F39BA045FC42",
+      "type": "item",
+      "item": "artifacts:steadfast_spikes",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "00095F0F63702D9A",
+      "type": "item",
+      "item": "artifacts:panic_necklace",
+      "count": 1,
+      "team_reward": false
+    }
+  ]
+}

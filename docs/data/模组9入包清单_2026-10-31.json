@@ -1,0 +1,494 @@
+{
+  "date": "2026-10-31",
+  "scope": "Six content/fix mods plus two dependencies; Spawn excluded; no quest, EF or map implementation",
+  "overlay": {
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_barrens.json": "2d6b6721b2f6210f3de8d4d6738e383997daa665821975f9d3f4e822098eb870",
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_cave.json": "26bfc51f5914d907936729a3827fae6049344e61cd6cd3b2dfc9bf22c4dfdad0",
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_cliff.json": "b6fc4057c71a1538fcdcaddcdbb35e06d0524e947eee4dc146af5194aa1468f0",
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_glade.json": "fd4f830755e31cae6e15ee8afab9516f0b3cd72388f61524b9c30755d72c1d2b",
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_wetland.json": "8e8877fa2efc1b206154142fd783610c83a9152c9bb91c06871959cb58c67838",
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/lunar_crater.json": "a75d5d611e58e3c80bbf0244f82a8a8351c4e8c4aa0f3a1c56da5343aa6d5ae5",
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/solar_crater.json": "a75d5d611e58e3c80bbf0244f82a8a8351c4e8c4aa0f3a1c56da5343aa6d5ae5",
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/wintereis_spikes.json": "a75d5d611e58e3c80bbf0244f82a8a8351c4e8c4aa0f3a1c56da5343aa6d5ae5",
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/zephyr_deposit.json": "a75d5d611e58e3c80bbf0244f82a8a8351c4e8c4aa0f3a1c56da5343aa6d5ae5",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/forge/biome_modifier/nether_flame_copper_ore.json": "a75d5d611e58e3c80bbf0244f82a8a8351c4e8c4aa0f3a1c56da5343aa6d5ae5",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/forge/biome_modifier/nether_platinum_ore.json": "a75d5d611e58e3c80bbf0244f82a8a8351c4e8c4aa0f3a1c56da5343aa6d5ae5",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/worldgen/structure/abandoned_campsite.json": "e932327571db25d06d10a8a7a219e3e16edac4ec0e3df18017ae356d86c85fa4",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/worldgen/structure/blackstone_temple.json": "1b75514362e6f94819538dfd9687a48cff6604f3b380e7939075b55fa103e346",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/worldgen/structure/enforcer_arena.json": "69cf56b04fbf762f0f5db616ffa4bc3f963f7c6175514a9dff016bf263c2f14d",
+    "config/openloader/data/svs_mods9_freeze/data/svs_mods9/tags/worldgen/biome/disabled_generation.json": "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e",
+    "config/openloader/data/svs_mods9_freeze/pack.mcmeta": "7da2e43bbe226157ad8cafc93a1df286464ab2e778c9c8644886d99548e0ef4a",
+    "config/super-tier-magic-common.toml": "b4060dc264b7923e62c00e409ab8efbf3c507a024d0f7be479a4bbf120adebf9",
+    "mods/azurelib-neo-1.20.1-3.1.3.jar": "520a44fc8b7c97d75ef9051c0b1a095b49057ec253019fed76fdaab6cd61b7de",
+    "mods/bookofdragons-1.31-1.20.1.jar": "87abe5953c1e93460bc5eb47c1df1404c32143ecb35beec158d24abb56300753",
+    "mods/celestisynth-1.20.1-1.3.4-all.jar": "d16e4bda6f2f493364d36026905dfcdaf4f042f12b919fa7c04c6030c09000b7",
+    "mods/celestisynth_fix-0.1.jar": "35b375cbc065b508b0884b4f7f99b3c68580c7520a7bc838d96b1da6695bd766",
+    "mods/hadean_breathe-0.25.7-1.20.1-forge.jar": "0f055544a1bdde5bad23a3cb928902c68805e893c0306435e432170dab202cab",
+    "mods/quest_enhance-1.20.1-forge-3.13.jar": "60d4e20fad2478309e26b1c5b9d8518d7853e5f1710a47e00ab54a7808e1e7b2",
+    "mods/super-tier-magic-3.6.3.jar": "a4807fcabd63c1cd897d4c440a7caf06b26eaac6498c6a8a0bae7e0df1687a36",
+    "mods/vzling-0.98.8-1.20.1-forge.jar": "1e433285c8c02c51f4d13e8f9fba87d7c7b9d3eed67b74deab4cf79a0438cc4e"
+  },
+  "mods": [
+    {
+      "file": "bookofdragons-1.31-1.20.1.jar",
+      "mod_id": "bookofdragons",
+      "version": "1.31-1.20.1",
+      "sha256": "87abe5953c1e93460bc5eb47c1df1404c32143ecb35beec158d24abb56300753",
+      "sha512": "0d03c814a4f3acd62039063fa57956ea442ff96981e9e6f091876e1eabf80caa9ec9fccbfc1acdbd9c458cea5c16c8118ea7dbeb37b30f4557348a6d58855ba2",
+      "dependencies": {
+        "bookofdragons": [
+          {
+            "modId": "forge",
+            "mandatory": true,
+            "versionRange": "[47,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "minecraft",
+            "mandatory": true,
+            "versionRange": "[1.20.1,1.21)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "azurelib",
+            "mandatory": true,
+            "versionRange": "[3.1.3,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          }
+        ]
+      },
+      "source": {
+        "provider": "curseforge",
+        "slug": "book-of-dragons",
+        "project_id": 1413424,
+        "file_id": 7870334,
+        "provenance": "Local Zone.Identifier HostUrl; official CDN bytes must match",
+        "page": "https://www.curseforge.com/minecraft/mc-mods/book-of-dragons/files/7870334",
+        "url": "https://edge.forgecdn.net/files/7870/334/bookofdragons-1.31-1.20.1.jar",
+        "sha512": "0d03c814a4f3acd62039063fa57956ea442ff96981e9e6f091876e1eabf80caa9ec9fccbfc1acdbd9c458cea5c16c8118ea7dbeb37b30f4557348a6d58855ba2",
+        "official_download_matches": true
+      },
+      "java_class_versions": {
+        "61": 472
+      }
+    },
+    {
+      "file": "celestisynth-1.20.1-1.3.4-all.jar",
+      "mod_id": "celestisynth",
+      "version": "1.20.1-1.3.4",
+      "sha256": "d16e4bda6f2f493364d36026905dfcdaf4f042f12b919fa7c04c6030c09000b7",
+      "sha512": "86042a836dffe98e6f81ad99b0f7934297b79fcbe69c414f9da301f659c99fc64e9bde03745335f27254799d523dc7d8c0f06de4c2fbd9b542106351b420002e",
+      "dependencies": {
+        "celestisynth": [
+          {
+            "modId": "forge",
+            "mandatory": true,
+            "versionRange": "[47,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "minecraft",
+            "mandatory": true,
+            "versionRange": "[1.20,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "geckolib",
+            "mandatory": true,
+            "versionRange": "[4.4.2,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "playeranimator",
+            "mandatory": true,
+            "versionRange": "[1,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "jei",
+            "mandatory": false,
+            "versionRange": "[15.2.0.27,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "jeresources",
+            "mandatory": false,
+            "versionRange": "jer_version_range",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "jeed",
+            "mandatory": false,
+            "versionRange": "[1.20-2.1.7,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "jade",
+            "mandatory": false,
+            "versionRange": "[8.9.0,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "forgeconfigscreens",
+            "mandatory": false,
+            "versionRange": "[v8.0.2,)",
+            "ordering": "NONE",
+            "side": "CLIENT"
+          },
+          {
+            "modId": "gamemenumodoption",
+            "mandatory": false,
+            "versionRange": "[1.20,)",
+            "ordering": "NONE",
+            "side": "CLIENT"
+          },
+          {
+            "modId": "appleskin",
+            "mandatory": false,
+            "versionRange": "[mc1.20.1-2.5.1,)",
+            "ordering": "NONE",
+            "side": "CLIENT"
+          }
+        ]
+      },
+      "source": {
+        "provider": "modrinth",
+        "project_id": "2ocGk7mG",
+        "version_id": "33ckEfkl",
+        "url": "https://cdn.modrinth.com/data/2ocGk7mG/versions/33ckEfkl/celestisynth-1.20.1-1.3.4-all.jar",
+        "sha512": "86042a836dffe98e6f81ad99b0f7934297b79fcbe69c414f9da301f659c99fc64e9bde03745335f27254799d523dc7d8c0f06de4c2fbd9b542106351b420002e"
+      },
+      "java_class_versions": {
+        "61": 347
+      }
+    },
+    {
+      "file": "celestisynth_fix-0.1.jar",
+      "mod_id": "celestisynth_fix",
+      "version": "0.1",
+      "sha256": "35b375cbc065b508b0884b4f7f99b3c68580c7520a7bc838d96b1da6695bd766",
+      "sha512": "0f0907d2cb5c49cedd67fe3b10be40e5d0ea00936ff6559205287d7e12596174fde99526c73b7a24891543e499d8aa4b0c0aa088f743f746cb7b86c7da3eb057",
+      "dependencies": {
+        "celestisynth_fix": [
+          {
+            "modId": "forge",
+            "mandatory": true,
+            "versionRange": "[47,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "minecraft",
+            "mandatory": true,
+            "versionRange": "[1.20.1,1.21)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          }
+        ]
+      },
+      "source": {
+        "provider": "curseforge",
+        "slug": "celestisynth-fix",
+        "project_id": 1568922,
+        "file_id": 8216806,
+        "page": "https://www.curseforge.com/minecraft/mc-mods/celestisynth-fix/files/8216806",
+        "url": "https://edge.forgecdn.net/files/8216/806/celestisynth_fix-0.1.jar",
+        "sha512": "0f0907d2cb5c49cedd67fe3b10be40e5d0ea00936ff6559205287d7e12596174fde99526c73b7a24891543e499d8aa4b0c0aa088f743f746cb7b86c7da3eb057",
+        "official_download_matches": true
+      },
+      "java_class_versions": {
+        "61": 1
+      }
+    },
+    {
+      "file": "hadean_breathe-0.25.7-1.20.1-forge.jar",
+      "mod_id": "hadean_breathe",
+      "version": "0.25.7",
+      "sha256": "0f055544a1bdde5bad23a3cb928902c68805e893c0306435e432170dab202cab",
+      "sha512": "774946da2bbc1f40a0076c2ec519df4e351374bb45e40de8382d5dfa2475ddb195c58c4406131880c954e6517c3c2d1d2df71b73dfd684e42d3d280c11b37eaa",
+      "dependencies": {
+        "hadean_breathe": [
+          {
+            "modId": "forge",
+            "mandatory": true,
+            "versionRange": "[47,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "minecraft",
+            "mandatory": true,
+            "versionRange": "[1.20.1,1.21)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "vzling",
+            "mandatory": true,
+            "versionRange": "[0.98.8,)",
+            "ordering": "AFTER",
+            "side": "BOTH"
+          }
+        ]
+      },
+      "source": {
+        "provider": "modrinth",
+        "project_id": "oQCVgXIL",
+        "version_id": "NQGQIU9O",
+        "url": "https://cdn.modrinth.com/data/oQCVgXIL/versions/NQGQIU9O/hadean_breathe-0.25.7-1.20.1-forge.jar",
+        "sha512": "774946da2bbc1f40a0076c2ec519df4e351374bb45e40de8382d5dfa2475ddb195c58c4406131880c954e6517c3c2d1d2df71b73dfd684e42d3d280c11b37eaa"
+      },
+      "java_class_versions": {
+        "61": 214
+      }
+    },
+    {
+      "file": "quest_enhance-1.20.1-forge-3.13.jar",
+      "mod_id": "quest_enhance",
+      "version": "1.20.1-forge-3.13",
+      "sha256": "60d4e20fad2478309e26b1c5b9d8518d7853e5f1710a47e00ab54a7808e1e7b2",
+      "sha512": "63b332ecf66fd70b951b2f09f120889eb1277f5e70ca2f0fb2300de93820fdceee78fd02eca8e9582d01740e1d186d19fbcc96710a325ee105f3808cbac9020a",
+      "dependencies": {
+        "quest_enhance": [
+          {
+            "modId": "forge",
+            "mandatory": true,
+            "versionRange": "[47,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "minecraft",
+            "mandatory": true,
+            "versionRange": "[1.20.1,1.21)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "ftbquests",
+            "mandatory": true,
+            "versionRange": "[2001.4.22,)",
+            "ordering": "AFTER",
+            "side": "BOTH"
+          },
+          {
+            "modId": "ponderer",
+            "mandatory": false,
+            "versionRange": "[1,)",
+            "ordering": "AFTER",
+            "side": "CLIENT"
+          }
+        ]
+      },
+      "source": {
+        "provider": "curseforge",
+        "slug": "quest-enhance",
+        "project_id": 1610171,
+        "file_id": 9098926,
+        "page": "https://www.curseforge.com/minecraft/mc-mods/quest-enhance/files/9098926",
+        "url": "https://edge.forgecdn.net/files/9098/926/quest_enhance-1.20.1-forge-3.13.jar",
+        "sha512": "63b332ecf66fd70b951b2f09f120889eb1277f5e70ca2f0fb2300de93820fdceee78fd02eca8e9582d01740e1d186d19fbcc96710a325ee105f3808cbac9020a",
+        "official_download_matches": true
+      },
+      "java_class_versions": {
+        "61": 162
+      }
+    },
+    {
+      "file": "super-tier-magic-3.6.3.jar",
+      "mod_id": "flametalisman",
+      "version": "3.6.3",
+      "sha256": "a4807fcabd63c1cd897d4c440a7caf06b26eaac6498c6a8a0bae7e0df1687a36",
+      "sha512": "a45eb17ae2067ef5f4369bba28832429257999f821f70ef623d44ddf45060a7093bf57d61bfa7535bd995d1c0397ca820ee38de54339a376e9dc7eda886ee03d",
+      "dependencies": {
+        "flametalisman": [
+          {
+            "modId": "forge",
+            "mandatory": true,
+            "versionRange": "[47.4.0,48)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "minecraft",
+            "mandatory": true,
+            "versionRange": "[1.20.1,1.20.2)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          }
+        ]
+      },
+      "source": {
+        "provider": "curseforge",
+        "slug": "super-tier-magic",
+        "project_id": 1731849,
+        "file_id": 9277191,
+        "page": "https://www.curseforge.com/minecraft/mc-mods/super-tier-magic/files/9277191",
+        "url": "https://edge.forgecdn.net/files/9277/191/super-tier-magic-3.6.3.jar",
+        "sha512": "a45eb17ae2067ef5f4369bba28832429257999f821f70ef623d44ddf45060a7093bf57d61bfa7535bd995d1c0397ca820ee38de54339a376e9dc7eda886ee03d",
+        "official_download_matches": true
+      },
+      "java_class_versions": {
+        "61": 166
+      }
+    },
+    {
+      "file": "azurelib-neo-1.20.1-3.1.3.jar",
+      "mod_id": "azurelib",
+      "version": "3.1.3",
+      "sha256": "520a44fc8b7c97d75ef9051c0b1a095b49057ec253019fed76fdaab6cd61b7de",
+      "sha512": "e153972e8822d01c611b7465fce283482aa681c45287f06aec62687716bf72cfcee98b9659a26ebd31144f03fe16aa69525e13a8bdbc6bcda358aaa33c9c3901",
+      "dependencies": {
+        "azurelib": [
+          {
+            "modId": "forge",
+            "mandatory": true,
+            "versionRange": "[47.1,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "minecraft",
+            "mandatory": true,
+            "versionRange": "[1.20.1, 1.20.2)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          }
+        ]
+      },
+      "source": {
+        "provider": "curseforge",
+        "url": "https://edge.forgecdn.net/files/7371/538/azurelib-neo-1.20.1-3.1.3.jar",
+        "project_id": 817423,
+        "file_id": 7371538,
+        "page": "https://www.curseforge.com/minecraft/mc-mods/azurelib/files/7371538",
+        "path": "E:\\mcmp\\backups\\mods9_install_20261031\\downloads\\azurelib-neo-1.20.1-3.1.3.jar",
+        "sha256": "520a44fc8b7c97d75ef9051c0b1a095b49057ec253019fed76fdaab6cd61b7de",
+        "sha512": "e153972e8822d01c611b7465fce283482aa681c45287f06aec62687716bf72cfcee98b9659a26ebd31144f03fe16aa69525e13a8bdbc6bcda358aaa33c9c3901",
+        "size": 1054548
+      },
+      "java_class_versions": {
+        "61": 502
+      }
+    },
+    {
+      "file": "vzling-0.98.8-1.20.1-forge.jar",
+      "mod_id": "vzling",
+      "version": "0.98.8",
+      "sha256": "1e433285c8c02c51f4d13e8f9fba87d7c7b9d3eed67b74deab4cf79a0438cc4e",
+      "sha512": "a6a3750b3410266ab5dd84273cf442c9bd53e142bcf12bca8e4989655a3ebdb3ecaf338308ddeb066c700fd4202d428f14d3223888c6a6752a972ce941bbc233",
+      "dependencies": {
+        "vzling": [
+          {
+            "modId": "forge",
+            "mandatory": true,
+            "versionRange": "[47,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          },
+          {
+            "modId": "minecraft",
+            "mandatory": true,
+            "versionRange": "[1.20.1,1.21)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          }
+        ]
+      },
+      "source": {
+        "provider": "curseforge",
+        "url": "https://edge.forgecdn.net/files/9100/905/vzling-0.98.8-1.20.1-forge.jar",
+        "project_id": 1316184,
+        "file_id": 9100905,
+        "page": "https://www.curseforge.com/minecraft/mc-mods/vzlinglib/files/9100905",
+        "path": "E:\\mcmp\\backups\\mods9_install_20261031\\downloads\\vzling-0.98.8-1.20.1-forge.jar",
+        "sha256": "1e433285c8c02c51f4d13e8f9fba87d7c7b9d3eed67b74deab4cf79a0438cc4e",
+        "sha512": "a6a3750b3410266ab5dd84273cf442c9bd53e142bcf12bca8e4989655a3ebdb3ecaf338308ddeb066c700fd4202d428f14d3223888c6a6752a972ce941bbc233",
+        "size": 415099
+      },
+      "java_class_versions": {
+        "61": 155
+      }
+    }
+  ],
+  "held": [
+    {
+      "file": "spawn-4.0.8-1.20.1.jar",
+      "sha256": "8cd18f3c029fddfeec28314ab9bb4845ff9061131e9f1dce149778e5ee731d23",
+      "reason": "Worldgen remains frozen; no complete native switch for Spawn biome injection",
+      "enabled": false
+    }
+  ],
+  "root_paths": [
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_barrens.json",
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_cave.json",
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_cliff.json",
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_glade.json",
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_wetland.json",
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/lunar_crater.json",
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/solar_crater.json",
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/wintereis_spikes.json",
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/zephyr_deposit.json",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/forge/biome_modifier/nether_flame_copper_ore.json",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/forge/biome_modifier/nether_platinum_ore.json",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/worldgen/structure/abandoned_campsite.json",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/worldgen/structure/blackstone_temple.json",
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/worldgen/structure/enforcer_arena.json",
+    "config/openloader/data/svs_mods9_freeze/data/svs_mods9/tags/worldgen/biome/disabled_generation.json",
+    "config/openloader/data/svs_mods9_freeze/pack.mcmeta",
+    "config/super-tier-magic-common.toml",
+    "mods/azurelib.pw.toml",
+    "mods/book-of-dragons.pw.toml",
+    "mods/celestisynth-fix.pw.toml",
+    "mods/celestisynth.pw.toml",
+    "mods/hadean-breathe.pw.toml",
+    "mods/quest-enhance.pw.toml",
+    "mods/super-tier-magic.pw.toml",
+    "mods/vzlinglib.pw.toml"
+  ],
+  "root_before": {
+    "config/openloader/data/svs_mods9_freeze/pack.mcmeta": null,
+    "config/openloader/data/svs_mods9_freeze/data/svs_mods9/tags/worldgen/biome/disabled_generation.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_barrens.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_cave.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_cliff.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_glade.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/bookofdragons/worldgen/structure/roost_wetland.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/lunar_crater.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/solar_crater.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/wintereis_spikes.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/celestisynth/forge/biome_modifier/zephyr_deposit.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/forge/biome_modifier/nether_flame_copper_ore.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/forge/biome_modifier/nether_platinum_ore.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/worldgen/structure/abandoned_campsite.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/worldgen/structure/blackstone_temple.json": null,
+    "config/openloader/data/svs_mods9_freeze/data/hadean_breathe/worldgen/structure/enforcer_arena.json": null,
+    "config/super-tier-magic-common.toml": null,
+    "mods/book-of-dragons.pw.toml": null,
+    "mods/celestisynth.pw.toml": null,
+    "mods/celestisynth-fix.pw.toml": null,
+    "mods/hadean-breathe.pw.toml": null,
+    "mods/quest-enhance.pw.toml": null,
+    "mods/super-tier-magic.pw.toml": null,
+    "mods/azurelib.pw.toml": null,
+    "mods/vzlinglib.pw.toml": null
+  },
+  "freeze": {
+    "disabled_biome_modifiers": 6,
+    "disabled_structure_biomes": 8,
+    "empty_biome_tag": "svs_mods9:disabled_generation"
+  },
+  "game_launched": false,
+  "evidence": "E0 static only"
+}

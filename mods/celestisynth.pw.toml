@@ -1,0 +1,13 @@
+name = "Celestisynth"
+filename = "celestisynth-1.20.1-1.3.4-all.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/2ocGk7mG/versions/33ckEfkl/celestisynth-1.20.1-1.3.4-all.jar"
+hash-format = "sha512"
+hash = "86042a836dffe98e6f81ad99b0f7934297b79fcbe69c414f9da301f659c99fc64e9bde03745335f27254799d523dc7d8c0f06de4c2fbd9b542106351b420002e"
+
+[update]
+[update.modrinth]
+mod-id = "2ocGk7mG"
+version = "33ckEfkl"

@@ -1,0 +1,3804 @@
+{
+  "id": "00081433D5CC7073",
+  "filename": "arsenal_t0",
+  "title": "&aT0 · 王权军械鉴定&r",
+  "group": "0005D031BCB30F66",
+  "order_index": 14,
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/t0.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "00028CCF10C9E642",
+      "title": "展开甲胄 · 1",
+      "description": [
+        "【战略目标】本批可鉴定：咒魂靴子、腾炎靴子、腾炎鞘翅胸甲、龙疆霸王靴子。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】按需要逐批展开。翻页不要求先集齐上一批；不感兴趣的武器可以跳过。",
+        "【掠夺战果】本批物品持有检测开启，已拥有的物品放入随身物品栏即可登记。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00093BB83A1CFA2D"
+      ],
+      "tasks": [
+        {
+          "id": "0004A197CEF4ED6E",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0002E58777CD73C2",
+      "title": "T0 · 咒魂 · 系列",
+      "description": [
+        "【军械档案】把这组甲胄纳入同一本君王武库。",
+        "【收录条件】取得本项所列部件各1件，可分次取得。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶甲材或终盘首领甲胄系列。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×24；计入收藏家对应档次的甲胄里程碑。",
+        "",
+        "&6本项部件与取得路线&r",
+        "咒魂靴子：材料线索：咒魂锭、锻造模板、Netherite Boots；按JEI核对工位与数量。",
+        "咒魂胸甲：材料线索：咒魂锭、锻造模板、Netherite Chestplate；按JEI核对工位与数量。",
+        "咒魂头盔：材料线索：咒魂锭、锻造模板、Netherite Helmet；按JEI核对工位与数量。",
+        "咒魂护腿：材料线索：咒魂锭、锻造模板、Netherite Leggings；按JEI核对工位与数量。",
+        "",
+        "&6出征检查&r",
+        "部件可以分次取得；本项所有列出部件均已登记时才计为一项鉴定。",
+        "检查耐久、维修材料与原生套装说明，再决定整套使用或与特色单件混搭。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:cursium_boots",
+      "subtitle": "独立目标",
+      "x": 3.2,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00028CCF10C9E642"
+      ],
+      "tasks": [
+        {
+          "id": "000E2627D54396E4",
+          "type": "item",
+          "item": "cataclysm:cursium_boots",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "0002C11F11B1FC5A",
+          "type": "item",
+          "item": "cataclysm:cursium_chestplate",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "000AF30FB9D64D9A",
+          "type": "item",
+          "item": "cataclysm:cursium_helmet",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "00048103BBED7F20",
+          "type": "item",
+          "item": "cataclysm:cursium_leggings",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 24,
+          "team_reward": false,
+          "id": "000CAB6E5C1D0E4F"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00061DF9EE409F40",
+      "title": "T0 · 腾炎 · 系列",
+      "description": [
+        "【军械档案】把这组甲胄纳入同一本君王武库。",
+        "【收录条件】取得本项所列部件各1件，可分次取得。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶甲材或终盘首领甲胄系列。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×24；计入收藏家对应档次的甲胄里程碑。",
+        "",
+        "&6本项部件与取得路线&r",
+        "腾炎靴子：材料线索：腾炎锭、锻造模板、Netherite Boots；按JEI核对工位与数量。",
+        "腾炎胸甲：材料线索：腾炎锭、锻造模板、Netherite Chestplate；按JEI核对工位与数量。",
+        "腾炎头盔：材料线索：腾炎锭、锻造模板、Netherite Helmet；按JEI核对工位与数量。",
+        "腾炎护腿：材料线索：腾炎锭、锻造模板、Netherite Leggings；按JEI核对工位与数量。",
+        "",
+        "&6出征检查&r",
+        "部件可以分次取得；本项所有列出部件均已登记时才计为一项鉴定。",
+        "检查耐久、维修材料与原生套装说明，再决定整套使用或与特色单件混搭。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:ignitium_boots",
+      "subtitle": "独立目标",
+      "x": 6.4,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00028CCF10C9E642"
+      ],
+      "tasks": [
+        {
+          "id": "000A7824DB4E55EC",
+          "type": "item",
+          "item": "cataclysm:ignitium_boots",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "000697E58908323B",
+          "type": "item",
+          "item": "cataclysm:ignitium_chestplate",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "0005F8D4DF5FAA2B",
+          "type": "item",
+          "item": "cataclysm:ignitium_helmet",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "000FB29A1FD4CFAA",
+          "type": "item",
+          "item": "cataclysm:ignitium_leggings",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 24,
+          "team_reward": false,
+          "id": "00090292F0EF762F"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E3817ADDE9E3F",
+      "title": "T0 · 腾炎鞘翅胸甲",
+      "description": [
+        "【军械档案】把这件甲胄纳入同一本君王武库。",
+        "【收录条件】取得腾炎鞘翅胸甲1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶甲材或终盘首领甲胄系列。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的甲胄里程碑。",
+        "",
+        "&6本项部件与取得路线&r",
+        "腾炎鞘翅胸甲：材料线索：腾炎胸甲、Elytra；按JEI核对工位与数量。",
+        "",
+        "&6出征检查&r",
+        "部件可以分次取得；本项所有列出部件均已登记时才计为一项鉴定。",
+        "检查耐久、维修材料与原生套装说明，再决定整套使用或与特色单件混搭。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:ignitium_elytra_chestplate",
+      "subtitle": "独立目标",
+      "x": 9.600000000000001,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00028CCF10C9E642"
+      ],
+      "tasks": [
+        {
+          "id": "000DE5D2761FC9AC",
+          "type": "item",
+          "item": "cataclysm:ignitium_elytra_chestplate",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000F9B42094B6849"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00041FCEEECDA3AC",
+      "title": "T0 · 龙疆霸王 · 系列",
+      "description": [
+        "【军械档案】把这组甲胄纳入同一本君王武库。",
+        "【收录条件】取得本项所列部件各1件，可分次取得。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶甲材或终盘首领甲胄系列。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×24；计入收藏家对应档次的甲胄里程碑。",
+        "",
+        "&6本项部件与取得路线&r",
+        "龙疆霸王靴子：材料线索：龙心合金、噬焰龙牙齿；按JEI核对工位与数量。",
+        "龙疆霸王胸甲：材料线索：龙心合金、噬焰龙心脏、噬焰龙鳞片、噬焰龙翼膜；按JEI核对工位与数量。",
+        "龙疆霸王头盔：材料线索：龙心合金、噬焰龙鳞片、噬焰龙牙齿；按JEI核对工位与数量。",
+        "龙疆霸王护腿：材料线索：龙心合金、噬焰龙鳞片、噬焰龙翼膜；按JEI核对工位与数量。",
+        "",
+        "&6出征检查&r",
+        "部件可以分次取得；本项所有列出部件均已登记时才计为一项鉴定。",
+        "检查耐久、维修材料与原生套装说明，再决定整套使用或与特色单件混搭。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "saintsdragons:dragonlord_boots",
+      "subtitle": "独立目标",
+      "x": 3.2,
+      "y": 2.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00028CCF10C9E642"
+      ],
+      "tasks": [
+        {
+          "id": "000A5E83C926B7F4",
+          "type": "item",
+          "item": "saintsdragons:dragonlord_boots",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "0005915F421EC124",
+          "type": "item",
+          "item": "saintsdragons:dragonlord_chestplate",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "00059A965776D5CB",
+          "type": "item",
+          "item": "saintsdragons:dragonlord_helmet",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "00054DF0248CE036",
+          "type": "item",
+          "item": "saintsdragons:dragonlord_leggings",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 24,
+          "team_reward": false,
+          "id": "000403A857B7AFBC"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003B7967020F021",
+      "title": "展开兵器 · 1",
+      "description": [
+        "【战略目标】本批可鉴定：火焰壁垒、咒魂弓、壁垒护手、炎葬、潮汐利爪、歼灭战锤。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】按需要逐批展开。翻页不要求先集齐上一批；不感兴趣的武器可以跳过。",
+        "【掠夺战果】本批物品持有检测开启，已拥有的物品放入随身物品栏即可登记。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 23.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00093BB83A1CFA2D"
+      ],
+      "tasks": [
+        {
+          "id": "000CCB01F186C247",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000583E1DB7DC38F",
+      "title": "T0 · 火焰壁垒",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得火焰壁垒1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：配方含顶阶首领金属。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：腾炎锭、Blaze Rod、Nether Brick、Shield。",
+        "",
+        "&6选择与试用&r",
+        "形态：盾。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "潜行状态下，手持此盾右击以向前冲锋，对前方实体造成伤害",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&6下一件有用的装备&r",
+        "壁垒护手：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:bulwark_of_the_flame",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7967020F021"
+      ],
+      "tasks": [
+        {
+          "id": "00003187A124FBFF",
+          "type": "item",
+          "item": "cataclysm:bulwark_of_the_flame",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000809DA9678093F"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E0E9508808F61",
+      "title": "T0 · 咒魂弓",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得咒魂弓1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：配方含顶阶首领金属。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：黑钢锭、咒魂锭、String。",
+        "",
+        "&6选择与试用&r",
+        "形态：弓。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "你可以射出3支幽灵之箭",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&6下一件有用的装备&r",
+        "沙暴之怒：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:cursed_bow",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7967020F021"
+      ],
+      "tasks": [
+        {
+          "id": "000926A2FA2EC729",
+          "type": "item",
+          "item": "cataclysm:cursed_bow",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000BA3751ED5D14E"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D86CAFBBBE995",
+      "title": "T0 · 壁垒护手",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得壁垒护手1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "专用工艺路线：火焰壁垒、守卫者护手。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "按住右键蓄力一秒后，推开周围的实体并给予它们炽热烙印效果释放右键后，你将向前冲锋并对你前方的实体们造成伤害",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:gauntlet_of_bulwark",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7967020F021"
+      ],
+      "tasks": [
+        {
+          "id": "000772A94AE64C03",
+          "type": "item",
+          "item": "cataclysm:gauntlet_of_bulwark",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0006816957E9ACA9"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E4DCEBCAFF5FB",
+      "title": "T0 · 炎葬",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得炎葬1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：腾炎锭、Blaze Rod、Netherite Sword。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:the_incinerator",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 2.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7967020F021"
+      ],
+      "tasks": [
+        {
+          "id": "000DDF5D254949A0",
+          "type": "item",
+          "item": "cataclysm:the_incinerator",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0007251DD847636B"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000B7E93D90FCE85",
+      "title": "T0 · 潮汐利爪",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得潮汐利爪1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "战利品线索：利维坦。掉落可能受条件或随机性影响。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "右击：可以作为抓钩使用左击：向敌人发射潮汐触手，攻击多个实体",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:tidal_claws",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 2.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7967020F021"
+      ],
+      "tasks": [
+        {
+          "id": "0001EFA92F0ABD4B",
+          "type": "item",
+          "item": "cataclysm:tidal_claws",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000F661982F46041"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00042F006867E178",
+      "title": "T0 · 歼灭战锤",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得歼灭战锤1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：黑钢锭、咒魂锭。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：钢铁旋风。",
+        "向前劈砍并消灭敌人！ 这可以蓄力，增加攻击范围和速度。",
+        "固有战技：裂地斩。",
+        "强力的震地攻击,击倒所有在范围里的敌人",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6下一件有用的装备&r",
+        "献祭者：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:the_annihilator",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 2.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7967020F021"
+      ],
+      "tasks": [
+        {
+          "id": "00041CCBECB212B3",
+          "type": "item",
+          "item": "cataclysm:the_annihilator",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0004FDEA09ECFB96"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000687EC107FB899",
+      "title": "下一批兵器 · 2",
+      "description": [
+        "【战略目标】本批可鉴定：献祭者、神怒长槊、断魂战戟、瓶中沙暴、破晓、誓约。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】按需要逐批展开。翻页不要求先集齐上一批；不感兴趣的武器可以跳过。",
+        "【掠夺战果】本批物品持有检测开启，已拥有的物品放入随身物品栏即可登记。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 23.0,
+      "y": 5.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7967020F021"
+      ],
+      "tasks": [
+        {
+          "id": "0009EFF5250A484A",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E7FE9AE1E7118",
+      "title": "T0 · 献祭者",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得献祭者1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "专用工艺路线：腾炎锭、歼灭战锤。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：钢铁旋风。",
+        "向前劈砍并消灭敌人！ 这可以蓄力，增加攻击范围和速度。",
+        "固有战技：裂地斩。",
+        "强力的震地攻击,击倒所有在范围里的敌人",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:the_immolator",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 5.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000687EC107FB899"
+      ],
+      "tasks": [
+        {
+          "id": "0005F90F6FEEBEE3",
+          "type": "item",
+          "item": "cataclysm:the_immolator",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000979CBCBC407A8"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E1BB33DE60C90",
+      "title": "T0 · 神怒长槊",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得神怒长槊1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：风暴精华、泪宝石。",
+        "",
+        "&6选择与试用&r",
+        "形态：长矛。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：heartpiercer。",
+        "固有战技：高空俯冲。",
+        "\"消失于天际，再俯冲向你的敌人。\"",
+        "",
+        " 攻击敌人可为该技能蓄力，最多 3 次。",
+        "最终伤害将乘以蓄力次数",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "右键后可以发射鸣雷槊",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&6下一件有用的装备&r",
+        "掣雷巨锤：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:astrape",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 5.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000687EC107FB899"
+      ],
+      "tasks": [
+        {
+          "id": "000EBCCCDBD9D0F8",
+          "type": "item",
+          "item": "cataclysm:astrape",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000AC132D1E32D25"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000AA5B86E0791C6",
+      "title": "T0 · 断魂战戟",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得断魂战戟1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：黑钢锭、咒魂锭。",
+        "",
+        "&6选择与试用&r",
+        "形态：长矛。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：忠肝义胆。",
+        "释放大范围的攻击。根据释放技能时键入的方向会有三种不同的攻击方式 ",
+        "无畏：第三下普通攻击不会被敌人的攻击打断 ",
+        "前+技能：快速对正前方进行两次上撩斩击，能有效击退敌人 ",
+        "左/右+技能：快速的斜向斩击，不会被攻击打断 ",
+        "后+技能：进行一次横扫攻击后，对前方使用能击倒敌人的劈砍，可以对倒地敌人使用跳跃攻击进行追击",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "长按右键可以快速冲刺",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:soul_render",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 5.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000687EC107FB899"
+      ],
+      "tasks": [
+        {
+          "id": "0006B1D979A171C9",
+          "type": "item",
+          "item": "cataclysm:soul_render",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0007EFAD111A6D14"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0006A9B5C8E42BB8",
+      "title": "T0 · 瓶中沙暴",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得瓶中沙暴1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：高阶/终盘首领原生战利品：cataclysm:ancient_remnant。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "战利品线索：远古遗骸。掉落可能受条件或随机性影响。",
+        "",
+        "&6选择与试用&r",
+        "形态：打刀。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持、单持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：怒沙风暴 。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "右击召唤两个围绕自身旋转的大型沙暴龙卷风",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&6下一件有用的装备&r",
+        "漩涡护手：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "沙暴之怒：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "cataclysm:sandstorm_in_a_bottle",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 8.3,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000687EC107FB899"
+      ],
+      "tasks": [
+        {
+          "id": "00004E800B9583B0",
+          "type": "item",
+          "item": "cataclysm:sandstorm_in_a_bottle",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00018DE88B1C9591"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0009DE909D7F52A4",
+      "title": "T0 · 破晓",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得破晓1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：高阶/终盘首领原生战利品：dungeons_and_combat:sunleia。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "战利品线索：永昼之翼·苏蕾娅。掉落可能受条件或随机性影响。",
+        "",
+        "&6选择与试用&r",
+        "形态：打刀。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6下一件有用的装备&r",
+        "日出：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "dungeons_and_combat:sunrise_sword",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 8.3,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000687EC107FB899"
+      ],
+      "tasks": [
+        {
+          "id": "000624075FCB2139",
+          "type": "item",
+          "item": "dungeons_and_combat:sunrise_sword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000F11AB1C2EBABD"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004AC90B06B9538",
+      "title": "T0 · 誓约",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得誓约1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：高阶/终盘首领原生战利品：dungeons_and_combat:kamath。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "战利品线索：冥骸之主·卡玛斯。掉落可能受条件或随机性影响。",
+        "",
+        "&6选择与试用&r",
+        "形态：大剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：钢铁旋风。",
+        "向前劈砍并消灭敌人！ 这可以蓄力，增加攻击范围和速度。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "dungeons_and_combat:oath_sword",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 8.3,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000687EC107FB899"
+      ],
+      "tasks": [
+        {
+          "id": "00028A5521E14B2D",
+          "type": "item",
+          "item": "dungeons_and_combat:oath_sword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0003C51EB12C47DC"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00065A29245287C6",
+      "title": "下一批兵器 · 3",
+      "description": [
+        "【战略目标】本批可鉴定：破败战镰、穿芯、利维坦、熔火、窃魂、苍穹。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】按需要逐批展开。翻页不要求先集齐上一批；不感兴趣的武器可以跳过。",
+        "【掠夺战果】本批物品持有检测开启，已拥有的物品放入随身物品栏即可登记。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 23.0,
+      "y": 11.6,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000687EC107FB899"
+      ],
+      "tasks": [
+        {
+          "id": "0009FE6A0647436C",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00029583A7831EE1",
+      "title": "T0 · 破败战镰",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得破败战镰1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：高阶/终盘首领原生战利品：irons_spellbooks:fire_boss。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "战利品线索：原初受火者。掉落可能受条件或随机性影响。",
+        "",
+        "&6选择与试用&r",
+        "形态：镰。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6下一件有用的装备&r",
+        "地狱战镰：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "irons_spellbooks:decrepit_scythe",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 11.6,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00065A29245287C6"
+      ],
+      "tasks": [
+        {
+          "id": "000F0F960BFAF4F1",
+          "type": "item",
+          "item": "irons_spellbooks:decrepit_scythe",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00002995E4B848FB"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004ADFF7999C9E3",
+      "title": "T0 · 穿芯",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得穿芯1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "独特效果：烛焰之怒",
+        "点燃心中的怒火，并大幅提升攻速，在此期间，每次攻击造成两次伤害，持续相应数值秒。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:wickpiercer",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 11.6,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00065A29245287C6"
+      ],
+      "tasks": [
+        {
+          "id": "000BB1A0F532BE82",
+          "type": "item",
+          "item": "simplyswords:wickpiercer",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000EC80A7EF60620"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0001A9F5231D8274",
+      "title": "T0 · 利维坦",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得利维坦1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：斧。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：真·怒火。",
+        "\"愿诸神亦对你心生畏惧……\"",
+        "",
+        "Torment 的怒火会使技能条变得无法判读。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "独特效果：冰解",
+        "击中目标有概率冰封持有者周围的目标，并使目标无法造成伤害。相应数值秒后目标解冻，造成相应数值点伤害。主动解除自身周围目标的封冻态，解除越早，造成的额外伤害越高。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:livyatan",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 11.6,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00065A29245287C6"
+      ],
+      "tasks": [
+        {
+          "id": "000EC581B07E3EBB",
+          "type": "item",
+          "item": "simplyswords:livyatan",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00063E6576F5D4B7"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F2A4CD5035725",
+      "title": "T0 · 熔火",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得熔火1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：斧。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：真·怒火。",
+        "\"愿诸神亦对你心生畏惧……\"",
+        "",
+        "Torment 的怒火会使技能条变得无法判读。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:molten_edge",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 14.1,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00065A29245287C6"
+      ],
+      "tasks": [
+        {
+          "id": "0003380EC1516555",
+          "type": "item",
+          "item": "simplyswords:molten_edge",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0007FA0304E82368"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005803B5160C8E5",
+      "title": "T0 · 窃魂",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得窃魂1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：匕首。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：eviscerate。",
+        "固有战技：dancing edge。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:soulstealer",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 14.1,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00065A29245287C6"
+      ],
+      "tasks": [
+        {
+          "id": "00047BC91881FD57",
+          "type": "item",
+          "item": "simplyswords:soulstealer",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0006363E40D51253"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00035390C5B9FC64",
+      "title": "T0 · 苍穹",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得苍穹1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：大剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：钢铁旋风。",
+        "向前劈砍并消灭敌人！ 这可以蓄力，增加攻击范围和速度。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "独有效果：星界移位",
+        "持有该武器时，有几率完全免疫即将受到的伤害。短暂踏入星界，获得伤害免疫，持续相应数值秒离开星界时，将释放猛烈爆炸，造成范围伤害，其数值与星界期间所免疫的伤害量相关。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:caelestis",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 14.1,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00065A29245287C6"
+      ],
+      "tasks": [
+        {
+          "id": "000F1F4CD0591715",
+          "type": "item",
+          "item": "simplyswords:caelestis",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000CC072709AAB5B"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F73D6A9E96720",
+      "title": "下一批兵器 · 4",
+      "description": [
+        "【战略目标】本批可鉴定：棘刺、正义遗剑、魔化遗剑、扭曲波刃剑、织蜡、奥术紫晶戟。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】按需要逐批展开。翻页不要求先集齐上一批；不感兴趣的武器可以跳过。",
+        "【掠夺战果】本批物品持有检测开启，已拥有的物品放入随身物品栏即可登记。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 23.0,
+      "y": 17.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00065A29245287C6"
+      ],
+      "tasks": [
+        {
+          "id": "0004FBC156A104F4",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008B27EC275F737",
+      "title": "T0 · 棘刺",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得棘刺1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：长剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：致命回转。",
+        "冲向敌人并踢中他进行后空翻。",
+        "后空翻后，再次冲向敌人给予致命一击。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:bramblethorn",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 17.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F73D6A9E96720"
+      ],
+      "tasks": [
+        {
+          "id": "00037A952A6E7F2A",
+          "type": "item",
+          "item": "simplyswords:bramblethorn",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0001D207400758A8"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000630558730B0C4",
+      "title": "T0 · 正义遗剑",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得正义遗剑1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：Enchanted Golden Apple、Gold Ingot、沉眠遗剑、符文石板。",
+        "",
+        "&6选择与试用&r",
+        "形态：长剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、专用架势。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：dancing edge。",
+        "固有战技：扎实剑法。",
+        "Assume a defensive stance for 相应数值 seconds. Player can deflect all attacks from in front while attacking. Killing enemies increases defensive stance duration by 相应数值 seconds. You cannot sprint while this effect is active.",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6下一件有用的装备&r",
+        "日炎：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:righteous_relic",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 17.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F73D6A9E96720"
+      ],
+      "tasks": [
+        {
+          "id": "0005FB6BE3ADAFC4",
+          "type": "item",
+          "item": "simplyswords:righteous_relic",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000EABAB29BC55B6"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0002CBFAC3C74087",
+      "title": "T0 · 魔化遗剑",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得魔化遗剑1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：Eye of Ender、Phantom Membrane、沉眠遗剑、符文石板。",
+        "",
+        "&6选择与试用&r",
+        "形态：长剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、专用架势。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：dancing edge。",
+        "固有战技：扎实剑法。",
+        "Assume a defensive stance for 相应数值 seconds. Player can deflect all attacks from in front while attacking. Killing enemies increases defensive stance duration by 相应数值 seconds. You cannot sprint while this effect is active.",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6下一件有用的装备&r",
+        "噩兆：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:tainted_relic",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 17.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F73D6A9E96720"
+      ],
+      "tasks": [
+        {
+          "id": "000067D82411BEAC",
+          "type": "item",
+          "item": "simplyswords:tainted_relic",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00047BDA7C413767"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000AE9878CDAF160",
+      "title": "T0 · 扭曲波刃剑",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得扭曲波刃剑1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：长剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、专用架势、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：sharp stab。",
+        "固有战技：扎实剑法。",
+        "Assume a defensive stance for 相应数值 seconds. Player can deflect all attacks from in front while attacking. Killing enemies increases defensive stance duration by 相应数值 seconds. You cannot sprint while this effect is active.",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:twisted_blade",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 19.9,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F73D6A9E96720"
+      ],
+      "tasks": [
+        {
+          "id": "000750422F8CA518",
+          "type": "item",
+          "item": "simplyswords:twisted_blade",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000C26B15B54766A"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000A54D7EC6B0351",
+      "title": "T0 · 织蜡",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得织蜡1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：长剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、专用架势、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：sharp stab。",
+        "固有战技：扎实剑法。",
+        "Assume a defensive stance for 相应数值 seconds. Player can deflect all attacks from in front while attacking. Killing enemies increases defensive stance duration by 相应数值 seconds. You cannot sprint while this effect is active.",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "独特效果：织蜡",
+        "攻击着火的敌人将给予使用者力量与急迫效果。受到致命伤害时，用再生之蜡包裹持有者，回复满生命值同时获得抗性提升效果。仅当在主手时生效，冷却时间：相应数值秒。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:waxweaver",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 19.9,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F73D6A9E96720"
+      ],
+      "tasks": [
+        {
+          "id": "000A2C585C2AA1A6",
+          "type": "item",
+          "item": "simplyswords:waxweaver",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000F40210084FDA1"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CC3410069BA3B",
+      "title": "T0 · 奥术紫晶戟",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得奥术紫晶戟1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：长矛。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：忠肝义胆。",
+        "释放大范围的攻击。根据释放技能时键入的方向会有三种不同的攻击方式 ",
+        "无畏：第三下普通攻击不会被敌人的攻击打断 ",
+        "前+技能：快速对正前方进行两次上撩斩击，能有效击退敌人 ",
+        "左/右+技能：快速的斜向斩击，不会被攻击打断 ",
+        "后+技能：进行一次横扫攻击后，对前方使用能击倒敌人的劈砍，可以对倒地敌人使用跳跃攻击进行追击",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "独特效果：奥术冲击",
+        "攻击时有概率使目标飘浮。使目标飘浮，并持续造成伤害。技能施放结束时目标落地，受到摔落伤害。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:arcanethyst",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 19.9,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F73D6A9E96720"
+      ],
+      "tasks": [
+        {
+          "id": "0009F8D57B56A2D0",
+          "type": "item",
+          "item": "simplyswords:arcanethyst",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000CF032BF051141"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000963FAEEA562F4",
+      "title": "下一批兵器 · 5",
+      "description": [
+        "【战略目标】本批可鉴定：冰语、星芒、纵雷、余烬之刃、风暴使者、烈风。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】按需要逐批展开。翻页不要求先集齐上一批；不感兴趣的武器可以跳过。",
+        "【掠夺战果】本批物品持有检测开启，已拥有的物品放入随身物品栏即可登记。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 23.0,
+      "y": 23.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F73D6A9E96720"
+      ],
+      "tasks": [
+        {
+          "id": "000D2F87711F5724",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000368929543A8F6",
+      "title": "T0 · 冰语",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得冰语1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：长矛。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：忠肝义胆。",
+        "释放大范围的攻击。根据释放技能时键入的方向会有三种不同的攻击方式 ",
+        "无畏：第三下普通攻击不会被敌人的攻击打断 ",
+        "前+技能：快速对正前方进行两次上撩斩击，能有效击退敌人 ",
+        "左/右+技能：快速的斜向斩击，不会被攻击打断 ",
+        "后+技能：进行一次横扫攻击后，对前方使用能击倒敌人的劈砍，可以对倒地敌人使用跳跃攻击进行追击",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "独特效果：永冻",
+        "手持时，获得冰冻光环，减速相应数值格内敌人，并持续造成伤害。损失饥饿值，在自身位置召唤暴风雪，减速相应数值范围内的生物并造成递增的伤害。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:icewhisper",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 23.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000963FAEEA562F4"
+      ],
+      "tasks": [
+        {
+          "id": "0007D93432DB5BCA",
+          "type": "item",
+          "item": "simplyswords:icewhisper",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00035D5B5C3201B0"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00065C2A96324825",
+      "title": "T0 · 星芒",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得星芒1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：长矛。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：化卡律布狄斯为斯库拉。",
+        "消耗体力，挥出旋风般的连击，总计 8 段打击。横扫之刃可降低体力消耗。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:stars_edge",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 23.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000963FAEEA562F4"
+      ],
+      "tasks": [
+        {
+          "id": "0005D352CD93B8F3",
+          "type": "item",
+          "item": "simplyswords:stars_edge",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0003D2DC4FD7B3A8"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00018F36F39F83BC",
+      "title": "T0 · 纵雷",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得纵雷1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：长矛。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：忠肝义胆。",
+        "释放大范围的攻击。根据释放技能时键入的方向会有三种不同的攻击方式 ",
+        "无畏：第三下普通攻击不会被敌人的攻击打断 ",
+        "前+技能：快速对正前方进行两次上撩斩击，能有效击退敌人 ",
+        "左/右+技能：快速的斜向斩击，不会被攻击打断 ",
+        "后+技能：进行一次横扫攻击后，对前方使用能击倒敌人的劈砍，可以对倒地敌人使用跳跃攻击进行追击",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "独特效果：雷暴突进",
+        "击中概率刷新能力冷却。短暂减速自身，充能武器，伤害周围敌人。充能完成之后，向前冲刺，伤害沿途的目标，提升持有者攻速。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:thunderbrand",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 23.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000963FAEEA562F4"
+      ],
+      "tasks": [
+        {
+          "id": "000C3D12BCACD3BA",
+          "type": "item",
+          "item": "simplyswords:thunderbrand",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0006072010425FF3"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000FD64CD5D70775",
+      "title": "T0 · 余烬之刃",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得余烬之刃1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：强化横扫之刃。",
+        "向前旋转斩出强力的一击",
+        "固有战技：dancing edge。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:emberblade",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 25.7,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000963FAEEA562F4"
+      ],
+      "tasks": [
+        {
+          "id": "0003D77ECD8AFE61",
+          "type": "item",
+          "item": "simplyswords:emberblade",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0006215622D5F8F1"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00080E104461A1F8",
+      "title": "T0 · 风暴使者",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得风暴使者1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：强化横扫之刃。",
+        "向前旋转斩出强力的一击",
+        "固有战技：边缘之舞。",
+        "用致命的挥舞砍倒敌人！",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "独特效果：冲震",
+        "暂时汇聚能量于剑身一点以准备发动防守反击。在恰当的时机使用此能力，你将能够格挡下此次攻击，在造成伤害的同时，将目标轰至高空并减少能力的冷却时间。完美时机的格挡将额外地降低冷却并增加伤害。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:stormbringer",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 25.7,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000963FAEEA562F4"
+      ],
+      "tasks": [
+        {
+          "id": "000D6E2EC9E00DE8",
+          "type": "item",
+          "item": "simplyswords:stormbringer",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000BF52A7BD924BF"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000364FE7A2759DC",
+      "title": "T0 · 烈风",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得烈风1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：强化横扫之刃。",
+        "向前旋转斩出强力的一击",
+        "固有战技：边缘之舞。",
+        "边缘之舞",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "独特效果：涡流",
+        "你的攻击将会使标附着元素能量，附加负面效果并随时间造成伤害。此效果可以叠加。召回所有附近的元素，使它们形成围绕你的涡流，伤害周遭所有敌人，并扩大自身。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:tempest",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 25.7,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000963FAEEA562F4"
+      ],
+      "tasks": [
+        {
+          "id": "0001AEB30379E28E",
+          "type": "item",
+          "item": "simplyswords:tempest",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000EB504027830F4"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0000BEBB9D9849EC",
+      "title": "下一批兵器 · 6",
+      "description": [
+        "【战略目标】本批可鉴定：裂魂、风之低语、炉火巨锤、聚魂、月光大剑、大审判之剑。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】按需要逐批展开。翻页不要求先集齐上一批；不感兴趣的武器可以跳过。",
+        "【掠夺战果】本批物品持有检测开启，已拥有的物品放入随身物品栏即可登记。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 23.0,
+      "y": 29.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000963FAEEA562F4"
+      ],
+      "tasks": [
+        {
+          "id": "0007612E51CF4A48",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C8EF2A8E95878",
+      "title": "T0 · 裂魂",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得裂魂1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：大太刀。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：scythe skill。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:soulrender",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 29.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000BEBB9D9849EC"
+      ],
+      "tasks": [
+        {
+          "id": "000C4A6651FF11FB",
+          "type": "item",
+          "item": "simplyswords:soulrender",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00041F06B89DB5B4"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00077C310C87D2C8",
+      "title": "T0 · 风之低语",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得风之低语1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：大太刀。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持、骑乘。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：rushing tempo。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6原生物品说明&r",
+        "独特效果：绝息一闪",
+        "击中概率刷新能力冷却时间。快速向前突进，中途获得抗性提升与伤害吸收效果，并为沿途的敌人附着共鸣印记。突进中途击中的每一个目标，都将提升为之附加的共鸣量。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:whisperwind",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 29.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000BEBB9D9849EC"
+      ],
+      "tasks": [
+        {
+          "id": "000EF9FD4F42E0C1",
+          "type": "item",
+          "item": "simplyswords:whisperwind",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0000F8113F5B5A3E"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000FF3319EE5E159",
+      "title": "T0 · 炉火巨锤",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得炉火巨锤1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：真·怒火。",
+        "\"愿诸神亦对你心生畏惧……\"",
+        "",
+        "Torment 的怒火会使技能条变得无法判读。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:hearthflame",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 29.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000BEBB9D9849EC"
+      ],
+      "tasks": [
+        {
+          "id": "000A217AD46AE076",
+          "type": "item",
+          "item": "simplyswords:hearthflame",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00000364283DCF84"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0006BF69F2EEF77C",
+      "title": "T0 · 聚魂",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得聚魂1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：单持、双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：真·怒火。",
+        "\"愿诸神亦对你心生畏惧……\"",
+        "",
+        "Torment 的怒火会使技能条变得无法判读。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "simplyswords:soulkeeper",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 31.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000BEBB9D9849EC"
+      ],
+      "tasks": [
+        {
+          "id": "00048D5AD36E9F9B",
+          "type": "item",
+          "item": "simplyswords:soulkeeper",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00007ED73B5376DA"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F7EF1D2296E4B",
+      "title": "T0 · 月光大剑",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得月光大剑1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：骑士之魂、长剑。",
+        "",
+        "&6选择与试用&r",
+        "形态：大剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：横扫之刃。",
+        "用强力的斩击劈开附近的敌人。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "slu:moonlight_sword",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 31.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000BEBB9D9849EC"
+      ],
+      "tasks": [
+        {
+          "id": "00067CF12188A9B0",
+          "type": "item",
+          "item": "slu:moonlight_sword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000F675CC0AE3FB8"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000ACC04407BE4D4",
+      "title": "T0 · 大审判之剑",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得大审判之剑1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：巨人之魂、骑士之魂、我的世界之主的灵魂。",
+        "锻造台路线：附魔模板、传说长剑、我的世界之主的灵魂。",
+        "",
+        "&6选择与试用&r",
+        "形态：长剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持、单持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：横扫之刃。",
+        "用强力的斩击劈开附近的敌人。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "slu:grand_trial_sword",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 31.5,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000BEBB9D9849EC"
+      ],
+      "tasks": [
+        {
+          "id": "00089C98B35942FB",
+          "type": "item",
+          "item": "slu:grand_trial_sword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000F4AAE0B08FCBF"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003B7C6D3554633",
+      "title": "下一批兵器 · 7",
+      "description": [
+        "【战略目标】本批可鉴定：薪王化身之剑、薪王大剑、双灭之刃、Agony、Antitheus、Gesetz。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】按需要逐批展开。翻页不要求先集齐上一批；不感兴趣的武器可以跳过。",
+        "【掠夺战果】本批物品持有检测开启，已拥有的物品放入随身物品栏即可登记。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 23.0,
+      "y": 34.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000BEBB9D9849EC"
+      ],
+      "tasks": [
+        {
+          "id": "0009612F43AB8AF7",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000A27320D8132B3",
+      "title": "T0 · 薪王化身之剑",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得薪王化身之剑1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：烈焰碎片、长剑、岩浆碎片、金属碎片。",
+        "",
+        "&6选择与试用&r",
+        "形态：长剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持、单持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：横扫之刃。",
+        "用强力的斩击劈开附近的敌人。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6下一件有用的装备&r",
+        "传说薪王化身之剑：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "slu:soul_of_cinder_sword",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 34.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7C6D3554633"
+      ],
+      "tasks": [
+        {
+          "id": "00026143CF20E145",
+          "type": "item",
+          "item": "slu:soul_of_cinder_sword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000DDF80FFFA07C4"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BFA939FAA68DC",
+      "title": "T0 · 薪王大剑",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得薪王大剑1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "工作台路线：传承之火、长剑、岩浆碎片、神圣遗物。",
+        "",
+        "&6选择与试用&r",
+        "形态：剑。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6战技装配&r",
+        "当前动作配置包含：双持、单持。先在安全区域确认切换条件与收招。",
+        "",
+        "&6当前固有战技&r",
+        "固有战技：边缘之舞。",
+        "用致命的挥舞砍倒敌人！",
+        "固有战技：横扫之刃。",
+        "用强力的斩击劈开附近的敌人。",
+        "触发、充能与可用数值以当前游戏内技能提示为准；技能书可从征伐与鉴定赏格另行领取。",
+        "",
+        "&6下一件有用的装备&r",
+        "传说薪王之剑：该装备是其配方中的已有兵器／部件之一，升级前检查材料与耐久条件。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "slu:cinder_king_greatsword",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 34.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7C6D3554633"
+      ],
+      "tasks": [
+        {
+          "id": "000629C1C31AA7BB",
+          "type": "item",
+          "item": "slu:cinder_king_greatsword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0006D74CC2B40787"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000183162B25B8FF",
+      "title": "T0 · 双灭之刃",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得双灭之刃1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：高阶/终盘首领原生战利品：woc_remastered:zertar。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "战利品线索：泽尔塔。掉落可能受条件或随机性影响。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "从背后突刺时伤害+200%",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "woc_remastered:zweiender",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 34.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7C6D3554633"
+      ],
+      "tasks": [
+        {
+          "id": "00062E8B9A28CDB8",
+          "type": "item",
+          "item": "woc_remastered:zweiender",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0000B778C553BFFC"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E26B063C8CDAB",
+      "title": "T0 · Agony",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得Agony1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "\"死亡将是一份甜美的礼物……\"",
+        "",
+        " 这杆长枪带你无视重力法则，辗转腾挪。",
+        " 让你能从四面八方令目标血流不止。",
+        " 是旁观其受尽折磨，还是赐予死亡的慈悲……尽由你抉择。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "wom:agony",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 37.3,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7C6D3554633"
+      ],
+      "tasks": [
+        {
+          "id": "000885A616C41807",
+          "type": "item",
+          "item": "wom:agony",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000CE597ACE29B9E"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E62BCCDAAB809",
+      "title": "T0 · Antitheus",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得Antitheus1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "锻造台路线：Nether Star、Netherite Upgrade Smithing Template、恶魔封印。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "\"以最可怖、最可憎的方式收割生命。\"",
+        "",
+        " 攻击有 20% 几率造成凋零，持续 6 秒。",
+        " 若该实体已带有凋零效果，则会",
+        " 重新施加更强的凋零效果，并刷新其持续时间。",
+        "",
+        " 横扫之刃每级使造成凋零的几率额外提高 10%，",
+        " 并使持续时间延长 2 秒。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "wom:antitheus",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 37.3,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7C6D3554633"
+      ],
+      "tasks": [
+        {
+          "id": "000E830FBA305130",
+          "type": "item",
+          "item": "wom:antitheus",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000106CB2EDF49DC"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000817A13B960F98",
+      "title": "T0 · Gesetz",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得Gesetz1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "坚固而强韧的盾，连最强悍的攻击也能挡下……",
+        "但……它似乎还需要些什么，方能释放全部潜能。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "wom:gesetz",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 37.3,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7C6D3554633"
+      ],
+      "tasks": [
+        {
+          "id": "000E7AC52BA01A03",
+          "type": "item",
+          "item": "wom:gesetz",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0003B2B46AC219E7"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0007C1B27A70484C",
+      "title": "下一批兵器 · 8",
+      "description": [
+        "【战略目标】本批可鉴定：Herrscher、Ruine、Torment、如意金箍棒。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】按需要逐批展开。翻页不要求先集齐上一批；不感兴趣的武器可以跳过。",
+        "【掠夺战果】本批物品持有检测开启，已拥有的物品放入随身物品栏即可登记。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 23.0,
+      "y": 40.6,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003B7C6D3554633"
+      ],
+      "tasks": [
+        {
+          "id": "0008A4064D3943EB",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005C8360C4396FE",
+      "title": "T0 · Herrscher",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得Herrscher1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "轻巧而锋利的剑，在战斗中表现出众……",
+        "但……它似乎还需要些什么，方能释放全部潜能。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "wom:herrscher",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 40.6,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007C1B27A70484C"
+      ],
+      "tasks": [
+        {
+          "id": "000CE8CA307F8844",
+          "type": "item",
+          "item": "wom:herrscher",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000B5359CA6CCC38"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005DB28AC2BC2AD",
+      "title": "T0 · Ruine",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得Ruine1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "一件古老的武器，以失传的知识锻造，并灌注了末影人的力量。",
+        "其平衡与设计使其在战斗中发挥出极致的效率与精准。",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "wom:ruine",
+      "subtitle": "独立目标",
+      "x": 29.4,
+      "y": 40.6,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007C1B27A70484C"
+      ],
+      "tasks": [
+        {
+          "id": "0003C72E011372C6",
+          "type": "item",
+          "item": "wom:ruine",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0002191C91FDD29F"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004900FE1B7D43F",
+      "title": "T0 · Torment",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得Torment1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&6原生物品说明&r",
+        "\"专为屠杀与暴行而生。\"",
+        "",
+        " 这柄斧已将前任持有者的怒火尽数吸纳。",
+        " 握住它，无尽的狂怒将凝作毁灭……",
+        "上述为本包原生说明；效果是否受当前配置调整，以实际物品提示为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "wom:tormented_mind",
+      "subtitle": "独立目标",
+      "x": 32.6,
+      "y": 40.6,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007C1B27A70484C"
+      ],
+      "tasks": [
+        {
+          "id": "000CE0B8798FABE2",
+          "type": "item",
+          "item": "wom:tormented_mind",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00002AF69497E9BF"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000657EF064DA8AB",
+      "title": "T0 · 如意金箍棒",
+      "description": [
+        "【军械档案】把这件兵器纳入同一本君王武库。",
+        "【收录条件】取得如意金箍棒1件。 不消耗；不限耐久、附魔和名称。",
+        "【使用方向】T0分档依据：顶阶独有战技/多阶段终盘制作路线。实际表现还取决于技能、强化与配装。",
+        "【收藏记录】首次鉴定奖励真菌残魂×12；计入收藏家对应档次的兵器里程碑。",
+        "",
+        "&6取得路线&r",
+        "特殊取得路线：查看本物品的JEI页面、原生说明与相关挑战。",
+        "",
+        "&6选择与试用&r",
+        "形态：特色兵器。先在安全地带试单持、双持或技能连段，再决定它适合突进、周旋还是另一种战术。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "wukong:jingubang",
+      "subtitle": "独立目标",
+      "x": 26.2,
+      "y": 43.1,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007C1B27A70484C"
+      ],
+      "tasks": [
+        {
+          "id": "0006CACE859544C3",
+          "type": "item",
+          "item": "wukong:jingubang",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000802A0C94F412A"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000268FE2804FBF8",
+      "title": "传说战果 · 四件王权军械",
+      "description": [
+        "【战略目标】白瞳君王、赤码入侵者与造界者的可用战利品，统一收入君王武库。",
+        "【讨伐作业】阅读后展开四件装备的首次鉴定。",
+        "【情报与机制】每件只记录一次；原生Boss道具、分身武器与刷怪蛋不占生存收藏格。",
+        "【掠夺战果】武器与兜帽的鉴定分别计入T0兵器、甲胄里程碑。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/boss/lb_herobrine.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.2,
+      "y": 49.1,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00093BB83A1CFA2D"
+      ],
+      "tasks": [
+        {
+          "id": "00049F6F9AEB8D14",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F7E47CA7ABE6A",
+      "title": "T0 · Herobrine之刃",
+      "description": [
+        "【军械档案】把Herobrine之刃收入君王武库。",
+        "【收录条件】持有Herobrine之刃1件，不消耗，不限附魔、名称或耐久。",
+        "【使用方向】这是可用的战利品兵刃；虚空之刃、符文大剑、猩红大剑则是Boss演出道具，不加入生存收集门槛。",
+        "【收藏记录】首次鉴定奖励真菌残魂12枚，计入T0对应武库赏格。",
+        "",
+        "&6取得路线&r",
+        "白瞳君王的原生玩家击杀战利品。三阶段战斗结束并等待终场演出后拾取。",
+        "",
+        "&6原生用途&r",
+        "11点总基础攻击伤害、2600耐久是该版本构造值；右击发射弧月剑气，冷却3秒，耗2点耐久。",
+        "",
+        "&6搭配提示&r",
+        "这是可用的战利品兵刃；虚空之刃、符文大剑、猩红大剑则是Boss演出道具，不加入生存收集门槛。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}",
+        "{\"text\": \"→ LB01 · 白瞳君王·Herobrine\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"0000C8A3B42A3254\"}}"
+      ],
+      "icon": "legendarybosses:herobrine_greatsword",
+      "subtitle": "独立目标",
+      "x": 3.2,
+      "y": 52.1,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000268FE2804FBF8"
+      ],
+      "tasks": [
+        {
+          "id": "000298C703E47671",
+          "type": "item",
+          "item": "legendarybosses:herobrine_greatsword",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000110101D2C49CC"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0006120C80CFFDE3",
+      "title": "T0 · 实体303之镰",
+      "description": [
+        "【军械档案】把实体303之镰收入君王武库。",
+        "【收录条件】持有实体303之镰1件，不消耗，不限附魔、名称或耐久。",
+        "【使用方向】战斗模式下原生右击技能与EF按键的实际冲突待试；先在安全场地确认，不把它自动改成另一套Boss招式。",
+        "【收藏记录】首次鉴定奖励真菌残魂12枚，计入T0对应武库赏格。",
+        "",
+        "&6取得路线&r",
+        "实体303的原生玩家击杀战利品，与兜帽分别结算。分身和微型303不掉落本体的胜利装备。",
+        "",
+        "&6原生用途&r",
+        "12点总基础攻击伤害、2400耐久为原生构造值；右击回旋飞镰，去返程都有攻击，冷却4秒并消耗耐久。",
+        "",
+        "&6搭配提示&r",
+        "战斗模式下原生右击技能与EF按键的实际冲突待试；先在安全场地确认，不把它自动改成另一套Boss招式。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}",
+        "{\"text\": \"→ LB02 · 赤码入侵者·实体303\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"0004DE0294D1E4EC\"}}"
+      ],
+      "icon": "legendarybosses:entity_303_scythe",
+      "subtitle": "独立目标",
+      "x": 6.4,
+      "y": 52.1,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000268FE2804FBF8"
+      ],
+      "tasks": [
+        {
+          "id": "0008175B39402E86",
+          "type": "item",
+          "item": "legendarybosses:entity_303_scythe",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00090BF404635DFE"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00078CFD763DD43D",
+      "title": "T0 · 实体303兜帽",
+      "description": [
+        "【军械档案】把实体303兜帽收入君王武库。",
+        "【收录条件】持有实体303兜帽1件，不消耗，不限附魔、名称或耐久。",
+        "【使用方向】T0功能甲位，不代表它的护甲面板一定高于所有重甲。可搭配现有行装。",
+        "【收藏记录】首次鉴定奖励真菌残魂12枚，计入T0对应武库赏格。",
+        "",
+        "&6取得路线&r",
+        "实体303的原生玩家击杀战利品。此处为特色单件，不虚构三件缺失的同名甲胄。",
+        "",
+        "&6原生用途&r",
+        "头部装备：穿戴时提供原生火焰免疫，潜行时获得隐身；具体伤害类型交互与其他装备兼容须以游戏表现为准。",
+        "",
+        "&6搭配提示&r",
+        "T0功能甲位，不代表它的护甲面板一定高于所有重甲。可搭配现有行装。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}",
+        "{\"text\": \"→ LB02 · 赤码入侵者·实体303\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"0004DE0294D1E4EC\"}}"
+      ],
+      "icon": "legendarybosses:entity_303_hood",
+      "subtitle": "独立目标",
+      "x": 9.600000000000001,
+      "y": 52.1,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000268FE2804FBF8"
+      ],
+      "tasks": [
+        {
+          "id": "000A3E751C8DF323",
+          "type": "item",
+          "item": "legendarybosses:entity_303_hood",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000854EADD4B0209"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0009E6BEA3A1FB67",
+      "title": "T0 · 创世之镐",
+      "description": [
+        "【军械档案】把创世之镐收入君王武库。",
+        "【收录条件】持有创世之镐1件，不消耗，不限附魔、名称或耐久。",
+        "【使用方向】T0工程工具位，代表终盘取得与实用能力，不是最高近战DPS。原生采掘与临时墙不会授予玩家创造模式。",
+        "【收藏记录】首次鉴定奖励真菌残魂12枚，计入T0对应武库赏格。",
+        "",
+        "&6取得路线&r",
+        "造界者Notch的原生玩家击杀战利品。等待造界战最终胜利结算后拾取。",
+        "",
+        "&6原生用途&r",
+        "9点总基础攻击伤害、3000耐久为原生构造值；3×3挖掘，潜行改为单格；右击建造8秒临时墙，冷却12秒。",
+        "",
+        "&6搭配提示&r",
+        "T0工程工具位，代表终盘取得与实用能力，不是最高近战DPS。原生采掘与临时墙不会授予玩家创造模式。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}",
+        "{\"text\": \"→ LB04 · 造界者·Notch\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00023CECA0D0BC78\"}}"
+      ],
+      "icon": "legendarybosses:creation_pickaxe",
+      "subtitle": "独立目标",
+      "x": 3.2,
+      "y": 54.6,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000268FE2804FBF8"
+      ],
+      "tasks": [
+        {
+          "id": "0001B183460902BA",
+          "type": "item",
+          "item": "legendarybosses:creation_pickaxe",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "0002EDDFEA61E452"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": true,
+      "ignore_reward_blocking": false
+    }
+  ]
+}

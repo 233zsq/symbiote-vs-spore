@@ -1,1662 +1,1365 @@
 {
   "id": "0005B218DCF06F10",
   "filename": "collector",
-  "title": "收藏家·兵器见闻",
+  "title": "&b收藏家 · 君王武库&r",
   "group": "000111B6DD2DC8BD",
-  "order_index": 6,
-  "icon": "minecraft:item_frame",
+  "order_index": 7,
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/arsenal.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
   "default_hide_dependency_lines": false,
   "default_quest_shape": "circle",
   "quest_links": [],
   "quests": [
     {
-      "id": "00007C7E6B60D993",
-      "title": "把见闻留下",
+      "id": "000FC8BB1217C402",
+      "title": "君王武库 · 收录即有军资",
       "description": [
-        "【教学目标】认识收藏与实战选择的区别",
-        "【作业】阅读五组聚合和四段名品说明",
-        "【提示】不是强度榜，也不用全收齐",
-        "【讲评】冒险者，兵器背后也有一段旅程。"
+        "【战略目标】收藏不是把武器锁进箱子。每一件鉴定过的兵器和每一套甲胄，都应成为下一次征伐的资本。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】T2基础、T1精锐、T0顶阶；这是按取得成本、战技与用途编排的实用分档，尚未经统一条件下的伤害实测。材料、附魔与打法可改变表现。",
+        "【掠夺战果】先打开T2鉴定。每个物品只奖一次；全鉴、分档赏格与收藏家毕业都集中在这里。",
+        "",
+        "&6如何使用分档&r",
+        "T0最高，T1精锐，T2基础。分档同时考虑取得链、独有战技、用途与稀有材料，实战体验后可调整。",
+        "匠魂等可换部件装备按形制的基础档收录，实际材料、强化与技能会改变强度。",
+        "武器不是只比一击面板；同档也可能分别擅长破防、机动、持续作战或远程。"
       ],
-      "icon": "minecraft:item_frame",
-      "subtitle": "",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/arsenal.png"
+        }
+      },
+      "subtitle": "独立目标",
       "x": 0.0,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000D7BD903B53355"
+        "000907F999023A22"
       ],
       "tasks": [
         {
-          "id": "000A02351BEA0944",
+          "id": "00005F6CFDE85C2D",
           "type": "checkmark"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，兵器背后也有一段旅程。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000D837FA9BD7007"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0008CF2733E0E512",
-      "title": "初识",
+      "id": "0002E0C48F4AC3D8",
+      "title": "T2赏格 · 基础兵装",
       "description": [
-        "【教学目标】尝试聚合收藏",
-        "【作业】同时持有#svs:collect_t1武器8件",
-        "【提示】件数不等于8种；持有后不扣物品",
-        "【讲评】冒险者，你的架子开始有东西了。"
+        "【战略目标】征伐军资按武库档次结算。T2物品可以在对应全鉴逐件登记，武器、护甲套装分别累计。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】全鉴按六件一批展开；“下一批”只切换查阅范围，不要求先把上一批全收齐。持有记录不扣除物品；护甲部件可分次取得。",
+        "【掠夺战果】对应档次全鉴开放，收藏里程碑随真实鉴定累积。"
       ],
-      "icon": "minecraft:item_frame",
-      "subtitle": "",
-      "x": 2.5,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t2.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993"
+        "000FC8BB1217C402"
       ],
       "tasks": [
         {
-          "id": "00082678F99F04B0",
-          "type": "custom",
-          "title": "同时持有#svs:collect_t1武器8件"
+          "id": "000B0215F9D688DE",
+          "type": "checkmark"
         }
       ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "0004081E7E90D71A"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你的架子开始有东西了。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00041F6C26874696"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000C0C19CACD3EC4",
-      "title": "见闻",
+      "id": "000C7C5A19B09BC6",
+      "title": "T1赏格 · 精锐武装",
       "description": [
-        "【教学目标】扩大收藏来源",
-        "【作业】同时持有#svs:collect_t2武器15件",
-        "【提示】标签不是阶段锁；可保留惯用武器",
-        "【讲评】冒险者，认得的兵器越来越多。"
+        "【战略目标】征伐军资按武库档次结算。T1物品可以在对应全鉴逐件登记，武器、护甲套装分别累计。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】全鉴按六件一批展开；“下一批”只切换查阅范围，不要求先把上一批全收齐。持有记录不扣除物品；护甲部件可分次取得。",
+        "【掠夺战果】对应档次全鉴开放，收藏里程碑随真实鉴定累积。"
       ],
-      "icon": "minecraft:item_frame",
-      "subtitle": "",
-      "x": 5.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t1.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 6.8,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0008CF2733E0E512",
-        "0004A9329C27BC37"
+        "0002E0C48F4AC3D8",
+        "0007DC53AE9F9637"
       ],
       "tasks": [
         {
-          "id": "0006D90679A368B2",
-          "type": "custom",
-          "title": "同时持有#svs:collect_t2武器15件"
+          "id": "0009D0054835AB2C",
+          "type": "checkmark"
         }
       ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000FCB1F31C2AF94"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，认得的兵器越来越多。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00066B6B00A5903A"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "00084E28DC3F00C0",
-      "title": "珍藏",
+      "id": "00093BB83A1CFA2D",
+      "title": "T0赏格 · 王权名器",
       "description": [
-        "【教学目标】认识更多原生武器",
-        "【作业】同时持有#svs:collect_t3武器20件",
-        "【提示】不必逐件交上去再领回来",
-        "【讲评】冒险者，熟悉与珍惜，可以同时存在。"
+        "【战略目标】征伐军资按武库档次结算。T0物品可以在对应全鉴逐件登记，武器、护甲套装分别累计。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】全鉴按六件一批展开；“下一批”只切换查阅范围，不要求先把上一批全收齐。持有记录不扣除物品；护甲部件可分次取得。",
+        "【掠夺战果】对应档次全鉴开放，收藏里程碑随真实鉴定累积。"
       ],
-      "icon": "minecraft:item_frame",
-      "subtitle": "",
-      "x": 7.5,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C7C5A19B09BC6",
+        "000CE76DB5CE0710"
+      ],
+      "tasks": [
+        {
+          "id": "0000A3E3ECF376EE",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0002F2DDED1C9F14",
+      "title": "遗珍赏格 · 让饰品服务战术",
+      "description": [
+        "【战略目标】武器决定出手方式，护甲与饰品决定一场远征能走多远。把遗珍纳入同一本武库。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】槽位与效果使用原生说明；随机探索不要求指定唯一掉落。收录奖励与原生物品分开，不复制刚取得的遗珍。",
+        "【掠夺战果】遗珍鉴定按批展开；达到里程碑再领取一次功能饰品选择。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/relic.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 10.2,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000C0C19CACD3EC4",
-        "0005D8B2BE004BA4"
+        "0002E0C48F4AC3D8"
       ],
       "tasks": [
         {
-          "id": "0001FB7B62055643",
-          "type": "custom",
-          "title": "同时持有#svs:collect_t3武器20件"
+          "id": "0000255213B05F87",
+          "type": "checkmark"
         }
       ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000CD3AB20D4DFC7"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，熟悉与珍惜，可以同时存在。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0003E6BB34A5667A"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000860159E087781",
-      "title": "奇兵",
+      "id": "000AB9FE48B15774",
+      "title": "T2 · 兵器鉴定3项",
       "description": [
-        "【教学目标】完成后段聚合目标",
-        "【作业】同时持有#svs:collect_t4武器15件",
-        "【提示】数量待批；取得来源以本包实际为准",
-        "【讲评】冒险者，这一排兵器已有自己的性格。"
+        "【战略目标】在T2全鉴中完成3项不同兵器的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成3项T2兵器鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "minecraft:item_frame",
-      "subtitle": "",
-      "x": 10.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t2.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 13.6,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00084E28DC3F00C0",
-        "00083052EF81988F"
+        "0002E0C48F4AC3D8"
       ],
       "tasks": [
         {
-          "id": "0001C6238AFCF5C3",
+          "id": "000CAFEDC71F1F13",
           "type": "custom",
-          "title": "同时持有#svs:collect_t4武器15件"
+          "title": "累计完成3项T2兵器鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 60,
           "team_reward": false,
-          "id": "000FAC14EFC56AE7"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这一排兵器已有自己的性格。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0003E4E86427D875"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0006B3C51677A686",
-      "title": "传世",
-      "description": [
-        "【教学目标】完成最后一组聚合",
-        "【作业】同时持有#svs:collect_t5武器20件",
-        "【提示】不承诺本组全为毕业神兵；数量待批",
-        "【讲评】冒险者，收藏的意义由你来定。"
-      ],
-      "icon": "minecraft:item_frame",
-      "subtitle": "",
-      "x": 12.5,
-      "y": 0.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "000860159E087781"
-      ],
-      "tasks": [
-        {
-          "id": "00032451A39F904C",
-          "type": "custom",
-          "title": "同时持有#svs:collect_t5武器20件"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000C92C16BBDD0AC"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，收藏的意义由你来定。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000385115F150AC0"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0002CD32364A71CC",
-      "title": "行装架",
-      "description": [
-        "【教学目标】让护甲也进入收藏",
-        "【作业】同时持有白名单护甲15件",
-        "【提示】按护甲件，不是15套；允许重复，不扣除",
-        "【讲评】冒险者，穿过的行装同样值得留下。"
-      ],
-      "icon": "minecraft:item_frame",
-      "subtitle": "",
-      "x": 12.5,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0005D8B2BE004BA4"
-      ],
-      "tasks": [
-        {
-          "id": "000359552D27E131",
-          "type": "custom",
-          "title": "同时持有白名单护甲15件"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000AC036CCCEAEDD"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，穿过的行装同样值得留下。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000092F69329C78D"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000C6F169CC351A0",
-      "title": "收藏家毕业",
-      "description": [
-        "【教学目标】汇总聚合成果",
-        "【作业】完成L02～L07",
-        "【提示】24名品节点不是毕业前置",
-        "【讲评】冒险者，你留下的不只是战利品。"
-      ],
-      "icon": "minecraft:item_frame",
-      "subtitle": "",
-      "x": 10.0,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0006B3C51677A686",
-        "0002CD32364A71CC",
-        "00083052EF81988F"
-      ],
-      "tasks": [],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 100,
-          "team_reward": false,
-          "id": "0006119578E60C9D"
+          "id": "000552081C06BAA8"
         },
         {
           "type": "item",
-          "item": {
-            "id": "artifacts:universal_attractor",
-            "Count": 1,
-            "tag": {
-              "display": {
-                "Name": "{\"text\": \"收藏家之记\", \"italic\": false}",
-                "Lore": [
-                  "{\"text\": \"职业纪念；沿用原物品属性与槽位\", \"italic\": false, \"color\": \"gray\"}"
-                ]
-              }
-            }
-          },
-          "count": 1,
+          "item": "kubejs:spore_coin",
+          "count": 8,
           "team_reward": false,
-          "id": "0003B7B2AF4CA2DC"
+          "id": "00043C09E43891CB"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你留下的不只是战利品。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "choice",
+          "table_id": 1148190515466627L,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0003B8B84A5CD93F"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0002E80C111847FD",
-      "title": "见闻·长剑这一武器形态",
-      "description": [
-        "【教学目标】认识长剑这一武器形态",
-        "【作业】持有铁长剑1把",
-        "【提示】JEI可查铁材配方；喜欢再练，不强迫换装",
-        "【讲评】冒险者，先挑一把愿意带出门的剑。"
-      ],
-      "icon": "simplyswords:iron_longsword",
-      "subtitle": "可选作业",
-      "x": 7.5,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "000D7BD903B53355"
-      ],
-      "tasks": [
-        {
-          "id": "0004CBED568129B8",
-          "type": "item",
-          "item": "simplyswords:iron_longsword",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "0000A4C2925B489E"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，先挑一把愿意带出门的剑。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000291A8554013AD"
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "T2鉴定赏 · 武装任选一",
+          "id": "00084C9309A6C58D"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000E5D81491D4E72",
-      "title": "见闻·长柄选择",
+      "id": "00017A983966D659",
+      "title": "T2 · 兵器鉴定8项",
       "description": [
-        "【教学目标】认识长柄选择",
-        "【作业】持有铁矛1把",
-        "【提示】具体EF动作自己试，不按名称推断攻击距离",
-        "【讲评】冒险者，选择多了，准备就更从容。"
+        "【战略目标】在T2全鉴中完成8项不同兵器的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成8项T2兵器鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "simplyswords:iron_spear",
-      "subtitle": "可选作业",
-      "x": 5.0,
-      "y": 3.5,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t2.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 4.2,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "000D7BD903B53355"
+        "000AB9FE48B15774"
       ],
       "tasks": [
         {
-          "id": "00083DC216322A62",
-          "type": "item",
-          "item": "simplyswords:iron_spear",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "0009E864369EFE00",
+          "type": "custom",
+          "title": "累计完成8项T2兵器鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 60,
           "team_reward": false,
-          "id": "00010A70DA9E05FF"
+          "id": "000FF7D20373ECA5"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，选择多了，准备就更从容。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 16,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000E5E48A0ABD683"
+          "id": "0004C495632BB00B"
+        },
+        {
+          "type": "choice",
+          "table_id": 3998345419389569L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "格挡军资 · 任选一",
+          "id": "0007C5768E3A35A8"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000D73A25BAA11B8",
-      "title": "见闻·刺剑形态",
+      "id": "00045C9C8EDBA8BC",
+      "title": "T2 · 兵器鉴定16项",
       "description": [
-        "【教学目标】认识刺剑形态",
-        "【作业】持有铁刺剑1把",
-        "【提示】与长剑同属铁材起步，手感不靠纸面排名",
-        "【讲评】冒险者，轻巧的外形也值得一试。"
+        "【战略目标】在T2全鉴中完成16项不同兵器的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成16项T2兵器鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "simplyswords:iron_rapier",
-      "subtitle": "可选作业",
-      "x": 2.5,
-      "y": 3.5,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t2.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 8.4,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "000D7BD903B53355"
+        "00017A983966D659"
       ],
       "tasks": [
         {
-          "id": "0008CF6F2BD93FE3",
-          "type": "item",
-          "item": "simplyswords:iron_rapier",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "0005ED49F94B578C",
+          "type": "custom",
+          "title": "累计完成16项T2兵器鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 60,
           "team_reward": false,
-          "id": "00013A465E166C7F"
+          "id": "00094DE2C2305D83"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，轻巧的外形也值得一试。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 24,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0000BEE5B80B62BD"
+          "id": "000E0679592CB65C"
+        },
+        {
+          "type": "choice",
+          "table_id": 3880405831076903L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "远征行装 · 三选一",
+          "id": "000516E51AB14AE3"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0001993C2E7D29E0",
-      "title": "见闻·刀类形态",
+      "id": "000822A7F57A0C4C",
+      "title": "T2 · 甲胄鉴定3项",
       "description": [
-        "【教学目标】认识刀类形态",
-        "【作业】持有铁武士刀1把",
-        "【提示】配方查本包JEI，动作按当前适配体验",
-        "【讲评】冒险者，拿到手再决定它是否合用。"
+        "【战略目标】在T2全鉴中完成3项不同甲胄的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成3项T2甲胄鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "simplyswords:iron_katana",
-      "subtitle": "可选作业",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t2.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D7C80159DD290"
+      ],
+      "tasks": [
+        {
+          "id": "000B43A1E9BBE134",
+          "type": "custom",
+          "title": "累计完成3项T2甲胄鉴定；同一物品多把不会重复计数。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 60,
+          "team_reward": false,
+          "id": "000C5F7DCB50D31D"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 16,
+          "team_reward": false,
+          "id": "00096FC84DA1B3BE"
+        },
+        {
+          "type": "choice",
+          "table_id": 3998345419389569L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "格挡军资 · 任选一",
+          "id": "00012B5DCA26053B"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004D710D148AB02",
+      "title": "T2 · 甲胄鉴定6项",
+      "description": [
+        "【战略目标】在T2全鉴中完成6项不同甲胄的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成6项T2甲胄鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t2.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000822A7F57A0C4C"
+      ],
+      "tasks": [
+        {
+          "id": "000A07AE22C6B959",
+          "type": "custom",
+          "title": "累计完成6项T2甲胄鉴定；同一物品多把不会重复计数。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 60,
+          "team_reward": false,
+          "id": "00015D270220AE28"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 24,
+          "team_reward": false,
+          "id": "000A4C0494A93383"
+        },
+        {
+          "type": "choice",
+          "table_id": 3880405831076903L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "远征行装 · 三选一",
+          "id": "000457BAD3424901"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0000AB1583DD5394",
+      "title": "T1 · 兵器鉴定3项",
+      "description": [
+        "【战略目标】在T1全鉴中完成3项不同兵器的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成3项T1兵器鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t1.png"
+        }
+      },
+      "subtitle": "独立目标",
       "x": 0.0,
-      "y": 3.5,
+      "y": 4.2,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "000D7BD903B53355"
+        "000C7C5A19B09BC6"
       ],
       "tasks": [
         {
-          "id": "00081434FA3D9929",
-          "type": "item",
-          "item": "simplyswords:iron_katana",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "00042E0475A27CD2",
+          "type": "custom",
+          "title": "累计完成3项T1兵器鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 120,
           "team_reward": false,
-          "id": "000E279BE8B3AB60"
+          "id": "000802239897F219"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，拿到手再决定它是否合用。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 24,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00037731C2E72806"
+          "id": "000FA1BE881D50EB"
+        },
+        {
+          "type": "choice",
+          "table_id": 1913441203357833L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "T1鉴定赏 · 军械任选一",
+          "id": "0006D3D0D01C0F6A"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000BC8FF640BBDAA",
-      "title": "见闻·双头形态",
+      "id": "0004D7D24721D883",
+      "title": "T1 · 兵器鉴定8项",
       "description": [
-        "【教学目标】认识双头形态",
-        "【作业】持有铁双头刃1把",
-        "【提示】不因名字含“双”就承诺双倍伤害",
-        "【讲评】冒险者，新形态也是新的见闻。"
+        "【战略目标】在T1全鉴中完成8项不同兵器的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成8项T1兵器鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "simplyswords:iron_twinblade",
-      "subtitle": "可选作业",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t1.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000AB1583DD5394"
+      ],
+      "tasks": [
+        {
+          "id": "000E73DC06E79924",
+          "type": "custom",
+          "title": "累计完成8项T1兵器鉴定；同一物品多把不会重复计数。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 120,
+          "team_reward": false,
+          "id": "00072BA90AD5AC0F"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
+          "team_reward": false,
+          "id": "0007D5E917E9F2B2"
+        },
+        {
+          "type": "choice",
+          "table_id": 1835289380769457L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐技法 · 任选一",
+          "id": "000DB2FDFCAB8636"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00047F06CA9C87CD",
+      "title": "T1 · 兵器鉴定16项",
+      "description": [
+        "【战略目标】在T1全鉴中完成16项不同兵器的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成16项T1兵器鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t1.png"
+        }
+      },
+      "subtitle": "独立目标",
       "x": 0.0,
-      "y": 7.0,
+      "y": 12.600000000000001,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "000D7BD903B53355"
+        "0004D7D24721D883"
       ],
       "tasks": [
         {
-          "id": "00088E54636D284E",
-          "type": "item",
-          "item": "simplyswords:iron_twinblade",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "000A961AB318D869",
+          "type": "custom",
+          "title": "累计完成16项T1兵器鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 120,
           "team_reward": false,
-          "id": "0006B336BF87BE24"
+          "id": "0004CA0F3B36752C"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，新形态也是新的见闻。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000B46941D1C2CC8"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000E5272BCFF6A7F",
-      "title": "见闻·另一种长柄",
-      "description": [
-        "【教学目标】认识另一种长柄",
-        "【作业】持有铁战刃1把",
-        "【提示】区分外形、适配与自己的实战习惯",
-        "【讲评】冒险者，架子上又多了一种选择。"
-      ],
-      "icon": "simplyswords:iron_glaive",
-      "subtitle": "可选作业",
-      "x": 2.5,
-      "y": 7.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "000D7BD903B53355"
-      ],
-      "tasks": [
-        {
-          "id": "000D3B0C5B5EA764",
           "type": "item",
-          "item": "simplyswords:iron_glaive",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
+          "item": "kubejs:spore_coin",
+          "count": 72,
           "team_reward": false,
-          "id": "0004CF5C562239C3"
+          "id": "00025B0138851D19"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，架子上又多了一种选择。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "choice",
+          "table_id": 3723869106617882L,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0002E4D729EA379D"
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐军需 · 三选一",
+          "id": "0009DA78459F56FC"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000FC2F236CC36B5",
-      "title": "见闻·符文派生",
+      "id": "000759A90D48C465",
+      "title": "T1 · 甲胄鉴定1项",
       "description": [
-        "【教学目标】认识符文派生",
-        "【作业】持有符文长剑1把",
-        "【提示】下界合金同型底材＋符文石板＋钻石；可选长线收藏",
-        "【讲评】冒险者，熟悉的轮廓，也能有新的来历。"
+        "【战略目标】在T1全鉴中完成1项不同甲胄的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成1项T1甲胄鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "simplyswords:runic_longsword",
-      "subtitle": "可选作业",
-      "x": 5.0,
-      "y": 7.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "0004A9329C27BC37"
-      ],
-      "tasks": [
-        {
-          "id": "000A1A5E4DCFECE2",
-          "type": "item",
-          "item": "simplyswords:runic_longsword",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t1.png"
         }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "00059D3C0489295F"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，熟悉的轮廓，也能有新的来历。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0004590551B64687"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0000BF6CA5E158C7",
-      "title": "见闻·符文长柄",
-      "description": [
-        "【教学目标】认识符文长柄",
-        "【作业】持有符文矛1把",
-        "【提示】对应底材查JEI，不作为Ⅱ章必须装备",
-        "【讲评】冒险者，这把矛来自更长的一段准备。"
-      ],
-      "icon": "simplyswords:runic_spear",
-      "subtitle": "可选作业",
-      "x": 7.5,
-      "y": 7.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "0004A9329C27BC37"
-      ],
-      "tasks": [
-        {
-          "id": "000541EEEAB8C7E9",
-          "type": "item",
-          "item": "simplyswords:runic_spear",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "00026F59C50A7484"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这把矛来自更长的一段准备。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000D269831C68980"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000ECB13D43FEDF2",
-      "title": "见闻·刺剑派生",
-      "description": [
-        "【教学目标】认识刺剑派生",
-        "【作业】持有符文刺剑1把",
-        "【提示】凑材料不必暂停主线；随时回来补",
-        "【讲评】冒险者，收藏不需要赶路。"
-      ],
-      "icon": "simplyswords:runic_rapier",
-      "subtitle": "可选作业",
-      "x": 10.0,
-      "y": 7.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "0004A9329C27BC37"
-      ],
-      "tasks": [
-        {
-          "id": "00040D486E783784",
-          "type": "item",
-          "item": "simplyswords:runic_rapier",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000F3D4BE74464D4"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，收藏不需要赶路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000C92C874A1E530"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "00055F82D29F0F6C",
-      "title": "见闻·刀类派生",
-      "description": [
-        "【教学目标】认识刀类派生",
-        "【作业】持有符文武士刀1把",
-        "【提示】同型底材不可用任意铁刀替代",
-        "【讲评】冒险者，你已经会顺着配方找来路。"
-      ],
-      "icon": "simplyswords:runic_katana",
-      "subtitle": "可选作业",
-      "x": 12.5,
-      "y": 7.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "0004A9329C27BC37"
-      ],
-      "tasks": [
-        {
-          "id": "0009098C56EE8B16",
-          "type": "item",
-          "item": "simplyswords:runic_katana",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "0004430F6C3364D0"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你已经会顺着配方找来路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00012AD9D5D95D42"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000C305C0EEADC54",
-      "title": "见闻·双头派生",
-      "description": [
-        "【教学目标】认识双头派生",
-        "【作业】持有符文双头刃1把",
-        "【提示】不承诺比所有匠魂刀更强；先试手感",
-        "【讲评】冒险者，好兵器也要遇到合用的人。"
-      ],
-      "icon": "simplyswords:runic_twinblade",
-      "subtitle": "可选作业",
-      "x": 12.5,
-      "y": 10.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "0004A9329C27BC37"
-      ],
-      "tasks": [
-        {
-          "id": "00010B5D8FBC0F29",
-          "type": "item",
-          "item": "simplyswords:runic_twinblade",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000A7188B9F1FA22"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，好兵器也要遇到合用的人。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0001E6B0098E5F3F"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000AB239E90F8907",
-      "title": "见闻·符文重形态",
-      "description": [
-        "【教学目标】认识符文重形态",
-        "【作业】持有符文战刃1把",
-        "【提示】本节点只检测持有，不检测你是否亲手合成",
-        "【讲评】冒险者，又一种工艺被你留下了。"
-      ],
-      "icon": "simplyswords:runic_glaive",
-      "subtitle": "可选作业",
-      "x": 10.0,
-      "y": 10.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "0004A9329C27BC37"
-      ],
-      "tasks": [
-        {
-          "id": "000B4506E42576CA",
-          "type": "item",
-          "item": "simplyswords:runic_glaive",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000621FDC3918BF8"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，又一种工艺被你留下了。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00053F0DCAF4BE1D"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000BFB4794520425",
-      "title": "见闻·Boss直接战利品",
-      "description": [
-        "【教学目标】认识Boss直接战利品",
-        "【作业】持有地狱熔炉1件",
-        "【提示】巨兽实体掉落表可核；物品名不是新建炉作业",
-        "【讲评】冒险者，这件东西记着巨兽的余温。"
-      ],
-      "icon": "cataclysm:infernal_forge",
-      "subtitle": "可选作业",
-      "x": 7.5,
-      "y": 10.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "0005D8B2BE004BA4"
-      ],
-      "tasks": [
-        {
-          "id": "0000FB4DACF8A88D",
-          "type": "item",
-          "item": "cataclysm:infernal_forge",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000AC58C6915309B"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这件东西记着巨兽的余温。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0005484EDB6D557E"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000496EEB1EE8A7C",
-      "title": "见闻·遗迹战利品",
-      "description": [
-        "【教学目标】认识遗迹战利品",
-        "【作业】持有守卫拳套1件",
-        "【提示】末影守卫路线可选，不成为Ⅲ收官前置",
-        "【讲评】冒险者，另一条遗迹线也留下了印记。"
-      ],
-      "icon": "cataclysm:gauntlet_of_guard",
-      "subtitle": "可选作业",
-      "x": 5.0,
-      "y": 10.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "0005D8B2BE004BA4"
-      ],
-      "tasks": [
-        {
-          "id": "000E6BD88D253696",
-          "type": "item",
-          "item": "cataclysm:gauntlet_of_guard",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000FFEC805F8AF76"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，另一条遗迹线也留下了印记。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0005DE2DE23662A7"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0007016EA6AFECCF",
-      "title": "见闻·Boss材料合成",
-      "description": [
-        "【教学目标】认识Boss材料合成",
-        "【作业】持有凋灵肩炮1件",
-        "【提示】查witherite材料配方；不是Boss直接必掉整件",
-        "【讲评】冒险者，战利品也能成为工艺的起点。"
-      ],
-      "icon": "cataclysm:wither_assault_shoulder_weapon",
-      "subtitle": "可选作业",
-      "x": 2.5,
-      "y": 10.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00007C7E6B60D993",
-        "0005D8B2BE004BA4"
-      ],
-      "tasks": [
-        {
-          "id": "00024CE94D125260",
-          "type": "item",
-          "item": "cataclysm:wither_assault_shoulder_weapon",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 20,
-          "team_reward": false,
-          "id": "000B65659108F74F"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，战利品也能成为工艺的起点。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000881976337B4FF"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0007FDB24D3189E3",
-      "title": "见闻·同材不同用途",
-      "description": [
-        "【教学目标】认识同材不同用途",
-        "【作业】持有碎肉机1件",
-        "【提示】与肩炮各有配方；无需两件都做才继续",
-        "【讲评】冒险者，同一场战斗带来的选择不止一种。"
-      ],
-      "icon": "cataclysm:meat_shredder",
-      "subtitle": "可选作业",
+      },
+      "subtitle": "独立目标",
       "x": 0.0,
-      "y": 10.5,
+      "y": 8.4,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "0005D8B2BE004BA4"
+        "000C7C5A19B09BC6"
       ],
       "tasks": [
         {
-          "id": "000C5E362A57C72A",
-          "type": "item",
-          "item": "cataclysm:meat_shredder",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "000F5642E164CB15",
+          "type": "custom",
+          "title": "累计完成1项T1甲胄鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 120,
           "team_reward": false,
-          "id": "000FD820C3EC50C2"
+          "id": "000DC69595C1187C"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，同一场战斗带来的选择不止一种。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 24,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0005FDDE37A39AD7"
+          "id": "000C3A022E91028C"
+        },
+        {
+          "type": "choice",
+          "table_id": 1913441203357833L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "T1鉴定赏 · 军械任选一",
+          "id": "00080F3E0293777A"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000837D6A3EC8DB0",
-      "title": "见闻·火焰材料成品",
+      "id": "0003CB5EB40E8502",
+      "title": "T1 · 甲胄鉴定3项",
       "description": [
-        "【教学目标】认识火焰材料成品",
-        "【作业】持有焚化者1件",
-        "【提示】以当前ignitium配方为准，不复制原生稀有掉落奖励",
-        "【讲评】冒险者，火焰换了一种形态留在你手中。"
+        "【战略目标】在T1全鉴中完成3项不同甲胄的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成3项T1甲胄鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "cataclysm:the_incinerator",
-      "subtitle": "可选作业",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t1.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000759A90D48C465"
+      ],
+      "tasks": [
+        {
+          "id": "0007D98BEC0842EE",
+          "type": "custom",
+          "title": "累计完成3项T1甲胄鉴定；同一物品多把不会重复计数。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 120,
+          "team_reward": false,
+          "id": "000465ECE9CB7383"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
+          "team_reward": false,
+          "id": "000C2600652E8241"
+        },
+        {
+          "type": "choice",
+          "table_id": 1835289380769457L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐技法 · 任选一",
+          "id": "000A5648DB29721E"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0002B61913D07E51",
+      "title": "T1 · 甲胄鉴定6项",
+      "description": [
+        "【战略目标】在T1全鉴中完成6项不同甲胄的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成6项T1甲胄鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t1.png"
+        }
+      },
+      "subtitle": "独立目标",
       "x": 0.0,
-      "y": 14.0,
+      "y": 16.8,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "0005D8B2BE004BA4"
+        "0003CB5EB40E8502"
       ],
       "tasks": [
         {
-          "id": "0005D5C42E4DBB18",
-          "type": "item",
-          "item": "cataclysm:the_incinerator",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "00049439B4801A04",
+          "type": "custom",
+          "title": "累计完成6项T1甲胄鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 120,
           "team_reward": false,
-          "id": "00072AAD5EF0D2CA"
+          "id": "000818A2B391E6B2"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，火焰换了一种形态留在你手中。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 72,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00084AEC18E9796C"
+          "id": "000315441B7DC10F"
+        },
+        {
+          "type": "choice",
+          "table_id": 3723869106617882L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐军需 · 三选一",
+          "id": "000D4D0C086D8184"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000A0937957C0390",
-      "title": "见闻·诅咒材料成品",
+      "id": "000D275B8A100B23",
+      "title": "T0 · 兵器鉴定3项",
       "description": [
-        "【教学目标】认识诅咒材料成品",
-        "【作业】持有灵魂撕裂者1件",
-        "【提示】被诅咒者若留终局，此项Ⅲ只可见、可延后；不为收藏强迫提前刷最终候选",
-        "【讲评】冒险者，晚些收下，也不算错过。"
+        "【战略目标】在T0全鉴中完成3项不同兵器的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成3项T0兵器鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "cataclysm:soul_render",
-      "subtitle": "可选作业",
-      "x": 2.5,
-      "y": 14.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 12.600000000000001,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "0005D8B2BE004BA4"
+        "00093BB83A1CFA2D"
       ],
       "tasks": [
         {
-          "id": "000101B0D089E7FD",
-          "type": "item",
-          "item": "cataclysm:soul_render",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "0008B8B012BDE25E",
+          "type": "custom",
+          "title": "累计完成3项T0兵器鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 240,
           "team_reward": false,
-          "id": "00069B5CAB212C05"
+          "id": "0006442FBFE5BD5E"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，晚些收下，也不算错过。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 64,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00094D942DED9143"
+          "id": "000F9194C4EE168B"
+        },
+        {
+          "type": "choice",
+          "table_id": 1703173767153712L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "T0鉴定赏 · 君王军资任选一",
+          "id": "0000DCDA7BE5E10E"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0009B2366C39ABD3",
-      "title": "见闻·魂系普通合成",
+      "id": "000A6412382301B5",
+      "title": "T0 · 兵器鉴定8项",
       "description": [
-        "【教学目标】认识魂系普通合成",
-        "【作业】持有古达斧枪1件",
-        "【提示】实体击杀与取得武器是两项事实；按JEI筹魂",
-        "【讲评】冒险者，名字熟悉了，兵器也有了来路。"
+        "【战略目标】在T0全鉴中完成8项不同兵器的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成8项T0兵器鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "slu:gundyr_axespear",
-      "subtitle": "可选作业",
-      "x": 5.0,
-      "y": 14.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 16.8,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "00083052EF81988F"
+        "000D275B8A100B23"
       ],
       "tasks": [
         {
-          "id": "00020E18B0040953",
-          "type": "item",
-          "item": "slu:gundyr_axespear",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "00011DA0A28CD5C4",
+          "type": "custom",
+          "title": "累计完成8项T0兵器鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 240,
           "team_reward": false,
-          "id": "000AF838D09C17BA"
+          "id": "000714868C24FD26"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，名字熟悉了，兵器也有了来路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 128,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000B9FE49A117280"
+          "id": "000D087791EBBB57"
+        },
+        {
+          "type": "choice",
+          "table_id": 2286807384712760L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "王权技法 · 任选一",
+          "id": "0002D7F43D252DA0"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "00063DA1A2A8D2C9",
-      "title": "见闻·另一种魂武",
+      "id": "0000167B2D658A56",
+      "title": "T0 · 兵器鉴定16项",
       "description": [
-        "【教学目标】认识另一种魂武",
-        "【作业】持有玛尔基特法杖1件",
-        "【提示】不据“法杖”保证其绕过地面Boss远程规则",
-        "【讲评】冒险者，收藏与打法仍由你分别选择。"
+        "【战略目标】在T0全鉴中完成16项不同兵器的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成16项T0兵器鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "slu:margit_wand",
-      "subtitle": "可选作业",
-      "x": 7.5,
-      "y": 14.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 16.8,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "00083052EF81988F"
+        "000A6412382301B5"
       ],
       "tasks": [
         {
-          "id": "0005F86E12C3E41E",
-          "type": "item",
-          "item": "slu:margit_wand",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "000A6B7A42EC91EA",
+          "type": "custom",
+          "title": "累计完成16项T0兵器鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 240,
           "team_reward": false,
-          "id": "000907D1208F456E"
+          "id": "000725D95699315A"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，收藏与打法仍由你分别选择。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 192,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000A3897B2F9FD1E"
+          "id": "000643E31796DE85"
+        },
+        {
+          "type": "choice",
+          "table_id": 1703173767153712L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "T0鉴定赏 · 君王军资任选一",
+          "id": "000E55DDBC1650C6"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000E5674610DAF6C",
-      "title": "见闻·高阶魂材料",
+      "id": "000338AC6912B502",
+      "title": "T0 · 甲胄鉴定1项",
       "description": [
-        "【教学目标】认识高阶魂材料",
-        "【作业】持有月光剑1件",
-        "【提示】配方用骑士之魂Ⅲ；48币的基础魂不能直接当Ⅲ",
-        "【讲评】冒险者，你已经会分清材料的同名层次。"
+        "【战略目标】在T0全鉴中完成1项不同甲胄的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成1项T0甲胄鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "slu:moonlight_sword",
-      "subtitle": "可选作业",
-      "x": 10.0,
-      "y": 14.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 12.600000000000001,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "00083052EF81988F"
+        "00093BB83A1CFA2D"
       ],
       "tasks": [
         {
-          "id": "000B796592276DE8",
-          "type": "item",
-          "item": "slu:moonlight_sword",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "0002409D2C66D9B8",
+          "type": "custom",
+          "title": "累计完成1项T0甲胄鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 240,
           "team_reward": false,
-          "id": "000DA98094F06F72"
+          "id": "000703DAA3BC4792"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你已经会分清材料的同名层次。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 64,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00082E1EA87397CE"
+          "id": "000FF40CE330262D"
+        },
+        {
+          "type": "choice",
+          "table_id": 1703173767153712L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "T0鉴定赏 · 君王军资任选一",
+          "id": "0000DFFC337BBFFD"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0001E84653AA8251",
-      "title": "区分武器收藏与最终战定位",
+      "id": "000BCFD1A34DB9AB",
+      "title": "T0 · 甲胄鉴定2项",
       "description": [
-        "【教学目标】区分武器收藏与最终战定位",
-        "【作业】持有薪王化身之剑1件",
-        "【提示】此武器收藏不把薪王化身恢复为终局Boss",
-        "【讲评】冒险者，一件藏品，不必承担最后一战。"
+        "【战略目标】在T0全鉴中完成2项不同甲胄的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成2项T0甲胄鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "slu:soul_of_cinder_sword",
-      "subtitle": "可选作业",
-      "x": 12.5,
-      "y": 14.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 16.8,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "00083052EF81988F"
+        "000338AC6912B502"
       ],
       "tasks": [
         {
-          "id": "000617A699E00377",
-          "type": "item",
-          "item": "slu:soul_of_cinder_sword",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "000C0F28ECAA7A2D",
+          "type": "custom",
+          "title": "累计完成2项T0甲胄鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 240,
           "team_reward": false,
-          "id": "0003D85C61F9315D"
+          "id": "0000741FA6F258AF"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，一件藏品，不必承担最后一战。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 128,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0001A2A6DA63F3A5"
+          "id": "00080E0790A15107"
+        },
+        {
+          "type": "choice",
+          "table_id": 2286807384712760L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "王权技法 · 任选一",
+          "id": "0002130C5E11F8E7"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0008B26F7B3955B9",
-      "title": "见闻·另一条末期配方",
+      "id": "000B15ECDAF452FC",
+      "title": "T0 · 甲胄鉴定3项",
       "description": [
-        "【教学目标】认识另一条末期配方",
-        "【作业】持有薪王大剑1件",
-        "【提示】普通配方成品与传说奖励候选不要混淆",
-        "【讲评】冒险者，看清来路，才能安排自己的材料。"
+        "【战略目标】在T0全鉴中完成3项不同甲胄的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成3项T0甲胄鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "slu:cinder_king_greatsword",
-      "subtitle": "可选作业",
-      "x": 12.5,
-      "y": 17.5,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t0.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 21.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "00083052EF81988F"
+        "000BCFD1A34DB9AB"
       ],
       "tasks": [
         {
-          "id": "00031CA219A6E9D2",
-          "type": "item",
-          "item": "slu:cinder_king_greatsword",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "id": "000782745BCCA2C0",
+          "type": "custom",
+          "title": "累计完成3项T0甲胄鉴定；同一物品多把不会重复计数。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 20,
+          "xp": 240,
           "team_reward": false,
-          "id": "000F5CB8421B44DC"
+          "id": "000B7AA85C498DBA"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，看清来路，才能安排自己的材料。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 192,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0002930B8F7DF99A"
+          "id": "000C8FBF22DFE2E2"
+        },
+        {
+          "type": "choice",
+          "table_id": 1703173767153712L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "T0鉴定赏 · 君王军资任选一",
+          "id": "000682AC7F816A6D"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000561B165109B1F",
-      "title": "见闻·末期多魂合成",
+      "id": "000D7C80159DD290",
+      "title": "T2 · 甲胄鉴定1项",
       "description": [
-        "【教学目标】认识末期多魂合成",
-        "【作业】持有大审判剑1件",
-        "【提示】巨人之魂Ⅲ＋骑士之魂Ⅲ＋minecraft_lord_soul；仍可选，不必为此清所有SLU",
-        "【讲评】冒险者，这一件，记着更远的试炼。"
+        "【战略目标】在T2全鉴中完成1项不同甲胄的实际取得，形成一套有深度的战备资产。",
+        "【讨伐作业】累计完成1项T2甲胄鉴定；同一物品多把不会重复计数。",
+        "【情报与机制】护甲系列按本项全部列出部件计1项，可分次取得；不强迫同时穿戴，也不要求同时装满背包。",
+        "【掠夺战果】领取该档赏格，继续补强下一段主线。"
       ],
-      "icon": "slu:grand_trial_sword",
-      "subtitle": "可选作业",
-      "x": 10.0,
-      "y": 17.5,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/t2.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 4.2,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00007C7E6B60D993",
-        "00083052EF81988F"
+        "0002E0C48F4AC3D8"
       ],
       "tasks": [
         {
-          "id": "000D19D3EB7AA4CE",
+          "id": "0006B4DCE70D3A37",
+          "type": "custom",
+          "title": "累计完成1项T2甲胄鉴定；同一物品多把不会重复计数。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 60,
+          "team_reward": false,
+          "id": "0008F4A849FC7168"
+        },
+        {
           "type": "item",
-          "item": "slu:grand_trial_sword",
-          "count": 1L,
-          "consume_items": false,
-          "match_nbt": false
+          "item": "kubejs:spore_coin",
+          "count": 8,
+          "team_reward": false,
+          "id": "0008C69D7C3D6B51"
+        },
+        {
+          "type": "choice",
+          "table_id": 1148190515466627L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "T2鉴定赏 · 武装任选一",
+          "id": "000D743E1520B4EE"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CAE68253D046A",
+      "title": "遗珍鉴定 · 3种",
+      "description": [
+        "【战略目标】让功能饰品覆盖不同远征需求，而不是重复堆同一种。",
+        "【讨伐作业】完成3种不同遗珍的持有鉴定。",
+        "【情报与机制】重复取得同一件不叠加计数；奖励为功能选择，原生效果和槽位不变。",
+        "【掠夺战果】奖励支援远征或下一次首领挑战。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/relic.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0002F2DDED1C9F14"
+      ],
+      "tasks": [
+        {
+          "id": "000B0903B8CE8E9F",
+          "type": "custom",
+          "title": "完成3种不同遗珍的持有鉴定。"
         }
       ],
       "rewards": [
@@ -1664,24 +1367,248 @@
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "0008F9476D5EC929"
+          "id": "000CAC8E94A2D590"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这一件，记着更远的试炼。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 16,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000982DE93D46C45"
+          "id": "0001880DF2E2140E"
+        },
+        {
+          "type": "choice",
+          "table_id": 3880405831076903L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "远征行装 · 三选一",
+          "id": "000A663705FE2C10"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CD3A6D2AFEEDC",
+      "title": "遗珍鉴定 · 8种",
+      "description": [
+        "【战略目标】让功能饰品覆盖不同远征需求，而不是重复堆同一种。",
+        "【讨伐作业】完成8种不同遗珍的持有鉴定。",
+        "【情报与机制】重复取得同一件不叠加计数；奖励为功能选择，原生效果和槽位不变。",
+        "【掠夺战果】奖励支援远征或下一次首领挑战。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/relic.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CAE68253D046A"
+      ],
+      "tasks": [
+        {
+          "id": "0006B8101082C8C8",
+          "type": "custom",
+          "title": "完成8种不同遗珍的持有鉴定。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0000A3098BC1C3BF"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 32,
+          "team_reward": false,
+          "id": "000F45E264085BCC"
+        },
+        {
+          "type": "choice",
+          "table_id": 3880405831076903L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "远征行装 · 三选一",
+          "id": "000FDD330DB12500"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000AAEB69F1544B6",
+      "title": "遗珍鉴定 · 16种",
+      "description": [
+        "【战略目标】让功能饰品覆盖不同远征需求，而不是重复堆同一种。",
+        "【讨伐作业】完成16种不同遗珍的持有鉴定。",
+        "【情报与机制】重复取得同一件不叠加计数；奖励为功能选择，原生效果和槽位不变。",
+        "【掠夺战果】奖励支援远征或下一次首领挑战。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/relic.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 16.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CD3A6D2AFEEDC"
+      ],
+      "tasks": [
+        {
+          "id": "00023F52084DB74D",
+          "type": "custom",
+          "title": "完成16种不同遗珍的持有鉴定。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0002507BDA152578"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
+          "team_reward": false,
+          "id": "000C9DC96B61C77F"
+        },
+        {
+          "type": "choice",
+          "table_id": 3723869106617882L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐军需 · 三选一",
+          "id": "0002E33A14035ECC"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D1A343506AAE3",
+      "title": "收藏家毕业 · 武库服务王座",
+      "description": [
+        "【战略目标】武库已经覆盖神兵、甲胄与功能遗珍。它的价值在于让你能够应对不同敌人，而不是逼你清空所有名录。",
+        "【讨伐作业】完成顶阶兵器8项、顶阶甲胄3项、不同遗珍8种的鉴定里程碑。",
+        "【情报与机制】毕业不要求全收集；主线也不会反过来以本项毕业为门槛。",
+        "【掠夺战果】君王武库成形。领取高阶军资，回到总攻与齐天终章。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 把准星移向天外\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000BFF45CB80C337\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/crown.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 21.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000A6412382301B5",
+        "000B15ECDAF452FC",
+        "000CD3A6D2AFEEDC"
+      ],
+      "tasks": [
+        {
+          "id": "0004D21BE7803215",
+          "type": "custom",
+          "title": "完成顶阶兵器8项、顶阶甲胄3项、不同遗珍8种的鉴定里程碑。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000D88A2D892FCDC"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 160,
+          "team_reward": false,
+          "id": "000A9CA531CFF93A"
+        },
+        {
+          "type": "choice",
+          "table_id": 4452643188409579L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "武库毕业赏 · 王权兵器任选一",
+          "id": "000443AECF684F7A"
+        },
+        {
+          "type": "choice",
+          "table_id": 2286807384712760L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "王权技法 · 任选一",
+          "id": "0007496EC83BFD72"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    }
+  ],
+  "images": [
+    {
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/arsenal.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "收藏家 · 君王武库"
+      ],
+      "click": "",
+      "dev": false,
+      "corner": false
     }
   ]
 }

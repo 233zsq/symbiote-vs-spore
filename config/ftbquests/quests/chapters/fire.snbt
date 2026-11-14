@@ -1,0 +1,866 @@
+{
+  "id": "00097688079CFB72",
+  "filename": "fire",
+  "title": "&6Ⅲ甲 · 掠夺焚世劫火&r",
+  "group": "0002FB0079E64484",
+  "order_index": 3,
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/flame.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "000732027C060895",
+      "title": "普通火药烧不完菌潮",
+      "description": [
+        "【战略目标】感染已经爬进军营、医院和实验室。你要取走的不是又一把普通火剑，而是旧防线一直没能守住的原初火种。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】先反杀追来的猎手，再连续突破狱火骑士、炼狱飞龙与原初受火者；劫火的战斗运用单列，不用阅读假装赋能所有炮塔。",
+        "【掠夺战果】下一项就是本战区的第一步行动。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/command.png"
+        }
+      },
+      "subtitle": "",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000E592E73C450C1"
+      ],
+      "tasks": [
+        {
+          "id": "00008A10389D0B03",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F807ABE00A450",
+      "title": "猎人也能成为猎物",
+      "description": [
+        "【战略目标】重火力要塞引来了旧时代的猎魔人。布莱德将你与共生体当成异端；你要用他的失败宣布新的狩猎秩序。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】这场人形交锋检验身法与收招，奖励接续格挡、耐力与战斗饰品整备。",
+        "【掠夺战果】情报已展开。按下一项目标找到并战胜赤色猎手·布莱德。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/flame.png"
+        }
+      },
+      "subtitle": "",
+      "x": 10.2,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00013D0BB6D5F704"
+      ],
+      "tasks": [
+        {
+          "id": "000E893F193F0D92",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F36675E7E7730",
+      "title": "M09 · 猎人与猎物 · 赤色猎手·布莱德",
+      "description": [
+        "【战略目标】重火力要塞引来了旧时代的猎魔人。布莱德将你与共生体当成异端；你要用他的失败宣布新的狩猎秩序。 猎魔人向天外生命举刀，你要让他明白，这片疆土已经有了新的猎人。",
+        "【讨伐作业】击败赤色猎手·布莱德1次。",
+        "【情报与机制】人形决斗先稳定视角，观察连段方向与追击。不要在失去锁定后盲目连按；先重新取得站位，再用熟悉的一套短连段夺回主动。",
+        "【掠夺战果】这场人形交锋检验身法与收招，奖励接续格挡、耐力与战斗饰品整备。",
+        "",
+        "&6远征入口&r",
+        "猎手挑战入口。",
+        "先准备往返路线、食物与维修物资，再接近首领。",
+        "",
+        "&6作战情报&r",
+        "人形决斗先稳定视角，观察连段方向与追击。不要在失去锁定后盲目连按；先重新取得站位，再用熟悉的一套短连段夺回主动。",
+        "",
+        "&6战果转用&r",
+        "这场人形交锋检验身法与收招，奖励接续格挡、耐力与战斗饰品整备。",
+        "战场原生掉落自行拾取；下一项军需结算另行领取。"
+      ],
+      "icon": "nightfall_invade:disaster_fragment_red",
+      "subtitle": "猎手挑战入口",
+      "x": 13.6,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F807ABE00A450"
+      ],
+      "tasks": [
+        {
+          "id": "000DC1B7F845711E",
+          "type": "kill",
+          "entity": "nightfall_invade:scarlet_hunter",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 132,
+          "team_reward": false,
+          "id": "000F54005B033BED"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D42C4030BBEEE",
+      "title": "把猎人的技法编入新军",
+      "description": [
+        "【战略目标】追杀者已经倒下，猎杀与被猎杀的身份由你重写。",
+        "【讨伐作业】上一场正式胜利完成后自动结算本次战果。",
+        "【情报与机制】先补齐防护和技能，再连续突破骑士、飞龙与受火者三道夺火战位。",
+        "【掠夺战果】军资已拨付；下一项继续征伐，相关支线可自行选择。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 合作 · 驾驭异星之力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"0000FB5E13CDE8A9\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/flame.png"
+        }
+      },
+      "subtitle": "",
+      "x": 13.6,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F36675E7E7730"
+      ],
+      "tasks": [
+        {
+          "id": "000BF68E762A7FA7",
+          "type": "custom",
+          "title": "上一场正式胜利完成后自动结算本次战果。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "00092069F32B2762"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 30,
+          "team_reward": false,
+          "id": "000C379EAB6F5101"
+        },
+        {
+          "type": "choice",
+          "table_id": 1835289380769457L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐技法 · 任选一",
+          "id": "0005FBF7593B039D"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0007B7E973F2A8B3",
+      "title": "撕开焦土第一道防线",
+      "description": [
+        "【战略目标】原初火种不在凡俗的熔炉里。通往它的焦土入口，由一位狱火重甲骑士把守。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】准备自己的火焰防护。战后赏赐提供下一战补给，原生抗火机制仍以物品效果为准。",
+        "【掠夺战果】情报已展开。按下一项目标找到并战胜下界骑士·赫尔瓦。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/flame.png"
+        }
+      },
+      "subtitle": "",
+      "x": 10.2,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D42C4030BBEEE"
+      ],
+      "tasks": [
+        {
+          "id": "00002F9F025D5C45",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000701E2BD6E9064",
+      "title": "M10 · 撕开焦土防线 · 下界骑士·赫尔瓦",
+      "description": [
+        "【战略目标】原初火种不在凡俗的熔炉里。通往它的焦土入口，由一位狱火重甲骑士把守。 狱火骑士守着夺火远征的第一道门。先拆开重甲，再追向门后的龙焰。",
+        "【讨伐作业】击败下界骑士·赫尔瓦1次。",
+        "【情报与机制】下界远征先准备返回路线和可持续补给。面对重甲骑士，试探武器收招与移动的间隔，别让一次进攻耗光所有耐力。",
+        "【掠夺战果】准备自己的火焰防护。战后赏赐提供下一战补给，原生抗火机制仍以物品效果为准。",
+        "",
+        "&6远征入口&r",
+        "冥界竞技场。",
+        "先准备往返路线、食物与维修物资，再接近首领。",
+        "",
+        "&6作战情报&r",
+        "下界远征先准备返回路线和可持续补给。面对重甲骑士，试探武器收招与移动的间隔，别让一次进攻耗光所有耐力。",
+        "",
+        "&6战果转用&r",
+        "准备自己的火焰防护。战后赏赐提供下一战补给，原生抗火机制仍以物品效果为准。",
+        "战场原生掉落自行拾取；下一项军需结算另行领取。"
+      ],
+      "icon": "block_factorys_bosses:knight_sword",
+      "subtitle": "冥界竞技场",
+      "x": 6.8,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007B7E973F2A8B3"
+      ],
+      "tasks": [
+        {
+          "id": "000B634E02B823A1",
+          "type": "kill",
+          "entity": "block_factorys_bosses:underworld_knight",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 140,
+          "team_reward": false,
+          "id": "000D1D875F515C90"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000A64BDB4AC603D",
+      "title": "穿过狱火门槛",
+      "description": [
+        "【战略目标】焦土第一道防线崩塌。你还要面对火龙与受火者，先领取防火方向的军需。",
+        "【讨伐作业】上一场正式胜利完成后自动结算本次战果。",
+        "【情报与机制】根据现有配装选择黑曜石头骨或消耗补给，读清原生效果，再迎接炼狱飞龙。",
+        "【掠夺战果】军资已拨付；下一项继续征伐，相关支线可自行选择。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 把研发变成可用资产\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E7C9023C8A1A9\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/flame.png"
+        }
+      },
+      "subtitle": "",
+      "x": 3.4,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000701E2BD6E9064"
+      ],
+      "tasks": [
+        {
+          "id": "00062A9827AFF129",
+          "type": "custom",
+          "title": "上一场正式胜利完成后自动结算本次战果。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "00097FF86DF521E7"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:golden_carrot",
+          "count": 12,
+          "team_reward": false,
+          "id": "0003E540AEBED659"
+        },
+        {
+          "type": "choice",
+          "table_id": 1319222051403521L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "夺火整备 · 二选一",
+          "id": "000398C923B6B3EF"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000A5D4D5D0B9E4B",
+      "title": "把狱火龙心装进军资箱",
+      "description": [
+        "【战略目标】骑士之后，是失控的炼狱飞龙。它堵住了最后一段夺火道路，只有击落它，才能直面控火半神。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】不必为主线杀死自己养成的圣龙：这里是独立首领，狩龙支线继续尊重驯养与狩猎两种路线。",
+        "【掠夺战果】情报已展开。按下一项目标找到并战胜炼狱飞龙·阿什洛德。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/flame.png"
+        }
+      },
+      "subtitle": "",
+      "x": 0.0,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000A64BDB4AC603D"
+      ],
+      "tasks": [
+        {
+          "id": "000453B5F3B96C73",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003110B421EB269",
+      "title": "M11 · 狱火龙心 · 炼狱飞龙·阿什洛德",
+      "description": [
+        "【战略目标】骑士之后，是失控的炼狱飞龙。它堵住了最后一段夺火道路，只有击落它，才能直面控火半神。 失控的飞龙把焦土当作自己的猎场。夺下龙心，原初火种就不再有屏障。",
+        "【讨伐作业】击败炼狱飞龙·阿什洛德1次。",
+        "【情报与机制】抬头观察与地面退路要同时保留。按目标当时的飞行、接地和水中状态选择远程手段；场地着火时先撤离危险区域，再继续输出。",
+        "【掠夺战果】不必为主线杀死自己养成的圣龙：这里是独立首领，狩龙支线继续尊重驯养与狩猎两种路线。",
+        "",
+        "&6远征入口&r",
+        "炼狱龙塔。",
+        "先准备往返路线、食物与维修物资，再接近首领。",
+        "",
+        "&6作战情报&r",
+        "抬头观察与地面退路要同时保留。按目标当时的飞行、接地和水中状态选择远程手段；场地着火时先撤离危险区域，再继续输出。",
+        "",
+        "&6战果转用&r",
+        "不必为主线杀死自己养成的圣龙：这里是独立首领，狩龙支线继续尊重驯养与狩猎两种路线。",
+        "战场原生掉落自行拾取；下一项军需结算另行领取。"
+      ],
+      "icon": "block_factorys_bosses:dragon_bone",
+      "subtitle": "炼狱龙塔",
+      "x": 0.0,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000A5D4D5D0B9E4B"
+      ],
+      "tasks": [
+        {
+          "id": "000459C25DBB9EFB",
+          "type": "kill",
+          "entity": "block_factorys_bosses:infernal_dragon",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 148,
+          "team_reward": false,
+          "id": "000413D713E480A0"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008D245EF9C7927",
+      "title": "龙焰之后，直取原初",
+      "description": [
+        "【战略目标】火龙已经被击落，原初受火者不再有第二道屏障。",
+        "【讨伐作业】上一场正式胜利完成后自动结算本次战果。",
+        "【情报与机制】领取高温材料和军资，修好主武器，下一项直面火种掌控者。",
+        "【掠夺战果】军资已拨付；下一项继续征伐，相关支线可自行选择。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 高温准备\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000646F278C9C549\"}}",
+        "{\"text\": \"→ 先学相处\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000B30965EA23E9E\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/flame.png"
+        }
+      },
+      "subtitle": "",
+      "x": 3.4,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003110B421EB269"
+      ],
+      "tasks": [
+        {
+          "id": "000095210373E6DE",
+          "type": "custom",
+          "title": "上一场正式胜利完成后自动结算本次战果。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000BE75197311DA6"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:manyullyn_ingot",
+          "count": 4,
+          "team_reward": false,
+          "id": "00084CE837E92D72"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 32,
+          "team_reward": false,
+          "id": "00053AD4EBF151DF"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D57C6FE184416",
+      "title": "原初之火不再属于旧神",
+      "description": [
+        "【战略目标】你已经跨过重甲与龙焰。现在握住这场远征真正的目标，把旧纪元没能守住的火种从受火者掌中夺走。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】火种战果结算后进入诸王战区；劫火实战将在要塞支线开放。",
+        "【掠夺战果】情报已展开。按下一项目标找到并战胜原初受火者。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/flame.png"
+        }
+      },
+      "subtitle": "",
+      "x": 6.8,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0008D245EF9C7927"
+      ],
+      "tasks": [
+        {
+          "id": "000478BFC1D3B5DB",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BFC82E80A6117",
+      "title": "M12 · 夺取原初之火 · 原初受火者",
+      "description": [
+        "【战略目标】你已经跨过重甲与龙焰。现在握住这场远征真正的目标，把旧纪元没能守住的火种从受火者掌中夺走。 旧纪元曾借他的火对抗天灾，却没能留下胜利。你会把火种与军团一同带到母巢面前。",
+        "【讨伐作业】击败原初受火者1次。",
+        "【情报与机制】先留出横向移动与撤离的空间，再寻找法术间隙切入；不要把全部耐力消耗在第一轮进攻。",
+        "【掠夺战果】火种战果结算后进入诸王战区；劫火实战将在要塞支线开放。",
+        "",
+        "&6远征入口&r",
+        "原初受火者挑战线索。",
+        "先准备往返路线、食物与维修物资，再接近首领。",
+        "",
+        "&6作战情报&r",
+        "先留出横向移动与撤离的空间，再寻找法术间隙切入；不要把全部耐力消耗在第一轮进攻。",
+        "",
+        "&6战果转用&r",
+        "火种战果结算后进入诸王战区；劫火实战将在要塞支线开放。",
+        "战场原生掉落自行拾取；下一项军需结算另行领取。"
+      ],
+      "icon": "irons_spellbooks:cinder_essence",
+      "subtitle": "原初受火者挑战线索",
+      "x": 10.2,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D57C6FE184416"
+      ],
+      "tasks": [
+        {
+          "id": "0008A3DDB5E35C43",
+          "type": "kill",
+          "entity": "irons_spellbooks:fire_boss",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 156,
+          "team_reward": false,
+          "id": "00065880422EEF6E"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008693A71D5F8CC",
+      "title": "火种入库，进入夺权战",
+      "description": [
+        "【战略目标】原初火种已成为你的战略战果。把它与现有军工防线结合，是另一项需要实战验证的作业。",
+        "【讨伐作业】上一场正式胜利完成后自动结算本次战果。",
+        "【情报与机制】劫火实战目标当前未开放。先收好这笔战果，再向圣堂、死亡、永昼与时间的王座推进。",
+        "【掠夺战果】军资已拨付；下一项继续征伐，相关支线可自行选择。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 军工 · 将劫火用于实战\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E8A76697B8481\"}}",
+        "{\"text\": \"→ T1赏格 · 精锐武装\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000C7C5A19B09BC6\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/flame.png"
+        }
+      },
+      "subtitle": "",
+      "x": 13.6,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000BFC82E80A6117"
+      ],
+      "tasks": [
+        {
+          "id": "000EF3A844F618F1",
+          "type": "custom",
+          "title": "上一场正式胜利完成后自动结算本次战果。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "0008CC929B5CB7DB"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 40,
+          "team_reward": false,
+          "id": "000274ED9FDC71B5"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:hepatizon_ingot",
+          "count": 4,
+          "team_reward": false,
+          "id": "0001D866756B0E98"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00013D0BB6D5F704",
+      "title": "感染已爬进旧军营",
+      "description": [
+        "【战略目标】侦察感染军营，找出普通守备火力已经失守的证据。这将成为你夺取原初之火的出发点。",
+        "【讨伐作业】抵达真菌军营结构范围。",
+        "【情报与机制】到访只记录侦察，不表示清场；真菌设施支线继续扩展到监狱、医院与实验室。",
+        "【掠夺战果】旧防线的火力不足，你将去拿足以焚巢的火种。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 失守设施，仍有军资可取\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000F73975B58B86C\"}}"
+      ],
+      "icon": "kubejs:spore_coin",
+      "subtitle": "",
+      "x": 6.8,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000732027C060895"
+      ],
+      "tasks": [
+        {
+          "id": "0002DD0E5CFE9CA4",
+          "type": "structure",
+          "structure": "spore:military_camp"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000789AAF4497F6F"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00093CE5A72B89DF"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000FC442CC3C2E22",
+      "title": "劫火入库 · 王权仍待征服",
+      "description": [
+        "【战略目标】原初火种已经夺得，但诸王还各自锁住疆域。你要把圣堂、死亡、永昼与时间一并纳入新王的战果。",
+        "【讨伐作业】夺火战三位首领完成并结算后自动完成。",
+        "【情报与机制】劫火实战另见要塞支线；本项只结算征伐战果。",
+        "【掠夺战果】进入诸王神权战区。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/command.png"
+        }
+      },
+      "subtitle": "",
+      "x": 13.6,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0008693A71D5F8CC"
+      ],
+      "tasks": [
+        {
+          "id": "00009FA8A1812741",
+          "type": "custom",
+          "title": "夺火战三位首领完成并结算后自动完成。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0002F5BD81C65819"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 32,
+          "team_reward": false,
+          "id": "000A53D25F63F41F"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00054C322520B74B",
+      "title": "武库增援 · 精锐兵装支援夺火",
+      "description": [
+        "【战略目标】兵器与护甲的鉴定已经形成精锐储备。军需官为夺火远征增拨一份防护方案。",
+        "【讨伐作业】对应支线成果与主线战区均已开放后自动结算。",
+        "【情报与机制】增援为可选收益；下一场主线不要求等齐所有增援。",
+        "【掠夺战果】领取军资后继续本战区征伐。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 普通火药烧不完菌潮\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000732027C060895\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/fortress.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000AB1583DD5394",
+        "000759A90D48C465",
+        "000E592E73C450C1"
+      ],
+      "tasks": [
+        {
+          "id": "000903E4E2075A25",
+          "type": "custom",
+          "title": "对应支线成果与主线战区均已开放后自动结算。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000C1CD227B62774"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 32,
+          "team_reward": false,
+          "id": "0000BE058DE22E51"
+        },
+        {
+          "type": "choice",
+          "table_id": 1319222051403521L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "夺火整备 · 二选一",
+          "id": "000BC23155CBE03A"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    }
+  ],
+  "images": [
+    {
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/flame.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "Ⅲ甲 · 掠夺焚世劫火"
+      ],
+      "click": "",
+      "dev": false,
+      "corner": false
+    }
+  ]
+}

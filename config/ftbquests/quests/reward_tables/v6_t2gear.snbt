@@ -1,0 +1,29 @@
+{
+  "id": "00041445EFCF1183",
+  "title": "T2鉴定赏 · 武装任选一",
+  "loot_size": 1,
+  "order_index": 10,
+  "rewards": [
+    {
+      "id": "000E8AB2FC112B1B",
+      "type": "item",
+      "item": "simplyswords:iron_longsword",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "00093FD76E77D0D2",
+      "type": "item",
+      "item": "simplyswords:iron_spear",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "000BD094B401B104",
+      "type": "item",
+      "item": "minecraft:iron_chestplate",
+      "count": 1,
+      "team_reward": false
+    }
+  ]
+}

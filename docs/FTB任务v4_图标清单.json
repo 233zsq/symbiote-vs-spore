@@ -1,0 +1,611 @@
+{
+  "method": "真实正面图裁切、16×16透明画布、深色一像素描边；物品任务直接使用对应物品模型",
+  "background": "沿用FTB现有背景；暂未指定新背景主题",
+  "portraits": [
+    {
+      "key": "C15",
+      "slot": "S01",
+      "entity": "jerotesvillage:sediment_lord",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s01.png"
+    },
+    {
+      "key": "HUNT_monstrosity",
+      "slot": "S14",
+      "entity": "cataclysm:netherite_monstrosity",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s14.png"
+    },
+    {
+      "key": "HUNT_harbinger",
+      "slot": "S12",
+      "entity": "cataclysm:the_harbinger",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s12.png"
+    },
+    {
+      "key": "HUNT_ender_guardian",
+      "slot": "S15",
+      "entity": "cataclysm:ender_guardian",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s15.png"
+    },
+    {
+      "key": "HUNT_ignis",
+      "slot": "S09",
+      "entity": "cataclysm:ignis",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s09.png"
+    },
+    {
+      "key": "HUNT_leviathan",
+      "slot": "S11",
+      "entity": "cataclysm:the_leviathan",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s11.png"
+    },
+    {
+      "key": "HUNT_remnant",
+      "slot": "S13",
+      "entity": "cataclysm:ancient_remnant",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s13.png"
+    },
+    {
+      "key": "HUNT_scylla",
+      "slot": "S10",
+      "entity": "cataclysm:scylla",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s10.png"
+    },
+    {
+      "key": "SOUL_boss_gundyr",
+      "slot": "S20",
+      "entity": "slu:boss_gundyr",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s20.png"
+    },
+    {
+      "key": "SOUL_boss_artorias",
+      "slot": "S21",
+      "entity": "slu:boss_artorias",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s21.png"
+    },
+    {
+      "key": "SOUL_boss_gael",
+      "slot": "S22",
+      "entity": "slu:boss_gael",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s22.png"
+    },
+    {
+      "key": "V4_M01",
+      "slot": "M01",
+      "entity": "monsterexpansion:rhyza",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m01.png"
+    },
+    {
+      "key": "V4_M02",
+      "slot": "M02",
+      "entity": "monsterexpansion:rakoth",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m02.png"
+    },
+    {
+      "key": "V4_M03",
+      "slot": "M03",
+      "entity": "jerotesvillage:duneshockler",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m03.png"
+    },
+    {
+      "key": "V4_M04",
+      "slot": "M04",
+      "entity": "jerotesvillage:tyrant_of_the_mountain_realm",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m04.png"
+    },
+    {
+      "key": "V4_M05",
+      "slot": "M05",
+      "entity": "jerotesvillage:serpon_combat_executer",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m05.png"
+    },
+    {
+      "key": "V4_M06",
+      "slot": "M06",
+      "entity": "legendary_monsters:cloud_golem",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m06.png"
+    },
+    {
+      "key": "V4_M07",
+      "slot": "M07",
+      "entity": "eeeabsmobs:nameless_guardian",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m07.png"
+    },
+    {
+      "key": "V4_M08",
+      "slot": "M08",
+      "entity": "aquamirae:captain_cornelia",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m08.png"
+    },
+    {
+      "key": "V4_M09",
+      "slot": "M09",
+      "entity": "nightfall_invade:scarlet_hunter",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m09.png"
+    },
+    {
+      "key": "V4_M10",
+      "slot": "M10",
+      "entity": "block_factorys_bosses:underworld_knight",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m10.png"
+    },
+    {
+      "key": "V4_M11",
+      "slot": "M11",
+      "entity": "block_factorys_bosses:infernal_dragon",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m11.png"
+    },
+    {
+      "key": "V4_M12",
+      "slot": "M12",
+      "entity": "irons_spellbooks:fire_boss",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m12.png"
+    },
+    {
+      "key": "V4_M13",
+      "slot": "M13",
+      "entity": "legendary_monsters:posessed_paladin",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m13.png"
+    },
+    {
+      "key": "V4_M14",
+      "slot": "M14",
+      "entity": "dungeons_and_combat:kamath",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m14.png"
+    },
+    {
+      "key": "V4_M15",
+      "slot": "M15",
+      "entity": "dungeons_and_combat:sunleia",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m15.png"
+    },
+    {
+      "key": "V4_M16",
+      "slot": "M16",
+      "entity": "souls_like_bosses:melkor",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m16.png"
+    },
+    {
+      "key": "V4_M17",
+      "slot": "M17",
+      "entity": "cataclysm:maledictus",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m17.png"
+    },
+    {
+      "key": "V4_M18",
+      "slot": "M18",
+      "entity": "woc_remastered:mechx_12",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m18.png"
+    },
+    {
+      "key": "V4_M19",
+      "slot": "M19",
+      "entity": "legendary_monsters:annihilation_pursuer",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m19.png"
+    },
+    {
+      "key": "V4_M20",
+      "slot": "M20",
+      "entity": "legendary_monsters:the_obliterator",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m20.png"
+    },
+    {
+      "key": "V4_M21",
+      "slot": "M21",
+      "entity": "woc_remastered:zertar",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m21.png"
+    },
+    {
+      "key": "V4_M22",
+      "slot": "M22",
+      "entity": "souls_like_bosses:nightlord",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m22.png"
+    },
+    {
+      "key": "V4_M23",
+      "slot": "M23",
+      "entity": "nightfall_invade:arterius",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m23.png"
+    },
+    {
+      "key": "V4_M24",
+      "slot": "M24",
+      "entity": "eeeabsmobs:realm_warden",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/m24.png"
+    },
+    {
+      "key": "V4_M26",
+      "slot": "M26",
+      "entity": "mod_cf2f7f04:great_sage",
+      "source": "great_sage/docs/client-r8-test1/head-front.png",
+      "status": "16像素样例，待用户看样",
+      "output": "kubejs/assets/svs/textures/quest/boss/m26.png",
+      "crop": [
+        539,
+        278,
+        824,
+        719
+      ],
+      "mask_polygon": [
+        [
+          544,
+          416
+        ],
+        [
+          573,
+          395
+        ],
+        [
+          575,
+          373
+        ],
+        [
+          610,
+          291
+        ],
+        [
+          650,
+          280
+        ],
+        [
+          661,
+          305
+        ],
+        [
+          679,
+          291
+        ],
+        [
+          715,
+          322
+        ],
+        [
+          719,
+          285
+        ],
+        [
+          738,
+          281
+        ],
+        [
+          760,
+          292
+        ],
+        [
+          795,
+          373
+        ],
+        [
+          796,
+          398
+        ],
+        [
+          824,
+          417
+        ],
+        [
+          807,
+          437
+        ],
+        [
+          803,
+          468
+        ],
+        [
+          809,
+          491
+        ],
+        [
+          806,
+          533
+        ],
+        [
+          819,
+          555
+        ],
+        [
+          814,
+          594
+        ],
+        [
+          806,
+          677
+        ],
+        [
+          781,
+          717
+        ],
+        [
+          572,
+          713
+        ],
+        [
+          541,
+          674
+        ],
+        [
+          544,
+          579
+        ],
+        [
+          547,
+          485
+        ],
+        [
+          559,
+          459
+        ],
+        [
+          556,
+          437
+        ]
+      ],
+      "remove_blue_sky": true,
+      "pixel_edits": [
+        [
+          5,
+          10,
+          [
+            39,
+            30,
+            22,
+            255
+          ]
+        ],
+        [
+          6,
+          10,
+          [
+            55,
+            41,
+            29,
+            255
+          ]
+        ],
+        [
+          9,
+          10,
+          [
+            55,
+            41,
+            29,
+            255
+          ]
+        ],
+        [
+          10,
+          10,
+          [
+            39,
+            30,
+            22,
+            255
+          ]
+        ],
+        [
+          7,
+          12,
+          [
+            110,
+            78,
+            49,
+            255
+          ]
+        ],
+        [
+          8,
+          12,
+          [
+            110,
+            78,
+            49,
+            255
+          ]
+        ],
+        [
+          7,
+          13,
+          [
+            74,
+            50,
+            34,
+            255
+          ]
+        ],
+        [
+          8,
+          13,
+          [
+            74,
+            50,
+            34,
+            255
+          ]
+        ],
+        [
+          7,
+          5,
+          [
+            88,
+            37,
+            21,
+            255
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "V4_S02",
+      "slot": "S02",
+      "entity": "bloodandmadness:father_gascoigne",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s02.png"
+    },
+    {
+      "key": "V4_S03",
+      "slot": "S03",
+      "entity": "mowziesmobs:ferrous_wroughtnaut",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s03.png"
+    },
+    {
+      "key": "V4_S04",
+      "slot": "S04",
+      "entity": "mowziesmobs:frostmaw",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s04.png"
+    },
+    {
+      "key": "V4_S05",
+      "slot": "S05",
+      "entity": "mowziesmobs:sculptor",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s05.png"
+    },
+    {
+      "key": "V4_S06",
+      "slot": "S06",
+      "entity": "mowziesmobs:umvuthi",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s06.png"
+    },
+    {
+      "key": "V4_S07",
+      "slot": "S07",
+      "entity": "legendary_monsters:ancient_guardian",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s07.png"
+    },
+    {
+      "key": "V4_S08",
+      "slot": "S08",
+      "entity": "block_factorys_bosses:kraken",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s08.png"
+    },
+    {
+      "key": "V4_S16",
+      "slot": "S16",
+      "entity": "bosses_of_mass_destruction:lich",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s16.png"
+    },
+    {
+      "key": "V4_S17",
+      "slot": "S17",
+      "entity": "bosses_of_mass_destruction:gauntlet",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s17.png"
+    },
+    {
+      "key": "V4_S18",
+      "slot": "S18",
+      "entity": "bosses_of_mass_destruction:obsidilith",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s18.png"
+    },
+    {
+      "key": "V4_S19",
+      "slot": "S19",
+      "entity": "bosses_of_mass_destruction:void_blossom",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s19.png"
+    },
+    {
+      "key": "V4_S23",
+      "slot": "S23",
+      "entity": "slu:boss_ancient_warrior",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s23.png"
+    },
+    {
+      "key": "V4_S24",
+      "slot": "S24",
+      "entity": "slu:boss_dragon_slayer_armour",
+      "source": null,
+      "status": "缺正面图",
+      "output": "kubejs/assets/svs/textures/quest/boss/s24.png"
+    }
+  ]
+}

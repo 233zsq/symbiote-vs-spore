@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "as_of": "2026-10-12",
+  "as_of": "2026-10-16",
   "method": "offline; no successful new runtime sample",
   "sources": [
     {
@@ -367,6 +367,65 @@
       "role": "界面/音画/操作支撑；只并入相关教学，不独立设作业",
       "description": "显示食物的饥饿/饱和度数值",
       "test_sha256": "e12419e43e3babc810af289403c5cd96bd7f09809b389acc6bb2f122b4b2a426",
+      "same_test": true
+    },
+    {
+      "file": "aquamirae-forge-1.20.1-7.1.14.jar",
+      "bytes": 25920958,
+      "sha256": "5439edc57af3075a1600effe0906ba322e89346077bcb80b761a4bff4cbff59b",
+      "declarations": [
+        {
+          "id": "aquamirae",
+          "name": "Aquamirae",
+          "version": "7.1.14",
+          "description": "Ship graveyard with terrible deep-sea creatures!"
+        }
+      ],
+      "dependencies": [
+        {
+          "owner": "aquamirae",
+          "modId": "minecraft",
+          "mandatory": true,
+          "versionRange": "[1.20.1, 1.22)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "aquamirae",
+          "modId": "forge",
+          "mandatory": true,
+          "versionRange": "[47.2.0,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "aquamirae",
+          "modId": "fragmentum",
+          "mandatory": true,
+          "versionRange": "[5.0.0,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "aquamirae",
+          "modId": "geckolib",
+          "mandatory": true,
+          "versionRange": "[4.8.0,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        }
+      ],
+      "license": "Obscuria Modding License (OML)",
+      "resource_counts": {
+        "advancement": 17,
+        "loot_table": 27,
+        "recipe": 29,
+        "structure": 6,
+        "structure_set": 5
+      },
+      "role": "模组7批：海船墓地/寒冰迷宫内容；世界生成维持禁用（用户裁决；OpenLoader覆盖）",
+      "description": "",
+      "test_sha256": "5439edc57af3075a1600effe0906ba322e89346077bcb80b761a4bff4cbff59b",
       "same_test": true
     },
     {
@@ -1323,6 +1382,51 @@
       "same_test": true
     },
     {
+      "file": "CarianStyle-forge-1.20.1-2.2.0.jar",
+      "bytes": 2533041,
+      "sha256": "27de9a62cd60c46b018164d5060b9b543a2dc5c4416f24d35b1041d40e66123c",
+      "declarations": [
+        {
+          "id": "carianstyle",
+          "name": "CarianStyle",
+          "version": "2.2.0",
+          "description": "Carian Style!"
+        }
+      ],
+      "dependencies": [
+        {
+          "owner": "carianstyle",
+          "modId": "forge",
+          "mandatory": true,
+          "versionRange": "[47,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "carianstyle",
+          "modId": "minecraft",
+          "mandatory": true,
+          "versionRange": "[1.20.1]",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "carianstyle",
+          "modId": "cloth_config",
+          "mandatory": false,
+          "versionRange": "[11.1.136,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        }
+      ],
+      "license": "Custom License",
+      "resource_counts": {},
+      "role": "第8批：法环主题附魔 113（追忆系列互斥带代价、K 键百科；自带全量中文）；平衡观察项",
+      "description": "",
+      "test_sha256": "27de9a62cd60c46b018164d5060b9b543a2dc5c4416f24d35b1041d40e66123c",
+      "same_test": true
+    },
+    {
       "file": "CataclysmicArsenal-0.6.1.4+1.20.1[Forge].jar",
       "bytes": 84580685,
       "sha256": "ba7fd95c789176c0e422a77ba11b70b8aeca550b994e4030cfb38684b5f18baf",
@@ -1920,6 +2024,56 @@
       "same_test": true
     },
     {
+      "file": "Connector-1.0.0-beta.49+1.20.1.jar",
+      "bytes": 5046109,
+      "sha256": "e39acd37e162eb48cdfc6ae64776c13507a5ec3d4dd76ae4f39b5b79ca24d431",
+      "declarations": [],
+      "dependencies": [],
+      "license": "",
+      "resource_counts": {},
+      "role": "Voxy 换装：信雅互联（Fabric mod 翻译层，常驻）",
+      "description": "",
+      "test_sha256": "e39acd37e162eb48cdfc6ae64776c13507a5ec3d4dd76ae4f39b5b79ca24d431",
+      "same_test": true
+    },
+    {
+      "file": "ConnectorExtras-1.11.2+1.20.1.jar",
+      "bytes": 182464,
+      "sha256": "10d149fc9348b57120f50e3f82ac6f7e544ae18f0b5b7342c0cab3af38f5acd8",
+      "declarations": [
+        {
+          "id": "connectorextras",
+          "name": "Connector Extras",
+          "version": "1.11.2+1.20.1",
+          "description": "Integrating Connector with third-party APIs"
+        }
+      ],
+      "dependencies": [
+        {
+          "owner": "connectorextras",
+          "modId": "forge",
+          "mandatory": true,
+          "versionRange": "[47,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "connectorextras",
+          "modId": "minecraft",
+          "mandatory": true,
+          "versionRange": "[1.20.1,1.21)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        }
+      ],
+      "license": "MIT",
+      "resource_counts": {},
+      "role": "Voxy 换装：互联扩展",
+      "description": "",
+      "test_sha256": "10d149fc9348b57120f50e3f82ac6f7e544ae18f0b5b7342c0cab3af38f5acd8",
+      "same_test": true
+    },
+    {
       "file": "Controlling-forge-1.20.1-12.0.2.jar",
       "bytes": 115280,
       "sha256": "cff8c3426a77f9e7412262b6d79e423979eff3831e010b3b1ea9677e1ecd74cd",
@@ -2476,51 +2630,6 @@
       "same_test": true
     },
     {
-      "file": "DistantHorizons-3.3.0-1.20.1-fabric-forge.jar",
-      "bytes": 27629859,
-      "sha256": "a7485e2163ee46ee3c044490ca37d7542d70a2c17887df248413f79f59b82e9a",
-      "declarations": [
-        {
-          "id": "distanthorizons",
-          "name": "Distant Horizons",
-          "version": "3.3.0",
-          "description": "This mod generates and renders simplified terrain beyond the normal view distance at a low performance cost. Allowing you to see much farther without turning your game into a slideshow."
-        }
-      ],
-      "dependencies": [
-        {
-          "owner": "distanthorizons",
-          "modId": "forge",
-          "mandatory": true,
-          "versionRange": "[0,)",
-          "ordering": "NONE",
-          "side": "BOTH"
-        },
-        {
-          "owner": "distanthorizons",
-          "modId": "minecraft",
-          "mandatory": true,
-          "versionRange": "[1.20],[1.20.1]",
-          "ordering": "AFTER",
-          "side": "BOTH"
-        },
-        {
-          "owner": "distanthorizons",
-          "modId": "oculus",
-          "mandatory": false,
-          "versionRange": "[1.8.0,)",
-          "ordering": "AFTER",
-          "side": "CLIENT"
-        }
-      ],
-      "license": "LGPL",
-      "resource_counts": {},
-      "role": "性能/稳定/联机工具；没有玩家成长作业，风险按实测登记",
-      "description": "This mod generates and renders simplified terrain beyond the normal view distance at a low performance cost. Allowing you to see much farther without turning your game into a sl…",
-      "test_sha256": "a7485e2163ee46ee3c044490ca37d7542d70a2c17887df248413f79f59b82e9a",
-      "same_test": true
-    },
-    {
       "file": "drippyloadingscreen_forge_3.1.5_MC_1.20.1.jar",
       "bytes": 281881,
       "sha256": "3213b0a5ae3b487360bc2cafd036a11f35c4e1465122e18e218968c0771ddc42",
@@ -2735,6 +2844,43 @@
       "role": "可选高优先看样：模型/动画/召唤物；强制主线需重新裁决。",
       "description": "高难生物与 Boss（IF 实证）",
       "test_sha256": "a569163ee5a7c77c8dc537a1c11c87e5b0f58ddaddbe1ddf59e123c7101b7b1c",
+      "same_test": true
+    },
+    {
+      "file": "efiscompat-2.6.0.jar",
+      "bytes": 247739,
+      "sha256": "c5eef935e534139209e5bf002685c885662bc809d1c4e05ad1309bda8eea07ab",
+      "declarations": [
+        {
+          "id": "efiscompat",
+          "name": "Epic Fight & Iron's Spellbook animation compat",
+          "version": "2.6.0",
+          "description": "A simple mod to fix Iron's Spellbooks animation when using Epic Fight"
+        }
+      ],
+      "dependencies": [
+        {
+          "owner": "efiscompat",
+          "modId": "forge",
+          "mandatory": true,
+          "versionRange": "[47,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "efiscompat",
+          "modId": "minecraft",
+          "mandatory": true,
+          "versionRange": "[1.20.1,1.21)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        }
+      ],
+      "license": "GNU GPLv3",
+      "resource_counts": {},
+      "role": "EF附属：Iron's Spells 施法动画",
+      "description": "",
+      "test_sha256": "c5eef935e534139209e5bf002685c885662bc809d1c4e05ad1309bda8eea07ab",
       "same_test": true
     },
     {
@@ -3425,6 +3571,43 @@
       "same_test": true
     },
     {
+      "file": "epicfight-skilltree-forge-20.2.9-1.20.1.jar",
+      "bytes": 327927,
+      "sha256": "12981480a6eb8c0a47d0c7f0da4e594349587def9b7fc7e0fdba91e79cb1fe8f",
+      "declarations": [
+        {
+          "id": "epicskills",
+          "name": "Epic Fight: Skill Tree",
+          "version": "20.2.9",
+          "description": "An addon of Epic Fight that adds a skill tree system"
+        }
+      ],
+      "dependencies": [
+        {
+          "owner": "epicskills",
+          "modId": "forge",
+          "mandatory": true,
+          "versionRange": "[47,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "epicskills",
+          "modId": "minecraft",
+          "mandatory": true,
+          "versionRange": "[1.20.1,1.21)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        }
+      ],
+      "license": "GNU GENERAL PUBLIC LICENSE",
+      "resource_counts": {},
+      "role": "EF附属：官方技能树（替换技能书获取，与职业设计关系待实机观察）",
+      "description": "",
+      "test_sha256": "12981480a6eb8c0a47d0c7f0da4e594349587def9b7fc7e0fdba91e79cb1fe8f",
+      "same_test": true
+    },
+    {
       "file": "epicfight_awaken-1.2.7.3-forge-1.20.1.jar",
       "bytes": 5764340,
       "sha256": "fe6d1c225d8fe8f64a14c3c2b07a72d9f97ed355005fd9f3f3fe55a53490030a",
@@ -3821,6 +4004,43 @@
       "same_test": true
     },
     {
+      "file": "fabric-api-0.92.6+1.11.15+1.20.1.jar",
+      "bytes": 3065833,
+      "sha256": "3dd3f93c31122d928297220601f521e6a8a20356bafc7819bf4ddce4c2bb085d",
+      "declarations": [
+        {
+          "id": "fabric_api",
+          "name": "Forgified Fabric API",
+          "version": "0.92.6+1.11.15+1.20.1",
+          "description": "Core API module providing key hooks and intercompatibility features."
+        }
+      ],
+      "dependencies": [
+        {
+          "owner": "fabric_api",
+          "modId": "forge",
+          "mandatory": true,
+          "versionRange": "[47.1.3,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "fabric_api",
+          "modId": "minecraft",
+          "mandatory": true,
+          "versionRange": "[1.20.1,1.21)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        }
+      ],
+      "license": "Apache-2.0",
+      "resource_counts": {},
+      "role": "Voxy 换装：Forgified Fabric API",
+      "description": "",
+      "test_sha256": "3dd3f93c31122d928297220601f521e6a8a20356bafc7819bf4ddce4c2bb085d",
+      "same_test": true
+    },
+    {
       "file": "falchionmoveset-20.14.0.jar",
       "bytes": 127553,
       "sha256": "248de50d448aac5f39b2813dd3facbfd30d5702a68e2b5c8820b21b995fad6c6",
@@ -4129,6 +4349,43 @@
       "role": "可选看样：Lothran/向日葵；Animated Java函数Boss，不能套普通实体击杀。",
       "description": "\"Contains Lothran and Sunflower Boss to be used in modpacks etc.\"",
       "test_sha256": "77f721f5ebe2f672222b5d80cf67e10261b4fc18ad8374814da306c2c37ca791",
+      "same_test": true
+    },
+    {
+      "file": "fragmentum-5.2.0+1.20.1-forge.jar",
+      "bytes": 8580894,
+      "sha256": "a003fedce92c52ef377e48fc3779cb2506be1ce7f947c88f1eb241b2992c16b4",
+      "declarations": [
+        {
+          "id": "fragmentum",
+          "name": "Fragmentum",
+          "version": "5.2.0",
+          "description": "The lightweight framework for the Obscuria Collection multi-loader mods."
+        }
+      ],
+      "dependencies": [
+        {
+          "owner": "fragmentum",
+          "modId": "forge",
+          "side": "BOTH",
+          "versionRange": "[1,)",
+          "mandatory": true,
+          "type": "required"
+        },
+        {
+          "owner": "fragmentum",
+          "modId": "minecraft",
+          "side": "BOTH",
+          "versionRange": "1.20.1",
+          "mandatory": true,
+          "type": "required"
+        }
+      ],
+      "license": "Obscuria Modding License (OML)",
+      "resource_counts": {},
+      "role": "模组7批：aquamirae 硬依赖前置库",
+      "description": "",
+      "test_sha256": "a003fedce92c52ef377e48fc3779cb2506be1ce7f947c88f1eb241b2992c16b4",
       "same_test": true
     },
     {
@@ -4919,6 +5176,73 @@
       "role": "保留法术作EF辅助；禁78/留36，不暗中恢复控制/强回复。",
       "description": "法术书魔法系统：法术、法力与装备",
       "test_sha256": "54b5aaa52887c38f570fbd820288171234d8541c17a5e953f9271189fdd480fb",
+      "same_test": true
+    },
+    {
+      "file": "iss_elden_ring-1.0.3.jar",
+      "bytes": 1782255,
+      "sha256": "1dad2a809ba0d33ef60b335438439977df5a1ad68dda46a9f51c31ea24825ae6",
+      "declarations": [
+        {
+          "id": "iss_elden_ring",
+          "name": "Iron's Spells 'n Spellbooks: Elden Ring",
+          "version": "1.0.3",
+          "description": "An Iron's Spells 'n Spellbooks addon inspired by Elden Ring."
+        }
+      ],
+      "dependencies": [
+        {
+          "owner": "iss_elden_ring",
+          "modId": "forge",
+          "mandatory": true,
+          "versionRange": "[47,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "iss_elden_ring",
+          "modId": "minecraft",
+          "mandatory": true,
+          "versionRange": "[1.20.1,1.21)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "iss_elden_ring",
+          "modId": "irons_spellbooks",
+          "mandatory": true,
+          "versionRange": "[1.20.1-3.16.1,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "owner": "iss_elden_ring",
+          "modId": "irons_lib",
+          "mandatory": true,
+          "versionRange": "[1.20.1-1,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "owner": "iss_elden_ring",
+          "modId": "apotheosis",
+          "mandatory": false,
+          "versionRange": "[7.0,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        }
+      ],
+      "license": "All Rights Reserved",
+      "resource_counts": {
+        "advancement": 9,
+        "loot_table": 9,
+        "recipe": 24,
+        "structure": 1,
+        "structure_set": 1
+      },
+      "role": "第8批：Iron's Spells 法环法术；自带全量中文；辉石洞生成维持禁用；上游 9+1 JSON 缺陷登记",
+      "description": "",
+      "test_sha256": "1dad2a809ba0d33ef60b335438439977df5a1ad68dda46a9f51c31ea24825ae6",
       "same_test": true
     },
     {
@@ -7875,7 +8199,7 @@
         "loot_table": 4,
         "recipe": 738
       },
-      "role": "Ⅳ固定试炼＋两池随机券；按本包模型动作选人，不按原作名望。",
+      "role": "战位竞争候选＋两池随机券；按本包模型动作选人，不按原作名望。",
       "description": "add various weapons, armors and bosses",
       "test_sha256": "1fdc8ff5816fd07d2021ab36ae4190ef27aff75efc3cb3c00317d3e9f423470b",
       "same_test": true
@@ -8000,6 +8324,63 @@
       "role": "据点整理，可选；不引入仓储科技长门槛。",
       "description": "可升级的箱柜与木桶",
       "test_sha256": "32a355cfd08f8c7e267bd0ae99eede729be6a3f84ea8d17998631a3ed373d74b",
+      "same_test": true
+    },
+    {
+      "file": "souls_like_bosses-1.20.1-1.0.4.jar",
+      "bytes": 32028805,
+      "sha256": "25768241ab073fa094f6efb5295de0652c8a6bc15dfdec1ac78e8acb9dba3809",
+      "declarations": [
+        {
+          "id": "souls_like_bosses",
+          "name": "Souls Like Bosses",
+          "version": "1.0.4",
+          "description": "Adds two bosses with weapon drops and their own arenas: the Nightlord, whose Tree of Light generates in ocean biomes, and Melkor, Eraser of Time, whose Keep generates in the Soul Sand Valley of the Nether."
+        }
+      ],
+      "dependencies": [
+        {
+          "owner": "souls_like_bosses",
+          "modId": "forge",
+          "mandatory": true,
+          "versionRange": "[47,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "souls_like_bosses",
+          "modId": "minecraft",
+          "mandatory": true,
+          "versionRange": "[1.20.1,1.21)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "owner": "souls_like_bosses",
+          "modId": "geckolib",
+          "mandatory": true,
+          "versionRange": "[4,5)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "owner": "souls_like_bosses",
+          "modId": "hugestructureblocks",
+          "mandatory": true,
+          "versionRange": "[1.1,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        }
+      ],
+      "license": "All Rights Reserved",
+      "resource_counts": {
+        "advancement": 3,
+        "structure": 2,
+        "structure_set": 2
+      },
+      "role": "模组7批：魂系Boss与武器（09-25 曾删，10-14 用户批示重入）；世界生成暂禁；ARR 收录已批",
+      "description": "",
+      "test_sha256": "25768241ab073fa094f6efb5295de0652c8a6bc15dfdec1ac78e8acb9dba3809",
       "same_test": true
     },
     {
@@ -8963,6 +9344,26 @@
       "role": "性能/稳定/联机工具；没有玩家成长作业，风险按实测登记",
       "description": "UltimineLineRenderFix.",
       "test_sha256": "8e0a06014b9810f75312587938ef27a501079ca3e7f97e8910bf15979d15a7da",
+      "same_test": true
+    },
+    {
+      "file": "voxy-0.2.14-alpha-dw.jar",
+      "bytes": 12791203,
+      "sha256": "c89b909933cfe2458b0934c64f590b60917738d3c11a370953784fd9507cfb26",
+      "declarations": [
+        {
+          "id": "voxy",
+          "name": "Voxy",
+          "version": "0.2.14-alpha",
+          "description": "Far distance rendering mod utilising LoDs"
+        }
+      ],
+      "dependencies": [],
+      "license": "All-Rights-Reserved",
+      "resource_counts": {},
+      "role": "Voxy 换装主体（第三方移植/DistantWorld 构建；仅自用不外分发）",
+      "description": "",
+      "test_sha256": "c89b909933cfe2458b0934c64f590b60917738d3c11a370953784fd9507cfb26",
       "same_test": true
     },
     {
@@ -30377,6 +30778,7 @@
         "epic-fight-20.14.17-mc1.20.1-forge.jar!/data/minecraft/capabilities/weapons/iron_axe.json"
       ],
       "acquisition_refs": [
+        "aquamirae:chests/frozen_chest @ aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/loot_tables/chests/frozen_chest.json",
         "artifacts:chests/campsite_chest @ artifacts-forge-9.5.19.jar!/data/artifacts/loot_tables/chests/campsite_chest.json",
         "dungeons_and_combat:chests/blacksmithy @ dungeons_and_combat-1.2.4-forge-1.20.1.jar!/data/dungeons_and_combat/loot_tables/chests/blacksmithy.json",
         "dungeons_and_combat:chests/tavern_loot @ dungeons_and_combat-1.2.4-forge-1.20.1.jar!/data/dungeons_and_combat/loot_tables/chests/tavern_loot.json",
@@ -30481,6 +30883,7 @@
         "epic-fight-20.14.17-mc1.20.1-forge.jar!/data/minecraft/capabilities/weapons/iron_sword.json"
       ],
       "acquisition_refs": [
+        "aquamirae:chests/frozen_chest @ aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/loot_tables/chests/frozen_chest.json",
         "block_factorys_bosses:chests/underworld_arena_rare @ block_factorys_bosses-2.1.2-forge-1.20.1.jar!/data/block_factorys_bosses/loot_tables/chests/underworld_arena_rare.json",
         "dungeons_and_combat:chests/blacksmithy @ dungeons_and_combat-1.2.4-forge-1.20.1.jar!/data/dungeons_and_combat/loot_tables/chests/blacksmithy.json",
         "minecraft:entities/recruit_mh @ EFMCompat 2.0.jar!/data/minecraft/loot_tables/entities/recruit_mh.json",
@@ -54728,7 +55131,7 @@
       "id": "jerotesvillage:sediment_lord",
       "name": "沉降领主",
       "namespace": "jerotesvillage",
-      "purpose": "Ⅱ二轮代表战候选；原生入口/重试待核",
+      "purpose": "支线二轮候选；不再卡主线；入口/重试待核",
       "hp": 170.0,
       "attack": 6.0,
       "armor": 3.0,
@@ -56417,8 +56820,8 @@
     ]
   },
   "counts": {
-    "jars": 215,
-    "declarations": 221,
+    "jars": 225,
+    "declarations": 230,
     "weapons_historical": 1354,
     "entities_historical": 877,
     "hostile_bucket": 489,

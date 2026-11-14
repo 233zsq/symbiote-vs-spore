@@ -1,0 +1,632 @@
+{
+  "id": "000581393A6EDF4E",
+  "filename": "military",
+  "title": "&b要塞 · 火力与远征&r",
+  "group": "000111B6DD2DC8BD",
+  "order_index": 9,
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/turret.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "000E8A76697B8481",
+      "title": "军工 · 将劫火用于实战",
+      "description": [
+        "【战略目标】把征伐成果转化为可以实际使用的要塞力量。",
+        "【讨伐作业】用已开放的劫火武装完成一次对真菌的有效攻击。",
+        "【情报与机制】劫火能力尚未开放。夺火战绩不会自动使刀剑、法术与炮塔获得全局增伤。",
+        "【掠夺战果】本项目开放并完成后，才能结算这里的战果。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/flame.png"
+        }
+      },
+      "subtitle": "尚未开放 · ",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0008693A71D5F8CC"
+      ],
+      "tasks": [
+        {
+          "id": "00019FF4BE641C14",
+          "type": "custom",
+          "title": "尚未开放·用已开放的劫火武装完成一次对真菌的有效攻击。"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008C1CBAC469545",
+      "title": "军工 · 第一次天基打击",
+      "description": [
+        "【战略目标】把征伐成果转化为可以实际使用的要塞力量。",
+        "【讨伐作业】取得发射装备与弹药，完成一次有效的天基打击。",
+        "【情报与机制】天基武器尚未开放。摧毁构造体记录讨伐胜利，发射装备与实际打击仍需在此完成。",
+        "【掠夺战果】本项目开放并完成后，才能结算这里的战果。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/orbital.png"
+        }
+      },
+      "subtitle": "尚未开放 · ",
+      "x": 3.4,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000723DA00CDA61D"
+      ],
+      "tasks": [
+        {
+          "id": "0007862107AEA376",
+          "type": "custom",
+          "title": "尚未开放·取得发射装备与弹药，完成一次有效的天基打击。"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00011E446559C124",
+      "title": "第一枚驱动核心",
+      "description": [
+        "【战略目标】M02战果提供核心、计数器与手套。先认清核心是原生炮塔配方材料，不是一项自动开启的城防技能。",
+        "【讨伐作业】持有驱动核心1级。 不消耗。",
+        "【情报与机制】持有检测只证明物资到手；不伪造有效炮塔击杀、维修次数或研究完成。",
+        "【掠夺战果】下一笔军需用于后续工位与远征。"
+      ],
+      "icon": "silence_s_defense_tower:driving_core_1",
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00073A7B4CF8DEDB"
+      ],
+      "tasks": [
+        {
+          "id": "0008B723A1783EEE",
+          "type": "item",
+          "item": "silence_s_defense_tower:driving_core_1",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0009A2D459875989"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:crossbow",
+          "count": 1,
+          "team_reward": false,
+          "id": "0006F60BCF29B401"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:barrel",
+          "count": 1,
+          "team_reward": false,
+          "id": "00095FCA8C692B3C"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:stone_slab",
+          "count": 2,
+          "team_reward": false,
+          "id": "00050351916C73F9"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E01A91925FF0C",
+      "title": "第一座便携箭塔",
+      "description": [
+        "【战略目标】把核心和上一步配给的材料投入原生箭塔配方，再带到据点外试用。放置、归属、索敌与回收请分别观察。",
+        "【讨伐作业】持有箭塔1级便携物品。 不消耗。",
+        "【情报与机制】持有检测只证明物资到手；不伪造有效炮塔击杀、维修次数或研究完成。",
+        "【掠夺战果】下一笔军需用于后续工位与远征。"
+      ],
+      "icon": "silence_s_defense_tower:arrow_turret_leavl1_p",
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00011E446559C124"
+      ],
+      "tasks": [
+        {
+          "id": "000E5B4F82E14CA3",
+          "type": "item",
+          "item": "silence_s_defense_tower:arrow_turret_leavl1_p",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00076475AE6F75C8"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "00026CD4C4B85DAD"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:arrow",
+          "count": 32,
+          "team_reward": false,
+          "id": "000442491C24144E"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000D56173DCA300B",
+      "title": "核心升级工位",
+      "description": [
+        "【战略目标】要塞成长从工位开始。升级成本与计数条件使用当前JEI及配置，不把展示配方当作实际扣料日志。",
+        "【讨伐作业】持有核心升级台。 不消耗。",
+        "【情报与机制】持有检测只证明物资到手；不伪造有效炮塔击杀、维修次数或研究完成。",
+        "【掠夺战果】下一笔军需用于后续工位与远征。"
+      ],
+      "icon": "silence_s_defense_tower:core_upgrade_table",
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000E01A91925FF0C"
+      ],
+      "tasks": [
+        {
+          "id": "000255EB12B16462",
+          "type": "item",
+          "item": "silence_s_defense_tower:core_upgrade_table",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000307BC73FB8944"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:iron_ingot",
+          "count": 8,
+          "team_reward": false,
+          "id": "000EC2B6C217DFC3"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:redstone",
+          "count": 8,
+          "team_reward": false,
+          "id": "000DE8487678293C"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000237436929C5F8",
+      "title": "维修与携行",
+      "description": [
+        "【战略目标】维修站与回收手套支持远征火力网。先练收回与再次部署，记录归属和已有数据是否保留。",
+        "【讨伐作业】持有维修站便携物品。 不消耗。",
+        "【情报与机制】持有检测只证明物资到手；不伪造有效炮塔击杀、维修次数或研究完成。",
+        "【掠夺战果】下一笔军需用于后续工位与远征。"
+      ],
+      "icon": "silence_s_defense_tower:maintenance_station0",
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000D56173DCA300B"
+      ],
+      "tasks": [
+        {
+          "id": "00091C2E412F421B",
+          "type": "item",
+          "item": "silence_s_defense_tower:maintenance_station0",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000B975E50561275"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 20,
+          "team_reward": false,
+          "id": "0003A42E8FDD1028"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:iron_ingot",
+          "count": 8,
+          "team_reward": false,
+          "id": "000A2B0843F56CC3"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000707E395845E1D",
+      "title": "研究台的两笔核心预算",
+      "description": [
+        "【战略目标】研究台配方要消耗一枚3级核心。如果你先用它升级炮塔，就要重新取得研究用核心；同一枚不能同时交两次账。",
+        "【讨伐作业】持有研究台。 不消耗。",
+        "【情报与机制】持有检测只证明物资到手；不伪造有效炮塔击杀、维修次数或研究完成。",
+        "【掠夺战果】下一笔军需用于后续工位与远征。"
+      ],
+      "icon": "silence_s_defense_tower:research_table",
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000237436929C5F8",
+        "00007080AAC051A7"
+      ],
+      "tasks": [
+        {
+          "id": "000DE99EAB1CC17C",
+          "type": "item",
+          "item": "silence_s_defense_tower:research_table",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00037C13996780FA"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 36,
+          "team_reward": false,
+          "id": "00031103110C3CA4"
+        },
+        {
+          "type": "choice",
+          "table_id": 3880405831076903L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "远征行装 · 三选一",
+          "id": "0009E472C195349B"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E7C9023C8A1A9",
+      "title": "把研发变成可用资产",
+      "description": [
+        "【战略目标】研究后的火力成长仍走原生系统。本项核对备用核心，真实研发与部署效果由游戏实操确认。",
+        "【讨伐作业】再取得驱动核心3级1枚，作为防线或研究的下一笔独立投入。 不消耗。",
+        "【情报与机制】持有检测只证明物资到手；不伪造有效炮塔击杀、维修次数或研究完成。",
+        "【掠夺战果】下一笔军需用于后续工位与远征。"
+      ],
+      "icon": "silence_s_defense_tower:driving_core_3",
+      "subtitle": "独立目标",
+      "x": 0.0,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000707E395845E1D"
+      ],
+      "tasks": [
+        {
+          "id": "000FCA725650DD26",
+          "type": "item",
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000992975015E776"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:golden_carrot",
+          "count": 12,
+          "team_reward": false,
+          "id": "0006FF5E69C71575"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 32,
+          "team_reward": false,
+          "id": "000C9A7473A8C65C"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E484EE790A548",
+      "title": "为远征留一套回收工具",
+      "description": [
+        "【战略目标】母巢战区需要可携行的火力资产。带好手套与维修物资，避免把全部炮塔留在后方。",
+        "【讨伐作业】持有回收手套。 不消耗。",
+        "【情报与机制】持有检测只证明物资到手；不伪造有效炮塔击杀、维修次数或研究完成。",
+        "【掠夺战果】下一笔军需用于后续工位与远征。"
+      ],
+      "icon": "silence_s_defense_tower:gloves",
+      "subtitle": "独立目标",
+      "x": 0.0,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000237436929C5F8",
+        "00015BA0B43BD206"
+      ],
+      "tasks": [
+        {
+          "id": "000F430905625D19",
+          "type": "item",
+          "item": "silence_s_defense_tower:gloves",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0007798B9FDA74E4"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 40,
+          "team_reward": false,
+          "id": "00040237002176AD"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E69893AE203A9",
+      "title": "精锐操练 · 为下一场多留一口耐力",
+      "description": [
+        "【战略目标】新技法要用在实际战斗里。选一把愿意练的兵刃，在远征途中完成十六次有效击杀。",
+        "【讨伐作业】目标开放后由玩家有效击杀敌对目标16只。",
+        "【情报与机制】不宣称脚本检测了格挡成功或特定连段；只记录实际击杀。",
+        "【掠夺战果】精锐技法补充一次，可按已有学习情况换另一条方向。"
+      ],
+      "icon": "epicfight:skillbook",
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0008070E4763356B"
+      ],
+      "tasks": [
+        {
+          "id": "0009361375315B5A",
+          "type": "custom",
+          "title": "目标开放后由玩家有效击杀敌对目标16只。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0009C1FF99E21F82"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 20,
+          "team_reward": false,
+          "id": "000ECD431F8FF6E5"
+        },
+        {
+          "type": "choice",
+          "table_id": 1835289380769457L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐技法 · 任选一",
+          "id": "000D8739086C3D6B"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00044790A99EFAA2",
+      "title": "终战操练 · 把军资变成胜算",
+      "description": [
+        "【战略目标】总攻前再练一次穿过菌潮的节奏。用自己的主武器清除三十只真菌系敌人，为王座决战校准手感。",
+        "【讨伐作业】目标开放后由玩家有效击杀真菌系敌人30只。",
+        "【情报与机制】此操练不替代有限母巢事件，也不把炮塔代杀算进个人技法记录。",
+        "【掠夺战果】可选一本王权技法，回到后续主线继续征伐。"
+      ],
+      "icon": "epicfight:skillbook",
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00015BA0B43BD206"
+      ],
+      "tasks": [
+        {
+          "id": "00037783DA17D55F",
+          "type": "custom",
+          "title": "目标开放后由玩家有效击杀真菌系敌人30只。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "0003C860C6098CEC"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
+          "team_reward": false,
+          "id": "0001637031FC7F8F"
+        },
+        {
+          "type": "choice",
+          "table_id": 2286807384712760L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "王权技法 · 任选一",
+          "id": "000BA7AE8602F0DE"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    }
+  ],
+  "images": [
+    {
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/turret.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "要塞 · 火力与远征"
+      ],
+      "click": "",
+      "dev": false,
+      "corner": false
+    }
+  ]
+}

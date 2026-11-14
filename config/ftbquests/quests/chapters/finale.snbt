@@ -1,0 +1,485 @@
+{
+  "id": "000AF4431CF0A6B6",
+  "filename": "finale",
+  "title": "&6终章 · 齐天遗蜕&r",
+  "group": "0002FB0079E64484",
+  "order_index": 6,
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/crown.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "0007F2E9945CCD17",
+      "title": "M25 · 母巢总攻",
+      "description": [
+        "【战略目标】真菌把星球当作粮仓，你把军团炮口对准它们的母巢。铺开火力阵地，以劫火与天基支援推进，最后亲手捏碎本场战役的核心。",
+        "【讨伐作业】完成同一场有限母巢攻坚，赢下必要波次与最终核心战。",
+        "【情报与机制】本战役当前未开放；开放后按场次规则结算。野外同类首领击杀不计为战役胜利。",
+        "【掠夺战果】母巢核心陷落后，旧世界的造界者Notch将亲自考验你。本土最终门槛之后，才是大圣残躯的异界试炼。",
+        "",
+        "&6远征情报&r",
+        "母巢有限战役·尚未开放。",
+        "主线征伐目标；按本阶段连线推进。",
+        "",
+        "&6战前整备&r",
+        "整备弹药、回收与失败重试路径。炮塔补刀和队伍归属以正式事件规则结算，不能用附近同类怪物死亡填满战役进度。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/fortress.png"
+        }
+      },
+      "subtitle": "尚未开放 · 母巢有限战役·尚未开放",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0001444113D3AC72",
+        "000E8A76697B8481",
+        "0008C1CBAC469545"
+      ],
+      "tasks": [
+        {
+          "id": "00061B9C1D531802",
+          "type": "custom",
+          "title": "尚未开放·完成同一场有限母巢攻坚，赢下必要波次与最终核心战。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 160,
+          "team_reward": false,
+          "id": "000332E81839F9C8"
+        },
+        {
+          "type": "choice",
+          "table_id": 2286807384712760L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "王权技法 · 任选一",
+          "id": "000CAA63A0D45A7E"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000459ED7F2EF366",
+      "title": "M26 · 大圣残躯",
+      "description": [
+        "【战略目标】齐天真魂早已远去，唯留不灭残躯与未散战意。平定此界之后，你将以君王之姿请求赐教，完整接下两阶段试炼；这不是讨伐真菌造物，而是承接异界至强者留下的武道传承。",
+        "【讨伐作业】唤醒不灭残躯，堂堂正正赢下同一场两阶段试炼。",
+        "【情报与机制】两阶段必须属于同一场正式战斗；第一阶段结束、测试体死亡或形态移除都不能完成终章。根器与金身奖励以正式结算为准。",
+        "【掠夺战果】本项目开放并完成后，才能结算这里的战果。",
+        "",
+        "&6远征情报&r",
+        "齐天终章·正式入口尚未开放。",
+        "主线征伐目标；按本阶段连线推进。",
+        "",
+        "&6战前整备&r",
+        "两阶段必须属于同一场正式战斗；第一阶段结束、测试体死亡或形态移除都不能完成终章。根器与金身奖励以正式结算为准。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/boss/m26.png"
+        }
+      },
+      "subtitle": "尚未开放 · 齐天终章·正式入口尚未开放",
+      "x": 10.2,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00074A6EDA25E224"
+      ],
+      "tasks": [
+        {
+          "id": "000270CF33E99561",
+          "type": "custom",
+          "title": "尚未开放·唤醒不灭残躯，堂堂正正赢下同一场两阶段试炼。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 240,
+          "team_reward": false,
+          "id": "000064BC828701B9"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E84EF719F8B1D",
+      "title": "终章 · 承接不灭金身",
+      "description": [
+        "【战略目标】承接不灭金身，完成天外成王之路。",
+        "【讨伐作业】领取齐天根器与不灭金身的正式传承奖励。",
+        "【情报与机制】传承奖励尚未开放；现阶段不授予不死、复活、时间操纵或触手新能力。",
+        "【掠夺战果】本项目开放并完成后，才能结算这里的战果。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/crown.png"
+        }
+      },
+      "subtitle": "尚未开放 · ",
+      "x": 6.8,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000459ED7F2EF366"
+      ],
+      "tasks": [
+        {
+          "id": "000E2BBBFD094EAC",
+          "type": "custom",
+          "title": "尚未开放·领取齐天根器与不灭金身的正式传承奖励。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 320,
+          "team_reward": false,
+          "id": "0004316DD6E03935"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00074A6EDA25E224",
+      "title": "此界已平，向异界传奇请战",
+      "description": [
+        "【战略目标】母巢已平，造界者Notch也已认可你的胜利。本土再无必须争夺的王座，你走向那具真魂远去的不灭残躯，以君王之姿请求赐教。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】大圣的神魂不知所踪。你将面对残躯的武道本能，赢下正式两阶段连战，承接金身本源；一阶段倒地不算最终胜利。",
+        "【掠夺战果】本土造界者的考验已过。下一项是大圣双阶段终极试炼，正式事件尚未开放。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/crown.png"
+        }
+      },
+      "subtitle": "",
+      "x": 13.6,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00054C45333FE3AB"
+      ],
+      "tasks": [
+        {
+          "id": "0006FE3C4A27414E",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0009D5FBEDF7FC79",
+      "title": "天灾已平，造界者亲自考验新王",
+      "description": [
+        "【战略目标】母巢已经陷落，旧世界却还没有将最高权柄交给你。Notch以创造之镐重构战场；胜过这位本土造界者，你才算真正跨过此界的最终门槛。",
+        "【讨伐作业】阅读本次压轴征伐命令，确认后准备原生召唤仪式。",
+        "【情报与机制】本包将“创造者”定位为本土旧纪元造界权柄的持有者，不宣称现实作者身份，也不改写天外四客。Notch是本土终极大Boss，大圣残躯仍是随后更高一层的异界武道传承。",
+        "【掠夺战果】压轴挑战就绪；战绩以原生最终胜利进度为准。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/boss/lb_notch.png"
+        }
+      },
+      "subtitle": "",
+      "x": 3.4,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007F2E9945CCD17"
+      ],
+      "tasks": [
+        {
+          "id": "00051635BF577ECB",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00001DA6DADBAD8E",
+      "title": "仪式整备 · 造界者·Notch",
+      "description": [
+        "【战略目标】用旧世界留下的仪式把对手唤到你选定的战场。",
+        "【讨伐作业】持有本项所列材料；任务不扣除，仪式消耗由模组原生处理。",
+        "【情报与机制】在平地铺3×3底座，中央草方块，周围八格金块。",
+        "【掠夺战果】材料已备，按下面步骤起战；取得材料不代表已经召出或战胜首领。",
+        "",
+        "&6召唤步骤&r",
+        "在平地铺3×3底座，中央草方块，周围八格金块。",
+        "手持附魔金苹果右击中央草方块。仪式中途破坏祭坛可中断并返还苹果。",
+        "保留地面视野与足够空场，远离核心建筑。暂时建造方块的恢复逻辑存在，跨模组设施仍应在独立世界先验证。"
+      ],
+      "icon": "minecraft:gold_block",
+      "subtitle": "",
+      "x": 6.8,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0009D5FBEDF7FC79"
+      ],
+      "tasks": [
+        {
+          "id": "000D510B611590E0",
+          "type": "item",
+          "item": "minecraft:gold_block",
+          "count": 8L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "000CA87FBFE6DA7A",
+          "type": "item",
+          "item": "minecraft:grass_block",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "000FA3545D430074",
+          "type": "item",
+          "item": "minecraft:enchanted_golden_apple",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00023CECA0D0BC78",
+      "title": "LB04 · 造界者·Notch",
+      "description": [
+        "【战略目标】母巢已经陷落，旧世界却还没有将最高权柄交给你。Notch以创造之镐重构战场；胜过这位本土造界者，你才算真正跨过此界的最终门槛。",
+        "【讨伐作业】完成造界者·Notch的原生最终胜利进度。",
+        "【情报与机制】三阶段战斗与终场演出完成后结算。转阶段、分身消失和演出开始都不算最终胜利。",
+        "【掠夺战果】造界者收起万物，承认新王已经跨过本土的最后门槛。带上创世之镐与全部战果，向真魂远去的大圣残躯请求赐教。",
+        "",
+        "&6三阶段情报&r",
+        "创造者：近身镐击、地柱、地浪与囚笼交替。先离开重砸预兆，囚笼成形前撤离或尽快突破。",
+        "生命降至66%：建筑师用活塞、TNT、发射器和铁巨像扩张火力。多看地面与两侧，避免被夹在连续攻击中。",
+        "生命降至33%：创造形态悬空，/fill倒计时要求进入白色安全格；铁砧雨、创世纪与世界再生继续改造战场，按各自标记移动。",
+        "",
+        "&6原生召唤&r",
+        "在平地铺3×3底座，中央草方块，周围八格金块。",
+        "手持附魔金苹果右击中央草方块。仪式中途破坏祭坛可中断并返还苹果。",
+        "保留地面视野与足够空场，远离核心建筑。暂时建造方块的恢复逻辑存在，跨模组设施仍应在独立世界先验证。",
+        "",
+        "&6当前战斗设置&r",
+        "本包使用作者MODDED档，保留原生招式与伤害。纸面基础生命4000、护甲60，并非本包运行时测量结果。",
+        "战斗附近会限制飞行。地面移动、技能与原生攻击的实际配合由你在独立测试世界验收。",
+        "",
+        "&6战果与后续&r",
+        "造界者收起万物，承认新王已经跨过本土的最后门槛。带上创世之镐与全部战果，向真魂远去的大圣残躯请求赐教。",
+        "原生进度由模组终场授予当时仍追踪首领条的玩家；不以最终一刀限定全队奖励。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}",
+        "{\"text\": \"→ 为远征留一套回收工具\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E484EE790A548\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/boss/lb_notch.png"
+        }
+      },
+      "subtitle": "主线压轴候选 · 实际EF交互待独立测试",
+      "x": 10.2,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00001DA6DADBAD8E"
+      ],
+      "tasks": [
+        {
+          "id": "000069F4AC7BFA21",
+          "type": "advancement",
+          "advancement": "legendarybosses:notch_slayer"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00054C45333FE3AB",
+      "title": "战果结算 · 造界者·Notch",
+      "description": [
+        "【战略目标】造界者收起万物，承认新王已经跨过本土的最后门槛。带上创世之镐与全部战果，向真魂远去的大圣残躯请求赐教。",
+        "【讨伐作业】原生最终胜利完成后自动结算。",
+        "【情报与机制】首领原生装备在战场拾取；本项只拨付下一段军需，不再复制一份同样的Boss武器。",
+        "【掠夺战果】军资到账，继续下一段王途。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/boss/lb_notch.png"
+        }
+      },
+      "subtitle": "",
+      "x": 13.6,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00023CECA0D0BC78"
+      ],
+      "tasks": [
+        {
+          "id": "000B5969858771D5",
+          "type": "custom",
+          "title": "原生最终胜利完成后自动结算。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 240,
+          "team_reward": false,
+          "id": "000BAD60AA54C955"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 192,
+          "team_reward": false,
+          "id": "000F16A6EE58AEF3"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:netherite_ingot",
+          "count": 2,
+          "team_reward": false,
+          "id": "0006B07387E05204"
+        },
+        {
+          "type": "choice",
+          "table_id": 2286807384712760L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "王权技法 · 任选一",
+          "id": "000D6542DAAC943F"
+        },
+        {
+          "type": "choice",
+          "table_id": 1703173767153712L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "T0鉴定赏 · 君王军资任选一",
+          "id": "000996B70B2E641F"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    }
+  ],
+  "images": [
+    {
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/crown.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "终章 · 齐天遗蜕"
+      ],
+      "click": "",
+      "dev": false,
+      "corner": false
+    }
+  ]
+}

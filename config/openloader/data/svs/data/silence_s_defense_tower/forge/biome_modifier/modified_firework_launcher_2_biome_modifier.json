@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [],
+  "spawners": {
+    "type": "silence_s_defense_tower:modified_firework_launcher_2",
+    "weight": 65,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

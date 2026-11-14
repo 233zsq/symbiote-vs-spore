@@ -1,0 +1,1493 @@
+[
+  {
+    "old_key": "S00",
+    "new_key": "S00",
+    "action": "retained",
+    "old_chapter": "start",
+    "new_chapter": "start"
+  },
+  {
+    "old_key": "S01",
+    "new_key": "S01",
+    "action": "retained",
+    "old_chapter": "start",
+    "new_chapter": "start"
+  },
+  {
+    "old_key": "S02",
+    "new_key": "S02",
+    "action": "retained",
+    "old_chapter": "start",
+    "new_chapter": "start"
+  },
+  {
+    "old_key": "S03",
+    "new_key": "S03",
+    "action": "retained",
+    "old_chapter": "start",
+    "new_chapter": "start"
+  },
+  {
+    "old_key": "S04",
+    "new_key": "S04",
+    "action": "retained",
+    "old_chapter": "start",
+    "new_chapter": "start"
+  },
+  {
+    "old_key": "A01",
+    "new_key": "A01",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A02",
+    "new_key": "A02",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A03",
+    "new_key": "A03",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A04",
+    "new_key": "A04",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A05",
+    "new_key": "A05",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A06",
+    "new_key": "A06",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A07",
+    "new_key": "A07",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A08",
+    "new_key": "A08",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A09",
+    "new_key": "A09",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A10",
+    "new_key": "A10",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A11",
+    "new_key": "A11",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "A12",
+    "new_key": "A12",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "B01",
+    "new_key": "B01",
+    "action": "retained",
+    "old_chapter": "departure",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "B02",
+    "new_key": "B02",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "B03",
+    "new_key": "B03",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "B04",
+    "new_key": "B04",
+    "action": "retained",
+    "old_chapter": "departure",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "B05",
+    "new_key": "B05",
+    "action": "retained",
+    "old_chapter": "departure",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "B06",
+    "new_key": "B06",
+    "action": "retained",
+    "old_chapter": "departure",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "B07",
+    "new_key": "B07",
+    "action": "retained",
+    "old_chapter": "departure",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "B08",
+    "new_key": "B08",
+    "action": "retained",
+    "old_chapter": "departure",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "B09",
+    "new_key": "B09",
+    "action": "retained",
+    "old_chapter": "departure",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "B10",
+    "new_key": "B10",
+    "action": "retained",
+    "old_chapter": "departure",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "B11",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "departure",
+    "new_chapter": null
+  },
+  {
+    "old_key": "C02",
+    "new_key": "C02",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "C03",
+    "new_key": "C03",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "C04",
+    "new_key": "C04",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "C05",
+    "new_key": "C05",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "C06",
+    "new_key": "C06",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "C07",
+    "new_key": "C07",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "C09",
+    "new_key": "C09",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C10",
+    "new_key": "C10",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C11",
+    "new_key": "C11",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C13",
+    "new_key": "C13",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C14",
+    "new_key": "C14",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C15",
+    "new_key": "C15",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C16",
+    "new_key": "C16",
+    "action": "retained",
+    "old_chapter": "journey",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C22",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "journey",
+    "new_chapter": null
+  },
+  {
+    "old_key": "D02",
+    "new_key": "D02",
+    "action": "retained",
+    "old_chapter": "front",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "D03",
+    "new_key": "D03",
+    "action": "retained",
+    "old_chapter": "front",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "D04",
+    "new_key": "D04",
+    "action": "retained",
+    "old_chapter": "front",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "D05",
+    "new_key": "D05",
+    "action": "retained",
+    "old_chapter": "front",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "D07",
+    "new_key": "D07",
+    "action": "retained",
+    "old_chapter": "front",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "D08",
+    "new_key": "D08",
+    "action": "retained",
+    "old_chapter": "front",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "D11",
+    "new_key": "D11",
+    "action": "retained",
+    "old_chapter": "front",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "D12",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "front",
+    "new_chapter": null
+  },
+  {
+    "old_key": "D16",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "front",
+    "new_chapter": null
+  },
+  {
+    "old_key": "D18",
+    "new_key": "D18",
+    "action": "retained",
+    "old_chapter": "front",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "D19",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "front",
+    "new_chapter": null
+  },
+  {
+    "old_key": "D21",
+    "new_key": "D21",
+    "action": "retained",
+    "old_chapter": "front",
+    "new_chapter": "recon"
+  },
+  {
+    "old_key": "D23",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "front",
+    "new_chapter": null
+  },
+  {
+    "old_key": "D25",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "front",
+    "new_chapter": null
+  },
+  {
+    "old_key": "D29",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "front",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E02",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E03",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E04",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E05",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E09",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E10",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E11",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E12",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E14",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E16",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E17",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "E18",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "counterattack",
+    "new_chapter": null
+  },
+  {
+    "old_key": "C08",
+    "new_key": "C08",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C12",
+    "new_key": "C12",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C17",
+    "new_key": "C17",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C19",
+    "new_key": "C19_V4",
+    "action": "new_proof_new_id",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C20",
+    "new_key": "C20",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C21",
+    "new_key": "C21",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "C23",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "expedition",
+    "new_chapter": null
+  },
+  {
+    "old_key": "D06",
+    "new_key": "D06",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "D13",
+    "new_key": "D13",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "D15",
+    "new_key": "D15",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "D17",
+    "new_key": "D17",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "D20",
+    "new_key": "D20_V4",
+    "action": "new_proof_new_id",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "D24",
+    "new_key": "D24",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "E06",
+    "new_key": "E06",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "E13",
+    "new_key": "E13",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "E15",
+    "new_key": "E15",
+    "action": "retained",
+    "old_chapter": "expedition",
+    "new_chapter": "expedition"
+  },
+  {
+    "old_key": "L01",
+    "new_key": "L01",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L02",
+    "new_key": "L02",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L03",
+    "new_key": "L03",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L04",
+    "new_key": "L04",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L05",
+    "new_key": "L05",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L06",
+    "new_key": "L06",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L07",
+    "new_key": "L07",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L08",
+    "new_key": "L08",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L09",
+    "new_key": "L09",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L10",
+    "new_key": "L10",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L11",
+    "new_key": "L11",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L12",
+    "new_key": "L12",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L13",
+    "new_key": "L13",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L14",
+    "new_key": "L14",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L15",
+    "new_key": "L15",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L16",
+    "new_key": "L16",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L17",
+    "new_key": "L17",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L18",
+    "new_key": "L18",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L19",
+    "new_key": "L19",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L20",
+    "new_key": "L20",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L21",
+    "new_key": "L21",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L22",
+    "new_key": "L22",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L23",
+    "new_key": "L23",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L24",
+    "new_key": "L24",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L25",
+    "new_key": "L25",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L26",
+    "new_key": "L26",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L27",
+    "new_key": "L27",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L28",
+    "new_key": "L28",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L29",
+    "new_key": "L29",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L30",
+    "new_key": "L30",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L31",
+    "new_key": "L31",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "L32",
+    "new_key": "L32",
+    "action": "retained",
+    "old_chapter": "collector",
+    "new_chapter": "collector"
+  },
+  {
+    "old_key": "F01",
+    "new_key": "F01",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F02",
+    "new_key": "F02",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F03",
+    "new_key": "F03",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F04",
+    "new_key": "F04",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F05",
+    "new_key": "F05",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F06",
+    "new_key": "F06",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F07",
+    "new_key": "F07",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F08",
+    "new_key": "F08",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F09",
+    "new_key": "F09",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F10",
+    "new_key": "F10",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F11",
+    "new_key": "F11",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F12",
+    "new_key": "F12",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F13",
+    "new_key": "F13",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "F14",
+    "new_key": "F14",
+    "action": "retained",
+    "old_chapter": "smith",
+    "new_chapter": "smith"
+  },
+  {
+    "old_key": "J01",
+    "new_key": "J01",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J02",
+    "new_key": "J02",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J03",
+    "new_key": "J03",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J04",
+    "new_key": "J04",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J05",
+    "new_key": "J05",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J06",
+    "new_key": "J06",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J07",
+    "new_key": "J07",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J08",
+    "new_key": "J08",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J09",
+    "new_key": "J09",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J10",
+    "new_key": "J10",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J11",
+    "new_key": "J11",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "J12",
+    "new_key": "J12",
+    "action": "retained",
+    "old_chapter": "symbiote",
+    "new_chapter": "symbiote"
+  },
+  {
+    "old_key": "H01",
+    "new_key": "H01",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H02",
+    "new_key": "H02",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H03",
+    "new_key": "H03",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H04a",
+    "new_key": "H04a",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H04b",
+    "new_key": "H04b",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H04c",
+    "new_key": "H04c",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H04d",
+    "new_key": "H04d",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H04e",
+    "new_key": "H04e",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H04f",
+    "new_key": "H04f",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H04g",
+    "new_key": "H04g",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H04h",
+    "new_key": "H04h",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H05",
+    "new_key": "H05",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H06",
+    "new_key": "H06",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H07",
+    "new_key": "H07",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H08",
+    "new_key": "H08",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H09",
+    "new_key": "H09",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H10",
+    "new_key": "H10",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H11",
+    "new_key": "H11",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H12",
+    "new_key": "H12",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H13",
+    "new_key": "H13",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "H14",
+    "new_key": "H14",
+    "action": "retained",
+    "old_chapter": "dragon",
+    "new_chapter": "dragon"
+  },
+  {
+    "old_key": "HUNT_monstrosity",
+    "new_key": "HUNT_monstrosity",
+    "action": "retained",
+    "old_chapter": "hunts",
+    "new_chapter": "hunts"
+  },
+  {
+    "old_key": "HUNT_harbinger",
+    "new_key": "HUNT_harbinger",
+    "action": "retained",
+    "old_chapter": "hunts",
+    "new_chapter": "hunts"
+  },
+  {
+    "old_key": "HUNT_ender_guardian",
+    "new_key": "HUNT_ender_guardian",
+    "action": "retained",
+    "old_chapter": "hunts",
+    "new_chapter": "hunts"
+  },
+  {
+    "old_key": "HUNT_ignis",
+    "new_key": "HUNT_ignis",
+    "action": "retained",
+    "old_chapter": "hunts",
+    "new_chapter": "hunts"
+  },
+  {
+    "old_key": "HUNT_leviathan",
+    "new_key": "HUNT_leviathan",
+    "action": "retained",
+    "old_chapter": "hunts",
+    "new_chapter": "hunts"
+  },
+  {
+    "old_key": "HUNT_remnant",
+    "new_key": "HUNT_remnant",
+    "action": "retained",
+    "old_chapter": "hunts",
+    "new_chapter": "hunts"
+  },
+  {
+    "old_key": "HUNT_maledictus",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "hunts",
+    "new_chapter": null
+  },
+  {
+    "old_key": "HUNT_scylla",
+    "new_key": "HUNT_scylla",
+    "action": "retained",
+    "old_chapter": "hunts",
+    "new_chapter": "hunts"
+  },
+  {
+    "old_key": "HUNT_BB_father_gascoigne",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "hunts",
+    "new_chapter": null
+  },
+  {
+    "old_key": "HUNT_BB_gascoigne_beast",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "hunts",
+    "new_chapter": null
+  },
+  {
+    "old_key": "HUNT_BB_micolash",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "hunts",
+    "new_chapter": null
+  },
+  {
+    "old_key": "SOUL_boss_gundyr",
+    "new_key": "SOUL_boss_gundyr",
+    "action": "retained",
+    "old_chapter": "souls",
+    "new_chapter": "souls"
+  },
+  {
+    "old_key": "SOUL_boss_artorias",
+    "new_key": "SOUL_boss_artorias",
+    "action": "retained",
+    "old_chapter": "souls",
+    "new_chapter": "souls"
+  },
+  {
+    "old_key": "SOUL_boss_gael",
+    "new_key": "SOUL_boss_gael",
+    "action": "retained",
+    "old_chapter": "souls",
+    "new_chapter": "souls"
+  },
+  {
+    "old_key": "SOUL_boss_soul_of_cinder",
+    "new_key": null,
+    "action": "retired",
+    "old_chapter": "souls",
+    "new_chapter": null
+  },
+  {
+    "old_key": "K02",
+    "new_key": "K02",
+    "action": "retained",
+    "old_chapter": "commissions",
+    "new_chapter": "commissions"
+  },
+  {
+    "old_key": "K03",
+    "new_key": "K03",
+    "action": "retained",
+    "old_chapter": "commissions",
+    "new_chapter": "commissions"
+  },
+  {
+    "old_key": "K04",
+    "new_key": "K04",
+    "action": "retained",
+    "old_chapter": "commissions",
+    "new_chapter": "commissions"
+  },
+  {
+    "old_key": "K05",
+    "new_key": "K05",
+    "action": "retained",
+    "old_chapter": "commissions",
+    "new_chapter": "commissions"
+  },
+  {
+    "old_key": "K06",
+    "new_key": "K06",
+    "action": "retained",
+    "old_chapter": "commissions",
+    "new_chapter": "commissions"
+  },
+  {
+    "old_key": "K01",
+    "new_key": "K01",
+    "action": "retained",
+    "old_chapter": "commissions",
+    "new_chapter": "commissions"
+  },
+  {
+    "old_key": "M01",
+    "new_key": "M01",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M02",
+    "new_key": "M02",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M03",
+    "new_key": "M03",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M04",
+    "new_key": "M04",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M05",
+    "new_key": "M05",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M06",
+    "new_key": "M06",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M07",
+    "new_key": "M07",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M08",
+    "new_key": "M08",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M09",
+    "new_key": "M09",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M10",
+    "new_key": "M10",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M11",
+    "new_key": "M11",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M12",
+    "new_key": "M12",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M13",
+    "new_key": "M13",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "M14",
+    "new_key": "M14",
+    "action": "retained",
+    "old_chapter": "manual",
+    "new_chapter": "manual"
+  },
+  {
+    "old_key": "T01",
+    "new_key": "T01",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T02",
+    "new_key": "T02",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T03",
+    "new_key": "T03",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T04",
+    "new_key": "T04",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T05",
+    "new_key": "T05",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T06",
+    "new_key": "T06",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T07",
+    "new_key": "T07",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T08",
+    "new_key": "T08",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T09",
+    "new_key": "T09",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T10",
+    "new_key": "T10",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "T11",
+    "new_key": "T11",
+    "action": "retained",
+    "old_chapter": "atlas",
+    "new_chapter": "atlas"
+  },
+  {
+    "old_key": "V4A_FORGE",
+    "new_key": "V4A_FORGE",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "V4A_CAST",
+    "new_key": "V4A_CAST",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  },
+  {
+    "old_key": "V4A_DEFENSE",
+    "new_key": "V4A_DEFENSE",
+    "action": "retained",
+    "old_chapter": "prologue",
+    "new_chapter": "prologue"
+  }
+]

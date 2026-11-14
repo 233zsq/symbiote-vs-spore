@@ -1,0 +1,46 @@
+{
+  "test": {
+    "jar_count": 229,
+    "jar_hash_checks": 229,
+    "config_resource_hash_checks": 2113,
+    "changed": [],
+    "missing": [],
+    "additional_jars": [],
+    "additional_config_resources": [],
+    "unchanged": true
+  },
+  "mother": {
+    "jar_count": 226,
+    "jar_hash_checks": 226,
+    "config_resource_hash_checks": 1934,
+    "changed": [],
+    "missing": [],
+    "additional_jars": [],
+    "additional_config_resources": [],
+    "unchanged": true
+  },
+  "immersive_fight": {
+    "jar_count": 308,
+    "jar_hash_checks": 308,
+    "config_resource_hash_checks": 802,
+    "changed": [],
+    "missing": [],
+    "additional_jars": [],
+    "additional_config_resources": [],
+    "unchanged": true
+  },
+  "otherworld": {
+    "jar_count": 400,
+    "jar_hash_checks": 400,
+    "config_resource_hash_checks": 3020,
+    "changed": [],
+    "missing": [],
+    "additional_jars": [],
+    "additional_config_resources": [],
+    "unchanged": true
+  },
+  "intake": {
+    "files": 7,
+    "unchanged": true
+  }
+}

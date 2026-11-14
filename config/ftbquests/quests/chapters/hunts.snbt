@@ -1,489 +1,1242 @@
 {
   "id": "000570064F5B214E",
   "filename": "hunts",
-  "title": "可选·灾变与猎人",
+  "title": "&d猎场 · 荒野与古国&r",
   "group": "000ACC9B9418BE4C",
-  "order_index": 11,
-  "icon": "minecraft:diamond_sword",
+  "order_index": 16,
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/hunt.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
   "default_hide_dependency_lines": false,
   "default_quest_shape": "circle",
   "quest_links": [],
   "quests": [
     {
-      "id": "000EC0EFFCA075AA",
-      "title": "下界合金巨兽",
+      "id": "0008B0B82AAE1830",
+      "title": "把额外战利品带回主战场",
       "description": [
-        "【教学目标】体验一种独立的灾变战斗。",
-        "【作业】取得该Boss原生击杀进度。",
-        "【提示】自然场地：soul_black_smith；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
-        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+        "【战略目标】荒野之外还有不守主线道路的强者。它们提供独立武装与额外军资，适合在下一段远征之前补强。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】每个猎场沿上一场胜利继续展开；不要求猎场全通才能推进主线。",
+        "【掠夺战果】首个独立猎场开放。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}"
       ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/command.png"
+        }
+      },
+      "subtitle": "独立目标",
       "x": 0.0,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005D8B2BE004BA4"
+        "0006E6788B8A8515"
       ],
       "tasks": [
         {
-          "id": "000FE384DB0C57DD",
-          "type": "advancement",
-          "advancement": "cataclysm:kill_monstrosity"
+          "id": "000C88C151BC0A32",
+          "type": "checkmark"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0006CEC9876E4BC6"
-        }
-      ],
+      "rewards": [],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000754941EA9A2AF",
-      "title": "先驱者",
+      "id": "000C7196C0C4CB25",
+      "title": "S02 · 加斯科因·猎人与兽",
       "description": [
-        "【教学目标】体验一种独立的灾变战斗。",
-        "【作业】取得该Boss原生击杀进度。",
-        "【提示】自然场地：ancient_factory；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
-        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+        "【战略目标】加斯科因让猎人的追猎走向兽化。这里把人形到兽形视作同一场挑战，故事与奖励都围绕完整终局，而不是两枚可以分别刷出的击杀勾。",
+        "【讨伐作业】完成从人形开始的完整加斯科因战斗。",
+        "【情报与机制】留意形态变化后节奏和距离的变化，保留重整空间。当前完整场次检测未开放；单独召出兽形或人形变身移除都不能算全程胜利。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "血源完整挑战入口。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "留意形态变化后节奏和距离的变化，保留重整空间。当前完整场次检测未开放；单独召出兽形或人形变身移除都不能算全程胜利。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：Emerald、Diamond、血石碎片、双子血石碎片、兽血凝块、血钢粒、Weapons/Hunter Pistol、Weapons/Hunter Axe。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
       ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 2.5,
+      "icon": "bloodandmadness:weapons/hunter_axe",
+      "subtitle": "尚未开放 · 血源完整挑战入口",
+      "x": 3.4,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005D8B2BE004BA4"
+        "0008B0B82AAE1830"
       ],
       "tasks": [
         {
-          "id": "0000463D5B236672",
-          "type": "advancement",
-          "advancement": "cataclysm:kill_harbinger"
+          "id": "00036C527FA7AC91",
+          "type": "custom",
+          "title": "尚未开放·完成从人形开始的完整加斯科因战斗。"
         }
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "xp",
+          "xp": 80,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0006115DD4B96988"
+          "id": "000ECF75C23475E4"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 20,
+          "team_reward": false,
+          "id": "0008AD1BE9B91671"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "00044DE46E10FEA2",
-      "title": "末影守卫",
+      "id": "0000023B13A75395",
+      "title": "S03 · 钢铁守护者",
       "description": [
-        "【教学目标】体验一种独立的灾变战斗。",
-        "【作业】取得该Boss原生击杀进度。",
-        "【提示】自然场地：ruined_citadel；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
-        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+        "【战略目标】钢铁守护者在古老石室中等待闯入者。它的巨斧与头盔让这条独立猎场同时通向武器和护甲收藏。",
+        "【讨伐作业】完成钢铁守护者的讨伐目标。",
+        "【情报与机制】不要正面把全部攻击换在厚甲上。先绕开覆盖范围，寻找出手后暴露的空当；石室里的站位比长时间连按更有价值。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "守护者石室。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "不要正面把全部攻击换在厚甲上。先绕开覆盖范围，寻找出手后暴露的空当；石室里的站位比长时间连按更有价值。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
       ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 5.0,
+      "icon": "mowziesmobs:wrought_axe",
+      "subtitle": "守护者石室",
+      "x": 6.8,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005D8B2BE004BA4"
+        "0008B0B82AAE1830"
       ],
       "tasks": [
         {
-          "id": "000874D20F6E17F9",
-          "type": "advancement",
-          "advancement": "cataclysm:kill_ender_guardian"
+          "id": "000AE147D67E075D",
+          "type": "kill",
+          "entity": "mowziesmobs:ferrous_wroughtnaut",
+          "value": 1L
         }
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "xp",
+          "xp": 80,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000DDCB54334FF53"
+          "id": "0001436153664A04"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 22,
+          "team_reward": false,
+          "id": "0006F365599A52DB"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000BB5B89DF75835",
-      "title": "伊格尼斯",
+      "id": "000CE8B1A5B8FC0E",
+      "title": "S04 · 霜冻巨兽",
       "description": [
-        "【教学目标】体验一种独立的灾变战斗。",
-        "【作业】取得该Boss原生击杀进度。",
-        "【提示】自然场地：burning_arena；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
-        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+        "【战略目标】霜冻巨兽把寒地变成了自己的领地。它的冰晶提供一种鲜明的战利品方向；你为独立狩猎出发，而不是为主线补一个必做数。",
+        "【讨伐作业】完成霜冻巨兽的讨伐目标。",
+        "【情报与机制】准备可快速脱离近身压力的路线，避免在狭小地形被巨兽身体困住。观察冰霜危险区域后，再决定贴近或拉开。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "霜冻巨兽栖地。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "准备可快速脱离近身压力的路线，避免在狭小地形被巨兽身体困住。观察冰霜危险区域后，再决定贴近或拉开。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
       ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 7.5,
+      "icon": "mowziesmobs:ice_crystal",
+      "subtitle": "霜冻巨兽栖地",
+      "x": 10.2,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005D8B2BE004BA4"
+        "0000023B13A75395"
       ],
       "tasks": [
         {
-          "id": "00008A0659792C9D",
+          "id": "000F496202F305D1",
+          "type": "kill",
+          "entity": "mowziesmobs:frostmaw",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "0005D92DD1AC9D49"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 24,
+          "team_reward": false,
+          "id": "0002A49A990ADB96"
+        },
+        {
+          "type": "choice",
+          "table_id": 3880405831076903L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "远征行装 · 三选一",
+          "id": "000105088898473D"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00027EC0E26F7DFF",
+      "title": "S05 · 雕刻家·通臂大师",
+      "description": [
+        "【战略目标】通臂大师操纵岩石，守着自己的修行与试炼。他的登顶考验和独立讨伐是不同玩法；任务将两者分清，让法杖与地术装备有明确来源。",
+        "【讨伐作业】完成雕刻家·通臂大师的讨伐目标。",
+        "【情报与机制】原生登顶试炼要求按自己的规则行动，不能用飞行或传送替代。此讨伐席位记录首领战，登顶成功不冒充击杀。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "修行寺院。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "原生登顶试炼要求按自己的规则行动，不能用飞行或传送替代。此讨伐席位记录首领战，登顶成功不冒充击杀。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "mowziesmobs:sculptor_staff",
+      "subtitle": "修行寺院",
+      "x": 13.6,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CE8B1A5B8FC0E"
+      ],
+      "tasks": [
+        {
+          "id": "0008C2EB3A7E815C",
+          "type": "kill",
+          "entity": "mowziesmobs:sculptor",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "0006AFD30EA49B83"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 26,
+          "team_reward": false,
+          "id": "000CC3C497F99527"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0006213C51502DCB",
+      "title": "S06 · 太阳鸟·乌姆武提",
+      "description": [
+        "【战略目标】乌姆武提以太阳之名统御林地仪式。击败它可为收藏带回太阳面具，也让你体验一条与重甲巨兽完全不同的地区战线。",
+        "【讨伐作业】完成太阳鸟·乌姆武提的讨伐目标。",
+        "【情报与机制】关注首领与场上其他目标之间的位置关系，避免被多个方向夹击。移动时留意仪式场边界，选择能够持续周旋的位置。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "太阳部族林地。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "关注首领与场上其他目标之间的位置关系，避免被多个方向夹击。移动时留意仪式场边界，选择能够持续周旋的位置。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "mowziesmobs:sol_visage",
+      "subtitle": "太阳部族林地",
+      "x": 13.6,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00027EC0E26F7DFF"
+      ],
+      "tasks": [
+        {
+          "id": "000A6476BB2F1720",
+          "type": "kill",
+          "entity": "mowziesmobs:umvuthi",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "00021BEC50F9E23E"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 28,
+          "team_reward": false,
+          "id": "0005121B77B28B72"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000920243223660B",
+      "title": "S07 · 荒古守卫者",
+      "description": [
+        "【战略目标】荒古守卫者镇守着失落建筑，是旧世另一处独立宝库。锚柄等战果把这场讨伐接入传奇怪物的军械制作线。",
+        "【讨伐作业】完成荒古守卫者的讨伐目标。",
+        "【情报与机制】大型守卫面前先观察进攻方向，勿在狭窄建筑边角持续贪刀。整备回程工具，再向遗迹深处推进。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "荒古遗迹线索。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "大型守卫面前先观察进攻方向，勿在狭窄建筑边角持续贪刀。整备回程工具，再向遗迹深处推进。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：锚把手。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "legendary_monsters:anchor_handle",
+      "subtitle": "荒古遗迹线索",
+      "x": 10.2,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0006213C51502DCB"
+      ],
+      "tasks": [
+        {
+          "id": "000C345406C4742E",
+          "type": "kill",
+          "entity": "legendary_monsters:ancient_guardian",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "000431DCA8476F41"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 30,
+          "team_reward": false,
+          "id": "000001D9823E1946"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000FFF124B75162E",
+      "title": "S08 · 海妖内拉基斯",
+      "description": [
+        "【战略目标】海妖内拉基斯盘踞船只与深水猎场。海妖之牙让远洋征伐多了一条独立材料线，与科妮莉亚的主线舰队战分开记录。",
+        "【讨伐作业】完成海妖内拉基斯的讨伐目标。",
+        "【情报与机制】呼吸、落水后的上岸点和装备回收比多带一把武器更紧要。先找能重新站稳的位置，再与水中巨物交战。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "海妖船只。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "呼吸、落水后的上岸点和装备回收比多带一把武器更紧要。先找能重新站稳的位置，再与水中巨物交战。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：海妖之牙。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "block_factorys_bosses:kraken_tooth",
+      "subtitle": "海妖船只",
+      "x": 6.8,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000920243223660B"
+      ],
+      "tasks": [
+        {
+          "id": "00098E0EC6709AB6",
+          "type": "kill",
+          "entity": "block_factorys_bosses:kraken",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "00033BD4726D7A7E"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 32,
+          "team_reward": false,
+          "id": "000522FEC270636E"
+        },
+        {
+          "type": "choice",
+          "table_id": 3880405831076903L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "远征行装 · 三选一",
+          "id": "000B335E6D8276B0"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00039FB61E79EF79",
+      "title": "S09 · 伊格尼斯",
+      "description": [
+        "【战略目标】伊格尼斯是燃烧竞技场的烈焰主宰。焰魔锭通向武装与套装研究，这场独立决斗也能为主线夺火之外提供另一份军械收益。",
+        "【讨伐作业】完成伊格尼斯的讨伐目标。",
+        "【情报与机制】先识别持盾与挥剑的不同进攻朝向，给连段末端留出观察时间。别把其他包的完美格挡判定照搬到当前EF版本。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "燃烧竞技场。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "先识别持盾与挥剑的不同进攻朝向，给连段末端留出观察时间。别把其他包的完美格挡判定照搬到当前EF版本。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：腾炎锭。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "cataclysm:ignitium_ingot",
+      "subtitle": "燃烧竞技场",
+      "x": 3.4,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000FFF124B75162E"
+      ],
+      "tasks": [
+        {
+          "id": "0000405353EAEF0F",
           "type": "advancement",
           "advancement": "cataclysm:kill_ignis"
         }
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "xp",
+          "xp": 80,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0004611F7472B92E"
+          "id": "0001C97060097D26"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 34,
+          "team_reward": false,
+          "id": "000DA7AE16F1A15E"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0001CA0A360F2269",
-      "title": "利维坦",
+      "id": "000ABEC078841D0F",
+      "title": "S10 · 斯库拉",
       "description": [
-        "【教学目标】体验一种独立的灾变战斗。",
-        "【作业】取得该Boss原生击杀进度。",
-        "【提示】自然场地：sunken_city；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
-        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
+        "【战略目标】斯库拉是卫城风暴中的强敌。她保持独立猎场身份，风暴精华与泪晶为另一种后期装备方向提供理由，绝不与大圣终章重复结算。",
+        "【讨伐作业】完成斯库拉的讨伐目标。",
+        "【情报与机制】给快速位移留足空间，先重新定位目标再追加攻击。开战前整理场边退路，不把场地装饰误当作稳定掩体。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "卫城。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "给快速位移留足空间，先重新定位目标再追加攻击。开战前整理场边退路，不把场地装饰误当作稳定掩体。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：泪宝石、风暴精华。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
       ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 10.0,
-      "y": 0.0,
+      "icon": "cataclysm:essence_of_the_storm",
+      "subtitle": "卫城",
+      "x": 0.0,
+      "y": 4.2,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005D8B2BE004BA4"
+        "00039FB61E79EF79"
       ],
       "tasks": [
         {
-          "id": "000CA756CFBDDFA7",
-          "type": "advancement",
-          "advancement": "cataclysm:kill_leviathan"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000741A1E0A18B7D"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "00046829A6C1C1E2",
-      "title": "远古遗骸",
-      "description": [
-        "【教学目标】体验一种独立的灾变战斗。",
-        "【作业】取得该Boss原生击杀进度。",
-        "【提示】自然场地：cursed_pyramid；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
-        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
-      ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 12.5,
-      "y": 0.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0005D8B2BE004BA4"
-      ],
-      "tasks": [
-        {
-          "id": "00066BB5612FAF00",
-          "type": "advancement",
-          "advancement": "cataclysm:kill_remnant"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00068F6CF483B999"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000CA3AD2BA43571",
-      "title": "被诅咒者·看样候选",
-      "description": [
-        "【教学目标】体验一种独立的灾变战斗。",
-        "【作业】取得该Boss原生击杀进度。",
-        "【提示】自然场地：frosted_prison；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
-        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
-      ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 12.5,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0005D8B2BE004BA4"
-      ],
-      "tasks": [
-        {
-          "id": "0001C76A7111F6E3",
-          "type": "advancement",
-          "advancement": "cataclysm:kill_maledictus"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000AEFA42F2BDBA2"
-        }
-      ],
-      "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0005DC9D92E77758",
-      "title": "斯库拉·看样候选",
-      "description": [
-        "【教学目标】体验一种独立的灾变战斗。",
-        "【作业】取得该Boss原生击杀进度。",
-        "【提示】自然场地：acropolis；定位与激活路径以原生线索和实测为准。被诅咒者、斯库拉目前是可选看样，未来终局选定后调整奖励唯一归属，不要求全部击败。",
-        "【讲评】冒险者，这场战斗的收获也能留在你的装备里。"
-      ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 10.0,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0005D8B2BE004BA4"
-      ],
-      "tasks": [
-        {
-          "id": "000DEFECA0EEDA7E",
+          "id": "0004C67E44BA249F",
           "type": "advancement",
           "advancement": "cataclysm:kill_scylla"
         }
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这场战斗的收获也能留在你的装备里。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "xp",
+          "xp": 80,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000CC4595A2B05A6"
+          "id": "000E1006DF27D51F"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 36,
+          "team_reward": false,
+          "id": "000DCCA06B53974C"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0003F907486D4541",
-      "title": "加斯科因·人形",
+      "id": "00061B78EEAEBFBA",
+      "title": "S11 · 利维坦",
       "description": [
-        "【教学目标】认识血源路线的独立战斗。",
-        "【作业】有效击败该指定实体一次。",
-        "【提示】来源与激活按手册查证；加斯科因两种形态分别记录，不把杀死人形当完整变身战终结。主线战位仍待看样，不要求全图鉴毕业。",
-        "【讲评】冒险者，看清每一场战斗自己的规则。"
+        "【战略目标】利维坦盘踞沉没古城，潮汐之爪与深渊之卵让这场海底讨伐同时通向武器与生态收藏。",
+        "【讨伐作业】完成利维坦的讨伐目标。",
+        "【情报与机制】水下移动、呼吸和视野决定你是否能持续作战。准备上浮与返程手段，在实际水中状态下按本包远程规则选择武器。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "沉没之城。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "水下移动、呼吸和视野决定你是否能持续作战。准备上浮与返程手段，在实际水中状态下按本包远程规则选择武器。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：深渊之卵、潮汐利爪。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
       ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 7.5,
-      "y": 3.5,
+      "icon": "cataclysm:tidal_claws",
+      "subtitle": "沉没之城",
+      "x": 0.0,
+      "y": 8.4,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005D8B2BE004BA4"
+        "000ABEC078841D0F"
       ],
       "tasks": [
         {
-          "id": "000D2F28C223D83A",
+          "id": "000CF4A407B1F8FE",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_leviathan"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "0002369D43497B9D"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 38,
+          "team_reward": false,
+          "id": "0003B985C2716353"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000B641EE74AF047",
+      "title": "S12 · 先驱者",
+      "description": [
+        "【战略目标】先驱者是古代工厂的战争产物。其凋零合金块是肩炮与重工武器的重要研究线索；它是独立机械猎场，不挤占三场主线机械战。",
+        "【讨伐作业】完成先驱者的讨伐目标。",
+        "【情报与机制】机械火力面前要同时规划横向移动与遮挡。起战按原生机械交互准备，战后把材料拆解与合成用途接到军械目录。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "古代工厂。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "机械火力面前要同时规划横向移动与遮挡。起战按原生机械交互准备，战后把材料拆解与合成用途接到军械目录。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：凋灵合金块。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "cataclysm:witherite_block",
+      "subtitle": "古代工厂",
+      "x": 3.4,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00061B78EEAEBFBA"
+      ],
+      "tasks": [
+        {
+          "id": "0009F9BB02EEFF17",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_harbinger"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "000204CC7751B782"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 40,
+          "team_reward": false,
+          "id": "00017C072E6A607C"
+        },
+        {
+          "type": "choice",
+          "table_id": 3723869106617882L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐军需 · 三选一",
+          "id": "000D83D92372C143"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003C3F45AB39126",
+      "title": "S13 · 远古遗骸",
+      "description": [
+        "【战略目标】远古遗魂守在沙漠旧国的尽头。古代金属、残骸头骨和瓶中沙暴让这条独立猎场有不同于火焰军械的收藏价值。",
+        "【讨伐作业】完成远古遗骸的讨伐目标。",
+        "【情报与机制】保持能看见大范围动作的距离，别把自己逼进沙漠遗迹的角落。战前检查起战物与失利后的再次挑战路径。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "诅咒金字塔。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "保持能看见大范围动作的距离，别把自己逼进沙漠遗迹的角落。战前检查起战物与失利后的再次挑战路径。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：远古金属块、遗魂头骨、瓶中沙暴。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "cataclysm:remnant_skull",
+      "subtitle": "诅咒金字塔",
+      "x": 6.8,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000B641EE74AF047"
+      ],
+      "tasks": [
+        {
+          "id": "000FC778380EC1DC",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_remnant"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "000B2BC4A95204EF"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 42,
+          "team_reward": false,
+          "id": "00093FCFBCAE8B17"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000A648F59449227",
+      "title": "S14 · 下界合金巨兽",
+      "description": [
+        "【战略目标】下界合金巨兽是地狱锻造的残留产物。地狱熔炉、熔岩能源与巨角会把一次讨伐连接到不同的兵器和材料用途。",
+        "【讨伐作业】完成下界合金巨兽的讨伐目标。",
+        "【情报与机制】先确认熔岩边界和能稳定站立的平台，避免把输出窗口换成落入熔岩后的连锁损失。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "灵魂锻造厂。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "先确认熔岩边界和能稳定站立的平台，避免把输出窗口换成落入熔岩后的连锁损失。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：恶兽犄角、炼狱锻锤、熔岩动力电池。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "cataclysm:infernal_forge",
+      "subtitle": "灵魂锻造厂",
+      "x": 10.2,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003C3F45AB39126"
+      ],
+      "tasks": [
+        {
+          "id": "0008D926F19B3164",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_monstrosity"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "0003ED8897524BF0"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 44,
+          "team_reward": false,
+          "id": "000FE34B7EB72E45"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0001EE9FD3FB3E65",
+      "title": "S15 · 末影守卫",
+      "description": [
+        "【战略目标】末影守卫镇守破碎堡垒。守卫拳套是直接战利品路线的代表，与用材料合成的兵器需要分开理解。",
+        "【讨伐作业】完成末影守卫的讨伐目标。",
+        "【情报与机制】大范围打击面前优先保住移动空间，再选择近身窗口。用熟悉的防御与短连段逐步试探，不在角落硬拼。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "废弃堡垒。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "大范围打击面前优先保住移动空间，再选择近身窗口。用熟悉的防御与短连段逐步试探，不在角落硬拼。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：守卫者护手。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "cataclysm:gauntlet_of_guard",
+      "subtitle": "废弃堡垒",
+      "x": 13.6,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000A648F59449227"
+      ],
+      "tasks": [
+        {
+          "id": "000816F589C3A878",
+          "type": "advancement",
+          "advancement": "cataclysm:kill_ender_guardian"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "00015C044316725A"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 46,
+          "team_reward": false,
+          "id": "000885D9637F5E83"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0008D796D54BA6B8",
+      "title": "S16 · 暗夜巫妖",
+      "description": [
+        "【战略目标】暗夜巫妖是秘境高塔中的法术强敌，和主线的暗夜领主是两位不同的目标。古老源质与灵魂之星线索把它接向秘境收藏。",
+        "【讨伐作业】完成暗夜巫妖的讨伐目标。",
+        "【情报与机制】观察空中目标与场上投射物，给移动留出连续空间。不要因为名字相似就把本场进度当成暗夜领主战绩。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "巫妖高塔。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "观察空中目标与场上投射物，给移动留出连续空间。不要因为名字相似就把本场进度当成暗夜领主战绩。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：Diamond、Book、Bone、古代灵魂。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "bosses_of_mass_destruction:ancient_anima",
+      "subtitle": "巫妖高塔",
+      "x": 13.6,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0001EE9FD3FB3E65"
+      ],
+      "tasks": [
+        {
+          "id": "000A9BA4167A0604",
           "type": "kill",
-          "entity": "bloodandmadness:father_gascoigne",
+          "entity": "bosses_of_mass_destruction:lich",
           "value": 1L
         }
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，看清每一场战斗自己的规则。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "xp",
+          "xp": 80,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0006E23605770804"
+          "id": "0001B7760AF02BD7"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
+          "team_reward": false,
+          "id": "0005CEFECAFFD8B7"
+        },
+        {
+          "type": "choice",
+          "table_id": 3723869106617882L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐军需 · 三选一",
+          "id": "0008F23482135AE3"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "00077649E5D2EC63",
-      "title": "加斯科因·兽形",
+      "id": "0000C13DDB3AC41A",
+      "title": "S17 · 下界铁掌",
       "description": [
-        "【教学目标】认识血源路线的独立战斗。",
-        "【作业】有效击败该指定实体一次。",
-        "【提示】来源与激活按手册查证；加斯科因两种形态分别记录，不把杀死人形当完整变身战终结。主线战位仍待看样，不要求全图鉴毕业。",
-        "【讲评】冒险者，看清每一场战斗自己的规则。"
+        "【战略目标】下界铁掌守着下界秘境竞技场。它提供与常规人形首领不同的移动与范围判断考验，是独立秘境路线的一环。",
+        "【讨伐作业】完成下界铁掌的讨伐目标。",
+        "【情报与机制】进入下界前留好返回点；首轮进攻先观察范围和落点，再决定何时贴近。场地边缘不是可靠的撤退路线。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "铁掌竞技场。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "进入下界前留好返回点；首轮进攻先观察范围和落点，再决定何时贴近。场地边缘不是可靠的撤退路线。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
       ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 5.0,
-      "y": 3.5,
+      "icon": "bosses_of_mass_destruction:blazing_eye",
+      "subtitle": "铁掌竞技场",
+      "x": 10.2,
+      "y": 12.600000000000001,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005D8B2BE004BA4"
+        "0008D796D54BA6B8"
       ],
       "tasks": [
         {
-          "id": "000801430C3C2386",
+          "id": "000BF19F63F2064D",
           "type": "kill",
-          "entity": "bloodandmadness:gascoigne_beast",
+          "entity": "bosses_of_mass_destruction:gauntlet",
           "value": 1L
         }
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，看清每一场战斗自己的规则。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "xp",
+          "xp": 80,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000607C14866633A"
+          "id": "000238B527714AF4"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 50,
+          "team_reward": false,
+          "id": "000096EBAF0CC6B3"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000CAF615AA515F1",
-      "title": "米科拉什",
+      "id": "00030561B0B5FF62",
+      "title": "S18 · 黑曜巨石柱",
       "description": [
-        "【教学目标】认识血源路线的独立战斗。",
-        "【作业】有效击败该指定实体一次。",
-        "【提示】来源与激活按手册查证；加斯科因两种形态分别记录，不把杀死人形当完整变身战终结。主线战位仍待看样，不要求全图鉴毕业。",
-        "【讲评】冒险者，看清每一场战斗自己的规则。"
+        "【战略目标】黑曜巨石柱占据末地秘境。它让独立征伐从追猎活体转向处理古老构造体；自己的移动路线与场地观察同样属于备战。",
+        "【讨伐作业】完成黑曜巨石柱的讨伐目标。",
+        "【情报与机制】先看清末地平台的安全边界，再观察构造体的进攻区域。不要为追一次输出踏出可返回的平台。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "黑曜巨石柱竞技场。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "先看清末地平台的安全边界，再观察构造体的进攻区域。不要为追一次输出踏出可返回的平台。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
       ],
-      "icon": "minecraft:diamond_sword",
-      "subtitle": "可选作业",
-      "x": 2.5,
-      "y": 3.5,
+      "icon": "bosses_of_mass_destruction:obsidian_heart",
+      "subtitle": "黑曜巨石柱竞技场",
+      "x": 6.8,
+      "y": 12.600000000000001,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005D8B2BE004BA4"
+        "0000C13DDB3AC41A"
       ],
       "tasks": [
         {
-          "id": "000E42D82094BBCE",
+          "id": "000B5A614D357D12",
           "type": "kill",
-          "entity": "bloodandmadness:micolash",
+          "entity": "bosses_of_mass_destruction:obsidilith",
           "value": 1L
         }
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，看清每一场战斗自己的规则。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "xp",
+          "xp": 80,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000F44CDD8C1A95A"
+          "id": "0008DF9589E028A2"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 52,
+          "team_reward": false,
+          "id": "0008023A35ED64F8"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
+    },
+    {
+      "id": "00064619D096308A",
+      "title": "S19 · 虚空之花",
+      "description": [
+        "【战略目标】虚空之花把地下秘境变成了高能猎场。晶果与虚空之刺为这条路线提供明确战果，与地表重甲决斗形成不同体验。",
+        "【讨伐作业】完成虚空之花的讨伐目标。",
+        "【情报与机制】注意地面危险与可停留区域，先取得连续的安全移动路径，再把输出接入进攻间隙。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "虚空之花秘境。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "注意地面危险与可停留区域，先取得连续的安全移动路径，再把输出接入进攻间隙。",
+        "",
+        "&6战利品与后续用途&r",
+        "原生战利品线索：虚空荆棘、水晶果实。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 君王武库 · 收录即有军资\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000FC8BB1217C402\"}}",
+        "{\"text\": \"→ 精锐操练 · 为下一场多留一口耐力\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E69893AE203A9\"}}"
+      ],
+      "icon": "bosses_of_mass_destruction:void_thorn",
+      "subtitle": "虚空之花秘境",
+      "x": 3.4,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00030561B0B5FF62"
+      ],
+      "tasks": [
+        {
+          "id": "000B07B4168E6B50",
+          "type": "kill",
+          "entity": "bosses_of_mass_destruction:void_blossom",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 80,
+          "team_reward": false,
+          "id": "0008CE6148AD0622"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 54,
+          "team_reward": false,
+          "id": "000C85F9B7C1D603"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    }
+  ],
+  "images": [
+    {
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/hunt.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "猎场 · 荒野与古国"
+      ],
+      "click": "",
+      "dev": false,
+      "corner": false
     }
   ]
 }

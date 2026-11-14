@@ -1,0 +1,358 @@
+{
+  "version": 5,
+  "boss_icons": [
+    {
+      "slot": "S01",
+      "entity": "jerotesvillage:sediment_lord",
+      "icon": "jerotesvillage:sediment_lord_robe_pieces",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S14",
+      "entity": "cataclysm:netherite_monstrosity",
+      "icon": "cataclysm:infernal_forge",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S12",
+      "entity": "cataclysm:the_harbinger",
+      "icon": "cataclysm:witherite_block",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S15",
+      "entity": "cataclysm:ender_guardian",
+      "icon": "cataclysm:gauntlet_of_guard",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S09",
+      "entity": "cataclysm:ignis",
+      "icon": "cataclysm:ignitium_ingot",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S11",
+      "entity": "cataclysm:the_leviathan",
+      "icon": "cataclysm:tidal_claws",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S13",
+      "entity": "cataclysm:ancient_remnant",
+      "icon": "cataclysm:remnant_skull",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S10",
+      "entity": "cataclysm:scylla",
+      "icon": "cataclysm:essence_of_the_storm",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S20",
+      "entity": "slu:boss_gundyr",
+      "icon": "slu:gundyr_axespear",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S21",
+      "entity": "slu:boss_artorias",
+      "icon": "slu:artorias_soul",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S22",
+      "entity": "slu:boss_gael",
+      "icon": "slu:gael_soul",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M01",
+      "entity": "monsterexpansion:rhyza",
+      "icon": "monsterexpansion:rhyza_claw",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M02",
+      "entity": "monsterexpansion:rakoth",
+      "icon": "monsterexpansion:rakoth_carapace",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M03",
+      "entity": "jerotesvillage:duneshockler",
+      "icon": "minecraft:lapis_lazuli",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M04",
+      "entity": "jerotesvillage:tyrant_of_the_mountain_realm",
+      "icon": "jerotesvillage:tyrant_of_the_mountain_realm_helmet_plume",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M05",
+      "entity": "jerotesvillage:serpon_combat_executer",
+      "icon": "jerotesvillage:serpon_combat_executer_medal",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M06",
+      "entity": "legendary_monsters:cloud_golem",
+      "icon": "legendary_monsters:air_rune",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M07",
+      "entity": "eeeabsmobs:nameless_guardian",
+      "icon": "eeeabsmobs:guardian_axe",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M08",
+      "entity": "aquamirae:captain_cornelia",
+      "icon": "aquamirae:frozen_key",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M09",
+      "entity": "nightfall_invade:scarlet_hunter",
+      "icon": "nightfall_invade:disaster_fragment_red",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M10",
+      "entity": "block_factorys_bosses:underworld_knight",
+      "icon": "block_factorys_bosses:knight_sword",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M11",
+      "entity": "block_factorys_bosses:infernal_dragon",
+      "icon": "block_factorys_bosses:dragon_bone",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M12",
+      "entity": "irons_spellbooks:fire_boss",
+      "icon": "irons_spellbooks:cinder_essence",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M13",
+      "entity": "legendary_monsters:posessed_paladin",
+      "icon": "legendary_monsters:corrupted_soul",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M14",
+      "entity": "dungeons_and_combat:kamath",
+      "icon": "dungeons_and_combat:essence_of_kamath",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M15",
+      "entity": "dungeons_and_combat:sunleia",
+      "icon": "dungeons_and_combat:essence_of_sunleia",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M16",
+      "entity": "souls_like_bosses:melkor",
+      "icon": "souls_like_bosses:spear_of_melkor",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M17",
+      "entity": "cataclysm:maledictus",
+      "icon": "cataclysm:cursium_ingot",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M18",
+      "entity": "woc_remastered:mechx_12",
+      "icon": "cataclysm:witherite_ingot",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M19",
+      "entity": "legendary_monsters:annihilation_pursuer",
+      "icon": "legendary_monsters:eye_crystal",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M20",
+      "entity": "legendary_monsters:the_obliterator",
+      "icon": "legendary_monsters:portal_shard",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M21",
+      "entity": "woc_remastered:zertar",
+      "icon": "woc_remastered:zweiender",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M22",
+      "entity": "souls_like_bosses:nightlord",
+      "icon": "souls_like_bosses:dark_moon_greatsword",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M23",
+      "entity": "nightfall_invade:arterius",
+      "icon": "efn:duskfire_ingot",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M24",
+      "entity": "eeeabsmobs:realm_warden",
+      "icon": "eeeabsmobs:ancient_drive_crystal",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M25",
+      "entity": "spore:proto",
+      "icon": "spore:mutated_heart",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "M26",
+      "entity": "mod_cf2f7f04:great_sage",
+      "icon": "minecraft:nether_star",
+      "mode": "真实正面16像素图",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S02",
+      "entity": "bloodandmadness:father_gascoigne",
+      "icon": "bloodandmadness:weapons/hunter_axe",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S03",
+      "entity": "mowziesmobs:ferrous_wroughtnaut",
+      "icon": "mowziesmobs:wrought_axe",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S04",
+      "entity": "mowziesmobs:frostmaw",
+      "icon": "mowziesmobs:ice_crystal",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S05",
+      "entity": "mowziesmobs:sculptor",
+      "icon": "mowziesmobs:sculptor_staff",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S06",
+      "entity": "mowziesmobs:umvuthi",
+      "icon": "mowziesmobs:sol_visage",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S07",
+      "entity": "legendary_monsters:ancient_guardian",
+      "icon": "legendary_monsters:anchor_handle",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S08",
+      "entity": "block_factorys_bosses:kraken",
+      "icon": "block_factorys_bosses:kraken_tooth",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S16",
+      "entity": "bosses_of_mass_destruction:lich",
+      "icon": "bosses_of_mass_destruction:ancient_anima",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S17",
+      "entity": "bosses_of_mass_destruction:gauntlet",
+      "icon": "bosses_of_mass_destruction:blazing_eye",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S18",
+      "entity": "bosses_of_mass_destruction:obsidilith",
+      "icon": "bosses_of_mass_destruction:obsidian_heart",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S19",
+      "entity": "bosses_of_mass_destruction:void_blossom",
+      "icon": "bosses_of_mass_destruction:void_thorn",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S23",
+      "entity": "slu:boss_ancient_warrior",
+      "icon": "slu:ancient_warrior_helmet",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    },
+    {
+      "slot": "S24",
+      "entity": "slu:boss_dragon_slayer_armour",
+      "icon": "slu:dragon_slayer_helmet",
+      "mode": "对应原生战利品/武装徽记",
+      "fallback_spawn_egg": false
+    }
+  ],
+  "equipment_rule": "全部物品检测以第一目标真实ItemStack作图标；护甲为实际部件，保留原生模型",
+  "background": "minecraft:textures/block/deepslate_tiles.png，alpha34，order-100",
+  "portrait_limit": "大圣有真实正面16px图；其余为实际物品徽记，不是新制作的Boss正面肖像"
+}

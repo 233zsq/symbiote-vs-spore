@@ -1,0 +1,46 @@
+# SvS: 原生MODDED档；AUTO在本包也会因匠魂而选择此档。
+# 保留作者倍率与招式；实际EF战斗质量和最终数值仍由独立测试验收。
+[difficulty]
+mode = "MODDED"
+strongModList = ["avaritia", "draconicevolution", "mekanism", "apotheosis", "tconstruct"]
+[difficulty.vanilla]
+healthMultiplier = 0.3
+damageMultiplier = 0.45
+armorOverride = 18.0
+armorToughnessOverride = 0.0
+[difficulty.modded]
+healthMultiplier = 1.0
+damageMultiplier = 1.0
+armorOverride = -1.0
+armorToughnessOverride = -1.0
+[difficulty.custom]
+healthMultiplier = 1.0
+damageMultiplier = 1.0
+armorOverride = -1.0
+armorToughnessOverride = -1.0
+[multiplayer]
+healthPerExtraPlayer = 0.0
+playerScanRadius = 32.0
+[bosses.herobrine]
+enabled = true
+healthMultiplier = 1.0
+damageMultiplier = 1.0
+[bosses.entity303]
+enabled = true
+healthMultiplier = 1.0
+damageMultiplier = 1.0
+[bosses.null]
+enabled = true
+healthMultiplier = 1.0
+damageMultiplier = 1.0
+[bosses.notch]
+enabled = true
+healthMultiplier = 1.0
+damageMultiplier = 1.0
+[mechanics]
+antiInfinityCounter = true
+nullDeletesItems = true
+flightLock = true
+[griefing]
+nullErasesBlocks = true
+notchCreationBlocks = true

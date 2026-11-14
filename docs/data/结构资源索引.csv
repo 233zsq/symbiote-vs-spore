@@ -1,4 +1,15 @@
 ﻿kind,id,source,spacing,separation,structures
+structure,aquamirae:pirate_outpost,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure/pirate_outpost.json,,,
+structure,aquamirae:pirate_shelter,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure/pirate_shelter.json,,,
+structure,aquamirae:pirate_ship,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure/pirate_ship.json,,,
+structure,aquamirae:shipwreck,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure/shipwreck.json,,,
+structure,aquamirae:surface/arch,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure/surface/arch.json,,,
+structure,aquamirae:surface/spiral,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure/surface/spiral.json,,,
+structure_set,aquamirae:pirate_outpost,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure_set/pirate_outpost.json,18,10,aquamirae:pirate_outpost
+structure_set,aquamirae:pirate_shelter,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure_set/pirate_shelter.json,30,20,aquamirae:pirate_shelter
+structure_set,aquamirae:pirate_ship,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure_set/pirate_ship.json,25,10,aquamirae:pirate_ship
+structure_set,aquamirae:shipwreck,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure_set/shipwreck.json,6,1,aquamirae:shipwreck
+structure_set,aquamirae:surface,aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/worldgen/structure_set/surface.json,4,0,aquamirae:surface/arch;aquamirae:surface/spiral
 structure,block_factorys_bosses:dragon_tower,block_factorys_bosses-2.1.2-forge-1.20.1.jar!/data/block_factorys_bosses/worldgen/structure/dragon_tower.json,,,
 structure,block_factorys_bosses:kraken_ship,block_factorys_bosses-2.1.2-forge-1.20.1.jar!/data/block_factorys_bosses/worldgen/structure/kraken_ship.json,,,
 structure,block_factorys_bosses:sandworm_nest,block_factorys_bosses-2.1.2-forge-1.20.1.jar!/data/block_factorys_bosses/worldgen/structure/sandworm_nest.json,,,
@@ -79,6 +90,8 @@ structure_set,irons_spellbooks:impaled_icebreaker,irons_spellbooks-1.20.1-3.16.3
 structure_set,irons_spellbooks:mangrove_hut,irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/worldgen/structure_set/mangrove_hut.json,25,18,irons_spellbooks:mangrove_hut
 structure_set,irons_spellbooks:mountain_tower,irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/worldgen/structure_set/mountain_tower.json,45,33,irons_spellbooks:mountain_tower
 structure_set,irons_spellbooks:pyromancer_tower,irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/worldgen/structure_set/pyromancer_tower.json,85,50,irons_spellbooks:pyromancer_tower
+structure,iss_elden_ring:star_observation_platform,iss_elden_ring-1.0.3.jar!/data/iss_elden_ring/worldgen/structure/star_observation_platform.json,,,
+structure_set,iss_elden_ring:star_observation_platform,iss_elden_ring-1.0.3.jar!/data/iss_elden_ring/worldgen/structure_set/star_observation_platform.json,30,20,iss_elden_ring:star_observation_platform
 structure,jerotesvillage:bitter_cold_ice_spike,jerotesvillage-1.20.1-1.1.5.20.jar!/data/jerotesvillage/worldgen/structure/bitter_cold_ice_spike.json,,,
 structure,jerotesvillage:bitter_cold_igloo,jerotesvillage-1.20.1-1.1.5.20.jar!/data/jerotesvillage/worldgen/structure/bitter_cold_igloo.json,,,
 structure,jerotesvillage:botanize_village,jerotesvillage-1.20.1-1.1.5.20.jar!/data/jerotesvillage/worldgen/structure/botanize_village.json,,,
@@ -219,6 +232,10 @@ structure,skyarena:ice_arena,SkyArena-1.3.6-1.20.1.jar!/data/skyarena/worldgen/s
 structure,skyarena:sky_arena,SkyArena-1.3.6-1.20.1.jar!/data/skyarena/worldgen/structure/sky_arena.json,,,
 structure_set,skyarena:ice_arena,SkyArena-1.3.6-1.20.1.jar!/data/skyarena/worldgen/structure_set/ice_arena.json,75,50,skyarena:ice_arena
 structure_set,skyarena:sky_arena,SkyArena-1.3.6-1.20.1.jar!/data/skyarena/worldgen/structure_set/sky_arena.json,75,50,skyarena:sky_arena
+structure,souls_like_bosses:melkors_keep,souls_like_bosses-1.20.1-1.0.4.jar!/data/souls_like_bosses/worldgen/structure/melkors_keep.json,,,
+structure,souls_like_bosses:tree_of_light,souls_like_bosses-1.20.1-1.0.4.jar!/data/souls_like_bosses/worldgen/structure/tree_of_light.json,,,
+structure_set,souls_like_bosses:melkors_keep,souls_like_bosses-1.20.1-1.0.4.jar!/data/souls_like_bosses/worldgen/structure_set/melkors_keep.json,75,74,souls_like_bosses:melkors_keep
+structure_set,souls_like_bosses:tree_of_light,souls_like_bosses-1.20.1-1.0.4.jar!/data/souls_like_bosses/worldgen/structure_set/tree_of_light.json,100,99,souls_like_bosses:tree_of_light
 structure,spore:biomass_tower,spore_1.20.1_2.2.0j.jar!/data/spore/worldgen/structure/biomass_tower.json,,,
 structure,spore:cathedral,spore_1.20.1_2.2.0j.jar!/data/spore/worldgen/structure/cathedral.json,,,
 structure,spore:cell,spore_1.20.1_2.2.0j.jar!/data/spore/worldgen/structure/cell.json,,,
@@ -347,3 +364,5 @@ structure_set,minecraft:pillager_outposts,config/openloader/data/imfdata/data/mi
 structure_set,minecraft:swamp_huts,config/openloader/data/imfdata/data/minecraft/worldgen/structure_set/swamp_huts.json,32,8,minecraft:swamp_hut
 structure,final_adversaries:minor_light_tree,config/openloader/data/svs/data/final_adversaries/worldgen/structure/minor_light_tree.json,,,
 structure,final_adversaries:tree_of_light,config/openloader/data/svs/data/final_adversaries/worldgen/structure/tree_of_light.json,,,
+structure,souls_like_bosses:melkors_keep,config/openloader/data/svs/data/souls_like_bosses/worldgen/structure/melkors_keep.json,,,
+structure,souls_like_bosses:tree_of_light,config/openloader/data/svs/data/souls_like_bosses/worldgen/structure/tree_of_light.json,,,

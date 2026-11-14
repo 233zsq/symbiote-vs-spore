@@ -5,7 +5,7 @@
       {
         "name": "武器目录",
         "title": "武器与战斗工具目录 · 历史数值 × 现版证据",
-        "note": "2026-10-12离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》",
+        "note": "2026-10-16离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》",
         "headers": [
           "模组 / 命名空间 · 本页数量",
           "物品ID",
@@ -16258,7 +16258,7 @@
             "EF武器JSON+配方/掉落引用；epicfight:sword",
             "历史注册；现版运行时待核",
             "未匹配名称，待核",
-            "block_factorys_bosses:chests/underworld_arena_rare @ block_factorys_bosses-2.1.2-forge-1.20.1.jar!/data/block_factorys_bosses/loot_tables/chests/underworld_arena_rare.json；dungeons_and_combat:chests/blacksmithy @ dungeons_and_combat-1.2.4-forge-1.20.1.jar!/data/dungeons_and_combat/loot_tables/chests/blacksmithy.json；minecraft:entities/recruit_mh @ EFMCompat 2.0.jar!/data/minecraft/loot_tables/entities/recruit_mh.json；minecraft:entities/shieldman_mh @ EFMCompat 2.0.jar!/data/minecraft/loot_tables/entities/shieldman_mh.json；guardvillagers:entities/guard_main_hand @ epic_fight_villages_guard-1.1-forge-1.20.1.jar!/data/guardvillagers/loot_tables/entities/guard_main_hand.json；guardvillagers:entities/guard_off_hand @ epic_fight_villages_guard-1.1-forge-1.20.1.jar!/data/guardvillagers/loot_tables/entities/guard_off_hand.json；guardvillagers:entities/guard_armor @ guardvillagers-1.20.1-1.6.19.jar!/data/guardvillagers/loot_tables/entities/guard_armor.json；irons_spellbooks:chests/battleground/burial_loot @ irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/loot_tables/chests/battleground/burial_loot.json；irons_spellbooks:chests/catacombs/armory_loot @ irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/loot_tables/chests/catacombs/armory_loot.json；irons_spellbooks:chests/catacombs/coffin_loot @ irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/loot_tables/chests/catacombs/coffin_loot.json；irons_spellbooks:chests/catacombs/wall_loot @ irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/loot_tables/chests/catacombs/wall_loot.json；irons_spellbooks:chests/generi",
+            "aquamirae:chests/frozen_chest @ aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/loot_tables/chests/frozen_chest.json；block_factorys_bosses:chests/underworld_arena_rare @ block_factorys_bosses-2.1.2-forge-1.20.1.jar!/data/block_factorys_bosses/loot_tables/chests/underworld_arena_rare.json；dungeons_and_combat:chests/blacksmithy @ dungeons_and_combat-1.2.4-forge-1.20.1.jar!/data/dungeons_and_combat/loot_tables/chests/blacksmithy.json；minecraft:entities/recruit_mh @ EFMCompat 2.0.jar!/data/minecraft/loot_tables/entities/recruit_mh.json；minecraft:entities/shieldman_mh @ EFMCompat 2.0.jar!/data/minecraft/loot_tables/entities/shieldman_mh.json；guardvillagers:entities/guard_main_hand @ epic_fight_villages_guard-1.1-forge-1.20.1.jar!/data/guardvillagers/loot_tables/entities/guard_main_hand.json；guardvillagers:entities/guard_off_hand @ epic_fight_villages_guard-1.1-forge-1.20.1.jar!/data/guardvillagers/loot_tables/entities/guard_off_hand.json；guardvillagers:entities/guard_armor @ guardvillagers-1.20.1-1.6.19.jar!/data/guardvillagers/loot_tables/entities/guard_armor.json；irons_spellbooks:chests/battleground/burial_loot @ irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/loot_tables/chests/battleground/burial_loot.json；irons_spellbooks:chests/catacombs/armory_loot @ irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/loot_tables/chests/catacombs/armory_loot.json；irons_spellbooks:chests/catacombs/coffin_loot @ irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/loot_tables/chests/catacombs/coffin_loot.json；irons_spellbooks:chests/catacombs/wall_loot @ irons_spellbo",
             "E:\\mcmp_test\\i18n_work\\dump_weapons.json；历史导出；文件时间2026-09-23，实际采样时刻未记录"
           ],
           [
@@ -16272,7 +16272,7 @@
             "EF武器JSON+配方/掉落引用；epicfight:axe",
             "历史注册；现版运行时待核",
             "未匹配名称，待核",
-            "artifacts:chests/campsite_chest @ artifacts-forge-9.5.19.jar!/data/artifacts/loot_tables/chests/campsite_chest.json；dungeons_and_combat:chests/blacksmithy @ dungeons_and_combat-1.2.4-forge-1.20.1.jar!/data/dungeons_and_combat/loot_tables/chests/blacksmithy.json；dungeons_and_combat:chests/tavern_loot @ dungeons_and_combat-1.2.4-forge-1.20.1.jar!/data/dungeons_and_combat/loot_tables/chests/tavern_loot.json；irons_spellbooks:chests/evoker_fort/guard_tower @ irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/loot_tables/chests/evoker_fort/guard_tower.json；terralith:village/desert/butcher @ Terralith_1.20.x_v2.5.4.jar!/data/terralith/loot_tables/village/desert/butcher.json；terralith:village/fortified/butcher @ Terralith_1.20.x_v2.5.4.jar!/data/terralith/loot_tables/village/fortified/butcher.json；betterdungeons:zombie_dungeon/chests/common @ YungsBetterDungeons-1.20-Forge-4.0.4.jar!/data/betterdungeons/loot_tables/zombie_dungeon/chests/common.json；betterdungeons:zombie_dungeon/chests/special @ YungsBetterDungeons-1.20-Forge-4.0.4.jar!/data/betterdungeons/loot_tables/zombie_dungeon/chests/special.json；minecraft:chests/ancient_city @ config/openloader/data/imfdata/data/minecraft/loot_tables/chests/ancient_city.json；minecraft:chests/ancient_city_center @ config/openloader/data/imfdata/data/minecraft/loot_tables/chests/ancient_city_center.json；minecraft:chests/igloo_chest @ config/openloader/data/imfdata/data/minecraft/loot_tables/chests/igloo_chest.json；minecraft:chests/village/village_toolsmith @ config/openloader/data/imfdata/data/minecraft/loot_tables/chests/village/village",
+            "aquamirae:chests/frozen_chest @ aquamirae-forge-1.20.1-7.1.14.jar!/data/aquamirae/loot_tables/chests/frozen_chest.json；artifacts:chests/campsite_chest @ artifacts-forge-9.5.19.jar!/data/artifacts/loot_tables/chests/campsite_chest.json；dungeons_and_combat:chests/blacksmithy @ dungeons_and_combat-1.2.4-forge-1.20.1.jar!/data/dungeons_and_combat/loot_tables/chests/blacksmithy.json；dungeons_and_combat:chests/tavern_loot @ dungeons_and_combat-1.2.4-forge-1.20.1.jar!/data/dungeons_and_combat/loot_tables/chests/tavern_loot.json；irons_spellbooks:chests/evoker_fort/guard_tower @ irons_spellbooks-1.20.1-3.16.3.jar!/data/irons_spellbooks/loot_tables/chests/evoker_fort/guard_tower.json；terralith:village/desert/butcher @ Terralith_1.20.x_v2.5.4.jar!/data/terralith/loot_tables/village/desert/butcher.json；terralith:village/fortified/butcher @ Terralith_1.20.x_v2.5.4.jar!/data/terralith/loot_tables/village/fortified/butcher.json；betterdungeons:zombie_dungeon/chests/common @ YungsBetterDungeons-1.20-Forge-4.0.4.jar!/data/betterdungeons/loot_tables/zombie_dungeon/chests/common.json；betterdungeons:zombie_dungeon/chests/special @ YungsBetterDungeons-1.20-Forge-4.0.4.jar!/data/betterdungeons/loot_tables/zombie_dungeon/chests/special.json；minecraft:chests/ancient_city @ config/openloader/data/imfdata/data/minecraft/loot_tables/chests/ancient_city.json；minecraft:chests/ancient_city_center @ config/openloader/data/imfdata/data/minecraft/loot_tables/chests/ancient_city_center.json；minecraft:chests/igloo_chest @ config/openloader/data/imfdata/data/minecraft/loot_tables/chests/igloo_chest.json；minecr",
             "E:\\mcmp_test\\i18n_work\\dump_weapons.json；历史导出；文件时间2026-09-23，实际采样时刻未记录"
           ],
           [
@@ -20577,7 +20577,7 @@
       {
         "name": "仅资源候选",
         "title": "有模型与EF JSON、未见于历史数值导出的条目",
-        "note": "2026-10-12静态候选；没有新运行时属性，不补0、不直接进入任务",
+        "note": "2026-10-16静态候选；没有新运行时属性，不补0、不直接进入任务",
         "headers": [
           "模组 / 命名空间 · 本页数量",
           "ID",
@@ -20769,6 +20769,13 @@
             "WOLegendaryMonsters-1.1.0-forge-1.20.1.jar!/data/legendary_monsters/capabilities/weapons/spiky_shield.json"
           ],
           [
+            "Aquamirae\naquamirae · 1项",
+            "aquamirae:dagger_of_greed",
+            "贪婪匕首",
+            "仅静态候选；可能为工具/远程/旧兼容引用，不直接当新增武器",
+            "EFMCompat 2.0.jar!/data/aquamirae/capabilities/weapons/dagger_of_greed.json"
+          ],
+          [
             "Bosses'Rise\nblock_factorys_bosses · 1项",
             "block_factorys_bosses:sandworm_gauntlet",
             "沙虫护手",
@@ -20841,38 +20848,44 @@
             "label": "LegendaryMonsters\nlegendary_monsters · 6项"
           },
           {
-            "namespace": "block_factorys_bosses",
+            "namespace": "aquamirae",
             "start_row": 31,
+            "count": 1,
+            "label": "Aquamirae\naquamirae · 1项"
+          },
+          {
+            "namespace": "block_factorys_bosses",
+            "start_row": 32,
             "count": 1,
             "label": "Bosses'Rise\nblock_factorys_bosses · 1项"
           },
           {
             "namespace": "eeeabsmobs",
-            "start_row": 32,
+            "start_row": 33,
             "count": 1,
             "label": "EEEAB's Mobs\neeeabsmobs · 1项"
           },
           {
             "namespace": "magistuarmory",
-            "start_row": 33,
+            "start_row": 34,
             "count": 1,
             "label": "Epic-Knights: Shields, Armor and Weapons\nmagistuarmory · 1项"
           },
           {
             "namespace": "p1nero_bow",
-            "start_row": 34,
+            "start_row": 35,
             "count": 1,
             "label": "P1nero's Epic Fight Bow\np1nero_bow · 1项"
           },
           {
             "namespace": "simplyswords",
-            "start_row": 35,
+            "start_row": 36,
             "count": 1,
             "label": "Simply Swords\nsimplyswords · 1项"
           },
           {
             "namespace": "spore",
-            "start_row": 36,
+            "start_row": 37,
             "count": 1,
             "label": "Spore\nspore · 1项"
           }
@@ -20887,7 +20900,7 @@
       {
         "name": "实体目录",
         "title": "敌对注册类别目录",
-        "note": "2026-10-12离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》；CREATURE/MISC等类别不保证被动，真菌自定义类别另列敌对。",
+        "note": "2026-10-16离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》；CREATURE/MISC等类别不保证被动，真菌自定义类别另列敌对。",
         "headers": [
           "模组 / 命名空间 · 本页数量",
           "实体ID",
@@ -27927,7 +27940,7 @@
       {
         "name": "实体目录",
         "title": "其他注册类别目录（原“中立”表）",
-        "note": "2026-10-12离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》；CREATURE/MISC等类别不保证被动，真菌自定义类别另列敌对。",
+        "note": "2026-10-16离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》；CREATURE/MISC等类别不保证被动，真菌自定义类别另列敌对。",
         "headers": [
           "模组 / 命名空间 · 本页数量",
           "实体ID",
@@ -33577,7 +33590,7 @@
       {
         "name": "Boss候选与看样",
         "title": "Boss候选 · 先看模型动作，再定战位",
-        "note": "2026-10-12离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》；候选识别不等于已证完整Boss/主线授权；不按血量选压轴。",
+        "note": "2026-10-16离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》；候选识别不等于已证完整Boss/主线授权；不按血量选压轴。",
         "headers": [
           "模组 / 命名空间 · 本页数量",
           "候选ID/函数场次",
@@ -35108,7 +35121,7 @@
             3.0,
             "待用户看样；资源数量不评价品质",
             "待实测",
-            "Ⅱ二轮代表战候选；原生入口/重试待核",
+            "支线二轮候选；不再卡主线；入口/重试待核",
             "jerotesvillage:overlord",
             "原生入口/重试/多人/归因待测",
             "任务参考研究_五整合包FTB§四E-二轮；overlord玩家击杀进度",
@@ -35248,7 +35261,7 @@
       {
         "name": "高血量实体非Boss判定",
         "title": "历史生命≥100实体 · 仅为数值过滤",
-        "note": "2026-10-12离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》；含部件、宠物、测试实体和精英；不作为Boss清单",
+        "note": "2026-10-16离线核对；数值=历史导出；文件时间2026-09-23，实际采样时刻未记录；现版注册/实战待核。来源见最右列及《数据与采样说明》；含部件、宠物、测试实体和精英；不作为Boss清单",
         "headers": [
           "模组 / 命名空间 · 本页数量",
           "实体ID",
@@ -38349,7 +38362,7 @@
       {
         "name": "事件与排除说明",
         "title": "母巢事件、旧引用与测试对象",
-        "note": "2026-10-12用于避免任务设计误用；本页不是新增排期",
+        "note": "2026-10-16用于避免任务设计误用；本页不是新增排期",
         "headers": [
           "ID/对象",
           "分类",
@@ -38406,7 +38419,7 @@
       {
         "name": "EF证据分层",
         "title": "EF 20.14.17 · 历史标记与现版资源分层",
-        "note": "2026-10-12离线计数；含未装mod的兼容JSON，不等于安装/注册。文件数、唯一键与运行时覆盖率不同。",
+        "note": "2026-10-16离线计数；含未装mod的兼容JSON，不等于安装/注册。文件数、唯一键与运行时覆盖率不同。",
         "headers": [
           "命名空间",
           "模组名称",
@@ -39054,8 +39067,8 @@
           ],
           [
             "aquamirae",
-            "aquamirae",
-            "未见同名顶层mod声明",
+            "Aquamirae",
+            "7.1.14",
             0,
             0,
             9,
@@ -39591,8 +39604,8 @@
     "sheets": [
       {
         "name": "全模组清单",
-        "title": "现版模组文件清单 · 215 jar / 221顶层声明",
-        "note": "2026-10-12母本/test逐jar SHA-256一致；无新增运行时采样。分类为制作索引，license不是分发许可结论。",
+        "title": "现版模组文件清单 · 225 jar / 230顶层声明",
+        "note": "2026-10-16母本静态资源；共同JAR哈希差异0；test独有3；无运行时采样。license不是分发许可结论。",
         "headers": [
           "制作分类",
           "jar文件名",
@@ -39630,7 +39643,7 @@
             "slu",
             "souls like universe",
             "9982.3.1.20.1",
-            "Ⅳ固定试炼＋两池随机券；按本包模型动作选人，不按原作名望。；作者简介：add various weapons, armors and bosses",
+            "战位竞争候选＋两池随机券；按本包模型动作选人，不按原作名望。；作者简介：add various weapons, armors and bosses",
             173,
             79,
             "minecraft [1.20.1]",
@@ -40391,6 +40404,21 @@
           ],
           [
             "其他工具与待细分",
+            "CarianStyle-forge-1.20.1-2.2.0.jar",
+            "carianstyle",
+            "CarianStyle",
+            "2.2.0",
+            "第8批：法环主题附魔 113（追忆系列互斥带代价、K 键百科；自带全量中文）；平衡观察项；作者简介：",
+            0,
+            0,
+            "forge [47,)；minecraft [1.20.1]",
+            "Custom License",
+            "一致",
+            "27de9a62cd60c46b018164d5060b9b543a2dc5c4416f24d35b1041d40e66123c",
+            "CarianStyle-forge-1.20.1-2.2.0.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
+            "其他工具与待细分",
             "CataclysmicArsenal-0.6.1.4+1.20.1[Forge].jar",
             "cataclysmic_arsenal",
             "Cataclysmic Arsenal - Epic Fight",
@@ -40463,6 +40491,36 @@
             "一致",
             "bcc8c2ac61697e5e0193c74edd6a2b19c1fda36e06d8a6c05b78cf60366921e7",
             "CombatEvolution-MoreExecutionAnimations-1.20.1-1.2.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
+            "其他工具与待细分",
+            "Connector-1.0.0-beta.49+1.20.1.jar",
+            "",
+            "",
+            "",
+            "Voxy 换装：信雅互联（Fabric mod 翻译层，常驻）；作者简介：",
+            0,
+            0,
+            "",
+            "",
+            "一致",
+            "e39acd37e162eb48cdfc6ae64776c13507a5ec3d4dd76ae4f39b5b79ca24d431",
+            "Connector-1.0.0-beta.49+1.20.1.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
+            "其他工具与待细分",
+            "ConnectorExtras-1.11.2+1.20.1.jar",
+            "connectorextras",
+            "Connector Extras",
+            "1.11.2+1.20.1",
+            "Voxy 换装：互联扩展；作者简介：",
+            0,
+            0,
+            "forge [47,)；minecraft [1.20.1,1.21)",
+            "MIT",
+            "一致",
+            "10d149fc9348b57120f50e3f82ac6f7e544ae18f0b5b7342c0cab3af38f5acd8",
+            "ConnectorExtras-1.11.2+1.20.1.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
           ],
           [
             "界面音画与操作",
@@ -40553,21 +40611,6 @@
             "一致",
             "034301100fcc011d502281f27deb6481bab11d07e345a7304915cca91fb0e941",
             "DailyBoss-Cataclysm-1.20.1-1.1.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
-          ],
-          [
-            "性能与稳定",
-            "DistantHorizons-3.3.0-1.20.1-fabric-forge.jar",
-            "distanthorizons",
-            "Distant Horizons",
-            "3.3.0",
-            "性能/稳定/联机工具；没有玩家成长作业，风险按实测登记；作者简介：This mod generates and renders simplified terrain beyond the normal view distance at a low performance cost. Allowing you to see much farther without turning your game into a sl…",
-            0,
-            0,
-            "forge [0,)；minecraft [1.20],[1.20.1]",
-            "LGPL",
-            "一致",
-            "a7485e2163ee46ee3c044490ca37d7542d70a2c17887df248413f79f59b82e9a",
-            "DistantHorizons-3.3.0-1.20.1-fabric-forge.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
           ],
           [
             "其他工具与待细分",
@@ -41230,6 +41273,21 @@
             "appleskin-forge-mc1.20.1-2.5.1.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
           ],
           [
+            "其他工具与待细分",
+            "aquamirae-forge-1.20.1-7.1.14.jar",
+            "aquamirae",
+            "Aquamirae",
+            "7.1.14",
+            "模组7批：海船墓地/寒冰迷宫内容；世界生成维持禁用（用户裁决；OpenLoader覆盖）；作者简介：",
+            0,
+            0,
+            "minecraft [1.20.1, 1.22)；forge [47.2.0,)；fragmentum [5.0.0,)；geckolib [4.8.0,)",
+            "Obscuria Modding License (OML)",
+            "一致",
+            "5439edc57af3075a1600effe0906ba322e89346077bcb80b761a4bff4cbff59b",
+            "aquamirae-forge-1.20.1-7.1.14.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
             "库与通用兼容",
             "architectury-9.2.14-forge.jar",
             "architectury",
@@ -41651,6 +41709,21 @@
           ],
           [
             "其他工具与待细分",
+            "efiscompat-2.6.0.jar",
+            "efiscompat",
+            "Epic Fight & Iron's Spellbook animation compat",
+            "2.6.0",
+            "EF附属：Iron's Spells 施法动画；作者简介：",
+            0,
+            0,
+            "forge [47,)；minecraft [1.20.1,1.21)",
+            "GNU GPLv3",
+            "一致",
+            "c5eef935e534139209e5bf002685c885662bc809d1c4e05ad1309bda8eea07ab",
+            "efiscompat-2.6.0.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
+            "其他工具与待细分",
             "efs_iss-1.0.3.jar",
             "efs_iss",
             "Epic Fight Skill - Iron's Spells 'n Spellbooks",
@@ -41755,6 +41828,21 @@
             "epic_fight_villages_guard-1.1-forge-1.20.1.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
           ],
           [
+            "武器护甲与技能",
+            "epicfight-skilltree-forge-20.2.9-1.20.1.jar",
+            "epicskills",
+            "Epic Fight: Skill Tree",
+            "20.2.9",
+            "EF附属：官方技能树（替换技能书获取，与职业设计关系待实机观察）；作者简介：",
+            0,
+            0,
+            "forge [47,)；minecraft [1.20.1,1.21)",
+            "GNU GENERAL PUBLIC LICENSE",
+            "一致",
+            "12981480a6eb8c0a47d0c7f0da4e594349587def9b7fc7e0fdba91e79cb1fe8f",
+            "epicfight-skilltree-forge-20.2.9-1.20.1.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
             "匠魂与制造成长",
             "epicfighttinkercompat-20.2.8-forge-1.20.1.jar",
             "epicfighttinkercompat",
@@ -41798,6 +41886,21 @@
             "一致",
             "c1f7c3ba5873bb4797d2124c57bab3189acdb62d02f63217db1456d232dac20f",
             "expandability-9.0.4.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
+            "库与通用兼容",
+            "fabric-api-0.92.6+1.11.15+1.20.1.jar",
+            "fabric_api",
+            "Forgified Fabric API",
+            "0.92.6+1.11.15+1.20.1",
+            "Voxy 换装：Forgified Fabric API；作者简介：",
+            0,
+            0,
+            "forge [47.1.3,)；minecraft [1.20.1,1.21)",
+            "Apache-2.0",
+            "一致",
+            "3dd3f93c31122d928297220601f521e6a8a20356bafc7819bf4ddce4c2bb085d",
+            "fabric-api-0.92.6+1.11.15+1.20.1.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
           ],
           [
             "战斗内容与动作",
@@ -41873,6 +41976,21 @@
             "一致",
             "77f721f5ebe2f672222b5d80cf67e10261b4fc18ad8374814da306c2c37ca791",
             "final_adversaries_lite_1.7_Forge+Fabric-1.20.1.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
+            "其他工具与待细分",
+            "fragmentum-5.2.0+1.20.1-forge.jar",
+            "fragmentum",
+            "Fragmentum",
+            "5.2.0",
+            "模组7批：aquamirae 硬依赖前置库；作者简介：",
+            0,
+            0,
+            "forge [1,)；minecraft 1.20.1",
+            "Obscuria Modding License (OML)",
+            "一致",
+            "a003fedce92c52ef377e48fc3779cb2506be1ce7f947c88f1eb241b2992c16b4",
+            "fragmentum-5.2.0+1.20.1-forge.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
           ],
           [
             "库与通用兼容",
@@ -42053,6 +42171,21 @@
             "一致",
             "db4c7cc853c0ffb1d36a0f19af22c224a8608b2a55c747adc70fb44455baf097",
             "irons_lib-1.20.1-2.1.0.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
+            "其他工具与待细分",
+            "iss_elden_ring-1.0.3.jar",
+            "iss_elden_ring",
+            "Iron's Spells 'n Spellbooks: Elden Ring",
+            "1.0.3",
+            "第8批：Iron's Spells 法环法术；自带全量中文；辉石洞生成维持禁用；上游 9+1 JSON 缺陷登记；作者简介：",
+            0,
+            0,
+            "forge [47,)；minecraft [1.20.1,1.21)；irons_spellbooks [1.20.1-3.16.1,)；irons_lib [1.20.1-1,)",
+            "All Rights Reserved",
+            "一致",
+            "1dad2a809ba0d33ef60b335438439977df5a1ad68dda46a9f51c31ea24825ae6",
+            "iss_elden_ring-1.0.3.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
           ],
           [
             "界面音画与操作",
@@ -42610,6 +42743,21 @@
             "sophisticatedstorage-1.20.1-1.4.86.2131.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
           ],
           [
+            "武器护甲与技能",
+            "souls_like_bosses-1.20.1-1.0.4.jar",
+            "souls_like_bosses",
+            "Souls Like Bosses",
+            "1.0.4",
+            "模组7批：魂系Boss与武器（09-25 曾删，10-14 用户批示重入）；世界生成暂禁；ARR 收录已批；作者简介：",
+            0,
+            0,
+            "forge [47,)；minecraft [1.20.1,1.21)；geckolib [4,5)；hugestructureblocks [1.1,)",
+            "All Rights Reserved",
+            "一致",
+            "25768241ab073fa094f6efb5295de0652c8a6bc15dfdec1ac78e8acb9dba3809",
+            "souls_like_bosses-1.20.1-1.0.4.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
             "性能与稳定",
             "spark-1.10.53-forge.jar",
             "spark",
@@ -42776,6 +42924,21 @@
           ],
           [
             "其他工具与待细分",
+            "voxy-0.2.14-alpha-dw.jar",
+            "voxy",
+            "Voxy",
+            "0.2.14-alpha",
+            "Voxy 换装主体（第三方移植/DistantWorld 构建；仅自用不外分发）；作者简介：",
+            0,
+            0,
+            "",
+            "All-Rights-Reserved",
+            "一致",
+            "c89b909933cfe2458b0934c64f590b60917738d3c11a370953784fd9507cfb26",
+            "voxy-0.2.14-alpha-dw.jar!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七"
+          ],
+          [
+            "其他工具与待细分",
             "waystones-forge-1.20.1-14.1.21.jar",
             "waystones",
             "Waystones",
@@ -42861,7 +43024,7 @@
       {
         "name": "用途统计",
         "title": "按制作用途统计 · 不做S–F强度或重要性榜",
-        "note": "2026-10-12统计以顶层jar为单位；分类来自主线深化研究§七的用途归纳。",
+        "note": "2026-10-16统计以顶层jar为单位；分类来自主线深化研究§七的用途归纳。",
         "headers": [
           "用途",
           "jar数"
@@ -42876,11 +43039,11 @@
             null
           ],
           [
-            "界面音画与操作",
+            "其他工具与待细分",
             null
           ],
           [
-            "其他工具与待细分",
+            "界面音画与操作",
             null
           ],
           [
@@ -42924,18 +43087,18 @@
           1
         ],
         "formulas": {
-          "B5": "=COUNTIF(全模组清单!$A$5:$A$219,A5)",
-          "B6": "=COUNTIF(全模组清单!$A$5:$A$219,A6)",
-          "B7": "=COUNTIF(全模组清单!$A$5:$A$219,A7)",
-          "B8": "=COUNTIF(全模组清单!$A$5:$A$219,A8)",
-          "B9": "=COUNTIF(全模组清单!$A$5:$A$219,A9)",
-          "B10": "=COUNTIF(全模组清单!$A$5:$A$219,A10)",
-          "B11": "=COUNTIF(全模组清单!$A$5:$A$219,A11)",
-          "B12": "=COUNTIF(全模组清单!$A$5:$A$219,A12)",
-          "B13": "=COUNTIF(全模组清单!$A$5:$A$219,A13)",
-          "B14": "=COUNTIF(全模组清单!$A$5:$A$219,A14)",
-          "B15": "=COUNTIF(全模组清单!$A$5:$A$219,A15)",
-          "B16": "=COUNTIF(全模组清单!$A$5:$A$219,A16)"
+          "B5": "=COUNTIF(全模组清单!$A$5:$A$229,A5)",
+          "B6": "=COUNTIF(全模组清单!$A$5:$A$229,A6)",
+          "B7": "=COUNTIF(全模组清单!$A$5:$A$229,A7)",
+          "B8": "=COUNTIF(全模组清单!$A$5:$A$229,A8)",
+          "B9": "=COUNTIF(全模组清单!$A$5:$A$229,A9)",
+          "B10": "=COUNTIF(全模组清单!$A$5:$A$229,A10)",
+          "B11": "=COUNTIF(全模组清单!$A$5:$A$229,A11)",
+          "B12": "=COUNTIF(全模组清单!$A$5:$A$229,A12)",
+          "B13": "=COUNTIF(全模组清单!$A$5:$A$229,A13)",
+          "B14": "=COUNTIF(全模组清单!$A$5:$A$229,A14)",
+          "B15": "=COUNTIF(全模组清单!$A$5:$A$229,A15)",
+          "B16": "=COUNTIF(全模组清单!$A$5:$A$229,A16)"
         },
         "sort_kind": "category_count",
         "sort_note": "用途分类：jar数↓；同数按分类名称。"

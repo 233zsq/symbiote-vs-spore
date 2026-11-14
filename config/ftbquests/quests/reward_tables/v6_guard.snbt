@@ -1,0 +1,41 @@
+{
+  "id": "000E347956697A81",
+  "title": "格挡军资 · 任选一",
+  "loot_size": 1,
+  "order_index": 4,
+  "rewards": [
+    {
+      "id": "00027B515B40D061",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:guard"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "000465054C3A0D5C",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:impact_guard"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "00059017D6D6988E",
+      "type": "item",
+      "item": "kubejs:spore_coin",
+      "count": 4,
+      "team_reward": false
+    }
+  ]
+}

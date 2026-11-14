@@ -1,0 +1,13 @@
+name = "Super-Tier Magic"
+filename = "super-tier-magic-3.6.3.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9277/191/super-tier-magic-3.6.3.jar"
+hash-format = "sha512"
+hash = "a45eb17ae2067ef5f4369bba28832429257999f821f70ef623d44ddf45060a7093bf57d61bfa7535bd995d1c0397ca820ee38de54339a376e9dc7eda886ee03d"
+
+[update]
+[update.curseforge]
+file-id = 9277191
+project-id = 1731849

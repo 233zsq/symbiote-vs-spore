@@ -1,0 +1,54 @@
+{
+  "id": "0006852F9B99CEB1",
+  "title": "精锐技法 · 任选一",
+  "loot_size": 1,
+  "order_index": 5,
+  "rewards": [
+    {
+      "id": "000410360122AF59",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:parrying"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "000DCC2D1696B1A7",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:stamina_pillager"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "0005F15B04A3D71B",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:endurance"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "0001A4D684D51985",
+      "type": "item",
+      "item": "kubejs:spore_coin",
+      "count": 12,
+      "team_reward": false
+    }
+  ]
+}

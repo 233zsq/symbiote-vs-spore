@@ -1,0 +1,13 @@
+name = "Hadean Breathe"
+filename = "hadean_breathe-0.25.7-1.20.1-forge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/oQCVgXIL/versions/NQGQIU9O/hadean_breathe-0.25.7-1.20.1-forge.jar"
+hash-format = "sha512"
+hash = "774946da2bbc1f40a0076c2ec519df4e351374bb45e40de8382d5dfa2475ddb195c58c4406131880c954e6517c3c2d1d2df71b73dfd684e42d3d280c11b37eaa"
+
+[update]
+[update.modrinth]
+mod-id = "oQCVgXIL"
+version = "NQGQIU9O"

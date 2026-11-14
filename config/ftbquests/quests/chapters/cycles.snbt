@@ -1,0 +1,213 @@
+{
+  "id": "0006B2C6071A7869",
+  "filename": "cycles",
+  "title": "&7星图 · 竞技与军令&r",
+  "group": "000DA61BF4A18D59",
+  "order_index": 20,
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/hunt.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
+  "default_hide_dependency_lines": false,
+  "default_quest_shape": "circle",
+  "quest_links": [],
+  "quests": [
+    {
+      "id": "0008FC2A18434C8D",
+      "title": "地面竞技场",
+      "description": [
+        "【战略目标】为武技寻找独立试炼场。",
+        "【讨伐作业】到访地面斗兽场。",
+        "【情报与机制】到访只记录场地；起战、冷却和重试按竞技场原生提示。",
+        "【掠夺战果】本次远征记录已归入星图，战果可用于下一次整备。"
+      ],
+      "icon": "minecraft:stone_bricks",
+      "subtitle": "独立目标",
+      "x": 0.0,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0001C6A6EC6A6FCD"
+      ],
+      "tasks": [
+        {
+          "id": "0000651B218D03AC",
+          "type": "structure",
+          "structure": "pladailyboss:colosseum_arena"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 25,
+          "team_reward": false,
+          "id": "0008CC52D9630153"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E63670C6DEA52",
+      "title": "斗兽场首胜",
+      "description": [
+        "【战略目标】赢下一次完整的单体挑战。",
+        "【讨伐作业】完成一次地面竞技场有效场次并获胜。",
+        "【情报与机制】此胜利目标尚未开放；入场、启动祭坛与场外同种击杀均不算。",
+        "【掠夺战果】本次远征记录已归入星图，战果可用于下一次整备。"
+      ],
+      "icon": "minecraft:golden_sword",
+      "subtitle": "尚未开放 · 独立目标",
+      "x": 3.4,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0008FC2A18434C8D"
+      ],
+      "tasks": [
+        {
+          "id": "000309C624A1E3CB",
+          "type": "custom",
+          "title": "尚未开放·完成一次地面竞技场有效场次并获胜。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 60,
+          "team_reward": false,
+          "id": "000F1E710EEA12FA"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:diamond",
+          "count": 2,
+          "team_reward": false,
+          "id": "000E8A32F61DA158"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0000E5A3DFBA89D6",
+      "title": "天空竞技场",
+      "description": [
+        "【战略目标】把群战训练纳入备战。",
+        "【讨伐作业】取得普通天空竞技场首次抵达进度。",
+        "【情报与机制】本项记录到访，完整波次胜利另列；冰场可自行探索。",
+        "【掠夺战果】本次远征记录已归入星图，战果可用于下一次整备。"
+      ],
+      "icon": "minecraft:feather",
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0008FC2A18434C8D"
+      ],
+      "tasks": [
+        {
+          "id": "00064FE5B428AB9F",
+          "type": "advancement",
+          "advancement": "skyarena:common_arena"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 25,
+          "team_reward": false,
+          "id": "000E7AC78D85DDA1"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0004F6FE09740895",
+      "title": "天空终波",
+      "description": [
+        "【战略目标】用完整波次检验续战能力。",
+        "【讨伐作业】完整赢下一次天空竞技场挑战。",
+        "【情报与机制】此胜利目标尚未开放。任务所列钴锭为一次性补给，原生竞技场奖励另计。",
+        "【掠夺战果】本次远征记录已归入星图，战果可用于下一次整备。"
+      ],
+      "icon": "minecraft:golden_helmet",
+      "subtitle": "尚未开放 · 独立目标",
+      "x": 10.2,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000E5A3DFBA89D6"
+      ],
+      "tasks": [
+        {
+          "id": "00010225A34BAAFA",
+          "type": "custom",
+          "title": "尚未开放·完整赢下一次天空竞技场挑战。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 50,
+          "team_reward": false,
+          "id": "0009765B347BD2BC"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:cobalt_ingot",
+          "count": 1,
+          "team_reward": false,
+          "id": "000B60507B75D818"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    }
+  ],
+  "images": [
+    {
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/hunt.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "星图 · 竞技与军令"
+      ],
+      "click": "",
+      "dev": false,
+      "corner": false
+    }
+  ]
+}

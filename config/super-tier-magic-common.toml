@@ -1,0 +1,23 @@
+# SvS mods9: approved conservative integration, 2026-10-31.
+# Other values are supplied by the original mod defaults on first load.
+[skills]
+thunderAbyss = false
+thunderStormTerrainDamage = false
+
+[air]
+flightCheat = false
+survivalCloudFlight = false
+
+[swordPercentage]
+minimum = 0.0
+maximum = 0.0
+
+[lightning]
+boltTerrainDamage = false
+
+[ancientZombie]
+naturalSpawns = false
+reinforcementsEnabled = false
+
+[lordOfSwords]
+naturalSpawns = false

@@ -1,0 +1,29 @@
+{
+  "id": "0006CC43BF398889",
+  "title": "T1鉴定赏 · 军械任选一",
+  "loot_size": 1,
+  "order_index": 11,
+  "rewards": [
+    {
+      "id": "0002BE1DE49D8EFA",
+      "type": "item",
+      "item": "simplyswords:runic_katana",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "0009880822B83DF9",
+      "type": "item",
+      "item": "simplyswords:runic_glaive",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "000DC07B82F084E8",
+      "type": "item",
+      "item": "minecraft:diamond_chestplate",
+      "count": 1,
+      "team_reward": false
+    }
+  ]
+}

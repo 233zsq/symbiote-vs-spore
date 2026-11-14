@@ -1,0 +1,13 @@
+name = "Celestisynth Fix"
+filename = "celestisynth_fix-0.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8216/806/celestisynth_fix-0.1.jar"
+hash-format = "sha512"
+hash = "0f0907d2cb5c49cedd67fe3b10be40e5d0ea00936ff6559205287d7e12596174fde99526c73b7a24891543e499d8aa4b0c0aa088f743f746cb7b86c7da3eb057"
+
+[update]
+[update.curseforge]
+file-id = 8216806
+project-id = 1568922

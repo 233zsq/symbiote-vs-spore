@@ -1,0 +1,13 @@
+name = "VzlingLib"
+filename = "vzling-0.98.8-1.20.1-forge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9100/905/vzling-0.98.8-1.20.1-forge.jar"
+hash-format = "sha512"
+hash = "a6a3750b3410266ab5dd84273cf442c9bd53e142bcf12bca8e4989655a3ebdb3ecaf338308ddeb066c700fd4202d428f14d3223888c6a6752a972ce941bbc233"
+
+[update]
+[update.curseforge]
+file-id = 9100905
+project-id = 1316184

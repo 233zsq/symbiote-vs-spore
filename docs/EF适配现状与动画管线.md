@@ -1,11 +1,15 @@
 # EF 适配现状与动画管线（2026-10-07 调查）
 
+
+> **2026-10-26专项核对：** IF用CELEpic 1.0接CS1.3.1与EF20.14.17；其26项CS类引用在候选1.3.4全部缺失，不能直接复制。Celestisynth Fix仅清理新包名CSAnimator缓存，不是EF适配；Hadean未随包提供EF能力资源。详见[版本证据与路线](沉浸战斗_Celestisynth适配与坐骑研究_2026-10-26.md)和[批次审查](模组9审查与合入建议_2026-10-26.md)。均未安装/加载；EF保持20.14.17，旧覆盖统计不刷新为现版实测。
+
+
 > 目的：弄清本包的史诗战斗（Epic Fight 20.14.17，1.20.1）适配是怎么做的、动画包是什么、以及如何自定义动画。
 > 证据：215 个 mod jar + openloader 数据包的全量 zip/javap 解析（2026-10-07）。**未做游戏内端到端验证**——本文为资源/字节码级实证。
 
-## 〇、2026-10-12现版离线核对（当前计数入口）
+## 〇、2026-10-16现版离线核对（当前计数入口）
 
-母本/test各215顶层jar逐SHA-256相同；EF仍20.14.17。扫描jar＋OpenLoader数据资源得武器JSON3184文件/2746键，weapon type另157文件；MobPatch102文件/102键（SLU74、EFMCompat21、w.o.w6、Epic Fight Villages Guard兼容件1）。compat可能包含未安装mod的预置引用，不能当现版武器/实体数；重复provider保留，不冒称最终覆盖顺序。
+母本225/test228顶层jar，共同225件逐SHA-256相同；test独有3件不纳入母本资源扫描；EF仍20.14.17。扫描jar＋OpenLoader数据资源得武器JSON3184文件/2746键，weapon type另157文件；MobPatch102文件/102键（SLU74、EFMCompat21、w.o.w6、Epic Fight Villages Guard兼容件1）。compat可能包含未安装mod的预置引用，不能当现版武器/实体数；重复provider保留，不冒称最终覆盖顺序。
 
 来源：[EF资源索引](data/EF资源索引.csv)、现版资料索引.json resources；统计：[更新后的EF表](SvS_EF适配统计表.xlsx)。旧EF红色/百分比仅代表历史导出。17处资源解析异常见数据与采样说明§三，其中空兼容JSON/尾部额外内容均未改jar，不能推断游戏效果。
 

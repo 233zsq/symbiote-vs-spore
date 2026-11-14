@@ -1,0 +1,29 @@
+{
+  "id": "000FD1A7C78E84EB",
+  "title": "武库毕业赏 · 王权兵器任选一",
+  "loot_size": 1,
+  "order_index": 13,
+  "rewards": [
+    {
+      "id": "000451A0A5D6D695",
+      "type": "item",
+      "item": "wom:ruine",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "000C746B4897924A",
+      "type": "item",
+      "item": "cataclysm:the_incinerator",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "0009FA87110CB28E",
+      "type": "item",
+      "item": "slu:moonlight_sword",
+      "count": 1,
+      "team_reward": false
+    }
+  ]
+}

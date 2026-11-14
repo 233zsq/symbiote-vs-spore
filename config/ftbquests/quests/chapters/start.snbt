@@ -1,24 +1,39 @@
 {
   "id": "0002DFAF1558F702",
   "filename": "start",
-  "title": "启读·出发之前",
-  "group": "00070AC1B50E5203",
+  "title": "&6序章 · 天外来客&r",
+  "group": "0002FB0079E64484",
   "order_index": 0,
-  "icon": "minecraft:book",
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/crown.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
   "default_hide_dependency_lines": false,
   "default_quest_shape": "circle",
   "quest_links": [],
   "quests": [
     {
-      "id": "00018657DF0ADEE3",
-      "title": "先活下来，再拔剑",
+      "id": "00064A956CE1AEF0",
+      "title": "天外四客",
       "description": [
-        "【教学目标】认识这本任务书的路线。",
-        "【作业】阅读后领取见面礼：精制铁锭3枚、熟牛肉8个。",
-        "【提示】新世界不保证出生在安全村庄。先找遮蔽；这3枚锭用于序章换取铁剑和盾。主线、职业、讨伐和手册分栏；后期尚未开放的目标有明确标记。",
-        "【讲评】冒险者，先把这一餐吃稳，再去认识这片世界。"
+        "【战略目标】真菌要吞食这颗星球，共生体要吞食强者。你要的比它们更多：一座要塞、诸王的武库，以及此界的王座。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】你与共生体一同降临；另一位更早到来的异界强者只留下不灭残躯。那是征伐终点，不是开局救援者。",
+        "【掠夺战果】先取兵刃，再融合天外生命。立旗之前，先让自己有资格活着走进村庄。"
       ],
-      "icon": "minecraft:chest",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/crown.png"
+        }
+      },
       "subtitle": "",
       "x": 0.0,
       "y": 0.0,
@@ -27,7 +42,7 @@
       "dependencies": [],
       "tasks": [
         {
-          "id": "000F37C491319CB8",
+          "id": "00063B1580AE49AD",
           "type": "checkmark"
         }
       ],
@@ -37,53 +52,50 @@
           "item": "kubejs:refined_iron_ingot",
           "count": 3,
           "team_reward": false,
-          "id": "0006E625DC8196D8"
+          "id": "0001C910E31E1EE3"
         },
         {
           "type": "item",
           "item": "minecraft:cooked_beef",
           "count": 8,
           "team_reward": false,
-          "id": "00010E257F990F0D"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，先把这一餐吃稳，再去认识这片世界。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000F587DA378F896"
+          "id": "000B6EB978222D7B"
         }
       ],
       "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0008236F713EB412",
-      "title": "选自己的难度",
+      "id": "00081D4B5678C2B1",
+      "title": "定下征途",
       "description": [
-        "【教学目标】认识个人难度与队伍进度的区别。",
-        "【作业】阅读说明，再点击本任务的选择奖励，为自己选定一种难度。",
-        "【提示】每位冒险者各选一次；队伍共用任务完成记录，但个人难度独立。已选档不能靠重做任务更换，管理员处理另议。",
-        "【讲评】冒险者，以自己的节奏起步。"
+        "【战略目标】选定个人难度，开始这场征伐。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】难度选项只影响自己的规则；同队任务共享与个人领奖分开处理。",
+        "【掠夺战果】难度奖励需手动选择；有疑问可在作战备忘查阅。"
       ],
-      "icon": "minecraft:iron_helmet",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/crown.png"
+        }
+      },
       "subtitle": "",
-      "x": 2.5,
+      "x": 3.4,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00018657DF0ADEE3"
+        "00064A956CE1AEF0"
       ],
       "tasks": [
         {
-          "id": "0009B12EBD306AE0",
+          "id": "000ACE5E5DF37729",
           "type": "checkmark"
         }
       ],
@@ -94,144 +106,816 @@
           "team_reward": false,
           "auto": "disabled",
           "exclude_from_claim_all": true,
-          "id": "000C2600383233EC"
+          "id": "0006109387B84E24"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000382638930D2C3",
+      "title": "拔剑之姿",
+      "description": [
+        "【战略目标】先把刀从生存工具变成能夺权的兵器。",
+        "【讨伐作业】阅读史诗战斗姿态与攻击说明后确认。",
+        "【情报与机制】进入战斗模式；先试短连段和收招，不把按键存在误认为已经学习技能。",
+        "【掠夺战果】下一步取得第一把实用兵刃。"
+      ],
+      "icon": "minecraft:iron_sword",
+      "subtitle": "",
+      "x": 6.8,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00081D4B5678C2B1"
+      ],
+      "tasks": [
+        {
+          "id": "00059BD66CDA20C1",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000F02A229301EF6"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005380D37183A9E",
+      "title": "第一把兵刃",
+      "description": [
+        "【战略目标】取得足以自保的剑盾。",
+        "【讨伐作业】提交精炼铁锭3枚，再点击领取铁剑与盾。",
+        "【情报与机制】铁锭由启读首节点发放；此处只扣3枚。此节点与姿态教学并行，先领兵器也可以。持有盾不等于习得EF格挡技能。",
+        "【掠夺战果】铁剑与盾牌已拨付。完成下一段实战，可从翻滚或跨步中领取一本身法书。"
+      ],
+      "icon": "kubejs:refined_iron_ingot",
+      "subtitle": "",
+      "x": 10.2,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000382638930D2C3"
+      ],
+      "tasks": [
+        {
+          "id": "000D70D90DAEEFA8",
+          "type": "item",
+          "item": "kubejs:refined_iron_ingot",
+          "count": 3L,
+          "consume_items": true,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "minecraft:iron_sword",
+          "count": 1,
+          "team_reward": false,
+          "id": "000C293C6EF4BA6C"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:shield",
+          "count": 1,
+          "team_reward": false,
+          "id": "0009E7B0D680A258"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003F17A68884A4F",
+      "title": "收放之间",
+      "description": [
+        "【战略目标】试出兵刃的连段和停手时机。",
+        "【讨伐作业】持剑完成一次连击，停手观察动作结束后再出手；练习后手动确认。",
+        "【情报与机制】先在安全空地练习。不同兵器的动作与蓄力方式不同，不把普通移动、后撤说成已经习得的闪避技能。",
+        "【掠夺战果】把下一击留给真正的破绽。"
+      ],
+      "icon": "minecraft:iron_sword",
+      "subtitle": "",
+      "x": 13.6,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005380D37183A9E"
+      ],
+      "tasks": [
+        {
+          "id": "00041BC887CAFE95",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 15,
+          "team_reward": false,
+          "id": "00020C8B1A492426"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00009991FAC9A1CC",
+      "title": "锁住猎物",
+      "description": [
+        "【战略目标】学会在锁定与自由视角之间切换。",
+        "【讨伐作业】对可锁定目标开启并解除锁定，操作后手动确认。",
+        "【情报与机制】默认G；以控制设置为准。群战或大型敌人遮挡视野时可以解除锁定，留意退路。",
+        "【掠夺战果】目光跟住敌人，也要看清整片战场。"
+      ],
+      "icon": "minecraft:bow",
+      "subtitle": "",
+      "x": 13.6,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003F17A68884A4F"
+      ],
+      "tasks": [
+        {
+          "id": "0008B4D24AC8D06D",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000EEA8ACE6F7B6B"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E31112F98F0B4",
+      "title": "身法与耐力",
+      "description": [
+        "【战略目标】不依赖站桩换血，把耐力留给决定生死的那一次动作。",
+        "【讨伐作业】阅读身法书的学习与装备规则后确认。",
+        "【情报与机制】技能书将在下一项实战后领取；学过的技能不需要反复吃书。",
+        "【掠夺战果】完成初试锋芒，领取身法军资。"
+      ],
+      "icon": "minecraft:enchanted_book",
+      "subtitle": "",
+      "x": 10.2,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00009991FAC9A1CC"
+      ],
+      "tasks": [
+        {
+          "id": "0005C8A3C692A8F6",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "0003BDDCA0B12B49"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0007DC9832832B1F",
+      "title": "初试锋芒",
+      "description": [
+        "【战略目标】用实战检验最初的兵刃。",
+        "【讨伐作业】本作业开放后，由队伍玩家累计击杀5只敌对怪物。",
+        "【情报与机制】可以选择僵尸、骷髅等普通敌人。只累计开放后的玩家致命攻击；环境死亡、炮塔击杀与旧击杀不计入。不要为了教学追逐高阶怪。",
+        "【掠夺战果】首批猎物倒下。领取一本身法书，再向另一颗流星进发。"
+      ],
+      "icon": "minecraft:rotten_flesh",
+      "subtitle": "",
+      "x": 6.8,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000E31112F98F0B4"
+      ],
+      "tasks": [
+        {
+          "id": "000E71E76D1C7673",
+          "type": "custom",
+          "title": "本作业开放后，由队伍玩家累计击杀5只敌对怪物。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000B6A80F99EA1C3"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 5,
+          "team_reward": false,
+          "id": "00037A6C30C4297D"
+        },
+        {
+          "type": "choice",
+          "table_id": 1220394165928656L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "身法军资 · 任选一",
+          "id": "0004A1856E3454E5"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CB9657D10F8E6",
+      "title": "回应天外之声",
+      "description": [
+        "【战略目标】找到同样来自天外的力量，完成第一次融合。",
+        "【讨伐作业】队伍至少一人完成初次融合，达到“附着”或更高阶段。",
+        "【情报与机制】探索主世界的陨石坠落遗迹，按Symbiote原生交互取得并融合。现有生成规则将陨石限制在世界出生点周围400～800格环带；地形会影响寻找，指南针不能定位它。检测读取实际融合阶段，不要求先完成村庄路线，已融合者可追认。",
+        "【掠夺战果】异星生命已与你融合。后续猎杀与喂食让它成长；任务不会凭空提升共生阶位。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 3.4,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007DC9832832B1F"
+      ],
+      "tasks": [
+        {
+          "id": "0009F048446856CE",
+          "type": "custom",
+          "title": "队伍至少一人完成初次融合，达到“附着”或更高阶段。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000D08D20E7D1DAD"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000DD7BC24F068AB",
+      "title": "驾驭天外之力",
+      "description": [
+        "【战略目标】理解融合之后的成长与风险。",
+        "【讨伐作业】阅读共生使支线和当前状态说明，再手动确认。",
+        "【情报与机制】附着、整合、合作、主导是实际养成阶段，仍可能退化。关注压力、饥饿与信赖；不要为了教学强行触发失控。队伍共享完成不等于每个人都已融合，需要个人能力时检查自己的状态。",
+        "【掠夺战果】掌握当前状态与养成条件，逐步把共生体锻成征伐的战甲。"
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CB9657D10F8E6"
+      ],
+      "tasks": [
+        {
+          "id": "000ACA07641C5A23",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "0001E3836A0BFC63"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000099A265B6EA88",
+      "title": "择地立旗",
+      "description": [
+        "【战略目标】沿道路寻找第一处有人烟的补给据点。",
+        "【讨伐作业】在主世界靠近至少3名村民，等待据点检测完成，再领取1枚火种。",
+        "【情报与机制】检测范围为玩家周围128格；它识别村民聚居，不保证每条道路通村。可以先找到村庄，再寻找共生体；也可以先融合后回来。",
+        "【掠夺战果】第一处据点就在这里。选定村民绑定火种，把这片聚落建成远征的后方。"
+      ],
+      "icon": "minecraft:bell",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000DD7BC24F068AB"
+      ],
+      "tasks": [
+        {
+          "id": "000B1544BB3947C8",
+          "type": "custom",
+          "title": "在主世界靠近至少3名村民，等待据点检测完成，再领取1枚火种。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000062909A16ACCD"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:fireseed_token",
+          "count": 1,
+          "team_reward": false,
+          "id": "0002491775CC1CEE"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00076EEAD3DEEF4E",
+      "title": "手中的火种",
+      "description": [
+        "【战略目标】准备把据点与自己联系起来。",
+        "【讨伐作业】持有1枚火种，或已有个人火种绑定记录；两种情况均不消耗物品。",
+        "【情报与机制】“择地立旗”提供首枚火种，须亲自领取。若已提前绑定，本项读取现有记录，下一项也会追认；工具匠20枚真菌残魂可补购。",
+        "【掠夺战果】选好村民，再把这枚火种交出去。"
+      ],
+      "icon": "ftbquests:book",
+      "subtitle": "",
+      "x": 3.4,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000099A265B6EA88"
+      ],
+      "tasks": [
+        {
+          "id": "0005A779E7F071FC",
+          "type": "custom",
+          "title": "持有1枚火种，或已有个人火种绑定记录；两种情况均不消耗物品。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "000E87B31668AD01"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000345D85DBA8EBA",
+      "title": "旗帜之下",
+      "description": [
+        "【战略目标】完成第一次真实火种绑定。",
+        "【讨伐作业】手持火种右键一名未绑定村民，等待绑定记录检测完成。",
+        "【情报与机制】只领到或拿着火种不能完成此项。每人绑定上限5名；该检测读取个人现有绑定记录，团队中一人满足即可共享进度。文明变化和村民死亡处罚沿用现有规则。",
+        "【掠夺战果】火种已绑定，领地已立旗。整备后勤，准备向荒野出征。"
+      ],
+      "icon": "kubejs:fireseed_token",
+      "subtitle": "",
+      "x": 6.8,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00076EEAD3DEEF4E"
+      ],
+      "tasks": [
+        {
+          "id": "00051CD55FBA6E1D",
+          "type": "custom",
+          "title": "手持火种右键一名未绑定村民，等待绑定记录检测完成。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 25,
+          "team_reward": false,
+          "id": "000DCC98BD29F9DF"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0001893373B639BC",
+      "title": "第一笔军资",
+      "description": [
+        "【战略目标】把战斗所得变成持续出征的补给。",
+        "【讨伐作业】同时持有真菌残魂5枚，不消耗。",
+        "【情报与机制】初试锋芒奖励可确定取得5枚；也可通过现有真菌掉落积攒。持有检测只证明你有军资，不代表已经交易。留好钱，按需要购买材料或补充火种。",
+        "【掠夺战果】军资仍留在你手中。下一步，查看村民能提供什么。"
+      ],
+      "icon": "kubejs:spore_coin",
+      "subtitle": "",
+      "x": 10.2,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000345D85DBA8EBA"
+      ],
+      "tasks": [
+        {
+          "id": "00099646D4CD3F43",
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 5L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 15,
+          "team_reward": false,
+          "id": "0005BF433FAC7D73"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CCABD974AD162",
+      "title": "军需官的第一张清单",
+      "description": [
+        "【战略目标】把村庄变成能支撑远征的后方。",
+        "【讨伐作业】阅读补给与贸易安排后确认。",
+        "【情报与机制】真菌残魂用于现有军需渠道；留出食物、修理和技能整备预算，装备奖励在后续征伐与鉴定中逐步拨付。",
+        "【掠夺战果】村民负责原生交易，你负责把可用物资带上前线。"
+      ],
+      "icon": "minecraft:emerald",
+      "subtitle": "",
+      "x": 13.6,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0001893373B639BC"
+      ],
+      "tasks": [
+        {
+          "id": "0009B4C989E40602",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 10,
+          "team_reward": false,
+          "id": "000A67BF464F0859"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000CC01A395A1213",
+      "title": "第一座炉火",
+      "description": [
+        "【战略目标】在开局获得可运行的小型熔铸系统。",
+        "【讨伐作业】确认阅读并领取全部9项起步奖励，然后按下一节点搭建。",
+        "【情报与机制】礼包含熔化炉、加热器、浇注口、浇铸台、可复用锭模、煤16、粗铜3及两种工位。这是可用固体燃料的小型熔化炉，不是可合金的大型冶炼炉；先试铜，其他材料熔点查JEI。",
+        "【掠夺战果】炉具和首批燃料归你。把它们安放在自己的据点。"
+      ],
+      "icon": "tconstruct:seared_melter",
+      "subtitle": "",
+      "x": 13.6,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CCABD974AD162"
+      ],
+      "tasks": [
+        {
+          "id": "000733B8DB790D71",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "item": "tconstruct:seared_melter",
+          "count": 1,
+          "team_reward": false,
+          "id": "000274DDD43E9A9E"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:seared_heater",
+          "count": 1,
+          "team_reward": false,
+          "id": "000B5FE6938DF16D"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:seared_faucet",
+          "count": 1,
+          "team_reward": false,
+          "id": "00036127FCF1ADC8"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:seared_table",
+          "count": 1,
+          "team_reward": false,
+          "id": "000ABE888AB74FB8"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:ingot_cast",
+          "count": 1,
+          "team_reward": false,
+          "id": "00045166248E3881"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:coal",
+          "count": 16,
+          "team_reward": false,
+          "id": "00046E8C19B27634"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:raw_copper",
+          "count": 3,
+          "team_reward": false,
+          "id": "0001A521FCD640F3"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:part_builder",
+          "count": 1,
+          "team_reward": false,
+          "id": "000DB5B4BE54C770"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:tinker_station",
+          "count": 1,
+          "team_reward": false,
+          "id": "000E62446E6C82B8"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00016E9DDAE91FEE",
+      "title": "让金属流动",
+      "description": [
+        "【战略目标】把起步炉具变成一次真正可用的熔铸。",
+        "【讨伐作业】完成浇铸练习后自行确认；本项为教学记录。",
+        "【情报与机制】加热器在下、熔化炉在上；浇注口装在熔化炉侧面，出口下方对准浇铸台。此节点是实操自检，不自动验证放置或浇铸。后续大型炉、合金和武器部件见锻造师与JEI。",
+        "【掠夺战果】下一次猎杀所得可以投入炉中；实操熟练度由你掌握，任务不伪造自动验证。"
+      ],
+      "icon": "minecraft:copper_ingot",
+      "subtitle": "",
+      "x": 10.2,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000CC01A395A1213"
+      ],
+      "tasks": [
+        {
+          "id": "000D858CFE9D1619",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00051F7D077B99CA",
+      "title": "据点不是孤城",
+      "description": [
+        "【战略目标】为第一次远征留下守备意识。",
+        "【讨伐作业】阅读围城、卫兵与炮塔的当前说明，再手动确认。",
+        "【情报与机制】围城按既有7日周期，仅在村庄区域推进；离开冻结，回村临近开战会回拨预警。不要原地等7天交序章。先整理照明、退路与村民安全。Silence’s Turrets已入包，部署和弹药查JEI；炮塔实战与主线任务尚待验收，这里不发未验证的炮塔毕业奖励。",
+        "【掠夺战果】据点可以慢慢壮大。现在准备第一次主动出征。"
+      ],
+      "icon": "minecraft:shield",
+      "subtitle": "",
+      "x": 6.8,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00016E9DDAE91FEE"
+      ],
+      "tasks": [
+        {
+          "id": "000BF28562B3BF9C",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000745DA907A1C83",
+      "title": "降临·融合·立旗",
+      "description": [
+        "【战略目标】降临、融合、立旗已经完成。你不再是路过废土的流亡者，接下来让荒野承认新的领主。",
+        "【讨伐作业】序章前置完成后自动结算。",
+        "【情报与机制】主线逐项展开；支线由相应战果引出。全武库无需集齐，职业毕业也不拦截征伐。",
+        "【掠夺战果】发布第一道猎令：锐爪兽。"
+      ],
+      "icon": "minecraft:nether_star",
+      "subtitle": "",
+      "x": 3.4,
+      "y": 12.600000000000001,
+      "size": 1.15,
+      "shape": "diamond",
+      "dependencies": [
+        "00051F7D077B99CA"
+      ],
+      "tasks": [
+        {
+          "id": "000FFF98683D9575",
+          "type": "custom",
+          "title": "序章前置完成后自动结算。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 50,
+          "team_reward": false,
+          "id": "000DE2AF6789905E"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 12,
+          "team_reward": false,
+          "id": "000385746C1B17EB"
+        },
+        {
+          "type": "choice",
+          "table_id": 3998345419389569L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "格挡军资 · 任选一",
+          "id": "000D99661C567F47"
         },
         {
           "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，以自己的节奏起步。\", \"color\": \"gray\"}",
+          "command": "gamestage add {p} svs_stage1_prologue",
           "elevate_perms": true,
           "silent": true,
           "team_reward": false,
           "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00041CB3BF91D436"
+          "title": "征伐阶段记录",
+          "icon": {
+            "id": "ftbquests:custom_icon",
+            "Count": 1,
+            "tag": {
+              "Icon": "svs:textures/quest/emblems/crown.png"
+            }
+          },
+          "id": "00046E5F24E63179"
         }
       ],
       "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
-    },
+    }
+  ],
+  "images": [
     {
-      "id": "000780528C7C4AA8",
-      "title": "四段旅程，四条成长路",
-      "description": [
-        "【教学目标】读懂主线与职业。",
-        "【作业】阅读四阶段与四职业的位置。",
-        "【提示】Ⅰ启程→Ⅱ磨砺→Ⅲ天灾防线→Ⅳ反推。收藏家、锻造师、狩龙人、共生使可以一起做；职业毕业不是通关门槛。序章先教开局。",
-        "【讲评】冒险者，主线告诉你往哪走，职业让你选择怎样成长。"
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/crown.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "序章 · 天外来客"
       ],
-      "icon": "minecraft:compass",
-      "subtitle": "",
-      "x": 5.0,
-      "y": 0.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [],
-      "tasks": [
-        {
-          "id": "000C67882DC304D5",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，主线告诉你往哪走，职业让你选择怎样成长。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000C86EB06FCFD6D"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000922B351137A7A",
-      "title": "队伍与存档",
-      "description": [
-        "【教学目标】知道哪些经历由队伍分享。",
-        "【作业】阅读组队、个人养成和这次任务重建的说明。",
-        "【提示】FTB Teams共享任务进度，奖励默认各人领取。共生体、龙归属与难度仍属个人。旧世界与旧任务进度文件保留，新任务从新ID开始，不自动补毕业。",
-        "【讲评】冒险者，可以结伴赶路，也要照顾自己的状态。"
-      ],
-      "icon": "minecraft:name_tag",
-      "subtitle": "",
-      "x": 7.5,
-      "y": 0.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [],
-      "tasks": [
-        {
-          "id": "000D927167969A69",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，可以结伴赶路，也要照顾自己的状态。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000C93542BD97441"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0009DD90C7A0C246",
-      "title": "哪些内容还在制作",
-      "description": [
-        "【教学目标】避免把未来目标误当现成玩法。",
-        "【作业】阅读后期开放状态。",
-        "【提示】日课完整胜利检测、SLU定点场地、母巢攻坚、随机召唤券及终局名单仍有未完成项。标“尚未开放”的任务暂时不能完成；手册与已开放内容仍可体验。",
-        "【讲评】冒险者，知道道路修到了哪里，才能安排这一程。"
-      ],
-      "icon": "minecraft:barrier",
-      "subtitle": "",
-      "x": 10.0,
-      "y": 0.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [],
-      "tasks": [
-        {
-          "id": "0005955901F898AC",
-          "type": "checkmark"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，知道道路修到了哪里，才能安排这一程。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000C71711A58D717"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
+      "click": "",
+      "dev": false,
+      "corner": false
     }
   ]
 }

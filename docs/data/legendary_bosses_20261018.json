@@ -1,0 +1,323 @@
+{
+  "download": {
+    "url": "https://mediafilez.forgecdn.net/files/9234/898/legendarybosses-0.6.1-beta.jar",
+    "project_url": "https://www.curseforge.com/minecraft/mc-mods/legendary-bosses",
+    "file_url": "https://www.curseforge.com/minecraft/mc-mods/legendary-bosses/files/9234898",
+    "project_id": 1716327,
+    "file_id": 9234898,
+    "size": 625930,
+    "sha256": "86834189f19c693b6059e8fe76bb5fe95cf61e263dd52350409c967c8e9431d7",
+    "sha512": "f00098baa8d0f7ad67603acc44f51fb8399932dbc5d7e20c888caac88a55f54a11dac7bf1f407a2fa4ff2dcf7354cf4e05b24453d98ee3b6b0eff75c34af64d0"
+  },
+  "bosses": [
+    {
+      "key": "herobrine",
+      "label": "白瞳君王·Herobrine",
+      "slot": "LB01",
+      "chapter": "front",
+      "before": "E6_V6_AFTER_M17",
+      "next": "E6_V4_PHASE3",
+      "hp": 3200,
+      "armor": 75,
+      "damage": 20,
+      "icon": "legendarybosses:herobrine_greatsword",
+      "title": "诸王之上，还有白瞳之王",
+      "goal": "你已击溃咒翼灵骸，却还不能宣布旧世诸王尽数伏诛。白瞳君王Herobrine握着黑曜符文与雷暴，他将成为诸王篇真正的终点。",
+      "strategy": "在本包叙事中，他是旧纪元最深处的武道王者，并非真菌造物，也不是另一位天外来客。夺取他的符文兵刃，才能把诸王篇的战果带入机械总攻。",
+      "phases": [
+        "开场：白瞳剑士使用瞬身与反击。看到蓄势再决定短连段，不以长时间锁定站桩硬换。",
+        "生命降至66%：转为符文战士，出现凋灵骷髅弹幕与黑曜攻势；转阶段演出期间无法正常伤害。",
+        "生命降至33%：狂暴形态带来陨石雨与黑曜审判。吸引与红圈出现时优先撤出，再把握出招后的窗口。"
+      ],
+      "ritual": [
+        "底层铺3×3金块，上层中央下界岩，东南西北四个相邻格放红石火把。",
+        "用打火石或火焰弹点燃中央下界岩。仪式会消耗祭坛材料；中途破坏可中断。",
+        "在远离基地的开阔独立场地召唤。二阶段凋灵骷髅在mobGriefing开启时可能破坏地形。"
+      ],
+      "offer": [
+        {
+          "kind": "item",
+          "target": "minecraft:gold_block",
+          "count": 9,
+          "consume": false
+        },
+        {
+          "kind": "item",
+          "target": "minecraft:netherrack",
+          "count": 1,
+          "consume": false
+        },
+        {
+          "kind": "item",
+          "target": "minecraft:redstone_torch",
+          "count": 4,
+          "consume": false
+        }
+      ],
+      "payout": [
+        [
+          "kubejs:spore_coin",
+          96
+        ],
+        [
+          "tconstruct:manyullyn_ingot",
+          8
+        ]
+      ],
+      "select": [
+        "v6_master"
+      ],
+      "outcome": "诸王战果正式收束。Herobrine之刃从原生战利品中取得，星图另拨军资与技法，接下来夺取钢铁军团的天基武库。",
+      "order_key": "E6_LB_HEROBRINE_ORDER",
+      "prep_key": "E6_LB_HEROBRINE_RITUAL",
+      "fight_key": "E6_LB_HEROBRINE_VICTORY",
+      "after_key": "E6_LB_HEROBRINE_AFTER",
+      "advancement": "legendarybosses:herobrine_slayer"
+    },
+    {
+      "key": "entity_303",
+      "label": "赤码入侵者·实体303",
+      "slot": "LB02",
+      "chapter": "counterattack",
+      "before": "E6_V6_AFTER_M20",
+      "next": "E6_V6_ORDER_M21",
+      "hp": 2800,
+      "armor": 60,
+      "damage": 18,
+      "icon": "legendarybosses:entity_303_scythe",
+      "title": "武库易主，终端却传来第二道命令",
+      "goal": "机械三巨头已经熄火，你的命令却仍被另一个存在篡改。实体303侵占了旧世终端；先斩断这名赤码入侵者，军工系统才只听新王号令。",
+      "strategy": "将原生的“病毒入侵”融入旧纪元武库争夺。他的假聊天和删除进度属于战斗演出；你要夺取的是原生镰刀、兜帽与终端战果。",
+      "phases": [
+        "开场：悬浮镰手以火球、追踪光束和雷标骚扰。火球可反弹；长光束应利用视线阻挡或贴近寻找窗口。",
+        "生命降至66%：分身、微型303与代码裂隙加入。观察发光红眼寻找本体，分身不计为胜利。",
+        "生命降至33%：烈焰飞镰与删除引导加入。按屏幕要求在引导期间命中本体，打断大招；回旋镰去程与返程均有判定。"
+      ],
+      "ritual": [
+        "底层铺3×3黑曜石，上层中央红石块，四角放灵魂火把。",
+        "在书与笔的页面写入303，用书右击中央红石块；已成书中包含303也可被原生检测识别。",
+        "仪式消耗终端并改写书页。战斗假消息不是系统报错；真正的加载错误应查看日志。"
+      ],
+      "offer": [
+        {
+          "kind": "item",
+          "target": "minecraft:obsidian",
+          "count": 9,
+          "consume": false
+        },
+        {
+          "kind": "item",
+          "target": "minecraft:redstone_block",
+          "count": 1,
+          "consume": false
+        },
+        {
+          "kind": "item",
+          "target": "minecraft:soul_torch",
+          "count": 4,
+          "consume": false
+        },
+        {
+          "kind": "item",
+          "target": "minecraft:writable_book",
+          "count": 1,
+          "consume": false
+        }
+      ],
+      "payout": [
+        [
+          "kubejs:spore_coin",
+          112
+        ],
+        [
+          "minecraft:netherite_scrap",
+          4
+        ]
+      ],
+      "select": [
+        "v6_elitegear"
+      ],
+      "outcome": "赤码命令已被截断。原生战利品提供实体303之镰与兜帽，新的军资支援最后的争王者与守界战。",
+      "order_key": "E6_LB_ENTITY_303_ORDER",
+      "prep_key": "E6_LB_ENTITY_303_RITUAL",
+      "fight_key": "E6_LB_ENTITY_303_VICTORY",
+      "after_key": "E6_LB_ENTITY_303_AFTER",
+      "advancement": "legendarybosses:entity_303_slayer"
+    },
+    {
+      "key": "null",
+      "label": "虚无抹消者·Null",
+      "slot": "LB03",
+      "chapter": "counterattack",
+      "before": "E6_V6_AFTER_M24",
+      "next": "E6_V6_MUSTER",
+      "hp": 3000,
+      "armor": 60,
+      "damage": 22,
+      "icon": null,
+      "title": "打穿边界，还要击溃边界中的虚无",
+      "goal": "界域戍卫倒下后，母巢出发线却被一片无法命名的空白吞没。Null抹除地面、武装与视野。你必须让虚无也承认自己可以被击败。",
+      "strategy": "他是旧世界“抹除法则”的关口，与其后的造界者形成破坏与创造的对照。击溃Null后才汇集总攻军资；不将他写成真菌的主脑。",
+      "phases": [
+        "开场：掌击、虚空弹与抹除线加入，部分弹射物会穿过它。沿白色预兆侧移，不在脚下失去立足点时贪刀。",
+        "生命降至66%：坍缩、格式化、撤销与复制地面加入。离开标记地面；看清撤销留下的位置，避免被回送进危险区。",
+        "生命降至33%：黑雾压缩视野，return null倒计时结束前靠近其身边安全圈。首次进入此阶段时，携带的不死图腾可能触发定身并被逐个消耗。"
+      ],
+      "ritual": [
+        "在铁砧把命名牌改名为小写null，然后用玩家丢弃操作将它抛出。",
+        "命名牌会在仪式中消失，随后Null出现。不要在武器库或村庄旁随意抛出这个名字。",
+        "战前将不死图腾存回后方，检查随身物品栏与饰品槽。原生第三阶段会定身并消耗检测到的图腾，不只是击落副手的一枚。",
+        "主手和护甲会暂时移除并由模组安排返还；进入独立测试世界先验恢复，不携带唯一珍藏品试战。"
+      ],
+      "offer": [
+        {
+          "kind": "item",
+          "target": "minecraft:name_tag",
+          "count": 1,
+          "consume": false
+        },
+        {
+          "kind": "item",
+          "target": "minecraft:anvil",
+          "count": 1,
+          "consume": false
+        }
+      ],
+      "payout": [
+        [
+          "kubejs:spore_coin",
+          128
+        ],
+        [
+          "minecraft:golden_carrot",
+          24
+        ]
+      ],
+      "select": [
+        "v6_master"
+      ],
+      "outcome": "虚无消散，总攻出发线重新出现。回收自己的行装与场地，再汇集劫火、天基和火力军资，继续有限母巢战役。",
+      "order_key": "E6_LB_NULL_ORDER",
+      "prep_key": "E6_LB_NULL_RITUAL",
+      "fight_key": "E6_LB_NULL_VICTORY",
+      "after_key": "E6_LB_NULL_AFTER",
+      "advancement": "legendarybosses:null_slayer"
+    },
+    {
+      "key": "notch",
+      "label": "造界者·Notch",
+      "slot": "LB04",
+      "chapter": "finale",
+      "before": "E6_V4_M25",
+      "next": "E6_V6_SAGE_ORDER",
+      "hp": 4000,
+      "armor": 60,
+      "damage": 24,
+      "icon": "legendarybosses:creation_pickaxe",
+      "title": "天灾已平，造界者亲自考验新王",
+      "goal": "母巢已经陷落，旧世界却还没有将最高权柄交给你。Notch以创造之镐重构战场；胜过这位本土造界者，你才算真正跨过此界的最终门槛。",
+      "strategy": "本包将“创造者”定位为本土旧纪元造界权柄的持有者，不宣称现实作者身份，也不改写天外四客。Notch是本土终极大Boss，大圣残躯仍是随后更高一层的异界武道传承。",
+      "phases": [
+        "创造者：近身镐击、地柱、地浪与囚笼交替。先离开重砸预兆，囚笼成形前撤离或尽快突破。",
+        "生命降至66%：建筑师用活塞、TNT、发射器和铁巨像扩张火力。多看地面与两侧，避免被夹在连续攻击中。",
+        "生命降至33%：创造形态悬空，/fill倒计时要求进入白色安全格；铁砧雨、创世纪与世界再生继续改造战场，按各自标记移动。"
+      ],
+      "ritual": [
+        "在平地铺3×3底座，中央草方块，周围八格金块。",
+        "手持附魔金苹果右击中央草方块。仪式中途破坏祭坛可中断并返还苹果。",
+        "保留地面视野与足够空场，远离核心建筑。暂时建造方块的恢复逻辑存在，跨模组设施仍应在独立世界先验证。"
+      ],
+      "offer": [
+        {
+          "kind": "item",
+          "target": "minecraft:gold_block",
+          "count": 8,
+          "consume": false
+        },
+        {
+          "kind": "item",
+          "target": "minecraft:grass_block",
+          "count": 1,
+          "consume": false
+        },
+        {
+          "kind": "item",
+          "target": "minecraft:enchanted_golden_apple",
+          "count": 1,
+          "consume": false
+        }
+      ],
+      "payout": [
+        [
+          "kubejs:spore_coin",
+          192
+        ],
+        [
+          "minecraft:netherite_ingot",
+          2
+        ]
+      ],
+      "select": [
+        "v6_master",
+        "v6_t0gear"
+      ],
+      "outcome": "造界者收起万物，承认新王已经跨过本土的最后门槛。带上创世之镐与全部战果，向真魂远去的大圣残躯请求赐教。",
+      "order_key": "E6_LB_NOTCH_ORDER",
+      "prep_key": "E6_LB_NOTCH_RITUAL",
+      "fight_key": "E6_LB_NOTCH_VICTORY",
+      "after_key": "E6_LB_NOTCH_AFTER",
+      "advancement": "legendarybosses:notch_slayer"
+    }
+  ],
+  "changed_dependencies": {
+    "E6_V4_PHASE3": {
+      "before": [
+        "E6_V6_AFTER_M17"
+      ],
+      "after": [
+        "E6_LB_HEROBRINE_AFTER"
+      ]
+    },
+    "E6_V6_ORDER_M21": {
+      "before": [
+        "E6_V6_AFTER_M20"
+      ],
+      "after": [
+        "E6_LB_ENTITY_303_AFTER"
+      ]
+    },
+    "E6_V6_MUSTER": {
+      "before": [
+        "E6_V6_AFTER_M24"
+      ],
+      "after": [
+        "E6_LB_NULL_AFTER"
+      ]
+    },
+    "E6_V6_SAGE_ORDER": {
+      "before": [
+        "E6_V4_M25"
+      ],
+      "after": [
+        "E6_LB_NOTCH_AFTER"
+      ]
+    }
+  },
+  "obtained_items": [
+    "herobrine_greatsword",
+    "entity_303_scythe",
+    "entity_303_hood",
+    "creation_pickaxe"
+  ],
+  "excluded_props": [
+    "herobrine_void_blade",
+    "herobrine_rune_greatsword",
+    "herobrine_crimson_greatsword",
+    "entity_303_inferno_scythe"
+  ],
+  "language_keys": 190,
+  "profile": "MODDED (same as default AUTO with TConstruct)",
+  "evidence": "Resources, registration and decompiled bytecode; no game combat acceptance",
+  "preserved_E6_ids": true,
+  "worldgen_resources": 0
+}

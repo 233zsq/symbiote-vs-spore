@@ -1,0 +1,5547 @@
+{
+  "as_of": "2026-10-17",
+  "scope": "turrets installation increment; previous 10-16 catalogs remain snapshots",
+  "metadata": {
+    "sha256": "92bbd59f16481e1fd41fa2f5c0e7cd4d1aa3ef9efd9f411792390172bf89071e",
+    "sha512": "171849172838c77c2cc5a61a08eb0db9f501a0887b9d0e8a59599b93051c502acd70df57d9e939c6cccbac40e7cce4e17676b4f6789a52ebeacc3a8c8d633783",
+    "bytes": 7634216,
+    "mods_toml": {
+      "modLoader": "javafml",
+      "loaderVersion": "[47,)",
+      "license": "Academic Free License v3.0",
+      "mods": [
+        {
+          "modId": "silence_s_defense_tower",
+          "version": "2.14.0",
+          "displayName": "Silence's Turrets",
+          "displayURL": "https://mcreator.net",
+          "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+          "authors": "ASUS, MCreator"
+        }
+      ],
+      "dependencies": {
+        "silence_s_defense_tower": [
+          {
+            "modId": "minecraft",
+            "mandatory": true,
+            "versionRange": "[1.20.1]",
+            "ordering": "AFTER",
+            "side": "BOTH"
+          },
+          {
+            "modId": "jei",
+            "mandatory": false,
+            "versionRange": "[0,)",
+            "ordering": "NONE",
+            "side": "BOTH"
+          }
+        ]
+      }
+    },
+    "manifest": "Manifest-Version: 1.0\r\n\r\n",
+    "class_count": 3613,
+    "recipes": 192
+  },
+  "config": {
+    "gamerules": {
+      "modified_firework_launcher": false,
+      "modified_sentry_gun": false,
+      "modified_amethyst_cannon": false,
+      "technology_range": 0.0,
+      "technology_damage": 100180.0,
+      "technology_speed": 100160.0,
+      "technology_health": 2000.0,
+      "technology_heal": 200000.0,
+      "drop_rewards": 20.0
+    },
+    "Core Upgrade Table": {
+      "driving_core_2_material2_consume": 4.0,
+      "driving_core_2_materia3_consume": 2.0,
+      "driving_core_2_kills": 0.0,
+      "driving_core_3_materia2_consume": 8.0,
+      "driving_core_3_materia3_consume": 4.0,
+      "driving_core_3_kills": 10.0,
+      "driving_core_4_materia2_consume": 12.0,
+      "driving_core_4_material3_consume": 6.0,
+      "driving_core_4_kills": 8.0,
+      "acid_core_2_material2_consume": 32.0,
+      "acid_core_2_material3_consume": 12.0,
+      "acid_core_2_kills": 8.0,
+      "acid_core_3_material2_consume": 64.0,
+      "acid_core_3_material3_consume": 12.0,
+      "acid_core_3_kills": 10.0,
+      "nether_core_2_material2_consume": 12.0,
+      "nether_core_2_material3_consume": 32.0,
+      "nether_core_2_kills": 4.0,
+      "nether_core_3_material2_consume": 12.0,
+      "nether_core_3_material3_consume": 48.0,
+      "nether_core_3_kills": 6.0,
+      "nether_core_4_material2_consume": 12.0,
+      "nether_core_4_material3_consume": 64.0,
+      "nether_core_4_kills": 10.0,
+      "driving_core_2_material2": "minecraft:iron_ingot",
+      "driving_core_2_material3": "silence_s_defense_tower:pile_of_materials_1",
+      "driving_core_3_material2": "minecraft:iron_ingot",
+      "driving_core_3_material3": "silence_s_defense_tower:pile_of_materials_1",
+      "driving_core_4_material2": "minecraft:iron_ingot",
+      "driving_core_4_material3": "silence_s_defense_tower:pile_of_materials_1",
+      "acid_core_2_material2": "minecraft:copper_ingot",
+      "acid_core_2_material3": "minecraft:slime_ball",
+      "acid_core_3_material2": "minecraft:copper_ingot",
+      "acid_core_3_material3": "minecraft:slime_ball",
+      "nether_core_2_material2": "minecraft:gold_ingot",
+      "nether_core_2_material3": "silence_s_defense_tower:nether_wart_sauce",
+      "nether_core_3_material2": "minecraft:gold_ingot",
+      "nether_core_3_material3": "silence_s_defense_tower:nether_wart_sauce",
+      "nether_core_4_material2": "minecraft:gold_ingot",
+      "nether_core_4_material3": "silence_s_defense_tower:nether_wart_sauce"
+    },
+    "Vending Machine": {
+      "diamond": 6.0,
+      "gold_ingot": 2.0,
+      "props": 1.0,
+      "technology_small": 1.0,
+      "technology_large": 4.0,
+      "biological_jamming_device_ban": false,
+      "add_item1": [
+        "000"
+      ],
+      "add_item1_consume": 0.0,
+      "add_item1_output": 0.0,
+      "add_item2": [
+        "000"
+      ],
+      "add_item2_consume": 0.0,
+      "add_item2_output": 0.0,
+      "add_item3": [
+        "000"
+      ],
+      "add_item3_consume": 0.0,
+      "add_item3_output": 0.0,
+      "add_item4": [
+        "000"
+      ],
+      "add_item4_consume": 0.0,
+      "add_item4_output": 0.0
+    },
+    "Turret": {
+      "cannon_1_damage": 4.0,
+      "cannon_1_attackrange": 16.0,
+      "cannon_2_damage": 7.0,
+      "cannon_2_attackrange": 16.0,
+      "cannon_3_damage": 9.0,
+      "cannon_3_attackrange": 17.0,
+      "cannon_4_damage": 11.0,
+      "cannon_4_attackrange": 18.0,
+      "ice_cannon_1_damage": 5.0,
+      "ice_cannon_1_attackrange": 16.0,
+      "arrow_turret_1_damage": 2.0,
+      "arrow_turret_1_attackrange": 18.0,
+      "arrow_turret_2_damage": 3.0,
+      "arrow_turret_2_attackrange": 20.0,
+      "arrow_turret_3_damage": 3.3,
+      "arrow_turret_3_attackrange": 20.0,
+      "arrow_turret_4_damage": 4.5,
+      "arrow_turret_4_attackrange": 22.0,
+      "hurricane_ballista_1_damage": 3.0,
+      "hurricane_ballista_1_attackrange": 20.0,
+      "hurricane_ballista_2_damage": 4.5,
+      "hurricane_ballista_2_attackrange": 24.0,
+      "heavy_crossbow_1_damage": 35.0,
+      "heavy_crossbow_1_attackrange": 22.0,
+      "dart_launcher_1_damage": 1.5,
+      "dart_launcher_1_attackrange": 15.0,
+      "dart_launcher_2_damage": 2.0,
+      "dart_launcher_2_attackrange": 15.0,
+      "sentry_gun_1_damage1": 3.0,
+      "sentry_gun_1_damage2": 2.0,
+      "sentry_gun_1_attackrange": 17.0,
+      "sentry_gun_2_damage1": 4.0,
+      "sentry_gun_2_damage2": 3.0,
+      "sentry_gun_2_attackrange": 18.0,
+      "sentry_gun_3_damage": 3.0,
+      "submarine_1_damage": 6.0,
+      "submarine_1_attackrange": 18.0,
+      "candy_turret_1_damage1": 9.0,
+      "candy_turret_1_damage2": 2.0,
+      "candy_turret_1_attackrange": 17.0,
+      "candy_turret_2_damage1": 13.0,
+      "candy_turret_2_damage2": 3.5,
+      "candy_turret_2_attackrange": 17.0,
+      "giant_dart_launcher_1_damage": 2.0,
+      "giant_dart_launcher_1_dattackrange": 16.0,
+      "giant_dart_launcher_2_damage2": 1.5,
+      "giant_dart_launcher_2_dattackrange": 20.0,
+      "firework_launcher_1_damage": 3.0,
+      "firework_launcher_1_attackrange": 18.0,
+      "firework_launcher_2_damage": 4.0,
+      "miniature_electromagnetic_gun_1_damage": 3.6,
+      "miniature_electromagnetic_gun_1_attackrange": 20.0,
+      "miniature_electromagnetic_gun_2_damage": 3.6,
+      "miniature_electromagnetic_gun_2_attackrange": 20.0,
+      "ball_lightning_gennerator_1_damage": 5.5,
+      "ball_lightning_gennerator_1_attackrange": 18.0,
+      "electromagnetic_gun_1_damage": 12.0,
+      "electromagnetic_gun_1_attackrange": 20.0,
+      "electromagnetic_railgun_1_damage": 25.0,
+      "electromagnetic_railgun_1_attackrange": 30.0,
+      "black_hole_generator_1_damage": 3.0,
+      "black_hole_generator_1_attackrange": 18.0,
+      "acid_eater_1_attackrange": 16.0,
+      "acid_eater_2_attackrange": 17.0,
+      "acid_eater_3_attackrange": 18.0,
+      "acid_arrow_turret_1_damage": 1.5,
+      "acid_arrow_turret_1_attackrange": 18.0,
+      "acid_arrow_turret_2_damage": 3.0,
+      "acid_arrow_turret_2_attackrange": 18.0,
+      "acid_mortar_1_damage": 2.0,
+      "acid_mortar_1_attackrange": 24.0,
+      "acid_mortar_1_damagerange": 10.0,
+      "acid_mortar_2_damage": 2.0,
+      "acid_mortar_2_attackrange": 24.0,
+      "acid_mortar_2_damagerange": 12.0,
+      "hellraiser_1_damage": 3.0,
+      "hellraiser_1_maxdamage": 15.0,
+      "hellraiser_1_attackrange": 16.0,
+      "hellraiser_2_damage": 4.0,
+      "hellraiser_2_maxdamage": 20.0,
+      "hellraiser_2_attackrange": 17.0,
+      "hellraiser_3_damage": 5.0,
+      "hellraiser_3_maxdamage": 28.0,
+      "hellraiser_3_attackrange": 18.0,
+      "hellraiser_4_damage": 8.0,
+      "hellraiser_4_maxdamage": 32.0,
+      "hellraiser_4_attackrange": 18.0,
+      "soul_ballista_1_damage": 6.0,
+      "soul_ballista_1_attackrange": 17.0,
+      "soul_ballista_2_damage": 8.0,
+      "soul_ballista_2_attackrange": 18.0,
+      "sticky_bomb_battery_damage(×5)": 2.4,
+      "sticky_bomb_battery_attackrange": 20.0,
+      "amethyst_cannon_damage": 1.0,
+      "amethyst_cannon_attackrange": 18.0,
+      "amethyst_extra_health(×4)": 0.0,
+      "amethyst_cannon_2_damage": 1.0,
+      "tyrant_cannon_remote_damage": 9.0,
+      "tyrant_cannon_melee_leech": 5.0,
+      "tyrant_cannon_1_melee_damage": 12.0,
+      "tyrant_cannon_1_attackrange": 16.0,
+      "tyrant_cannon_2_melee_damage": 15.0,
+      "tyrant_cannon_2_attackrange": 16.0,
+      "cloud_cannon_damage": 7.5,
+      "cloud_cannon_attackrange": 16.0,
+      "tesla_electric_tower_damage": 1.5,
+      "tesla_electric_tower_attackrange": 8.0,
+      "biological_jamming_device_attackrange": 15.0,
+      "bow_robot_factory_damage": 2.0,
+      "bow_robot_factory_attackrange": 12.0,
+      "bow_robot_factory_range": 15.0,
+      "bomb_robot_factory_damage": 3.0,
+      "bomb_robot_factory_attackrange": 10.0,
+      "bomb_robot_factory_range": 15.0,
+      "acid_robot_factory_attackrange": 12.0,
+      "acid_robot_factory_range": 15.0,
+      "healing_pylon_1_heal": 12.0,
+      "healing_pylon_1_multiplier": 1.3,
+      "healing_pylon_1_attackrange": 15.0,
+      "healing_pylon_1_regeneration": 0.0,
+      "healing_pylon_2_heal": 20.0,
+      "healing_pylon_2_multiplier": 1.5,
+      "healing_pylon_2_attackrange": 20.0,
+      "healing_pylon_2_regeneration": 0.0,
+      "healing_pylon_3_heal": 20.0,
+      "healing_pylon_3_multiplier": 1.7,
+      "healing_pylon_3_attackrange": 25.0,
+      "healing_pylon_3_regeneration": 0.0,
+      "healing_pylon_4_heal": 20.0,
+      "healing_pylon_4_multiplier": 2.0,
+      "healing_pylon_4_attackrange": 25.0,
+      "healing_pylon_4_regeneration": 2.0
+    },
+    "Variety Store": {
+      "nether_wart_sauce_consume1": 16.0,
+      "nether_wart_sauce_consume2": 24.0,
+      "nether_wart_sauce_consume3": 34.0,
+      "nether_wart_sauce_consume4": 42.0
+    },
+    "Maintenance Station": {
+      "acid_core_restoration": "copper_ingot",
+      "acid_core_restoration_value": 10.0,
+      "driving_core_restoration": "iron_ingot",
+      "driving_core_restoration_value": 25.0,
+      "nether_core_restoration": "gold_ingot",
+      "nether_core_restoration_value": 40.0
+    },
+    "Research Table": {
+      "research_1_item1": "minecraft:flint",
+      "research_1_item1_consume": 4.0,
+      "research_1_item2": "minecraft:iron_ingot",
+      "research_1_item2_consume": 4.0,
+      "research_1_kills": 8.0,
+      "research_1_time": 60.0,
+      "research_1_output": 4.0,
+      "research_2_item1": "silence_s_defense_tower:precision_components_2",
+      "research_2_item1_consume": 1.0,
+      "research_2_item2": "minecraft:iron_ingot",
+      "research_2_item2_consume": 4.0,
+      "research_2_kills": 8.0,
+      "research_2_time": 60.0,
+      "research_2_output": 4.0,
+      "research_3_item1": "silence_s_defense_tower:soul",
+      "research_3_item1_consume": 1.0,
+      "research_3_item2": "minecraft:gold_ingot",
+      "research_3_item2_consume": 2.0,
+      "research_3_kills": 10.0,
+      "research_3_time": 120.0,
+      "research_3_output": 4.0,
+      "research_4_item1": "silence_s_defense_tower:pile_of_materials_1",
+      "research_4_item1_consume": 3.0,
+      "research_4_item2": "",
+      "research_4_item2_consume": 0.0,
+      "research_4_kills": 8.0,
+      "research_4_time": 120.0,
+      "research_4_output": 4.0,
+      "research_5_consume": 1.0,
+      "research_5_output": 1.0
+    },
+    "Laborartory": {
+      "laborartory_1_material2": "silence_s_defense_tower:reinforcement_materials_1",
+      "laborartory_1_material2_consume": 10.0,
+      "laborartory_1_material3": "",
+      "laborartory_1_material3_consume": 0.0,
+      "laborartory_2_material2": "silence_s_defense_tower:reinforcement_materials_2",
+      "laborartory_2_material2_consume": 1.0,
+      "laborartory_2_material3": "silence_s_defense_tower:driving_core_3",
+      "laborartory_2_material3_consume": 1.0,
+      "laborartory_3_material2": "silence_s_defense_tower:reinforcement_materials_1",
+      "laborartory_3_material2_consume": 6.0,
+      "laborartory_3_material3": "minecraft:diamond",
+      "laborartory_3_material3_consume": 2.0,
+      "laborartory_4_material2": "silence_s_defense_tower:reinforcement_materials_1",
+      "laborartory_4_material2_consume": 12.0,
+      "laborartory_4_material3": "silence_s_defense_tower:electric_arc_1",
+      "laborartory_4_material3_consume": 3.0,
+      "laborartory_5_material2": "silence_s_defense_tower:reinforcement_materials_1",
+      "laborartory_5_material2_consume": 12.0,
+      "laborartory_5_material3": "silence_s_defense_tower:rubber_band_1",
+      "laborartory_5_material3_consume": 3.0,
+      "laborartory_6_material2": "silence_s_defense_tower:reinforcement_materials_2",
+      "laborartory_6_material2_consume": 2.0,
+      "laborartory_6_material3": "",
+      "laborartory_6_material3_consume": 0.0,
+      "laborartory_7_material2": "minecraft:mutton",
+      "laborartory_7_material2_consume": 36.0,
+      "laborartory_7_material3": "silence_s_defense_tower:soul",
+      "laborartory_7_material3_consume": 3.0,
+      "laborartory_8_material2": "minecraft:coal",
+      "laborartory_8_material2_consume": 64.0,
+      "laborartory_8_material3": "silence_s_defense_tower:soul",
+      "laborartory_8_material3_consume": 3.0,
+      "laborartory_9_material2": "minecraft:amethyst_shard",
+      "laborartory_9_material2_consume": 18.0,
+      "laborartory_9_material3": "silence_s_defense_tower:soul",
+      "laborartory_9_material3_consume": 3.0,
+      "laborartory_10_material2": "silence_s_defense_tower:soul_container_1",
+      "laborartory_10_material2_consume": 1.0,
+      "laborartory_10_material3": "silence_s_defense_tower:soul",
+      "laborartory_10_material3_consume": 2.0,
+      "laborartory_11_material3": "silence_s_defense_tower:precision_components_2",
+      "laborartory_11_material3_consume": 2.0,
+      "laborartory_12_material3": "silence_s_defense_tower:soul",
+      "laborartory_12_material3_consume": 2.0
+    },
+    "turrets_attack_targets": {
+      "turrets_attack_targets": [
+        "slime",
+        "phantom",
+        "hoglin",
+        "ghast"
+      ],
+      "non_attack_targets": [
+        "000"
+      ]
+    }
+  },
+  "cfg_sha256": {
+    "repo": "4014318d0dfbac0005ab56ef5c955b276d784fa9dd87b83e1397e664e3d312cf",
+    "test": "4014318d0dfbac0005ab56ef5c955b276d784fa9dd87b83e1397e664e3d312cf",
+    "mother": "4014318d0dfbac0005ab56ef5c955b276d784fa9dd87b83e1397e664e3d312cf"
+  },
+  "recipes": [
+    {
+      "id": "silence_s_defense_tower:acid_arrow_turret_level1_p",
+      "name": "酸蚀箭塔（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_arrow_turret_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:crossbow"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_1"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          "d": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "e": {
+            "item": "silence_s_defense_tower:acid_core_1"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:acid_arrow_turret_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_arrow_turret_level2_p",
+      "name": "酸蚀箭塔（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_arrow_turret_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:crossbow"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_2"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          "d": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "e": {
+            "item": "silence_s_defense_tower:acid_core_2"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:acid_arrow_turret_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_1",
+      "name": "酸蚀核心（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_core_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "aca",
+          "ada"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:glass"
+          },
+          "b": {
+            "item": "minecraft:slime_ball"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_1"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:glass_jar"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:acid_core_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_1",
+      "name": "酸蚀核心（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_core_211.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:acid_eater_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:acid_core_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_1",
+      "name": "酸蚀核心（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_core_212.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:dart_launcher_level2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:acid_core_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_2",
+      "name": "酸蚀核心（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_core_221.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:acid_eater_level2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:acid_core_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_2",
+      "name": "酸蚀核心（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_core_222.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:acid_mortar_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:acid_core_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_3",
+      "name": "酸蚀核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_core_231.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:acid_eater_level3_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:acid_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_3",
+      "name": "酸蚀核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_core_232.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:acid_robot_factory_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:acid_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_3",
+      "name": "酸蚀核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_core_233.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:acid_mortar_level2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:acid_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_eater_level1_p",
+      "name": "酸蚀炮台（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_eater_11.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:acid_core_1"
+          },
+          "d": {
+            "item": "minecraft:stone_bricks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:acid_eater_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_eater_level2_p",
+      "name": "酸蚀炮台（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_eater_21.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:acid_core_2"
+          },
+          "d": {
+            "item": "minecraft:stone_bricks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:acid_eater_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_eater_level3_p",
+      "name": "酸蚀炮台（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_eater_31.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:acid_core_3"
+          },
+          "d": {
+            "item": "minecraft:stone_bricks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:acid_eater_level3_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_mortar_level1_p",
+      "name": "酸蚀迫击炮（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_mortar_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "aca",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:copper_block"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:acid_core_2"
+          },
+          "d": {
+            "item": "minecraft:stone_bricks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:acid_mortar_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_mortar_level2_p",
+      "name": "酸蚀迫击炮（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/acid_mortar_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "aca",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:copper_block"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:acid_core_3"
+          },
+          "d": {
+            "item": "minecraft:stone_bricks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:acid_mortar_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:amethyst_armor_2",
+      "name": "紫水晶护甲（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/amethyst_armor_2.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:amethyst_armor_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_2"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:amethyst_armor_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:amethyst_cannon_p",
+      "name": "紫水晶加农炮",
+      "recipe": "data/silence_s_defense_tower/recipes/amethyst_cannon_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "aaa"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:smooth_basalt"
+          },
+          "b": {
+            "item": "minecraft:amethyst_block"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:nether_core_4"
+          },
+          "d": {
+            "item": "minecraft:calcite"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:amethyst_cannon_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:arrow_turret_leavl1_p",
+      "name": "箭塔（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/arrow_turret_11.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:crossbow"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_1"
+          },
+          "c": {
+            "item": "minecraft:barrel"
+          },
+          "d": {
+            "item": "minecraft:stone_slab"
+          },
+          "e": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:arrow_turret_leavl1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:arrow_turret_leavl2_p",
+      "name": "箭塔（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/arrow_turret_21.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:crossbow"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_2"
+          },
+          "c": {
+            "item": "minecraft:barrel"
+          },
+          "d": {
+            "item": "minecraft:stone_slab"
+          },
+          "e": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:arrow_turret_leavl2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:arrow_turret_leavl3_p",
+      "name": "箭塔（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/arrow_turret_3.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:crossbow"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          },
+          "c": {
+            "item": "minecraft:barrel"
+          },
+          "d": {
+            "item": "minecraft:stone_slab"
+          },
+          "e": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:arrow_turret_leavl3_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:arrow_turret_leavl4_p",
+      "name": "箭塔（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/arrow_turret_4.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:crossbow"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "c": {
+            "item": "minecraft:barrel"
+          },
+          "d": {
+            "item": "minecraft:stone_slab"
+          },
+          "e": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:arrow_turret_leavl4_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:ball_lightning_gennerator_p",
+      "name": "球状闪电发生器",
+      "recipe": "data/silence_s_defense_tower/recipes/ball_lightning_gennerator_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:planks"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "d": {
+            "item": "minecraft:deepslate_bricks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:ball_lightning_gennerator_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:black_hole_generator_p",
+      "name": "黑洞发生器",
+      "recipe": "data/silence_s_defense_tower/recipes/black_hole_generator_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "aba",
+          "cdc"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:obsidian"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "c": {
+            "item": "minecraft:polished_diorite"
+          },
+          "d": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:black_hole_generator_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:bronze_armor_1",
+      "name": "铜质护甲",
+      "recipe": "data/silence_s_defense_tower/recipes/bronze_armor_1.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "minecraft:copper_block"
+          },
+          {
+            "item": "minecraft:copper_ingot"
+          },
+          {
+            "item": "minecraft:copper_ingot"
+          },
+          {
+            "item": "minecraft:copper_ingot"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:bronze_armor_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:bronze_armor_2",
+      "name": "铜质护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/bronze_armor_2.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:bronze_armor_1"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:bronze_armor_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:bronze_armor_2",
+      "name": "铜质护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/bronze_armor_22.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:bronze_armor_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_1"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:bronze_armor_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:bronze_armor_3",
+      "name": "铜质尖刺护甲",
+      "recipe": "data/silence_s_defense_tower/recipes/bronze_spike_armor_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "aba",
+          " a "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:copper_ingot"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:bronze_armor_1"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:bronze_armor_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:bronze_armor_4",
+      "name": "铜质尖刺护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/bronze_spike_armor_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "aba",
+          " a "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:copper_ingot"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:bronze_armor_2"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:bronze_armor_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:bronze_armor_4",
+      "name": "铜质尖刺护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/bronze_spike_armor_3.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:bronze_armor_3"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:bronze_armor_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:bronze_armor_4",
+      "name": "铜质尖刺护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/bronze_spike_armor_32.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:bronze_armor_3"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_1"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:bronze_armor_4"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:candy_turret_level1_p",
+      "name": "糖果炮（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/candy_turret_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "eee"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:cake"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          },
+          "d": {
+            "item": "minecraft:honeycomb_block"
+          },
+          "e": {
+            "item": "minecraft:hay_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:candy_turret_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:candy_turret_level2_p",
+      "name": "糖果炮（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/candy_turret_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "eee"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:cake"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "d": {
+            "item": "minecraft:honeycomb_block"
+          },
+          "e": {
+            "item": "minecraft:hay_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:candy_turret_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:cannon_level1_p",
+      "name": "加农炮（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/cannon_11.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_block"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_1"
+          },
+          "c": {
+            "item": "minecraft:iron_ingot"
+          },
+          "d": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:cannon_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:cannon_level2_p",
+      "name": "加农炮（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/cannon_21.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_block"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_2"
+          },
+          "c": {
+            "item": "minecraft:iron_ingot"
+          },
+          "d": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:cannon_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:cannon_level3_p",
+      "name": "加农炮(3级)",
+      "recipe": "data/silence_s_defense_tower/recipes/cannon_31.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "dad"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_block"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          },
+          "c": {
+            "item": "minecraft:iron_ingot"
+          },
+          "d": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:cannon_level3_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:cannon_level4_p",
+      "name": "加农炮(4级)",
+      "recipe": "data/silence_s_defense_tower/recipes/cannon_41.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "dad"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_block"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "c": {
+            "item": "minecraft:iron_ingot"
+          },
+          "d": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:cannon_level4_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:cloud_jn_pfz",
+      "name": "浮云炮",
+      "recipe": "data/silence_s_defense_tower/recipes/cloud_cannon.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "aba",
+          "cdc"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:snow_block"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:nether_core_4"
+          },
+          "c": {
+            "item": "minecraft:smooth_quartz_stairs"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:cold_wind_2"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:cloud_jn_pfz",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:core_upgrade_table",
+      "name": "核心升级台",
+      "recipe": "data/silence_s_defense_tower/recipes/core_upgrade_table.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "aaa"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:stone_bricks"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "minecraft:crafting_table"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:core_upgrade_table",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:counter_1",
+      "name": "计数器",
+      "recipe": "data/silence_s_defense_tower/recipes/counter_1.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "minecraft:repeater"
+          },
+          {
+            "item": "minecraft:iron_ingot"
+          },
+          {
+            "item": "minecraft:redstone"
+          },
+          {
+            "item": "minecraft:redstone"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:counter_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:counter_2",
+      "name": "超级计数器",
+      "recipe": "data/silence_s_defense_tower/recipes/counter_2.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          },
+          {
+            "item": "silence_s_defense_tower:precision_components_1"
+          },
+          {
+            "item": "silence_s_defense_tower:precision_components_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:counter_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:dart_launcher_level1_p",
+      "name": "飞镖发射器（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/dart_launcher_11.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:crossbow"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_1"
+          },
+          "c": {
+            "tag": "minecraft:planks"
+          },
+          "d": {
+            "item": "minecraft:stone_slab"
+          },
+          "e": {
+            "item": "minecraft:stone"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:dart_launcher_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:dart_launcher_level2_p",
+      "name": "飞镖发射器（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/dart_launcher_21.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:crossbow"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:acid_core_1"
+          },
+          "c": {
+            "item": "minecraft:barrel"
+          },
+          "d": {
+            "item": "minecraft:stone_slab"
+          },
+          "e": {
+            "item": "minecraft:stone"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:dart_launcher_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:diamond_armor_1",
+      "name": "钻石护甲",
+      "recipe": "data/silence_s_defense_tower/recipes/diamond_armor_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "ab",
+          "bb"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_block"
+          },
+          "b": {
+            "item": "minecraft:diamond"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:diamond_armor_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:diamond_armor_2",
+      "name": "钻石护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/diamond_armor_2.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:diamond_armor_1"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:diamond_armor_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:diamond_armor_2",
+      "name": "钻石护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/diamond_armor_22.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:diamond_armor_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_1"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:diamond_armor_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_1",
+      "name": "驱动核心（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "bdb"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "minecraft:stone"
+          },
+          "c": {
+            "item": "minecraft:piston"
+          },
+          "d": {
+            "item": "minecraft:repeater"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_1",
+      "name": "驱动核心（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_111.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:cannon_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_1",
+      "name": "驱动核心（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_112.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:arrow_turret_leavl1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_1",
+      "name": "驱动核心（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_113.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:dart_launcher_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_2",
+      "name": "驱动核心（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_121.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:cannon_level2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_2",
+      "name": "驱动核心（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_122.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:ice_cannon_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_2",
+      "name": "驱动核心（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_123.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:arrow_turret_leavl2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_131.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:heavy_crossbow_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 2
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_1310.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:cannon_level3_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_1311.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:arrow_turret_leavl3_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_132.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:sentry_gun_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_133.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:submarine_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_134.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:candy_turret_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_135.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:giant_dart_launcher_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_136.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:miniature_electromagnetic_gun_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_137.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:biological_jamming_device_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_138.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:tesla_electric_tower"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_139.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:hurricane_ballista_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_141.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:ball_lightning_gennerator_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_1410.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:sentry_gun_level2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_1411.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:cannon_level4_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_1412.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:arrow_turret_leavl4_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_142.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:electromagnetic_gun_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_143.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:electromagnetic_railgun_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_144.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:black_hole_generator_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_145.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:bow_robot_factory_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_146.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:bomb_robot_factory_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_147.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:firework_launcher_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_148.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:giant_dart_launcher_level2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/driving_core_149.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:hurricane_ballista_level2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:electromagnetic_gun_p",
+      "name": "电磁炮",
+      "recipe": "data/silence_s_defense_tower/recipes/electromagnetic_gun_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "eee"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:planks"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "d": {
+            "item": "minecraft:copper_block"
+          },
+          "e": {
+            "item": "minecraft:deepslate_bricks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:electromagnetic_gun_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:electromagnetic_railgun_p",
+      "name": "电磁轨道炮",
+      "recipe": "data/silence_s_defense_tower/recipes/electromagnetic_railgun_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "eee"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "d": {
+            "item": "minecraft:copper_block"
+          },
+          "e": {
+            "item": "minecraft:deepslate_bricks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:electromagnetic_railgun_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:energized_enclosure_2",
+      "name": "通电外壳（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/energized_enclosure_2.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:energized_enclosure_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_2"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:energized_enclosure_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:firework_launcher_p",
+      "name": "烟花发射器",
+      "recipe": "data/silence_s_defense_tower/recipes/firework_launcher_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "cdc",
+          "efe"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:firework_rocket"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:large_fireworks_1"
+          },
+          "c": {
+            "tag": "minecraft:planks"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "e": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "f": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:firework_launcher_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:flesh_armor_2",
+      "name": "血肉之甲（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/flesh_armor_2.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:flesh_armor_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_2"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:flesh_armor_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:giant_dart_launcher_level1_p",
+      "name": "巨型飞镖发射器（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/giant_dart_launcher_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "cdc",
+          "eee"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "tag": "minecraft:planks"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          },
+          "e": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:giant_dart_launcher_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:giant_dart_launcher_level2_p",
+      "name": "巨型飞镖发射器（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/giant_dart_launcher_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "cde",
+          "fbf"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "tag": "minecraft:planks"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "e": {
+            "item": "silence_s_defense_tower:battery_1"
+          },
+          "f": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:giant_dart_launcher_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:glass_jar",
+      "name": "玻璃罐",
+      "recipe": "data/silence_s_defense_tower/recipes/glass_jar.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "a a",
+          "a a",
+          "aaa"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:glass"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:glass_jar",
+          "count": 8
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:gloves",
+      "name": "手套",
+      "recipe": "data/silence_s_defense_tower/recipes/glove.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "aba",
+          " c "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:leather"
+          },
+          "b": {
+            "item": "minecraft:chest"
+          },
+          "c": {
+            "item": "minecraft:iron_ingot"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:gloves",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:hammer",
+      "name": "拆解锤",
+      "recipe": "data/silence_s_defense_tower/recipes/hammer.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "aba",
+          " c "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:cobblestone"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "minecraft:stick"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:hammer",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:healing_pylon_level1_p",
+      "name": "治疗光塔（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/healing_pylon_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "aba",
+          "cdc"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:stick"
+          },
+          "b": {
+            "item": "minecraft:redstone_lamp"
+          },
+          "c": {
+            "tag": "minecraft:logs"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:driving_core_2"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:healing_pylon_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:healing_pylon_level2_p",
+      "name": "治疗光塔（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/healing_pylon_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "aba",
+          "cdc"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:stick"
+          },
+          "b": {
+            "item": "minecraft:redstone_lamp"
+          },
+          "c": {
+            "item": "minecraft:crimson_stem"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:nether_core_2"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:healing_pylon_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:healing_pylon_level3_p",
+      "name": "治疗光塔（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/healing_pylon_3.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "aba",
+          "cdc"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:stick"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:nether_core_3"
+          },
+          "c": {
+            "item": "minecraft:warped_stem"
+          },
+          "d": {
+            "item": "minecraft:ancient_debris"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:healing_pylon_level3_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:healing_pylon_level4_p",
+      "name": "治疗光塔（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/healing_pylon_4.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "bcb",
+          "bdb"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:nether_star"
+          },
+          "b": {
+            "item": "minecraft:prismarine_bricks"
+          },
+          "c": {
+            "item": "minecraft:soul_soil"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:healing_pylon_level3_p"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:healing_pylon_level4_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:heavy_armor_2",
+      "name": "重型护甲（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/heavy_armor_2.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:heavy_armor_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_2"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:heavy_armor_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:heavy_crossbow_p",
+      "name": "重弩",
+      "recipe": "data/silence_s_defense_tower/recipes/heavy_crossbow_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcc",
+          "aba"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:logs"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:heavy_crossbow_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_3",
+      "name": "下界核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hell_core_332.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:sticky_bomb_battery_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_3",
+      "name": "下界核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hell_core_333.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:tyrant_cannon_level1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_3",
+      "name": "下界核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hell_core_334.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:soul_ballista_1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_4",
+      "name": "下界核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hell_core_342.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:tyrant_cannon_level2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_4",
+      "name": "下界核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hell_core_343.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:amethyst_cannon_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_4",
+      "name": "下界核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hell_core_344.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:soul_ballista_2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:hellraiser_level_1_p",
+      "name": "地狱塔（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hellraiser_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "efe"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:nether_core_1"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          "e": {
+            "tag": "minecraft:planks"
+          },
+          "f": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:hellraiser_level_1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:hellraiser_level_2_p",
+      "name": "地狱塔（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hellraiser_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "efe"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:nether_core_2"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          "e": {
+            "tag": "minecraft:planks"
+          },
+          "f": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:hellraiser_level_2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:hellraiser_level_3_p",
+      "name": "地狱塔（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hellraiser_3.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "efe"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:nether_core_3"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          "e": {
+            "tag": "minecraft:planks"
+          },
+          "f": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:hellraiser_level_3_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:hellraiser_level_4_p",
+      "name": "地狱塔（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hellraiser_4.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "efe"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:wooden_slabs"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:nether_core_4"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          "e": {
+            "tag": "minecraft:planks"
+          },
+          "f": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:hellraiser_level_4_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:hurricane_ballista_level2_p",
+      "name": "风之弩（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hurricane_2pfhurricane_ballista_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:paper"
+          },
+          "b": {
+            "item": "minecraft:enchanted_book"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "d": {
+            "item": "minecraft:stone_bricks"
+          },
+          "e": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:hurricane_ballista_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:hurricane_ballista_level1_p",
+      "name": "风之弩（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/hurricane_ballista_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "ded"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:paper"
+          },
+          "b": {
+            "item": "minecraft:enchanted_book"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          },
+          "d": {
+            "item": "minecraft:stone_bricks"
+          },
+          "e": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:hurricane_ballista_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:ice_cannon_p",
+      "name": "冰雪加农炮",
+      "recipe": "data/silence_s_defense_tower/recipes/ice_cannon_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_block"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_2"
+          },
+          "c": {
+            "item": "minecraft:snow_block"
+          },
+          "d": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:ice_cannon_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:iron_armor_1",
+      "name": "铁质护甲",
+      "recipe": "data/silence_s_defense_tower/recipes/iron_armor_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "ab",
+          "bb"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_block"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:iron_armor_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:iron_armor_2",
+      "name": "铁质护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/iron_armor_2.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:iron_armor_1"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:iron_armor_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:iron_armor_2",
+      "name": "铁质护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/iron_armor_22.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:iron_armor_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_1"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:iron_armor_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:iron_armor_3",
+      "name": "铁质尖刺护甲",
+      "recipe": "data/silence_s_defense_tower/recipes/iron_spike_armor_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "aba",
+          " a "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:iron_armor_1"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:iron_armor_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:iron_armor_4",
+      "name": "铁质尖刺护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/iron_spike_armor_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "aba",
+          " a "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:iron_armor_2"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:iron_armor_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:iron_armor_4",
+      "name": "铁质尖刺护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/iron_spike_armor_3.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:iron_armor_3"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:iron_armor_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:iron_armor_4",
+      "name": "铁质尖刺护甲（已强化）",
+      "recipe": "data/silence_s_defense_tower/recipes/iron_spike_armor_32.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:iron_armor_3"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_1"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:iron_armor_4"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_2",
+      "name": "驱动核心（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_core_12.json",
+      "recipe_type": "silence_s_defense_tower:jei_core_upgrade_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_core_upgrade_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:driving_core_1"
+          },
+          {
+            "item": "minecraft:iron_ingot"
+          },
+          {
+            "item": "silence_s_defense_tower:pile_of_materials_1"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:driving_core_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_3",
+      "name": "驱动核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_core_13.json",
+      "recipe_type": "silence_s_defense_tower:jei_core_upgrade_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_core_upgrade_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:driving_core_1"
+          },
+          {
+            "item": "minecraft:iron_ingot"
+          },
+          {
+            "item": "silence_s_defense_tower:pile_of_materials_1"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:driving_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:driving_core_4",
+      "name": "驱动核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_core_14.json",
+      "recipe_type": "silence_s_defense_tower:jei_core_upgrade_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_core_upgrade_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:driving_core_1"
+          },
+          {
+            "item": "minecraft:iron_ingot"
+          },
+          {
+            "item": "silence_s_defense_tower:pile_of_materials_1"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:driving_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_2",
+      "name": "酸蚀核心（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_core_22.json",
+      "recipe_type": "silence_s_defense_tower:jei_core_upgrade_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_core_upgrade_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:acid_core_1"
+          },
+          {
+            "item": "minecraft:copper_ingot"
+          },
+          {
+            "item": "minecraft:slime_ball"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:acid_core_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_core_3",
+      "name": "酸蚀核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_core_23.json",
+      "recipe_type": "silence_s_defense_tower:jei_core_upgrade_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_core_upgrade_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:acid_core_1"
+          },
+          {
+            "item": "minecraft:copper_ingot"
+          },
+          {
+            "item": "minecraft:slime_ball"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:acid_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_2",
+      "name": "下界核心（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_core_32.json",
+      "recipe_type": "silence_s_defense_tower:jei_core_upgrade_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_core_upgrade_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:nether_core_1"
+          },
+          {
+            "item": "minecraft:gold_ingot"
+          },
+          {
+            "item": "silence_s_defense_tower:nether_wart_sauce"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:nether_core_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_3",
+      "name": "下界核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_core_33.json",
+      "recipe_type": "silence_s_defense_tower:jei_core_upgrade_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_core_upgrade_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:nether_core_1"
+          },
+          {
+            "item": "minecraft:gold_ingot"
+          },
+          {
+            "item": "silence_s_defense_tower:nether_wart_sauce"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:nether_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_4",
+      "name": "下界核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_core_34.json",
+      "recipe_type": "silence_s_defense_tower:jei_core_upgrade_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_core_upgrade_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:nether_core_1"
+          },
+          {
+            "item": "minecraft:gold_ingot"
+          },
+          {
+            "item": "silence_s_defense_tower:nether_wart_sauce"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:nether_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:heavy_armor_1",
+      "name": "重型护甲（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_laborartory_1.json",
+      "recipe_type": "silence_s_defense_tower:jei_laborartory",
+      "data": {
+        "type": "silence_s_defense_tower:jei_laborartory",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:iron_armor_1"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          },
+          {
+            "tag": "silence_s_defense_tower:jei_empty_tag"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:heavy_armor_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nano_armor",
+      "name": "纳米护甲",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_laborartory_2.json",
+      "recipe_type": "silence_s_defense_tower:jei_laborartory",
+      "data": {
+        "type": "silence_s_defense_tower:jei_laborartory",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:iron_armor_1"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_2"
+          },
+          {
+            "item": "silence_s_defense_tower:driving_core_3"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:nano_armor",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:thorn_armor_1",
+      "name": "荆棘护甲（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_laborartory_3.json",
+      "recipe_type": "silence_s_defense_tower:jei_laborartory",
+      "data": {
+        "type": "silence_s_defense_tower:jei_laborartory",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:iron_armor_1"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          },
+          {
+            "item": "minecraft:diamond"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:thorn_armor_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:flesh_armor_1",
+      "name": "血肉之甲（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_laborartory_4.json",
+      "recipe_type": "silence_s_defense_tower:jei_laborartory",
+      "data": {
+        "type": "silence_s_defense_tower:jei_laborartory",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:iron_armor_1"
+          },
+          {
+            "item": "minecraft:mutton"
+          },
+          {
+            "item": "silence_s_defense_tower:soul"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:flesh_armor_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:wither_armor_1",
+      "name": "凋零护甲（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_laborartory_5.json",
+      "recipe_type": "silence_s_defense_tower:jei_laborartory",
+      "data": {
+        "type": "silence_s_defense_tower:jei_laborartory",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:iron_armor_1"
+          },
+          {
+            "item": "minecraft:coal"
+          },
+          {
+            "item": "silence_s_defense_tower:soul"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:wither_armor_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:amethyst_armor_1",
+      "name": "紫水晶护甲（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_laborartory_6.json",
+      "recipe_type": "silence_s_defense_tower:jei_laborartory",
+      "data": {
+        "type": "silence_s_defense_tower:jei_laborartory",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:bronze_armor_1"
+          },
+          {
+            "item": "minecraft:amethyst_shard"
+          },
+          {
+            "item": "silence_s_defense_tower:soul"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:amethyst_armor_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul_eater_1",
+      "name": "噬魂甲（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_laborartory_7.json",
+      "recipe_type": "silence_s_defense_tower:jei_laborartory",
+      "data": {
+        "type": "silence_s_defense_tower:jei_laborartory",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:iron_armor_1"
+          },
+          {
+            "item": "silence_s_defense_tower:soul_container_1"
+          },
+          {
+            "item": "silence_s_defense_tower:soul"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:soul_eater_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:blind_box_1",
+      "name": "道具盲盒",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_laborartory_8.json",
+      "recipe_type": "silence_s_defense_tower:jei_laborartory",
+      "data": {
+        "type": "silence_s_defense_tower:jei_laborartory",
+        "ingredients": [
+          {
+            "tag": "silence_s_defense_tower:jei_empty_tag"
+          },
+          {
+            "tag": "silence_s_defense_tower:jei_empty_tag"
+          },
+          {
+            "item": "silence_s_defense_tower:precision_components_2"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:blind_box_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:blind_box_2",
+      "name": "下界道具盲盒",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_laborartory_9.json",
+      "recipe_type": "silence_s_defense_tower:jei_laborartory",
+      "data": {
+        "type": "silence_s_defense_tower:jei_laborartory",
+        "ingredients": [
+          {
+            "tag": "silence_s_defense_tower:jei_empty_tag"
+          },
+          {
+            "tag": "silence_s_defense_tower:jei_empty_tag"
+          },
+          {
+            "item": "silence_s_defense_tower:soul"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:blind_box_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:technology_damage_2",
+      "name": "科技：攻击力 (小)",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_research_table_1.json",
+      "recipe_type": "silence_s_defense_tower:jei_research_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_research_table",
+        "ingredients": [
+          {
+            "item": "minecraft:flint"
+          },
+          {
+            "item": "minecraft:iron_ingot"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:technology_damage_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:technology_speed_2",
+      "name": "科技：攻速 (小)",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_research_table_2.json",
+      "recipe_type": "silence_s_defense_tower:jei_research_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_research_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:precision_components_2"
+          },
+          {
+            "item": "minecraft:iron_ingot"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:technology_speed_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:technology_heal_2",
+      "name": "科技：治疗 (小)",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_research_table_3.json",
+      "recipe_type": "silence_s_defense_tower:jei_research_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_research_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:soul"
+          },
+          {
+            "item": "minecraft:gold_ingot"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:technology_heal_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:technology_health_2",
+      "name": "科技：生命值 (小)",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_research_table_4.json",
+      "recipe_type": "silence_s_defense_tower:jei_research_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_research_table",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:pile_of_materials_1"
+          },
+          {
+            "tag": "silence_s_defense_tower:jei_empty_tag"
+          },
+          {
+            "item": "silence_s_defense_tower:counter_1"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:technology_health_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:precision_components_1",
+      "name": "精密元件（小）",
+      "recipe": "data/silence_s_defense_tower/recipes/jei_research_table_5.json",
+      "recipe_type": "silence_s_defense_tower:jei_research_table",
+      "data": {
+        "type": "silence_s_defense_tower:jei_research_table",
+        "ingredients": [
+          {
+            "tag": "forge:props"
+          },
+          {
+            "tag": "silence_s_defense_tower:jei_empty_tag"
+          },
+          {
+            "tag": "silence_s_defense_tower:jei_empty_tag"
+          }
+        ],
+        "output": {
+          "item": "silence_s_defense_tower:precision_components_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:laborartory",
+      "name": "实验室",
+      "recipe": "data/silence_s_defense_tower/recipes/laboratory.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "aca",
+          "aba"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:warped_stem"
+          },
+          "b": {
+            "item": "minecraft:ancient_debris"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:laborartory",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:maintenance_station0",
+      "name": "维修站",
+      "recipe": "data/silence_s_defense_tower/recipes/maintenance_station.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "aba",
+          "aaa"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:stone_bricks"
+          },
+          "b": {
+            "item": "minecraft:blast_furnace"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:maintenance_station0",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:miniature_electromagnetic_gun_level1_p",
+      "name": "闪击炮（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/miniature_electromagnetic_gun_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcd",
+          "eee"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:planks"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          },
+          "d": {
+            "item": "minecraft:copper_block"
+          },
+          "e": {
+            "item": "minecraft:stone_bricks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:miniature_electromagnetic_gun_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:miniature_electromagnetic_gun_level2_p",
+      "name": "闪击炮（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/miniature_electromagnetic_gun_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aa",
+          "bc"
+        ],
+        "key": {
+          "a": {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:miniature_electromagnetic_gun_level1_p"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:impatient_soul_2"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:miniature_electromagnetic_gun_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_1",
+      "name": "下界核心（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/nether_core_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "aca",
+          "ada"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:netherrack"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_1"
+          },
+          "d": {
+            "item": "minecraft:brewing_stand"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_1",
+      "name": "下界核心（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/nether_core_311.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:hellraiser_level_1_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_2",
+      "name": "下界核心（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/nether_core_321.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:hellraiser_level_2_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_3",
+      "name": "下界核心（3级）",
+      "recipe": "data/silence_s_defense_tower/recipes/nether_core_331.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:hellraiser_level_3_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_3",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_core_4",
+      "name": "下界核心（4级）",
+      "recipe": "data/silence_s_defense_tower/recipes/nether_core_341.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:hellraiser_level_4_p"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_core_4",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_wart_jar",
+      "name": "下界疣罐",
+      "recipe": "data/silence_s_defense_tower/recipes/nether_wart_jar.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:glass_jar"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_wart_jar",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_wart_sauce",
+      "name": "下界疣菌酱",
+      "recipe": "data/silence_s_defense_tower/recipes/nether_wart_sauce_2.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:nether_wart_jar"
+          },
+          {
+            "item": "silence_s_defense_tower:nether_wart_jar"
+          },
+          {
+            "item": "minecraft:crimson_fungus"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_wart_sauce",
+          "count": 2
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:nether_wart_sauce",
+      "name": "下界疣菌酱",
+      "recipe": "data/silence_s_defense_tower/recipes/nether_wart_sauce_3.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:nether_wart_jar"
+          },
+          {
+            "item": "silence_s_defense_tower:nether_wart_jar"
+          },
+          {
+            "item": "silence_s_defense_tower:nether_wart_jar"
+          },
+          {
+            "item": "minecraft:mushroom_stew"
+          },
+          {
+            "item": "minecraft:blaze_powder"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:nether_wart_sauce",
+          "count": 3
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:pile_of_materials_1",
+      "name": "资源堆",
+      "recipe": "data/silence_s_defense_tower/recipes/pile_of_materials_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abb"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:diamond"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:pile_of_materials_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:pile_of_materials_1",
+      "name": "资源堆",
+      "recipe": "data/silence_s_defense_tower/recipes/pile_of_materialspf_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abb",
+          "c  "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:diamond"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "minecraft:emerald_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:pile_of_materials_1",
+          "count": 2
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:precision_components_2",
+      "name": "精密元件（大）",
+      "recipe": "data/silence_s_defense_tower/recipes/precision_components_2.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:precision_components_1"
+          },
+          {
+            "item": "silence_s_defense_tower:precision_components_1"
+          },
+          {
+            "item": "silence_s_defense_tower:precision_components_1"
+          },
+          {
+            "item": "silence_s_defense_tower:precision_components_1"
+          },
+          {
+            "item": "silence_s_defense_tower:precision_components_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:precision_components_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:reinforcement_materials_1",
+      "name": "强化材料（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/reinforcement_materials_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aab",
+          "bbc",
+          "c  "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:magma_cream"
+          },
+          "b": {
+            "item": "minecraft:copper_ingot"
+          },
+          "c": {
+            "item": "minecraft:iron_ingot"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:reinforcement_materials_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:reinforcement_materials_2",
+      "name": "强化材料（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/reinforcement_materials_2.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          },
+          {
+            "item": "minecraft:netherite_scrap"
+          },
+          {
+            "item": "minecraft:diamond"
+          },
+          {
+            "item": "minecraft:diamond"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:reinforcement_materials_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:research_table",
+      "name": "研究台",
+      "recipe": "data/silence_s_defense_tower/recipes/research_table.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "ada"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:planks"
+          },
+          "b": {
+            "item": "minecraft:green_wool"
+          },
+          "c": {
+            "item": "minecraft:bookshelf"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:research_table",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:bow_robot_factory_p",
+      "name": "弓箭机器人工厂",
+      "recipe": "data/silence_s_defense_tower/recipes/robot_barracks_type_a.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "aca",
+          "ada"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:planks"
+          },
+          "b": {
+            "item": "minecraft:fletching_table"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "d": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:bow_robot_factory_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:acid_robot_factory_p",
+      "name": "酸液机器人工厂",
+      "recipe": "data/silence_s_defense_tower/recipes/robot_barracks_type_c.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "aca",
+          "ada"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:planks"
+          },
+          "b": {
+            "item": "minecraft:cauldron"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:acid_core_3"
+          },
+          "d": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:acid_robot_factory_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:bomb_robot_factory",
+      "name": "炸弹机器人工厂",
+      "recipe": "data/silence_s_defense_tower/recipes/robot_barracks_type_s.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "acd",
+          "aea"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:planks"
+          },
+          "b": {
+            "item": "minecraft:blast_furnace"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:counter_1"
+          },
+          "e": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:bomb_robot_factory",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:sentry_gun_level1_p",
+      "name": "哨戒炮（1级） ",
+      "recipe": "data/silence_s_defense_tower/recipes/sentry_gun_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "aba",
+          "cdc"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          },
+          "c": {
+            "item": "minecraft:stone_bricks"
+          },
+          "d": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:sentry_gun_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:sentry_gun_level2_p",
+      "name": "哨戒炮（2级） ",
+      "recipe": "data/silence_s_defense_tower/recipes/sentry_gun_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "aba",
+          "cdc"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "silence_s_defense_tower:driving_core_4"
+          },
+          "c": {
+            "item": "minecraft:stone_bricks"
+          },
+          "d": {
+            "item": "minecraft:iron_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:sentry_gun_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:slime_armor_2",
+      "name": "史莱姆护甲（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/slime_armor_2.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:slime_armor_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_2"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:slime_armor_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_1.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:impatient_soul_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_10.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:cruel_soul_3"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_11.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:weeping_soul_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_12.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:weeping_soul_3"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_2.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:weeping_soul_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_3.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:impatient_soul_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_4.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:frightened_soul"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_5.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:cruel_soul_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_6.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:bloodthirsty_soul_1"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_7.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:bloodthirsty_soul_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_8.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:bloodthirsty_soul_3"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul",
+      "name": "灵魂",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_9.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:cruel_soul_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:soul",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul_ballista_1_p",
+      "name": "噬魂弩（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_ballista_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abb",
+          "cdc",
+          "efe"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:glowstone_dust"
+          },
+          "b": {
+            "item": "minecraft:warped_planks"
+          },
+          "c": {
+            "item": "minecraft:stripped_warped_stem"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:nether_core_3"
+          },
+          "e": {
+            "item": "minecraft:iron_block"
+          },
+          "f": {
+            "item": "minecraft:soul_soil"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:soul_ballista_1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul_ballista_2_p",
+      "name": "噬魂弩（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_ballista_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abb",
+          "cdc",
+          "efe"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:glowstone_dust"
+          },
+          "b": {
+            "item": "minecraft:warped_planks"
+          },
+          "c": {
+            "item": "minecraft:stripped_warped_stem"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:nether_core_4"
+          },
+          "e": {
+            "item": "minecraft:iron_block"
+          },
+          "f": {
+            "item": "minecraft:soul_soil"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:soul_ballista_2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:soul_eater_2",
+      "name": "噬魂甲（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/soul_eater_2.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:soul_eater_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_2"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:soul_eater_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:sticky_bomb_battery_p",
+      "name": "粘性炸弹炮台",
+      "recipe": "data/silence_s_defense_tower/recipes/sticky_bomb_battery_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "bcb",
+          " d "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_block"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:nether_core_3"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:tesla_electric_tower_base"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:sticky_bomb_battery_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:sturdy_part_1",
+      "name": "坚固零件（可合成）",
+      "recipe": "data/silence_s_defense_tower/recipes/sturdy_part.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:advanced_part"
+          },
+          {
+            "item": "silence_s_defense_tower:aluminum_part"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_1"
+          },
+          {
+            "item": "silence_s_defense_tower:advanced_part"
+          },
+          {
+            "item": "silence_s_defense_tower:aluminum_part"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:sturdy_part_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:submarine_p",
+      "name": "潜艇",
+      "recipe": "data/silence_s_defense_tower/recipes/submarine_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "cdb",
+          "aba"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:copper_ingot"
+          },
+          "b": {
+            "item": "minecraft:iron_block"
+          },
+          "c": {
+            "item": "minecraft:yellow_stained_glass_pane"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:submarine_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:technology_damage_1",
+      "name": "科技：攻击力",
+      "recipe": "data/silence_s_defense_tower/recipes/technology_attack_damage.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:technology_damage_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_damage_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_damage_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_damage_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:technology_damage_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:technology_speed_1",
+      "name": "科技：攻速 ",
+      "recipe": "data/silence_s_defense_tower/recipes/technology_attack_speed.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:technology_speed_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_speed_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_speed_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_speed_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:technology_speed_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:technology_heal_1",
+      "name": "科技：治疗",
+      "recipe": "data/silence_s_defense_tower/recipes/technology_heal.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:technology_heal_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_heal_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_heal_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_heal_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:technology_heal_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:technology_health_1",
+      "name": "科技：生命值",
+      "recipe": "data/silence_s_defense_tower/recipes/technology_health.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:technology_health_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_health_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_health_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_health_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:technology_health_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:technology_range_1",
+      "name": "科技：射程",
+      "recipe": "data/silence_s_defense_tower/recipes/technology_range.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:technology_range_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_range_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_range_2"
+          },
+          {
+            "item": "silence_s_defense_tower:technology_range_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:technology_range_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:tesla_electric_tower",
+      "name": "特斯拉电塔",
+      "recipe": "data/silence_s_defense_tower/recipes/tesla_electric_tower_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "bcb",
+          " d "
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_block"
+          },
+          "b": {
+            "item": "minecraft:iron_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          },
+          "d": {
+            "item": "silence_s_defense_tower:tesla_electric_tower_base"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:tesla_electric_tower",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:tesla_electric_tower_base",
+      "name": "特斯拉电塔底座",
+      "recipe": "data/silence_s_defense_tower/recipes/tesla_electric_tower_base.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "a a",
+          "aba"
+        ],
+        "key": {
+          "a": {
+            "tag": "minecraft:planks"
+          },
+          "b": {
+            "item": "minecraft:stick"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:tesla_electric_tower_base",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:thorn_armor_2",
+      "name": "荆棘护甲（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/thorn_armor_2.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:thorn_armor_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_2"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:thorn_armor_2"
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:thruster_1",
+      "name": "推进器",
+      "recipe": "data/silence_s_defense_tower/recipes/thruster_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          " a ",
+          "bcb",
+          "bdb"
+        ],
+        "key": {
+          "a": {
+            "item": "silence_s_defense_tower:large_fireworks_1"
+          },
+          "b": {
+            "item": "minecraft:copper_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_3"
+          },
+          "d": {
+            "item": "minecraft:tripwire_hook"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:thruster_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:multi_functional_thruster_1",
+      "name": "多功能推进器",
+      "recipe": "data/silence_s_defense_tower/recipes/thruster_2.json",
+      "recipe_type": "minecraft:crafting_shapeless",
+      "data": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "silence_s_defense_tower:thruster_1"
+          },
+          {
+            "item": "silence_s_defense_tower:welding_torch"
+          },
+          {
+            "item": "silence_s_defense_tower:reinforcement_materials_2"
+          }
+        ],
+        "result": {
+          "item": "silence_s_defense_tower:multi_functional_thruster_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:tyrant_cannon_level1_p",
+      "name": "暴君加农炮（1级）",
+      "recipe": "data/silence_s_defense_tower/recipes/tyrant_cannon_11.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded",
+          "fff"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:porkchop"
+          },
+          "b": {
+            "item": "minecraft:beef"
+          },
+          "c": {
+            "item": "minecraft:mutton"
+          },
+          "d": {
+            "item": "minecraft:bone"
+          },
+          "e": {
+            "item": "silence_s_defense_tower:nether_core_3"
+          },
+          "f": {
+            "item": "minecraft:bone_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:tyrant_cannon_level1_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:tyrant_cannon_level2_p",
+      "name": "暴君加农炮（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/tyrant_cannon_21.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          "ded",
+          "fff"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:porkchop"
+          },
+          "b": {
+            "item": "minecraft:beef"
+          },
+          "c": {
+            "item": "minecraft:mutton"
+          },
+          "d": {
+            "item": "minecraft:bone"
+          },
+          "e": {
+            "item": "silence_s_defense_tower:nether_core_4"
+          },
+          "f": {
+            "item": "minecraft:bone_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:tyrant_cannon_level2_p",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:variety_store",
+      "name": "杂货铺",
+      "recipe": "data/silence_s_defense_tower/recipes/variety_store.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aaa",
+          "bcb",
+          "ddd"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:paper"
+          },
+          "b": {
+            "item": "minecraft:stick"
+          },
+          "c": {
+            "tag": "minecraft:planks"
+          },
+          "d": {
+            "tag": "minecraft:logs"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:variety_store",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:vending_machine_1",
+      "name": "售货机",
+      "recipe": "data/silence_s_defense_tower/recipes/vending_machine.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "aba",
+          "cdc",
+          "eee"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:red_wool"
+          },
+          "b": {
+            "item": "minecraft:white_wool"
+          },
+          "c": {
+            "item": "minecraft:stick"
+          },
+          "d": {
+            "item": "minecraft:chest"
+          },
+          "e": {
+            "tag": "minecraft:planks"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:vending_machine_1",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:welding_torch",
+      "name": "简易的焊枪",
+      "recipe": "data/silence_s_defense_tower/recipes/welding_torch_1.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          " ab"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "minecraft:copper_ingot"
+          },
+          "c": {
+            "item": "minecraft:coal_block"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:welding_torch",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:welding_torch_2",
+      "name": "焊枪",
+      "recipe": "data/silence_s_defense_tower/recipes/welding_torch_2.json",
+      "recipe_type": "minecraft:crafting_shaped",
+      "data": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "pattern": [
+          "abc",
+          " ab"
+        ],
+        "key": {
+          "a": {
+            "item": "minecraft:iron_ingot"
+          },
+          "b": {
+            "item": "minecraft:copper_ingot"
+          },
+          "c": {
+            "item": "silence_s_defense_tower:driving_core_2"
+          }
+        },
+        "result": {
+          "item": "silence_s_defense_tower:welding_torch_2",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": "silence_s_defense_tower:wither_armor_2",
+      "name": "凋零护甲（2级）",
+      "recipe": "data/silence_s_defense_tower/recipes/wither_armor_2.json",
+      "recipe_type": "minecraft:smithing_transform",
+      "data": {
+        "type": "minecraft:smithing_transform",
+        "template": [],
+        "base": {
+          "item": "silence_s_defense_tower:wither_armor_1"
+        },
+        "addition": {
+          "item": "silence_s_defense_tower:reinforcement_materials_2"
+        },
+        "result": {
+          "item": "silence_s_defense_tower:wither_armor_2"
+        }
+      }
+    }
+  ],
+  "language_keys": {
+    "assets/silence_s_defense_tower/lang/en_us.json": 1041,
+    "assets/silence_s_defense_tower/lang/zh_cn.json": 1031
+  },
+  "installed_counts": {
+    "mother": 226,
+    "test": 229
+  },
+  "targets": [
+    {
+      "role": "test",
+      "path": "C:\\PCL 正式版 2.8.13\\.minecraft\\versions\\test\\config\\Silence's Turrets.toml",
+      "relative": "config/Silence's Turrets.toml",
+      "existed": false,
+      "after_sha256": "138cd7a1adaf6e7ba21f231f27bc6f6cd6d37eda395563b52e205b0562cad13b",
+      "final_sha256": "4014318d0dfbac0005ab56ef5c955b276d784fa9dd87b83e1397e664e3d312cf"
+    },
+    {
+      "role": "test",
+      "path": "C:\\PCL 正式版 2.8.13\\.minecraft\\versions\\test\\config\\openloader\\data\\svs\\data\\silence_s_defense_tower\\forge\\biome_modifier\\modified_amethyst_cannon_biome_modifier.json",
+      "relative": "config/openloader/data/svs/data/silence_s_defense_tower/forge/biome_modifier/modified_amethyst_cannon_biome_modifier.json",
+      "existed": false,
+      "after_sha256": "a3211af206885f55b3ca52f7fdddd27376c1a1c2c04eed164c5344d6d3047ac2",
+      "final_sha256": "a3211af206885f55b3ca52f7fdddd27376c1a1c2c04eed164c5344d6d3047ac2"
+    },
+    {
+      "role": "test",
+      "path": "C:\\PCL 正式版 2.8.13\\.minecraft\\versions\\test\\config\\openloader\\data\\svs\\data\\silence_s_defense_tower\\forge\\biome_modifier\\modified_firework_launcher_2_biome_modifier.json",
+      "relative": "config/openloader/data/svs/data/silence_s_defense_tower/forge/biome_modifier/modified_firework_launcher_2_biome_modifier.json",
+      "existed": false,
+      "after_sha256": "0be93b55dfdbde2609ce5fc740fb0742247d83eef2f705f11026745d09d54b21",
+      "final_sha256": "0be93b55dfdbde2609ce5fc740fb0742247d83eef2f705f11026745d09d54b21"
+    },
+    {
+      "role": "test",
+      "path": "C:\\PCL 正式版 2.8.13\\.minecraft\\versions\\test\\config\\openloader\\data\\svs\\data\\silence_s_defense_tower\\forge\\biome_modifier\\modified_sentry_gun_biome_modifier.json",
+      "relative": "config/openloader/data/svs/data/silence_s_defense_tower/forge/biome_modifier/modified_sentry_gun_biome_modifier.json",
+      "existed": false,
+      "after_sha256": "12635bd64dbdb97b5d574256cf17be034a1d524d248ca3763e7d9e2950ba104d",
+      "final_sha256": "12635bd64dbdb97b5d574256cf17be034a1d524d248ca3763e7d9e2950ba104d"
+    },
+    {
+      "role": "test",
+      "path": "C:\\PCL 正式版 2.8.13\\.minecraft\\versions\\test\\mods\\silence_s_turrets-2.14.0-forge-1.20.1.jar",
+      "relative": "mods/silence_s_turrets-2.14.0-forge-1.20.1.jar",
+      "existed": false,
+      "after_sha256": "92bbd59f16481e1fd41fa2f5c0e7cd4d1aa3ef9efd9f411792390172bf89071e",
+      "final_sha256": "92bbd59f16481e1fd41fa2f5c0e7cd4d1aa3ef9efd9f411792390172bf89071e"
+    },
+    {
+      "role": "mother",
+      "path": "E:\\SvS_整合包_副本\\config\\Silence's Turrets.toml",
+      "relative": "config/Silence's Turrets.toml",
+      "existed": false,
+      "after_sha256": "138cd7a1adaf6e7ba21f231f27bc6f6cd6d37eda395563b52e205b0562cad13b",
+      "final_sha256": "4014318d0dfbac0005ab56ef5c955b276d784fa9dd87b83e1397e664e3d312cf"
+    },
+    {
+      "role": "mother",
+      "path": "E:\\SvS_整合包_副本\\config\\openloader\\data\\svs\\data\\silence_s_defense_tower\\forge\\biome_modifier\\modified_amethyst_cannon_biome_modifier.json",
+      "relative": "config/openloader/data/svs/data/silence_s_defense_tower/forge/biome_modifier/modified_amethyst_cannon_biome_modifier.json",
+      "existed": false,
+      "after_sha256": "a3211af206885f55b3ca52f7fdddd27376c1a1c2c04eed164c5344d6d3047ac2",
+      "final_sha256": "a3211af206885f55b3ca52f7fdddd27376c1a1c2c04eed164c5344d6d3047ac2"
+    },
+    {
+      "role": "mother",
+      "path": "E:\\SvS_整合包_副本\\config\\openloader\\data\\svs\\data\\silence_s_defense_tower\\forge\\biome_modifier\\modified_firework_launcher_2_biome_modifier.json",
+      "relative": "config/openloader/data/svs/data/silence_s_defense_tower/forge/biome_modifier/modified_firework_launcher_2_biome_modifier.json",
+      "existed": false,
+      "after_sha256": "0be93b55dfdbde2609ce5fc740fb0742247d83eef2f705f11026745d09d54b21",
+      "final_sha256": "0be93b55dfdbde2609ce5fc740fb0742247d83eef2f705f11026745d09d54b21"
+    },
+    {
+      "role": "mother",
+      "path": "E:\\SvS_整合包_副本\\config\\openloader\\data\\svs\\data\\silence_s_defense_tower\\forge\\biome_modifier\\modified_sentry_gun_biome_modifier.json",
+      "relative": "config/openloader/data/svs/data/silence_s_defense_tower/forge/biome_modifier/modified_sentry_gun_biome_modifier.json",
+      "existed": false,
+      "after_sha256": "12635bd64dbdb97b5d574256cf17be034a1d524d248ca3763e7d9e2950ba104d",
+      "final_sha256": "12635bd64dbdb97b5d574256cf17be034a1d524d248ca3763e7d9e2950ba104d"
+    },
+    {
+      "role": "mother",
+      "path": "E:\\SvS_整合包_副本\\mods\\silence_s_turrets-2.14.0-forge-1.20.1.jar",
+      "relative": "mods/silence_s_turrets-2.14.0-forge-1.20.1.jar",
+      "existed": false,
+      "after_sha256": "92bbd59f16481e1fd41fa2f5c0e7cd4d1aa3ef9efd9f411792390172bf89071e",
+      "final_sha256": "92bbd59f16481e1fd41fa2f5c0e7cd4d1aa3ef9efd9f411792390172bf89071e"
+    },
+    {
+      "role": "repo",
+      "path": "E:\\mcmp\\config\\Silence's Turrets.toml",
+      "relative": "config/Silence's Turrets.toml",
+      "existed": false,
+      "after_sha256": "138cd7a1adaf6e7ba21f231f27bc6f6cd6d37eda395563b52e205b0562cad13b",
+      "final_sha256": "4014318d0dfbac0005ab56ef5c955b276d784fa9dd87b83e1397e664e3d312cf"
+    },
+    {
+      "role": "repo",
+      "path": "E:\\mcmp\\config\\openloader\\data\\svs\\data\\silence_s_defense_tower\\forge\\biome_modifier\\modified_amethyst_cannon_biome_modifier.json",
+      "relative": "config/openloader/data/svs/data/silence_s_defense_tower/forge/biome_modifier/modified_amethyst_cannon_biome_modifier.json",
+      "existed": false,
+      "after_sha256": "a3211af206885f55b3ca52f7fdddd27376c1a1c2c04eed164c5344d6d3047ac2",
+      "final_sha256": "a3211af206885f55b3ca52f7fdddd27376c1a1c2c04eed164c5344d6d3047ac2"
+    },
+    {
+      "role": "repo",
+      "path": "E:\\mcmp\\config\\openloader\\data\\svs\\data\\silence_s_defense_tower\\forge\\biome_modifier\\modified_firework_launcher_2_biome_modifier.json",
+      "relative": "config/openloader/data/svs/data/silence_s_defense_tower/forge/biome_modifier/modified_firework_launcher_2_biome_modifier.json",
+      "existed": false,
+      "after_sha256": "0be93b55dfdbde2609ce5fc740fb0742247d83eef2f705f11026745d09d54b21",
+      "final_sha256": "0be93b55dfdbde2609ce5fc740fb0742247d83eef2f705f11026745d09d54b21"
+    },
+    {
+      "role": "repo",
+      "path": "E:\\mcmp\\config\\openloader\\data\\svs\\data\\silence_s_defense_tower\\forge\\biome_modifier\\modified_sentry_gun_biome_modifier.json",
+      "relative": "config/openloader/data/svs/data/silence_s_defense_tower/forge/biome_modifier/modified_sentry_gun_biome_modifier.json",
+      "existed": false,
+      "after_sha256": "12635bd64dbdb97b5d574256cf17be034a1d524d248ca3763e7d9e2950ba104d",
+      "final_sha256": "12635bd64dbdb97b5d574256cf17be034a1d524d248ca3763e7d9e2950ba104d"
+    }
+  ],
+  "load_check": {
+    "tester_pid": 29024,
+    "no_world": true,
+    "fatal_count": 0,
+    "mod_related_errors": [],
+    "all_error_count": 184,
+    "new_error_messages_vs_previous_log": [],
+    "sound_and_client_atlas_initialized": true,
+    "functional_validation": false,
+    "latest_log_sha256": "5092aad77dd5c4da48b6cb6fceda5682bb767865d6c4b83f7fca6b3067f6bf63"
+  },
+  "protected_changes": []
+}

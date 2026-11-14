@@ -1,0 +1,6 @@
+# packwiz hashes refer to the exact bytes published by Git.
+index.toml text eol=lf
+pack.toml text eol=lf
+# Historical source copies retain the bytes recorded in audit evidence.
+docs/archive/2026-10-31_入口整理前/** -text whitespace=cr-at-eol
+docs/reference/** -text whitespace=cr-at-eol

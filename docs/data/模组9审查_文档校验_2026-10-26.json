@@ -1,0 +1,10 @@
+{
+  "new_reports": 4,
+  "new_report_local_links_checked": 20,
+  "broken_links": [],
+  "python_sources_compile": 4,
+  "existing_doc_files_updated": 15,
+  "candidate_rows": 7,
+  "external_hash_verification_passed": true,
+  "review_scope": "static only; no launch or installation"
+}

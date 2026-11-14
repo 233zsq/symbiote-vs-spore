@@ -1,0 +1,22 @@
+{
+  "id": "0004AFD351C0F701",
+  "title": "夺火整备 · 二选一",
+  "loot_size": 1,
+  "order_index": 8,
+  "rewards": [
+    {
+      "id": "000AB18AEE41A494",
+      "type": "item",
+      "item": "artifacts:obsidian_skull",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "0003FD276B29AFC8",
+      "type": "item",
+      "item": "minecraft:golden_apple",
+      "count": 4,
+      "team_reward": false
+    }
+  ]
+}

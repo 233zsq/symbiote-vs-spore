@@ -1,35 +1,96 @@
 {
   "id": "000C730AD7CF73D2",
   "filename": "souls",
-  "title": "可选·魂系讨伐",
+  "title": "&d猎场 · 旧王回响&r",
   "group": "000ACC9B9418BE4C",
-  "order_index": 12,
-  "icon": "slu:knight_soul",
+  "order_index": 17,
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/throne.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
   "default_hide_dependency_lines": false,
   "default_quest_shape": "circle",
   "quest_links": [],
   "quests": [
     {
-      "id": "00028684513FB985",
-      "title": "古达·自由讨伐",
+      "id": "00070DD0C70F5BC7",
+      "title": "旧王回响，名器与技法",
       "description": [
-        "【教学目标】把魂系收藏和主线战位分开。",
-        "【作业】有效击败该指定实体一次。",
-        "【提示】SLU禁止野刷，封印石不可用。当前尚无已验通的常规召唤渠道，待定点或有效随机券开放后挑战；本页可查，不要求管理命令游玩。薪王化身仅可选，不是终局。",
-        "【讲评】冒险者，名气不是这场战斗唯一的价值。"
+        "【战略目标】旧纪元英雄不在野外游荡。它们的回响属于独立召唤挑战，将王魂与武装带回主战场。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】封印石自然投放关闭，召唤入口未开放。这里不赠召唤物、不恢复野刷。",
+        "【掠夺战果】后续挑战保留真实胜利条件；入口开放后逐场进行。"
       ],
-      "icon": "slu:knight_soul",
-      "subtitle": "可选作业",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/command.png"
+        }
+      },
+      "subtitle": "独立目标",
       "x": 0.0,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00083052EF81988F"
+        "0000067095304813"
       ],
       "tasks": [
         {
-          "id": "00003600CC183ABD",
+          "id": "000BB47FCAE942A1",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0007D58B5532E9FA",
+      "title": "S20 · 古达",
+      "description": [
+        "【战略目标】古达是古战场回响中的第一种重兵器试炼。击败他与筹魂锻造古达斧枪是两件事，任务把战绩和兵器收藏各自记录。",
+        "【讨伐作业】完成古达的讨伐目标。",
+        "【情报与机制】先熟悉长兵器覆盖的正面区域，保留撤离余量。封印石与自然野刷在本包禁用，等待正式定点或随机券挑战入口。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "古战场受控入口。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "先熟悉长兵器覆盖的正面区域，保留撤离余量。封印石与自然野刷在本包禁用，等待正式定点或随机券挑战入口。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "slu:gundyr_axespear",
+      "subtitle": "古战场受控入口",
+      "x": 3.4,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00070DD0C70F5BC7"
+      ],
+      "tasks": [
+        {
+          "id": "0007244C42B5BEAA",
           "type": "kill",
           "entity": "slu:boss_gundyr",
           "value": 1L
@@ -37,43 +98,64 @@
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，名气不是这场战斗唯一的价值。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00068AC27CE44C3B"
+          "id": "00050EF9D216E7AF"
+        },
+        {
+          "type": "choice",
+          "table_id": 1835289380769457L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐技法 · 任选一",
+          "id": "000915EAD06220B6"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000767DD84857907",
-      "title": "亚尔特留斯·自由讨伐",
+      "id": "000032A08B566A20",
+      "title": "S21 · 狼骑亚尔特留斯",
       "description": [
-        "【教学目标】把魂系收藏和主线战位分开。",
-        "【作业】有效击败该指定实体一次。",
-        "【提示】SLU禁止野刷，封印石不可用。当前尚无已验通的常规召唤渠道，待定点或有效随机券开放后挑战；本页可查，不要求管理命令游玩。薪王化身仅可选，不是终局。",
-        "【讲评】冒险者，名气不是这场战斗唯一的价值。"
+        "【战略目标】狼骑亚尔特留斯属于魂系古战场，与主线Nightfall最后守望者并非同一场战斗。为了他的武艺与兵器出征，不需要把它变成主线门槛。",
+        "【讨伐作业】完成狼骑亚尔特留斯的讨伐目标。",
+        "【情报与机制】高速人形对手面前，先等完整收招再反击。入口开放后按实际挑战提示准备，别用相似姓名或另一实体代交。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "古战场受控入口。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "高速人形对手面前，先等完整收招再反击。入口开放后按实际挑战提示准备，别用相似姓名或另一实体代交。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
       ],
-      "icon": "slu:knight_soul",
-      "subtitle": "可选作业",
-      "x": 2.5,
+      "icon": "slu:artorias_soul",
+      "subtitle": "古战场受控入口",
+      "x": 6.8,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00083052EF81988F"
+        "0007D58B5532E9FA"
       ],
       "tasks": [
         {
-          "id": "000357DFE820A42D",
+          "id": "000856A769CB925A",
           "type": "kill",
           "entity": "slu:boss_artorias",
           "value": 1L
@@ -81,43 +163,64 @@
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，名气不是这场战斗唯一的价值。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000E94C42EFA1C29"
+          "id": "000ACC936F14F3C5"
+        },
+        {
+          "type": "choice",
+          "table_id": 1835289380769457L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐技法 · 任选一",
+          "id": "000D4C4D29ED99AA"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000ADF739A684DB5",
-      "title": "盖尔·自由讨伐",
+      "id": "000A7AEE62D64122",
+      "title": "S22 · 盖尔",
       "description": [
-        "【教学目标】把魂系收藏和主线战位分开。",
-        "【作业】有效击败该指定实体一次。",
-        "【提示】SLU禁止野刷，封印石不可用。当前尚无已验通的常规召唤渠道，待定点或有效随机券开放后挑战；本页可查，不要求管理命令游玩。薪王化身仅可选，不是终局。",
-        "【讲评】冒险者，名气不是这场战斗唯一的价值。"
+        "【战略目标】盖尔把古战场的残酷带入这次独立试炼。你可以在主线之外比较自己的武器熟练度，战后再决定是否筹备对应魂武。",
+        "【讨伐作业】完成盖尔的讨伐目标。",
+        "【情报与机制】长战需要稳定补给与耐力管理；不要在末段突然改变熟悉的打法。当前等待正式挑战入口，不要求管理命令游玩。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "古战场受控入口。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "长战需要稳定补给与耐力管理；不要在末段突然改变熟悉的打法。当前等待正式挑战入口，不要求管理命令游玩。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
       ],
-      "icon": "slu:knight_soul",
-      "subtitle": "可选作业",
-      "x": 5.0,
+      "icon": "slu:gael_soul",
+      "subtitle": "古战场受控入口",
+      "x": 10.2,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00083052EF81988F"
+        "000032A08B566A20"
       ],
       "tasks": [
         {
-          "id": "000D841CA54D6783",
+          "id": "000436B7515773BF",
           "type": "kill",
           "entity": "slu:boss_gael",
           "value": 1L
@@ -125,65 +228,187 @@
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，名气不是这场战斗唯一的价值。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000AAEA289AC26EC"
+          "id": "00057197CAD7F850"
+        },
+        {
+          "type": "choice",
+          "table_id": 1835289380769457L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐技法 · 任选一",
+          "id": "0002E49F0B51C996"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000DA688B3E03622",
-      "title": "薪王化身·自由讨伐",
+      "id": "000F9582DE8B0FDD",
+      "title": "S23 · 远古战士",
       "description": [
-        "【教学目标】把魂系收藏和主线战位分开。",
-        "【作业】有效击败该指定实体一次。",
-        "【提示】SLU禁止野刷，封印石不可用。当前尚无已验通的常规召唤渠道，待定点或有效随机券开放后挑战；本页可查，不要求管理命令游玩。薪王化身仅可选，不是终局。",
-        "【讲评】冒险者，名气不是这场战斗唯一的价值。"
+        "【战略目标】远古战士提供另一种古战场兵器与武技的参照。它占据独立席位，和主线诸王的征服进度分开，供你在有余力时挑战。",
+        "【讨伐作业】完成远古战士的讨伐目标。",
+        "【情报与机制】选择已经练熟的武器，先观察距离再尝试输出。魂类材料层级须按配方区分，基础魂不能当作高阶魂替代。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "古战场受控入口。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "选择已经练熟的武器，先观察距离再尝试输出。魂类材料层级须按配方区分，基础魂不能当作高阶魂替代。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
       ],
-      "icon": "slu:knight_soul",
-      "subtitle": "可选作业",
-      "x": 7.5,
+      "icon": "slu:ancient_warrior_helmet",
+      "subtitle": "古战场受控入口",
+      "x": 13.6,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "00083052EF81988F"
+        "000A7AEE62D64122"
       ],
       "tasks": [
         {
-          "id": "0007D6FF30F5DFDF",
+          "id": "000C2F659ABB52BD",
           "type": "kill",
-          "entity": "slu:boss_soul_of_cinder",
+          "entity": "slu:boss_ancient_warrior",
           "value": 1L
         }
       ],
       "rewards": [
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，名气不是这场战斗唯一的价值。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "xp",
+          "xp": 30,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0001B8BB903FEB79"
+          "id": "000FEDB471C97A79"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
+          "team_reward": false,
+          "id": "0000F012A4D53CCB"
+        },
+        {
+          "type": "choice",
+          "table_id": 1835289380769457L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐技法 · 任选一",
+          "id": "00054ED5E1A0B5BB"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
+    },
+    {
+      "id": "000AB2DE82890EB0",
+      "title": "S24 · 猎龙铠甲",
+      "description": [
+        "【战略目标】猎龙铠甲是古战场重装试炼的末席。它既不是新增主线封印，也不是一套击杀后自动穿上的护甲；战绩、魂武和套装各按实际取得记录。",
+        "【讨伐作业】完成猎龙铠甲的讨伐目标。",
+        "【情报与机制】对重甲长战先保住耐力与站位，再寻找适合当前武器的间隙。定点和随机券路线开放后再进行正式挑战。",
+        "【掠夺战果】收取原生战利品与本项所列补给。这场独立挑战不影响主线阶段晋升。",
+        "",
+        "&6远征情报&r",
+        "古战场受控入口。",
+        "独立挑战；不作为主线或四职业的毕业门槛。",
+        "",
+        "&6战前整备&r",
+        "对重甲长战先保住耐力与站位，再寻找适合当前武器的间隙。定点和随机券路线开放后再进行正式挑战。",
+        "",
+        "&6战利品与后续用途&r",
+        "这场胜利与装备持有分别记录。战利品按原生挑战结算，不以猜测填入必掉清单。",
+        "在物品页查看配方与用途；原生掉落由战场拾取，本任务的补给单独列在奖励区。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": "slu:dragon_slayer_helmet",
+      "subtitle": "古战场受控入口",
+      "x": 13.6,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000F9582DE8B0FDD"
+      ],
+      "tasks": [
+        {
+          "id": "00036FB15B4BA910",
+          "type": "kill",
+          "entity": "slu:boss_dragon_slayer_armour",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 30,
+          "team_reward": false,
+          "id": "00050D4AE4F23C74"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 48,
+          "team_reward": false,
+          "id": "000AB2CF6B9F9AC3"
+        },
+        {
+          "type": "choice",
+          "table_id": 1835289380769457L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐技法 · 任选一",
+          "id": "0003BB47B8C3E27F"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    }
+  ],
+  "images": [
+    {
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/throne.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "猎场 · 旧王回响"
+      ],
+      "click": "",
+      "dev": false,
+      "corner": false
     }
   ]
 }

@@ -80,6 +80,27 @@ function qv2Count(player, items) {
   for (let i = 0; i < items.length; i++) total += player.inventory.count(items[i])
   return total
 }
+function qv2CatalogCount(player, binding, cache) {
+  const ids = binding.quest_ids || []
+  if (!ids.length) return 0
+  // Several milestones share one ledger. Count each distinct acquisition once.
+  const key = ids[0] + '/' + ids.length
+  if (cache[key] !== undefined) return cache[key]
+  const team = QV2_TeamData.get(player)
+  const file = QV2_ServerQuestFile.INSTANCE
+  if (!team || !file) return 0
+  let count = 0
+  for (let i = 0; i < ids.length; i++) {
+    const quest = file.getQuest(file.getID(ids[i]))
+    if (quest && team.isCompleted(quest)) count++
+  }
+  cache[key] = count
+  return count
+}
+function qv2Fireseed(player) {
+  const raw = String(player.getPersistentData().getString('svs_fireseeds'))
+  return raw.split(';').some(entry => entry.indexOf('|') > 0)
+}
 function qv2Hunting(player) {
   try {
     return (QV2_Hunt && QV2_Hunt.isHunting(player.uuid)) ||
@@ -111,6 +132,9 @@ function qv2Audit() {
   let missing = [], id = '', binding = null
   if (!manifest || !file) return
   try {
+    // FTB may construct INSTANCE before it loads the quest graph on first login.
+    // Do not cache a failed audit (or skip pending-task setup) for that empty file.
+    if (manifest.quests.length && !file.getQuest(file.getID(manifest.quests[0]))) return
     for (let i = 0; i < manifest.quests.length; i++) {
       id = manifest.quests[i]
       if (!file.getQuest(file.getID(id))) missing.push('quest:' + id)
@@ -132,6 +156,12 @@ function qv2Audit() {
   } catch (e) { qv2Warn('audit', e) }
 }
 
+// Configure CustomTask counters before the first player's quest-file sync.
+// Tick audit remains a fallback if another mod initializes the file later.
+ServerEvents.loaded(event => {
+  if (!QV2_Audited) qv2Audit()
+})
+
 ServerEvents.tick(event => {
   QV2_Ticks++
   if (QV2_Ticks % 40 !== 0) return
@@ -143,6 +173,7 @@ ServerEvents.tick(event => {
     player = players.get(pi)
     if (!player || !player.level) continue
     rank = qv2Rank(player)
+    const catalogCounts = {}
     qv2Stages(player)
     village = false
     for (let bi = 0; bi < bindings.length; bi++) {
@@ -150,14 +181,17 @@ ServerEvents.tick(event => {
       if (binding.kind !== 'bridge') continue // pending goals deliberately have no completion path
       eligible = false
       try {
-        if (binding.target === 'bond') eligible = rank >= QV2_RANK[binding.stage]
-        else if (binding.target === 'fireseed') eligible = String(player.getPersistentData().getString('svs_fireseeds')).length > 0
+        if (binding.target === 'milestone') eligible = true // qv2Progress enforces all quest dependencies
+        else if (binding.target === 'bond') eligible = rank >= QV2_RANK[binding.stage]
+        else if (binding.target === 'fireseed') eligible = qv2Fireseed(player)
+        else if (binding.target === 'fireseed_ready') eligible = player.inventory.count('kubejs:fireseed_token') > 0 || qv2Fireseed(player)
         else if (binding.target === 'village') {
           village = qv2Village(player)
           eligible = village
         } else if (binding.target === 'dimension') eligible = qv2Dim(player.level) === binding.dimension
         else if (binding.target === 'armor_count') eligible = qv2Count(player, QV2_Armor) >= binding.count
         else if (binding.target === 'tag_count') eligible = player.inventory.count(Ingredient.of('#' + binding.tag)) >= binding.count
+        else if (binding.target === 'catalog_count') eligible = qv2CatalogCount(player, binding, catalogCounts) >= binding.count
         else if (binding.target === 'dragon_egg') {
           for (let ei = 0; ei < QV2_Eggs.length; ei++) {
             if (player.inventory.count('saintsdragons:' + QV2_Eggs[ei] + '_egg') > 0) eligible = true

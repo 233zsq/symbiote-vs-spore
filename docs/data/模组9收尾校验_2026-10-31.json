@@ -1,0 +1,224 @@
+{
+  "date": "2026-10-31",
+  "evidence": "E0 only",
+  "game_launched": false,
+  "instances": {
+    "test": {
+      "jar_count": 237,
+      "payload_files_match": 25,
+      "old_jar_count_preserved": 229,
+      "unrelated_config_resource_hashes_preserved": 2113,
+      "options_unchanged": true,
+      "saves_metadata_unchanged": true
+    },
+    "mother": {
+      "jar_count": 234,
+      "payload_files_match": 25,
+      "old_jar_count_preserved": 226,
+      "unrelated_config_resource_hashes_preserved": 1934,
+      "options_unchanged": true,
+      "saves_metadata_unchanged": true
+    }
+  },
+  "repo_protected_changes": [],
+  "repo_protected_files_checked": 95,
+  "packwiz_batch_entries_verified": 8,
+  "other_index_entries_preserved": 1803,
+  "mandatory_dependency_presence": [
+    {
+      "mod": "bookofdragons",
+      "dependency": "forge",
+      "range": "[47,)",
+      "present": true
+    },
+    {
+      "mod": "bookofdragons",
+      "dependency": "minecraft",
+      "range": "[1.20.1,1.21)",
+      "present": true
+    },
+    {
+      "mod": "bookofdragons",
+      "dependency": "azurelib",
+      "range": "[3.1.3,)",
+      "present": true
+    },
+    {
+      "mod": "celestisynth",
+      "dependency": "forge",
+      "range": "[47,)",
+      "present": true
+    },
+    {
+      "mod": "celestisynth",
+      "dependency": "minecraft",
+      "range": "[1.20,)",
+      "present": true
+    },
+    {
+      "mod": "celestisynth",
+      "dependency": "geckolib",
+      "range": "[4.4.2,)",
+      "present": true
+    },
+    {
+      "mod": "celestisynth",
+      "dependency": "playeranimator",
+      "range": "[1,)",
+      "present": true
+    },
+    {
+      "mod": "celestisynth_fix",
+      "dependency": "forge",
+      "range": "[47,)",
+      "present": true
+    },
+    {
+      "mod": "celestisynth_fix",
+      "dependency": "minecraft",
+      "range": "[1.20.1,1.21)",
+      "present": true
+    },
+    {
+      "mod": "hadean_breathe",
+      "dependency": "forge",
+      "range": "[47,)",
+      "present": true
+    },
+    {
+      "mod": "hadean_breathe",
+      "dependency": "minecraft",
+      "range": "[1.20.1,1.21)",
+      "present": true
+    },
+    {
+      "mod": "hadean_breathe",
+      "dependency": "vzling",
+      "range": "[0.98.8,)",
+      "present": true
+    },
+    {
+      "mod": "quest_enhance",
+      "dependency": "forge",
+      "range": "[47,)",
+      "present": true
+    },
+    {
+      "mod": "quest_enhance",
+      "dependency": "minecraft",
+      "range": "[1.20.1,1.21)",
+      "present": true
+    },
+    {
+      "mod": "quest_enhance",
+      "dependency": "ftbquests",
+      "range": "[2001.4.22,)",
+      "present": true
+    },
+    {
+      "mod": "flametalisman",
+      "dependency": "forge",
+      "range": "[47.4.0,48)",
+      "present": true
+    },
+    {
+      "mod": "flametalisman",
+      "dependency": "minecraft",
+      "range": "[1.20.1,1.20.2)",
+      "present": true
+    },
+    {
+      "mod": "azurelib",
+      "dependency": "forge",
+      "range": "[47.1,)",
+      "present": true
+    },
+    {
+      "mod": "azurelib",
+      "dependency": "minecraft",
+      "range": "[1.20.1, 1.20.2)",
+      "present": true
+    },
+    {
+      "mod": "vzling",
+      "dependency": "forge",
+      "range": "[47,)",
+      "present": true
+    },
+    {
+      "mod": "vzling",
+      "dependency": "minecraft",
+      "range": "[1.20.1,1.21)",
+      "present": true
+    }
+  ],
+  "dependency_class_checks": [
+    {
+      "file": "bookofdragons-1.31-1.20.1.jar",
+      "library": "azurelib-neo-1.20.1-3.1.3.jar",
+      "references": 39,
+      "missing": [],
+      "method_abi_and_gameplay_verified": false
+    },
+    {
+      "file": "hadean_breathe-0.25.7-1.20.1-forge.jar",
+      "library": "vzling-0.98.8-1.20.1-forge.jar",
+      "references": 42,
+      "missing": [],
+      "method_abi_and_gameplay_verified": false
+    }
+  ],
+  "freeze_static_checks": {
+    "structure_biomes": 8,
+    "feature_modifiers": 6,
+    "empty_tag": true,
+    "super_tier_policy": true,
+    "runtime_generation_unverified": true
+  },
+  "delivery_crc_hashes_match": true,
+  "quest_source_check": {
+    "chapters": 21,
+    "quests": 2491,
+    "counts": {
+      "start": 19,
+      "departure": 13,
+      "journey": 19,
+      "fire": 16,
+      "front": 23,
+      "counterattack": 34,
+      "military": 11,
+      "finale": 8,
+      "smith": 14,
+      "symbiote": 12,
+      "dragon": 29,
+      "hunts": 19,
+      "souls": 6,
+      "expedition": 16,
+      "collector": 27,
+      "arsenal_t2": 656,
+      "arsenal_t1": 1286,
+      "arsenal_t0": 64,
+      "curios": 201,
+      "manual": 14,
+      "cycles": 4
+    },
+    "pending": 8,
+    "custom_tasks": 87,
+    "files": 35,
+    "check": "PASS"
+  },
+  "new_local_links_checked": 131,
+  "broken_new_links": [],
+  "reference_copy_identical": true,
+  "archived_originals_verified": 16,
+  "python_source_checks": 6,
+  "status": "PASS",
+  "not_verified": [
+    "game loading",
+    "dedicated server loading",
+    "generation in new chunks",
+    "combat and riding",
+    "Quest Enhance save/network",
+    "multiplayer"
+  ]
+}

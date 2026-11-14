@@ -1,13 +1,13 @@
 """Reconcile offline evidence into the documentation catalogs and XLSX input.
 Does not write pack files, quest files, or collector tags. Python 3.12 stdlib only.
 """
-import collections, csv, hashlib, json, re, zipfile
+import argparse, collections, csv, datetime, hashlib, json, re, zipfile
 from pathlib import Path
 from order_docs_workbooks import apply_group_order
 
 ROOT=Path(__file__).absolute().parents[1]; DOCS=ROOT/'docs'; DATA=DOCS/'data'
 HIST=Path(r'E:\mcmp_test\i18n_work'); MOTHER=Path(r'E:\SvS_整合包_副本')
-DATE='2026-10-12'; HIST_LABEL='历史导出；文件时间2026-09-23，实际采样时刻未记录'
+DATE=None; HIST_LABEL='历史导出；文件时间2026-09-23，实际采样时刻未记录'
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,s):p.write_text(s.rstrip()+'\n',encoding='utf-8')
 def clean(v):return str(v or '').replace('|','／').replace('\n',' ').strip()
@@ -22,7 +22,11 @@ def num(x):
     except (TypeError,ValueError):return None
 
 def main():
+    global DOCS,DATA,DATE
+    ap=argparse.ArgumentParser();ap.add_argument('--docs-root',type=Path,default=ROOT/'docs');args=ap.parse_args()
+    DOCS=args.docs_root.resolve();DATA=DOCS/'data'
     d=read(DATA/'现版资料索引.json'); resources=d['resources']; models=set(d['model_item_ids'])
+    DATE=datetime.date.fromisoformat(d['as_of']).isoformat()
     mods={m['id']:j for j in d['mods'] for m in j['declarations']}; lang=d['translations']
     old=read(ROOT/'backups/docs_refresh_20261012/old_workbooks.json'); fallback={}
     for b in old.values():
@@ -98,7 +102,7 @@ def main():
         elif ns=='slu':purpose='Ⅳ章池候选；人选/数量待批'
         elif id in ('bloodandmadness:father_gascoigne','bloodandmadness:gascoigne_beast'):purpose='Ⅲ完整变身战候选；仅判终段'
         elif ns in ('nightfall_invade','woc_remastered'):purpose='已获准提替换；名单看样后定'
-        elif id=='jerotesvillage:sediment_lord':purpose='Ⅱ二轮代表战候选；原生入口/重试待核'
+        elif id=='jerotesvillage:sediment_lord':purpose='支线二轮候选；不再卡主线；入口/重试待核'
         warnings=[]
         if 'gascoigne' in id:warnings.append('人形移除不算完整胜利')
         if e and e['category']=='MISC':warnings.append('MISC不表示无战斗/非Boss')
@@ -159,7 +163,7 @@ def main():
     for j in d['mods']:
         nslist=[m['id'] for m in j['declarations']];dep=[x for x in j['dependencies'] if x.get('mandatory')]
         mr.append([classification(j),j['file'],' / '.join(nslist),' / '.join(m['name'] for m in j['declarations']),' / '.join(m['version'] for m in j['declarations']),j['role']+'；作者简介：'+j['description'],sum(w['namespace'] in nslist for w in weapons),sum(e['namespace'] in nslist for e in entities),'；'.join(x['modId']+' '+str(x.get('versionRange','')) for x in dep),j['license'],'一致' if j['same_test'] else '差异',j['sha256'],j['file']+'!/META-INF/mods.toml + MANIFEST.MF；用途：主线深化研究§七'])
-    ms=sheet('全模组清单','现版模组文件清单 · 215 jar / 221顶层声明',DATE+'母本/test逐jar SHA-256一致；无新增运行时采样。分类为制作索引，license不是分发许可结论。',['制作分类','jar文件名','顶层modId','显示名称','声明版本','任务角色与功能简介','历史武器数','历史实体数','mandatory依赖声明','license原声明','母本/test','SHA-256','依据'],mr,[30,65,40,36,27,70,16,16,72,40,18,70,65],[6,7])
+    ms=sheet('全模组清单',f"现版模组文件清单 · {len(d['mods'])} jar / {sum(len(j['declarations']) for j in d['mods'])}顶层声明",DATE+f"母本静态资源；共同JAR哈希差异{sum(not j['same_test'] for j in d['mods'])}；test独有{len(d['jar_difference']['test_only'])}；无运行时采样。license不是分发许可结论。",['制作分类','jar文件名','顶层modId','显示名称','声明版本','任务角色与功能简介','历史武器数','历史实体数','mandatory依赖声明','license原声明','母本/test','SHA-256','依据'],mr,[30,65,40,36,27,70,16,16,72,40,18,70,65],[6,7])
     roles=sorted(set(r[0] for r in mr));summaryrows=[[role,None] for role in roles]
     summaryform={f'B{i+5}':f'=COUNTIF(全模组清单!$A$5:$A${len(mr)+4},A{i+5})' for i in range(len(roles))}
     books.append({'file':'Symbiote vs Spore 全模组清单.xlsx','sheets':[ms,sheet('用途统计','按制作用途统计 · 不做S–F强度或重要性榜',DATE+'统计以顶层jar为单位；分类来自主线深化研究§七的用途归纳。',['用途','jar数'],summaryrows,[80,20],[1],summaryform)]})
@@ -174,11 +178,19 @@ def main():
     write(DOCS/'武器目录.md','# 武器与战斗工具目录（离线更新）\n\n> '+note+'。完整列与取得线索见 [武器表](SvS_武器表.xlsx)，统一源 [制作资料汇总](data/制作资料汇总.json)。\n\n## 一、用途与口径\n\n本表有攻击属性的历史条目 '+str(len(weapons))+' 件，包含剑、工具和部分远程物品；不是已确认现版武器注册总数。攻击列为主手属性加值，代理值仅是“攻击加值×(4+攻速修正)”的旧口径，不能替代史诗战斗连段、命中率、技能或真实输出。旧 `全量武器表.md` 是收藏家生成器冻结输入，与本表用途不同；本轮不重跑标签、不更换生成器输入、不改变1291件分档。依据：《数据与采样说明》§二；《E4_收藏家标签差集清单》§一/二。\n\n## 二、历史数值与现版证据\n\n'+table(['命名空间','ID','现版名称','攻击加值（历史）','攻速修正（历史）','EF历史标记','现版资源证据','状态'],[[w['namespace'],w['id'],w['name'],w['damage_add'],w['speed_add'],'历史命中' if w['historical_ef'] else '未命中',w['static'],w['status']] for w in weapons]))
     write(DOCS/'敌对生物表.md','# 敌对注册类别目录（离线更新）\n\n> '+note+'。完整来源、判杀进度及EF资源见 [敌对生物表](SvS_敌对生物表.xlsx)。\n\n## 一、分类口径\n\n沿用历史导出的 MONSTER、infected、organoid、experiments 四类，共 '+str(catalog['counts']['hostile_bucket'])+' 条；不从血量推断Boss，不从注册类别推断实战仇恨。CREATURE/MISC等归其他类别目录，仍可能含敌人。依据：dump_entities.json category字段、《数据与采样说明》§二。\n\n## 二、目录\n\n'+table(['命名空间','ID','名称','注册类别','生命（历史）','攻击（历史）','护甲（历史）'],[[e['namespace'],e['id'],e['name'],e['category'],e['hp'],e['attack'],e['armor']] for e in entities if e['hostile_bucket']]))
     write(DOCS/'中立及其他类别目录.md','# 其他注册类别目录（原“中立”表）\n\n> '+note+'。完整来源见 [原中立生物表](SvS_中立生物表.xlsx)，文件名保留兼容旧链接。\n\n## 一、分类口径\n\n共 '+str(catalog['counts']['other_category'])+' 条，排除敌对目录的四类；CREATURE、MISC、水生等是注册分类，不能承诺中立。例如 Nightfall Scarlet Hunter 为 MISC，Jerotes部分战斗生物为 CREATURE。依据：dump_entities.json；《主线深化研究》§二E06/四。\n\n## 二、目录\n\n'+table(['命名空间','ID','名称','注册类别','生命（历史）','攻击（历史）','护甲（历史）'],[[e['namespace'],e['id'],e['name'],e['category'],e['hp'],e['attack'],e['armor']] for e in entities if not e['hostile_bucket']]))
-    write(DOCS/'数值表_Boss.md','# Boss候选与表现评审入口\n\n> '+DATE+'离线整理。原“血量≥100”表移为工作簿独立页，旧文留在 archive/2026-10-12_资料更新前。本页不把HP筛选当Boss判定。统一源：data/制作资料汇总.json；完整资源/进度证据：[Boss更新表](SvS_Boss表_更新版.xlsx)。旧Boss原表仍被WPS占用，本轮不覆盖。\n\n## 一、筛选与授权边界\n\n候选共 '+str(len(bosses))+' 项（包括2项函数场次），来自“Boss Checklist支持ID∩历史实体”、SLU boss_命名池、《任务参考研究》E-二轮及《主线深化研究》§二/四的明确研究对象；这不是全Boss注册统计，也不证明每项已完整可玩。模型与动作优先→特效技能→入口重试/终段胜利→数值。所有表现结论仍待用户看样。被诅咒者与斯库拉仅比较候选；薪王化身已被用户否决作为终局；Nightfall/WOC只获准提替换方案。血源人形消失不代表胜利；FA两场不是普通实体。依据：《主线深化研究》§四、《任务设计总稿》终局候选部分、用户本次历次反馈。\n\n## 二、候选登记\n\n'+table(['命名空间','ID/场次','名称','设计用途','表现评审','判杀线索','风险'],[[b['namespace'],b['id'],b['name'],b['purpose'],b['model_action_review'],'、'.join(b['kill_advancements']) or '最终成功待核',b['warning'] or '入口/重试/多人待核'] for b in bosses])+'\n\n## 三、数值使用\n\n工作簿保留历史属性但不按血量排序选主线；“高血量实体非Boss判定”页 '+str(len(highhp))+' 条含测试/部件/宠物。缺属性留空，不填0。本轮未生成战斗评分、Tier表或当前强度结论。（依据：《数据与采样说明》§二/三；《主线深化研究》§四。）')
-    oldmod=(DOCS/'archive/2026-10-12_资料更新前/模组清单.md').read_text(encoding='utf-8')
-    section=oldmod.split('## 二、重要内容怎样服务本包',1)[1].split('## 三、',1)[0]
-    section=section.replace('任务SNBT只由用户编辑器生成','任务SNBT程序生成/校验已获用户授权；当前重写暂停').replace('M2检测替代方案待批','任务v2已加载，功能尚待验证')
-    write(DOCS/'模组清单.md','# Symbiote vs Spore 现版模组清单\n\n> '+DATE+'离线盘点：母本与test各 **215个顶层jar / 221个顶层mod声明**，文件名集合相同、逐文件SHA-256全部一致；不包含完整运行时嵌套mod列表，也不代表配置逐项一致。来源：data/现版资料索引.json mods/jar_difference；每行jar元数据与manifest。\n\n## 一、口径与版本边界\n\nEF固定20.14.17；文件名版本和声明版本不同均保留。无暮色森林、Alex’s Caves、souls_like_bosses的顶层jar；支持包里的旧引用不等于安装。当前任务重写暂停，禁止启动游戏做采样；优化合入审查的建议不等于已安装。license列仅转录元数据，不等于分发授权。完整依赖声明、SHA与用途可筛选于 [全模组工作簿](Symbiote%20vs%20Spore%20全模组清单.xlsx)。依据：HANDOVER§〇/四、用户最新指示、逐jar元数据。\n\n## 二、重要内容怎样服务本包'+section+'## 三、全部jar及元数据\n\n'+table(['#','jar文件名','modId @ 声明版本','任务角色/用途','license原声明'],[[i+1,j['file'],'；'.join(m['id']+' @ '+m['version'] for m in j['declarations']),j['role'],j['license']] for i,j in enumerate(d['mods'])]))
+    write(DOCS/'数值表_Boss.md','# Boss候选与表现评审入口\n\n> '+DATE+'离线整理。原“血量≥100”表移为工作簿独立页，旧文留在 archive/2026-10-12_资料更新前。本页不把HP筛选当Boss判定。统一源：data/制作资料汇总.json；完整资源/进度证据：[Boss更新表](SvS_Boss表_更新版.xlsx)。旧Boss原表作为历史参照保留，当前入口为更新版。\n\n## 一、筛选与授权边界\n\n候选共 '+str(len(bosses))+' 项（包括2项函数场次），来自“Boss Checklist支持ID∩历史实体”、SLU boss_命名池、《任务参考研究》E-二轮及《主线深化研究》§二/四的明确研究对象；这不是全Boss注册统计，也不证明每项已完整可玩。模型与动作优先→特效技能→入口重试/终段胜利→数值。所有表现结论仍待用户看样。被诅咒者与斯库拉仅比较候选；薪王化身已被用户否决作为终局；Nightfall/WOC只获准提替换方案。血源人形消失不代表胜利；FA两场不是普通实体。依据：《主线深化研究》§四、《任务设计总稿》终局候选部分、用户本次历次反馈。\n\n## 二、候选登记\n\n'+table(['命名空间','ID/场次','名称','设计用途','表现评审','判杀线索','风险'],[[b['namespace'],b['id'],b['name'],b['purpose'],b['model_action_review'],'、'.join(b['kill_advancements']) or '最终成功待核',b['warning'] or '入口/重试/多人待核'] for b in bosses])+'\n\n## 三、数值使用\n\n工作簿保留历史属性但不按血量排序选主线；“高血量实体非Boss判定”页 '+str(len(highhp))+' 条含测试/部件/宠物。缺属性留空，不填0。本轮未生成战斗评分、Tier表或当前强度结论。（依据：《数据与采样说明》§二/三；《主线深化研究》§四。）')
+    # Preserve the maintained narrative/decisions; regenerate only the data table.
+    current=(DOCS/'模组清单.md').read_text(encoding='utf-8')
+    prefix=current.split('## 三、',1)[0]
+    prefix=prefix.replace('SNBT仅用户编辑器生成','SNBT程序生成/校验已授权；当前重写暂停')
+    prefix=re.sub(r'\n> \*\*最新静态盘点[^\n]*\n','\n',prefix)
+    fresh=(f"\n> **最新静态盘点（{DATE}）：** 母本{len(d['mods'])}个顶层JAR、"
+           f"{sum(len(j['declarations']) for j in d['mods'])}个顶层声明；"
+           f"test独有{len(d['jar_difference']['test_only'])}个JAR，共同文件哈希差异"
+           f"{sum(not j['same_test'] for j in d['mods'])}。本页表格与六表同源；"
+           "下列10-12/14/15段落是历史批次记录；未新增运行时采样。\n")
+    title,_,rest=prefix.partition('\n')
+    write(DOCS/'模组清单.md',title+'\n'+fresh+rest+'## 三、全部jar及元数据\n\n'+table(['#','jar文件名','modId @ 声明版本','任务角色/用途','license原声明'],[[i+1,j['file'],'；'.join(m['id']+' @ '+m['version'] for m in j['declarations']),j['role'],j['license']] for i,j in enumerate(d['mods'])]))
     # Structure index keeps all providers, not a claimed final registry order.
     sr=[r for r in resources if r['kind'] in ('structure','structure_set')]
     with (DATA/'结构资源索引.csv').open('w',encoding='utf-8-sig',newline='') as f:

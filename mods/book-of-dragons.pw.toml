@@ -1,0 +1,13 @@
+name = "Book of Dragons"
+filename = "bookofdragons-1.31-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/7870/334/bookofdragons-1.31-1.20.1.jar"
+hash-format = "sha512"
+hash = "0d03c814a4f3acd62039063fa57956ea442ff96981e9e6f091876e1eabf80caa9ec9fccbfc1acdbd9c458cea5c16c8118ea7dbeb37b30f4557348a6d58855ba2"
+
+[update]
+[update.curseforge]
+file-id = 7870334
+project-id = 1413424

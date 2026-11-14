@@ -1,35 +1,50 @@
 {
   "id": "000F3F9A50F31BF5",
   "filename": "dragon",
-  "title": "狩龙人·与龙同行",
+  "title": "&b狩龙人 · 制空龙骑&r",
   "group": "000111B6DD2DC8BD",
-  "order_index": 8,
-  "icon": "minecraft:dragon_egg",
+  "order_index": 10,
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/dragon.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
   "default_hide_dependency_lines": false,
   "default_quest_shape": "circle",
   "quest_links": [],
   "quests": [
     {
-      "id": "0007BC914D26EADA",
+      "id": "000B30965EA23E9E",
       "title": "先学相处",
       "description": [
-        "【教学目标】认识伙伴与讨伐两条龙线",
-        "【作业】阅读驯服、补给、侦察、龙材的循环",
-        "【提示】不要求收齐八种；驯服条件查本包原生指南",
-        "【讲评】冒险者，先认清对方，再决定怎样接近。"
+        "【战略目标】认识伙伴与讨伐两条龙线",
+        "【讨伐作业】阅读本项原生操作说明，完成练习后自行确认；不作为自动实操证明。",
+        "【情报与机制】不要求收齐八种；驯服条件查本包原生指南",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/dragon.png"
+        }
+      },
+      "subtitle": "独立目标",
       "x": 0.0,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000D7BD903B53355"
+        "0006E6788B8A8515"
       ],
       "tasks": [
         {
-          "id": "00022CF6A13EC2AB",
+          "id": "0008F84610F21D9D",
           "type": "checkmark"
         }
       ],
@@ -38,46 +53,43 @@
           "type": "xp",
           "xp": 5,
           "team_reward": false,
-          "id": "0000B42ABF26832D"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，先认清对方，再决定怎样接近。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000BFDA870295ED4"
+          "id": "000CD8CCF252AC3E"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000E390A912FF12C",
+      "id": "0008F7988E56303B",
       "title": "地标不都是巢",
       "description": [
-        "【教学目标】区分四种实际地标",
-        "【作业】阅读两座roost、ivy_house、draconian_nucleus索引",
-        "【提示】不承诺每处都有可驯龙；具体线索尚待测",
-        "【讲评】冒险者，看懂地标，少走无谓的路。"
+        "【战略目标】区分四种实际地标",
+        "【讨伐作业】阅读本项原生操作说明，完成练习后自行确认；不作为自动实操证明。",
+        "【情报与机制】不承诺每处都有可驯龙；具体线索尚待测",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "",
-      "x": 2.5,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/dragon.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0007BC914D26EADA"
+        "000B30965EA23E9E"
       ],
       "tasks": [
         {
-          "id": "000435036AB3E5F5",
+          "id": "000FA045A293A8A1",
           "type": "checkmark"
         }
       ],
@@ -86,46 +98,43 @@
           "type": "xp",
           "xp": 5,
           "team_reward": false,
-          "id": "0007CE1966009157"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，看懂地标，少走无谓的路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000D77AEFC5E9EF2"
+          "id": "0007B0D7485C3AB9"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000CDA8E88F43885",
+      "id": "000A37CF486DF852",
       "title": "驯服前清单",
       "description": [
-        "【教学目标】根据龙种准备接近方式",
-        "【作业】选一种龙，查原生指南的食物/交互条件并确认准备",
-        "【提示】自报；不能把任意生肉当八种龙通用驯服物",
-        "【讲评】冒险者，准备是尊重，也是保护自己。"
+        "【战略目标】根据龙种准备接近方式",
+        "【讨伐作业】阅读本项原生操作说明，完成练习后自行确认；不作为自动实操证明。",
+        "【情报与机制】自报；不能把任意生肉当八种龙通用驯服物",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "",
-      "x": 5.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/dragon.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 6.8,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0007BC914D26EADA"
+        "000B30965EA23E9E"
       ],
       "tasks": [
         {
-          "id": "000653AC904BDADA",
+          "id": "00075975B35B7513",
           "type": "checkmark"
         }
       ],
@@ -134,449 +143,376 @@
           "type": "xp",
           "xp": 5,
           "team_reward": false,
-          "id": "000D962F57685560"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，准备是尊重，也是保护自己。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0000F97DE54AB352"
+          "id": "000E2023A8C6E310"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000CA98EB7C01418",
+      "id": "000B19213A2A8E83",
       "title": "伙伴·raevyx",
       "description": [
-        "【教学目标】让原生驯服事实留下记录。",
-        "【作业】取得该龙种的原生驯服进度。",
-        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
-        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+        "【战略目标】让原生驯服事实留下记录。",
+        "【讨伐作业】取得该龙种的原生驯服进度。",
+        "【情报与机制】八种任选一种即可继续，驯服方法按对应龙种指南；任务不赠龙，不改变所有权。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 7.5,
-      "y": 0.0,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 4.2,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000CDA8E88F43885",
-        "0004A9329C27BC37"
+        "0003749724E9F5F2",
+        "0001C6A6EC6A6FCD"
       ],
       "tasks": [
         {
-          "id": "000BB1BAC3BD44E8",
+          "id": "000B8CFDF21C10E8",
           "type": "advancement",
           "advancement": "saintsdragons:tame_raevyx"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00059846B4245DEC"
-        }
-      ],
+      "rewards": [],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000F237194E39C63",
+      "id": "000747DCFC4E88B5",
       "title": "伙伴·cindervane",
       "description": [
-        "【教学目标】让原生驯服事实留下记录。",
-        "【作业】取得该龙种的原生驯服进度。",
-        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
-        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+        "【战略目标】让原生驯服事实留下记录。",
+        "【讨伐作业】取得该龙种的原生驯服进度。",
+        "【情报与机制】八种任选一种即可继续，驯服方法按对应龙种指南；任务不赠龙，不改变所有权。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 10.0,
-      "y": 0.0,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 4.2,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000CDA8E88F43885",
-        "0004A9329C27BC37"
+        "0003F9AB1FBB5B12",
+        "0001C6A6EC6A6FCD"
       ],
       "tasks": [
         {
-          "id": "000007CE77F0DA5F",
+          "id": "00071FD21A846B46",
           "type": "advancement",
           "advancement": "saintsdragons:tame_cindervane"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0001BCDCF2733AB5"
-        }
-      ],
+      "rewards": [],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000761B0771E5B8E",
+      "id": "000F204B9644DD75",
       "title": "伙伴·atroxiia",
       "description": [
-        "【教学目标】让原生驯服事实留下记录。",
-        "【作业】取得该龙种的原生驯服进度。",
-        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
-        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+        "【战略目标】让原生驯服事实留下记录。",
+        "【讨伐作业】取得该龙种的原生驯服进度。",
+        "【情报与机制】八种任选一种即可继续，驯服方法按对应龙种指南；任务不赠龙，不改变所有权。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 12.5,
-      "y": 0.0,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 0.0,
+      "y": 8.4,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000CDA8E88F43885",
-        "0004A9329C27BC37"
+        "00083C047519718C",
+        "0001C6A6EC6A6FCD"
       ],
       "tasks": [
         {
-          "id": "000F75ACDC9F3A6A",
+          "id": "000CAACD99E4771C",
           "type": "advancement",
           "advancement": "saintsdragons:tame_atroxiia"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00027568B55061BA"
-        }
-      ],
+      "rewards": [],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0006DCC011678D85",
+      "id": "0001A17BC47478A2",
       "title": "伙伴·stegonaut",
       "description": [
-        "【教学目标】让原生驯服事实留下记录。",
-        "【作业】取得该龙种的原生驯服进度。",
-        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
-        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+        "【战略目标】让原生驯服事实留下记录。",
+        "【讨伐作业】取得该龙种的原生驯服进度。",
+        "【情报与机制】八种任选一种即可继续，驯服方法按对应龙种指南；任务不赠龙，不改变所有权。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 12.5,
-      "y": 3.5,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 8.4,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000CDA8E88F43885",
-        "0004A9329C27BC37"
+        "000566A683C83631",
+        "0001C6A6EC6A6FCD"
       ],
       "tasks": [
         {
-          "id": "000B15691E74F03D",
+          "id": "00031B8FBBC63D83",
           "type": "advancement",
           "advancement": "saintsdragons:tame_stegonaut"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0000FA73316885B4"
-        }
-      ],
+      "rewards": [],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "00036134B09B4841",
+      "id": "000EDC6B0903E82C",
       "title": "伙伴·varasuchus",
       "description": [
-        "【教学目标】让原生驯服事实留下记录。",
-        "【作业】取得该龙种的原生驯服进度。",
-        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
-        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+        "【战略目标】让原生驯服事实留下记录。",
+        "【讨伐作业】取得该龙种的原生驯服进度。",
+        "【情报与机制】八种任选一种即可继续，驯服方法按对应龙种指南；任务不赠龙，不改变所有权。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 10.0,
-      "y": 3.5,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 8.4,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000CDA8E88F43885",
-        "0004A9329C27BC37"
+        "0005DD2EE4E14F7D",
+        "0001C6A6EC6A6FCD"
       ],
       "tasks": [
         {
-          "id": "000A3FEC3533875D",
+          "id": "0001F5E450A81B07",
           "type": "advancement",
           "advancement": "saintsdragons:tame_varasuchus"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000D0155E213C5F1"
-        }
-      ],
+      "rewards": [],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0004B6A4F5C5BF58",
+      "id": "000287662BAE739C",
       "title": "伙伴·ignivorus",
       "description": [
-        "【教学目标】让原生驯服事实留下记录。",
-        "【作业】取得该龙种的原生驯服进度。",
-        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
-        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+        "【战略目标】让原生驯服事实留下记录。",
+        "【讨伐作业】取得该龙种的原生驯服进度。",
+        "【情报与机制】八种任选一种即可继续，驯服方法按对应龙种指南；任务不赠龙，不改变所有权。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 7.5,
-      "y": 3.5,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 12.600000000000001,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000CDA8E88F43885",
-        "0004A9329C27BC37"
+        "00040774A3E3AF20",
+        "0001C6A6EC6A6FCD"
       ],
       "tasks": [
         {
-          "id": "000C966B48FF7D34",
+          "id": "000AC5EBC209F8C3",
           "type": "advancement",
           "advancement": "saintsdragons:tame_ignivorus"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000E6F925CAC9766"
-        }
-      ],
+      "rewards": [],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0002EFAC716288C1",
+      "id": "00027215AC674E37",
       "title": "伙伴·volitans",
       "description": [
-        "【教学目标】让原生驯服事实留下记录。",
-        "【作业】取得该龙种的原生驯服进度。",
-        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
-        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+        "【战略目标】让原生驯服事实留下记录。",
+        "【讨伐作业】取得该龙种的原生驯服进度。",
+        "【情报与机制】八种任选一种即可继续，驯服方法按对应龙种指南；任务不赠龙，不改变所有权。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 5.0,
-      "y": 3.5,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 12.600000000000001,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000CDA8E88F43885",
-        "0004A9329C27BC37"
+        "000E106FCDB5A30F",
+        "0001C6A6EC6A6FCD"
       ],
       "tasks": [
         {
-          "id": "00035DC2F4DB434F",
+          "id": "00003615AE1D9970",
           "type": "advancement",
           "advancement": "saintsdragons:tame_volitans"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0009F97E097B6347"
-        }
-      ],
+      "rewards": [],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "00075FABED0E6191",
+      "id": "000B6DD6B08B385D",
       "title": "伙伴·nulljaw",
       "description": [
-        "【教学目标】让原生驯服事实留下记录。",
-        "【作业】取得该龙种的原生驯服进度。",
-        "【提示】八种任选一种即可继续；烬羽已有程序授予静态证据，其余需逐种实测。任务不赠龙、不改变所有权。",
-        "【讲评】冒险者，一次相遇已经足够开启这条路。"
+        "【战略目标】让原生驯服事实留下记录。",
+        "【讨伐作业】取得该龙种的原生驯服进度。",
+        "【情报与机制】八种任选一种即可继续，驯服方法按对应龙种指南；任务不赠龙，不改变所有权。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 2.5,
-      "y": 3.5,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 0.0,
+      "y": 16.8,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000CDA8E88F43885",
-        "0004A9329C27BC37"
+        "000C8A23D39B252F",
+        "0001C6A6EC6A6FCD"
       ],
       "tasks": [
         {
-          "id": "000101D4476E75BA",
+          "id": "0009E787D06C2303",
           "type": "advancement",
           "advancement": "saintsdragons:tame_nulljaw"
         }
       ],
-      "rewards": [
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，一次相遇已经足够开启这条路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000EADD5F6CDBE0D"
-        }
-      ],
+      "rewards": [],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0005440F0C398B74",
-      "title": "第一位伙伴",
+      "id": "000E2F644C7A0B62",
+      "title": "第一位战争伙伴",
       "description": [
-        "【教学目标】汇总任一真实驯服事实",
-        "【作业】完成H04a～h中任意一项",
-        "【提示】编辑器必须OR；有归属的只是驯服者的龙",
-        "【讲评】冒险者，你们开始了一段共同的旅程。"
+        "【战略目标】以一次真实驯服开启龙骑路线。",
+        "【讨伐作业】完成八种驯服记录中的任意一项。",
+        "【情报与机制】龙的所有权属于实际驯服者；共享任务不会复制宠物。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "",
-      "x": 0.0,
-      "y": 3.5,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/dragon.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 16.8,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000CA98EB7C01418",
-        "000F237194E39C63",
-        "000761B0771E5B8E",
-        "0006DCC011678D85",
-        "00036134B09B4841",
-        "0004B6A4F5C5BF58",
-        "0002EFAC716288C1",
-        "00075FABED0E6191"
+        "000B19213A2A8E83",
+        "000747DCFC4E88B5",
+        "000F204B9644DD75",
+        "0001A17BC47478A2",
+        "000EDC6B0903E82C",
+        "000287662BAE739C",
+        "00027215AC674E37",
+        "000B6DD6B08B385D"
       ],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "00023CBA73EF4F20",
+          "type": "custom",
+          "title": "完成八种驯服记录中的任意一项。"
+        }
+      ],
       "rewards": [
         {
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "0008EAD769B6BA16"
+          "id": "0000B5E3B025F00C"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你们开始了一段共同的旅程。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 30,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000E1533A1D6731C"
+          "id": "000BF31440356E7E"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false,
       "dependency_requirement": "one_completed"
     },
     {
-      "id": "000F91BD1E74A1DB",
+      "id": "000948812D635A19",
       "title": "照顾伙伴",
       "description": [
-        "【教学目标】认识原生喂食与恢复",
-        "【作业】用对应指南的食物照料自己的龙一次",
-        "【提示】自报；持有食物不能证明喂食发生",
-        "【讲评】冒险者，能照顾同伴，才能走得更远。"
+        "【战略目标】认识原生喂食与恢复",
+        "【讨伐作业】阅读本项原生操作说明，完成练习后自行确认；不作为自动实操证明。",
+        "【情报与机制】自报；持有食物不能证明喂食发生",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "",
-      "x": 0.0,
-      "y": 7.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/dragon.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 16.8,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005440F0C398B74"
+        "000E2F644C7A0B62"
       ],
       "tasks": [
         {
-          "id": "000B83C4EE0BB9E5",
+          "id": "0009B6A876DA319A",
           "type": "checkmark"
         }
       ],
@@ -585,47 +521,44 @@
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "00022222D560A2A1"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，能照顾同伴，才能走得更远。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000E246F352E1E95"
+          "id": "0000FAE1BEF5CDCE"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000B9FBA5ECCAB1F",
+      "id": "000D705A4C26A148",
       "title": "一枚蛋",
       "description": [
-        "【教学目标】认识孵化这一可选路线",
-        "【作业】持有当前七种龙蛋中任意1枚",
-        "【提示】Nulljaw蛋未核到；不要求七枚齐全",
-        "【讲评】冒险者，还有另一种相遇的方式。"
+        "【战略目标】认识孵化这一可选路线",
+        "【讨伐作业】持有当前七种龙蛋中任意1枚",
+        "【情报与机制】Nulljaw蛋未核到；不要求七枚齐全",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 2.5,
-      "y": 7.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/dragon.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0007BC914D26EADA",
-        "0004A9329C27BC37"
+        "000B30965EA23E9E",
+        "0001C6A6EC6A6FCD"
       ],
       "tasks": [
         {
-          "id": "0005289A894DCF62",
+          "id": "000121AF72478181",
           "type": "custom",
           "title": "持有当前七种龙蛋中任意1枚"
         }
@@ -635,46 +568,43 @@
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "000E5433865544C3"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，还有另一种相遇的方式。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000CC0906EC00BEA"
+          "id": "00010A77CFDA8A99"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000BED153D41618F",
-      "title": "等待破壳",
+      "id": "000C3A959E3868F4",
+      "title": "孵化后备龙骑",
       "description": [
-        "【教学目标】认识原生孵化条件",
-        "【作业】按原生指南孵化自己的龙蛋一次并确认练习",
-        "【提示】自报可选；impossible孵化进度需程序授予实测后才能改自动检测",
-        "【讲评】冒险者，耐心也能成为旅程的一部分。"
+        "【战略目标】尝试原生龙蛋孵化路线。",
+        "【讨伐作业】阅读本项原生操作说明，完成练习后自行确认；不作为自动实操证明。",
+        "【情报与机制】此项为可选实操自报，温度与环境按具体龙种要求准备。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 5.0,
-      "y": 7.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/dragon.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000B9FBA5ECCAB1F"
+        "000D705A4C26A148"
       ],
       "tasks": [
         {
-          "id": "000E8C675D345E69",
+          "id": "0001C966D3D0DAB3",
           "type": "checkmark"
         }
       ],
@@ -683,46 +613,37 @@
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "00029DBA3A25163D"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，耐心也能成为旅程的一部分。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0006133CE4977956"
+          "id": "0001ED1A17037983"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000F6969F02216AE",
+      "id": "000342FD4DFDF853",
       "title": "龙鳞",
       "description": [
-        "【教学目标】区分养成资源与杀戮资源",
-        "【作业】获得当前原生acquire_dragon_scale进度",
-        "【提示】七种鳞片任一原生条件；不声称必须杀死伙伴",
-        "【讲评】冒险者，材料的来路，也值得你看清。"
+        "【战略目标】区分养成资源与杀戮资源",
+        "【讨伐作业】取得原生“获得龙鳞”进度。",
+        "【情报与机制】按进度中的任一有效鳞片条件完成，不必杀死自家龙。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "",
-      "x": 7.5,
-      "y": 7.0,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 16.8,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000F91BD1E74A1DB"
+        "000948812D635A19"
       ],
       "tasks": [
         {
-          "id": "000CD959FF765505",
+          "id": "000F4BEE269EC43D",
           "type": "advancement",
           "advancement": "saintsdragons:acquire_dragon_scale"
         }
@@ -732,46 +653,43 @@
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "000914AF0CD27ADD"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，材料的来路，也值得你看清。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000B1EA852128FD0"
+          "id": "000A9262DF6B66AD"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "00069736E8F76CB8",
+      "id": "000C76054F829FC1",
       "title": "骑乘侦察",
       "description": [
-        "【教学目标】将伙伴用于远征准备",
-        "【作业】骑自己的龙完成一次侦察并确认练习",
-        "【提示】先核所选种类可骑；不要求飞到固定坐标。若该种不可骑，允许另选可骑伙伴或批注改地面伴行",
-        "【讲评】冒险者，换一个高度，熟悉的路也不同了。"
+        "【战略目标】将伙伴用于远征准备",
+        "【讨伐作业】阅读本项原生操作说明，完成练习后自行确认；不作为自动实操证明。",
+        "【情报与机制】先按龙种指南确认可骑乘；不要求固定坐标，此项为手动确认的实操记录。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "",
-      "x": 10.0,
-      "y": 7.0,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/dragon.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 16.8,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000F6969F02216AE"
+        "000342FD4DFDF853"
       ],
       "tasks": [
         {
-          "id": "000CAA148A104DF6",
+          "id": "0003E0E292BF533F",
           "type": "checkmark"
         }
       ],
@@ -780,48 +698,39 @@
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "000511813E51B718"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，换一个高度，熟悉的路也不同了。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000645C0F0E0AB5F"
+          "id": "000692C41141CD73"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000FC17BDCD53EC5",
+      "id": "000BFC65B9DE6E6A",
       "title": "讨伐对象",
       "description": [
-        "【教学目标】为龙材选择独立讨伐",
-        "【作业】击败saintsdragons:ignivorus×1",
-        "【提示】建议另找敌对目标，保护自家伙伴；原生kill无法判断野生/宠物，不能谎称已做宠物免计。鳞片H09不是先开这场战斗的门槛",
-        "【讲评】冒险者，知道为何出剑，比只会出剑更重要。"
+        "【战略目标】为龙材选择独立讨伐",
+        "【讨伐作业】击败噬焰龙1只。",
+        "【情报与机制】请寻找独立敌对目标；当前检测无法区分野生与已驯服个体，注意保护自己的战争伙伴。",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "",
-      "x": 12.5,
-      "y": 7.0,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 21.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005440F0C398B74",
-        "00069736E8F76CB8",
-        "0005D8B2BE004BA4"
+        "000E2F644C7A0B62",
+        "000C76054F829FC1",
+        "000E592E73C450C1"
       ],
       "tasks": [
         {
-          "id": "00028A04D8484BCB",
+          "id": "00063AA466D1C19F",
           "type": "kill",
           "entity": "saintsdragons:ignivorus",
           "value": 1L
@@ -832,46 +741,37 @@
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "00066631CAE47D7F"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，知道为何出剑，比只会出剑更重要。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00039FC84F5CBB00"
+          "id": "0009B62A484E35F2"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000C39D017BFB5B5",
+      "id": "0000CB41984ADB1F",
       "title": "龙心合金",
       "description": [
-        "【教学目标】把讨伐资源接到装备",
-        "【作业】同时持有龙心合金4枚，不消耗。",
-        "【提示】配方、材料和获取链用当前JEI核对",
-        "【讲评】冒险者，战斗留下的材料，有了新的用途。"
+        "【战略目标】把讨伐资源接到装备",
+        "【讨伐作业】同时持有龙心合金4枚，不消耗。",
+        "【情报与机制】配方、材料和获取链用当前JEI核对",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
       "icon": "saintsdragons:dragonheart_alloy",
-      "subtitle": "",
-      "x": 12.5,
-      "y": 10.5,
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 21.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000FC17BDCD53EC5"
+        "000BFC65B9DE6E6A"
       ],
       "tasks": [
         {
-          "id": "00021F8F66230BE6",
+          "id": "000810E8F4050361",
           "type": "item",
           "item": "saintsdragons:dragonheart_alloy",
           "count": 4L,
@@ -884,47 +784,38 @@
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "00064D67661F5182"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，战斗留下的材料，有了新的用途。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000FB717F7D3E096"
+          "id": "00067FEBD28A597A"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "00055504527440DC",
+      "id": "000E1B9C29EB69CF",
       "title": "龙主行装",
       "description": [
-        "【教学目标】认识完整龙材装备",
-        "【作业】获得原生dragonlord_armor_set进度",
-        "【提示】四部位原生持有条件；可选，不用全套才毕业",
-        "【讲评】冒险者，留下这套行装，也留下这段经验。"
+        "【战略目标】认识完整龙材装备",
+        "【讨伐作业】取得原生龙主全套护甲进度。",
+        "【情报与机制】四部位原生持有条件；可选，不用全套才毕业",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "可选作业",
-      "x": 10.0,
-      "y": 10.5,
+      "icon": "ftbquests:book",
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 21.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000C39D017BFB5B5",
-        "00083052EF81988F"
+        "0000CB41984ADB1F",
+        "0000C343755517FE"
       ],
       "tasks": [
         {
-          "id": "0003C43408532037",
+          "id": "0005EA553294AF4F",
           "type": "advancement",
           "advancement": "saintsdragons:dragonlord_armor_set"
         }
@@ -934,55 +825,58 @@
           "type": "xp",
           "xp": 20,
           "team_reward": false,
-          "id": "000AAC9895354CF0"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，留下这套行装，也留下这段经验。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0008B988049923A1"
+          "id": "0003DDDEBF7C4583"
         }
       ],
       "optional": true,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0000F5E8ACAD42F6",
+      "id": "00097FD3FCA5EA61",
       "title": "狩龙人毕业",
       "description": [
-        "【教学目标】完成一轮伙伴、侦察、讨伐、材料循环",
-        "【作业】完成H05、H09、H10、H11、H12",
-        "【提示】不要求八龙齐收，蛋/全套装备均可选",
-        "【讲评】冒险者，愿你知道怎样并肩，也知道怎样归来。"
+        "【战略目标】完成一轮伙伴、侦察、讨伐、材料循环",
+        "【讨伐作业】完成首次驯服、龙鳞、骑乘侦察、噬焰龙讨伐与龙心合金目标。",
+        "【情报与机制】不要求八龙齐收，蛋/全套装备均可选",
+        "【掠夺战果】将龙族的力量纳入你的远征计划。"
       ],
-      "icon": "minecraft:dragon_egg",
-      "subtitle": "",
-      "x": 7.5,
-      "y": 10.5,
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/dragon.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 21.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005440F0C398B74",
-        "000F6969F02216AE",
-        "00069736E8F76CB8",
-        "000FC17BDCD53EC5",
-        "000C39D017BFB5B5",
-        "00083052EF81988F"
+        "000E2F644C7A0B62",
+        "000342FD4DFDF853",
+        "000C76054F829FC1",
+        "000BFC65B9DE6E6A",
+        "0000CB41984ADB1F",
+        "0000C343755517FE"
       ],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "000093078ED65355",
+          "type": "custom",
+          "title": "完成首次驯服、龙鳞、骑乘侦察、噬焰龙讨伐与龙心合金目标。"
+        }
+      ],
       "rewards": [
         {
           "type": "xp",
           "xp": 100,
           "team_reward": false,
-          "id": "0006FBCFCADCB079"
+          "id": "0006A114535617B0"
         },
         {
           "type": "item",
@@ -1000,24 +894,392 @@
           },
           "count": 1,
           "team_reward": false,
-          "id": "000A3534A410494B"
+          "id": "0009552BE7B7E1F8"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，愿你知道怎样并肩，也知道怎样归来。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 64,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00024908B52B8159"
+          "id": "00081396B747FCAB"
+        },
+        {
+          "type": "choice",
+          "table_id": 3880405831076903L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "远征行装 · 三选一",
+          "id": "000C958DB0B7DE45"
         }
       ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003749724E9F5F2",
+      "title": "雷翼 · 接近与养成",
+      "description": [
+        "【战略目标】为雷翼建立独立的养成与战备档案。",
+        "【讨伐作业】阅读对应龙种指南，准备原生食物、接近方式与安全安置点。",
+        "【情报与机制】雷电巨龙的接近、驯养和骑乘需要分别准备。先看雷翼的原生指南，再选择靠近时机。",
+        "【掠夺战果】本页是阅读与准备记录；真实驯服以对应原生进度记录，任务不会赠送或复制一条龙。",
+        "",
+        "&6出发清单&r",
+        "查对应龙种的原生指南，不把任意生肉当成八种龙的通用条件。",
+        "确认接近、驯服、喂食和可骑乘条件，给失败后的撤离留出空间。",
+        "",
+        "&6养成后的用途&r",
+        "雷电巨龙的接近、驯养和骑乘需要分别准备。先看雷翼的原生指南，再选择靠近时机。",
+        "是否骑乘、伴行或参与战斗，以该龙种实际能力与原生设置为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 伙伴·raevyx\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000B19213A2A8E83\"}}"
+      ],
+      "icon": "saintsdragons:raevyx_scale",
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000A37CF486DF852"
+      ],
+      "tasks": [
+        {
+          "id": "0008A7295BE58790",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0003F9AB1FBB5B12",
+      "title": "烬羽 · 接近与养成",
+      "description": [
+        "【战略目标】为烬羽建立独立的养成与战备档案。",
+        "【讨伐作业】阅读对应龙种指南，准备原生食物、接近方式与安全安置点。",
+        "【情报与机制】烬羽的养成路线和战斗形态各有作用。先为自己的龙准备合适食物与安置空间，再带它进入危险区域。",
+        "【掠夺战果】本页是阅读与准备记录；真实驯服以对应原生进度记录，任务不会赠送或复制一条龙。",
+        "",
+        "&6出发清单&r",
+        "查对应龙种的原生指南，不把任意生肉当成八种龙的通用条件。",
+        "确认接近、驯服、喂食和可骑乘条件，给失败后的撤离留出空间。",
+        "",
+        "&6养成后的用途&r",
+        "烬羽的养成路线和战斗形态各有作用。先为自己的龙准备合适食物与安置空间，再带它进入危险区域。",
+        "是否骑乘、伴行或参与战斗，以该龙种实际能力与原生设置为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 伙伴·cindervane\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000747DCFC4E88B5\"}}"
+      ],
+      "icon": "saintsdragons:cindervane_scale",
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003749724E9F5F2"
+      ],
+      "tasks": [
+        {
+          "id": "0001B3E58E2EB326",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00083C047519718C",
+      "title": "蚀影 · 接近与养成",
+      "description": [
+        "【战略目标】为蚀影建立独立的养成与战备档案。",
+        "【讨伐作业】阅读对应龙种指南，准备原生食物、接近方式与安全安置点。",
+        "【情报与机制】蚀影不是其他龙换色后的同一份驯养作业。阅读对应指南，区分接近条件、交互与战斗用途。",
+        "【掠夺战果】本页是阅读与准备记录；真实驯服以对应原生进度记录，任务不会赠送或复制一条龙。",
+        "",
+        "&6出发清单&r",
+        "查对应龙种的原生指南，不把任意生肉当成八种龙的通用条件。",
+        "确认接近、驯服、喂食和可骑乘条件，给失败后的撤离留出空间。",
+        "",
+        "&6养成后的用途&r",
+        "蚀影不是其他龙换色后的同一份驯养作业。阅读对应指南，区分接近条件、交互与战斗用途。",
+        "是否骑乘、伴行或参与战斗，以该龙种实际能力与原生设置为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 伙伴·atroxiia\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000F204B9644DD75\"}}"
+      ],
+      "icon": "saintsdragons:atroxiia_scale",
+      "subtitle": "独立目标",
+      "x": 0.0,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0003F9AB1FBB5B12"
+      ],
+      "tasks": [
+        {
+          "id": "00065668AA9ACA08",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000566A683C83631",
+      "title": "甲背 · 接近与养成",
+      "description": [
+        "【战略目标】为甲背建立独立的养成与战备档案。",
+        "【讨伐作业】阅读对应龙种指南，准备原生食物、接近方式与安全安置点。",
+        "【情报与机制】地面与厚重形体的龙也可进入远征计划。先确认可用交互和移动条件，再决定伴行或侦察。",
+        "【掠夺战果】本页是阅读与准备记录；真实驯服以对应原生进度记录，任务不会赠送或复制一条龙。",
+        "",
+        "&6出发清单&r",
+        "查对应龙种的原生指南，不把任意生肉当成八种龙的通用条件。",
+        "确认接近、驯服、喂食和可骑乘条件，给失败后的撤离留出空间。",
+        "",
+        "&6养成后的用途&r",
+        "地面与厚重形体的龙也可进入远征计划。先确认可用交互和移动条件，再决定伴行或侦察。",
+        "是否骑乘、伴行或参与战斗，以该龙种实际能力与原生设置为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 伙伴·stegonaut\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"0001A17BC47478A2\"}}"
+      ],
+      "icon": "saintsdragons:stegonaut_scale",
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00083C047519718C"
+      ],
+      "tasks": [
+        {
+          "id": "000EBC69655EE42B",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0005DD2EE4E14F7D",
+      "title": "巨鳄 · 接近与养成",
+      "description": [
+        "【战略目标】为巨鳄建立独立的养成与战备档案。",
+        "【讨伐作业】阅读对应龙种指南，准备原生食物、接近方式与安全安置点。",
+        "【情报与机制】水边活动的龙需要你先理解接近与撤退路线；饲养、回收和战斗各有准备。",
+        "【掠夺战果】本页是阅读与准备记录；真实驯服以对应原生进度记录，任务不会赠送或复制一条龙。",
+        "",
+        "&6出发清单&r",
+        "查对应龙种的原生指南，不把任意生肉当成八种龙的通用条件。",
+        "确认接近、驯服、喂食和可骑乘条件，给失败后的撤离留出空间。",
+        "",
+        "&6养成后的用途&r",
+        "水边活动的龙需要你先理解接近与撤退路线；饲养、回收和战斗各有准备。",
+        "是否骑乘、伴行或参与战斗，以该龙种实际能力与原生设置为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 伙伴·varasuchus\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000EDC6B0903E82C\"}}"
+      ],
+      "icon": "saintsdragons:varasuchus_scale",
+      "subtitle": "独立目标",
+      "x": 10.2,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000566A683C83631"
+      ],
+      "tasks": [
+        {
+          "id": "0003B0320616C6A6",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00040774A3E3AF20",
+      "title": "噬焰龙 · 接近与养成",
+      "description": [
+        "【战略目标】为噬焰龙建立独立的养成与战备档案。",
+        "【讨伐作业】阅读对应龙种指南，准备原生食物、接近方式与安全安置点。",
+        "【情报与机制】你可以选择收服战争伙伴，也可以独立狩猎取得龙材。不要为了职业任务杀掉自己养成的龙。",
+        "【掠夺战果】本页是阅读与准备记录；真实驯服以对应原生进度记录，任务不会赠送或复制一条龙。",
+        "",
+        "&6出发清单&r",
+        "查对应龙种的原生指南，不把任意生肉当成八种龙的通用条件。",
+        "确认接近、驯服、喂食和可骑乘条件，给失败后的撤离留出空间。",
+        "",
+        "&6养成后的用途&r",
+        "你可以选择收服战争伙伴，也可以独立狩猎取得龙材。不要为了职业任务杀掉自己养成的龙。",
+        "是否骑乘、伴行或参与战斗，以该龙种实际能力与原生设置为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 伙伴·ignivorus\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000287662BAE739C\"}}"
+      ],
+      "icon": "saintsdragons:ignivorus_scale",
+      "subtitle": "独立目标",
+      "x": 13.6,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0005DD2EE4E14F7D"
+      ],
+      "tasks": [
+        {
+          "id": "000E7B5DE6F8394B",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000E106FCDB5A30F",
+      "title": "蓑鲉龙 · 接近与养成",
+      "description": [
+        "【战略目标】为蓑鲉龙建立独立的养成与战备档案。",
+        "【讨伐作业】阅读对应龙种指南，准备原生食物、接近方式与安全安置点。",
+        "【情报与机制】面对飞行生态的龙，观察环境和原生交互比照抄一种通用食物更可靠。驯养与狩猎不是强制组合。",
+        "【掠夺战果】本页是阅读与准备记录；真实驯服以对应原生进度记录，任务不会赠送或复制一条龙。",
+        "",
+        "&6出发清单&r",
+        "查对应龙种的原生指南，不把任意生肉当成八种龙的通用条件。",
+        "确认接近、驯服、喂食和可骑乘条件，给失败后的撤离留出空间。",
+        "",
+        "&6养成后的用途&r",
+        "面对飞行生态的龙，观察环境和原生交互比照抄一种通用食物更可靠。驯养与狩猎不是强制组合。",
+        "是否骑乘、伴行或参与战斗，以该龙种实际能力与原生设置为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 伙伴·volitans\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00027215AC674E37\"}}"
+      ],
+      "icon": "saintsdragons:volitans_scale",
+      "subtitle": "独立目标",
+      "x": 6.8,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00040774A3E3AF20"
+      ],
+      "tasks": [
+        {
+          "id": "000C196469A51C57",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C8A23D39B252F",
+      "title": "虚颚 · 接近与养成",
+      "description": [
+        "【战略目标】为虚颚建立独立的养成与战备档案。",
+        "【讨伐作业】阅读对应龙种指南，准备原生食物、接近方式与安全安置点。",
+        "【情报与机制】虚颚的养成条件以自己的原生指南为准。本包没有据文件名承诺虚颚蛋，因此不安排找一枚未确认的蛋。",
+        "【掠夺战果】本页是阅读与准备记录；真实驯服以对应原生进度记录，任务不会赠送或复制一条龙。",
+        "",
+        "&6出发清单&r",
+        "查对应龙种的原生指南，不把任意生肉当成八种龙的通用条件。",
+        "确认接近、驯服、喂食和可骑乘条件，给失败后的撤离留出空间。",
+        "",
+        "&6养成后的用途&r",
+        "虚颚的养成条件以自己的原生指南为准。本包没有据文件名承诺虚颚蛋，因此不安排找一枚未确认的蛋。",
+        "是否骑乘、伴行或参与战斗，以该龙种实际能力与原生设置为准。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 伙伴·nulljaw\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000B6DD6B08B385D\"}}"
+      ],
+      "icon": "saintsdragons:nulljaw_spawn_egg",
+      "subtitle": "独立目标",
+      "x": 0.0,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000E106FCDB5A30F"
+      ],
+      "tasks": [
+        {
+          "id": "000C73C2BE82B5C1",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    }
+  ],
+  "images": [
+    {
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/dragon.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "狩龙人 · 制空龙骑"
+      ],
+      "click": "",
+      "dev": false,
+      "corner": false
     }
   ]
 }

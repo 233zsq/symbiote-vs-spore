@@ -1,0 +1,13 @@
+name = "Legendary Bosses"
+filename = "legendarybosses-0.6.1-beta.jar"
+side = "both"
+
+[download]
+url = "https://mediafilez.forgecdn.net/files/9234/898/legendarybosses-0.6.1-beta.jar"
+hash-format = "sha512"
+hash = "f00098baa8d0f7ad67603acc44f51fb8399932dbc5d7e20c888caac88a55f54a11dac7bf1f407a2fa4ff2dcf7354cf4e05b24453d98ee3b6b0eff75c34af64d0"
+
+[update]
+[update.curseforge]
+file-id = 9234898
+project-id = 1716327

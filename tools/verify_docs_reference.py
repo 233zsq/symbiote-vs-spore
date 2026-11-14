@@ -1,5 +1,5 @@
 """Check documentation workbook identities, source values, formulas and local links offline."""
-import collections, itertools, json, math, re, hashlib, zipfile
+import argparse, collections, itertools, json, math, re, hashlib, zipfile
 from pathlib import Path
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).absolute().parents[1];N={'s':'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
@@ -68,8 +68,10 @@ def check_reorder_only(src, errors):
                                            for r in s['rows'])
             if contents(previous)!=contents(spec):errors.append(book['file']+' '+spec['name']+': underlying row content changed')
 def main():
-    src=json.loads((ROOT/'docs/data/工作簿数据.json').read_text(encoding='utf-8'))
-    dest=ROOT/'docs' if '--installed' in __import__('sys').argv else ROOT/'backups/docs_sheet_work/outputs'
+    ap=argparse.ArgumentParser();ap.add_argument('--docs-root',type=Path,default=ROOT/'docs');ap.add_argument('--output-dir',type=Path)
+    ap.add_argument('--report',type=Path);ap.add_argument('--installed',action='store_true');ap.add_argument('--sort-audit',action='store_true');args=ap.parse_args()
+    src=json.loads((args.docs_root/'data/工作簿数据.json').read_text(encoding='utf-8'))
+    dest=args.output_dir or (args.docs_root if args.installed else ROOT/'backups/docs_sheet_work/outputs')
     errors=[]; report=[]
     if '--sort-audit' in __import__('sys').argv:check_reorder_only(src,errors)
     for book in src:
@@ -99,7 +101,7 @@ def main():
                     elif str(expected)!=str(got[0]):errors.append(f'{book["file"]} {addr}: text mismatch {str(expected)[:100]} vs {str(got[0])[:100]}')
         report.append({'file':p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'sheets':len(sheets),'data_rows':sum(len(s['rows']) for s in book['sheets']),'formula_count':count})
     summary={'scope':str(dest),'workbooks':report,'errors':errors[:80],'error_count':len(errors)}
-    out=ROOT/'backups/docs_sheet_work'/('installed_verification.json' if '--installed' in __import__('sys').argv else 'data_verification.json')
+    out=args.report or ROOT/'backups/docs_sheet_work'/('installed_verification.json' if args.installed else 'data_verification.json')
     out.write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print(json.dumps(summary,ensure_ascii=False,indent=2))
     if errors:raise SystemExit(1)
 if __name__=='__main__':main()

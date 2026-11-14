@@ -1,0 +1,54 @@
+{
+  "id": "00081FD6D5D5E638",
+  "title": "王权技法 · 任选一",
+  "loot_size": 1,
+  "order_index": 6,
+  "rewards": [
+    {
+      "id": "000064962896B7C4",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:swordmaster"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "000BD8F2D4C878B8",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:technician"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "0003E74937E0CD01",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:hypervitality"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "000A0F2925DDF395",
+      "type": "item",
+      "item": "kubejs:spore_coin",
+      "count": 24,
+      "team_reward": false
+    }
+  ]
+}

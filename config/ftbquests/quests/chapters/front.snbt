@@ -1,183 +1,853 @@
 {
   "id": "0007F330C696D0EA",
   "filename": "front",
-  "title": "Ⅲ·天灾防线",
+  "title": "&6Ⅲ乙 · 诸王神权&r",
   "group": "0002FB0079E64484",
   "order_index": 4,
-  "icon": "minecraft:shield",
+  "icon": {
+    "id": "ftbquests:custom_icon",
+    "Count": 1,
+    "tag": {
+      "Icon": "svs:textures/quest/emblems/throne.png"
+    }
+  },
+  "hide_quest_until_deps_complete": true,
+  "hide_quest_until_deps_visible": true,
+  "hide_quest_details_until_startable": true,
   "default_hide_dependency_lines": false,
   "default_quest_shape": "circle",
   "quest_links": [],
   "quests": [
     {
-      "id": "0009822CFFD8EE6B",
-      "title": "军营前线",
+      "id": "0006FE07EFAEE1EC",
+      "title": "王权必须握在新王手里",
       "description": [
-        "【教学目标】亲自确认真菌的前线据点。",
-        "【作业】到访真菌军营。",
-        "【提示】按核准的自然结构线索出征，先留回程标记。",
-        "【讲评】冒险者，你们已经把目光移到村庄之外。"
+        "【战略目标】火种能焚巢，诸王的法则却仍阻碍总攻。圣堂、死亡、永昼和时间各自闭锁一块疆土，把它们逐一撕开。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】王魂属于本包叙事；实际回报是残魂、技能书、材料与装备。共生进化仍须喂食、狩猎和原生条件。",
+        "【掠夺战果】下一项就是本战区的第一步行动。"
       ],
-      "icon": "minecraft:shield",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/command.png"
+        }
+      },
       "subtitle": "",
       "x": 0.0,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0005D8B2BE004BA4"
+        "000FC442CC3C2E22"
       ],
       "tasks": [
         {
-          "id": "000AB6630091F62F",
-          "type": "structure",
-          "structure": "spore:military_camp"
+          "id": "00005811DD71D434",
+          "type": "checkmark"
         }
       ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "000387245350A102"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你们已经把目光移到村庄之外。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000BDDCFDB64D4C3"
-        }
-      ],
+      "rewards": [],
       "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000538275921E5CB",
-      "title": "重型敌人",
+      "id": "00045B1EA280A9A7",
+      "title": "圣堂的盾牌换一位主人",
       "description": [
-        "【教学目标】处理一只真菌精英。",
-        "【作业】本节点开放后击败蛮兵1只。",
-        "【提示】目标spore:brute；可自然遇见或围城，不保证军营必刷，不硬等精英日。",
-        "【讲评】冒险者，更大的敌人也有可以利用的间隙。"
+        "【战略目标】夺火之后，圣堂遗产成为进军实验设施的阻碍。堕落圣骑仍握着旧秩序的盾，却已经守不住自己的领地。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】战后展开顶阶武库的入口，以高阶甲胄与饰品强化自己的承伤方案。",
+        "【掠夺战果】情报已展开。按下一项目标找到并战胜堕落圣骑。"
       ],
-      "icon": "minecraft:shield",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
       "subtitle": "",
-      "x": 2.5,
+      "x": 10.2,
       "y": 0.0,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "0009822CFFD8EE6B"
+        "00027BA9E63CB8A9"
       ],
       "tasks": [
         {
-          "id": "000535699A01292B",
+          "id": "000AA1B88A4E23C1",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000F17C850CFBEB1",
+      "title": "M13 · 圣堂易主 · 堕落圣骑",
+      "description": [
+        "【战略目标】夺火之后，圣堂遗产成为进军实验设施的阻碍。堕落圣骑仍握着旧秩序的盾，却已经守不住自己的领地。 圣堂重装仍在宣告旧日誓言，但它的主人已经堕落。让盾牌与遗产进入新王的武库。",
+        "【讨伐作业】击败堕落圣骑1次。",
+        "【情报与机制】观察盾与武器的朝向，先寻找可以恢复和重整的位置。武器的破甲、姿态与耐力消耗要一起考虑，避免只盯面板攻击。",
+        "【掠夺战果】战后展开顶阶武库的入口，以高阶甲胄与饰品强化自己的承伤方案。",
+        "",
+        "&6远征入口&r",
+        "灵魂要塞遗迹。",
+        "先准备往返路线、食物与维修物资，再接近首领。",
+        "",
+        "&6作战情报&r",
+        "观察盾与武器的朝向，先寻找可以恢复和重整的位置。武器的破甲、姿态与耐力消耗要一起考虑，避免只盯面板攻击。",
+        "",
+        "&6战果转用&r",
+        "战后展开顶阶武库的入口，以高阶甲胄与饰品强化自己的承伤方案。",
+        "战场原生掉落自行拾取；下一项军需结算另行领取。"
+      ],
+      "icon": "legendary_monsters:corrupted_soul",
+      "subtitle": "灵魂要塞遗迹",
+      "x": 13.6,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00045B1EA280A9A7"
+      ],
+      "tasks": [
+        {
+          "id": "00098B866389DB70",
           "type": "kill",
-          "entity": "spore:brute",
+          "entity": "legendary_monsters:posessed_paladin",
           "value": 1L
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 30,
+          "xp": 164,
           "team_reward": false,
-          "id": "00021C9B5ACAAD45"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，更大的敌人也有可以利用的间隙。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000B6FE0F6579931"
+          "id": "000ABAA3A7C27FB5"
         }
       ],
       "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "0003CE6BD9078AB5",
-      "title": "囚墙之后",
+      "id": "000CE76DB5CE0710",
+      "title": "不破之盾也会易主",
       "description": [
-        "【教学目标】接触另一种感染设施。",
-        "【作业】到访真菌监狱。",
-        "【提示】与医院D05二选一，主线不要求两地清空。",
-        "【讲评】冒险者，这里的墙没能把威胁留在里面。"
+        "【战略目标】圣堂旧卫的失败证明，王权武装并非不可夺取。",
+        "【讨伐作业】上一场正式胜利完成后自动结算本次战果。",
+        "【情报与机制】打开T0武库查看顶阶方向。挑一套适合自己的护甲与饰品，继续逼近死亡王座。",
+        "【掠夺战果】军资已拨付；下一项继续征伐，相关支线可自行选择。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
       ],
-      "icon": "minecraft:shield",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
       "subtitle": "",
-      "x": 5.0,
-      "y": -1.75,
+      "x": 13.6,
+      "y": 4.2,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000538275921E5CB"
+        "000F17C850CFBEB1"
       ],
       "tasks": [
         {
-          "id": "0008E68532348EFD",
-          "type": "structure",
-          "structure": "spore:prison"
+          "id": "00051F4B46826A52",
+          "type": "custom",
+          "title": "上一场正式胜利完成后自动结算本次战果。"
         }
       ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 30,
+          "xp": 40,
           "team_reward": false,
-          "id": "000B5EBEA9D19E6B"
+          "id": "000B0BA348A245D1"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这里的墙没能把威胁留在里面。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 36,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000F9040365C2F73"
+          "id": "00079C74BAEAA7EA"
         }
       ],
       "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000AB435FC3F33F0",
-      "title": "病房之后",
+      "id": "000A2083AA088B21",
+      "title": "亡骸王座不该继续空耗军资",
       "description": [
-        "【教学目标】从医院设施继续调查感染战线。",
-        "【作业】到访真菌医院。",
-        "【提示】与监狱D04二选一，不承诺箱子必有任务物品。",
-        "【讲评】冒险者，这里曾是避难处，如今也是前线。"
+        "【战略目标】卡玛斯靠死亡维持王权。你要夺走他的统御遗产，让共生体的进化面对更高层次的能量。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】死灵王魂纳入共生体的进化目标，同时拨付王权技法与下一场军资。",
+        "【掠夺战果】情报已展开。按下一项目标找到并战胜冥骸之主·卡玛斯。"
       ],
-      "icon": "minecraft:shield",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
       "subtitle": "",
-      "x": 5.0,
-      "y": 1.75,
+      "x": 10.2,
+      "y": 4.2,
       "size": 1.0,
       "shape": "circle",
       "dependencies": [
-        "000538275921E5CB"
+        "000CE76DB5CE0710"
       ],
       "tasks": [
         {
-          "id": "000D3B252B5204DB",
+          "id": "000BCCA003C0854A",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00048EBF404EFAA8",
+      "title": "M14 · 死亡王座 · 冥骸之主·卡玛斯",
+      "description": [
+        "【战略目标】卡玛斯靠死亡维持王权。你要夺走他的统御遗产，让共生体的进化面对更高层次的能量。 亡骸之主用死亡维系秩序，你要以更强的征伐终结这份王权。",
+        "【讨伐作业】击败冥骸之主·卡玛斯1次。",
+        "【情报与机制】不要被场上多个目标拉散节奏。留出处理周边威胁和重新定位首领的余地，再选择进攻窗口；战果不自动授予复活能力。",
+        "【掠夺战果】死灵王魂纳入共生体的进化目标，同时拨付王权技法与下一场军资。",
+        "",
+        "&6远征入口&r",
+        "冥骸王座线索。",
+        "先准备往返路线、食物与维修物资，再接近首领。",
+        "",
+        "&6作战情报&r",
+        "不要被场上多个目标拉散节奏。留出处理周边威胁和重新定位首领的余地，再选择进攻窗口；战果不自动授予复活能力。",
+        "",
+        "&6战果转用&r",
+        "死灵王魂纳入共生体的进化目标，同时拨付王权技法与下一场军资。",
+        "战场原生掉落自行拾取；下一项军需结算另行领取。"
+      ],
+      "icon": "dungeons_and_combat:essence_of_kamath",
+      "subtitle": "冥骸王座线索",
+      "x": 6.8,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000A2083AA088B21"
+      ],
+      "tasks": [
+        {
+          "id": "00047ADEA3BDF221",
+          "type": "kill",
+          "entity": "dungeons_and_combat:kamath",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 172,
+          "team_reward": false,
+          "id": "000B8E0EEF496223"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0007199753B34BFC",
+      "title": "王魂化作下一场的底气",
+      "description": [
+        "【战略目标】死灵君王已经无法继续消耗这片疆域。你要把收益投入下一场，而不是留下一枚无用的收藏勋章。",
+        "【讨伐作业】上一场正式胜利完成后自动结算本次战果。",
+        "【情报与机制】任选王权技法，把原生共生进化与个人武技一起投入下一场远征。",
+        "【掠夺战果】军资已拨付；下一项继续征伐，相关支线可自行选择。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 主导 · 成神战甲\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00050EE7B28BF0EB\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
+      "subtitle": "",
+      "x": 3.4,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00048EBF404EFAA8"
+      ],
+      "tasks": [
+        {
+          "id": "000290E01188477C",
+          "type": "custom",
+          "title": "上一场正式胜利完成后自动结算本次战果。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000A8F122BC617B8"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 40,
+          "team_reward": false,
+          "id": "000DEF30F4D42B9F"
+        },
+        {
+          "type": "choice",
+          "table_id": 2286807384712760L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "王权技法 · 任选一",
+          "id": "00054A3EDE3B1CA7"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BE840AA137A4B",
+      "title": "折翼，便能打破永昼王权",
+      "description": [
+        "【战略目标】永昼的辉光笼罩着苏蕾娅的疆域。新王不需要向一位旧神请求通行，把她的权柄从天空拉下来。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】烈阳权柄纳入王座战果，高阶金属与残魂支持后续征伐。",
+        "【掠夺战果】情报已展开。按下一项目标找到并战胜永昼之翼·苏蕾娅。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
+      "subtitle": "",
+      "x": 0.0,
+      "y": 4.2,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0007199753B34BFC"
+      ],
+      "tasks": [
+        {
+          "id": "0002A2DE417B6C59",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0006A4870CF70D13",
+      "title": "M15 · 折断永昼之翼 · 永昼之翼·苏蕾娅",
+      "description": [
+        "【战略目标】永昼的辉光笼罩着苏蕾娅的疆域。新王不需要向一位旧神请求通行，把她的权柄从天空拉下来。 辉光女神将权柄铺向天空。折断永昼之翼，把这份耀眼的遗产带回王座。",
+        "【讨伐作业】击败永昼之翼·苏蕾娅1次。",
+        "【情报与机制】空地变化时先确认目标位置和场地边界。短暂退出近身距离整理相机，并不等于放弃进攻；本任务不改变世界时间。",
+        "【掠夺战果】烈阳权柄纳入王座战果，高阶金属与残魂支持后续征伐。",
+        "",
+        "&6远征入口&r",
+        "永昼神权挑战线索。",
+        "先准备往返路线、食物与维修物资，再接近首领。",
+        "",
+        "&6作战情报&r",
+        "空地变化时先确认目标位置和场地边界。短暂退出近身距离整理相机，并不等于放弃进攻；本任务不改变世界时间。",
+        "",
+        "&6战果转用&r",
+        "烈阳权柄纳入王座战果，高阶金属与残魂支持后续征伐。",
+        "战场原生掉落自行拾取；下一项军需结算另行领取。"
+      ],
+      "icon": "dungeons_and_combat:essence_of_sunleia",
+      "subtitle": "永昼神权挑战线索",
+      "x": 0.0,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000BE840AA137A4B"
+      ],
+      "tasks": [
+        {
+          "id": "000B8BD5BD4E55D3",
+          "type": "kill",
+          "entity": "dungeons_and_combat:sunleia",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 180,
+          "team_reward": false,
+          "id": "000F0AA99E971369"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0009EA87AD08E24C",
+      "title": "永昼权柄落入武库",
+      "description": [
+        "【战略目标】辉光已经被你从高处折下。接下来的敌人不能再靠一段无法触及的历史保住王座。",
+        "【讨伐作业】上一场正式胜利完成后自动结算本次战果。",
+        "【情报与机制】把高阶金属用于原生制作，残魂留作军需。下一场将面对时间夹缝中的旧王。",
+        "【掠夺战果】军资已拨付；下一项继续征伐，相关支线可自行选择。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
+      "subtitle": "",
+      "x": 3.4,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0006A4870CF70D13"
+      ],
+      "tasks": [
+        {
+          "id": "00062BFBEF578589",
+          "type": "custom",
+          "title": "上一场正式胜利完成后自动结算本次战果。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000C23A94084E4DA"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:rose_gold_ingot",
+          "count": 8,
+          "team_reward": false,
+          "id": "00007D74C187C2A2"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 40,
+          "team_reward": false,
+          "id": "00039D16CBEAEDBF"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0009BE8454685FEF",
+      "title": "时间也不能庇护旧王",
+      "description": [
+        "【战略目标】Melkor试图让战败的时代继续停留在时间夹缝里。你要让他的力量成为下一轮远征的战果。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】时间王魂纳入战果，接着直取冰牢压轴；受控挑战入口当前未开放。",
+        "【掠夺战果】情报已展开。按下一项目标找到并战胜Melkor·抹消时间者。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
+      "subtitle": "",
+      "x": 6.8,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0009EA87AD08E24C"
+      ],
+      "tasks": [
+        {
+          "id": "0007D373F31D073F",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000ED841CCABAF85",
+      "title": "M16 · 时之狭间 · Melkor·抹消时间者",
+      "description": [
+        "【战略目标】Melkor试图让战败的时代继续停留在时间夹缝里。你要让他的力量成为下一轮远征的战果。 旧王藏在时间的夹缝中，试图逃过时代更替。你要让这场征伐抵达他面前。",
+        "【讨伐作业】击败Melkor·抹消时间者1次。",
+        "【情报与机制】这是一场独立王座挑战。使用练熟的武器与防御方案，先看清动作，再决定追击。",
+        "【掠夺战果】时间王魂纳入战果，接着直取冰牢压轴；受控挑战入口当前未开放。",
+        "",
+        "&6远征入口&r",
+        "时之狭间·受控入口待开放。",
+        "受控挑战入口当前未开放。",
+        "",
+        "&6作战情报&r",
+        "这是一场独立王座挑战。使用练熟的武器与防御方案，先看清动作，再决定追击。",
+        "",
+        "&6战果转用&r",
+        "时间王魂纳入战果，接着直取冰牢压轴；受控挑战入口当前未开放。",
+        "战场原生掉落自行拾取；下一项军需结算另行领取。"
+      ],
+      "icon": "souls_like_bosses:spear_of_melkor",
+      "subtitle": "受控入口尚未开放 · 时之狭间·受控入口待开放",
+      "x": 10.2,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0009BE8454685FEF"
+      ],
+      "tasks": [
+        {
+          "id": "000312492DD2539C",
+          "type": "kill",
+          "entity": "souls_like_bosses:melkor",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 188,
+          "team_reward": false,
+          "id": "00007A4806328EEE"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0000067095304813",
+      "title": "夹缝中的旧王也已倒下",
+      "description": [
+        "【战略目标】时间没能保住Melkor。现在只剩冰牢中的旧世战魂仍足以阻挡机械战区的开启。",
+        "【讨伐作业】上一场正式胜利完成后自动结算本次战果。",
+        "【情报与机制】检查主武器、护甲、饰品与身法，再深入冰牢迎接本阶段压轴。",
+        "【掠夺战果】军资已拨付；下一项继续征伐，相关支线可自行选择。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 旧王回响，名器与技法\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00070DD0C70F5BC7\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
+      "subtitle": "",
+      "x": 13.6,
+      "y": 8.4,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000ED841CCABAF85"
+      ],
+      "tasks": [
+        {
+          "id": "0003B287BB685EC3",
+          "type": "custom",
+          "title": "上一场正式胜利完成后自动结算本次战果。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "000081C9A62DE38C"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 44,
+          "team_reward": false,
+          "id": "000E5850F0F51A6A"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:ender_pearl",
+          "count": 8,
+          "team_reward": false,
+          "id": "000BC2475BA1A77A"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0000C6CA2BB855F3",
+      "title": "把旧世战魂一并吞下",
+      "description": [
+        "【战略目标】圣堂、死亡、永昼与时间已经次第失守。咒翼灵骸汇聚的旧日战魂，是共生体迈向主导前最后一场重考。",
+        "【讨伐作业】阅读本次行动命令，确认后展开下一步。",
+        "【情报与机制】冰牢压轴后转入机械战区。先盘点武器、护甲、技能和携行维修，避免带着半套战备进入总攻。",
+        "【掠夺战果】情报已展开。按下一项目标找到并战胜咒翼灵骸。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
+      "subtitle": "",
+      "x": 13.6,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000067095304813"
+      ],
+      "tasks": [
+        {
+          "id": "000BD6C461537787",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000C3C0DFAE93BDE",
+      "title": "M17 · 吞噬旧世战魂 · 咒翼灵骸",
+      "description": [
+        "【战略目标】圣堂、死亡、永昼与时间已经次第失守。咒翼灵骸汇聚的旧日战魂，是共生体迈向主导前最后一场重考。 无数旧日战魂汇成一具巨君。正面击溃它，共生体便能向更高的战甲形态迈进。",
+        "【讨伐作业】击败咒翼灵骸1次。",
+        "【情报与机制】为长距离位移保留耐力，先看清追击与武器变化，再接近输出。不要因为它曾是旧版终局候选就提前结束旅程，大圣残躯仍在最后等待。",
+        "【掠夺战果】冰牢压轴后转入机械战区。先盘点武器、护甲、技能和携行维修，避免带着半套战备进入总攻。",
+        "",
+        "&6远征入口&r",
+        "冰牢。",
+        "先准备往返路线、食物与维修物资，再接近首领。",
+        "",
+        "&6作战情报&r",
+        "为长距离位移保留耐力，先看清追击与武器变化，再接近输出。不要因为它曾是旧版终局候选就提前结束旅程，大圣残躯仍在最后等待。",
+        "",
+        "&6战果转用&r",
+        "冰牢压轴后转入机械战区。先盘点武器、护甲、技能和携行维修，避免带着半套战备进入总攻。",
+        "战场原生掉落自行拾取；下一项军需结算另行领取。"
+      ],
+      "icon": "cataclysm:cursium_ingot",
+      "subtitle": "冰牢",
+      "x": 10.2,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000C6CA2BB855F3"
+      ],
+      "tasks": [
+        {
+          "id": "000D2E9A89B33530",
+          "type": "kill",
+          "entity": "cataclysm:maledictus",
+          "value": 1L
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 196,
+          "team_reward": false,
+          "id": "000CE11496703328"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00015BA0B43BD206",
+      "title": "旧世已服，轮到钢铁",
+      "description": [
+        "【战略目标】咒翼灵骸化为战果，旧世武道不再挡在你的军团前。",
+        "【讨伐作业】上一场正式胜利完成后自动结算本次战果。",
+        "【情报与机制】先领取压轴前的军资与饰品，再向白瞳君王Herobrine发出挑战。它才是诸王篇的最后一场。",
+        "【掠夺战果】军资已拨付；下一项继续征伐，相关支线可自行选择。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 收藏家毕业 · 武库服务王座\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000D1A343506AAE3\"}}",
+        "{\"text\": \"→ 为远征留一套回收工具\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E484EE790A548\"}}",
+        "{\"text\": \"→ 诸王之上，还有白瞳之王\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000843B54CC9C42A\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/throne.png"
+        }
+      },
+      "subtitle": "",
+      "x": 6.8,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000C3C0DFAE93BDE"
+      ],
+      "tasks": [
+        {
+          "id": "0000E81C7A4FB18B",
+          "type": "custom",
+          "title": "上一场正式胜利完成后自动结算本次战果。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 40,
+          "team_reward": false,
+          "id": "0007A325EA7D04DD"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 64,
+          "team_reward": false,
+          "id": "000D1C052C2CC64B"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:netherite_scrap",
+          "count": 4,
+          "team_reward": false,
+          "id": "000548B0CF8FFD4C"
+        },
+        {
+          "type": "choice",
+          "table_id": 3723869106617882L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "精锐军需 · 三选一",
+          "id": "000C695A566BBC6C"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00027BA9E63CB8A9",
+      "title": "圣堂之前，先看失守的庇护所",
+      "description": [
+        "【战略目标】真菌已占据旧时代的救治设施。圣堂还在宣称秩序，却没能守住它要保护的人。你要直接夺取能够继续作战的武装。",
+        "【讨伐作业】抵达真菌医院结构范围。",
+        "【情报与机制】不用把一次到访写成解救全部幸存者；设施搜刮与感染清剿在远征支线展开。",
+        "【掠夺战果】下一道命令：击溃堕落圣骑。"
+      ],
+      "icon": "kubejs:spore_coin",
+      "subtitle": "",
+      "x": 6.8,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0006FE07EFAEE1EC"
+      ],
+      "tasks": [
+        {
+          "id": "000F03A106AE34B6",
           "type": "structure",
           "structure": "spore:hospital"
         }
@@ -185,545 +855,69 @@
       "rewards": [
         {
           "type": "xp",
-          "xp": 30,
+          "xp": 20,
           "team_reward": false,
-          "id": "00020821EFADA7C3"
+          "id": "000D88F25B80DECC"
         },
         {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，这里曾是避难处，如今也是前线。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
+          "type": "item",
+          "item": "minecraft:golden_carrot",
+          "count": 8,
           "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0009B84279990D81"
+          "id": "000894E8ED0D1B2D"
         }
       ],
       "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
     },
     {
-      "id": "000CC6934EF0022F",
-      "title": "实验室的门",
+      "id": "0000C343755517FE",
+      "title": "诸王已服 · 开启机械总攻",
       "description": [
-        "【教学目标】到达真菌设施调查的关键地点。",
-        "【作业】到访真菌实验室。",
-        "【提示】前线战斗与监狱/医院任一侦察完成后继续；没有虚构档案收集。",
-        "【讲评】冒险者，你已经走到了更深处。"
+        "【战略目标】咒翼灵骸与白瞳君王已经倒下，旧世诸王的武道与符文遗产正式归库。接下来让钢铁军团交出天基武库。",
+        "【讨伐作业】阶段Ⅲ压轴胜利及战果结算后自动完成。",
+        "【情报与机制】共生主导、顶阶鉴定和技能整备是可选增援；不会用全鉴毕业卡住机械战区。",
+        "【掠夺战果】诸王篇压轴已过，机械三巨头的导航、索敌与武库权限成为下一组目标。"
       ],
-      "icon": "minecraft:shield",
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/command.png"
+        }
+      },
       "subtitle": "",
-      "x": 7.5,
-      "y": 0.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0003CE6BD9078AB5",
-        "000AB435FC3F33F0"
-      ],
-      "tasks": [
-        {
-          "id": "000F52FEBC065E26",
-          "type": "structure",
-          "structure": "spore:lab"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "000B0C4E37A31EC8"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你已经走到了更深处。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00020ECA47808021"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false,
-      "dependency_requirement": "one_completed"
-    },
-    {
-      "id": "0006E95A2E74B63C",
-      "title": "扼住增殖点",
-      "description": [
-        "【教学目标】认识肉丘这一敌方单位。",
-        "【作业】本节点开放后击败肉丘1只。",
-        "【提示】目标spore:mound；不承诺实验室内必有，不把单只击杀称清空全球感染。",
-        "【讲评】冒险者，至少这一次，它不能继续向前。"
-      ],
-      "icon": "minecraft:shield",
-      "subtitle": "",
-      "x": 10.0,
-      "y": 0.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "000CC6934EF0022F"
-      ],
-      "tasks": [
-        {
-          "id": "000EE516980FD444",
-          "type": "kill",
-          "entity": "spore:mound",
-          "value": 1L
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "000E1807F23EDB6D"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，至少这一次，它不能继续向前。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000C4E84523DCDC5"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0005FA094011A5B9",
-      "title": "工厂里的旧日战争",
-      "description": [
-        "【教学目标】进入第一场代表战的自然场地。",
-        "【作业】到访远古工厂。",
-        "【提示】先核激活材料、入口与失败重试；如该战位换人，此到访改为可选。",
-        "【讲评】冒险者，接下来先看清它怎样出手。"
-      ],
-      "icon": "minecraft:shield",
-      "subtitle": "",
-      "x": 12.5,
-      "y": 0.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0006E95A2E74B63C"
-      ],
-      "tasks": [
-        {
-          "id": "00092429596AE1B0",
-          "type": "structure",
-          "structure": "cataclysm:ancient_factory"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "000D8590D16E1F53"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，接下来先看清它怎样出手。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000C20DCC3E9FF9F"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0003D726265FAB91",
-      "title": "先驱者",
-      "description": [
-        "【教学目标】用不同于精英战的应对完成代表战。",
-        "【作业】击败先驱者。",
-        "【提示】此目标尚未开放。暂以现有灾变目标占位；若Nightfall/WOC更适合，用户批后以替换方式移走本必打，不叠加。",
-        "【讲评】冒险者，准备是否有用，战斗会告诉你。"
-      ],
-      "icon": "minecraft:shield",
-      "subtitle": "尚未开放",
-      "x": 12.5,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0005FA094011A5B9"
-      ],
-      "tasks": [
-        {
-          "id": "0000E1E9E20724E5",
-          "type": "custom",
-          "title": "尚未开放·击败先驱者。"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "00026275E37997B1"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，准备是否有用，战斗会告诉你。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "00081300741CDEA7"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000C11C78E5C50BC",
-      "title": "猎人与兽",
-      "description": [
-        "【教学目标】打完整一场改变形态的代表战。",
-        "【作业】完成从人形开始的有效加斯科因战斗；正常变身路线须判兽形最终死亡。",
-        "【提示】此目标尚未开放。人形变身移除不算死亡；若原生允许正常击杀跳过变身，实测后按正常终结认可，不强迫重打。单独召兽形/别处兽血不冒充此战。",
-        "【讲评】冒险者，你应对的不只是更强的数值，而是变化后的对手。"
-      ],
-      "icon": "minecraft:shield",
-      "subtitle": "尚未开放",
-      "x": 10.0,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0003D726265FAB91"
-      ],
-      "tasks": [
-        {
-          "id": "000967BBD3B1998C",
-          "type": "custom",
-          "title": "尚未开放·完成从人形开始的有效加斯科因战斗；正常变身路线须判兽形最终死亡。"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "0005D5E902B25118"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你应对的不只是更强的数值，而是变化后的对手。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0004CD682E0E1764"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000FBAFF06B5C89F",
-      "title": "燃烧竞技场",
-      "description": [
-        "【教学目标】到达这一段的决斗场。",
-        "【作业】到访燃烧竞技场。",
-        "【提示】走原生自然场地；未核原生点火/再召材料前，不复制其他包攻略。",
-        "【讲评】冒险者，下一场靠你自己的准备。"
-      ],
-      "icon": "minecraft:shield",
-      "subtitle": "",
-      "x": 7.5,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "000C11C78E5C50BC"
-      ],
-      "tasks": [
-        {
-          "id": "00014D07237028C1",
-          "type": "structure",
-          "structure": "cataclysm:burning_arena"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "0008207BFEAFFA6F"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，下一场靠你自己的准备。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000AD57E5F46F637"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000EFD528821B67D",
-      "title": "伊格尼斯",
-      "description": [
-        "【教学目标】完成盾、连段与阶段变化的代表战。",
-        "【作业】击败伊格尼斯。",
-        "【提示】此目标尚未开放。格挡/闪避建议以本包看样为准，不照搬DOTE旧EF判定；如移为终局，本战位换人。",
-        "【讲评】冒险者，读懂一次出招，往往比多打一刀更有用。"
-      ],
-      "icon": "minecraft:shield",
-      "subtitle": "尚未开放",
-      "x": 5.0,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "000FBAFF06B5C89F"
-      ],
-      "tasks": [
-        {
-          "id": "000DC3BDAB3299B1",
-          "type": "custom",
-          "title": "尚未开放·击败伊格尼斯。"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "00014BA00188A296"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，读懂一次出招，往往比多打一刀更有用。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0001C9FB945B1CE3"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "00000E5F3C730477",
-      "title": "大教堂前",
-      "description": [
-        "【教学目标】把调查线推到真菌大型据点。",
-        "【作业】到访真菌大教堂。",
-        "【提示】不是天然母巢保证，也不要求清空结构内一切生物。",
-        "【讲评】冒险者，你已经知道反攻要往哪里去。"
-      ],
-      "icon": "minecraft:shield",
-      "subtitle": "",
-      "x": 2.5,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "000EFD528821B67D"
-      ],
-      "tasks": [
-        {
-          "id": "0009CF39DE047AC9",
-          "type": "structure",
-          "structure": "spore:cathedral"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "000B624C6F49EC0D"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你已经知道反攻要往哪里去。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000ABC9749F0C880"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "0005CCDCA4845E1B",
-      "title": "合作",
-      "description": [
-        "【教学目标】达到反攻前的共生成长。",
-        "【作业】本队至少一名成员达到COOPERATIVE或更高。",
-        "【提示】复用J07事实；不复制个人档案，不要求所有成员同时达标，不奖励故意失控。",
-        "【讲评】冒险者，你们的默契已经能支撑更远的路。"
-      ],
-      "icon": "minecraft:shield",
-      "subtitle": "",
-      "x": 0.0,
-      "y": 3.5,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "00000E5F3C730477"
-      ],
-      "tasks": [
-        {
-          "id": "000885CB83AE12A6",
-          "type": "custom",
-          "title": "本队至少一名成员达到COOPERATIVE或更高。"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "000D15694254B4CF"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，你们的默契已经能支撑更远的路。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0004CAFA8BBEAFF4"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "000402B476FC579B",
-      "title": "带着路线返回",
-      "description": [
-        "【教学目标】让这一段远征真正收束到据点。",
-        "【作业】返回主世界一座至少有3名村民的村庄，在村庄识别范围内停留。",
-        "【提示】本次玩家回到有效村庄区域才算；不以一直在家的队友代交，不要求新建村庄。",
-        "【讲评】冒险者，反攻路线已经带回家了。"
-      ],
-      "icon": "minecraft:shield",
-      "subtitle": "",
-      "x": 0.0,
-      "y": 7.0,
-      "size": 1.0,
-      "shape": "circle",
-      "dependencies": [
-        "0005CCDCA4845E1B"
-      ],
-      "tasks": [
-        {
-          "id": "000349B5779BF498",
-          "type": "custom",
-          "title": "返回主世界一座至少有3名村民的村庄，在村庄识别范围内停留。"
-        }
-      ],
-      "rewards": [
-        {
-          "type": "xp",
-          "xp": 30,
-          "team_reward": false,
-          "id": "000851358349DBFC"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，反攻路线已经带回家了。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "000F0C412AB1CEAF"
-        }
-      ],
-      "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
-      "ignore_reward_blocking": false
-    },
-    {
-      "id": "00083052EF81988F",
-      "title": "天灾防线",
-      "description": [
-        "【教学目标】汇总据点调查、三场代表战与共生成长。",
-        "【作业】完成真菌调查主路、三场获批代表战、合作阶段并回到据点。",
-        "【提示】八座灾变不全必打；双终局候选留给Ⅳ，不在本章提前设必打领奖。",
-        "【讲评】冒险者，下一次远征将以反攻为目标。"
-      ],
-      "icon": "minecraft:nether_star",
-      "subtitle": "",
-      "x": 2.5,
-      "y": 7.0,
+      "x": 6.8,
+      "y": 16.8,
       "size": 1.15,
       "shape": "diamond",
       "dependencies": [
-        "000402B476FC579B"
+        "000BFF49E704E4C8"
       ],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0001A8442F2B9092",
+          "type": "custom",
+          "title": "阶段Ⅲ压轴胜利及战果结算后自动完成。"
+        }
+      ],
       "rewards": [
         {
           "type": "xp",
-          "xp": 30,
+          "xp": 20,
           "team_reward": false,
-          "id": "0008BA1124D24CB2"
+          "id": "00081A39B11E1DC3"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 64,
+          "team_reward": false,
+          "id": "0004935DE1C55F10"
         },
         {
           "type": "command",
@@ -732,25 +926,338 @@
           "silent": true,
           "team_reward": false,
           "auto": "enabled",
-          "title": "阶段授予",
-          "id": "000678E2518656CC"
-        },
-        {
-          "type": "command",
-          "command": "tellraw {p} {\"text\": \"冒险者，下一次远征将以反攻为目标。\", \"color\": \"gray\"}",
-          "elevate_perms": true,
-          "silent": true,
-          "team_reward": false,
-          "auto": "enabled",
-          "title": "完成讲评",
-          "id": "0002616F431B36BF"
+          "title": "征伐阶段记录",
+          "icon": {
+            "id": "ftbquests:custom_icon",
+            "Count": 1,
+            "tag": {
+              "Icon": "svs:textures/quest/emblems/crown.png"
+            }
+          },
+          "id": "000BA90404B20C06"
         }
       ],
       "optional": false,
-      "hide_until_deps_complete": false,
-      "hide_until_deps_visible": false,
-      "hide_details_until_startable": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
       "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BE362D7855D7C",
+      "title": "龙骑增援 · 远征补给入库",
+      "description": [
+        "【战略目标】制空伙伴已经通过真实驯服进入你的军团。额外补给支持诸王远征，不要求牺牲自己的龙。",
+        "【讨伐作业】对应支线成果与主线战区均已开放后自动结算。",
+        "【情报与机制】增援为可选收益；下一场主线不要求等齐所有增援。",
+        "【掠夺战果】领取军资后继续本战区征伐。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ 王权必须握在新王手里\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"0006FE07EFAEE1EC\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/emblems/fortress.png"
+        }
+      },
+      "subtitle": "独立目标",
+      "x": 3.4,
+      "y": 0.0,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000E2F644C7A0B62",
+        "000FC442CC3C2E22"
+      ],
+      "tasks": [
+        {
+          "id": "0003AB581FBEA7EA",
+          "type": "custom",
+          "title": "对应支线成果与主线战区均已开放后自动结算。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 20,
+          "team_reward": false,
+          "id": "00013EC908300613"
+        },
+        {
+          "type": "item",
+          "item": "minecraft:golden_carrot",
+          "count": 16,
+          "team_reward": false,
+          "id": "0004D5E0B867B689"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 32,
+          "team_reward": false,
+          "id": "000BE03F016D096D"
+        },
+        {
+          "type": "choice",
+          "table_id": 3880405831076903L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "远征行装 · 三选一",
+          "id": "00036E4E9EA5F7F8"
+        }
+      ],
+      "optional": true,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000843B54CC9C42A",
+      "title": "诸王之上，还有白瞳之王",
+      "description": [
+        "【战略目标】你已击溃咒翼灵骸，却还不能宣布旧世诸王尽数伏诛。白瞳君王Herobrine握着黑曜符文与雷暴，他将成为诸王篇真正的终点。",
+        "【讨伐作业】阅读本次压轴征伐命令，确认后准备原生召唤仪式。",
+        "【情报与机制】在本包叙事中，他是旧纪元最深处的武道王者，并非真菌造物，也不是另一位天外来客。夺取他的符文兵刃，才能把诸王篇的战果带入机械总攻。",
+        "【掠夺战果】压轴挑战就绪；战绩以原生最终胜利进度为准。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/boss/lb_herobrine.png"
+        }
+      },
+      "subtitle": "",
+      "x": 3.4,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00015BA0B43BD206"
+      ],
+      "tasks": [
+        {
+          "id": "0001E44115EFB8FE",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "00094CB88A6FBEA1",
+      "title": "仪式整备 · 白瞳君王·Herobrine",
+      "description": [
+        "【战略目标】用旧世界留下的仪式把对手唤到你选定的战场。",
+        "【讨伐作业】持有本项所列材料；任务不扣除，仪式消耗由模组原生处理。",
+        "【情报与机制】底层铺3×3金块，上层中央下界岩，东南西北四个相邻格放红石火把。",
+        "【掠夺战果】材料已备，按下面步骤起战；取得材料不代表已经召出或战胜首领。",
+        "",
+        "&6召唤步骤&r",
+        "底层铺3×3金块，上层中央下界岩，东南西北四个相邻格放红石火把。",
+        "用打火石或火焰弹点燃中央下界岩。仪式会消耗祭坛材料；中途破坏可中断。",
+        "在远离基地的开阔独立场地召唤。二阶段凋灵骷髅在mobGriefing开启时可能破坏地形。"
+      ],
+      "icon": "minecraft:gold_block",
+      "subtitle": "",
+      "x": 0.0,
+      "y": 12.600000000000001,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "000843B54CC9C42A"
+      ],
+      "tasks": [
+        {
+          "id": "000E718869B99DD8",
+          "type": "item",
+          "item": "minecraft:gold_block",
+          "count": 9L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "000923B177DA92BC",
+          "type": "item",
+          "item": "minecraft:netherrack",
+          "count": 1L,
+          "consume_items": false,
+          "match_nbt": false
+        },
+        {
+          "id": "0009995B59B06150",
+          "type": "item",
+          "item": "minecraft:redstone_torch",
+          "count": 4L,
+          "consume_items": false,
+          "match_nbt": false
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "0000C8A3B42A3254",
+      "title": "LB01 · 白瞳君王·Herobrine",
+      "description": [
+        "【战略目标】你已击溃咒翼灵骸，却还不能宣布旧世诸王尽数伏诛。白瞳君王Herobrine握着黑曜符文与雷暴，他将成为诸王篇真正的终点。",
+        "【讨伐作业】完成白瞳君王·Herobrine的原生最终胜利进度。",
+        "【情报与机制】三阶段战斗与终场演出完成后结算。转阶段、分身消失和演出开始都不算最终胜利。",
+        "【掠夺战果】诸王战果正式收束。Herobrine之刃从原生战利品中取得，星图另拨军资与技法，接下来夺取钢铁军团的天基武库。",
+        "",
+        "&6三阶段情报&r",
+        "开场：白瞳剑士使用瞬身与反击。看到蓄势再决定短连段，不以长时间锁定站桩硬换。",
+        "生命降至66%：转为符文战士，出现凋灵骷髅弹幕与黑曜攻势；转阶段演出期间无法正常伤害。",
+        "生命降至33%：狂暴形态带来陨石雨与黑曜审判。吸引与红圈出现时优先撤出，再把握出招后的窗口。",
+        "",
+        "&6原生召唤&r",
+        "底层铺3×3金块，上层中央下界岩，东南西北四个相邻格放红石火把。",
+        "用打火石或火焰弹点燃中央下界岩。仪式会消耗祭坛材料；中途破坏可中断。",
+        "在远离基地的开阔独立场地召唤。二阶段凋灵骷髅在mobGriefing开启时可能破坏地形。",
+        "",
+        "&6当前战斗设置&r",
+        "本包使用作者MODDED档，保留原生招式与伤害。纸面基础生命3200、护甲75，并非本包运行时测量结果。",
+        "战斗附近会限制飞行。地面移动、技能与原生攻击的实际配合由你在独立测试世界验收。",
+        "",
+        "&6战果与后续&r",
+        "诸王战果正式收束。Herobrine之刃从原生战利品中取得，星图另拨军资与技法，接下来夺取钢铁军团的天基武库。",
+        "原生进度由模组终场授予当时仍追踪首领条的玩家；不以最终一刀限定全队奖励。",
+        "",
+        "&b相关路线&r",
+        "{\"text\": \"→ T0赏格 · 王权名器\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"00093BB83A1CFA2D\"}}",
+        "{\"text\": \"→ 为远征留一套回收工具\", \"underlined\": true, \"color\": \"aqua\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"000E484EE790A548\"}}"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/boss/lb_herobrine.png"
+        }
+      },
+      "subtitle": "主线压轴候选 · 实际EF交互待独立测试",
+      "x": 0.0,
+      "y": 16.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "00094CB88A6FBEA1"
+      ],
+      "tasks": [
+        {
+          "id": "0005D3BA7FE422E3",
+          "type": "advancement",
+          "advancement": "legendarybosses:herobrine_slayer"
+        }
+      ],
+      "rewards": [],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    },
+    {
+      "id": "000BFF49E704E4C8",
+      "title": "战果结算 · 白瞳君王·Herobrine",
+      "description": [
+        "【战略目标】诸王战果正式收束。Herobrine之刃从原生战利品中取得，星图另拨军资与技法，接下来夺取钢铁军团的天基武库。",
+        "【讨伐作业】原生最终胜利完成后自动结算。",
+        "【情报与机制】首领原生装备在战场拾取；本项只拨付下一段军需，不再复制一份同样的Boss武器。",
+        "【掠夺战果】军资到账，继续下一段王途。"
+      ],
+      "icon": {
+        "id": "ftbquests:custom_icon",
+        "Count": 1,
+        "tag": {
+          "Icon": "svs:textures/quest/boss/lb_herobrine.png"
+        }
+      },
+      "subtitle": "",
+      "x": 3.4,
+      "y": 16.8,
+      "size": 1.0,
+      "shape": "circle",
+      "dependencies": [
+        "0000C8A3B42A3254"
+      ],
+      "tasks": [
+        {
+          "id": "0008EFAF2B1889FD",
+          "type": "custom",
+          "title": "原生最终胜利完成后自动结算。"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "xp": 240,
+          "team_reward": false,
+          "id": "0008AF6CF6BCEBE2"
+        },
+        {
+          "type": "item",
+          "item": "kubejs:spore_coin",
+          "count": 96,
+          "team_reward": false,
+          "id": "000314DC01053E65"
+        },
+        {
+          "type": "item",
+          "item": "tconstruct:manyullyn_ingot",
+          "count": 8,
+          "team_reward": false,
+          "id": "000CD5F42131C6E8"
+        },
+        {
+          "type": "choice",
+          "table_id": 2286807384712760L,
+          "team_reward": false,
+          "auto": "disabled",
+          "exclude_from_claim_all": true,
+          "title": "王权技法 · 任选一",
+          "id": "000B2B2EE573C7B2"
+        }
+      ],
+      "optional": false,
+      "hide_until_deps_complete": true,
+      "hide_until_deps_visible": true,
+      "hide_details_until_startable": true,
+      "hide_dependency_lines": false,
+      "ignore_reward_blocking": false
+    }
+  ],
+  "images": [
+    {
+      "x": 6.8,
+      "y": -3.4,
+      "width": 17.6,
+      "height": 3.0,
+      "image": "svs:textures/quest/banners/throne.png",
+      "alpha": 180,
+      "order": -100,
+      "hover": [
+        "Ⅲ乙 · 诸王神权"
+      ],
+      "click": "",
+      "dev": false,
+      "corner": false
     }
   ]
 }

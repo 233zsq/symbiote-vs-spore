@@ -1,0 +1,13 @@
+name = "Silence's Turrets"
+filename = "silence_s_turrets-2.14.0-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8931/548/silence_s_turrets-2.14.0-forge-1.20.1.jar"
+hash-format = "sha512"
+hash = "171849172838c77c2cc5a61a08eb0db9f501a0887b9d0e8a59599b93051c502acd70df57d9e939c6cccbac40e7cce4e17676b4f6789a52ebeacc3a8c8d633783"
+
+[update]
+[update.curseforge]
+file-id = 8931548
+project-id = 873924

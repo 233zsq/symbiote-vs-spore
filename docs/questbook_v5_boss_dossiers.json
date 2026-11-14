@@ -1,0 +1,352 @@
+{
+  "M01": {
+    "lore": "荒野首先要学会畏惧你的刀。锐爪兽是血肉筑基的第一份猎物：它的甲壳、利爪与鳞片，让首次远征能够接上真正的装备制作，而不是只在星图上留一个勾。",
+    "tactics": "首猎先观察追击距离，保持可撤出的侧向空间；一次只试短连段，确认收招后再追加。",
+    "structure": "monsterexpansion:rhyza_structure",
+    "location": "锐爪兽栖地",
+    "icon_candidate": "monsterexpansion:rhyza_claw"
+  },
+  "M02": {
+    "lore": "岩壳巨兽把自己的躯体变成了荒野中的堡垒。拆开这座移动山岳，是你从猎食者走向筑城者的标志；厚重甲壳的用途在装备配方中，不在一句空泛的永久强化承诺里。",
+    "tactics": "留足转身与后撤空间，别在狭窄洞口与巨兽互相挤压。先试清一次进攻后的安全距离，再决定用轻刀周旋还是重武器换取输出窗口。",
+    "structure": "monsterexpansion:rakoth_structure",
+    "location": "岩壳巨兽栖地",
+    "icon_candidate": "monsterexpansion:rakoth_carapace"
+  },
+  "M03": {
+    "lore": "雷暴巨虫守着荒漠中的远征通路。你要夺走的是这片土地的主动权，星图所说的雷心是征伐目标的称谓，不是一件凭空出现的通用电池。",
+    "tactics": "提前标记沙地上的退路，关注地下与远处的动静；在开阔地交战，避免把相机锁进巨大躯体。本项只记录本体，部位不计。",
+    "structure": "",
+    "location": "荒漠生态线索",
+    "icon_candidate": "minecraft:lapis_lazuli"
+  },
+  "M04": {
+    "lore": "镇山大王以山岭为王座，把矿路和要道视为私产。你的扩张不需要他的许可；正面击倒这个旧主，让陆路远征向更远的据点延伸。",
+    "tactics": "力量型对手面前不要用连续贪刀交换全部耐力。给自己留一次撤离或防御的余量，再观察下一轮进攻。",
+    "structure": "",
+    "location": "山岭军阀据点",
+    "icon_candidate": "jerotesvillage:tyrant_of_the_mountain_realm_helmet_plume"
+  },
+  "M05": {
+    "lore": "蛇龙执战者代表古族的武力边界。它与镇山大王不是同一种考题：你将以自己的武技撕开封锁，把古族的勋章与武装传统收进战果清单。",
+    "tactics": "先辨认连续进攻何时真正结束；贴身绕行、后撤和格挡各试一次，选适合当前武器的应对，不把第一下闪避成功当作整套攻击结束。",
+    "structure": "",
+    "location": "古族边疆线索",
+    "icon_candidate": "jerotesvillage:serpon_combat_executer_medal"
+  },
+  "M06": {
+    "lore": "云筑魔像是旧文明留下的动力巨像。你来这里拆走旧世遗产，为要塞扩张寻找新的军工方向；空气符文与大气之靴是现有战利品线索，真实炮塔升级另有军工作业。",
+    "tactics": "场地边缘与高低差可能比攻击本身更危险。进入前确认可站稳的位置和返程点，以实际接地状态判断远程规则，勿凭名字推断飞行能力。",
+    "structure": "legendary_monsters:cloudy_temple",
+    "location": "云端神殿",
+    "icon_candidate": "legendary_monsters:air_rune"
+  },
+  "M07": {
+    "lore": "沉默的重卫仍守着古迹，即使它效忠的时代早已消亡。击穿这道旧世防线，让据点的兵器与遗迹资源不再隔着一名无名守卫。",
+    "tactics": "把这场战斗当作耐心的立回：先看武器覆盖范围，再找恢复耐力的位置。重装外形不等于任何攻击都能被同一种格挡接住。",
+    "structure": "",
+    "location": "古迹守卫线索",
+    "icon_candidate": "eeeabsmobs:guardian_axe"
+  },
+  "M08": {
+    "lore": "冰海亡灵舰长仍占据覆灭舰队的军火库。科妮莉亚让征伐从陆路走向深海；你要带回的不只是战绩，还有潜水装备与海洋战利品的下一条取得线。",
+    "tactics": "水域出征先解决呼吸、照明、移动与回收物品的问题。本包未开放该模组自然生成，等待受控挑战入口，不要为一条任务在冰海无限寻找。",
+    "structure": "",
+    "location": "冰海舰队·受控入口待开放",
+    "icon_candidate": "aquamirae:frozen_key"
+  },
+  "M09": {
+    "lore": "旧时代的王牌猎手将你与共生体视作猎物。反杀布莱德，是向旧世宣告猎场已经易主，也是从疆域扩张迈入夺火与夺权的转折。",
+    "tactics": "人形决斗先稳定视角，观察连段方向与追击。不要在失去锁定后盲目连按；先重新取得站位，再用熟悉的一套短连段夺回主动。",
+    "structure": "",
+    "location": "猎手挑战入口",
+    "icon_candidate": "nightfall_invade:disaster_fragment_red"
+  },
+  "M10": {
+    "lore": "赫尔瓦是夺火征途的第一道重甲防线。狱火不能靠一句任务奖励收入囊中，你要先击穿骑士的阵地，再向龙心与原初之火进军。",
+    "tactics": "下界远征先准备返回路线和可持续补给。面对重甲骑士，试探武器收招与移动的间隔，别让一次进攻耗光所有耐力。",
+    "structure": "block_factorys_bosses:underworld_arena",
+    "location": "冥界竞技场",
+    "icon_candidate": "block_factorys_bosses:knight_sword"
+  },
+  "M11": {
+    "lore": "阿什洛德将焦土上空化作自己的猎场。斩落这头炼狱飞龙，夺火三战才能逼近真正的火种；龙骨与龙首也为军械库开启另一条大型猎物材料线。",
+    "tactics": "抬头观察与地面退路要同时保留。按目标当时的飞行、接地和水中状态选择远程手段；场地着火时先撤离危险区域，再继续输出。",
+    "structure": "block_factorys_bosses:dragon_tower",
+    "location": "炼狱龙塔",
+    "icon_candidate": "block_factorys_bosses:dragon_bone"
+  },
+  "M12": {
+    "lore": "提洛斯回响把原初之火握在手中。你将以近战与现有辅助法术跨过这场半神之战；战后的余烬、魂片与武器是可查的战果，劫火军工仍须完成真实运用目标。",
+    "tactics": "先认识场地中的持续危险与可停留区域，再决定何时靠近。法术只使用本包允许的项目；不要照原版攻略准备已经被禁用的治疗与控制。",
+    "structure": "",
+    "location": "原初受火者挑战线索",
+    "icon_candidate": "irons_spellbooks:cinder_essence"
+  },
+  "M13": {
+    "lore": "圣堂的遗产落在走火入魔的旧圣骑手中。你无意替他守住一个失败的时代；夺下圣堂武装，为后续王权远征补足另一种军械选择。",
+    "tactics": "观察盾与武器的朝向，先寻找可以恢复和重整的位置。武器的破甲、姿态与耐力消耗要一起考虑，避免只盯面板攻击。",
+    "structure": "legendary_monsters:soul_fortress_remains",
+    "location": "灵魂要塞遗迹",
+    "icon_candidate": "legendary_monsters:corrupted_soul"
+  },
+  "M14": {
+    "lore": "卡玛斯用亡骸维系自己的王座。将这个旧主赶下死亡之座，是夺权远征的一环；精华、诅咒之魂与誓约兵器会把这一战接入军械的后续用途。",
+    "tactics": "不要被场上多个目标拉散节奏。留出处理周边威胁和重新定位首领的余地，再选择进攻窗口；战果不自动授予复活能力。",
+    "structure": "",
+    "location": "冥骸王座线索",
+    "icon_candidate": "dungeons_and_combat:essence_of_kamath"
+  },
+  "M15": {
+    "lore": "苏蕾娅试图让辉光覆盖一切。折断永昼之翼，是把又一位旧日统治者纳入征服名册；神血、精华与日出之剑提供了比“获得太阳权柄”更具体的装备去向。",
+    "tactics": "空地变化时先确认目标位置和场地边界。短暂退出近身距离整理相机，并不等于放弃进攻；本任务不改变世界时间。",
+    "structure": "",
+    "location": "永昼神权挑战线索",
+    "icon_candidate": "dungeons_and_combat:essence_of_sunleia"
+  },
+  "M16": {
+    "lore": "Melkor把自己藏进时之狭间，却无法从你的征伐星图上消失。击败这个古老存在，是掠夺诸王遗产的一环；他的称号不会变成玩家随意操纵时间的按钮。",
+    "tactics": "准备一套自己已经熟练的武器与战技，再进入受控挑战。本包保持其自然生成关闭，入口开放后按入口提示备齐起战与再战材料。",
+    "structure": "",
+    "location": "时之狭间·受控入口待开放",
+    "icon_candidate": "souls_like_bosses:spear_of_melkor"
+  },
+  "M17": {
+    "lore": "咒翼灵骸汇聚旧时代的战魂与诅咒，挡在机械总攻之前。将它击溃，是对猎手、夺火和夺权远征的压轴检验；咒魂材料也把战绩接向后期装备。",
+    "tactics": "为长距离位移保留耐力，先看清追击与武器变化，再接近输出。不要因为它曾是旧版终局候选就提前结束旅程，大圣残躯仍在最后等待。",
+    "structure": "cataclysm:frosted_prison",
+    "location": "冰牢",
+    "icon_candidate": "cataclysm:cursium_ingot"
+  },
+  "M18": {
+    "lore": "MechX-12是机械防线的前锋。拆毁它，为你在天基武库方向建立第一份战绩；现有凋零合金线索可用于军械研究，导航信标功能须由真实模块兑现。",
+    "tactics": "机械竞技场里先检查遮挡与移动路线，别站在同一位置连续输出。远程武器能否生效继续服从本包现有规则。",
+    "structure": "woc_remastered:mechanic_arena",
+    "location": "机械竞技场",
+    "icon_candidate": "cataclysm:witherite_ingot"
+  },
+  "M19": {
+    "lore": "湮灭猎影负责在废墟间清除闯入者。终结它的自律猎杀，把眼晶与高阶材料纳入战果研究，为拆解终极构造体扫清侧翼。",
+    "tactics": "追击型敌人面前，先确认后撤是否真的拉开距离。用横向移动重新取得视野，再选择短窗口反击，别把长距离奔跑当作唯一防御。",
+    "structure": "",
+    "location": "湮灭机械战线",
+    "icon_candidate": "legendary_monsters:eye_crystal"
+  },
+  "M20": {
+    "lore": "湮灭构造体守着你要接管的终极武库。击碎它是夺械战的终点，却只是天基使用的起点：发射装备、弹药与首次有效打击仍要在军工任务中实际完成。",
+    "tactics": "按大型机械战准备足够空间与稳定补给。作战前确认退出路线，战后立即查看传送碎片等实际战利品用途，不要等待并不存在的自动核武奖励。",
+    "structure": "legendary_monsters:space_station",
+    "location": "空间站",
+    "icon_candidate": "legendary_monsters:portal_shard"
+  },
+  "M21": {
+    "lore": "泽尔塔同样觊觎统帅的王座。让这位巅峰武者承认你的刀，母巢总攻的旗帜才不会被另一位争王者夺去。",
+    "tactics": "这是一场考验熟练度的人形决斗。优先使用练过的连段与防御，不在终盘临时换上只看过面板的新兵器。",
+    "structure": "",
+    "location": "群星祭坛挑战线索",
+    "icon_candidate": "woc_remastered:zweiender"
+  },
+  "M22": {
+    "lore": "暗夜领主把旧日王权藏在永夜之中。你将斩落他，而不是继承他的退缩；这一战为通往母巢的征伐再除一个旧世堡垒。",
+    "tactics": "黑暗场景中保持可辨认的视角与返程准备。本包自然生成仍关闭，等待受控入口，不在世界里盲搜所谓永夜维度。",
+    "structure": "",
+    "location": "永夜王座·受控入口待开放",
+    "icon_candidate": "souls_like_bosses:dark_moon_greatsword"
+  },
+  "M23": {
+    "lore": "最后守望者亚尔特硫斯守着旧纪元的边界。你要跨越的是Nightfall的正式剑圣战位，而不是魂系支线里同样知名的狼骑，更不是高难试作替身。",
+    "tactics": "用清楚的锁定、收招与耐力管理迎接最后一场人形武技考验。不要让相似名字误导目标，也不要以试作形态的击杀替代正式战绩。",
+    "structure": "",
+    "location": "最后守望者正式挑战",
+    "icon_candidate": "efn:duskfire_ingot"
+  },
+  "M24": {
+    "lore": "界域戍卫是母巢总攻前最后一位常规强敌。将它击溃，你的炮塔阵地和远征军才有了向核心推进的叙事落点；驱动水晶与升级模板是具体的战后研究方向。",
+    "tactics": "在巨型目标面前先找到能看全动作的距离。进入未知区域前留下补给与回收点，不把一次抵达边界当作母巢已经启动。",
+    "structure": "eeeabsmobs:coreforge_ruins",
+    "location": "核心熔铸遗迹",
+    "icon_candidate": "eeeabsmobs:ancient_drive_crystal"
+  },
+  "S01": {
+    "lore": "沉降领主占据二轮墓穴，是独立异界远征的收束。它已退出主线门槛，你可以为了袍布、异界材料和另一场领主战随时回来。",
+    "tactics": "出征时先备好二轮入口与返程石，读地图抵达墓穴，再按领主棺的原生交互起战；不要把“持有传送石”当成已经成功归航。",
+    "structure": "jerotesvillage:sediment_catacombs",
+    "location": "沉降墓穴",
+    "icon_candidate": "jerotesvillage:sediment_lord_robe_pieces"
+  },
+  "S02": {
+    "lore": "加斯科因让猎人的追猎走向兽化。这里把人形到兽形视作同一场挑战，故事与奖励都围绕完整终局，而不是两枚可以分别刷出的击杀勾。",
+    "tactics": "留意形态变化后节奏和距离的变化，保留重整空间。当前完整场次检测未开放；单独召出兽形或人形变身移除都不能算全程胜利。",
+    "structure": "",
+    "location": "血源完整挑战入口",
+    "icon_candidate": "bloodandmadness:weapons/hunter_axe"
+  },
+  "S03": {
+    "lore": "钢铁守护者在古老石室中等待闯入者。它的巨斧与头盔让这条独立猎场同时通向武器和护甲收藏。",
+    "tactics": "不要正面把全部攻击换在厚甲上。先绕开覆盖范围，寻找出手后暴露的空当；石室里的站位比长时间连按更有价值。",
+    "structure": "mowziesmobs:wrought_chamber",
+    "location": "守护者石室",
+    "icon_candidate": "mowziesmobs:wrought_axe"
+  },
+  "S04": {
+    "lore": "霜冻巨兽把寒地变成了自己的领地。它的冰晶提供一种鲜明的战利品方向；你为独立狩猎出发，而不是为主线补一个必做数。",
+    "tactics": "准备可快速脱离近身压力的路线，避免在狭小地形被巨兽身体困住。观察冰霜危险区域后，再决定贴近或拉开。",
+    "structure": "mowziesmobs:frostmaw_spawn",
+    "location": "霜冻巨兽栖地",
+    "icon_candidate": "mowziesmobs:ice_crystal"
+  },
+  "S05": {
+    "lore": "通臂大师操纵岩石，守着自己的修行与试炼。他的登顶考验和独立讨伐是不同玩法；任务将两者分清，让法杖与地术装备有明确来源。",
+    "tactics": "原生登顶试炼要求按自己的规则行动，不能用飞行或传送替代。此讨伐席位记录首领战，登顶成功不冒充击杀。",
+    "structure": "mowziesmobs:monastery",
+    "location": "修行寺院",
+    "icon_candidate": "mowziesmobs:sculptor_staff"
+  },
+  "S06": {
+    "lore": "乌姆武提以太阳之名统御林地仪式。击败它可为收藏带回太阳面具，也让你体验一条与重甲巨兽完全不同的地区战线。",
+    "tactics": "关注首领与场上其他目标之间的位置关系，避免被多个方向夹击。移动时留意仪式场边界，选择能够持续周旋的位置。",
+    "structure": "mowziesmobs:umvuthana_grove",
+    "location": "太阳部族林地",
+    "icon_candidate": "mowziesmobs:sol_visage"
+  },
+  "S07": {
+    "lore": "荒古守卫者镇守着失落建筑，是旧世另一处独立宝库。锚柄等战果把这场讨伐接入传奇怪物的军械制作线。",
+    "tactics": "大型守卫面前先观察进攻方向，勿在狭窄建筑边角持续贪刀。整备回程工具，再向遗迹深处推进。",
+    "structure": "",
+    "location": "荒古遗迹线索",
+    "icon_candidate": "legendary_monsters:anchor_handle"
+  },
+  "S08": {
+    "lore": "海妖内拉基斯盘踞船只与深水猎场。海妖之牙让远洋征伐多了一条独立材料线，与科妮莉亚的主线舰队战分开记录。",
+    "tactics": "呼吸、落水后的上岸点和装备回收比多带一把武器更紧要。先找能重新站稳的位置，再与水中巨物交战。",
+    "structure": "block_factorys_bosses:kraken_ship",
+    "location": "海妖船只",
+    "icon_candidate": "block_factorys_bosses:kraken_tooth"
+  },
+  "S09": {
+    "lore": "伊格尼斯是燃烧竞技场的烈焰主宰。焰魔锭通向武装与套装研究，这场独立决斗也能为主线夺火之外提供另一份军械收益。",
+    "tactics": "先识别持盾与挥剑的不同进攻朝向，给连段末端留出观察时间。别把其他包的完美格挡判定照搬到当前EF版本。",
+    "structure": "cataclysm:burning_arena",
+    "location": "燃烧竞技场",
+    "icon_candidate": "cataclysm:ignitium_ingot"
+  },
+  "S10": {
+    "lore": "斯库拉是卫城风暴中的强敌。她保持独立猎场身份，风暴精华与泪晶为另一种后期装备方向提供理由，绝不与大圣终章重复结算。",
+    "tactics": "给快速位移留足空间，先重新定位目标再追加攻击。开战前整理场边退路，不把场地装饰误当作稳定掩体。",
+    "structure": "cataclysm:acropolis",
+    "location": "卫城",
+    "icon_candidate": "cataclysm:essence_of_the_storm"
+  },
+  "S11": {
+    "lore": "利维坦盘踞沉没古城，潮汐之爪与深渊之卵让这场海底讨伐同时通向武器与生态收藏。",
+    "tactics": "水下移动、呼吸和视野决定你是否能持续作战。准备上浮与返程手段，在实际水中状态下按本包远程规则选择武器。",
+    "structure": "cataclysm:sunken_city",
+    "location": "沉没之城",
+    "icon_candidate": "cataclysm:tidal_claws"
+  },
+  "S12": {
+    "lore": "先驱者是古代工厂的战争产物。其凋零合金块是肩炮与重工武器的重要研究线索；它是独立机械猎场，不挤占三场主线机械战。",
+    "tactics": "机械火力面前要同时规划横向移动与遮挡。起战按原生机械交互准备，战后把材料拆解与合成用途接到军械目录。",
+    "structure": "cataclysm:ancient_factory",
+    "location": "古代工厂",
+    "icon_candidate": "cataclysm:witherite_block"
+  },
+  "S13": {
+    "lore": "远古遗魂守在沙漠旧国的尽头。古代金属、残骸头骨和瓶中沙暴让这条独立猎场有不同于火焰军械的收藏价值。",
+    "tactics": "保持能看见大范围动作的距离，别把自己逼进沙漠遗迹的角落。战前检查起战物与失利后的再次挑战路径。",
+    "structure": "cataclysm:cursed_pyramid",
+    "location": "诅咒金字塔",
+    "icon_candidate": "cataclysm:remnant_skull"
+  },
+  "S14": {
+    "lore": "下界合金巨兽是地狱锻造的残留产物。地狱熔炉、熔岩能源与巨角会把一次讨伐连接到不同的兵器和材料用途。",
+    "tactics": "先确认熔岩边界和能稳定站立的平台，避免把输出窗口换成落入熔岩后的连锁损失。",
+    "structure": "cataclysm:soul_black_smith",
+    "location": "灵魂锻造厂",
+    "icon_candidate": "cataclysm:infernal_forge"
+  },
+  "S15": {
+    "lore": "末影守卫镇守破碎堡垒。守卫拳套是直接战利品路线的代表，与用材料合成的兵器需要分开理解。",
+    "tactics": "大范围打击面前优先保住移动空间，再选择近身窗口。用熟悉的防御与短连段逐步试探，不在角落硬拼。",
+    "structure": "cataclysm:ruined_citadel",
+    "location": "废弃堡垒",
+    "icon_candidate": "cataclysm:gauntlet_of_guard"
+  },
+  "S16": {
+    "lore": "暗夜巫妖是秘境高塔中的法术强敌，和主线的暗夜领主是两位不同的目标。古老源质与灵魂之星线索把它接向秘境收藏。",
+    "tactics": "观察空中目标与场上投射物，给移动留出连续空间。不要因为名字相似就把本场进度当成暗夜领主战绩。",
+    "structure": "bosses_of_mass_destruction:lich_tower",
+    "location": "巫妖高塔",
+    "icon_candidate": "bosses_of_mass_destruction:ancient_anima"
+  },
+  "S17": {
+    "lore": "下界铁掌守着下界秘境竞技场。它提供与常规人形首领不同的移动与范围判断考验，是独立秘境路线的一环。",
+    "tactics": "进入下界前留好返回点；首轮进攻先观察范围和落点，再决定何时贴近。场地边缘不是可靠的撤退路线。",
+    "structure": "bosses_of_mass_destruction:gauntlet_arena",
+    "location": "铁掌竞技场",
+    "icon_candidate": "bosses_of_mass_destruction:blazing_eye"
+  },
+  "S18": {
+    "lore": "黑曜巨石柱占据末地秘境。它让独立征伐从追猎活体转向处理古老构造体；自己的移动路线与场地观察同样属于备战。",
+    "tactics": "先看清末地平台的安全边界，再观察构造体的进攻区域。不要为追一次输出踏出可返回的平台。",
+    "structure": "bosses_of_mass_destruction:obsidilith_arena",
+    "location": "黑曜巨石柱竞技场",
+    "icon_candidate": "bosses_of_mass_destruction:obsidian_heart"
+  },
+  "S19": {
+    "lore": "虚空之花把地下秘境变成了高能猎场。晶果与虚空之刺为这条路线提供明确战果，与地表重甲决斗形成不同体验。",
+    "tactics": "注意地面危险与可停留区域，先取得连续的安全移动路径，再把输出接入进攻间隙。",
+    "structure": "bosses_of_mass_destruction:void_blossom",
+    "location": "虚空之花秘境",
+    "icon_candidate": "bosses_of_mass_destruction:void_thorn"
+  },
+  "S20": {
+    "lore": "古达是古战场回响中的第一种重兵器试炼。击败他与筹魂锻造古达斧枪是两件事，任务把战绩和兵器收藏各自记录。",
+    "tactics": "先熟悉长兵器覆盖的正面区域，保留撤离余量。封印石与自然野刷在本包禁用，等待正式定点或随机券挑战入口。",
+    "structure": "",
+    "location": "古战场受控入口",
+    "icon_candidate": "slu:gundyr_axespear"
+  },
+  "S21": {
+    "lore": "狼骑亚尔特留斯属于魂系古战场，与主线Nightfall最后守望者并非同一场战斗。为了他的武艺与兵器出征，不需要把它变成主线门槛。",
+    "tactics": "高速人形对手面前，先等完整收招再反击。入口开放后按实际挑战提示准备，别用相似姓名或另一实体代交。",
+    "structure": "",
+    "location": "古战场受控入口",
+    "icon_candidate": "slu:artorias_soul"
+  },
+  "S22": {
+    "lore": "盖尔把古战场的残酷带入这次独立试炼。你可以在主线之外比较自己的武器熟练度，战后再决定是否筹备对应魂武。",
+    "tactics": "长战需要稳定补给与耐力管理；不要在末段突然改变熟悉的打法。当前等待正式挑战入口，不要求管理命令游玩。",
+    "structure": "",
+    "location": "古战场受控入口",
+    "icon_candidate": "slu:gael_soul"
+  },
+  "S23": {
+    "lore": "远古战士提供另一种古战场兵器与武技的参照。它占据独立席位，和主线诸王的征服进度分开，供你在有余力时挑战。",
+    "tactics": "选择已经练熟的武器，先观察距离再尝试输出。魂类材料层级须按配方区分，基础魂不能当作高阶魂替代。",
+    "structure": "",
+    "location": "古战场受控入口",
+    "icon_candidate": "slu:ancient_warrior_helmet"
+  },
+  "S24": {
+    "lore": "猎龙铠甲是古战场重装试炼的末席。它既不是新增主线封印，也不是一套击杀后自动穿上的护甲；战绩、魂武和套装各按实际取得记录。",
+    "tactics": "对重甲长战先保住耐力与站位，再寻找适合当前武器的间隙。定点和随机券路线开放后再进行正式挑战。",
+    "structure": "",
+    "location": "古战场受控入口",
+    "icon_candidate": "slu:dragon_slayer_helmet"
+  },
+  "M25": {
+    "lore": "真菌把世界当作粮仓，你则把要塞军团的炮口对准母巢。先在前线建立补给和火力位置，再以真实的劫火与天基支援推进有限攻坚；这里的胜利是本场核心陷落，不是整个世界的感染被脚本抹去。",
+    "tactics": "整备弹药、回收与失败重试路径。炮塔补刀和队伍归属以正式事件规则结算，不能用附近同类怪物死亡填满战役进度。",
+    "structure": "",
+    "location": "母巢有限战役·尚未开放",
+    "icon_candidate": "spore:mutated_heart"
+  },
+  "M26": {
+    "lore": "齐天真魂早已远去，唯留不灭残躯与未散战意。平定此界之后，你将以君王之姿请求赐教，完整接下两阶段试炼；这不是讨伐真菌造物，而是承接异界至强者留下的武道传承。",
+    "tactics": "两阶段必须属于同一场正式战斗；第一阶段结束、测试体死亡或形态移除都不能完成终章。根器与金身奖励以正式结算为准。",
+    "structure": "",
+    "location": "齐天终章·正式入口尚未开放",
+    "icon_candidate": "minecraft:nether_star"
+  }
+}

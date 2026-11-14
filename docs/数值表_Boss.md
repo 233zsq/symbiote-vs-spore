@@ -1,6 +1,6 @@
 # Boss候选与表现评审入口
 
-> 2026-10-12离线整理。原“血量≥100”表移为工作簿独立页，旧文留在 archive/2026-10-12_资料更新前。本页不把HP筛选当Boss判定。统一源：data/制作资料汇总.json；完整资源/进度证据：[Boss更新表](SvS_Boss表_更新版.xlsx)。旧Boss原表仍被WPS占用，本轮不覆盖。
+> 2026-10-16离线整理。原“血量≥100”表移为工作簿独立页，旧文留在 archive/2026-10-12_资料更新前。本页不把HP筛选当Boss判定。统一源：data/制作资料汇总.json；完整资源/进度证据：[Boss更新表](SvS_Boss表_更新版.xlsx)。旧Boss原表作为历史参照保留，当前入口为更新版。
 
 ## 一、筛选与授权边界
 
@@ -38,7 +38,7 @@
 | eeeabsmobs | eeeabsmobs:nameless_guardian | 无名守卫者 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
 | irons_spellbooks | irons_spellbooks:dead_king | 死者之王 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
 | irons_spellbooks | irons_spellbooks:fire_boss | 提洛斯回响·原初受火者 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | 最终成功待核 | 入口/重试/多人待核 |
-| jerotesvillage | jerotesvillage:sediment_lord | 沉降领主 | Ⅱ二轮代表战候选；原生入口/重试待核 | 待用户看样；资源数量不评价品质 | jerotesvillage:overlord | 入口/重试/多人待核 |
+| jerotesvillage | jerotesvillage:sediment_lord | 沉降领主 | 支线二轮候选；不再卡主线；入口/重试待核 | 待用户看样；资源数量不评价品质 | jerotesvillage:overlord | 入口/重试/多人待核 |
 | legendary_monsters | legendary_monsters:ancient_guardian | 荒古守卫者 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_the_ancient_guardian | 入口/重试/多人待核 |
 | legendary_monsters | legendary_monsters:cloud_golem | 云筑魔像 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_cloud_golem | 入口/重试/多人待核 |
 | legendary_monsters | legendary_monsters:dune_sentinel | 沙丘哨兵 | 可选候选；未定必打 | 待用户看样；资源数量不评价品质 | legendary_monsters:defeat_dune_sentinel | 入口/重试/多人待核 |

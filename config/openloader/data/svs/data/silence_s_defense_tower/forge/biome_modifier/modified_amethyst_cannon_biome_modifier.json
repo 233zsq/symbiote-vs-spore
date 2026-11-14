@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [],
+  "spawners": {
+    "type": "silence_s_defense_tower:modified_amethyst_cannon",
+    "weight": 35,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

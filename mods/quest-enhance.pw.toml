@@ -1,0 +1,13 @@
+name = "FTB Quest Enhance"
+filename = "quest_enhance-1.20.1-forge-3.13.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9098/926/quest_enhance-1.20.1-forge-3.13.jar"
+hash-format = "sha512"
+hash = "63b332ecf66fd70b951b2f09f120889eb1277f5e70ca2f0fb2300de93820fdceee78fd02eca8e9582d01740e1d186d19fbcc96710a325ee105f3808cbac9020a"
+
+[update]
+[update.curseforge]
+file-id = 9098926
+project-id = 1610171

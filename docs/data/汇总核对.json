@@ -1,7 +1,7 @@
 {
   "counts": {
-    "jars": 215,
-    "declarations": 221,
+    "jars": 225,
+    "declarations": 230,
     "weapons_historical": 1354,
     "entities_historical": 877,
     "hostile_bucket": 489,
@@ -23,7 +23,7 @@
         ],
         [
           "仅资源候选",
-          32
+          33
         ]
       ]
     },
@@ -76,7 +76,7 @@
       "sheets": [
         [
           "全模组清单",
-          215
+          225
         ],
         [
           "用途统计",
@@ -89,9 +89,9 @@
     "current_history_only": 52,
     "legacy_only": 29
   },
-  "structure_files": 204,
-  "structure_keys": 201,
-  "structure_set_files": 144,
-  "structure_set_keys": 141,
-  "only_resource_weapon_candidates": 32
+  "structure_files": 215,
+  "structure_keys": 210,
+  "structure_set_files": 152,
+  "structure_set_keys": 149,
+  "only_resource_weapon_candidates": 33
 }

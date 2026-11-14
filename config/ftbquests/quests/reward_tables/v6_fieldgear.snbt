@@ -1,0 +1,29 @@
+{
+  "id": "000DC93563254C27",
+  "title": "远征行装 · 三选一",
+  "loot_size": 1,
+  "order_index": 7,
+  "rewards": [
+    {
+      "id": "000F30E50592F939",
+      "type": "item",
+      "item": "artifacts:running_shoes",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "000A184989026967",
+      "type": "item",
+      "item": "artifacts:umbrella",
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "000E5E344EDEAC6D",
+      "type": "item",
+      "item": "artifacts:night_vision_goggles",
+      "count": 1,
+      "team_reward": false
+    }
+  ]
+}

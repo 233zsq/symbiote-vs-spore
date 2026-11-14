@@ -1,0 +1,123 @@
+{
+  "source_revision": "6.1-legendarybosses-20261018",
+  "scope": "Planning only; no quest mutations",
+  "phases": [
+    {
+      "phase": "F0",
+      "priority": "P0",
+      "state": "next; actual construction not started",
+      "depends_on": [],
+      "output": "主支线／奖励／依赖矩阵与三处差异"
+    },
+    {
+      "phase": "F1",
+      "priority": "P1",
+      "state": "planned",
+      "depends_on": [
+        "F0"
+      ],
+      "output": "序章与阶段Ⅰ样章、用户连续路线验收"
+    },
+    {
+      "phase": "F2",
+      "priority": "P2",
+      "state": "planned",
+      "depends_on": [
+        "F1 user acceptance",
+        "specific map/EF availability"
+      ],
+      "output": "阶段Ⅱ与专精／军工／龙养成支线"
+    },
+    {
+      "phase": "F3",
+      "priority": "P3",
+      "state": "planned",
+      "depends_on": [
+        "F1 user acceptance",
+        "boss/event deliverables"
+      ],
+      "output": "阶段Ⅲ—Ⅳ／终章与真实事件"
+    },
+    {
+      "phase": "F4",
+      "priority": "P4",
+      "state": "planned; progressive work per sample",
+      "depends_on": [
+        "approved samples",
+        "F2/F3 content readiness"
+      ],
+      "output": "美术、奖励、迁移和全书验收"
+    }
+  ],
+  "pending_unchanged": [
+    {
+      "key": "E6_V4_FIRE",
+      "title": "军工 · 将劫火用于实战",
+      "chapter": "military",
+      "state": "pending; unchanged",
+      "condition": "用已开放的劫火武装完成一次对真菌的有效攻击。"
+    },
+    {
+      "key": "E6_V4_STRIKE",
+      "title": "军工 · 第一次天基打击",
+      "chapter": "military",
+      "state": "pending; unchanged",
+      "condition": "取得发射装备与弹药，完成一次有效的天基打击。"
+    },
+    {
+      "key": "E6_V4_M25",
+      "title": "M25 · 母巢总攻",
+      "chapter": "finale",
+      "state": "pending; unchanged",
+      "condition": "完成同一场有限母巢攻坚，赢下必要波次与最终核心战。"
+    },
+    {
+      "key": "E6_V4_M26",
+      "title": "M26 · 大圣残躯",
+      "chapter": "finale",
+      "state": "pending; unchanged",
+      "condition": "唤醒不灭残躯，堂堂正正赢下同一场两阶段试炼。"
+    },
+    {
+      "key": "E6_V4_CROWN",
+      "title": "终章 · 承接不灭金身",
+      "chapter": "finale",
+      "state": "pending; unchanged",
+      "condition": "领取齐天根器与不灭金身的正式传承奖励。"
+    },
+    {
+      "key": "E6_V4_S02",
+      "title": "S02 · 加斯科因·猎人与兽",
+      "chapter": "hunts",
+      "state": "pending; unchanged",
+      "condition": "完成从人形开始的完整加斯科因战斗。"
+    },
+    {
+      "key": "E6_B06",
+      "title": "斗兽场首胜",
+      "chapter": "cycles",
+      "state": "pending; unchanged",
+      "condition": "完成一次地面竞技场有效场次并获胜。"
+    },
+    {
+      "key": "E6_B08",
+      "title": "天空终波",
+      "chapter": "cycles",
+      "state": "pending; unchanged",
+      "condition": "完整赢下一次天空竞技场挑战。"
+    }
+  ],
+  "external_dependencies": [
+    "Spawn完整生成限制",
+    "新结构／材料／龙种的可达路径",
+    "CS1.3.4 EF可用性",
+    "Legendary Bosses独立安装与验收",
+    "原pending事件机制"
+  ],
+  "excluded_implementation": [
+    "map",
+    "Epic Fight adaptation",
+    "siege rework",
+    "full DND stack"
+  ]
+}

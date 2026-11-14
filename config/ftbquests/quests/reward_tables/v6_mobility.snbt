@@ -1,0 +1,41 @@
+{
+  "id": "000455F128BF02D0",
+  "title": "身法军资 · 任选一",
+  "loot_size": 1,
+  "order_index": 3,
+  "rewards": [
+    {
+      "id": "00052C95384E23A9",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:roll"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "0001560338FDAD41",
+      "type": "item",
+      "item": {
+        "id": "epicfight:skillbook",
+        "Count": 1,
+        "tag": {
+          "skill": "epicfight:step"
+        }
+      },
+      "count": 1,
+      "team_reward": false
+    },
+    {
+      "id": "00051C7476CFC119",
+      "type": "item",
+      "item": "kubejs:spore_coin",
+      "count": 4,
+      "team_reward": false
+    }
+  ]
+}
